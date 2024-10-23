@@ -1,3 +1,10 @@
 <template>
-  zmc
+  Основной контент
 </template>
+
+
+
+
+
+
+

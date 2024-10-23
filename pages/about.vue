@@ -1,3 +1,3 @@
 <template>
-  <h1>Zmc</h1>
+  <h1 style="color: whitesmoke;">Информация о заводе</h1>
 </template>
