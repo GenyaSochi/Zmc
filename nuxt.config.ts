@@ -7,5 +7,5 @@ export default defineNuxtConfig({
     base: '/nuxt'
   },
 
-  modules: ['@pinia/nuxt']
+  modules: ['@pinia/nuxt','@prisma/nuxt']
 })
