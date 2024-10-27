@@ -28,11 +28,12 @@
 }
 
 .nav {
-  font-family: serif;
+  font-family: inherit;
   margin: 0;
   padding: 20px;
   text-decoration: none;
   color: whitesmoke;
+
 }
 
 .view {
