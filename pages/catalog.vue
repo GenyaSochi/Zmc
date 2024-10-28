@@ -1,3 +1,4 @@
 <template>
-  <h1 style="color: whitesmoke;">Каталог</h1>
+  <h4 style="color: whitesmoke;">Каталог продукции</h4>
+  <MenuApp></MenuApp>
 </template>

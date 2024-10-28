@@ -1,7 +1,9 @@
 <template>
   <main style="color: whitesmoke;">
-    <p>17 лет производим опоры для трубопроводов</p>
-    <p>Более 100 видов в ассортименте: неподвижные, катковые, скользящие, швеллерные и другие. Партии до 1000 едениц
-      доставим в короткие сроки.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellat pariatur dolore dolor assumenda animi
+      soluta culpa tenetur, est eligendi porro voluptas, maxime quibusdam, fuga minima facere quis quae illo
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure debitis minima aliquid ea blanditiis distinctio unde
+      fuga expedita quia, a rerum explicabo aliquam mollitia cumque sed quae consectetur nam earum.</p>
+
   </main>
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <h1 style="color: whitesmoke;">Контакты</h1>
+  <h4 style="color: whitesmoke;">Контакты</h4>
 </template>
