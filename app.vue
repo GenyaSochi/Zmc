@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <HeaderApp></HeaderApp>
-    <div>
-      <NuxtPage />
-    </div>
-  </div>
+  <HeaderComponent></HeaderComponent>
+  <NuxtPage />
+  <FooterComponent></FooterComponent>
 </template>
 
 

@@ -10,4 +10,17 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+strong {
+  font-size: 24px;
+  text-align: center;
+  
 }

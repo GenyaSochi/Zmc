@@ -1,7 +1,5 @@
 <template>
-
-  <nav>
-    
+  <nav class="navtag">        
       <div class="container nav">
         <span class="logo"><img src="/img/sitelogo1.png" width="128px" style="padding: 0 20px" alt="logo"></span>
         <div class="link">
@@ -11,18 +9,16 @@
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
         </div>
         <div class="but">
-          <button>Рассчитать стоимость</button>        
-          <button>Заказать звонок</button>
+          <button class="butnav">Рассчитать стоимость</button>        
+          <button class="butnav">Заказать звонок</button>
         </div>
-      </div>
-         
+      </div>         
   </nav>
-
 </template>
 
 
 <style scoped>
-nav {
+.navtag {
     padding: 15px 0;
     background-color: rgb(56, 52, 52);
   }
@@ -31,23 +27,30 @@ nav {
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    color: whitesmoke;
+    color: white;
     font-size: 20px;
     font-family: 'Exo 2', sans-serif;
     
 }
 .but {
-  font-size: 18px;
-  font-family: 'Exo 2', sans-serif;
-  padding: 5px;
-  display: flex;
-  gap: 30px;
+   font-size: 18px;
+   font-family: 'Exo 2', sans-serif;
+   padding: 5px;
+   display: flex;
+   gap: 30px;
 }
 .link {
-  display: flex;
-    gap: 24px;
+   display: flex;
+   gap: 24px;
+}
+.butnav {
+  border: 2px solid white;
+  padding: 5px;
+}
+button:hover {
+  color: black;
+  background-color: white;
 }
 
-   
-   
+
 </style>
