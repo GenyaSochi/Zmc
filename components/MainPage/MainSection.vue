@@ -1,9 +1,8 @@
 <template>
-
   <section style=" background: url(/img/silver1.webp); color: black;">
     <div class="container">
       <h1 style="padding: 50px 0; text-align: center;">17 лет производим опоры для трубопроводов</h1>
-      <strong>Наличие собственного конструкторского бюро. Изготовление опор по чертежам заказчика.<br> Более 100 видов
+      <strong>Наличие собственного конструкторского бюро. Изготовление опор по чертежам заказчика. <br> Более 100 видов
         продукции.</strong>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium in reprehenderit maxime exercitationem amet
       praesentium totam voluptate magni repellat voluptates, porro fugiat impedit, quae eveniet sunt atque ab
@@ -41,5 +40,6 @@
 
     </div>
   </section>
-
 </template>
+
+<style scoped></style>
