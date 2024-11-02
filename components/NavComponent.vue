@@ -1,1 +1,1 @@
-<template>Навигация</template>
+<template></template>
