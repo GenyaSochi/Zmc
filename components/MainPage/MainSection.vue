@@ -3,16 +3,37 @@
     <div class="container">
       <h1 style="padding: 50px 0; text-align: center;">17 лет производим опоры для трубопроводов</h1>
       <strong>Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
-      <br>
-      <br>
+      <div style="padding: 20px;"></div>
       <div class="text">Количество выпущенной
-        продукции <span class="num">5</span><span class="num">4</span><span class="num"
-          style="color: white;">9</span><span class="num">4</span><span class="num">3</span><span
-          class="num">9</span><span class="num">1</span><span class="num">2</span><span class="num">3</span>
+        продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span><span
+          class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span><span
+          class="num">2</span><span class="num">3</span>
+      </div>
+      <div style="padding: 40px;"></div>
+      <div class="allcontainer">
+        <div class="cardcontainer">
+          <div>Выпускаем более ста видов опор<button class="butcontainer">Подробнее</button></div>
+        </div>
+        <div class="cardcontainer">
+          <div>Реализованные проекты<button class="butcontainer">Подробнее</button></div>
+        </div>
+        <div class="cardcontainer">
+          <div>Наши преимущества<button class="butcontainer">Подробнее</button></div>
+        </div>
+        <div class="cardcontainer">
+          <div>Наши сертификаты<button class="butcontainer">Подробнее</button></div>
+        </div>
+        <div class="cardcontainer">
+          <div>Фотографии завода<button class="butcontainer">Подробнее</button></div>
         </div>
       </div>
-      <div>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div>
-    </section>
+      <div style="padding: 60px;"></div>
+      <!-- <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div> -->
+      <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на <span style="background-image: url(/img/ru);"></span></button></div>
+    </div>
+    <div style="padding: 40px;"></div>
+
+  </section>
 </template>
 
 <script>
@@ -25,11 +46,47 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: rgba(250, 250, 250, 0.7);
+  padding: 28px;
+  border-radius: 10px;
 }
 
 .num {
   border: 2px solid black;
   padding: 2px 10px;
   color: black;
+}
+
+.cardcontainer {
+  font-size: 18px;
+  border-radius: 10px;
+  width: 186px;
+  height: 126px;
+  display: flex;
+  align-items: center;
+  background: rgba(56, 52, 52, 0.5);
+  color: white;
+  padding: 0 12px;
+}
+
+.butcontainer {
+  border: 2px solid white;
+  padding: 10px 16px;
+  margin: 10px 0;
+}
+
+.allcontainer {
+  display: flex;
+  gap: 45px;
+}
+
+.production {
+  background-color: white;
+  padding: 26px;
+  border-radius: 10px;
+  font-size: 22px; 
+  background-color: rgba(250, 250, 250, 0.7);
+  width: 240px;
+  height: 112px;
 }
 </style>
