@@ -29,7 +29,8 @@
       </div>
       <div style="padding: 60px;"></div>
       <!-- <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div> -->
-      <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на <span style="background-image: url(/img/ru);"></span></button></div>
+      <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
+            src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div>
     </div>
     <div style="padding: 40px;"></div>
 
@@ -73,6 +74,8 @@
   border: 2px solid white;
   padding: 10px 16px;
   margin: 10px 0;
+  display: flex;
+  align-items: center;
 }
 
 .allcontainer {
@@ -84,9 +87,9 @@
   background-color: white;
   padding: 26px;
   border-radius: 10px;
-  font-size: 22px; 
+  font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
-  width: 240px;
-  height: 112px;
+  width: 284px;
+  height: 190px;
 }
 </style>
