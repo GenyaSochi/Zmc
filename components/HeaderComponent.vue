@@ -30,6 +30,7 @@
     color: white;
     font-size: 20px;
     font-family: 'Exo 2', sans-serif;    
+    
 }
 .but {
    font-size: 18px;

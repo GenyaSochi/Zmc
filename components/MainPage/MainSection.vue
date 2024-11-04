@@ -1,15 +1,18 @@
 <template>
-  <section style=" background: url(/img/silver1.webp); color: black;">
+  <section>
     <div class="container">
-      <h1 style="padding: 50px 0; text-align: center;">17 лет производим опоры для трубопроводов</h1>
-      <strong>Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
+      <div class="video">
+        <video autoplay muted loop id="myVideo" src="/public/video/Crystall QuickStart.mp4"> </video>
+      </div>
+      <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
+      <strong style="color: white;">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
       <div style="padding: 20px;"></div>
       <div class="text">Количество выпущенной
         продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span><span
           class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span><span
           class="num">2</span><span class="num">3</span>
       </div>
-      <div style="padding: 40px;"></div>
+      <div style="padding: 72px;"></div>
       <div class="allcontainer">
         <div class="cardcontainer">
           <div>Выпускаем более ста видов опор<button class="butcontainer">Подробнее</button></div>
@@ -27,19 +30,18 @@
           <div>Фотографии завода<button class="butcontainer">Подробнее</button></div>
         </div>
       </div>
-      <div style="padding: 60px;"></div>
+      <div style="padding: 26px;"></div>
       <!-- <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div> -->
       <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
             src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div>
     </div>
     <div style="padding: 40px;"></div>
-
   </section>
 </template>
 
-<script>
 
-</script>
+<script></script>
+
 
 <style scoped>
 .text {
@@ -91,5 +93,29 @@
   background-color: rgba(250, 250, 250, 0.7);
   width: 284px;
   height: 190px;
+}
+
+.video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  transform: translateX(-50%) translateY(-50%);
 }
 </style>
