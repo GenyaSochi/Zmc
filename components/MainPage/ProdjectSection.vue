@@ -4,45 +4,10 @@
     <div class="viewprodj">Проекты<span>&rarr;</span></div>
     <div style="padding: 20px;"></div>
     <swiper-container>
-      <swiper-slide class="prodjcontainer">  
-      <div> >18 тонн</div>    
-      </swiper-slide>
-
-      <swiper-slide>
-        
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >65 тонн</div>
-    </div>
-      </swiper-slide>
-      <swiper-slide>
-           
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >43 тонны</div>
-    </div>
-      </swiper-slide>  
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>2</swiper-slide>             
+      <swiper-slide>3</swiper-slide>  
     </swiper-container>
-
-
-
-   
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >43 тонны</div>
-    </div>
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >20 тонн</div>
-    </div>  
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >43 тонн</div>
-    </div> 
-    <div class="prodjcontainer">
-      <img src="" alt="">
-      <div> >113 тонн</div>//массив
-    </div> 
   </div>
   </section>
 </template>
@@ -71,7 +36,7 @@ register()
   align-items: center;
 }
 
-.prodjcontainer {
+/* .prodjcontainer {
   background-color: white;
   padding: 26px;
   border-radius: 10px;
@@ -80,5 +45,5 @@ register()
   width: 326px;
   height: 80px;
   margin-left: 42px;
-}
+} */
 </style>
