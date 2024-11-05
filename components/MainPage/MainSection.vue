@@ -118,4 +118,23 @@
   z-index: -1000;
   transform: translateX(-50%) translateY(-50%);
 }
+
+/* @keyframes numAnimation {
+  0% {
+    transform: rotate(1);
+  }
+  50% {
+    transform: rotate(2);
+  }
+  100% {
+    transform: rotate(3);
+  }
+}
+
+.animated-element {
+  animation-name: numAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite; 
+} */
 </style>
