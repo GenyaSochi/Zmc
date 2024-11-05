@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <div class="video">
-        <video autoplay muted loop id="myVideo" src="/public/video/Crystall QuickStart.mp4"> </video>
+        <video autoplay muted loop id="myVideo" src="/public/video/Crystall QuickStart.mp4"></video>
       </div>
       <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
       <strong style="color: white;">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
@@ -118,23 +118,4 @@
   z-index: -1000;
   transform: translateX(-50%) translateY(-50%);
 }
-
-/* @keyframes numAnimation {
-  0% {
-    transform: rotate(1);
-  }
-  50% {
-    transform: rotate(2);
-  }
-  100% {
-    transform: rotate(3);
-  }
-}
-
-.animated-element {
-  animation-name: numAnimation;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite; 
-} */
 </style>
