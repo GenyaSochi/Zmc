@@ -8,5 +8,21 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
     },
   },
+  prisma: {
+    installCLI: false,
+    installClient: false,
+    generateClient: false,
+    installStudio: false,
+    autoSetupPrisma: true
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    }
+  },
 })
 

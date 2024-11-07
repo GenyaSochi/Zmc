@@ -1,3 +1,0 @@
-<template>
-<MainPageProdjectSection></MainPageProdjectSection>
-</template>

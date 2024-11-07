@@ -1,4 +1,0 @@
-<template>
-
-  <MenuApp></MenuApp>
-</template>
