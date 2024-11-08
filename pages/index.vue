@@ -1,7 +1,7 @@
 <template>
 
 <MainPageMainSection></MainPageMainSection>
-<MainPageProdjectSection></MainPageProdjectSection>
+<MainPageProjectSection></MainPageProjectSection>
 <MainPageAdvantagesSection></MainPageAdvantagesSection>
 
 </template>

@@ -32,10 +32,10 @@
       </div>
       <div style="padding: 26px;"></div>
       <!-- <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div> -->
-      <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
-            src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div>
+      <!-- <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
+            src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div> -->
     </div>
-    <div style="padding: 40px;"></div>
+    <div style="padding: 50px;"></div>
   </section>
 </template>
 
@@ -85,7 +85,7 @@
   gap: 45px;
 }
 
-.production {
+/* .production {
   background-color: white;
   padding: 26px;
   border-radius: 10px;
@@ -93,7 +93,7 @@
   background-color: rgba(250, 250, 250, 0.7);
   width: 284px;
   height: 190px;
-}
+} */
 
 .video {
   position: fixed;

@@ -10,8 +10,7 @@
         </div>
         <div class="but">
           <button class="butnav">Рассчитать стоимость</button>        
-          <button class="butnav">Заказать звонок</button>           
-       
+          <button class="butnav">Заказать звонок</button>      
         </div>
       </div>         
   </nav>
@@ -29,8 +28,7 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-family: 'Exo 2', sans-serif;    
-    
+    font-family: 'Exo 2', sans-serif;        
 }
 .but {
    font-size: 18px;
@@ -51,6 +49,5 @@ button:hover {
   color: black;
   background-color: white;
 }
-
 
 </style>
