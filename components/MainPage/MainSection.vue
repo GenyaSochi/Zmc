@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="container">
+    <div class="containermain">
       <div class="video">
-        <video autoplay muted loop id="myVideo" src="/public/video/Crystall QuickStart.mp4"></video>
+        <video autoplay muted loop id="myVideo" src="/public/video/Crystall1 QuickStart.mp4"></video>
       </div>
       <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
       <strong style="color: white;">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
@@ -94,6 +94,12 @@
   width: 284px;
   height: 190px;
 } */
+
+.containermain {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;  
+}
 
 .video {
   position: fixed;
