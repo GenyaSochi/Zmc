@@ -13,7 +13,6 @@
         </swiper-container>
       </div>
 
-
     </div>
   </section>
 </template>
@@ -37,7 +36,7 @@ const slide = [
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: rgb(161, 7, 7, 0.7);
+  background-color: rgb(161, 7, 7);
   height: 400px;
   padding-top: 20px;
 }

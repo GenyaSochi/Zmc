@@ -2,10 +2,10 @@
   <section>
     <div class="containermain">
       <div class="video">
-        <video autoplay muted loop id="myVideo" src="/public/video/Crystall1 QuickStart.mp4"></video>
+        <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
       </div>
       <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
-      <strong style="color: white;">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
+      <strong class="heading">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
       <div style="padding: 20px;"></div>
       <div class="text">Количество выпущенной
         продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span><span
@@ -48,7 +48,9 @@
   font-size: 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  margin: 0 82px;
   background-color: rgba(250, 250, 250, 0.7);
   padding: 28px;
   border-radius: 10px;
@@ -82,7 +84,15 @@
 
 .allcontainer {
   display: flex;
+  justify-content: center;
   gap: 45px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 /* .production {
@@ -94,12 +104,6 @@
   width: 284px;
   height: 190px;
 } */
-
-.containermain {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;  
-}
 
 .video {
   position: fixed;
