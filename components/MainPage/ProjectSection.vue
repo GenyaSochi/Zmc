@@ -8,8 +8,18 @@
       <div class="projects">
         <p>Проекты</p>
         <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true"
-          autoplay-delay="2500" autoplay-disable-on-interaction="false">
-          <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">{{ el.title }}.{{ el.text }}.{{ el.description}}.{{ el.img }}</swiper-slide>
+          autoplay-delay="2500" autoplay-disable-on-interaction="true">
+          <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
+            <div class="titlesstyle">
+              <p>{{ el.title }}</p>
+              <p>{{ el.customer }}</p>
+              <p>{{ el.text }}</p>
+              <p>{{ el.time }}</p>
+            </div>
+            <div class="imgstyle">
+              <NuxtImg fit="contain" height="250px" :src="el.img" :alt="el.title "></NuxtImg> 
+            </div>                
+          </swiper-slide>
         </swiper-container>
       </div>
 
@@ -22,12 +32,12 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'Мачты прожекторные', text: '> 196 тонн', description: 'Было изготовлено 28 мачт. Мачты были спроектированы на основе технического задания заказчика. За основу взята серийная конструкция и доработана по правилам безопасной эксплуатации в районах крайнего севера. Большое количество времени потребовалось на проектирование и согласование КД с институтом и заказчиком.', img: '/public/img/masts.jpg' as any},
-  { id: 2, title: 'Опоры регулируемые', text: '> 65 тонн', description: 'Газпром', img: '' },
-  { id: 3, title: 'ОППС', text: '> 113 тонн', description: '', img: ''  },
-  { id: 4, title: '', text: 'hfdhg', description: '', img: '' },
-  { id: 5, title: '', text: 'hfdhg', description: '', img: '' },
-  { id: 6, title: '', text: 'hfdhg', description: '', img: '' },
+  { id: 1, title: 'Мачты прожекторные', customer: 'Росснефть', text: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', img: '' },
+  { id: 2, title: 'Опоры регулируемые Газпром', customer: 'Росснефть', text: '> 65 тонн', img: '' },
+  { id: 3, title: 'ОППС Башнефть', customer: 'Росснефть', text: '> 113 тонн', img: ''  },
+  { id: 4, title: 'ОСП, ОПП Роснефть', customer: 'Росснефть', text: '> 98 тонн', img: '' },
+  { id: 5, title: 'Опоры ОН в ППУ изоляции Башнефть', customer: 'Росснефть', text: '> 60 тонн', img: '' },
+  { id: 6, title: 'Серийные опоры Иркутская Нефтяная Компания', customer: 'Росснефть', text: '> 43 тонн',img: '' },
 ]
 </script>
 
@@ -55,6 +65,10 @@ const slide = [
   align-items: center;
 }
 
+swiper-container {
+  overflow: hidden;
+}
+
 .production {
   display: flex;
   flex-wrap: wrap;
@@ -69,13 +83,13 @@ const slide = [
   height: 190px;
 }
 
-.projects {
+.projects {   
   background-color: white;
   padding: 26px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
-  width: 566px;
+  width: 820px;
   height: 400px;
 }
 
@@ -83,5 +97,24 @@ const slide = [
   border: 2px solid white;
   margin: 20px 0 0 0;
   padding: 5px 25px;
+}
+
+.prodjswiper {
+  display: flex;
+}
+
+.titlesstyle {
+ background-color: rgba(56, 52, 52, 0.5);
+ height: 266px;
+ width: 360px;
+ padding: 16px;
+ border-radius: 10px; 
+}
+.imgstyle {
+ background-color: rgba(12, 12, 12, 0.7);
+ height: 266px;
+ width: 360px;
+ padding: 16px;
+ border-radius: 10px; 
 }
 </style>

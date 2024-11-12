@@ -3,7 +3,7 @@
       <div class="container nav">
         <span class="logo"><img src="/img/sitelogo1.png" width="128px" style="padding: 0 20px" alt="logo"></span>
         <div class="link">         
-          <NuxtLink to="/main" class="nav">Главная</NuxtLink>
+          <NuxtLink to="/" class="nav">Главная</NuxtLink>
           <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
           <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 

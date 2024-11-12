@@ -1,9 +1,9 @@
 <template>
   <section>
     <div class="containermain">
-      <div class="video">
+      <!-- <div class="video">
         <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
-      </div>
+      </div> -->
       <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
       <strong class="heading">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
       <div style="padding: 20px;"></div>
