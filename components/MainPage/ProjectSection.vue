@@ -5,7 +5,7 @@
       <div>
       <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
           src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
-          <div class="advant">Наши преимущества<button class="butadvant">Смотреть</button></div> 
+          <div class="advant">Наши преимущества<button class="butadvant">Подробнее</button></div> 
         </div>   
       <div class="projects">
         <p style="display: flex; justify-content: center;">Проекты</p>
@@ -95,7 +95,7 @@ swiper-container {
 .butproj {
   border: 2px solid white;
   margin: 20px 0 0 0;
-  padding: 5px 25px;
+  padding: 5px 50px 5px 5px;
 }
 .prodjswiper {
   display: flex;
@@ -140,7 +140,7 @@ swiper-container {
 .butadvant {
   border: 2px solid white;
   margin-bottom: 10px;
-  padding: 5px 25px;  
+  padding: 5px;  
   width: 152px;
 }
 
