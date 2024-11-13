@@ -1,12 +1,14 @@
 <template>
-  <section>
-
+  <section>    
+    <div class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые делают наше сотрудничество выгодным.</div>
     <div class="prodj">
-      <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть</button><img
+      <div>
+      <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
           src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
-      <div style="padding: 20px;"></div>
+          <div class="advant">Наши преимущества<button class="butadvant">Смотреть</button></div> 
+        </div>   
       <div class="projects">
-        <p>Проекты</p>
+        <p style="display: flex; justify-content: center;">Проекты</p>
         <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true"
           autoplay-delay="2500" autoplay-disable-on-interaction="true">
           <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
@@ -22,8 +24,8 @@
           </swiper-slide>
         </swiper-container>
       </div>
+      </div>
 
-    </div>
   </section>
 </template>
 
@@ -68,7 +70,6 @@ const slide = [
 swiper-container {
   overflow: hidden;
 }
-
 .production {
   display: flex;
   flex-wrap: wrap;
@@ -82,27 +83,25 @@ swiper-container {
   width: 290px;
   height: 190px;
 }
-
 .projects {   
   background-color: white;
   padding: 26px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
-  width: 820px;
-  height: 400px;
+  width: 910px;
+  height: 460px;
 }
-
-.butcontainer {
+.butproj {
   border: 2px solid white;
   margin: 20px 0 0 0;
   padding: 5px 25px;
 }
-
 .prodjswiper {
   display: flex;
+  gap: 50px;
+  padding: 54px 44px 58px 44px;
 }
-
 .titlesstyle {
  background-color: rgba(56, 52, 52, 0.5);
  height: 266px;
@@ -117,4 +116,33 @@ swiper-container {
  padding: 16px;
  border-radius: 10px; 
 }
+.advanttext {
+  font-size: 24px;
+  background: rgba(56, 52, 52, 0.5);
+  color: white;
+  padding: 28px;
+  border-radius: 10px;
+  margin: 0px 82px 20px 82px; 
+}
+.advant {  
+  padding: 26px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  background-color: rgba(250, 250, 250, 0.7);
+  width: 290px;
+  height: 190px; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.butadvant {
+  border: 2px solid white;
+  margin-bottom: 10px;
+  padding: 5px 25px;  
+  width: 152px;
+}
+
+
 </style>
