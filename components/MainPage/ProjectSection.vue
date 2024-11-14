@@ -10,17 +10,21 @@
       <div class="projects">
         <p style="display: flex; justify-content: center;">Проекты</p>
         <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true"
-          autoplay-delay="2500" autoplay-disable-on-interaction="true">
+          
+          >
           <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
             <div class="titlesstyle">
-              <p>{{ el.title }}</p>
+              <p>
+                
+                <span v-html="el?.icons"></span>
+                {{ el.title }}</p>
               <p>{{ el.customer }}</p>
               <p>{{ el.text }}</p>
-              <p>{{ el.time }}</p>
+              <p>{{ el.time }}</p>              
+              <div class="imgstyle">
+                <NuxtImg  fit="cover" width="440px" height="290px" :src="el.img" :alt="el.title"></NuxtImg> 
+              </div>                
             </div>
-            <div class="imgstyle">
-              <NuxtImg fit="contain" height="250px" :src="el.img" :alt="el.title "></NuxtImg> 
-            </div>                
           </swiper-slide>
         </swiper-container>
       </div>
@@ -34,7 +38,7 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'Мачты прожекторные', customer: 'Росснефть', text: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', img: '' },
+  { id: 1, title: 'Мачты прожекторные', icons:'&#128197;', customer: 'Росснефть', text: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', img: '/img/masts.jpg' },
   { id: 2, title: 'Опоры регулируемые Газпром', customer: 'Росснефть', text: '> 65 тонн', img: '' },
   { id: 3, title: 'ОППС Башнефть', customer: 'Росснефть', text: '> 113 тонн', img: ''  },
   { id: 4, title: 'ОСП, ОПП Роснефть', customer: 'Росснефть', text: '> 98 тонн', img: '' },
@@ -100,21 +104,28 @@ swiper-container {
 .prodjswiper {
   display: flex;
   gap: 50px;
-  padding: 54px 44px 58px 44px;
+  padding: 10px 44px 48px 44px;
 }
 .titlesstyle {
  background-color: rgba(56, 52, 52, 0.5);
- height: 266px;
- width: 360px;
+ height: 340px;
+ width: 774px;
  padding: 16px;
- border-radius: 10px; 
+ border-radius: 10px;  
+ position: relative;
 }
 .imgstyle {
  background-color: rgba(12, 12, 12, 0.7);
- height: 266px;
- width: 360px;
- padding: 16px;
- border-radius: 10px; 
+ height: 290px;
+ width: 422px;
+ border-radius: 10px;  
+ overflow: hidden;
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ top: 24px;  
+ left: 324px;
 }
 .advanttext {
   font-size: 24px;

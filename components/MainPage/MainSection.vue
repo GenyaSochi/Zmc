@@ -95,16 +95,6 @@
   color: white;
 }
 
-/* .production {
-  background-color: white;
-  padding: 26px;
-  border-radius: 10px;
-  font-size: 22px;
-  background-color: rgba(250, 250, 250, 0.7);
-  width: 284px;
-  height: 190px;
-} */
-
 .video {
   position: fixed;
   right: 0;

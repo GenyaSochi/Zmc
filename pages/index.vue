@@ -2,6 +2,7 @@
 
 <MainPageMainSection></MainPageMainSection>
 <MainPageProjectSection></MainPageProjectSection>
-<MainPageAdvantagesSection></MainPageAdvantagesSection>
+<MainPageAddressSection></MainPageAddressSection>
+
 
 </template>
