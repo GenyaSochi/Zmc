@@ -3,42 +3,26 @@
     <div class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
       делают наше сотрудничество выгодным.</div>
     <div class="proj">
-      <!-- <div>
-        <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
-            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
-        <div class="advant">Наши преимущества<button class="butadvant">Подробнее</button></div>
-      </div>  -->
-
       <p class="ourproj">наши проекты</p>
       <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
         <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
-          <div class="titlesstyle">
-           
-            <!-- <p style="display: flex;align-items: center; position: relative;">
-              <img class="icons" src="/public/img/calendar.webp" alt="calendar">
-              <span style="padding-left: 10px;">{{ el.time }}</span>
-            </p> -->
-            <!-- <p style="display: flex; text-align: center; align-items: center;">
-              <img class="icons" src="/public/img/code.webp" alt="code">
-              <span style="padding-left: 10px;"> {{ el.title }}</span>
-            </p> -->
-            <!-- <p style="display: flex; text-align: center; align-items: center;">
-              <img class="icons" src="/public/img/consumer.webp" alt="consumer">
-              <span style="padding-left: 10px;">{{ el.name }}</span>
-            </p> -->
-            <!-- <p style="display: flex; text-align: center; align-items: center;">
-              <img class="icons" src="/public/img/quantity.webp" alt="quantity">
-              <span style="padding-left: 10px;">{{ el.quantity }}</span>
-            </p> -->
-
-          </div>
+     
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }}</p>
-            <NuxtImg fit="cover" width="1855px" height="532px" :src="el.imgproduct" :alt="el.title"></NuxtImg>
+            <p class="title">{{ el.title }}</p>
+            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="564" :src="el.imgproduct" :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
     </div>
+    <div class="productstyle">
+        <p class="ouradvant">наши преимущества</p>
+        <!-- <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
+            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
+        <div class="advant">Наши преимущества1</div>
+        <div class="advant">Наши преимущества2</div>
+        <div class="advant">Наши преимущества3</div> -->
+      </div> 
 
   </section>
 </template>
@@ -75,26 +59,32 @@ const slide = [
   padding-top: 20px;
 }
 
-.quant {
+.ouradvant {
   text-transform: uppercase;
-  color: rgb(29, 2, 2);
-  font-size: 60px;
+  color: white;
+  font-size: 40px;
+  display: flex;
   position: absolute;
+  padding-top: 20px;
 }
 
+.quant {
+  text-transform: uppercase;
+  color: white;
+  font-size: 88px;
+  position: absolute;
+  font-weight: bold;
+  Font-style: oblique;
+}
 
-.viewprodj {
-  background-color: white;
-  padding: 26px;
-  border-radius: 10px;
-  font-size: 22px;
-  background-color: rgba(250, 250, 250, 0.7);
-  width: 326px;
-  height: 80px;
-  margin-left: 42px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.title {
+  text-transform: uppercase;
+  color: white;
+  font-size: 88px;
+  position: absolute;
+  bottom: 82px;
+  font-weight: bold;
+  Font-style: oblique;
 }
 
 swiper-container {
@@ -115,48 +105,23 @@ swiper-container {
   height: 190px;
 }
 
-/* .projects { 
-  border-radius: 10px;
-  font-size: 22px;
-  background-color: rgba(56, 52, 52, 0.9);
-  color: white;
-  width: 1300px;
-  height: 500px;
-} */
-
 .butproj {
   border: 2px solid white;
   margin: 20px 0 0 0;
   padding: 5px 50px 5px 5px;
-}
-
-/* .prodjswiper {
-  display: flex;
-  padding: 0px 44px;
-} */
-
-.titlesstyle {
-  background-color: rgba(161, 7, 7, 0.7);
-  height: 504px;
-  width: 338px;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  top: 24px;
-  left: 40px;
-}
+} 
 
 .imgstyle {
   height: 564px;
+  width: 100vw;
   border-radius: 10px;
   overflow: hidden;
-  position: absolute;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  top: 82px;
+  filter: grayscale(1);
+  margin-top: 88px;
 }
 
 .advanttext {
@@ -170,7 +135,6 @@ swiper-container {
 
 .advant {
   padding: 26px;
-  margin-top: 20px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
@@ -181,15 +145,19 @@ swiper-container {
   justify-content: space-between;
 }
 
-.butadvant {
+/* .butadvant {
   border: 2px solid white;
   margin-bottom: 10px;
   padding: 5px;
   width: 152px;
-}
+} */
 
-.icons {
-  width: 40px;
-  margin: 10px;
+.productstyle {
+  background-color: black;
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 </style>
