@@ -2,7 +2,8 @@
 
 <MainPageMainSection></MainPageMainSection>
 <MainPageProjectSection></MainPageProjectSection>
-<MainPageAdvantagesSection></MainPageAdvantagesSection>
+<MainPageAddressSection></MainPageAddressSection>
+<MainPageSertSection></MainPageSertSection>
 
 
 

@@ -1,29 +1,37 @@
 <template>
   <section>
-    <div class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
-      делают наше сотрудничество выгодным.</div>
     <div class="proj">
       <p class="ourproj">наши проекты</p>
       <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
         <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
-     
+
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }}</p>
             <p class="title">{{ el.title }}</p>
-            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="564" :src="el.imgproduct" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="564" :src="el.imgproduct"
+              :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
     </div>
     <div class="productstyle">
-        <p class="ouradvant">наши преимущества</p>
-        <!-- <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
-            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
-        <div class="advant">Наши преимущества1</div>
-        <div class="advant">Наши преимущества2</div>
-        <div class="advant">Наши преимущества3</div> -->
-      </div> 
+      <div class="ouradvant">наши преимущества</div>
+      <div class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
+        делают наше сотрудничество выгодным.</div>
 
+      <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
+          src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
+      <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall">Мы
+          удовлетворяем любые запросы по
+          объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим требованиям.</span>
+      </div>
+      <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall">Мы гордимся тем, что у нас не
+          возникает претензий к качеству наших изделий при приёмке, что гарантирует вам безупречность каждой партии и
+          экономию времени.</span></div>
+      <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall">Прямое общение с конструкторами, минуя
+          менеджеров - наше преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
+          потребности каждого проекта.</span></div>
+    </div>
   </section>
 </template>
 
@@ -45,7 +53,6 @@ const slide = [
 .proj {
   display: flex;
   justify-content: center;
-  gap: 100px;
   background-color: rgb(161, 7, 7);
   height: 700px;
 }
@@ -63,9 +70,6 @@ const slide = [
   text-transform: uppercase;
   color: white;
   font-size: 40px;
-  display: flex;
-  position: absolute;
-  padding-top: 20px;
 }
 
 .quant {
@@ -101,15 +105,15 @@ swiper-container {
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
-  width: 290px;
-  height: 190px;
+  width: 320px;
+  height: 210px;
 }
 
 .butproj {
   border: 2px solid white;
   margin: 20px 0 0 0;
   padding: 5px 50px 5px 5px;
-} 
+}
 
 .imgstyle {
   height: 564px;
@@ -126,11 +130,7 @@ swiper-container {
 
 .advanttext {
   font-size: 24px;
-  background: rgba(56, 52, 52, 0.5);
   color: white;
-  padding: 28px;
-  border-radius: 10px;
-  margin: 0px 82px 20px 82px;
 }
 
 .advant {
@@ -138,8 +138,8 @@ swiper-container {
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
-  width: 290px;
-  height: 190px;
+  width: 320px;
+  height: 210px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -155,9 +155,21 @@ swiper-container {
 .productstyle {
   background-color: black;
   display: flex;
-  padding: 20px;
-  gap: 30px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  gap: 30px;
 }
+
+.textspan {
+  display: flex;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.textsmall {
+  font-size: 14px;
+}
+
 </style>

@@ -31,7 +31,7 @@
         </div>
       </div>
       <div style="padding: 26px;"></div>
-      <!-- <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div> -->
+      <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div>
       <!-- <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
             src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div> -->
     </div>
@@ -52,7 +52,8 @@
   gap: 10px;
   margin: 0 82px;
   background-color: rgba(250, 250, 250, 0.7);
-  padding: 28px;
+  padding-top: 28px 0;
+
   border-radius: 10px;
 }
 
