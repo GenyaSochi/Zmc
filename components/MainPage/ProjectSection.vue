@@ -40,10 +40,10 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'Мачты прожекторные', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', imgproduct: '/img/masts.jpg' },
-  { id: 2, title: 'Опоры регулируемые', img: '/img/calendar.webp;', name: 'Газпром', quantity: '> 65 тонн', time: 'Май - Июнь 2020 г.', imgproduct: '' },
-  { id: 3, title: 'ОППС', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 113 тонн', time: 'Январь - Февраль 2020 г.', imgproduct: '' },
-  { id: 4, title: 'ОСП, ОПП', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 98 тонн', time: 'Сентябрь 2019 г.', imgproduct: '' },
+  { id: 1, title: 'Мачты прожекторные', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', imgproduct: '/img/masts.webp' },
+  { id: 2, title: 'Опоры регулируемые', img: '/img/calendar.webp;', name: 'Газпром', quantity: '> 65 тонн', time: 'Май - Июнь 2020 г.', imgproduct: '/img/adjust.webp' },
+  { id: 3, title: 'ОППС', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 113 тонн', time: 'Январь - Февраль 2020 г.', imgproduct: '/img/opps.webp' },
+  { id: 4, title: 'ОСП, ОПП', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 98 тонн', time: 'Сентябрь 2019 г.', imgproduct: '/img/osp_opp.webp' },
   { id: 5, title: 'Опоры ОН в ППУ изоляции', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 60 тонн', time: 'Июнь 2019', imgproduct: '' },
   { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '' },
 ]
