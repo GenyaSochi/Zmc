@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="proj">
-      <p class="ourproj">наши проекты</p>
+      <h2 class="ourproj">наши проекты</h2>
       <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
         <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
 
@@ -15,9 +15,9 @@
       </swiper-container>
     </div>
     <div class="productstyle">
-      <div class="ouradvant">наши преимущества</div>
-      <div class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
-        делают наше сотрудничество выгодным.</div>
+      <h2 class="ouradvant">наши преимущества</h2>
+      <h3 class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
+        делают наше сотрудничество выгодным.</h3>
 
       <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
           src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
@@ -158,7 +158,7 @@ swiper-container {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0 40px 0;
   gap: 30px;
 }
 
@@ -170,6 +170,7 @@ swiper-container {
 
 .textsmall {
   font-size: 14px;
+  text-align: center;
 }
 
 </style>

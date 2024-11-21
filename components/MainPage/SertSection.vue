@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="sertcontainer">
-      <div class="serttext">наши сертификаты</div>
+      <h2 class="serttext">наши сертификаты</h2>
       <div class="sertimg">
         <img src="/img/certificate1.webp" alt="certificate">
         <img src="/img/certificate2.webp" alt="certificate">
@@ -9,8 +9,6 @@
         <img src="/img/certificate4.webp" alt="certificate">
         <img src="/img/certificate5.webp" alt="certificate">
       </div>
-
-
     </div>
   </section>
 </template>
@@ -25,10 +23,7 @@
   text-transform: uppercase;
   color: white;
   font-size: 40px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  text-align: center;  
   margin-bottom: 50px;
 }
 

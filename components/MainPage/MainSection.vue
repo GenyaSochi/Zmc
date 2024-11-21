@@ -5,37 +5,30 @@
         <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
       </div> -->
       <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
-      <strong class="heading">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>
-      <div style="padding: 20px;"></div>
-      <div class="text">Количество выпущенной
-        продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span><span
-          class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span><span
-          class="num">2</span><span class="num">3</span>
-      </div>
-      <div style="padding: 72px;"></div>
+      <strong class="heading">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>    
+      <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span>
+        <span class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span>
+        <span class="num">2</span><span class="num">3</span>
+      </h2>   
       <div class="allcontainer">
         <div class="cardcontainer">
-          <div>Выпускаем более ста видов опор<button class="butcontainer">Подробнее</button></div>
+          <p>Выпускаем более ста видов опор</p>
         </div>
         <div class="cardcontainer">
-          <div>Реализованные проекты<button class="butcontainer">Подробнее</button></div>
+          <p>Реализованные проекты</p>
         </div>
         <div class="cardcontainer">
-          <div>Наши преимущества<button class="butcontainer">Подробнее</button></div>
+          <p>Наши преимущества</p>
         </div>
         <div class="cardcontainer">
-          <div>Наши сертификаты<button class="butcontainer">Подробнее</button></div>
+          <p>Наши сертификаты</p>
         </div>
         <div class="cardcontainer">
-          <div>Фотографии завода<button class="butcontainer">Подробнее</button></div>
+          <p>Фотографии завода</p>
         </div>
-      </div>
-      <div style="padding: 26px;"></div>
-      <div class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</div>
-      <!-- <div class="production">Экскурсия на производство<button class="butcontainer">Смотреть на<img
-            src="/public/img/rutubecircle.webp" alt="rutube" style="width: 64px; padding: 5px;"></button></div> -->
+      </div>  
+      <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
     </div>
-    <div style="padding: 50px;"></div>
   </section>
 </template>
 
@@ -50,10 +43,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 0 82px;
-  background-color: rgba(250, 250, 250, 0.7);
-  padding-top: 28px 0;
-
+  background-color: rgb(250, 250, 250);
+  padding-bottom: 60px;
   border-radius: 10px;
 }
 
@@ -64,29 +55,31 @@
 }
 
 .cardcontainer {
-  font-size: 18px;
+  font-size: 24px;
   border-radius: 10px;
-  width: 186px;
+  width: 210px;
   height: 126px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: rgba(56, 52, 52, 0.5);
   color: white;
-  padding: 0 12px;
+  padding: 5px;
 }
 
-.butcontainer {
+/* .butcontainer {
   border: 2px solid white;
   padding: 10px 16px;
   margin: 10px 0;
   display: flex;
   align-items: center;
-}
+} */
 
 .allcontainer {
   display: flex;
   justify-content: center;
   gap: 45px;
+  padding-bottom: 40px;
 }
 
 .heading {
