@@ -20,7 +20,7 @@
         делают наше сотрудничество выгодным.</h3>
 
       <div class="production">Экскурсия на производство<button class="butproj">Смотреть</button><img
-          src="/public/img/rutubesquare.webp" alt="rutube" style="width: 74px; padding: 5px;"></div>
+          src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
       <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall">Мы
           удовлетворяем любые запросы по
           объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим требованиям.</span>
@@ -63,7 +63,7 @@ const slide = [
   font-size: 40px;
   display: flex;
   position: absolute;
-  padding-top: 20px;
+  padding: 30px 0;
 }
 
 .ouradvant {
@@ -78,7 +78,7 @@ const slide = [
   font-size: 88px;
   position: absolute;
   font-weight: bold;
-  Font-style: oblique;
+  font-style: oblique;
 }
 
 .title {
@@ -88,7 +88,7 @@ const slide = [
   position: absolute;
   bottom: 82px;
   font-weight: bold;
-  Font-style: oblique;
+  font-style: oblique;
 }
 
 swiper-container {
@@ -111,8 +111,8 @@ swiper-container {
 
 .butproj {
   border: 2px solid white;
-  margin: 20px 0 0 0;
   padding: 5px 50px 5px 5px;
+  margin-top: 46px;
 }
 
 .imgstyle {
@@ -158,7 +158,7 @@ swiper-container {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 20px 0 40px 0;
+  padding: 30px 0 60px 0;
   gap: 30px;
 }
 

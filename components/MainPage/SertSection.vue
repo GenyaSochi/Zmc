@@ -15,8 +15,8 @@
 
 <style>
 .sertcontainer {
-  background-color: rgba(56, 52, 52, 0.7);
-  padding-top: 20px;
+  background-color: rgb(161, 7, 7);
+  padding: 20px 0 40px 0;
 }
 
 .serttext {
@@ -24,7 +24,7 @@
   color: white;
   font-size: 40px;
   text-align: center;  
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .sertimg {

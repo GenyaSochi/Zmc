@@ -1,34 +1,22 @@
 <template>
-  <section>
-    <div class="containermain">
+  <section>  
       <!-- <div class="video">
         <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
       </div> -->
-      <h1 style="padding: 50px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
-      <strong class="heading">Наличие собственного конструкторского отдела.Изготовление опор по чертежам заказчика.</strong>    
+      <h1 style="padding: 100px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
+      <strong class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам заказчика.</strong>    
       <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span>
         <span class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span>
         <span class="num">2</span><span class="num">3</span>
       </h2>   
-      <div class="allcontainer">
-        <div class="cardcontainer">
-          <p>Выпускаем более ста видов опор</p>
-        </div>
-        <div class="cardcontainer">
-          <p>Реализованные проекты</p>
-        </div>
-        <div class="cardcontainer">
-          <p>Наши преимущества</p>
-        </div>
-        <div class="cardcontainer">
-          <p>Наши сертификаты</p>
-        </div>
-        <div class="cardcontainer">
-          <p>Фотографии завода</p>
-        </div>
+      <div class="allcontainer">     
+          <p class="cardcontainer">Выпускаем более ста видов опор</p>  
+          <p class="cardcontainer">Реализованные проекты</p> 
+          <p class="cardcontainer">Наши преимущества</p>        
+          <p class="cardcontainer">Наши сертификаты</p>         
+          <p class="cardcontainer">Фотографии завода</p>      
       </div>  
       <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
-    </div>
   </section>
 </template>
 
@@ -44,8 +32,8 @@
   justify-content: center;
   gap: 10px;
   background-color: rgb(250, 250, 250);
-  padding-bottom: 60px;
-  border-radius: 10px;
+  padding: 45px 0 60px 0;
+  border-radius: 10px;  
 }
 
 .num {
@@ -55,10 +43,10 @@
 }
 
 .cardcontainer {
-  font-size: 24px;
+  font-size: 22px;
   border-radius: 10px;
-  width: 210px;
-  height: 126px;
+  width: 266px;
+  height: 166px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,14 +67,14 @@
   display: flex;
   justify-content: center;
   gap: 45px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
-.heading {
+.heading { 
   display: flex;
   justify-content: center;
-  align-items: center;
   color: white;
+  padding-bottom: 60px;
 }
 
 .video {
