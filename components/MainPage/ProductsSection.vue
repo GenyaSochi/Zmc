@@ -70,7 +70,7 @@ const products = [
   margin-left: 330px;
   gap: 20px;
   width: 1220px;
-
+  padding-bottom: 30px;
 }
 
 .allinfo :hover {
@@ -82,10 +82,15 @@ const products = [
 }
 
 .seeprod {
-  width: 400px;
-  height: 100px;
-  border: 2px solid black;
+  color: rgb(161, 7, 7);
+  border: 1px solid black;
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  margin: 2px 304px 0 328px;
+  border-radius: 5px;
 }
+
 
 .orderprod {
   font-family: 'Exo 2', sans-serif;
