@@ -9,8 +9,10 @@
     <div class="allinfo">
       <div class="infoprod" v-for="el of products" :key="el.id">
         <h3 class="nameprod">{{ el.titleprod }}</h3>
-        <NuxtLink to="/catalog">Подробнее</NuxtLink>
-        <NuxtLink to="/contacts">Заказать</NuxtLink>
+        <div style="display: flex; justify-content: space-around;border:">
+          <NuxtLink to="/catalog" class="linkprod">Подробнее</NuxtLink>
+          <NuxtLink to="/contacts" class="linkorder">Заказать</NuxtLink>
+        </div>
       </div>
     </div>
     <NuxtLink to="/catalog" class="seeprod">Смотреть нашу продукцию</NuxtLink>
@@ -33,7 +35,6 @@ const products = [
 ]
 </script>
 
-
 <style>
 .prod {
   text-transform: uppercase;
@@ -49,13 +50,16 @@ const products = [
 }
 
 .infoprod {
-  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
   border-radius: 10px;
   font-size: 22px;
-  background-color: rgba(218, 131, 189, 0.7);
-  width: 382px;
+  background-color: rgb(56, 52, 52);
+  width: 392px;
   height: 224px;
-
+  color: white;
 }
 
 .allinfo {
@@ -65,13 +69,16 @@ const products = [
   padding-top: 30px;
   margin-left: 330px;
   gap: 20px;
-  width: 1200px;
+  width: 1220px;
 
+}
+
+.allinfo :hover {
+  background-color: black;
 }
 
 .nameprod {
   font-size: 24px;
-  font-weight: 600;
 }
 
 .seeprod {
@@ -85,5 +92,15 @@ const products = [
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+}
+
+.linkprod {
+  border: 1px solid white;
+  padding: 5px 14px;
+}
+
+.linkorder {
+  border: 1px solid white;
+  padding: 5px 26px;
 }
 </style>

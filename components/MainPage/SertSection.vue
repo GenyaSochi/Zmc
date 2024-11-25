@@ -30,7 +30,7 @@
 .sertimg {
   display: flex;
   gap: 60px;
-  justify-content: center;
+  justify-content: center; 
 }
 
 </style>

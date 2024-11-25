@@ -45,14 +45,19 @@
 .cardcontainer {
   font-size: 22px;
   border-radius: 10px;
-  width: 266px;
+  width: 275px;
   height: 166px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(56, 52, 52, 0.5);
-  color: white;
-  padding: 5px;
+  color: white; 
+}
+
+.cardcontainer :hover {
+  background: black;
+  width: 290px;
 }
 
 /* .butcontainer {
