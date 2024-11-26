@@ -87,7 +87,7 @@ const products = [
   font-size: 24px;
   display: block;
   text-align: center;
-  margin: 2px 344px 0 328px;
+  margin: 2px 344px 30px 328px;
   border-radius: 5px;
   padding: 10px 0;
 }
