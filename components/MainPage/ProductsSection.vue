@@ -82,13 +82,14 @@ const products = [
 }
 
 .seeprod {
-  color: rgb(161, 7, 7);
-  border: 1px solid black;
+  background-color: rgb(161, 7, 7);
+  color: white;  
   font-size: 24px;
   display: block;
   text-align: center;
-  margin: 2px 304px 0 328px;
+  margin: 2px 344px 0 328px;
   border-radius: 5px;
+  padding: 10px 0;
 }
 
 
