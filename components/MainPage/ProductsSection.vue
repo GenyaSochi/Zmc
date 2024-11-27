@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <NuxtLink to="/catalog" class="seeprod">Смотреть нашу продукцию</NuxtLink>
+    <NuxtLink to="/catalog" class="seeprod">Каталог продукции</NuxtLink>
 
   </section>
 </template>

@@ -1,8 +1,7 @@
 <template>
-  <section>
-    <h2 class="h2cost">Рассчёт стоимости</h2>
-
+  <section>    
     <div style="background-color: brown;">
+      <h2 class="h2cost">Рассчёт стоимости</h2>
       <p>Прикрепите файлы проекта со спецификациями, оставьте номер телефона. Менеджер изучит материалы и свяжется с
         Вами в течении 15 минут.</p>
       <form @submit.prevent="">
