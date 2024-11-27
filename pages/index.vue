@@ -6,5 +6,6 @@
 <MainPageSertSection></MainPageSertSection>
 <MainPageProductsSection></MainPageProductsSection>
 <MainPageCostSection></MainPageCostSection>
+<MainPageConfidSection></MainPageConfidSection>
 
 </template>
