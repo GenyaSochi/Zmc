@@ -31,7 +31,7 @@
   font-size: 24px;
   display: block;
   text-align: center;
-  margin: 2px 344px 30px 328px;
+  margin: 2px 306px 30px 328px;
 }
 
 .pcost {
