@@ -7,5 +7,7 @@
 <MainPageProductsSection></MainPageProductsSection>
 <MainPageCostSection></MainPageCostSection>
 <MainPageConfidSection></MainPageConfidSection>
+<MainPageExcursionSection></MainPageExcursionSection>
+
 
 </template>

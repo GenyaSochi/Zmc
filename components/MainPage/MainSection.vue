@@ -20,9 +20,7 @@
   </section>
 </template>
 
-
 <script></script>
-
 
 <style scoped>
 .text {
@@ -32,8 +30,7 @@
   justify-content: center;
   gap: 10px;
   background-color: rgb(250, 250, 250);
-  padding: 45px 0 60px 0;
-  border-radius: 10px;  
+  padding: 45px 0 60px 0; 
 }
 
 .num {

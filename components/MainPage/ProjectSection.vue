@@ -118,7 +118,6 @@ swiper-container {
 .imgstyle {
   height: 564px;
   width: 100vw;
-  border-radius: 10px;
   overflow: hidden;
   display: flex;
   position: relative;

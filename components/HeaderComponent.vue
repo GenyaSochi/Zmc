@@ -1,7 +1,7 @@
 <template>
   <nav class="navtag">        
       <div class="container nav">
-        <span class="logo"><img src="/img/sitelogo1.png" width="128px" style="padding: 0 20px" alt="logo"></span>
+        <span><img src="/img/sitelogo1.png" width="136px" style="padding: 0 20px" alt="logo"></span>
         <div class="link">         
           <NuxtLink to="/" class="nav">Главная</NuxtLink>
           <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
@@ -45,7 +45,8 @@
   border: 2px solid white;
   padding: 5px;
 }
-button:hover {
+
+.button:hover {
   color: black;
   background-color: white;
 }
