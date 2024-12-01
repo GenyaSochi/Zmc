@@ -3,7 +3,8 @@
 
     <form class="formcost" @submit.prevent="">
       <h2 class="h2cost">Рассчёт стоимости</h2>
-      <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется с
+      <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется
+        с
         Вами в течении дня.</p>
       <div class="allinputcost">
         <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
@@ -12,7 +13,16 @@
       </div>
       <div class="perscost">
         <button class="butcost" type="submit">Отправить заявку</button>
-        <p>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy"><span style="color: rgb(161, 7, 7);">обработку персональных данных</span></NuxtLink></p>
+        <p>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy"><span style="color: rgb(161, 7, 7);">обработку
+              персональных данных.</span></NuxtLink>
+        </p>
+      </div>
+      <div class="costinfo">
+        <p>Вы можете отправить файлы по почте или связаться с отделом продаж.</p>
+        <span style="display: flex; gap: 40px;padding-top: 20px;">
+          <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
+          <NuxtLink to="/" class="costmail">+7(351) 304-42-35</NuxtLink>
+        </span>
       </div>
     </form>
 
@@ -65,5 +75,12 @@
   padding-left: 56px;
   padding-bottom: 82px;
   align-items: center;
+}
+.costinfo { 
+    padding: 30px 50px;
+    background: white;
+    color: black;
+    position: relative; 
+    border: 2px solid  rgb(161, 7, 7);
 }
 </style>
