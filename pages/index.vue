@@ -6,7 +6,7 @@
 <MainPageSertSection></MainPageSertSection>
 <MainPageProductsSection></MainPageProductsSection>
 <MainPageCostSection></MainPageCostSection>
-<MainPageConfidSection></MainPageConfidSection>
+<!-- <MainPageConfidSection></MainPageConfidSection> -->
 <MainPageExcursionSection></MainPageExcursionSection>
 
 

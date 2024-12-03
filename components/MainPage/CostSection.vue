@@ -29,6 +29,10 @@
   </section>
 </template>
 
+<script setup lang="ts">
+
+</script>
+
 <style>
 .h2cost {
   padding: 30px 0;
@@ -76,11 +80,12 @@
   padding-bottom: 82px;
   align-items: center;
 }
-.costinfo { 
-    padding: 30px 50px;
-    background: white;
-    color: black;
-    position: relative; 
-    border: 2px solid  rgb(161, 7, 7);
+
+.costinfo {
+  padding: 30px 50px;
+  background: white;
+  color: black;
+  position: relative;
+  border: 2px solid rgb(161, 7, 7);
 }
 </style>

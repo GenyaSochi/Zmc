@@ -2,35 +2,44 @@
   <div class="footercont">
     <img src="/img/sitelogo1.png" width="128px" style="margin: 40px 0 0 0;" alt="logo">
     
-      <p>Завод металлоконструкций Урал</p>
-      <button class="lobtn">Рассчитать стоимость</button>
+      <p style="padding-top: 100px;">Завод металлоконструкций Урал</p>
+      <NuxtLink to="/privacy"><button class="lobtn" style="margin-top: 100px;">Рассчитать стоимость</button></NuxtLink>
     
-
-    <div>
-      <p style="padding-bottom: 5px;">Контакты</p>
-      <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
-      <p style="font-size: small;">по будням с 8:00 до 17:00</p>
-    </div>
-
-    <div>
-      <p style="padding-bottom: 5px;">+7(351) 304-42-35</p>
-      <p style="font-size: small;">Позвоните нам</p>
-    </div>
-
-    <div>
-      <p style="padding-bottom: 5px;">sales@zmkural.com</p>
-      <p style="font-size: small;">Получите расчет заказа</p>
-    </div>
-
-    <div>
-      <p style="padding-bottom: 5px;">Продукция</p>
-      <div v-for="el of prod" :key="el.id">
-        <p style="font-size: small;padding-bottom: 5px;">{{ el.prodname }}</p>
+      <div></div>    
+      
+      <div>
+        <p style="padding-bottom: 20px;">Продукция</p>
+        <div v-for="el of prod" :key="el.id">
+          <p style="font-size: small;padding-bottom: 10px;">{{ el.prodname }}</p>
+        </div>
       </div>
-    </div>
+      
+      <div>
+        <p style="padding-bottom: 20px;">Контакты</p>
+        <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
+        <p style="font-size: small;">по будням с 8:00 до 17:00</p>
+      </div>
+      
+      <div></div>
+      <div></div>
+      <div>
+        <p style="padding-bottom: 5px;">+7(351) 304-42-35</p>
+        <p style="font-size: small;">Позвоните нам</p>
+      </div>
+        
+      <div></div>
+      <div></div>
+      <div>
+        <p style="padding-bottom: 5px;">sales@zmkural.com</p>
+        <p style="font-size: small;">Получите расчет заказа</p>
+      </div>
+      <div></div>
+      <div style="font-size: small; text-align: center;">
+        <p>&copy; 2024 «Завод металлоконструкций Урал». Все права защищены</p>
+        <NuxtLink to="/privacy">Политика конфиденциальности</NuxtLink>
+      </div>
+ 
   </div>
-
-
 </template>
 
 <script setup lang="ts">
@@ -53,7 +62,8 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  padding: 30px;
+  padding: 30px 60px;
+  align-items: start;
 }
 
 .lobtn {
@@ -62,5 +72,12 @@ const prod = [
   color: white;
   font-size: 20px;
   width: 234px;
+}
+
+.privacyfooter {
+  background-color: black;
+  color: white;
+  font-size: small;
+  text-align: center; 
 }
 </style>

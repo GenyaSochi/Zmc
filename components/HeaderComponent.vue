@@ -9,12 +9,16 @@
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 
         </div>
         <div class="but">
-          <button class="butnav">Рассчитать стоимость</button>        
+          <NuxtLink to="/privacy"><button class="butnav">Рассчитать стоимость</button> </NuxtLink>       
           <button class="butnav">Заказать звонок</button>      
         </div>
       </div>         
   </nav>
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style scoped>
 .navtag {

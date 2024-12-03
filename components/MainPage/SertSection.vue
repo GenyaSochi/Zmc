@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="sert">
     <div class="sertcontainer">
       <h2 class="serttext">наши сертификаты</h2>
       <div class="sertimg">
@@ -12,6 +12,10 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style>
 .sertcontainer {

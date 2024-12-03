@@ -1,8 +1,8 @@
 <template>
   <section>  
-      <!-- <div class="video">
-        <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
-      </div> -->
+    <!-- <div class="video">
+      <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
+    </div> -->
       <h1 style="padding: 100px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
       <strong class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам заказчика.</strong>    
       <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span>
@@ -10,17 +10,19 @@
         <span class="num">2</span><span class="num">3</span>
       </h2>   
       <div class="allcontainer">     
-          <p class="cardcontainer">Выпускаем более ста видов опор</p>  
-          <p class="cardcontainer">Реализованные проекты</p> 
-          <p class="cardcontainer">Наши преимущества</p>        
-          <p class="cardcontainer">Наши сертификаты</p>         
-          <p class="cardcontainer">Фотографии завода</p>      
+        <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>  
+        <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink> 
+        <p class="cardcontainer">Наши преимущества</p>        
+        <a href="#sert" class="cardcontainer">Наши сертификаты</a>         
+        <p class="cardcontainer">Фотографии завода</p>      
       </div>  
       <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
 </template>
 
-<script></script>
+<script setup lang="ts">
+
+</script>
 
 <style scoped>
 .text {
@@ -80,9 +82,9 @@
 }
 
 .video {
-  position: fixed;
+  /* position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
   min-width: 100%;
   min-height: 100%;
   width: auto;
