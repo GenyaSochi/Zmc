@@ -54,7 +54,7 @@ const prod = [
 
 <style>
 .footercont {
-  background-color: black;
+  background-color:  rgb(56, 52, 52);
   color: white;
   display: grid;
   grid-template-rows: 1fr 1fr;
