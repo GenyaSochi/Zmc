@@ -5,8 +5,7 @@
       <p style="padding-top: 100px;">Завод металлоконструкций Урал</p>
       <NuxtLink to="/privacy"><button class="lobtn" style="margin-top: 100px;">Рассчитать стоимость</button></NuxtLink>
     
-      <div></div>    
-      
+      <div></div>          
       <div>
         <p style="padding-bottom: 20px;">Продукция</p>
         <div v-for="el of prod" :key="el.id">
@@ -18,21 +17,16 @@
         <p style="padding-bottom: 20px;">Контакты</p>
         <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
         <p style="font-size: small;">по будням с 8:00 до 17:00</p>
-      </div>
-      
-      <div></div>
-      <div></div>
-      <div>
-        <p style="padding-bottom: 5px;">+7(351) 304-42-35</p>
-        <p style="font-size: small;">Позвоните нам</p>
-      </div>
-        
-      <div></div>
-      <div></div>
-      <div>
-        <p style="padding-bottom: 5px;">sales@zmkural.com</p>
-        <p style="font-size: small;">Получите расчет заказа</p>
-      </div>
+        <div>
+          <p style="padding-top: 24px;">+7(351) 304-42-35</p>
+          <p style="font-size: small;">Позвоните нам</p>
+        </div>
+        <div>
+          <p style="padding-top: 24px;">sales@zmkural.com</p>
+          <p style="font-size: small;">Получите расчет заказа</p>
+        </div>
+      </div>           
+    
       <div></div>
       <div style="font-size: small; text-align: center;">
         <p>&copy; 2024 «Завод металлоконструкций Урал». Все права защищены</p>

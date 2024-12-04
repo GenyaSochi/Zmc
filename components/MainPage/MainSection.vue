@@ -1,8 +1,8 @@
 <template>
   <section>  
-    <div class="video">
+    <!-- <div class="video">
       <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
-    </div>
+    </div> -->
       <h1 style="padding: 100px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
       <strong class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам заказчика.</strong>    
       <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span>
@@ -59,14 +59,6 @@
   width: 290px;
 }
 
-/* .butcontainer {
-  border: 2px solid white;
-  padding: 10px 16px;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-} */
-
 .allcontainer {
   display: flex;
   justify-content: center;
@@ -82,9 +74,6 @@
 }
 
 .video {
-  /* position: fixed;
-  right: 0;
-  bottom: 0; */
   min-width: 100%;
   min-height: 100%;
   width: auto;
