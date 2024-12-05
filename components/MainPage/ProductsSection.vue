@@ -8,8 +8,7 @@
       самые амбициозные задачи.</p>
     <div class="allinfo">
       <div class="infoprod" v-for="el of products" :key="el.id">
-        <h3 class="nameprod">{{ el.titleprod }}</h3>
-        <!-- <NuxtLink to="/product">{{ el.prod }}</NuxtLink>   -->
+        <h3 class="nameprod">{{ el.titleprod }}</h3>      
         <div style="display: flex; justify-content: space-around;border:">
           <NuxtLink to="/catalog" class="linkprod">Подробнее</NuxtLink>
           <NuxtLink to="/contacts" class="linkorder">Заказать</NuxtLink>
@@ -24,7 +23,7 @@
 <script setup lang="ts">
 
 const products = [
-  { id: 1, titleprod: 'Опоры хомутовые, катковые, трубчатые по ОСТ 36-146-88', prod: 'КП', 'ТП' },
+  { id: 1, titleprod: 'Опоры хомутовые, катковые, трубчатые по ОСТ 36-146-88'},
   { id: 2, titleprod: 'Каркасы зданий' },
   { id: 3, titleprod: 'Опоры трубопроводов А14Б (серия 5.900-7: 4 выпуск)' },
   { id: 4, titleprod: 'Эстакады' },
@@ -92,7 +91,6 @@ const products = [
   border-radius: 5px;
   padding: 10px 0;
 }
-
 
 .orderprod {
   font-family: 'Exo 2', sans-serif;
