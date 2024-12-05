@@ -108,7 +108,6 @@ swiper-container {
   width: 320px;
   height: 210px;
 }
-
 .butproj {
   border: 2px solid white;
   padding: 5px 50px 5px 5px;
