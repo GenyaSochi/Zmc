@@ -10,7 +10,7 @@
         <span class="num">2</span><span class="num">3</span>
       </h2>   
       <div class="allcontainer">     
-        <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>  
+        <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор</NuxtLink>  
         <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink> 
         <p class="cardcontainer">Наши преимущества</p>        
         <a href="#sert" class="cardcontainer">Наши сертификаты</a>         
