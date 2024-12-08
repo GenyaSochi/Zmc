@@ -8,7 +8,7 @@
           <h2>{{ el.fullname }}</h2>
         </div>
         <div v-for="el of catalog1" :key="el.id">
-          <h2>{{ el.name }}</h2>
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
         </div>
       </div>
       <div>
@@ -16,7 +16,7 @@
           <h2>{{ el.fullname }}</h2>
         </div>
         <div v-for="el of catalog2" :key="el.id">
-          <h2>{{ el.name }}</h2>
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
         </div>
       </div>
       <div>
@@ -24,43 +24,45 @@
           <h2>{{ el.fullname }}</h2>
         </div>
         <div v-for="el of catalog3" :key="el.id">
-          <h2>{{ el.name }}</h2>
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
         </div>
       </div>
     </div>
 
-
     <div style="text-align: center;" v-for="el of namecatalog4">
       <h2>{{ el.fullname }}</h2>
     </div>
-   
-   
+    <div class="catalogcontainer2">
+      <div></div>
+      <h2>Выпуск 8-95</h2>
+      <div></div>
       <div style="color: blue;" v-for="el of catalog41" :key="el.id">
-        <h2>{{ el.short1 }}</h2>
-        
-         <h2>{{ el.name }}</h2>
+        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
       </div>
 
+      <div></div>
+      <h2>Выпуск 7-95</h2>
+      <div></div>
       <div style="color: red;" v-for="el of catalog42" :key="el.id">
-        <h2>{{ el.short2 }}</h2>
-        <h2>{{ el.name }}</h2>
+        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
       </div>
 
-   
+      <div></div>
+      <div></div>
+      <div></div>
+      <h2>Выпуск 6-95</h2>
+      <div></div>
       <div style="color: green;" v-for="el of catalog43" :key="el.id">
-        <h2>{{ el.short3 }}</h2>
-        <h2>{{ el.name }}</h2>
+        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
       </div>
-  
-
-
+    </div>
 
     <div style="text-align: center;padding-top: 30px;" v-for="el of namecatalog5">
       <h2>{{ el.fullname }}</h2>
     </div>
     <div class="catalogcontainer3">
       <div v-for="el of catalog5" :key="el.id">
-        <h2>{{ el.name }}</h2>
+        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
       </div>
     </div>
   </div>
@@ -91,14 +93,14 @@ const namecatalog2 = [
 ]
 
 const catalog2 = [
-  { id: 1, name: 'ОПХ1' },
-  { id: 2, name: 'ОПХ2' },
-  { id: 3, name: 'ОПХ3  ' },
-  { id: 4, name: 'ОПП1' },
-  { id: 5, name: 'ОПП2' },
-  { id: 6, name: 'ОПП3' },
-  { id: 7, name: 'ОПБ1' },
-  { id: 8, name: 'ОПБ2' },
+  { id: 12, name: 'ОПХ1' },
+  { id: 13, name: 'ОПХ2' },
+  { id: 14, name: 'ОПХ3  ' },
+  { id: 15, name: 'ОПП1' },
+  { id: 16, name: 'ОПП2' },
+  { id: 17, name: 'ОПП3' },
+  { id: 18, name: 'ОПБ1' },
+  { id: 19, name: 'ОПБ2' },
 ]
 
 const namecatalog3 = [
@@ -106,11 +108,11 @@ const namecatalog3 = [
 ]
 
 const catalog3 = [
-  { id: 1, name: 'ППУ' },
-  { id: 2, name: 'СПОк' },
-  { id: 3, name: 'СПОн  ' },
-  { id: 4, name: 'ФСО1' },
-  { id: 5, name: 'ФСО2' },
+  { id: 20, name: 'ППУ' },
+  { id: 21, name: 'СПОк' },
+  { id: 22, name: 'СПОн  ' },
+  { id: 23, name: 'ФСО1' },
+  { id: 24, name: 'ФСО2' },
 ]
 
 const namecatalog4 = [
@@ -118,48 +120,45 @@ const namecatalog4 = [
 ]
 
 const catalog41 = [
-  { short1: 'Выпуск 8-95' },
-  { id: 1, name: 'ТС-623.000' },
-  { id: 2, name: 'ТС-624.000' },
-  { id: 3, name: 'ТС-625.000' },
-  { id: 4, name: 'ТС-626.00.000' },
-  { id: 5, name: 'ТС-627.00.000' },
-  { id: 6, name: 'ТС-628.00.000' },
-  { id: 7, name: 'ТС-630.00.000' },
-  { id: 8, name: 'ТС-632.00.000' },
-  { id: 9, name: 'ТС-631.000' },
+  { id: 25, name: 'ТС-623.000' },
+  { id: 26, name: 'ТС-624.000' },
+  { id: 27, name: 'ТС-625.000' },
+  { id: 28, name: 'ТС-626.00.000' },
+  { id: 29, name: 'ТС-627.00.000' },
+  { id: 30, name: 'ТС-628.00.000' },
+  { id: 31, name: 'ТС-630.00.000' },
+  { id: 32, name: 'ТС-632.00.000' },
+  { id: 33, name: 'ТС-631.000' },
 ]
 const catalog42 = [
-  { short2: 'Выпуск 7-95' },
-  { id: 1, name: 'ТС-659.00.00' },
-  { id: 2, name: 'ТС-660.00.00' },
-  { id: 3, name: 'ТС-661.00.00' },
-  { id: 4, name: 'ТС-662.00.00' },
-  { id: 5, name: 'ТС-663.00.00' },
-  { id: 6, name: 'ТС-664.00.00' },
-  { id: 7, name: 'ТС-665.00.00' },
-  { id: 8, name: 'ТС-666.00.00' },
-  { id: 9, name: 'ТС-667.00.00' },
-  { id: 10, name: 'ТС-668.00.00' },
-  { id: 11, name: 'ТС-669.00.00' },
-  { id: 12, name: 'ТС-670.00.00' },
-  { id: 13, name: 'ТС-671.00.00' },
+  { id: 34, name: 'ТС-659.00.00' },
+  { id: 35, name: 'ТС-660.00.00' },
+  { id: 36, name: 'ТС-661.00.00' },
+  { id: 37, name: 'ТС-662.00.00' },
+  { id: 38, name: 'ТС-663.00.00' },
+  { id: 39, name: 'ТС-664.00.00' },
+  { id: 40, name: 'ТС-665.00.00' },
+  { id: 41, name: 'ТС-666.00.00' },
+  { id: 42, name: 'ТС-667.00.00' },
+  { id: 43, name: 'ТС-668.00.00' },
+  { id: 44, name: 'ТС-669.00.00' },
+  { id: 45, name: 'ТС-670.00.00' },
+  { id: 46, name: 'ТС-671.00.00' },
 ]
 const catalog43 = [
-  { short3: 'Выпуск 6-95' },
-  { id: 1, name: 'ТС-676.00.000' },
-  { id: 2, name: 'ТС-677.00.000' },
-  { id: 3, name: 'ТС-678.00.000' },
-  { id: 4, name: 'ТС-679.00.000' },
-  { id: 5, name: 'ТС-680.00.000' },
-  { id: 6, name: 'ТС-681.00.000' },
-  { id: 7, name: 'ТС-682.00.000' },
-  { id: 8, name: 'ТС-685.00.000' },
-  { id: 9, name: 'ТС-686.00.000' },
-  { id: 10, name: 'ТС-687.00.000' },
-  { id: 11, name: 'ТС-688.00.000' },
-  { id: 12, name: 'ТС-689.00.000' },
-  { id: 13, name: 'ТС-690.00.000' },
+  { id: 47, name: 'ТС-676.00.000' },
+  { id: 48, name: 'ТС-677.00.000' },
+  { id: 49, name: 'ТС-678.00.000' },
+  { id: 50, name: 'ТС-679.00.000' },
+  { id: 51, name: 'ТС-680.00.000' },
+  { id: 52, name: 'ТС-681.00.000' },
+  { id: 53, name: 'ТС-682.00.000' },
+  { id: 54, name: 'ТС-685.00.000' },
+  { id: 55, name: 'ТС-686.00.000' },
+  { id: 56, name: 'ТС-687.00.000' },
+  { id: 57, name: 'ТС-688.00.000' },
+  { id: 58, name: 'ТС-689.00.000' },
+  { id: 59, name: 'ТС-690.00.000' },
 ]
 
 const namecatalog5 = [
@@ -167,17 +166,17 @@ const namecatalog5 = [
 ]
 
 const catalog5 = [
-  { id: 1, name: 'ОСТ 34-10-610-93' },
-  { id: 2, name: 'ОСТ 34-10-611-93' },
-  { id: 3, name: 'ОСТ 34-10-612-93' },
-  { id: 4, name: 'ОСТ 34-10-613-93' },
-  { id: 5, name: 'ОСТ 34-10-614-93' },
-  { id: 6, name: 'ОСТ 34-10-615-93' },
-  { id: 7, name: 'ОСТ 34-10-616-93' },
-  { id: 8, name: 'ОСТ 34-10-617-93' },
-  { id: 9, name: 'ОСТ 34-10-618-93' },
-  { id: 10, name: 'ОСТ 34-10-619-93' },
-  { id: 11, name: 'ОСТ 34-10-620-93' },
+  { id: 60, name: 'ОСТ 34-10-610-93' },
+  { id: 61, name: 'ОСТ 34-10-611-93' },
+  { id: 62, name: 'ОСТ 34-10-612-93' },
+  { id: 63, name: 'ОСТ 34-10-613-93' },
+  { id: 64, name: 'ОСТ 34-10-614-93' },
+  { id: 65, name: 'ОСТ 34-10-615-93' },
+  { id: 66, name: 'ОСТ 34-10-616-93' },
+  { id: 67, name: 'ОСТ 34-10-617-93' },
+  { id: 68, name: 'ОСТ 34-10-618-93' },
+  { id: 69, name: 'ОСТ 34-10-619-93' },
+  { id: 70, name: 'ОСТ 34-10-620-93' },
 ]
 
 
@@ -204,11 +203,12 @@ h1 {
 .catalogcontainer2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .catalogcontainer3 {
-  display: flex;
- 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
 }
 </style>

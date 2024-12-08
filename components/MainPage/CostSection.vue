@@ -4,8 +4,7 @@
     <form class="formcost" @submit.prevent="">
       <h2 class="h2cost">Рассчёт стоимости</h2>
       <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется
-        с
-        Вами в течении дня.</p>
+        с Вами в течении дня.</p>
       <div class="allinputcost">
         <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
         <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">

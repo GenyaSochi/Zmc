@@ -1,6 +1,6 @@
 <template>
   <div class="footercont">
-    <img src="/img/sitelogo1.png" width="128px" style="margin: 40px 0 0 80px;" alt="logo">
+    <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 80px;" alt="logo">
     
       <p style="padding-top: 100px;">Завод металлоконструкций Урал</p>
       <NuxtLink to="/privacy"><button class="lobtn" style="margin-top: 100px;">Рассчитать стоимость</button></NuxtLink>

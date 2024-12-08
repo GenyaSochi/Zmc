@@ -1,7 +1,7 @@
 <template>
   <nav class="navtag">        
       <div class="container nav">
-        <span><img src="/img/sitelogo1.png" width="136px" style="padding: 0 20px" alt="logo"></span>
+        <span><img src="/img/sitelogo1.webp" width="136px" style="padding: 0 20px" alt="logo"></span>
         <div class="link">         
           <NuxtLink to="/" class="nav">Главная</NuxtLink>
           <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
