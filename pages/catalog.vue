@@ -4,7 +4,7 @@
   <div class="allcatalog">
     <div class="catalogcontainer1">
       <div>
-        <div v-for="el of namecatalog1">
+        <div class="catalog1" v-for="el of namecatalog1">
           <h2>{{ el.fullname }}</h2>
         </div>
         <div v-for="el of catalog1" :key="el.id">
@@ -209,6 +209,10 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
 
+.catalog1 {
+  font-size: 24px;
+  font-family: inherit;
 }
 </style>
