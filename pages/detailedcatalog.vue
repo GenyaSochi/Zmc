@@ -5,7 +5,9 @@
   <button style="color: blue;">Расчитать</button>
   <div v-for="el of description">
     <p>{{ el.nameproduct }}</p>
+    <br>
     <p>{{ el.text }}</p>
+    <br>
   </div>
 
 </template>
