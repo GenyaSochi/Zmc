@@ -1,8 +1,8 @@
 <template>
-  <button style="color:blueviolet">Вернуться назад</button> 
+  <button style="color:blueviolet;border: 1px solid black;">Вернуться назад</button> 
   <p>подробное описание</p>
-  <button style="color: red;">Заказать</button>
-  <button style="color: blue;">Расчитать</button>
+  <button style="color: red; border: 1px solid black;">Заказать</button>
+  <button style="color: blue; border: 1px solid black;">Расчитать</button>
   <div v-for="el of description">
     <p>{{ el.nameproduct }}</p>
     <br>

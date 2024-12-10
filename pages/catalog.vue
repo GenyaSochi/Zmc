@@ -1,7 +1,7 @@
 <template>
-  <h1>каталог продукции</h1>
-  <br>
-  <div class="allcatalog">
+  <div class="container">
+
+    <h1>каталог продукции</h1> 
     <div class="catalogcontainer1">
       <div>
         <div v-for="el of namecatalog1">
@@ -33,27 +33,32 @@
       <h2>{{ el.fullname }}</h2>
     </div>
     <div class="catalogcontainer2">
-      <div></div>
-      <h2>Выпуск 8-95</h2>
-      <div></div>
-      <div style="color: blue;" v-for="el of catalog41" :key="el.id">
-        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+      <div>
+        <h2>Выпуск 8-95</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+          
+          <div style="color: blue;" v-for="el of catalog41" :key="el.id">
+            <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+          </div>
+        </div>
       </div>
-
-      <div></div>
-      <h2>Выпуск 7-95</h2>
-      <div></div>
-      <div style="color: red;" v-for="el of catalog42" :key="el.id">
-        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+      
+      <div>
+        <h2>Выпуск 7-95</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+          <div style="color: red;" v-for="el of catalog42" :key="el.id">
+            <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+          </div>
+        </div>
       </div>
-
-      <div></div>
-      <div></div>
-      <div></div>
-      <h2>Выпуск 6-95</h2>
-      <div></div>
-      <div style="color: green;" v-for="el of catalog43" :key="el.id">
-        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+      
+      <div>
+        <h2>Выпуск 6-95</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div style="color: green;" v-for="el of catalog43" :key="el.id">
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+        </div>
+        </div>
       </div>
     </div>
 
@@ -65,17 +70,21 @@
         <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
       </div>
     </div>
-  </div>
+</div>
 </template>
 
 <script setup lang="ts">
+
+const types = [
+  { id: 1, fullname: 'ОСТ 36-146-88 опоры стальных технологических трубопроводов' },
+]
 
 const namecatalog1 = [
   { id: 1, fullname: 'ОСТ 36-146-88 опоры стальных технологических трубопроводов' },
 ]
 
 const catalog1 = [
-  { id: 1, name: 'КП' },
+  { id: 1, name: 'КП', text:''},
   { id: 2, name: 'ТП' },
   { id: 3, name: 'ТР' },
   { id: 4, name: 'ВП' },
@@ -189,13 +198,8 @@ h1 {
   font-size: 28px;
 }
 
-.allcatalog {
-  height: 100%;
-  padding-bottom: 30px;
-}
-
 .catalogcontainer1 {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: space-evenly; 
 }
