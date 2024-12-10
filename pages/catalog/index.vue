@@ -1,0 +1,130 @@
+<template>
+  <div class="container">
+
+    <h1>каталог продукции</h1> 
+    <!-- <div class="catalogcontainer1">
+      <div>
+        <div v-for="el of namecatalog1">
+          <h2>{{ el.fullname }}</h2>
+        </div>
+        <div v-for="el of catalog1" :key="el.id">
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+        </div>
+      </div>
+      <div>
+        <div v-for="el of namecatalog2">
+          <h2>{{ el.fullname }}</h2>
+        </div>
+        <div v-for="el of catalog2" :key="el.id">
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+        </div>
+      </div>
+      <div>
+        <div v-for="el of namecatalog3">
+          <h2>{{ el.fullname }}</h2>
+        </div>
+        <div v-for="el of catalog3" :key="el.id">
+          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;" v-for="el of namecatalog4">
+      <h2>{{ el.fullname }}</h2>
+    </div>
+    
+    <div style="text-align: center;padding-top: 30px;" v-for="el of namecatalog5">
+      <h2>{{ el.fullname }}</h2>
+    </div>
+    <div class="catalogcontainer3">
+      <div v-for="el of catalog5" :key="el.id">
+        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
+      </div>
+    </div> -->
+    <div v-for="type of catalogStore.types" :key="type.id">
+        <h2>{{ type.name }}</h2>
+        <template v-if="type.out.length">
+            <div class="catalogcontainer2">
+            <div v-for="out_id of type.out" :key="out_id">
+            <h2>{{ catalogStore.out.find(el=>el.id==out_id)?.name }}</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr;">
+              <NuxtLink v-for="el of catalogStore.catalog.filter(el=>el.out_id==out_id && el.type_id==type.id)" :key="el.id" :to="`/catalog/${translit(el.name)}`">{{ el.name }}</NuxtLink>
+            </div>
+          </div>
+        </div>
+        </template>
+        <template v-else>
+          <div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;justify-content: center">
+              <NuxtLink v-for="el of catalogStore.catalog.filter(el=>el.type_id==type.id)" :key="el.id" :to="`/catalog/${translit(el.name)}`">{{ el.name }}</NuxtLink>
+            </div>
+          </div>
+        </template>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+
+const catalogStore = useCatalog()
+
+function translit(word:string){
+	var answer = '';
+	var converter = {
+		'а': 'a',    'б': 'b',    'в': 'v',    'г': 'g',    'д': 'd',
+		'е': 'e',    'ё': 'e',    'ж': 'zh',   'з': 'z',    'и': 'i',
+		'й': 'y',    'к': 'k',    'л': 'l',    'м': 'm',    'н': 'n',
+		'о': 'o',    'п': 'p',    'р': 'r',    'с': 's',    'т': 't',
+		'у': 'u',    'ф': 'f',    'х': 'h',    'ц': 'c',    'ч': 'ch',
+		'ш': 'sh',   'щ': 'sch',  'ь': '',     'ы': 'y',    'ъ': '',
+		'э': 'e',    'ю': 'yu',   'я': 'ya',
+ 
+		'А': 'A',    'Б': 'B',    'В': 'V',    'Г': 'G',    'Д': 'D',
+		'Е': 'E',    'Ё': 'E',    'Ж': 'Zh',   'З': 'Z',    'И': 'I',
+		'Й': 'Y',    'К': 'K',    'Л': 'L',    'М': 'M',    'Н': 'N',
+		'О': 'O',    'П': 'P',    'Р': 'R',    'С': 'S',    'Т': 'T',
+		'У': 'U',    'Ф': 'F',    'Х': 'H',    'Ц': 'C',    'Ч': 'Ch',
+		'Ш': 'Sh',   'Щ': 'Sch',  'Ь': '',     'Ы': 'Y',    'Ъ': '',
+		'Э': 'E',    'Ю': 'Yu',   'Я': 'Ya'
+  } as Record<string,string>
+ 
+	for (var i = 0; i < word.length; ++i ) {
+		if (converter[word[i]] == undefined){
+			answer += word[i];
+		} else {
+			answer += converter[word[i]];
+		}
+	}
+    answer = answer.trim().replaceAll(' ','_').toLocaleLowerCase()
+	return answer;
+}
+
+</script>
+
+<style scoped>
+h1 {
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+h2 {
+  text-align: center;
+}
+
+.catalogcontainer1 {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+}
+
+.catalogcontainer2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.catalogcontainer3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+</style>
