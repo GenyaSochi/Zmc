@@ -1,15 +1,19 @@
 <template>
-  <button style="color:blueviolet;border: 1px solid black;">Вернуться назад</button> 
-  <p>подробное описание</p>
-  <button style="color: red; border: 1px solid black;">Заказать</button>
+	<div class="container">
+
+		<button style="color:blueviolet;border: 1px solid black;">Вернуться назад</button> 
+		<p>подробное описание</p>
+		<button style="color: red; border: 1px solid black;">Заказать</button>
   <button style="color: blue; border: 1px solid black;">Расчитать</button>
   <div>
     <p>{{ el.nameproduct }}</p>
     <br>
     <p>{{ el.text }}</p>
     <br>
+    <div v-html="el.table"></div>
   </div>
-
+</div>
+	
 </template>
 
 <script setup lang="ts">
@@ -51,4 +55,6 @@ function translit(word:string){
 }
 </script>
 
-<style></style>
+<style>
+
+</style>
