@@ -57,7 +57,7 @@ const prod = [
   gap: 30px;
   font-size: 20px;
   padding: 30px 60px;
-  align-items: start;
+  align-items: start;margin-top: 60px;
 }
 
 .lobtn {
