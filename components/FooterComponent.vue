@@ -56,8 +56,7 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  padding: 30px 60px;
-  align-items: start;margin-top: 60px;
+  /* padding: 30px 60px; */
 }
 
 .lobtn {
@@ -65,7 +64,7 @@ const prod = [
   padding: 10px;
   color: white;
   font-size: 20px;
-  width: 234px;
+  width: 257px;
 }
 
 .privacyfooter {

@@ -1,7 +1,7 @@
 <template>
   <nav class="navtag">        
       <div class="container nav">
-        <span><img src="/img/sitelogo1.webp" width="136px" style="padding: 0 20px" alt="logo"></span>
+        <span><img src="/img/sitelogo1.webp" width="160px" style="padding: 0 20px" alt="logo"></span>
         <div class="link">         
           <NuxtLink to="/" class="nav">Главная</NuxtLink>
           <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
@@ -24,6 +24,7 @@
 .navtag {
     padding: 15px 0;
     background-color: rgb(56, 52, 52);
+    margin-bottom: 60px;
   }
 .nav {
     display: flex;
@@ -32,11 +33,12 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-family: 'Exo 2', sans-serif;        
+    height: 110px;
+    font-family: 'Montserrat', light;      
 }
 .but {
    font-size: 18px;
-   font-family: 'Exo 2', sans-serif;
+   font-family: 'Montserrat', light;
    padding: 5px;
    display: flex;
    gap: 30px;
@@ -48,6 +50,8 @@
 .butnav {
   border: 2px solid white;
   padding: 5px;
+  width: 250px;
+  text-align: center;
 }
 
 .button:hover {

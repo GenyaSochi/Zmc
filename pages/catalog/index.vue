@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <h1>каталог продукции</h1> 
     <!-- <div class="catalogcontainer1">
       <div>

@@ -1,5 +1,5 @@
 <template>         
-    <div>
+    <div class="container">
         <p style="padding-bottom: 20px;">Контакты</p>
         <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
         <p style="font-size: small;">по будням с 8:00 до 17:00</p>
