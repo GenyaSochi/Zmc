@@ -62,6 +62,7 @@
 .allcontainer {
   display: flex;
   justify-content: center;
+  text-align: center;
   gap: 45px;
   padding: 40px 0;
 }

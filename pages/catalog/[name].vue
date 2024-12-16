@@ -2,7 +2,7 @@
 	<div class="container">
 		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
 		<div style="display: flex; align-items: center;gap: 82px;">
-			<NuxtImg style="width: 300px;" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>	
+			<NuxtImg style="margin-top: 30px;" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>	
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ el?.name }}</p>			
 		</div>
 		<div class="detailet">подробное описание
@@ -15,6 +15,8 @@
 			<p class="titleproduct">{{ el?.title }}</p>
 					<p>{{ el?.text }}</p>
 					<div v-html="el?.table"></div>
+					<div v-html="el?.table1"></div>
+					<div v-html="el?.table2"></div>
 			</div>
 		</div>
 
