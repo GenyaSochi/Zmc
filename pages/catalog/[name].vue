@@ -15,8 +15,6 @@
 			<p class="titleproduct">{{ el?.title }}</p>
 					<p>{{ el?.text }}</p>
 					<div v-html="el?.table"></div>
-					<div v-html="el?.table1"></div>
-					<div v-html="el?.table2"></div>
 			</div>
 		</div>
 
