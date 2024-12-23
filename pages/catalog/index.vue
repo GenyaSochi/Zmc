@@ -47,14 +47,14 @@
             <div v-for="out_id of type.out" :key="out_id">
             <h2>{{ catalogStore.out.find(el=>el.id==out_id)?.name }}</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr;">
-              <NuxtLink style="border: 1px solid black; width: 210px;height: 68px; border-radius: 5px; text-align: center; padding: 20px;margin: 10px;font-size: 24px;" v-for="el of catalogStore.catalog.filter(el=>el.out_id==out_id && el.type_id==type.id)" :key="el.id" :to="`/catalog/${translit(el.name)}`">{{ el.name }}</NuxtLink>
+              <NuxtLink style="border: 1px solid black; width: 210px;height: 68px; border-radius: 5px; text-align: center; padding:0 20px;margin: 10px;font-size: 24px;" v-for="el of catalogStore.catalog.filter(el=>el.out_id==out_id && el.type_id==type.id)" :key="el.id" :to="`/catalog/${translit(el.name)}`">{{ el.name }}</NuxtLink>
             </div>
           </div>
         </div>
         </template>
         <template v-else>
           <div>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;justify-content: center; font-size: 24px;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;justify-content: center; font-size: 24px; padding-bottom: 30px;">
               <NuxtLink style="border: 1px solid black; width: 244px; height: 68px; border-radius: 5px; text-align: center; padding: 20px; margin: 10px;" v-for="el of catalogStore.catalog.filter(el=>el.type_id==type.id)" :key="el.id" :to="`/catalog/${translit(el.name)}`">{{ el.name }}</NuxtLink>
             </div>
           </div>
