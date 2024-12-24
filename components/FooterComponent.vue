@@ -2,19 +2,19 @@
   <div class="footercont">
     <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 80px;" alt="logo">
     
-      <p style="padding-top: 100px;">Завод металлоконструкций Урал</p>
-      <NuxtLink to="/privacy"><button class="lobtn" style="margin-top: 100px;">Рассчитать стоимость</button></NuxtLink>
+      <p>Завод металлоконструкций Урал</p>
+      <NuxtLink to="/privacy"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
     
       <div></div>          
       <div>
-        <p style="padding-bottom: 20px;">Продукция</p>
+        <p style="padding-bottom: 28px;">Продукция</p>
         <div v-for="el of prod" :key="el.id">
           <p style="font-size: small;padding-bottom: 10px;">{{ el.prodname }}</p>
         </div>
       </div>
       
       <div>
-        <p style="padding-bottom: 20px;">Контакты</p>
+        <p style="padding-bottom: 28px;">Контакты</p>
         <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
         <p style="font-size: small;">по будням с 8:00 до 17:00</p>
         <div>
@@ -28,12 +28,12 @@
       </div>           
     
       <div></div>
-      <div style="font-size: small; text-align: center;">
-        <p>&copy; 2024 «Завод металлоконструкций Урал». Все права защищены</p>
-        <NuxtLink to="/privacy">Политика конфиденциальности</NuxtLink>
+      <div style="text-align: center; padding-bottom: 30px;">
+        <p style="font-size: small;">&copy; 2024 «Завод металлоконструкций Урал». Все права защищены</p>
+        <NuxtLink to="/privacy" style="font-size: small;">Политика конфиденциальности</NuxtLink>
       </div>
+    </div>
  
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -56,7 +56,6 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  /* padding: 30px 60px; */
 }
 
 .lobtn {

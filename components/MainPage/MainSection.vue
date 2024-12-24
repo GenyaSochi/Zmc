@@ -12,11 +12,11 @@
       <div class="allcontainer">     
         <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор</NuxtLink>  
         <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink> 
-        <p class="cardcontainer">Наши преимущества</p>        
+        <a href="#advant" class="cardcontainer">Наши преимущества</a>        
         <a href="#sert" class="cardcontainer">Наши сертификаты</a>         
         <p class="cardcontainer">Фотографии завода</p>      
       </div>  
-      <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
+      <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>         
   </section>
 </template>
 

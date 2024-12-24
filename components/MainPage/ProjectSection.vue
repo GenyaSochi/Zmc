@@ -8,13 +8,13 @@
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }}</p>
             <p class="title">{{ el.title }}</p>
-            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="564" :src="el.imgproduct"
+            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="600" :src="el.imgproduct"
               :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
     </div>
-    <div class="productstyle">
+    <div id="advant" class="productstyle">
       <h2 class="ouradvant">наши преимущества</h2>
       <h3 class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
         делают наше сотрудничество выгодным.</h3>
@@ -143,21 +143,15 @@ swiper-container {
   justify-content: space-between;
 }
 
-/* .butadvant {
-  border: 2px solid white;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 152px;
-} */
-
 .productstyle {
-  background-color: black;
+  background-color: rgb(56, 52, 52);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 30px 0 60px 0;
   gap: 30px;
+  height: 600px;
 }
 
 .textspan {
