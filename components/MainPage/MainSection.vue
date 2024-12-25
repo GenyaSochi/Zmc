@@ -18,6 +18,7 @@
       </div>  
       <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>         
   </section>
+
 </template>
 
 <script setup lang="ts">
@@ -31,14 +32,16 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: rgb(250, 250, 250);
-  padding: 45px 0 60px 0; 
+  padding: 77px 0; 
+  background-color:  rgb(56, 52, 52);
+  color: white;
+  margin-top: 30px;
 }
 
 .num {
-  border: 2px solid black;
+  border: 2px solid white;
   padding: 2px 10px;
-  color: black;
+  color: white;
 }
 
 .cardcontainer {

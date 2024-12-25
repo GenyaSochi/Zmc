@@ -1,6 +1,6 @@
 <template>
   <div class="footercont">
-    <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 80px;" alt="logo">
+    <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
     
       <p>Завод металлоконструкций Урал</p>
       <NuxtLink to="/privacy"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
@@ -51,11 +51,12 @@ const prod = [
   background-color:  rgb(56, 52, 52);
   color: white;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr; */
   grid-template-columns: 1fr 1fr 1fr;
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
+  height: 480px;
 }
 
 .lobtn {

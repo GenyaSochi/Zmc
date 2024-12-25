@@ -41,12 +41,16 @@ const products = [
   font-size: 40px;
   color: black;
   padding: 30px 0;
+  font-family: 'Montserrat', light;
+  font-size: 20px;
 }
 
 .textprod {
   text-align: center;
   font-size: 20px;
   padding: 0px 300px;
+  font-family: 'Montserrat', light;
+  font-size: 20px;
 }
 
 .infoprod {
@@ -60,6 +64,8 @@ const products = [
   width: 392px;
   height: 224px;
   color: white;
+  font-family: 'Montserrat', light;
+  font-size: 20px;
 }
 
 .allinfo {

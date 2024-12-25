@@ -18,19 +18,24 @@
       <h2 class="ouradvant">наши преимущества</h2>
       <h3 class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
         делают наше сотрудничество выгодным.</h3>
-
-      <div class="production">Экскурсия на производство<a class="butproj" href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ  ">Смотреть</a><img
-          src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
-      <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall">Мы
-          удовлетворяем любые запросы по
-          объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим требованиям.</span>
+      <div class="blockproduct">
+        <div class="production">Экскурсия на производство<a class="butproj"
+            href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ  ">Смотреть</a><img
+            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
+        <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall">Мы
+            удовлетворяем любые запросы по
+            объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим
+            требованиям.</span>
+        </div>
+        <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall">Мы гордимся
+            тем, что у нас не
+            возникает претензий к качеству наших изделий при приёмке, что гарантирует Вам безупречность каждой партии и
+            экономию времени.</span></div>
+        <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall">Прямое общение с
+            конструкторами, минуя
+            менеджеров - наше преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
+            потребности каждого проекта.</span></div>
       </div>
-      <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall">Мы гордимся тем, что у нас не
-          возникает претензий к качеству наших изделий при приёмке, что гарантирует вам безупречность каждой партии и
-          экономию времени.</span></div>
-      <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall">Прямое общение с конструкторами, минуя
-          менеджеров - наше преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
-          потребности каждого проекта.</span></div>
     </div>
   </section>
 </template>
@@ -53,8 +58,8 @@ const slide = [
 .proj {
   display: flex;
   justify-content: center;
-  background-color: rgb(161, 7, 7);
   height: 700px;
+  margin-bottom: 90px;
 }
 
 .ourproj {
@@ -70,25 +75,28 @@ const slide = [
   text-transform: uppercase;
   color: white;
   font-size: 40px;
+  padding-bottom: 30px;
 }
 
 .quant {
   text-transform: uppercase;
   color: white;
-  font-size: 88px;
+  font-size: 80px;
   position: absolute;
   font-weight: bold;
   font-style: oblique;
+  font-family: 'Montserrat', light;      
 }
 
 .title {
   text-transform: uppercase;
   color: white;
-  font-size: 88px;
+  font-size: 80px;
   position: absolute;
-  bottom: 82px;
+  bottom: 134px;
   font-weight: bold;
   font-style: oblique;
+  font-family: 'Montserrat', light;      
 }
 
 swiper-container {
@@ -108,6 +116,7 @@ swiper-container {
   width: 320px;
   height: 210px;
 }
+
 .butproj {
   border: 2px solid white;
   padding: 5px 50px 5px 5px;
@@ -129,6 +138,8 @@ swiper-container {
 .advanttext {
   font-size: 24px;
   color: white;
+  padding-bottom: 96px;
+  text-align: center;
 }
 
 .advant {
@@ -145,12 +156,8 @@ swiper-container {
 
 .productstyle {
   background-color: rgb(56, 52, 52);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  padding: 30px 0 60px 0;
-  gap: 30px;
+  padding-top: 30px;
   height: 600px;
 }
 
@@ -165,4 +172,11 @@ swiper-container {
   text-align: center;
 }
 
+.blockproduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+}
 </style>
