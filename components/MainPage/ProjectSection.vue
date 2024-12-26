@@ -20,20 +20,16 @@
         делают наше сотрудничество выгодным.</h3>
       <div class="blockproduct">
         <div class="production">Экскурсия на производство<a class="butproj"
-            href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ  ">Смотреть</a><img
+            href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
             src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
-        <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall">Мы
-            удовлетворяем любые запросы по
-            объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим
+        <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
+            удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим
             требованиям.</span>
         </div>
-        <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall">Мы гордимся
-            тем, что у нас не
-            возникает претензий к качеству наших изделий при приёмке, что гарантирует Вам безупречность каждой партии и
-            экономию времени.</span></div>
-        <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall">Прямое общение с
-            конструкторами, минуя
-            менеджеров - наше преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
+        <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall2">Мы гордимся
+           качеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span></div>
+        <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с нашими
+            конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
             потребности каждого проекта.</span></div>
       </div>
     </div>
@@ -109,7 +105,7 @@ swiper-container {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 26px;
+  padding: 10px 26px 26px 26px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
@@ -151,7 +147,7 @@ swiper-container {
   height: 210px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .productstyle {
@@ -162,14 +158,27 @@ swiper-container {
 }
 
 .textspan {
-  display: flex;
   text-align: center;
   padding-bottom: 10px;
+  font-size: 22px;
 }
 
-.textsmall {
+.textsmall1 {
   font-size: 14px;
   text-align: center;
+  padding-top: 34px;
+}
+
+.textsmall2 {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.textsmall3 {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 34px;
 }
 
 .blockproduct {
@@ -177,6 +186,7 @@ swiper-container {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: space-between;
   gap: 66px;
 }
 </style>

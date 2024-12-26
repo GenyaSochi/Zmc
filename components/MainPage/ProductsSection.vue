@@ -9,7 +9,7 @@
     <div class="allinfo">
       <div class="infoprod" v-for="el of products" :key="el.id">
         <h3 class="nameprod">{{ el.titleprod }}</h3>      
-        <div style="display: flex; justify-content: space-around;border:">
+        <div class="buttonstyle">
           <NuxtLink to="/catalog" class="linkprod">Подробнее</NuxtLink>
           <NuxtLink to="/contacts" class="linkorder">Заказать</NuxtLink>
         </div>
@@ -42,15 +42,14 @@ const products = [
   color: black;
   padding: 30px 0;
   font-family: 'Montserrat', light;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .textprod {
   text-align: center;
-  font-size: 20px;
-  padding: 0px 300px;
+  font-size: 20px; 
   font-family: 'Montserrat', light;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .infoprod {
@@ -61,7 +60,7 @@ const products = [
   border-radius: 10px;
   font-size: 22px;
   background-color: rgb(56, 52, 52);
-  width: 392px;
+  width: 488px;
   height: 224px;
   color: white;
   font-family: 'Montserrat', light;
@@ -69,22 +68,19 @@ const products = [
 }
 
 .allinfo {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   flex-wrap: wrap;
-  padding-top: 30px;
-  margin-left: 330px;
-  gap: 20px;
-  width: 1220px;
-  padding-bottom: 30px;
-}
-
-.allinfo :hover {
-  background-color: black;
+  padding-top: 60px;
+  gap: 30px;
+  padding-bottom: 90px;
+  margin: 0 210px;
 }
 
 .nameprod {
   font-size: 24px;
+  text-align: center;
 }
 
 .seeprod {
@@ -108,10 +104,19 @@ const products = [
 .linkprod {
   border: 1px solid white;
   padding: 5px 14px;
+  width: 180px;
 }
 
 .linkorder {
   border: 1px solid white;
   padding: 5px 26px;
+  width: 180px;
+  text-align: center;
+}
+
+.buttonstyle {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 </style>
