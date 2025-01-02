@@ -8,7 +8,7 @@
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }}</p>
             <p class="title">{{ el.title }}</p>
-            <NuxtImg fit="cover" sizes="1920px sm:600px md:1024px xxl:1920px" height="600" :src="el.imgproduct"
+            <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" :src="el.imgproduct"
               :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
@@ -45,8 +45,10 @@ const slide = [
   { id: 2, title: 'Опоры регулируемые', img: '/img/calendar.webp;', name: 'Газпром', quantity: '> 65 тонн', time: 'Май - Июнь 2020 г.', imgproduct: '/img/adjust.webp' },
   { id: 3, title: 'ОППС', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 113 тонн', time: 'Январь - Февраль 2020 г.', imgproduct: '/img/opps.webp' },
   { id: 4, title: 'ОСП, ОПП', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 98 тонн', time: 'Сентябрь 2019 г.', imgproduct: '/img/osp_opp.webp' },
-  { id: 5, title: 'Опоры ОН в ППУ изоляции', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 60 тонн', time: 'Июнь 2019', imgproduct: '' },
-  { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '' },
+  { id: 5, title: 'Опоры ОН в ППУ изоляции', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 60 тонн', time: 'Июнь 2019', imgproduct: '/img/on_ppu.webp' },
+  { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '/img/serial_supports.webp' },
+  { id: 7, title:'Опоры трубопроводов', img:'/img/calendar.webp;', name:'Иркутский завод полимеров', quantity: '1100 единиц', time: 'Май 2022 г.', imgproduct:'/img/izp.webp' },
+  { id: 8, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' }
 ]
 </script>
 
@@ -81,18 +83,20 @@ const slide = [
   position: absolute;
   font-weight: bold;
   font-style: oblique;
-  font-family: 'Montserrat', light;      
+  /* font-family: 'Montserrat', light;       */
+   font-family: 'Exo 2', sans-serif;
 }
 
 .title {
   text-transform: uppercase;
   color: white;
-  font-size: 80px;
+  font-size: 52px;
   position: absolute;
   bottom: 134px;
   font-weight: bold;
   font-style: oblique;
-  font-family: 'Montserrat', light;      
+  /* font-family: 'Montserrat', light;       */
+   font-family: 'Exo 2', sans-serif;
 }
 
 swiper-container {
@@ -166,7 +170,7 @@ swiper-container {
 .textsmall1 {
   font-size: 14px;
   text-align: center;
-  padding-top: 34px;
+  padding-top: 12px;
 }
 
 .textsmall2 {
@@ -178,7 +182,7 @@ swiper-container {
 .textsmall3 {
   font-size: 14px;
   text-align: center;
-  padding-top: 34px;
+  padding-top: 12px;
 }
 
 .blockproduct {
