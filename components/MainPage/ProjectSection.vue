@@ -41,26 +41,16 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'Мачты прожекторные', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 196 тонн', time: 'Апрель - Ноябрь 2020 г.', imgproduct: '/img/masts.webp' },
-  { id: 2, title: 'Опоры регулируемые', img: '/img/calendar.webp;', name: 'Газпром', quantity: '> 65 тонн', time: 'Май - Июнь 2020 г.', imgproduct: '/img/adjust.webp' },
+  { id: 1, title: 'готовой продукции', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 1500 тонн', time: 'Апрель - Ноябрь 2020 г.', imgproduct: '/img/masts.webp' },
+  { id: 2, title: 'производственных площадей', img: '', name: 'Газпром', quantity: '> 2800 м²', time: 'Май - Июнь 2020 г.', imgproduct: '/img/factory.webp' },
   { id: 3, title: 'ОППС', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 113 тонн', time: 'Январь - Февраль 2020 г.', imgproduct: '/img/opps.webp' },
   { id: 4, title: 'ОСП, ОПП', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 98 тонн', time: 'Сентябрь 2019 г.', imgproduct: '/img/osp_opp.webp' },
   { id: 5, title: 'Опоры ОН в ППУ изоляции', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 60 тонн', time: 'Июнь 2019', imgproduct: '/img/on_ppu.webp' },
-  { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '/img/serial_supports.webp' },
-  { id: 7, title:'Опоры трубопроводов', img:'/img/calendar.webp;', name:'Иркутский завод полимеров', quantity: '1100 единиц', time: 'Май 2022 г.', imgproduct:'/img/izp.webp' },
-  { id: 8, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 9, title:'Ростверки для прожекторных мачт', img:'/img/calendar.webp;', name:'Башнефть', quantity: '> 20 тонн', time: 'Март 2020 г.', imgproduct:'/img/rost.webp' },
-  { id: 10, title:'Опоры ОСП', img:'/img/calendar.webp;', name:'Роснефть', quantity: '> 43 тонн', time: 'Март 2020 г.', imgproduct:'/img/osp.webp' },
-  { id: 11, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 12, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 13, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 14, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 15, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 16, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 17, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 18, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 19, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  { id: 20, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
+  // { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '/img/serial_supports.webp' },
+  // { id: 7, title:'Опоры трубопроводов', img:'/img/calendar.webp;', name:'Иркутский завод полимеров', quantity: '1100 единиц', time: 'Май 2022 г.', imgproduct:'/img/izp.webp' },
+  // { id: 8, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
+  // { id: 9, title:'Ростверки для прожекторных мачт', img:'/img/calendar.webp;', name:'Башнефть', quantity: '> 20 тонн', time: 'Март 2020 г.', imgproduct:'/img/rost.webp' },
+  // { id: 10, title:'Опоры ОСП', img:'/img/calendar.webp;', name:'Роснефть', quantity: '> 43 тонн', time: 'Март 2020 г.', imgproduct:'/img/osp.webp' },
 ]
 </script>
 
