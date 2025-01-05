@@ -26345,7 +26345,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -30015,7 +30015,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 220px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -33337,7 +33337,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -36318,7 +36318,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 210px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -37408,7 +37408,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -40398,7 +40398,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 210px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -40822,7 +40822,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -43466,7 +43466,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -44716,7 +44716,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th rowspan="2" scope="col">
 		№
 	</th>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th rowspan="2" scope="col">
@@ -45671,7 +45671,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th rowspan="2" scope="col">
 		№
 	</th>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Наименование
 	</th>
 	<th rowspan="2" scope="col">
@@ -49810,7 +49810,7 @@ export const useCatalog = defineStore('catalog', () => {
 </tbody>
 			</table>` },
 		{
-			id: 52, name: 'ТС-681.00.000', type_id: 4, out_id: 3, title: 'Подвеска жесткая вертикальных трубопроводов ТС-681.00.000', img: '/img/TC-681.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
+			id: 52, name: 'ТС-681.00.000', type_id: 4, out_id: 3, title: 'Подвеска жесткая вертикальных трубопроводов ТС-681.00.000', img: '/img/TC-681.00.000.webp', text: '', table: `	<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<thead>
 <tr>
 	<td>
@@ -49837,6 +49837,7 @@ export const useCatalog = defineStore('catalog', () => {
 		 руб.
 	</td>
 </tr>
+</thead>
 <tr>
 	<td>
 		ТС-681.00.000 СБ
@@ -49891,7 +49892,6 @@ export const useCatalog = defineStore('catalog', () => {
 		539
 	</td>
 </tr>
-</thead>
 			</table>` },
 		{
 			id: 53, name: 'ТС-682.00.000', type_id: 4, out_id: 3, title: 'Подвеска жесткая горизонтальных трубопроводов ТС-682.00.000', img: '/img/TC-682.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
@@ -50587,7 +50587,7 @@ export const useCatalog = defineStore('catalog', () => {
 			id: 54, name: 'ТС-685.00.000', type_id: 4, out_id: 3, title: 'Блок пружинный ТС-685.00.000', img: '/img/TC-685.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<thead>
 <tr>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Обозначение
 	</th>
 	<th rowspan="2" scope="col">
@@ -51180,7 +51180,7 @@ export const useCatalog = defineStore('catalog', () => {
 			id: 55, name: 'ТС-686.00.000', type_id: 4, out_id: 3, title: 'Блок пружинный ТС-686.00.000', img: '/img/TC-686.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<thead>
 <tr>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Обозначение
 	</th>
 	<th rowspan="2" scope="col">
@@ -51858,7 +51858,7 @@ export const useCatalog = defineStore('catalog', () => {
 			id: 56, name: 'ТС-687.00.000', type_id: 4, out_id: 3, title: 'Подвеска пружинная горизонтальных трубопроводов ТС-687.00.000', img: '/img/TC-687.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<thead>
 <tr>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Обозначение
 	</th>
 	<th rowspan="2" scope="col">
@@ -52480,7 +52480,7 @@ export const useCatalog = defineStore('catalog', () => {
 			id: 57, name: 'ТС-688.00.000', type_id: 4, out_id: 3, title: 'Подвеска пружинная горизонтальных трубопроводов ТС-688.00.000', img: '/img/TC-688.00.000.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<thead>
 <tr>
-	<th rowspan="2" scope="col">
+	<th rowspan="2" scope="col" style="width: 200px;">
 		Обозначение
 	</th>
 	<th rowspan="2" scope="col">
@@ -54101,13 +54101,13 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		 №
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 220px;">
 		 Наименование
 	</th>
 	<th scope="col">
 		 Тип&nbsp;опоры
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 140px;">
 		 Дн или Ау
 	</th>
 	<th scope="col">
@@ -54186,7 +54186,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		 №
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 220px;">
 		 Наименование
 	</th>
 	<th scope="col">
@@ -54515,7 +54515,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 220px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -54771,6 +54771,7 @@ export const useCatalog = defineStore('catalog', () => {
 		{
 			id: 63, name: 'ОСТ 34-10-613-93', type_id: 5, out_id: null, title: 'Втулка для прохода через перекрытие ОСТ 34-10-613-93', img: '/img/OST34-10-613-93.webp', text: '', table: `<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
 			<tbody>
+	<thead>		
 <tr>
 	<td rowspan="3">
 		 Обозначение втулки
@@ -54795,9 +54796,9 @@ export const useCatalog = defineStore('catalog', () => {
 	</td>
 </tr>
 <tr>
-	<td colspan="3">
-		 при t среды, 0С
-	</td>
+<td colspan="3">
+при t среды, 0С
+</td>
 </tr>
 <tr>
 	<td>
@@ -54810,6 +54811,7 @@ export const useCatalog = defineStore('catalog', () => {
 		 425
 	</td>
 </tr>
+	</thead>
 <tr>
 	<td>
 		 01 ОСТ 34-10-613-93
@@ -55854,7 +55856,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 290px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -56758,7 +56760,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 300px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -60262,7 +60264,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 290px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -62086,7 +62088,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		 №
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 290px;">
 		 Наименование
 	</th>
 	<th scope="col">
@@ -64370,7 +64372,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 290px;">
 		Наименование
 	</th>
 	<th scope="col">
@@ -65547,7 +65549,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<th scope="col">
 		№
 	</th>
-	<th scope="col">
+	<th scope="col" style="width: 290px;">
 		Наименование
 	</th>
 	<th scope="col">
