@@ -6,8 +6,9 @@
         <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
 
           <div class="imgstyle">
-            <p class="quant">{{ el.quantity }}</p>
+            <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>          
             <p class="title">{{ el.title }}</p>
+            <p class="title1">{{ el.title1 }}</p>
             <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" :src="el.imgproduct"
               :alt="el.title"></NuxtImg>
           </div>
@@ -23,12 +24,14 @@
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
             src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
-            удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным соответствием техническим
+            удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
+            соответствием техническим
             требованиям.</span>
         </div>
         <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall2">Мы гордимся
-           качеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span></div>
-        <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с нашими
+            качеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span></div>
+        <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с
+            нашими
             конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
             потребности каждого проекта.</span></div>
       </div>
@@ -41,16 +44,10 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'готовой продукции', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 1500 тонн', time: 'Апрель - Ноябрь 2020 г.', imgproduct: '/img/masts.webp' },
-  { id: 2, title: 'производственных площадей', img: '', name: 'Газпром', quantity: '> 2800 м²', time: 'Май - Июнь 2020 г.', imgproduct: '/img/factory.webp' },
-  { id: 3, title: 'ОППС', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 113 тонн', time: 'Январь - Февраль 2020 г.', imgproduct: '/img/opps.webp' },
-  { id: 4, title: 'ОСП, ОПП', img: '/img/calendar.webp;', name: 'Роснефть', quantity: '> 98 тонн', time: 'Сентябрь 2019 г.', imgproduct: '/img/osp_opp.webp' },
-  { id: 5, title: 'Опоры ОН в ППУ изоляции', img: '/img/calendar.webp;', name: 'Башнефть', quantity: '> 60 тонн', time: 'Июнь 2019', imgproduct: '/img/on_ppu.webp' },
-  // { id: 6, title: 'Серийные опоры', img: '/img/calendar.webp;', name: 'Иркутская Нефтяная Компания', quantity: '> 43 тонн', time: 'Апрель 2020 г.', imgproduct: '/img/serial_supports.webp' },
-  // { id: 7, title:'Опоры трубопроводов', img:'/img/calendar.webp;', name:'Иркутский завод полимеров', quantity: '1100 единиц', time: 'Май 2022 г.', imgproduct:'/img/izp.webp' },
-  // { id: 8, title:'Опоры КХ ИНК', img:'/img/calendar.webp;', name:'Иркутская Нефтяная Компания', quantity: '> 18 тонн', time: 'Август 2020 г.', imgproduct:'/img/kh_ink.webp' },
-  // { id: 9, title:'Ростверки для прожекторных мачт', img:'/img/calendar.webp;', name:'Башнефть', quantity: '> 20 тонн', time: 'Март 2020 г.', imgproduct:'/img/rost.webp' },
-  // { id: 10, title:'Опоры ОСП', img:'/img/calendar.webp;', name:'Роснефть', quantity: '> 43 тонн', time: 'Март 2020 г.', imgproduct:'/img/osp.webp' },
+  { id: 1, title: 'выпущеной готовой продукции', quantity: '> 1500', unit:'тонн', imgproduct: '/img/masts.webp' },
+  { id: 2, title: 'производственных площадей', quantity: '> 2800', unit:'м²', imgproduct: '/img/photozavod1.webp' },
+  { id: 3, title: 'продукции изготовлено по', title1: 'индивидуальным параметрам', quantity: '> 350', unit:'тонн', imgproduct: '/img/nonstandart.webp' },
+  { id: 4, title: 'высококвалифицированных', title1: 'специалистов', quantity: '> 110', unit:'', imgproduct: '/img/spec.webp' },
 ]
 </script>
 
@@ -77,6 +74,9 @@ const slide = [
   font-size: 40px;
   padding-bottom: 30px;
 }
+.units {
+  font-size: 48px;
+}
 
 .quant {
   text-transform: uppercase;
@@ -85,22 +85,40 @@ const slide = [
   position: absolute;
   font-weight: bold;
   font-style: oblique;
-  /* font-family: 'Montserrat', light;       */
-   font-family: 'Exo 2', sans-serif;
+  filter: drop-shadow(2px 4px 6px black);
+  top: 252px;
+  left: 79px;
+  font-family: 'Montserrat', light;
+  /* font-family: 'Exo 2', sans-serif; */
 }
 
 .title {
   text-transform: uppercase;
   color: white;
-  font-size: 52px;
+  font-size: 48px;
   position: absolute;
-  bottom: 134px;
+  left: 77px;
+  bottom: 137px;
   font-weight: bold;
   font-style: oblique;
-  /* font-family: 'Montserrat', light;       */
-   font-family: 'Exo 2', sans-serif;
+  font-family: 'Montserrat', light;
+  /* font-family: 'Exo 2', sans-serif; */
+  filter: drop-shadow(2px 4px 6px black);
 }
 
+.title1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  left: 69px;
+  bottom: 76px;
+  font-weight: bold;
+  font-style: oblique;
+  font-family: 'Montserrat', light;
+  /* font-family: 'Exo 2', sans-serif; */
+  filter: drop-shadow(2px 4px 6px black);
+}
 swiper-container {
   overflow: hidden;
 }
