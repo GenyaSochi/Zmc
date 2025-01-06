@@ -70,9 +70,9 @@
   </div>
 
   <form class="formcost" @submit.prevent="">
-    <h2 class="h2cost">Рассчёт стоимости</h2>
+    <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
     <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется с
-      Вами в течении дня.</p>
+      Вами в течении рабочего дня.</p>
     <div class="allinputcost">
       <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
       <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
@@ -80,16 +80,14 @@
     </div>
     <div class="perscost">
       <button class="butcost" type="submit">Отправить заявку</button>
-      <p>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy"><span style="color: rgb(161, 7, 7);">обработку
-            персональных данных.</span></NuxtLink>
-      </p>
+      <div>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy">обработку персональных данных.</NuxtLink></div>
+      <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
+      <div>Отправить файлы по почте.</div>
+      <NuxtLink to="/" class="costmail">+7(351) 304-42-35</NuxtLink>
+      <div>Связаться с отделом продаж.</div>
+      
     </div>
     <div class="costinfo">
-      <p>Вы можете отправить файлы по почте или связаться с отделом продаж.</p>
-      <span style="display: flex; gap: 40px;padding-top: 20px;">
-        <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
-        <NuxtLink to="/" class="costmail">+7(351) 304-42-35</NuxtLink>
-      </span>
     </div>
   </form>
 </template>
@@ -104,18 +102,17 @@
   margin: 0 48px;
 }
 
+
 .h2cost {
   padding: 30px 0;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .formcost {
-  background-color: black;
+  background-color: rgb(56, 52, 52);
   color: white;
-  font-size: 24px;
-  display: block;
-  text-align: left;
-  margin: 2px 306px 30px 328px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .pcost {
@@ -125,7 +122,7 @@
 .inputcost {
   background-color: white;
   text-align: start;
-  color: black;
+  width: 300px;
   padding: 7px;
 }
 
@@ -141,6 +138,7 @@
 .butcost {
   background-color: rgb(161, 7, 7);
   padding: 10px;
+  width: 265px;
 }
 
 .perscost {
@@ -149,19 +147,20 @@
   padding-left: 56px;
   padding-bottom: 82px;
   align-items: center;
+  margin-bottom: 60px;
 }
 
-.costinfo {
+/* .costinfo {
   padding: 30px 50px;
   background: white;
   color: black;
   position: relative;
   border: 2px solid rgb(161, 7, 7);
-}
+} */
 
 .costmail {
   background-color: rgb(161, 7, 7);
   color: white;
-  padding: 10px;
+  padding: 10px; 
 }
 </style>

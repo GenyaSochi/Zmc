@@ -12,19 +12,19 @@
       <p>Получите расчет заказа</p>
     </div>
   </div>
-    <ClientOnly>
-      <div style="position:relative;overflow:hidden; margin: 40px 0; padding: 0 244px">
+  <ClientOnly>
+    <div class="card">
       <a href="https://yandex.ru/maps/11214/ozersk/?utm_medium=mapframe&utm_source=maps"
-      style="color:#eee;font-size:12px;position:absolute;top:0px;">Озёрск</a>
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Озёрск</a>
       <a href="https://yandex.ru/maps/11214/ozersk/?from=mapframe&ll=60.725401%2C55.763619&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_medium=mapframe&utm_source=maps&z=16.52"
-      style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск
-      мест</a>
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск
+        мест</a>
       <iframe
-      src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=60.725401%2C55.763619&scroll=false&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_source=mapframe&z=16.52"
-      height="600" frameborder="1" allowfullscreen="true" style="position:relative; width: 100%;"></iframe>
+        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=60.725401%2C55.763619&scroll=false&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_source=mapframe&z=16.52"
+        height="600" frameborder="1" allowfullscreen="true" style="position:relative; width: 100%;"></iframe>
     </div>
   </ClientOnly>
-  
+
   <div>
     <h1 class="reccomp">Реквизиты компании</h1>
     <div class="rec" v-for="el of datacompany" :key="el.id">
@@ -37,7 +37,7 @@
         <p>{{ el.res4 }}</p>
       </div>
     </div>
-    <div style="margin-bottom: 60px;"></div>
+    <div class="recbottom"></div>
   </div>
 </template>
 
@@ -60,7 +60,7 @@ const datacompany = [
 ]
 </script>
 
-<style>
+<style scoped>
 .contacts {
   font-size: 34px;
 }
@@ -98,5 +98,16 @@ const datacompany = [
 .reccomp {
   font-size: 34px;
   padding-bottom: 60px;
+}
+
+.recbottom {
+  margin-bottom: 60px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+  padding: 0 244px;
 }
 </style>
