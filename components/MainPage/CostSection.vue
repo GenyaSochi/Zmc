@@ -36,12 +36,12 @@
   font-size: 38px;
 }
 
-.formcost {
+/* .formcost {
   background-color:rgb(56, 52, 52);
   color: white;
   font-size: 18px;
   text-align: center;
-  }
+  } */
   /* 
 
 .pcost {

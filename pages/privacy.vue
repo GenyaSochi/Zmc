@@ -71,8 +71,7 @@
 
   <form class="formcost" @submit.prevent="">
     <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-    <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется с
-      Вами в течении рабочего дня.</p>
+    <p class="pcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
     <div class="allinputcost">
       <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
       <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
@@ -80,14 +79,11 @@
     </div>
     <div class="perscost">
       <button class="butcost" type="submit">Отправить заявку</button>
-      <div>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy">обработку персональных данных.</NuxtLink></div>
-      <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
-      <div>Отправить файлы по почте.</div>
-      <NuxtLink to="/" class="costmail">+7(351) 304-42-35</NuxtLink>
-      <div>Связаться с отделом продаж.</div>
-      
+      <NuxtLink to="/privacy">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
     </div>
-    <div class="costinfo">
+    <div style="display: flex;">
+      <NuxtLink to="/" class="costmail"><span>&#9742;</span>+7(351) 304-42-35</NuxtLink>
+      <NuxtLink to="/" class="costmail"><span>&#x2709;</span> sales@zmkural.com</NuxtLink>
     </div>
   </form>
 </template>
@@ -102,7 +98,6 @@
   margin: 0 48px;
 }
 
-
 .h2cost {
   padding: 30px 0;
   font-size: 38px;
@@ -113,6 +108,8 @@
   color: white;
   font-size: 18px;
   text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .pcost {
@@ -122,7 +119,7 @@
 .inputcost {
   background-color: white;
   text-align: start;
-  width: 300px;
+  width: 265px;
   padding: 7px;
 }
 
@@ -145,22 +142,16 @@
   display: flex;
   gap: 40px;
   padding-left: 56px;
-  padding-bottom: 82px;
   align-items: center;
-  margin-bottom: 60px;
+  padding-bottom: 30px;
 }
 
-/* .costinfo {
-  padding: 30px 50px;
-  background: white;
-  color: black;
-  position: relative;
-  border: 2px solid rgb(161, 7, 7);
-} */
-
 .costmail {
-  background-color: rgb(161, 7, 7);
   color: white;
-  padding: 10px; 
+  padding: 10px;
+  padding-left: 56px;
+  display: flex;
+  justify-content: space-around;
+  width: 304px;
 }
 </style>
