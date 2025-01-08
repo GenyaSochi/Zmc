@@ -39,6 +39,7 @@
     </div>
     <div class="recbottom"></div>
   </div>
+  <NuxtLink to="/companydetails" class="details">Скачать реквизиты компании</NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -109,5 +110,15 @@ const datacompany = [
   overflow: hidden;
   margin: 40px 0;
   padding: 0 244px;
+}
+
+.details {
+  background-color: rgb(56, 52, 52);
+  color: white;
+  padding: 10px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+  width: 340px;
+  display: flex;
 }
 </style>

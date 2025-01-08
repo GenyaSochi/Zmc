@@ -1,6 +1,26 @@
 <template>
+
+  <form class="formcost" @submit.prevent="">
+  
+    <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
+    <p class="pcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
+    <div class="allinputcost">
+      <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
+      <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
+      <input type="file" id="file" name="file" required accept="xls., doc., docx., pdf.">
+    </div>
+    <div class="perscost">
+      <button class="butcost" type="submit">Отправить заявку</button>
+      <NuxtLink to="/privacy">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
+    </div>
+    <div style="display: flex;">
+      <NuxtLink to="/" class="costmail"><span>&#9742;</span>+7(351) 304-42-35</NuxtLink>
+      <NuxtLink to="/" class="costmail"><span>&#x2709;</span> sales@zmkural.com</NuxtLink>
+    </div>    
+  </form>
+
   <div class="container">
-    <h1 class="h1privacy">Политика конфединциальности</h1>
+    <h1>Политика конфиденциальности</h1>
     <div class="allprivacy">
       <p>
         Согласие на обработку персональных данных. Настоящим согласием, в соответствии с Федеральным законом № 152-ФЗ «О
@@ -68,30 +88,12 @@
       </p>
     </div>
   </div>
+  
 
-  <form class="formcost" @submit.prevent="">
-    <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-    <p class="pcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
-    <div class="allinputcost">
-      <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
-      <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
-      <input type="file" id="file" name="file" required accept="xls., doc., docx., pdf.">
-    </div>
-    <div class="perscost">
-      <button class="butcost" type="submit">Отправить заявку</button>
-      <NuxtLink to="/privacy">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
-    </div>
-    <div style="display: flex;">
-      <NuxtLink to="/" class="costmail"><span>&#9742;</span>+7(351) 304-42-35</NuxtLink>
-      <NuxtLink to="/" class="costmail"><span>&#x2709;</span> sales@zmkural.com</NuxtLink>
-    </div>
-  </form>
 </template>
 
 <style>
-.h1privacy {
-  padding-top: 30px;
-}
+
 
 .allprivacy {
   padding: 30px 0 60px 0;
@@ -104,12 +106,12 @@
 }
 
 .formcost {
-  background-color: rgb(56, 52, 52);
+  background-image: url(/public/img/silver1.webp);
   color: white;
   font-size: 18px;
   text-align: center;
   margin-bottom: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 20px;  
 }
 
 .pcost {
@@ -154,4 +156,5 @@
   justify-content: space-around;
   width: 304px;
 }
+
 </style>

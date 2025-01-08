@@ -1,28 +1,22 @@
 <template>
   <section>
     <form class="formcost" @submit.prevent="">
-      <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-      <p class="pcost">Прикрепите файлы проекта со спецификациями и номер телефона. Менеджер изучит материалы и свяжется
-        с Вами в течении рабочего дня.</p>
-      <div class="allinputcost">
-        <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
-        <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
-        <input type="file" id="file" name="file" required accept="xls., doc., docx., pdf.">
-      </div>
-      <div class="perscost">
-        <button class="butcost" type="submit">Отправить заявку</button>
-        <p>Нажимая на кнопку, Вы соглашаетесь на <NuxtLink to="/privacy"><span style="color: rgb(161, 7, 7);">обработку
-              персональных данных.</span></NuxtLink>
-        </p>
-      </div>
-      <div class="costinfo">
-        <p>Вы можете отправить файлы по почте или связаться с отделом продаж.</p>
-        <span style="display: flex; gap: 40px;padding-top: 20px;">
-          <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
-          <NuxtLink to="/" class="costmail">+7(351) 304-42-35</NuxtLink>
-        </span>
-      </div>
-    </form>
+    <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
+    <p class="pcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
+    <div class="allinputcost">
+      <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
+      <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7(___) ___-__-__">
+      <input type="file" id="file" name="file" required accept="xls., doc., docx., pdf.">
+    </div>
+    <div class="perscost">
+      <button class="butcost" type="submit">Отправить заявку</button>
+      <NuxtLink to="/privacy">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
+    </div>
+    <div style="display: flex;">
+      <NuxtLink to="/" class="costmail"><span>&#9742;</span>+7(351) 304-42-35</NuxtLink>
+      <NuxtLink to="/" class="costmail"><span>&#x2709;</span> sales@zmkural.com</NuxtLink>
+    </div>
+  </form>
   </section>
 </template>
 
