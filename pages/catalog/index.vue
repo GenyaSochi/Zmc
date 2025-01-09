@@ -1,45 +1,6 @@
 <template>
   <div class="container">
-    <h1>каталог продукции</h1> 
-    <!-- <div class="catalogcontainer1">
-      <div>
-        <div v-for="el of namecatalog1">
-          <h2>{{ el.fullname }}</h2>
-        </div>
-        <div v-for="el of catalog1" :key="el.id">
-          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
-        </div>
-      </div>
-      <div>
-        <div v-for="el of namecatalog2">
-          <h2>{{ el.fullname }}</h2>
-        </div>
-        <div v-for="el of catalog2" :key="el.id">
-          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
-        </div>
-      </div>
-      <div>
-        <div v-for="el of namecatalog3">
-          <h2>{{ el.fullname }}</h2>
-        </div>
-        <div v-for="el of catalog3" :key="el.id">
-          <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align: center;" v-for="el of namecatalog4">
-      <h2>{{ el.fullname }}</h2>
-    </div>
-    
-    <div style="text-align: center;padding-top: 30px;" v-for="el of namecatalog5">
-      <h2>{{ el.fullname }}</h2>
-    </div>
-    <div class="catalogcontainer3">
-      <div v-for="el of catalog5" :key="el.id">
-        <NuxtLink to="/detailedcatalog">{{ el.name }}</NuxtLink>
-      </div>
-    </div> -->
+    <h1>каталог продукции</h1>    
     <div v-for="type of catalogStore.types" :key="type.id">
         <h2>{{ type.name }}</h2>
         <template v-if="type.out.length">
