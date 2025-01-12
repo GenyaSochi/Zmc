@@ -1,4 +1,4 @@
-import type { Head } from "#build/components"
+// import type { Head } from "#build/components"
 import { defineStore } from "pinia"
 
 export const useCatalog = defineStore('catalog', () => {
