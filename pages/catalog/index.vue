@@ -62,8 +62,7 @@ function translit(word:string){
 </script>
 
 <style scoped>
-h1 {
-  padding-top: 30px;
+h1 {  
   text-transform: uppercase;
   font-size: 40px;
 }

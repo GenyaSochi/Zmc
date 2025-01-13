@@ -2,7 +2,7 @@ import { defineStore } from "pinia"
 
 export const useProjects = defineStore('projects', () => {
   const projects = [
-    { id: 1, name: 'Иркутский завод полимеров', projecttype: 'Вид продукции', projectname: 'Опоры трубопроводов', volume: 'Объем', quantity: '850 тонн', year: 'Год', yeardata: '2022', enduser: 'Конечный потребитель', endusername: ' Иркутский завод полимеров', img: '/img/izp.webp' },
+    { id: 1, name: 'Опоры трубопроводов', projecttype: 'Вид продукции', projectname: 'Опоры трубопроводов', volume: 'Объем', quantity: '850 тонн', year: 'Год', yeardata: '2022', enduser: 'Конечный потребитель', endusername: ' Иркутский завод полимеров', img: '/img/izp.webp' },
     { id: 2, name: 'Опоры по чертежам заказчика', projecttype: 'Вид продукции', projectname: 'Опоры газохода', volume: 'Объем', quantity: '7 тонн', year: 'Год', yeardata: '2022', enduser: 'Конечный потребитель', endusername: 'ООО "ОЗНО"', img: '' },
     { id: 3, name: 'Опоры разгрузочные', projecttype: 'Вид продукции', projectname: 'Опора ОР по ТУ 25.11.23-011-73847543-2020', volume: 'Объем', quantity: 'Три образца', year: 'Год', yeardata: '2021', enduser: 'Конечный потребитель', endusername: 'ПАО Газпром', img: '' },
     { id: 4, name: 'Тестовые образцы для ПАО Газпром', projecttype: 'Вид продукции', projectname: 'Опоры ОСП 1420', volume: 'Объем', quantity: '2 тонны', year: 'Год', yeardata: '2021', enduser: 'Конечный потребитель', endusername: 'ПАО Газпром', img:''},

@@ -2,21 +2,21 @@
 	<div class="container">
 		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
 		<div style="display: flex; align-items: center;gap: 82px;">
-			<NuxtImg style="margin-top: 30px;" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>	
-			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ el?.name }}</p>			
+			<NuxtImg style="margin-top: 30px;" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>
+			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ el?.name }}</p>
 		</div>
 		<div class="detailet">подробное описание
 			<div>
 				<button class="buttons">Расчитать</button>
 				<button class="buttons">Заказать</button>
-		</div>
+			</div>
 		</div>
 		<div>
 			<p class="titleproduct">{{ el?.title }}</p>
-					<p>{{ el?.text }}</p>
-					<div v-html="el?.table"></div>
-			</div>
+			<p>{{ el?.text }}</p>
+			<div v-html="el?.table"></div>
 		</div>
+	</div>
 
 </template>
 
@@ -63,7 +63,7 @@ function translit(word: string) {
 .buttonback {
 	border: 1px solid black;
 	padding: 10px;
-  font-family: 'Montserrat', light;
+	font-family: 'Montserrat', light;
 	font-size: 26px;
 	border-radius: 5px;
 	width: 260px;
