@@ -65,6 +65,7 @@ const prod = [
   color: white;
   font-size: 20px;
   width: 257px;
+  text-align: center;
 }
 
 .privacyfooter {

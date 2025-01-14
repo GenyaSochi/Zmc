@@ -39,7 +39,7 @@
     </div>
     <div class="recbottom"></div>
   </div>
-  <NuxtLink to="/companydetails" class="details">Скачать реквизиты компании</NuxtLink>
+  <a href="companydetails.pdf" class="details">Скачать реквизиты компании</a>
 </template>
 
 <script setup lang="ts">
@@ -120,5 +120,6 @@ const datacompany = [
   margin-bottom: 30px;
   width: 340px;
   display: flex;
+  justify-content: center;
 }
 </style>

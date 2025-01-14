@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <NuxtImg style="margin-top: 30px;" sizes="300px" :src="el?.img" :alt="el?.projectname"></NuxtImg>
+      <NuxtImg style="margin-top: 30px;" sizes="420px" :src="el?.img" :alt="el?.projectname"></NuxtImg>
     </div>
   </div>
 </template>

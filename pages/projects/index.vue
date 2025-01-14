@@ -1,26 +1,29 @@
 <template>
   <div class="container">
     <h1 class="h1">Проекты компании</h1>
-    <div class="view" v-for="project of projectsStore.projects" :key="project.id">
-      <h2 class="projectname">{{ project.name }}</h2>
+    <div @click="navigateTo(`projects/${translit(project.name)}`)" class="view"
+      v-for="project of projectsStore.projects" :key="project.id">
+      <h2 class="h2">
+        <NuxtLink :to="`projects/${translit(project.name)}`" class="projectname">{{ project.name }}</NuxtLink>
+      </h2>
       <div class="projectinfo">
-        <p>{{ project.projecttype }}</p>
+        <p class="heading">{{ project.projecttype }}</p>
         <p>{{ project.projectname }}</p>
       </div>
       <div class="projectinfo">
-        <p>{{ project.volume }}</p>
+        <p class="heading">{{ project.volume }}</p>
         <p>{{ project.quantity }}</p>
       </div>
       <div class="projectinfo">
-        <p>{{ project.year }}</p>
+        <p class="heading">{{ project.year }}</p>
         <p>{{ project.yeardata }}</p>
       </div>
       <div class="projectinfo">
-        <p>{{ project.enduser }}</p>
+        <p class="heading">{{ project.enduser }}</p>
         <p>{{ project.endusername }}</p>
       </div>
       <div>
-        <NuxtImg :src="project.img" :alt="project.projectname"></NuxtImg>
+        <NuxtImg :src="project.img" :alt="project.projectname" sizes="420px"></NuxtImg>
       </div>
     </div>
   </div>
@@ -69,21 +72,26 @@ function translit(word: string) {
   font-size: 40px;
 }
 
-.projectname {
-  font-size: 27px;
-  padding-bottom: 20px;
+.h2 {
+  margin-bottom: 20px;
 }
-
 .view {
   margin: 0 120px;
   display: flex;
   flex-direction: column;
   padding: 22px 22px 0 22px;
   margin-bottom: 20px;
-  box-shadow: 1px 0px 5px -1px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
 }
 
-.heading {}
+.projectname {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-weight: bold;
+}
 
 .projectinfo {
   display: flex;
