@@ -21,7 +21,7 @@ export const useProjects = defineStore('projects', () => {
     {id: 17, name:'Опоры ОН в ППУ изоляции', projecttype:'Вид продукции', projectname:'Опоры ОН в ППУ изоляции', volume:'Объем', quantity:'60 тонн', year:'Год', yeardata:'2019',enduser:'Конечный потребитель', endusername:'ПАО АНК Башнефть', img:''},
     {id: 18, name:'Опоры ОН в ППУ изоляции', projecttype:'Вид продукции', projectname:'Опоры ОН в ППУ изоляции', volume:'Объем', quantity:'10 тонн', year:'Год', yeardata:'2018',enduser:'Конечный потребитель', endusername:'ПАО АНК Башнефть', img:''},
     {id: 19, name:'ОСП 1020', projecttype:'Вид продукции', projectname:'ОСП 1020', volume:'Объем', quantity:'237 тонн', year:'Год', yeardata:'2017',enduser:'Конечный потребитель', endusername:'ПАО Лукойл', img:''},
-    {id: 20, name:'Опоры ОБК100.720', projecttype:'Вид продукции', projectname:'Опоры ОБК100.720', volume:'Объем', quantity:'132 штук, 15 тонн.', year:'Год', yeardata:'2017',enduser:'Конечный потребитель', endusername:'', img:''}, 
+    {id: 20, name:'Опоры ОБК100.720', projecttype:'Вид продукции', projectname:'Опоры ОБК100.720', volume:'Объем', quantity:'132 штук, 15 тонн.', year:'Год', yeardata:'2017',enduser:'Конечный потребитель', endusername:'ПАО Лукойл', img:''}, 
   ]
   return { projects }
 })

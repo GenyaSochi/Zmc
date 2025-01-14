@@ -23,7 +23,7 @@
         <p>{{ project.endusername }}</p>
       </div>
       <div>
-        <NuxtImg :src="project.img" :alt="project.projectname" sizes="420px"></NuxtImg>
+        <NuxtImg :src="project.img" :alt="project.projectname" sizes="420px" class="imgstile"></NuxtImg>
       </div>
     </div>
   </div>
@@ -75,6 +75,7 @@ function translit(word: string) {
 .h2 {
   margin-bottom: 20px;
 }
+
 .view {
   margin: 0 120px;
   display: flex;
@@ -82,6 +83,7 @@ function translit(word: string) {
   padding: 22px 22px 0 22px;
   margin-bottom: 20px;
   box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
+  height: 500px;
 }
 
 .projectname {
@@ -102,6 +104,12 @@ function translit(word: string) {
 .imginfo {
   right: 392px;
   top: 300px;
+  position: absolute;
+}
+
+.imgstile {
+  right: 394px;
+  top: 516px;
   position: absolute;
 }
 </style>

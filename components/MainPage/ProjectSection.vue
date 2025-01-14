@@ -129,7 +129,7 @@ swiper-container {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 10px 26px 26px 26px;
+  padding: 10px 18px 26px 26px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
