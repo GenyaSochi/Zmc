@@ -52,7 +52,7 @@
 .butnav {
   border: 2px solid white;
   padding: 5px;
-  width: 250px;
+  width: 294px;
   text-align: center;
 }
 
