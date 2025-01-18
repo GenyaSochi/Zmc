@@ -58,5 +58,4 @@ swiper-container {
   justify-content: center;
   cursor: pointer;
 }
-
 </style>
