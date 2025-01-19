@@ -22,9 +22,9 @@
         <p class="heading">{{ project.enduser }}</p>
         <p>{{ project.endusername }}</p>
       </div>
-      <div>
+      <!-- <div>
         <NuxtImg :src="project.img" :alt="project.projectname" sizes="420px" class="imgstile"></NuxtImg>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -69,7 +69,7 @@ function translit(word: string) {
 <style scoped>
 .h1 {
   padding-bottom: 30px;
-  font-size: 40px;
+  font-size: 34px;
 }
 
 .h2 {

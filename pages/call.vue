@@ -26,7 +26,7 @@
   text-align: center;
   margin-bottom: 60px;
   padding-bottom: 20px;
-  height: 647px;
+  height: 535px;
 }
 
 .h2call {
@@ -35,7 +35,7 @@
 }
 
 .pcall {
-  padding: 20px 30px;
+  padding-bottom: 20px;
 }
 
 .allinputcall {
@@ -44,7 +44,7 @@
   flex-direction: column;
   gap: 40px;
   padding-left: 56px;
-  padding-bottom: 156px;
+  padding-bottom: 116px;
 }
 
 .perscall {
@@ -52,7 +52,7 @@
   gap: 40px;
   padding-left: 56px;
   align-items: center;
-  padding-bottom: 82px;
+  padding-bottom: 30px;
 }
 
 .butcall {
