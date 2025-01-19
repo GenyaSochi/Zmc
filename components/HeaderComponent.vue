@@ -9,8 +9,8 @@
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 
         </div>
         <div class="but">
-          <NuxtLink to="/privacy"><button class="butnav">Рассчитать стоимость</button> </NuxtLink>       
-          <button class="butnav">Заказать звонок</button>      
+          <NuxtLink to="/cost"><button class="butnav">Рассчитать стоимость</button></NuxtLink>       
+          <NuxtLink to="/call"><button class="butnav">Заказать звонок</button></NuxtLink>       
         </div>
       </div>         
   </nav>
@@ -54,6 +54,7 @@
   padding: 5px;
   width: 294px;
   text-align: center;
+  font-size: 20px;
 }
 
 .button:hover {

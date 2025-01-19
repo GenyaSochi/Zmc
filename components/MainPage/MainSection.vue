@@ -35,7 +35,7 @@
   padding: 77px 0; 
   background-color:  rgb(56, 52, 52);
   color: white;
-  margin-top: 30px;  
+  /* margin-top: 30px;   */
 }
 
 .num {
@@ -67,7 +67,7 @@
   justify-content: center;
   text-align: center;
   gap: 45px;
-  padding: 40px 0;
+  padding: 80px 0;
 }
 
 .heading { 

@@ -42,7 +42,7 @@ const products = [
   color: black;
   padding: 30px 0;
   font-family: 'Montserrat', light;
-  font-size: 40px;
+  font-size: 34px;
 }
 
 .textprod {
@@ -89,8 +89,7 @@ const products = [
   font-size: 24px;
   display: block;
   text-align: center;
-  margin: 2px 306px 30px 328px;
-  border-radius: 5px;
+  margin-bottom: 30px;  
   padding: 10px 0;
 }
 

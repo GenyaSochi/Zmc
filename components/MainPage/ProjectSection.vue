@@ -17,8 +17,8 @@
     </div>
     <div id="advant" class="productstyle">
       <h2 class="ouradvant">наши преимущества</h2>
-      <h3 class="advanttext">Выбирая «ЗМК Урал» в качестве своего партнёра, Вы получаете качество и надёжность, которые
-        делают наше сотрудничество выгодным.</h3>
+      <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
+        сделают наше сотрудничество выгодным.</h3>
       <div class="blockproduct">
         <div class="production">Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img

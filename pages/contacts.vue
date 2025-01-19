@@ -121,5 +121,6 @@ const datacompany = [
   width: 340px;
   display: flex;
   justify-content: center;
+  width: 402px;
 }
 </style>
