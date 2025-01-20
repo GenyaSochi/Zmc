@@ -3,7 +3,7 @@
     <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
     
       <p>Завод металлоконструкций Урал</p>
-      <NuxtLink to="/privacy"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
+      <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
     
       <div></div>          
       <div>

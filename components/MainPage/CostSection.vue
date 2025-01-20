@@ -21,7 +21,62 @@
 </template>
 
 <script setup lang="ts">
-
 </script>
 
-<style></style>
+<style>
+.h2cost {
+  padding: 30px 0;
+  font-size: 38px;
+}
+
+.formcost {
+  background-image: url(/public/img/silver1.webp);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.pcost {
+  padding: 0 52px 20px 52px;
+}
+
+.inputcost {
+  background-color: white;
+  text-align: start;
+  width: 265px;
+  padding: 7px;
+}
+
+.allinputcost {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 56px;
+  padding-bottom: 42px;
+}
+
+.butcost {
+  background-color: rgb(161, 7, 7);
+  padding: 10px;
+  width: 265px;
+}
+
+.perscost {
+  display: flex;
+  gap: 40px;
+  padding-left: 56px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.costmail {
+  color: white;
+  padding: 10px;
+  padding-left: 56px;
+  display: flex;
+  justify-content: space-around;
+  width: 304px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container">
     <h2 class="prod">продукция</h2>
     <p class="textprod">Наша экспертиза в обработке металла обеспечивает не только точность и качество, но и
       экономическую
@@ -15,9 +15,9 @@
         </div>
       </div>
     </div>
+    
+      </section>
     <NuxtLink to="/catalog" class="seeprod">Каталог продукции</NuxtLink>
-
-  </section>
 </template>
 
 <script setup lang="ts">
@@ -91,6 +91,7 @@ const products = [
   text-align: center;
   margin-bottom: 30px;  
   padding: 10px 0;
+  text-transform:uppercase;
 }
 
 .orderprod {
