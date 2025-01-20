@@ -20,7 +20,8 @@
 
 <style scoped>
 .formcall {
-  background-image: url(/public/img/silver1.webp);
+  background-image: url(/public/img/phone.webp);
+  background-size: cover;
   color: white;
   font-size: 18px;
   text-align: center;

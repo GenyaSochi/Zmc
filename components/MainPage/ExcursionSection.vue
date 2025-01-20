@@ -13,7 +13,7 @@
   font-size: 24px;
   display: block;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   padding: 10px 0;
   text-transform:uppercase;
 }

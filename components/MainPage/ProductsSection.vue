@@ -1,21 +1,22 @@
 <template>
-  <section class="container">
-    <h2 class="prod">продукция</h2>
+  <section>
+    <div class="container">
     <p class="textprod">Наша экспертиза в обработке металла обеспечивает не только точность и качество, но и
       экономическую
       эффективность для каждого проекта: от плазменной резки до сложных сварочных работ. Наше производство
       гарантирует снижение затрат и повышение долговечности изделий, позволяя Вам успешно реализовывать
       самые амбициозные задачи.</p>
+      <h2 class="prod">продукция</h2>
     <div class="allinfo">
       <div class="infoprod" v-for="el of products" :key="el.id">
         <h3 class="nameprod">{{ el.titleprod }}</h3>      
         <div class="buttonstyle">
           <NuxtLink to="/catalog" class="linkprod">Подробнее</NuxtLink>
-          <NuxtLink to="/contacts" class="linkorder">Заказать</NuxtLink>
+          <NuxtLink to="/cost" class="linkorder">Заказать</NuxtLink>
         </div>
       </div>
     </div>
-    
+  </div>
       </section>
     <NuxtLink to="/catalog" class="seeprod">Каталог продукции</NuxtLink>
 </template>
@@ -38,18 +39,22 @@ const products = [
 <style>
 .prod {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 34px;
   color: black;
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   font-family: 'Montserrat', light;
   font-size: 34px;
 }
 
 .textprod {
-  text-align: center;
-  font-size: 20px; 
-  font-family: 'Montserrat', light;
   font-size: 24px;
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  padding: 48px 30px; 
+  background-color:  rgb(56, 52, 52);
+  color: white;
+  margin-top: 60px;
 }
 
 .infoprod {
@@ -57,15 +62,16 @@ const products = [
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  border-radius: 10px;
   font-size: 22px;
-  background-color: rgb(56, 52, 52);
-  width: 488px;
+  background-color:  white;
+  width: 520px;
   height: 224px;
-  color: white;
+  color: black;
   font-family: 'Montserrat', light;
   font-size: 20px;
+  box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
 }
+
 
 .allinfo {
   display: grid;
@@ -73,9 +79,8 @@ const products = [
   justify-items: center;
   flex-wrap: wrap;
   padding-top: 60px;
-  gap: 30px;
-  padding-bottom: 90px;
-  margin: 0 210px;
+  gap: 20px;
+  padding-bottom: 64px; 
 }
 
 .nameprod {
@@ -89,7 +94,7 @@ const products = [
   font-size: 24px;
   display: block;
   text-align: center;
-  margin-bottom: 30px;  
+  margin-bottom: 60px;  
   padding: 10px 0;
   text-transform:uppercase;
 }

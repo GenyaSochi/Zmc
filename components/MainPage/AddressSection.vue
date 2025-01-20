@@ -35,7 +35,7 @@ h2 {
 .card {
   position: relative;
   overflow: hidden;
-  margin: 40px 0;
+  margin: 70px 0;
   padding: 0 120px;
 }
 </style>

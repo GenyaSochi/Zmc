@@ -5,7 +5,7 @@
       <swiper-container watchSlidesProgress="true" slidesPerView="4">
         <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
           <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>    
-          <a href="cert1_pdf.pdf">{{ el.pdf}}</a>
+          <a href="cert1_pdf.pdf">{{ el.pdf }}</a>      
         </swiper-slide>
       </swiper-container>
     </div>
@@ -40,16 +40,17 @@ swiper-container {
 
 .сertcontainer {
   margin: 0px 120px;
-  padding: 30px 0;
-  background-image: url(/public/img/mesh_background.webp);
+  padding: 30px 0;  
   height: 600px;
-  position: relative;
+  position: relative;  
+  /* background-image: url(/public/img/photo_sert.webp); */
+  box-shadow: 1px 0px 6px -1px rgba(24, 106, 168, 0.2);
 }
 
 .сerttext {
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: black;
   padding-bottom: 54px;
   font-size: 40px;
 }
