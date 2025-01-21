@@ -22,9 +22,11 @@
         <p class="heading">{{ project.enduser }}</p>
         <p>{{ project.endusername }}</p>
       </div>
-      <!-- <div>
-        <NuxtImg :src="project.img" :alt="project.projectname" sizes="420px" class="imgstile"></NuxtImg>
-      </div> -->
+      <div v-for="project of projectsStore.projects" :key="project.img">
+        <NuxtImg :src="project.img" :alt="project.projectname" sizes="540px" class="imgstile"></NuxtImg>
+      </div>
+     
+     
     </div>
   </div>
 
@@ -108,8 +110,8 @@ function translit(word: string) {
 }
 
 .imgstile {
-  right: 394px;
-  top: 516px;
-  position: absolute;
+
+  left: 780px;
+  position: relative;
 }
 </style>

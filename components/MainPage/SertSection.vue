@@ -5,7 +5,8 @@
       <swiper-container watchSlidesProgress="true" slidesPerView="4">
         <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
           <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>    
-          <!-- <a href="cert1_pdf.pdf">{{ el.pdf }}</a>       -->
+          <!-- <a href="cert1_pdf.pdf">{{ el.pdf }}</a>    -->
+      
         </swiper-slide>
       </swiper-container>
     </div>
