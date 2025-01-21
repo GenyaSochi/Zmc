@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <div>А нужен ли?</div>
       <NuxtImg style="margin-top: 30px;" sizes="420px" :src="el?.img" :alt="el?.projectname"></NuxtImg>
     </div>
   </div>
