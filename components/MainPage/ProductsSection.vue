@@ -64,7 +64,7 @@ const products = [
   padding: 20px;
   font-size: 22px;
   background-color:  white;
-  width: 520px;
+  min-width: 520px;
   height: 224px;
   color: black;
   font-family: 'Montserrat', light;
