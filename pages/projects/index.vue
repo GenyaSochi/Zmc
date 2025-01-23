@@ -1,35 +1,35 @@
 <template>
   <div class="container">
     <h1 class="h1">Проекты компании</h1>
-    <div @click="navigateTo(`projects/${translit(project.name)}`)" class="view"
+    <div class="view"
       v-for="project of projectsStore.projects" :key="project.id">
       <h2 class="h2">
-        <NuxtLink :to="`projects/${translit(project.name)}`" class="projectname">{{ project.name }}</NuxtLink>
+        {{project.name}}
       </h2>
-      <div class="projectinfo">
-        <p class="heading">{{ project.projecttype }}</p>
-        <p>{{ project.projectname }}</p>
-      </div>
-      <div class="projectinfo">
-        <p class="heading">{{ project.volume }}</p>
-        <p>{{ project.quantity }}</p>
-      </div>
-      <div class="projectinfo">
-        <p class="heading">{{ project.year }}</p>
-        <p>{{ project.yeardata }}</p>
-      </div>
-      <div class="projectinfo">
-        <p class="heading">{{ project.enduser }}</p>
-        <p>{{ project.endusername }}</p>
-      </div>
-      <div>
+      <div class="projectinfo" style="justify-content: space-between;">
+        <div>
+          <div class="projectinfo">
+            <p class="heading">{{ project.projecttype }}</p>
+            <p>{{ project.projectname }}</p>
+          </div>
+          <div class="projectinfo">
+            <p class="heading">{{ project.volume }}</p>
+            <p>{{ project.quantity }}</p>
+          </div>
+          <div class="projectinfo">
+            <p class="heading">{{ project.year }}</p>
+            <p>{{ project.yeardata }}</p>
+          </div>
+          <div class="projectinfo">
+            <p class="heading">{{ project.enduser }}</p>
+            <p>{{ project.endusername }}</p>
+          </div>
+
+        </div>
         <NuxtImg :src="project.img" :alt="project.projectname" sizes="520px" class="imgstile"></NuxtImg>
       </div>
-
-
     </div>
   </div>
-
 </template>
 
 <script setup lang="ts">
@@ -75,6 +75,7 @@ function translit(word: string) {
 }
 
 .h2 {
+  font-size: 34px;
   margin-bottom: 20px;
 }
 
@@ -88,10 +89,6 @@ function translit(word: string) {
   height: 500px;
 }
 
-.projectname {
-  font-size: 34px;
-  margin-bottom: 20px;
-}
 
 .heading {
   font-weight: bold;
@@ -110,9 +107,6 @@ function translit(word: string) {
 }
 
 .imgstile {
-  top: -52px;
-  left: 816px;
-  position: relative;
   height: 300px;
   width: 520px;
   object-fit: cover;

@@ -29,7 +29,7 @@ h2 {
 .addresscont {
   text-transform: uppercase;
   font-size: 40px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .card {

@@ -2,6 +2,7 @@
   <HeaderComponent></HeaderComponent>
   <NuxtPage />
   <FooterComponent></FooterComponent>
+  <!-- <UpButtonComponent></UpButtonComponent> -->
 </template>
 
 

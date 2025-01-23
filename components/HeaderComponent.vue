@@ -47,7 +47,7 @@
 }
 .link {
    display: flex;
-   gap: 24px;
+   gap: 60px;
 }
 .butnav {
   border: 2px solid white;

@@ -14,29 +14,5 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
-  posts Post[]
 }
 
-model Profile {
-  id int @id @default(autoincrement())
-  bio String
-  userId int @unique
-  user    User    @relation(fields: [userId], references: [id])
-}
-
-model Post {
-  id        Int     @id @default(autoincrement())
-  createAt DateTime @default(now())
-  updateAt DateTime @updateAt
-  title     String
-  content   String?
-  published Boolean @default(false)
-  authorId  Int
-  author    User    @relation(fields: [authorId], references: [id])
-}
-
-model Category {
-  id    Int     @id @default(autoincrement())
-  name String
-  post Post[]
-}

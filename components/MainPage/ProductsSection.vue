@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container">
+    <div>
     <p class="textprod">Наша экспертиза в обработке металла обеспечивает не только точность и качество, но и
       экономическую
       эффективность для каждого проекта: от плазменной резки до сложных сварочных работ. Наше производство
@@ -41,7 +41,7 @@ const products = [
   text-transform: uppercase;
   font-size: 34px;
   color: black;
-  padding: 30px 0 0 0;
+  padding: 90px 0 0 0;
   font-family: 'Montserrat', light;
   font-size: 34px;
 }
@@ -51,7 +51,7 @@ const products = [
   display: flex;
   text-align: center;
   gap: 10px;
-  padding: 48px 30px; 
+  padding: 30px 0; 
   background-color:  rgb(56, 52, 52);
   color: white;
   margin-top: 60px;
@@ -78,7 +78,7 @@ const products = [
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   flex-wrap: wrap;
-  padding-top: 60px;
+  padding-top: 70px;
   gap: 20px;
   padding-bottom: 64px; 
 }

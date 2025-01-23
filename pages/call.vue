@@ -12,8 +12,8 @@
       <NuxtLink to="/privacy">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
     </div>
     <div style="display: flex;">
-      <NuxtLink to="/" class="callmail"><span>&#9742;</span>+7(351) 304-42-35</NuxtLink>
-      <NuxtLink to="/" class="callmail"><span>&#x2709;</span> sales@zmkural.com</NuxtLink>
+      <a href="tel:+7(351)304-42-35" class="callmail"><span>&#9742;</span>+7(351) 304-42-35</a>
+      <a href="mailto:sales@zmkural.com" class="callmail"><span>&#x2709;</span> sales@zmkural.com</a>
     </div>
   </form>
 </template>
