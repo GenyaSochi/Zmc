@@ -7,8 +7,8 @@
 		</div>
 		<div class="detailet">подробное описание
 			<div>
-				<button class="buttons">Расчитать</button>
-				<button class="buttons">Заказать</button>
+			<NuxtLink to="/cost"><button class="buttons">Расчитать</button></NuxtLink>	
+			<NuxtLink to="/call"><button class="buttons">Заказать</button></NuxtLink>
 			</div>
 		</div>
 		<div>
