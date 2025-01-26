@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h1 class="h1">Проекты компании</h1>
     <div class="view"
       v-for="project of projectsStore.projects" :key="project.id">
@@ -76,12 +76,13 @@ function translit(word: string) {
 
 .h2 {
   font-size: 34px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .view {
   margin: 0 120px;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   padding: 22px 22px 0 22px;
   margin-bottom: 20px;

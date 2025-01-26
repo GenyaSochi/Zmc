@@ -51,7 +51,7 @@ const products = [
   display: flex;
   text-align: center;
   gap: 10px;
-  padding: 30px 0; 
+  padding: 30px 73px; 
   background-color:  rgb(56, 52, 52);
   color: white;
   margin-top: 60px;
@@ -71,7 +71,6 @@ const products = [
   font-size: 20px;
   box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
 }
-
 
 .allinfo {
   display: grid;
