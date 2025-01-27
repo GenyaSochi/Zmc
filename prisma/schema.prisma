@@ -14,5 +14,35 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+  useCatalog useCatalog[]
+  useProjects useProjects[]
 }
 
+model useCatalog {
+  id Int   @id @default(autoincrement())
+  autorId Int
+  autor User @relation(fields: [userId], references: [id])
+  name String
+  type_id Int @unique
+  out_id Int
+  title String
+  img url
+  text String
+  table String 
+}
+
+model useProjects {
+  id Int  @id @default(autoincrement())
+  autorId Int
+  autor User @relation(fields: [userId], references: [id])
+  name String
+  projecttype String
+  projectname String
+  volume String
+  quantity String
+  year String
+  yeardata Int
+  enduser String
+  endusername String
+  img url
+}
