@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1 class="h1">Проекты компании</h1>
     <div class="view"
       v-for="project of projectsStore.projects" :key="project.id">
@@ -9,24 +9,23 @@
       <div class="projectinfo" style="justify-content: space-between;">
         <div>
           <div class="projectinfo">
-            <p class="heading">{{ project.projecttype }}</p>
-            <p>{{ project.projectname }}</p>
+            <p class="heading">Вид продукции</p>
+            <p>{{ project.project }}</p>
           </div>
           <div class="projectinfo">
-            <p class="heading">{{ project.volume }}</p>
+            <p class="heading">Объем</p>
             <p>{{ project.quantity }}</p>
           </div>
           <div class="projectinfo">
-            <p class="heading">{{ project.year }}</p>
-            <p>{{ project.yeardata }}</p>
+            <p class="heading">Год</p>
+            <p>{{ project.year }}</p>
           </div>
           <div class="projectinfo">
-            <p class="heading">{{ project.enduser }}</p>
-            <p>{{ project.endusername }}</p>
+            <p class="heading">Конечный потребитель</p>
+            <p>{{ project.enduser }}</p>
           </div>
-
         </div>
-        <NuxtImg :src="project.img" :alt="project.projectname" sizes="520px" class="imgstile"></NuxtImg>
+        <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
       </div>
     </div>
   </div>

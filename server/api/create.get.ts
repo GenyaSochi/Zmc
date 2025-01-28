@@ -1,21 +1,7 @@
-// import type { Head } from "#build/components"
-import { defineStore } from "pinia"
+import prisma from "~/lib/prisma"
 
-export const useCatalog = defineStore('catalog', () => {
-	const types = [
-		{ id: 1, name: 'ОСТ 36-146-88 опоры стальных технологических трубопроводов', out: [] },
-		{ id: 2, name: 'ГОСТ 14911-82 (ОСТ 36-94-83): опоры трубопроводов подвижные', out: [] },
-		{ id: 3, name: 'Серия 1-487-1997.00.00 для опор трубопроводов в ППУ изоляции', out: [] },
-		{ id: 4, name: 'Серия 5.903-13 Выпуск 6-95, 7-95, 8-95: Изделия и детали трубопроводов для тепловых сетей', out: [1, 2, 3] },
-		{ id: 5, name: 'Серия ОСТ 34.10.610-93-34.10.745-93', out: [] },
-		{ id: 6, name: 'Каркасы зданий и Эстакады', out: [] },		
-	]
-
-	const out = [
-		{ id: 1, name: 'Выпуск 8-95', },
-		{ id: 2, name: 'Выпуск 7-95', },
-		{ id: 3, name: 'Выпуск 6-95', },
-	]
+export default defineEventHandler(async (event)=>{
+   
 
 	const catalog = [
 		{
@@ -66928,7 +66914,7 @@ export const useCatalog = defineStore('catalog', () => {
 </tbody>
 			</table>` },
 		{
-			id: 71, name: 'Каркасы зданий', type_id: 6, out_id: null, title: '', img: '/img/skeleton.webp', text: '', table: `
+			id: 71, name: 'Каркасы зданий', type_id: 6, out_id: null, title: 'Каркасы зданий', img: '/img/skeleton.webp', text: '', table: `
 			<p>Номенклатура продукии, изготавливаемая заводом:</p>
 			<br>
 	<p>- Каркасы зданий, ТРК, ФОК;</p>
@@ -66944,7 +66930,7 @@ export const useCatalog = defineStore('catalog', () => {
 	<br>
 				`},
 		{
-			id: 72, name: 'Эстакады', type_id: 6, out_id: null, title: '', img: '/img/flyover.webp', text: '', table: `
+			id: 72, name: 'Эстакады', type_id: 6, out_id: null, title: 'Эстакады', img: '/img/flyover.webp', text: '', table: `
 					<p>Номенклатура продукии, изготавливаемая заводом:</p>
 					<br>
 		<p>- Каркасы зданий, ТРК, ФОК;</p>
@@ -67015,331 +67001,45 @@ export const useCatalog = defineStore('catalog', () => {
 		<p>Все стремянки СХ, СГ и ограждения стремянок ОСХ, ОСГ имеют антикоррозионную защиту. Элементы конструкций собираются на сварке и болтовом соединении. Варианты исполнения согласовываются с Заказчиком.</p>
 		<br>
 		`},
-// 		{
-// 			id: 75, name: 'Опоры ОСТ 36-146-88', type_id: 7, out_id: null, title: 'Опоры хомутовые, катковые, трубчатые по ОСТ 36-146-88.', img: '/img/ohomut.webp', text: '', table: `
-// 		<table cellspacing="0" style="border-collapse:collapse; border:none; width:100%">
-// 			<thead>
-// 			<tr>
-// 			<td rowspan="2">
-// 		наименование			</td>
-// 					<td rowspan="2">
-// 		вес ед. до 2 кг			</td>
-// 					<td rowspan="2">
-// 		вес ед. до 2 кг с учетом скидки			</td>
-// 					<td rowspan="2">
-// 		вес ед. 2-5кг			</td>
-// 					<td rowspan="2">
-// 		вес ед. 2-5кг с учетом скидки			</td>
-// 					<td rowspan="2">
-// 		вес ед. 5-10кг			</td>
-// 					<td rowspan="2">
-// 		вес ед. 5-10кг с учетом скидки			</td>
-// 					<td rowspan="2">
-// 		вес ед. 10-20 кг			</td>
-// 					<td rowspan="2">
-// 		вес ед. 10-20 кг с учетом скидки			</td>
-// 					<td rowspan="2">
-// 		вес ед. 20 и выше			</td>
-// 					<td rowspan="2">
-// 		вес ед. 20 и выше с учетом скидки			</td>
-// 				</tr>
-// 				</thead>
-// 				<tbody>
-// 				<tr>
-// 			<td>
-// ОСТ 36-146-88			
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 		</tr>			
-// 			<tr>
-// 			<td>
-// ТП			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 		</tr>		
-// 		<tr>
-// 			<td>
-// ТХ			</td>
-// 			<td>
-// 170 ₽			</td>
-// 			<td>
-// 160 ₽			</td>
-// 			<td>
-// 160 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// КП			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 			<td>
-// 115 ₽			</td>
-// 			<td>
-// 110 ₽			</td>
-// 			<td>
-// 105 ₽			</td>
-// 		</tr>
+    ]
 
-// <tr>
-// 			<td>
-// КХ			</td>
-// 			<td>
-// 170 ₽			</td>
-// 			<td>
-// 160 ₽			</td>
-// 			<td>
-// 160 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 		</tr>
-// <tr>
-// 			<td>
-// ТР			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 			<td>
-// 115 ₽			</td>
-// 			<td>
-// 110 ₽			</td>
-// 			<td>
-// 105 ₽			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// ШП			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 			<td>
-// 115 ₽			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// УП			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// ХБ			</td>
-// 			<td>
-// 250 ₽			</td>
-// 			<td>
-// 170 ₽			</td>
-// 			<td>
-// 250 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 250 ₽			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// ВП			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 			<td>
-// 115 ₽			</td>
-// 			<td>
-// 110 ₽			</td>
-// 			<td>
-// 105 ₽			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// ТО			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 			<td>
-// 130 ₽			</td>
-// 			<td>
-// 125 ₽			</td>
-// 			<td>
-// 120 ₽			</td>
-// 			<td>
-// 115 ₽			</td>
-// 			<td>
-// 110 ₽			</td>
-// 			<td>
-// 105 ₽			</td>
-// 		</tr>
-// 		<tr>
-// 			<td>
-// КН			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 			</td>
-// 			<td>
-// 150 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 140 ₽			</td>
-// 			<td>
-// 135 ₽			</td>
-// 		</tr>
-// 				</tbody>
-// 		</table>
-// 		`},
+		function translit(word: string) {
+			var answer = '';
+			var converter = {
+				'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
+				'е': 'e', 'ё': 'e', 'ж': 'zh', 'з': 'z', 'и': 'i',
+				'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
+				'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't',
+				'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch',
+				'ш': 'sh', 'щ': 'sch', 'ь': '', 'ы': 'y', 'ъ': '',
+				'э': 'e', 'ю': 'yu', 'я': 'ya',
+		
+				'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D',
+				'Е': 'E', 'Ё': 'E', 'Ж': 'Zh', 'З': 'Z', 'И': 'I',
+				'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M', 'Н': 'N',
+				'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T',
+				'У': 'U', 'Ф': 'F', 'Х': 'H', 'Ц': 'C', 'Ч': 'Ch',
+				'Ш': 'Sh', 'Щ': 'Sch', 'Ь': '', 'Ы': 'Y', 'Ъ': '',
+				'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya'
+			} as Record<string, string>
+		
+			for (var i = 0; i < word.length; ++i) {
+				if (converter[word[i]] == undefined) {
+					answer += word[i];
+				} else {
+					answer += converter[word[i]];
+				}
+			}
+			answer = answer.trim().replaceAll(' ', '_').replaceAll(',', '').replaceAll('.', '').replaceAll('"', '').replaceAll("'", '').replaceAll('-', '_').toLocaleLowerCase()
+			return answer;
+		}
 
-	]
-	return { catalog, types, out }
+		const products = catalog.map(el=>({id:el.id, name:el.name, title:el.title, title_en:translit(el.title), img:el.img, html:el.table, type_id:el.type_id, out_id:el.out_id }))
+			
+		const data = await prisma.product.createMany({
+		 	data:products
+		})
+	
+		return 1
+
 })
-

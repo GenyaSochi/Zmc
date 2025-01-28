@@ -10,39 +10,47 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model User {
+model user {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
-  useCatalog useCatalog[]
-  useProjects useProjects[]
+  pass  String  
 }
 
-model useCatalog {
-  id Int   @id @default(autoincrement())
-  autorId Int
-  autor User @relation(fields: [userId], references: [id])
-  name String
-  type_id Int @unique
-  out_id Int
-  title String
-  img url
-  text String
-  table String 
+model type {
+  id        Int   @id @default(autoincrement())
+  name      String
+  outs      out[]
+  products  product[]
 }
 
-model useProjects {
-  id Int  @id @default(autoincrement())
-  autorId Int
-  autor User @relation(fields: [userId], references: [id])
-  name String
-  projecttype String
-  projectname String
-  volume String
-  quantity String
-  year String
-  yeardata Int
-  enduser String
-  endusername String
-  img url
+model out {
+  id        Int   @id @default(autoincrement())
+  name      String
+  type_id   Int
+  type      type  @relation(fields: [type_id], references: [id])
+  products  product[]
+}
+
+model product {
+  id        Int     @id @default(autoincrement())
+  name      String
+  title     String  @unique
+  title_en  String  @unique
+  img       String
+  html      String 
+  type_id   Int
+  out_id    Int?
+  type      type    @relation(fields: [type_id], references: [id])
+  out       out?    @relation(fields: [out_id], references: [id])
+}
+
+model project {
+  id        Int   @id @default(autoincrement())
+  name      String
+  project   String
+  quantity  String
+  year      Int
+  enduser   String
+  img       String
 }

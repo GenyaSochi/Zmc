@@ -20,7 +20,7 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным.</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a class="butproj"
+        <div class="production"> Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
             src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы

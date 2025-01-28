@@ -2,13 +2,13 @@
 	<div class="container">
 		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
 		<div style="display: flex; align-items: center;gap: 82px;">
-			<NuxtImg style="margin-top: 30px;" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>
+			<NuxtImg style="margin-top: 30px; filter: grayscale(1);" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ el?.name }}</p>
 		</div>
 		<div class="detailet">подробное описание
 			<div>
-			<NuxtLink to="/cost"><button class="buttons">Расчитать</button></NuxtLink>	
-			<NuxtLink to="/call"><button class="buttons">Заказать</button></NuxtLink>
+				<NuxtLink to="/cost"><button class="buttons">Расчитать</button></NuxtLink>	
+				<NuxtLink to="/call"><button class="buttons">Заказать</button></NuxtLink>
 			</div>
 		</div>
 		<div>
@@ -17,7 +17,6 @@
 			<div v-html="el?.table"></div>
 		</div>
 	</div>
-
 </template>
 
 <script setup lang="ts">
