@@ -2,8 +2,8 @@
 	<div class="container">
 		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
 		<div style="display: flex; align-items: center;gap: 82px;">
-			<NuxtImg style="margin-top: 30px; filter: grayscale(1);" sizes="300px" :src="el?.img" :alt="el?.name"></NuxtImg>
-			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ el?.name }}</p>
+			<NuxtImg style="margin-top: 30px; filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
+			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ data?.name }}</p>
 		</div>
 		<div class="detailet">подробное описание
 			<div>
@@ -12,19 +12,23 @@
 			</div>
 		</div>
 		<div>
-			<p class="titleproduct">{{ el?.title }}</p>
-			<p>{{ el?.text }}</p>
-			<div v-html="el?.table"></div>
+			<p class="titleproduct">{{ data?.title }}</p>
+			<div v-html="data?.html"></div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+import type { product} from '@prisma/client'
+
 const route = useRoute()
 
 const catalogStore = useCatalog()
 
-const el = catalogStore.catalog.find(el => translit(el.name) == route.params.name)
+
+const { data } = await useFetch<product|null>(`/api/products/${route.params.name}`)
+
+
 
 function translit(word: string) {
 	var answer = '';
