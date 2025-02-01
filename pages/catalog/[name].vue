@@ -19,16 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import type { product} from '@prisma/client'
-
 const route = useRoute()
 
-const catalogStore = useCatalog()
-
-
-const { data } = await useFetch<product|null>(`/api/products/${route.params.name}`)
-
-
+// const catalogStore = useCatalog()
+const { data } = await useFetch(`/api/products/${route.params.name}`)
 
 function translit(word: string) {
 	var answer = '';

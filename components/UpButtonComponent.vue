@@ -1,5 +1,5 @@
 <template>
-<p style="color: blue; font-size: 50px;">Кнопка вверх</p>
+<p class="button">Кнопка вверх</p>
 </template>
 
 <script setup lang="ts">
@@ -7,5 +7,9 @@
 
 
 <style>
+.button{
+  color: blue;
+  font-size: 50px;
+}
 
 </style>

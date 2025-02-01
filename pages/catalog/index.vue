@@ -8,7 +8,7 @@
             <div v-for="out of type.outs" :key="out.id">
             <h2>{{ out.name }}</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr;">
-              <NuxtLink style="border: 1px solid black; width: 265px;height: 68px; border-radius: 5px; text-align: center; padding: 7px;margin: 10px;font-size: 24px;" v-for="el of products?.filter(el=>el.out_id==out.id && el.type_id==type.id)" :key="el.title_en" :to="`/catalog/${el.title_en}`">{{ el.name }}</NuxtLink>
+              <NuxtLink style="border: 1px solid black; width: 265px;height: 68px; border-radius: 5px; text-align: center; padding: 7px;margin: 10px;font-size: 24px;" v-for="el of products?.filter((el:any)=>el.out_id==out.id && el.type_id==type.id)" :key="el.title_en" :to="`/catalog/${el.title_en}`">{{ el.name }}</NuxtLink>
             </div>
           </div>
         </div>
@@ -16,7 +16,7 @@
         <template v-else>
           <div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;justify-content: center; font-size: 24px; padding-bottom: 30px;">
-              <NuxtLink style="border: 1px solid black; width: 265px; height: 68px; border-radius: 5px; text-align: center; padding: 7px; margin: 10px;" v-for="el of products?.filter(el=>el.type_id==type.id)" :key="el.title_en" :to="`/catalog/${el.title_en}`">{{ el.name }}</NuxtLink>
+              <NuxtLink style="border: 1px solid black; width: 265px; height: 68px; border-radius: 5px; text-align: center; padding: 7px; margin: 10px;" v-for="el of products?.filter((el:any)=>el.type_id==type.id)" :key="el.title_en" :to="`/catalog/${el.title_en}`">{{ el.name }}</NuxtLink>
             </div>
           </div>
         </template>
@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 
-const {data}=await useFetch('/api/products/catalog')
+const {data} = await useFetch('/api/products/catalog')
 const types = data.value?.types
 const products = data.value?.products
 </script>

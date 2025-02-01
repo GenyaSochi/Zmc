@@ -20,7 +20,7 @@ import { register } from 'swiper/element/bundle'
 register()
 
 
-const certificate = [
+const certificate = [  
   { id: 1, img: '/img/cert1.webp', title: 'certificate', pdf:'cert1_pdf.pdf' },
   { id: 2, img: '/img/cert2.webp', title: 'certificate', pdf:'cert2_pdf.pdf' },
   { id: 3, img: '/img/cert3.webp', title: 'certificate', pdf:'cert3_pdf.pdf' },

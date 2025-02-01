@@ -6,34 +6,12 @@
       эффективность для каждого проекта: от плазменной резки до сложных сварочных работ. Наше производство
       гарантирует снижение затрат и повышение долговечности изделий, позволяя Вам успешно реализовывать
       самые амбициозные задачи.</p>
-    
-    <!-- <div class="allinfo">
-      <div class="infoprod" v-for="el of products" :key="el.id">
-        <h3 class="nameprod">{{ el.titleprod }}</h3>      
-        <div class="buttonstyle">
-          <NuxtLink to="/catalog" class="linkprod">Подробнее</NuxtLink>
-          <NuxtLink to="/cost" class="linkorder">Заказать</NuxtLink>
-        </div>
-      </div>
-    </div>-->
   </div> 
       </section>
     <NuxtLink to="/catalog" class="seeprod">Каталог продукции</NuxtLink>
 </template>
 
 <script setup lang="ts">
-
-// const products = [
-//   { id: 1, titleprod: 'Опоры хомутовые, катковые, трубчатые по ОСТ 36-146-88'},
-//   { id: 2, titleprod: 'Каркасы зданий' },
-//   { id: 3, titleprod: 'Опоры трубопроводов А14Б (серия 5.900-7: 4 выпуск)' },
-//   { id: 4, titleprod: 'Эстакады' },
-//   { id: 5, titleprod: 'Опоры трубопроводов скользящие (серия 4.903-10)' },
-//   { id: 6, titleprod: 'Стремянки СХ, СГ и ограждения ОСХ, ОСГ (серия 1.405.3-7.94)' },
-//   { id: 7, titleprod: 'Опоры трубопроводов неподвижные (серия 4.903-10: 4 выпуск)' },
-//   { id: 8, titleprod: 'Промышленные площадки и их ограждения (серия 1.405.3–7.94)' },
-//   { id: 9, titleprod: 'Опоры подвижные (хомутовые стальные) ОСТ 36-94-83 (ГОСТ 14911-82)' },
-// ]
 </script>
 
 <style>

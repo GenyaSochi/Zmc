@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="h1">Проекты компании</h1>
     <div class="view"
-      v-for="project of projectsStore.projects" :key="project.id">
+      v-for="project of projects" :key="project.name">
       <h2 class="h2">
         {{project.name}}
       </h2>
@@ -32,7 +32,11 @@
 </template>
 
 <script setup lang="ts">
-const projectsStore = useProjects()
+
+// const projectsStore = useProjects()
+const {data} = await useFetch('/api/projects/project')
+const projects = data.value?.projects
+
 
 function translit(word: string) {
   var answer = '';
