@@ -25,7 +25,13 @@
           <p style="padding-top: 24px;">sales@zmkural.com</p>
           <p style="font-size: small;">Получите расчет заказа</p>
         </div>
-      </div>           
+      </div>   
+      <div></div>
+      <div></div>
+      <div>
+        <p>hr@zmkural.com</p>
+        <NuxtLink to="job" style="color: white; font-size: small;">Вакансии компании</NuxtLink>
+      </div>
     
       <div></div>
       <div style="text-align: center; padding-bottom: 30px;">
@@ -56,7 +62,7 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  height: 480px;
+  height: 560px;
 }
 
 .lobtn {

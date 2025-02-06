@@ -30,7 +30,7 @@
   text-align: center;
   gap: 10px;
   padding: 30px 73px; 
-  background-color:  rgb(56, 52, 52);
+  background-color:  rgba(56, 52, 52, 0.7);
   color: white;
   margin-top: 60px;
 }

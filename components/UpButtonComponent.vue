@@ -35,7 +35,7 @@ const totop = ()=>{
 
 <style>
 .button{  
-  background-color: rgb(56, 52, 52); 
+  background-color: rgba(56, 52, 52, 0.3); 
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -43,7 +43,7 @@ const totop = ()=>{
   text-align: center; 
   cursor: pointer;
   position: fixed;
-  bottom: -500px;
+  bottom: -604px;
   left: 50px;  
   transition: .8s linear; 
   opacity: 0;
@@ -52,7 +52,7 @@ const totop = ()=>{
 
 .button-active {
   opacity: 1;
-  bottom: 500px;
+  bottom: 604px;
   transition: .8s linear; 
 }
 
