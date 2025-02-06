@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 
+
 </script>
 
 
@@ -19,13 +20,13 @@
   text-align: center; 
   cursor: pointer;
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   bottom: 450px;
   left: 50px;  
   transition: .4s linear; 
 }
 
-.button.active {
+.button:active {
   top: -597px;
   transition: .4s linear; 
 }
