@@ -39,7 +39,7 @@
     </div>
     <div class="recbottom"></div>
   </div>
-  <a href="companydetails.pdf" class="details">Скачать реквизиты компании</a>
+  <a href="companydetails.pdf" class="details" target="_blank">Скачать реквизиты компании</a>
 </template>
 
 <script setup lang="ts">
