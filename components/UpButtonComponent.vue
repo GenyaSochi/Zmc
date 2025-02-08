@@ -43,17 +43,17 @@ const totop = ()=>{
   text-align: center; 
   cursor: pointer;
   position: fixed;
-  bottom: -604px;
-  left: 50px;  
-  transition: .8s linear; 
+  bottom: -18px;
+  left: 18px;  
+  transition: .4s linear; 
   opacity: 0;
   z-index: 1;
 }
 
 .button-active {
   opacity: 1;
-  bottom: 604px;
-  transition: .8s linear; 
+  bottom: 18px;
+  transition: .4s linear; 
 }
 
 .arrow {

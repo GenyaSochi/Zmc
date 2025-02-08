@@ -1,22 +1,25 @@
 <template>
-  <section>  
-    <!-- <div class="video">
-      <video autoplay muted loop id="myVideo" src="/public/video/Crystall1.mp4"></video>
-    </div> -->
-      <h1 style="padding: 100px 0; text-align: center;color: white;">17 лет производим опоры для трубопроводов</h1>
-      <strong class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам заказчика.</strong>    
-      <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span class="num">9</span>
-        <span class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span>
-        <span class="num">2</span><span class="num">3</span>
-      </h2>   
-      <div class="allcontainer">     
-        <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор</NuxtLink>  
-        <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink> 
-        <a href="#advant" class="cardcontainer">Наши преимущества</a>        
-        <a href="#cert" class="cardcontainer">Наши сертификаты</a>         
-        <p class="cardcontainer">Фотографии завода</p>      
-      </div>  
-      <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>         
+  <section>
+      <div class="video">
+        <video autoplay muted id="myVideo" src="/public/video/ministart.mp4"></video>
+      </div>
+    <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
+    <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
+      заказчика.</p>
+    <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span
+        class="num">9</span>
+      <span class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span>
+      <span class="num">2</span><span class="num">3</span>
+    </h2>
+    <div class="allcontainer">
+      <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор
+      </NuxtLink>
+      <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
+      <a href="#advant" class="cardcontainer">Наши преимущества</a>
+      <a href="#cert" class="cardcontainer">Наши сертификаты</a>
+      <p class="cardcontainer">Фотографии завода</p>
+    </div>
+    <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
 
 </template>
@@ -32,10 +35,15 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 77px 0; 
-  background-color:  rgb(56, 52, 52);
+  padding: 77px 0;
+  background-color: rgb(56, 52, 52);
   color: white;
-  /* margin-top: 30px;   */
+}
+
+.h1view {
+  text-align: center;
+  color: black;
+  padding-bottom: 20px;
 }
 
 .num {
@@ -54,7 +62,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(56, 52, 52, 0.5);
-  color: white; 
+  color: white;
 }
 
 .cardcontainer :hover {
@@ -67,14 +75,13 @@
   justify-content: center;
   text-align: center;
   gap: 45px;
-  padding: 80px 0;
+  padding: 122px 0 80px 0;
 }
 
-.heading { 
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding-bottom: 60px;
+.heading {
+  text-align: center;
+  color: black;
+  padding-bottom: 400px;
 }
 
 .video {
