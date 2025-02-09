@@ -6,10 +6,16 @@
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
       заказчика.</p>
-    <h2 class="text">Количество выпущенной продукции <span class="num">5</span><span class="num">4</span><span
-        class="num">9</span>
-      <span class="num">4</span><span class="num">3</span><span class="num">9</span><span class="num">1</span>
-      <span class="num">2</span><span class="num">3</span>
+    <h2 class="text">Количество выпущенной продукции 
+      <span class="num">5</span>
+      <span class="num">4</span>
+      <span class="num">9</span>
+      <span class="num">4</span>
+      <span class="num">3</span>
+      <span class="num">9</span>
+      <span class="num" max="9" time="8000">0</span>
+      <span class="num" max="9" time="6000">0</span>
+      <span class="num" max="9" time="4000">0</span>
     </h2>
     <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор
@@ -25,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+
 
 </script>
 
@@ -49,7 +56,7 @@
 .num {
   border: 2px solid white;
   padding: 2px 10px;
-  color: white;
+  color: white;  
 }
 
 .cardcontainer {
