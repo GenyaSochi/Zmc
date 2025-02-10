@@ -34,7 +34,7 @@ const products = data.value?.products
 <style scoped>
 h1 {  
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 34px;
 }
 h2 {
   text-align: center;

@@ -15,7 +15,7 @@
       <span class="num">9</span>
       <span class="num" max="9" time="8000">0</span>
       <span class="num" max="9" time="6000">0</span>
-      <span class="num" max="9" time="4000">0</span>
+      <span class="num" id="num1">0</span>
     </h2>
     <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор
@@ -31,8 +31,6 @@
 </template>
 
 <script setup lang="ts">
-
-
 </script>
 
 <style scoped>
@@ -43,8 +41,13 @@
   justify-content: center;
   gap: 10px;
   padding: 77px 0;
-  background-color: rgb(56, 52, 52);
+  background:linear-gradient(90deg,
+   rgb(58, 55, 55)39%,
+   rgb(194, 196, 202)96%);
+ 
+  /* background-color: rgb(56, 52, 52); */
   color: white;
+ 
 }
 
 .h1view {
@@ -68,7 +71,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(56, 52, 52, 0.5);
+  background: linear-gradient(45deg,
+  rgb(56, 52, 52)10%,
+  rgb(138, 136, 136)90%
+  );
   color: white;
 }
 

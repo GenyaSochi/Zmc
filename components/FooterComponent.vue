@@ -1,45 +1,47 @@
 <template>
   <div class="footercont">
     <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
-    
-      <p>Завод металлоконструкций Урал</p>
-      <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
-    
-      <div></div>          
-      <div>
-        <p style="padding-bottom: 28px;">Продукция</p>
-        <div v-for="el of prod" :key="el.id">
-          <p style="font-size: small;padding-bottom: 10px;">{{ el.prodname }}</p>
-        </div>
+
+    <p class="footinfo">Завод металлоконструкций Урал</p>
+    <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
+
+    <div></div>
+    <div>
+      <p class="footprod">Продукция</p>
+      <div v-for="el of prod" :key="el.id">
+        <p class="product">{{ el.prodname }}</p>
       </div>
-      
+      <p class="empty"></p>
+    </div>
+
+    <div>
+      <p class="contact">Контакты</p>
+      <p class="small">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
+      <p class="small">по будням с 8:00 до 17:00</p>
       <div>
-        <p style="padding-bottom: 28px;">Контакты</p>
-        <p style="font-size: small;">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
-        <p style="font-size: small;">по будням с 8:00 до 17:00</p>
-        <div>
-          <p style="padding-top: 24px;">+7(351) 304-42-35</p>
-          <p style="font-size: small;">Позвоните нам</p>
-        </div>
-        <div>
-          <p style="padding-top: 24px;">sales@zmkural.com</p>
-          <p style="font-size: small;">Получите расчет заказа</p>
-        </div>
-      </div>   
-      <div></div>
-      <div></div>
-      <div>
-        <p>hr@zmkural.com</p>
-        <NuxtLink to="job" style="color: white; font-size: small;">Вакансии компании</NuxtLink>
+        <p class="view">+7(351) 304-42-35</p>
+        <p class="small">Позвоните нам</p>
       </div>
-    
-      <div></div>
-      <div style="text-align: center; padding-bottom: 30px;">
-        <p style="font-size: small;">&copy; 2024 «Завод металлоконструкций Урал». Все права защищены</p>
-        <NuxtLink to="/privacy" style="font-size: small;">Политика конфиденциальности</NuxtLink>
+      <div>
+        <p class="view">sales@zmkural.com</p>
+        <p class="small">Получите расчет заказа</p>
       </div>
     </div>
- 
+    <div></div>
+    <div></div>
+    <div>
+      <p>hr@zmkural.com</p>
+      <NuxtLink to="job" class="small">Вакансии компании</NuxtLink>
+    </div>
+
+    <div></div>
+    <div class="privacy">
+      <p class="privacysmall">&copy; 2024 «Завод металлоконструкций Урал». Все права
+        защищены.</p>
+      <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>      
+    </div>
+  </div>
+
 </template>
 
 <script setup lang="ts">
@@ -48,17 +50,17 @@ const prod = [
   { id: 2, prodname: 'ГОСТ 14911-82 (ОСТ 36-94-83): опоры трубопроводов подвижные' },
   { id: 3, prodname: 'Серия 1-487-1997.00.00 для опор трубопроводов в ППУ изоляции' },
   { id: 4, prodname: 'Серия 5.903-13 Выпуск 6-95, 7-95, 8-95: изделия и детали трубопроводов для тепловых сетей' },
-  { id: 5, prodname: 'Серия ОСТ 34.10.610-93 - 34.10.745-93' }
+  { id: 5, prodname: 'Серия ОСТ 34.10.610-93 - 34.10.745-93' },
+  { id: 6, prodname: 'Каркасы зданий и эстакады'},
 ]
 </script>
 
 <style>
 .footercont {
-  background-color:  rgb(56, 52, 52);
+  background-color: rgb(56, 52, 52);
   color: white;
   display: grid;
-  /* grid-template-rows: 1fr; */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 400px 1fr 1fr;
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
@@ -78,6 +80,46 @@ const prod = [
   background-color: black;
   color: white;
   font-size: small;
+  text-align: center;
+}
+
+.footinfo {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.footprod {
+  padding-bottom: 66px;
+  text-align: center;
+}
+
+.small {
+  font-size: small;
+}
+
+.contact {
+  padding-bottom: 72px;
+}
+
+.product {
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+.empty {
+  padding-bottom: 20px;
+}
+
+.view {
+  padding-top: 24px;
+}
+
+.privacy {
   text-align: center; 
+}
+
+.privacysmall {
+  font-size: small;
+  padding-bottom: 10px;
 }
 </style>
