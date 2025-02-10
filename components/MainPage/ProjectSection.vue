@@ -176,7 +176,7 @@ swiper-container {
 
 .productstyle {
   background: linear-gradient(90deg,
-  rgb(0, 0, 0)0%,
+  rgb(15, 15, 15)0%,
   rgb(56, 52, 52)100%);
   justify-content: center;
   padding-top: 30px;
