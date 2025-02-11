@@ -6,16 +6,8 @@
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
       заказчика.</p>
-    <h2 class="text">Количество выпущенной продукции 
-      <span class="num">5</span>
-      <span class="num">4</span>
-      <span class="num">9</span>
-      <span class="num">4</span>
-      <span class="num">3</span>
-      <span class="num">9</span>
-      <span class="num" max="9" time="8000">0</span>
-      <span class="num" max="9" time="6000">0</span>
-      <span class="num" id="num1">0</span>
+    <h2 class="digits">Количество выпущенной продукции 
+      <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
     </h2>
     <div style="background-color: white;height: 100%;"></div>
     <div class="allcontainer">
@@ -26,16 +18,43 @@
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <p class="cardcontainer">Фотографии завода</p>
     </div>
-    <h2 class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
+    <h2>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
 
 </template>
 
 <script setup lang="ts">
+
+// Инициализируем массив цифр
+const digits = ref([5, 4, 9, 4, 3, 9, 0, 0, 0]);
+
+// Функция для увеличения чисел
+const incrementDigits = () => {
+  for (let i = digits.value.length - 1; i >= 0; i--) {
+    if (digits.value[i] < 9) {
+      digits.value[i]++;
+      break;
+    } else {
+      digits.value[i] = 0;
+    }
+  }
+};
+
+// Запускаем интервал каждые 500 мс
+let interval: NodeJS.Timeout;
+onMounted(() => {
+  interval = setInterval(incrementDigits, 1000);
+});
+
+// Очищаем интервал при уничтожении компонента
+onUnmounted(() => {
+  clearInterval(interval);
+});
+
 </script>
 
 <style scoped>
-.text {
+.digits {
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -44,8 +63,7 @@
   padding: 77px 0;
   background:linear-gradient(90deg,
    rgb(58, 55, 55)39%,
-   rgb(194, 196, 202)96%);
- 
+   rgb(194, 196, 202)96%); 
   /* background-color: rgb(56, 52, 52); */
   color: white;
  
@@ -81,6 +99,7 @@
   justify-content: center;
   text-align: center;
   gap: 45px;
+  background-color: white;
   padding: 122px 0 80px 0;
 }
 
@@ -110,4 +129,5 @@
   z-index: -1000;
   transform: translateX(-50%) translateY(-50%);
 }
+
 </style>
