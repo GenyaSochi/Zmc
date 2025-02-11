@@ -40,7 +40,7 @@ const incrementDigits = () => {
   }
 };
 
-// Запускаем интервал каждые 500 мс
+// Запускаем интервал каждые 1000 мс
 let interval: NodeJS.Timeout;
 onMounted(() => {
   interval = setInterval(incrementDigits, 1000);
