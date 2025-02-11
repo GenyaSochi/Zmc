@@ -43,7 +43,7 @@ const incrementDigits = () => {
 // Запускаем интервал каждые 1000 мс
 let interval: NodeJS.Timeout;
 onMounted(() => {
-  interval = setInterval(incrementDigits, 1000);
+  interval = setInterval(incrementDigits, 2000);
 });
 
 // Очищаем интервал при уничтожении компонента
