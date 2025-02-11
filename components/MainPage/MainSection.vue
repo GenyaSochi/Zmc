@@ -17,6 +17,7 @@
       <span class="num" max="9" time="6000">0</span>
       <span class="num" id="num1">0</span>
     </h2>
+    <div style="background-color: white;height: 100%;"></div>
     <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор
       </NuxtLink>
@@ -70,17 +71,9 @@
   padding: 0 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(45deg,
-  rgb(56, 52, 52)10%,
-  rgb(138, 136, 136)90%
-  );
+  justify-content: center;   
+  background-color: rgb(56, 52, 52);
   color: white;
-}
-
-.cardcontainer :hover {
-  background: black;
-  width: 290px;
 }
 
 .allcontainer {

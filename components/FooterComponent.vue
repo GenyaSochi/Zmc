@@ -27,8 +27,8 @@
         <p class="small">Получите расчет заказа</p>
       </div>
     </div>
-    <div></div>
-    <div></div>
+    <div></div>    
+    <div><p class="smallrec">скачать реквизиты компании</p><a href="companydetails.pdf" class="details" target="_blank">&#8595;</a></div>
     <div>
       <p>hr@zmkural.com</p>
       <NuxtLink to="job" class="small">Вакансии компании</NuxtLink>
@@ -64,7 +64,7 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  height: 560px;
+  height: 585px;
 }
 
 .lobtn {
@@ -96,7 +96,11 @@ const prod = [
 .small {
   font-size: small;
 }
+.smallrec {
+  font-size: small;
 
+
+}
 .contact {
   padding-bottom: 72px;
 }

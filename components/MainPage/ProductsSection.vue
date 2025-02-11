@@ -30,7 +30,10 @@
   text-align: center;
   gap: 10px;
   padding: 30px 73px; 
-  background-color:  rgba(56, 52, 52, 0.7);
+  background: linear-gradient(60deg,
+  black 0%,
+  rgb(95, 90, 90) 80%);
+  /* background-color:  rgba(56, 52, 52, 0.7); */
   color: white;
   margin-top: 60px;
 }
