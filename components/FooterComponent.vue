@@ -138,7 +138,7 @@ const prod = [
 
 .privacysmall {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
 }
 
 .lower {
