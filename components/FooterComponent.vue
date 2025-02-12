@@ -24,34 +24,45 @@
       </div>
       <div>
         <p class="view">sales@zmkural.com</p>
-        <p class="small">Получите расчет заказа</p>
+        <NuxtLink to="/cost" class="small">Получите расчет заказа</NuxtLink>
       </div>
     </div>
-    <div></div>    
-    <div><p class="smallrec">скачать реквизиты компании</p><a href="companydetails.pdf" class="details" target="_blank">&#8595;</a></div>
+    <div></div>
+    <div></div>
     <div>
       <p>hr@zmkural.com</p>
       <NuxtLink to="job" class="small">Вакансии компании</NuxtLink>
     </div>
-
+    <div></div>
+    <div></div>
+    <a href="companydetails.pdf" class="small" target="_blank">&#8595; скачать реквизиты компании</a>
+    <div></div>
+    <div></div>
+    <div>
+      <p class="small">мы в социальных сетях</p>
+      <a href="https://vk.com/zmkural" style="padding-right: 10px;">Вконтакте</a>
+      <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Rutube</a>
+    </div>
     <div></div>
     <div class="privacy">
       <p class="privacysmall">&copy; 2024 «Завод металлоконструкций Урал». Все права
         защищены.</p>
-      <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>      
+      <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>
     </div>
   </div>
 
 </template>
 
 <script setup lang="ts">
+import { NuxtImg } from '#build/components';
+
 const prod = [
   { id: 1, prodname: 'ОСТ 36-146-88 опоры стальных технологических трубопроводов' },
   { id: 2, prodname: 'ГОСТ 14911-82 (ОСТ 36-94-83): опоры трубопроводов подвижные' },
   { id: 3, prodname: 'Серия 1-487-1997.00.00 для опор трубопроводов в ППУ изоляции' },
   { id: 4, prodname: 'Серия 5.903-13 Выпуск 6-95, 7-95, 8-95: изделия и детали трубопроводов для тепловых сетей' },
   { id: 5, prodname: 'Серия ОСТ 34.10.610-93 - 34.10.745-93' },
-  { id: 6, prodname: 'Каркасы зданий и эстакады'},
+  { id: 6, prodname: 'Каркасы зданий и эстакады' },
 ]
 </script>
 
@@ -64,7 +75,7 @@ const prod = [
   align-items: flex-end;
   gap: 30px;
   font-size: 20px;
-  height: 585px;
+  height: 100%;
 }
 
 .lobtn {
@@ -74,6 +85,7 @@ const prod = [
   font-size: 20px;
   width: 257px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .privacyfooter {
@@ -89,24 +101,25 @@ const prod = [
 }
 
 .footprod {
-  padding-bottom: 66px;
+  padding-bottom: 77px;
   text-align: center;
 }
 
 .small {
-  font-size: small;
+  font-size: 16px;
+  padding-bottom: 5px;
 }
+
 .smallrec {
-  font-size: small;
-
-
+  font-size: 16px;
 }
+
 .contact {
   padding-bottom: 72px;
 }
 
 .product {
-  font-size: small;
+  font-size: 16px;
   padding-bottom: 10px;
 }
 
@@ -115,15 +128,21 @@ const prod = [
 }
 
 .view {
-  padding-top: 24px;
+  padding: 24px 0 5px 0;
 }
 
 .privacy {
-  text-align: center; 
+  text-align: center;
 }
 
 .privacysmall {
-  font-size: small;
+  font-size: 16px;
   padding-bottom: 10px;
+}
+
+.lower {
+  font-size: 16px;
+  padding-bottom: 5px;
+  padding-bottom: 30px;
 }
 </style>
