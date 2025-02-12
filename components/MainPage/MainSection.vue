@@ -43,7 +43,7 @@ const incrementDigits = () => {
 // Запускаем интервал каждые 1000 мс
 let interval: NodeJS.Timeout;
 onMounted(() => {
-  interval = setInterval(incrementDigits, 2000);
+  interval = setInterval(incrementDigits, 1000);
 });
 
 // Очищаем интервал при уничтожении компонента
@@ -77,8 +77,11 @@ onUnmounted(() => {
 
 .num {
   border: 2px solid white;
-  padding: 2px 10px;
+  padding-top: 9px;
   color: white;  
+  height: 50px;
+  width: 54px;
+  text-align: center;
 }
 
 .cardcontainer {
