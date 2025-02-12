@@ -6,8 +6,7 @@
         <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
             <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>    
-          </a>   
-      
+          </a>         
         </swiper-slide>
       </swiper-container>
     </div>
@@ -30,7 +29,6 @@ const certificate = [
   { id: 7, img: '/img/cert7.webp', title: 'certificate', pdf:'cert7_pdf.pdf' },
   { id: 8, img: '/img/cert8.webp', title: 'certificate', pdf:'cert8_pdf.pdf' },
 ]
-
 
 </script>
 

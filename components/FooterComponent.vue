@@ -40,14 +40,15 @@
     <div></div>
     <div>
       <p class="small">мы в социальных сетях</p>
-      <a href="https://vk.com/zmkural" style="padding-right: 10px;">Вконтакте</a>
-      <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Rutube</a>
+      <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
+      <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ" target="_blank">Rutube</a>
     </div>
     <div></div>
     <div class="privacy">
       <p class="privacysmall">&copy; 2024 «Завод металлоконструкций Урал». Все права
         защищены.</p>
       <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>
+      <div class="bottom"> </div>
     </div>
   </div>
 
@@ -144,5 +145,8 @@ const prod = [
   font-size: 16px;
   padding-bottom: 5px;
   padding-bottom: 30px;
+}
+.bottom {
+  margin-bottom: 30px;
 }
 </style>
