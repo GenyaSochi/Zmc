@@ -1,57 +1,61 @@
 <template>
   <div class="footercont">
-    <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
-
-    <p class="footinfo">Завод металлоконструкций Урал</p>
-    <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
-
-    <div></div>
+    <div>
+      <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
+      <p class="footinfo">Завод металлоконструкций Урал</p>
+      <div></div>
+    </div>
+    
     <div>
       <p class="footprod">Продукция</p>
       <div v-for="el of prod" :key="el.id">
         <p class="product">{{ el.prodname }}</p>
       </div>
       <p class="empty"></p>
+      <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
     </div>
-
+    
     <div>
-      <p class="contact">Контакты</p>
-      <p class="small">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
-      <p class="small">по будням с 8:00 до 17:00</p>
       <div>
-        <p class="view">+7(351) 304-42-35</p>
-        <p class="small">Позвоните нам</p>
+        <p class="contact">Контакты</p>
+        <p class="smallrec">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, помещение 10</p>
+        <p class="adress">по будням с 8:00 до 17:00</p>
+        <div class="view">
+          <a href="tel:+7(351)304-42-35" class="info">+7(351) 304-42-35</a>
+          <a href="tel:+7(351)304-42-35" class="small">Позвоните нам</a>
+        </div>
+        <div class="view">
+          <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
+          <a href="mailto:sales@zmkural.com" class="small">Получите расчет заказа</a>
+        </div>
       </div>
+      <div></div>
+      <a href="companydetails.pdf" class="small" target="_blank">&#8595; скачать реквизиты компании</a>
       <div>
-        <p class="view">sales@zmkural.com</p>
-        <NuxtLink to="/cost" class="small">Получите расчет заказа</NuxtLink>
+        <p>hr@zmkural.com</p>
+        <NuxtLink to="job" class="small">Вакансии компании</NuxtLink>
       </div>
-    </div>
-    <div></div>
-    <div></div>
-    <div>
-      <p>hr@zmkural.com</p>
-      <NuxtLink to="job" class="small">Вакансии компании</NuxtLink>
-    </div>
-    <div></div>
-    <div></div>
-    <a href="companydetails.pdf" class="small" target="_blank">&#8595; скачать реквизиты компании</a>
-    <div></div>
-    <div></div>
-    <div>
-      <p class="small">мы в социальных сетях</p>
-      <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
-      <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ" target="_blank">Rutube</a>
-    </div>
-    <div></div>
-    <div class="privacy">
-      <p class="privacysmall">&copy; 2024 «Завод металлоконструкций Урал». Все права
-        защищены.</p>
-      <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>
-      <div class="bottom"> </div>
+      <div></div>
+      <div>
+      </div> 
+      <div>
+        <p class="small">мы в социальных сетях</p>
+        <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
+        <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ" target="_blank">Rutube</a>
+      </div>
+      <div></div>
+      <div class="privacy">
+        <div class="bottom"></div>
+      </div>
+      
     </div>
   </div>
-
+  <div class="footercont1">
+    <p style="text-align: center;" class="privacysmall">&copy; 2024 «Завод металлоконструкций Урал». Все правазащищены.</p>
+    <p style="text-align: center;" class="privacysmall">
+       <NuxtLink to="/privacy" class="small">Политика конфиденциальности</NuxtLink>
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -73,10 +77,15 @@ const prod = [
   color: white;
   display: grid;
   grid-template-columns: 400px 1fr 1fr;
-  align-items: flex-end;
-  gap: 30px;
+  gap: 20px;
   font-size: 20px;
-  height: 100%;
+}
+
+.footercont1 {
+  background-color: rgb(56, 52, 52);
+  color: white;
+  gap: 20px;
+  font-size: 20px;
 }
 
 .lobtn {
@@ -102,26 +111,30 @@ const prod = [
 }
 
 .footprod {
-  padding-bottom: 77px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
 .small {
-  font-size: 16px;
-  padding-bottom: 5px;
+  font-size: 18px;
+  padding-bottom: 14px;
+}
+.adress {
+  font-size: 18px;
+  padding-bottom: 26px;
 }
 
 .smallrec {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .contact {
-  padding-bottom: 72px;
+  padding-bottom: 36px;
 }
 
 .product {
-  font-size: 16px;
-  padding-bottom: 10px;
+  font-size: 18px;
+  padding-bottom: 14px;
 }
 
 .empty {
@@ -129,7 +142,8 @@ const prod = [
 }
 
 .view {
-  padding: 24px 0 5px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .privacy {
@@ -137,7 +151,7 @@ const prod = [
 }
 
 .privacysmall {
-  font-size: 16px;
+  font-size: 18px;
   padding-bottom: 10px; 
 }
 
@@ -148,5 +162,9 @@ const prod = [
 }
 .bottom {
   margin-bottom: 30px;
+}
+
+.info {
+  padding-bottom: 6px;
 }
 </style>
