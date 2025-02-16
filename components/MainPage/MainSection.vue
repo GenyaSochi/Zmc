@@ -16,7 +16,7 @@
       <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
-      <p class="cardcontainer">Фотографии завода</p>
+      <a href="#photo" class="cardcontainer">Фотографии завода</a>
     </div>
     <h2 class="digits">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
@@ -65,8 +65,7 @@ onUnmounted(() => {
    rgb(58, 55, 55)39%,
    rgb(194, 196, 202)96%); 
   /* background-color: rgb(56, 52, 52); */
-  color: white;
- 
+  color: white; 
 }
 
 .h1view {

@@ -5,7 +5,8 @@
 <MainPageAddressSection></MainPageAddressSection>
 <MainPageSertSection></MainPageSertSection>
 <MainPageProductsSection></MainPageProductsSection>
+<MainPagePhotoSection></MainPagePhotoSection>
 <MainPageCostSection></MainPageCostSection>
-<MainPageExcursionSection></MainPageExcursionSection>
+
 
 </template>

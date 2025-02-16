@@ -2,11 +2,11 @@
   <section id="cert">
     <div class="сertcontainer">
       <h2 class="сerttext">наши сертификаты</h2>
-      <swiper-container watchSlidesProgress="true" slidesPerView="4">
+      <swiper-container watchSlidesProgress="true" slidesPerView="5">
         <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
-            <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>    
-          </a>         
+            <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>
+          </a>
         </swiper-slide>
       </swiper-container>
     </div>
@@ -18,16 +18,15 @@
 import { register } from 'swiper/element/bundle'
 register()
 
-
-const certificate = [  
-  { id: 1, img: '/img/cert1.webp', title: 'certificate', pdf:'cert1_pdf.pdf' },
-  { id: 2, img: '/img/cert2.webp', title: 'certificate', pdf:'cert2_pdf.pdf' },
-  { id: 3, img: '/img/cert3.webp', title: 'certificate', pdf:'cert3_pdf.pdf' },
-  { id: 4, img: '/img/cert4.webp', title: 'certificate', pdf:'cert4_pdf.pdf' },
-  { id: 5, img: '/img/cert5.webp', title: 'certificate', pdf:'cert5_pdf.pdf' },
-  { id: 6, img: '/img/cert6.webp', title: 'certificate', pdf:'cert6_pdf.pdf' },
-  { id: 7, img: '/img/cert7.webp', title: 'certificate', pdf:'cert7_pdf.pdf' },
-  { id: 8, img: '/img/cert8.webp', title: 'certificate', pdf:'cert8_pdf.pdf' },
+const certificate = [
+  { id: 1, img: '/img/cert1.webp', title: 'certificate', pdf: 'cert1_pdf.pdf' },
+  { id: 2, img: '/img/cert2.webp', title: 'certificate', pdf: 'cert2_pdf.pdf' },
+  { id: 3, img: '/img/cert3.webp', title: 'certificate', pdf: 'cert3_pdf.pdf' },
+  { id: 4, img: '/img/cert4.webp', title: 'certificate', pdf: 'cert4_pdf.pdf' },
+  { id: 5, img: '/img/cert5.webp', title: 'certificate', pdf: 'cert5_pdf.pdf' },
+  { id: 6, img: '/img/cert6.webp', title: 'certificate', pdf: 'cert6_pdf.pdf' },
+  { id: 7, img: '/img/cert7.webp', title: 'certificate', pdf: 'cert7_pdf.pdf' },
+  { id: 8, img: '/img/cert8.webp', title: 'certificate', pdf: 'cert8_pdf.pdf' },
 ]
 
 </script>
@@ -37,11 +36,14 @@ swiper-container {
   overflow: hidden;
 }
 
-.сertcontainer {  
-  padding: 30px 0;  
+.сertcontainer {
+  padding: 30px 0;
   height: 600px;
-  position: relative;  
-  background-image: url(/public/img/sertback.webp);
+  position: relative;
+  background:linear-gradient(90deg,
+   rgb(58, 55, 55)39%,
+   rgb(194, 196, 202)96%); 
+  /* background-image: url(/public/img/sertback.webp); */
 }
 
 .сerttext {
