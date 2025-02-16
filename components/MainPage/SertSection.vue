@@ -41,9 +41,8 @@ swiper-container {
   height: 600px;
   position: relative;
   background:linear-gradient(90deg,
-   rgb(58, 55, 55)39%,
-   rgb(194, 196, 202)96%); 
-  /* background-image: url(/public/img/sertback.webp); */
+   rgb(7, 7, 7)39%,
+   rgb(30,33,61)96%);   
 }
 
 .сerttext {
@@ -51,7 +50,7 @@ swiper-container {
   text-transform: uppercase;
   color: white;
   padding-bottom: 54px;
-  font-size: 40px;
+  font-size: 34px;
 }
 
 .сertswiper {

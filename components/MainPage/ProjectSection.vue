@@ -4,7 +4,6 @@
       <h2 class="ourproj">наши проекты</h2>
       <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
         <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
-
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>          
             <p class="title">{{ el.title }}</p>
@@ -28,7 +27,7 @@
             соответствием техническим
             требованиям.</span>
         </div>
-        <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall2">Мы гордимся качеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span></div>
+        <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall2">Мы гордимсякачеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span></div>
         <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с
             нашими
             конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
@@ -61,7 +60,7 @@ const slide = [
 .ourproj {
   text-transform: uppercase;
   color: white;
-  font-size: 40px;
+  font-size: 34px;
   display: flex;
   position: absolute;
   padding: 30px 0;
@@ -70,7 +69,7 @@ const slide = [
 .ouradvant {
   text-transform: uppercase;
   color: white;
-  font-size: 40px;
+  font-size: 34px;
   padding-bottom: 30px;
 }
 .units {
@@ -87,8 +86,7 @@ const slide = [
   filter: drop-shadow(2px 4px 6px black);
   top: 252px;
   left: 79px;
-  font-family: 'Montserrat', light;
-  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'Montserrat', light; 
 }
 
 .title {
@@ -101,7 +99,6 @@ const slide = [
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
-  /* font-family: 'Exo 2', sans-serif; */
   filter: drop-shadow(2px 4px 6px black);
 }
 
@@ -175,8 +172,8 @@ swiper-container {
 
 .productstyle {
   background: linear-gradient(90deg,
-  rgb(15, 15, 15)0%,
-  rgb(56, 52, 52)100%);
+  rgb(30, 33, 61)0%,
+  rgb(10, 10, 10)100%);
   justify-content: center;
   padding-top: 30px;
   height: 600px;

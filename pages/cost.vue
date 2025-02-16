@@ -29,7 +29,9 @@
 }
 
 .formcost {
-  background-image: url(/public/img/sertback.webp);
+  background:linear-gradient(90deg,
+   rgb(7, 7, 7)39%,
+   rgb(30,33,61)96%);   
   color: white;
   font-size: 18px;
   text-align: center;

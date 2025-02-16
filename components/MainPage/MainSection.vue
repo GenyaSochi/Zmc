@@ -20,7 +20,6 @@
     </div>
     <h2 class="digits">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
-
 </template>
 
 <script setup lang="ts">
@@ -62,8 +61,8 @@ onUnmounted(() => {
   gap: 10px;
   padding: 77px 0;
   background:linear-gradient(90deg,
-   rgb(58, 55, 55)39%,
-   rgb(194, 196, 202)96%); 
+   rgb(14, 13, 13)39%,
+   rgb(30, 33, 61)96%); 
   /* background-color: rgb(56, 52, 52); */
   color: white; 
 }
@@ -91,8 +90,9 @@ onUnmounted(() => {
   padding: 0 10px;
   display: flex;
   align-items: center;
-  justify-content: center;   
-  background-color: rgb(56, 52, 52);
+  justify-content: center;  
+  background: url(/img/silver1.webp); 
+  /* font-weight: bold; */
   color: white;
 }
 
@@ -102,7 +102,7 @@ onUnmounted(() => {
   text-align: center;
   gap: 45px;
   background-color: white;
-  padding: 122px 0 80px 0;
+  padding: 80px 0;
 }
 
 .heading {

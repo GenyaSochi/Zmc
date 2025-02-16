@@ -5,8 +5,7 @@
 			<NuxtImg style="margin-top: 30px; filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ data?.name }}</p>
 		</div>
-		<div class="detailet">подробное описание
-			<div>
+		<div class="detailet">подробное описание<div>
 				<NuxtLink to="/cost"><button class="buttons">Расчитать</button></NuxtLink>	
 				<NuxtLink to="/call"><button class="buttons">Заказать</button></NuxtLink>
 			</div>

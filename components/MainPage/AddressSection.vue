@@ -28,14 +28,14 @@ h2 {
 
 .addresscont {
   text-transform: uppercase;
-  font-size: 40px;
-  margin-top: 60px;
+  font-size: 34px;
+  margin-top: 30px;
 }
 
 .card {
   position: relative;
   overflow: hidden;
-  margin: 70px 0;
+  margin: 30px 0;
   padding: 0 120px;
 }
 </style>
