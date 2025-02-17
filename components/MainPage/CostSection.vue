@@ -18,10 +18,7 @@
       <div style="display: flex;">
         <NuxtLink to="/" class="costmail">тел. +7(351) 304-42-35</NuxtLink>
         <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
-      </div>
-  
-   
-     
+      </div>     
     </form>
   </section>
 </template>
