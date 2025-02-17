@@ -34,7 +34,7 @@ const totop = ()=>{
 
 <style>
 .button{  
-  background-color: rgb(30, 33, 61);
+  background-color: rgba(56, 52, 52, 0.7);
   width: 80px;
   height: 80px;
   border-radius: 50%;

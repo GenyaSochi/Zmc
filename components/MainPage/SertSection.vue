@@ -2,6 +2,7 @@
   <section id="cert">
     <div class="сertcontainer">
       <h2 class="сerttext">наши сертификаты</h2>
+      <img class="certimg" src="/public/img/reward100.webp" alt="reward">
       <swiper-container watchSlidesProgress="true" slidesPerView="5">
         <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
@@ -40,16 +41,16 @@ swiper-container {
   padding: 30px 0;
   height: 600px;
   position: relative;
-  background:linear-gradient(90deg,
-   rgb(7, 7, 7)39%,
-   rgb(30,33,61)96%);   
+  background: linear-gradient(90deg,
+      rgb(7, 7, 7)39%,
+      rgb(30, 33, 61)96%);
 }
 
 .сerttext {
   text-align: center;
   text-transform: uppercase;
   color: white;
-  padding-bottom: 54px;
+  padding-bottom: 82px;
   font-size: 34px;
 }
 
@@ -58,5 +59,12 @@ swiper-container {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.certimg {
+  position: absolute;
+  z-index: 2;
+  left: 61%;
+  top: 3%
 }
 </style>

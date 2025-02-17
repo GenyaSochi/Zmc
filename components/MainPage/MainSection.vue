@@ -63,7 +63,6 @@ onUnmounted(() => {
   background:linear-gradient(90deg,
    rgb(14, 13, 13)39%,
    rgb(30, 33, 61)96%); 
-  /* background-color: rgb(56, 52, 52); */
   color: white; 
 }
 

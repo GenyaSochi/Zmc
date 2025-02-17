@@ -9,7 +9,8 @@
       <NuxtLink to="/catalog" class="seeprod">Каталог продукции<img src="/public/img/apper100.webp" alt="apper"
           class="apper"></NuxtLink>
       <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-        class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc" target="_blank"></a>
+        class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc"
+          target="_blank"></a>
     </div>
   </section>
 </template>
@@ -50,15 +51,15 @@
 
 .apper {
   position: absolute;
-  left: 851px;
-  top: 106px;
+  left: 47%;
+  top: 33%;
   z-index: 1;
 }
 
 .exc {
   position: absolute;
-  right: 235px;
-  top: 94px;
+  right: 14%;
+  top: 31%;
   z-index: 1;
 }
 </style>

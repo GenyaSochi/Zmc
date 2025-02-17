@@ -9,7 +9,7 @@
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 
         </div>
         <div class="but">
-          <NuxtLink to="/cost"><button class="butnav">Рассчитать стоимость</button></NuxtLink>       
+          <NuxtLink to="#cost"><button class="butnav">Рассчитать стоимость</button></NuxtLink>       
           <NuxtLink to="/call"><button class="butnav">Заказать звонок</button></NuxtLink>       
         </div>
       </div>         
