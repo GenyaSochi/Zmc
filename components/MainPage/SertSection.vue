@@ -3,8 +3,8 @@
     <div class="сertcontainer">
       <h2 class="сerttext">наши сертификаты</h2>
       <img class="certimg" src="/public/img/reward100.webp" alt="reward">
-      <swiper-container watchSlidesProgress="true" slidesPerView="5">
-        <swiper-slide class="сertswiper" v-for="el of certificate" :key="el.id">
+      <swiper-container class="сertswiper" watchSlidesProgress="true" slidesPerView="5">
+        <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
             <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>
           </a>
@@ -54,7 +54,7 @@ swiper-container {
   font-size: 34px;
 }
 
-.сertswiper {
+.сertswiper swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,13 +3,13 @@
     <div class="proj">
       <h2 class="ourproj">наши проекты</h2>
       <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
-        <swiper-slide class="prodjswiper" v-for="el of slide" :key="el.id">
+        <swiper-slide v-for="el of slide" :key="el.id">
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>          
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
             <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" :src="el.imgproduct"
-              :alt="el.title"></NuxtImg>
+            :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
@@ -54,9 +54,7 @@ const slide = [
   display: flex;
   justify-content: center;
   height: 700px;
-  margin-bottom: 90px;
 }
-
 .ourproj {
   text-transform: uppercase;
   color: white;
@@ -65,7 +63,6 @@ const slide = [
   position: absolute;
   padding: 30px 0;
 }
-
 .ouradvant {
   text-transform: uppercase;
   color: white;
@@ -75,7 +72,6 @@ const slide = [
 .units {
   font-size: 48px;
 }
-
 .quant {
   text-transform: uppercase;
   color: white;
@@ -88,7 +84,6 @@ const slide = [
   left: 79px;
   font-family: 'Montserrat', light; 
 }
-
 .title {
   text-transform: uppercase;
   color: white;
@@ -101,7 +96,6 @@ const slide = [
   font-family: 'Montserrat', light;
   filter: drop-shadow(2px 4px 6px black);
 }
-
 .title1 {
   text-transform: uppercase;
   color: white;
@@ -112,13 +106,8 @@ const slide = [
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
-  /* font-family: 'Exo 2', sans-serif; */
   filter: drop-shadow(2px 4px 6px black);
 }
-swiper-container {
-  overflow: hidden;
-}
-
 .production {
   display: flex;
   flex-wrap: wrap;
@@ -132,13 +121,11 @@ swiper-container {
   width: 320px;
   height: 210px;
 }
-
 .butproj {
   border: 2px solid white;
   padding: 5px 50px 5px 5px;
   margin-top: 46px;
 }
-
 .imgstyle {
   height: 564px;
   width: 100vw;
@@ -150,14 +137,12 @@ swiper-container {
   filter: grayscale(1);
   margin-top: 88px;
 }
-
 .advanttext {
   font-size: 24px;
   color: white;
   padding-bottom: 96px;
   text-align: center;
 }
-
 .advant {
   padding: 26px;
   border-radius: 10px;
@@ -169,7 +154,6 @@ swiper-container {
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .productstyle {
   background: linear-gradient(90deg,
   rgb(30, 33, 61)0%,
@@ -178,31 +162,26 @@ swiper-container {
   padding-top: 30px;
   height: 600px;
 }
-
 .textspan {
   text-align: center;
   padding-bottom: 10px;
   font-size: 22px;
 }
-
 .textsmall1 {
   font-size: 14px;
   text-align: center;
   padding-top: 12px;
 }
-
 .textsmall2 {
   font-size: 14px;
   text-align: center;
   padding-top: 10px;
 }
-
 .textsmall3 {
   font-size: 14px;
   text-align: center;
   padding-top: 12px;
 }
-
 .blockproduct {
   display: flex;
   flex-wrap: wrap;

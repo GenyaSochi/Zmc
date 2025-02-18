@@ -14,13 +14,13 @@
         <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
       </div>
       <p style="text-align: center;" class="infofoot">&copy; 2024 «Завод металлоконструкций Урал». Все правазащищены.</p>
-      <p style="text-align: center;" class="infofoot">
+      <p style="text-align: center;">
         <NuxtLink to="/privacy" class="info">Политика конфиденциальности</NuxtLink>
       </p>
     </div>
     <div>
-      <NuxtLink to="/cost"><button class="lobtn">Рассчитать стоимость</button></NuxtLink>
-      <p class="info">мы в социальных сетях</p>
+      <a href="#cost"><button class="lobtn">Заказать звонок</button></a>
+      <p class="infosoc">мы в социальных сетях</p>
       <div class="mail">
       <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
       <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
@@ -29,7 +29,7 @@
         <div>
           <NuxtLink to="job" class="info">вакансии компании</NuxtLink>
         </div>
-      <a href="companydetails.pdf" class="info" target="_blank">&#8595; скачать реквизиты компании</a>
+      <a href="companydetails.pdf" class="info" target="_blank">скачать реквизиты компании &#8595;</a>
     </div>
   </div>
 </template>
@@ -75,6 +75,11 @@
 
 .info {
   padding-bottom: 10px;
+  font-size: 18px;  
+}
+
+.infosoc {
+  padding: 10px 0;
   font-size: 18px;
 }
 

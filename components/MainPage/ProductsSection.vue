@@ -8,9 +8,9 @@
         самые амбициозные задачи.</p>
       <NuxtLink to="/catalog" class="seeprod">Каталог продукции<img src="/public/img/apper100.webp" alt="apper"
           class="apper"></NuxtLink>
-      <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
+      <a target="_blank" href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
         class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc"
-          target="_blank"></a>
+          ></a>
     </div>
   </section>
 </template>

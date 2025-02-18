@@ -16,8 +16,8 @@
         </NuxtLink>
       </div>
       <div style="display: flex;">
-        <NuxtLink to="/" class="costmail">тел. +7(351) 304-42-35</NuxtLink>
-        <NuxtLink to="/" class="costmail">sales@zmkural.com</NuxtLink>
+      <a href="tel:+7(351)304-42-35" class="info">тел. +7(351) 304-42-35</a>   
+      <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>     
       </div>     
     </form>
   </section>

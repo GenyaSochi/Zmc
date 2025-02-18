@@ -80,7 +80,6 @@ onUnmounted(() => {
   width: 54px;
   text-align: center;
 }
-
 .cardcontainer {
   font-size: 22px;
   border-radius: 10px;
@@ -103,13 +102,11 @@ onUnmounted(() => {
   background-color: white;
   padding: 80px 0;
 }
-
 .heading {
   text-align: center;
   color: black;
   padding-bottom: 400px;
 }
-
 .video {
   min-width: 100%;
   min-height: 100%;
