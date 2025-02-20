@@ -19,7 +19,7 @@
       </p>
     </div>
     <div>
-      <a href="#cost"><button class="lobtn">Заказать звонок</button></a>
+      <button @click="popup=true" class="lobtn">Заказать звонок</button>
       <p class="infosoc">мы в социальных сетях</p>
       <div class="mail">
       <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
@@ -32,9 +32,11 @@
       <a href="companydetails.pdf" class="info" target="_blank">скачать реквизиты компании &#8595;</a>
     </div>
   </div>
+  <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
+const popup = ref(false)
 </script>
 
 <style>

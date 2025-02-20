@@ -9,15 +9,12 @@
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 
         </div>
         <div class="but">
-          <a href="#cost"><button class="butnav">Рассчитать стоимость</button></a>      
-          <button class="butnav" @click="popup=true">Заказать звонок</button>        
-        </div>
+          <a href="#cost" class="butnav">Рассчитать стоимость</a>      
+          <button class="butnav" @click="popup=true">Заказать звонок</button>       
+        </div>       
       </div>         
   </nav>
-  <template v-if="popup">
-    <ModalComponent v-model="popup"></ModalComponent>
-  </template>
-
+  <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
