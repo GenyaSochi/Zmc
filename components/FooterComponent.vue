@@ -20,16 +20,16 @@
     </div>
     <div>
       <button @click="popup=true" class="lobtn">Заказать звонок</button>
-      <p class="infosoc">мы в социальных сетях</p>
+      <p class="infosoc">Мы в социальных сетях</p>
       <div class="mail">
       <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
       <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
         target="_blank">Rutube</a>
       </div>
         <div>
-          <NuxtLink to="job" class="info">вакансии компании</NuxtLink>
+          <NuxtLink to="job" class="info">Вакансии компании</NuxtLink>
         </div>
-      <a href="companydetails.pdf" class="info" target="_blank">скачать реквизиты компании &#8595;</a>
+      <a href="companydetails.pdf" class="info" target="_blank">Скачать реквизиты компании &#8595;</a>
     </div>
   </div>
   <ModalComponent v-model="popup"></ModalComponent>
