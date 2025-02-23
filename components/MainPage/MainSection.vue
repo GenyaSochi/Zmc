@@ -25,7 +25,7 @@
 <script setup lang="ts">
 
 // Инициализируем массив цифр
-const digits = ref([5, 4, 9, 4, 3, 9, 0, 0, 0]);
+const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0]);
 
 // Функция для увеличения чисел
 const incrementDigits = () => {

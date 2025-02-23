@@ -9,27 +9,28 @@
       <p class="contact">Контакты</p>
       <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, пом. 10</p>
       <p class="info">по будням с 8:00 до 17:00</p>
-      <a href="tel:+7(351)304-42-35" class="info"> тел. +7(351) 304-42-35</a>
+      <p style="padding-bottom: 14px;"><a href="tel:+7(351)304-42-35" style="font-size: 19px;"> тел. +7(351) 304-42-35</a></p>     
       <div class="mail">
         <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
       </div>
-      <p style="text-align: center;" class="infofoot">&copy; 2024 «Завод металлоконструкций Урал». Все правазащищены.</p>
-      <p style="text-align: center;">
-        <NuxtLink to="/privacy" class="info">Политика конфиденциальности</NuxtLink>
-      </p>
+      <p style="text-align: center;" class="infofoot">&copy; 2024 «Завод металлоконструкций Урал». Все правазащищены.</p> 
+      <p class="politic">
+        <NuxtLink to="/privacy" style="font-size: 18px;">Политика конфиденциальности</NuxtLink>
+      </p>   
     </div>
+
     <div>
       <button @click="popup=true" class="lobtn">Заказать звонок</button>
       <p class="infosoc">Мы в социальных сетях</p>
-      <div class="mail">
-      <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px;">Вконтакте</a>
+      <div style="padding-bottom: 10px;">
+      <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px; font-size: 19px;"><img src="/public/img/vk.webp" width="64" alt="vk"></a>
       <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-        target="_blank">Rutube</a>
+        target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30" style="margin-bottom: 20px;" alt="rutube"></a>
       </div>
-        <div>
+        <div style="padding-bottom: 10px;">
           <NuxtLink to="job" class="info">Вакансии компании</NuxtLink>
         </div>
-      <a href="companydetails.pdf" class="info" target="_blank">Скачать реквизиты компании &#8595;</a>
+      <a href="companydetails.pdf" style="font-size: 19px;" target="_blank">Скачать реквизиты компании &#8595;</a>
     </div>
   </div>
   <ModalComponent v-model="popup"></ModalComponent>
@@ -55,43 +56,45 @@ const popup = ref(false)
   border: 2px solid white;
   padding: 10px 0 10px 0;
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   width: 257px;
   text-align: center;
-  margin-top: 102px;
+  margin: 50px 0 36px 0;
 }
 
 .footinfo {
   text-align: center; 
-}
-
-.footprod {
-  padding-bottom: 20px;
-  text-align: center;
+  padding-top: 10px;
+  font-size: 19px;
 }
 
 .contact {
-  padding-bottom: 10px;
-  margin-top: 124px;
+  padding-bottom: 12px;
+  margin-top: 132px;
+  font-size: 19px;
+}
+
+.politic {
+  text-align: center;
 }
 
 .info {
-  padding-bottom: 10px;
-  font-size: 18px;  
+  padding-bottom: 12px;
+  font-size: 19px;   
 }
 
 .infosoc {
-  padding: 10px 0;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .infofoot {
-  padding: 10px 0 10px 0;
+  padding: 12px 0 12px 0;
   font-size: 18px;
   margin-top: 40px;
 }
 
 .mail {
-  padding-bottom: 10px;
-}
+  padding-bottom: 12px;
+  font-size: 19px;
+} 
 </style>

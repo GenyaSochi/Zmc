@@ -50,12 +50,14 @@
   top: 28%;
   z-index: 1;
 }
+
 .imgphoto {
   position: absolute;
-  right: 11%;
-  top: 28%;
+  right: -33%;
+  top: -1%;
   z-index: 1;
 }
+
 .workcost {
   font-size: 18px;
   text-align: center;
@@ -103,5 +105,4 @@
   font-size: 18px;
   width: 260px;
 }
-
 </style>
