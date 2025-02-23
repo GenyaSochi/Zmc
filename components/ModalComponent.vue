@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import emailjs from 'emailjs-com'
+
 const popup = defineModel({ default: false })
 
 const successMessage = ref('')
@@ -44,7 +44,7 @@ const errorMessage = ref('')
 <style>
 .window {
   border-radius: 10px;
-  width: 315px;
+  width: 350px;
   height: 214px;
   padding: 10px;
   background-color: rgb(30, 33, 61);
@@ -66,18 +66,19 @@ const errorMessage = ref('')
 .name {
   border: 2px solid white;
   color: white;
-  margin-bottom: 10px;
+  margin: 0 0 10px 20px;
 }
 .phone {
   border: 2px solid white;
   color: white;
-  margin-bottom: 10px;
+  margin: 0 0 10px 20px;
 }
 
 .butwindow {
   color: white;
   border: 2px solid white;
-  width: 295px;
+  width: 255px;
   text-align: center;
+  margin: 0 0 10px 20px;
 }
 </style>

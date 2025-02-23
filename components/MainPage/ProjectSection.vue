@@ -123,7 +123,7 @@ const slide = [
 }
 .butproj {
   border: 2px solid white;
-  padding: 5px 50px 5px 5px;
+  padding: 5px 32px 5px 5px;
   margin-top: 46px;
 }
 .imgstyle {

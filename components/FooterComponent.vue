@@ -23,14 +23,14 @@
       <button @click="popup=true" class="lobtn">Заказать звонок</button>
       <p class="infosoc">Мы в социальных сетях</p>
       <div style="padding-bottom: 10px;">
-      <a href="https://vk.com/zmkural" target="_blank" style="padding-right: 10px; font-size: 19px;"><img src="/public/img/vk.webp" width="64" alt="vk"></a>
+      <a href="https://vk.com/zmkural" target="_blank" style="font-size: 19px;"><img src="/public/img/vk.webp" width="64" alt="vk"></a>
       <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-        target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30" style="margin-bottom: 20px;" alt="rutube"></a>
+        target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30" style="margin: 0 0 20px 14px;" alt="rutube"></a>
       </div>
         <div style="padding-bottom: 10px;">
           <NuxtLink to="job" class="info">Вакансии компании</NuxtLink>
         </div>
-      <a href="companydetails.pdf" style="font-size: 19px;" target="_blank">Скачать реквизиты компании &#8595;</a>
+      <a href="companydetails.pdf" style="font-size: 19px;" target="_blank">Скачать реквизиты компании</a>
     </div>
   </div>
   <ModalComponent v-model="popup"></ModalComponent>
