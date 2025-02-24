@@ -137,6 +137,10 @@
 .allprivacy {
   padding: 30px 0 60px 0;
   margin: 0 48px;
+  padding: 26px;
+  border: 2px solid black;
+  margin-bottom: 30px;
+  margin-top: 20p
 }
 
 .h1privasy {

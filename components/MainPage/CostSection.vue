@@ -7,19 +7,18 @@
       <div class="allinputcost">
         <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
         <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
-        <input style="font-size: 20px;" type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf">
+        <div>
+          <input type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf" class="custom-file-input">
+          <button class="butcost" type="submit">Отправить заявку</button>
+        </div>
       </div>
       <div class="perscost">
-        <button class="butcost" type="submit">Отправить заявку</button>
-        <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.
-        </NuxtLink>
+        <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
       </div>
       <div>
-        <a href="tel:+7(351)304-42-35" class="infocost">тел. +7(351)304-42-35</a>
-      </div>
-      <div>
+        <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
         <a href="mailto:sales@zmkural.com" class="infocost"">sales@zmkural.com</a>    
-    </div>
+      </div>
     </form>
   </section>
 
@@ -38,6 +37,34 @@
 </script>
 
 <style>
+.custom-file-input {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  width: 216px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'Выберите файл';
+  display: inline-block;
+  background: rgb(30, 33, 61);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-input:hover::before {
+  background: #0056b3;
+}
+
 .h2cost {
   padding: 30px 0;
   font-size: 24px;
@@ -53,12 +80,13 @@
   padding-bottom: 30px;
   margin: 30px 0 30px 30px;
   position: relative;
+  border: 8px solid rgb(30, 33, 61);
 }
 
 .imgcost {
   position: absolute;
-  right: 3%;
-  top: 6%;
+  right: 2%;
+  top: 4%;
   z-index: 1;
 }
 
@@ -69,14 +97,15 @@
 }
 
 .butinfo {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .inputcost {
   background-color: white;
   text-align: start;
-  width: 181px;
-  height: 28px;
+  width: 216px;
+  height: 48px;
+  border-radius: 5px;
 }
 
 .allinputcost {
@@ -91,13 +120,15 @@
 .butcost {
   background-color: rgb(161, 7, 7);
   padding: 5px;
-  width: 183px;
+  border-radius: 5px;
+  height: 43px;
+  width: 216px;
   font-size: 18px;
   text-align: center;
+  margin-left: 40px;
 }
 
 .perscost {
-  display: flex;
   padding-left: 30px;
   align-items: center;
   padding-bottom: 30px;
@@ -110,8 +141,4 @@
   margin-bottom: 12px;
 }
 
-.n {
-  border: 2px solid black;
-  width: 300px;
-}
 </style>
