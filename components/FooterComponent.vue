@@ -13,9 +13,10 @@
       <div class="mail">
         <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
       </div>
-      <p style="text-align: center;" class="infofoot">&copy; 2024 «Завод металлоконструкций Урал». Все правазащищены.</p> 
+      <p style="text-align: center;" class="infofoot">&copy; 2024 «Завод металлоконструкций Урал».</p> 
+      <p style="text-align: center; font-size: 16px;">Все права защищены.</p>
       <p class="politic">
-        <NuxtLink to="/privacy" style="font-size: 18px;">Политика конфиденциальности</NuxtLink>
+        <NuxtLink to="/privacy" style="font-size: 16px;">Политика конфиденциальности</NuxtLink>
       </p>   
     </div>
 

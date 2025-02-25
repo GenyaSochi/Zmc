@@ -1,42 +1,66 @@
 <template>
   <section id="cost">
-    <form class="formcost" @submit.prevent="">
-      <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-      <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
-      <img class="imgcost" src="/public/img/accounts100.webp" alt="accounts">
-      <div class="allinputcost">
-        <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
-        <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
-        <div>
-          <input type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf" class="custom-file-input">
-          <button class="butcost" type="submit">Отправить заявку</button>
+    <div style="display: flex; flex-direction: row;">
+      <form class="formcost" @submit.prevent="">
+        <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
+        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
+        <!-- <img class="imgcost" src="/public/img/accounts100.webp" alt="accounts"> -->
+        <div class="allinputcost">
+          <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
+          <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
+          <div>
+            <input type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf"
+              class="custom-file-input">
+            <button class="butcost" type="submit">Отправить заявку</button>
+          </div>
         </div>
+        <div class="perscost">
+          <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.
+          </NuxtLink>
+        </div>
+        <div>
+          <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
+          <a href="mailto:sales@zmkural.com" class="infocost"">sales@zmkural.com</a>    
+        </div>
+      </form>
+      <swiper-container class="cards" effect="cards" grabCursor="true" modules="modules">
+        <swiper-slide v-for="card of cards" :key="card.id">
+          <div class="card">
+        <h3>{{ card.title }}</h3>
       </div>
-      <div class="perscost">
-        <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.</NuxtLink>
-      </div>
-      <div>
-        <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
-        <a href="mailto:sales@zmkural.com" class="infocost"">sales@zmkural.com</a>    
-      </div>
-    </form>
+        </swiper-slide>
+      </swiper-container>
+
+    </div>
   </section>
-
-    <p>Плазменная резка металла</p>
-    <p>Рубка листового металла на гильотине</p>
-    <p>Штамповка металла</p>
-    <p>Вальцовка листов</p>
-    <p>Гибка листов</p>
-    <p>Сварочные работы любой сложности</p>
-    <p>Пескоструйная очистка конструкций</p>
-    <p>Изготовление продукции по индивидуальным чертежам</p>
-
 </template>
 
 <script setup lang="ts">
+
+import { register } from 'swiper/element/bundle';
+register();
+
+
+
+const cards = [
+  {id = 1, title: 'Плазменная резка металла'},
+  {id = 2, title: 'Рубка листового металла на гильотине'},
+  {id = 3, title: 'Штамповка металла'},
+  {id = 4, title: 'Вальцовка листов'},
+  {id = 5, title: 'Гибка листов'},
+  {id = 6, title: 'Сварочные работы любой сложности'},
+  {id = 7, title: 'Пескоструйная очистка конструкций'},
+  {id = 8, title: 'Изготовление продукции по индивидуальным чертежам'},
+]
 </script>
 
-<style>
+<style scoped>
+
+.mySwiper {
+  width: 100%;
+  height: 300px;
+}
+
 .custom-file-input {
   font-size: 18px;
   padding: 10px;
@@ -70,25 +94,43 @@
   font-size: 24px;
 }
 
+.allcards {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  color: white;
+  width: 244px;
+  height: 230px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background:  rgb(30, 33, 61);
+  border: 2px solid black;  
+}  
+
 .formcost {
   background: linear-gradient(90deg,
       rgb(7, 7, 7)39%,
       rgb(30, 33, 61)96%);
   color: white;
   font-size: 18px;
-  width: 892px;
+  width: 1320px;
   padding-bottom: 30px;
-  margin: 30px 0 30px 30px;
+  margin: 0 30px 30px 30px;
   position: relative;
   border: 8px solid rgb(30, 33, 61);
 }
 
-.imgcost {
+/* .imgcost {
   position: absolute;
-  right: 2%;
-  top: 4%;
+  right: 24%;
+  top: 31%;
   z-index: 1;
-}
+} */
 
 .workcost {
   font-size: 20px;
@@ -97,7 +139,7 @@
 }
 
 .butinfo {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .inputcost {
@@ -122,7 +164,7 @@
   padding: 5px;
   border-radius: 5px;
   height: 43px;
-  width: 216px;
+  width: 190px;
   font-size: 18px;
   text-align: center;
   margin-left: 40px;
@@ -140,5 +182,4 @@
   font-size: 20px;
   margin-bottom: 12px;
 }
-
 </style>
