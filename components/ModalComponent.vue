@@ -28,17 +28,6 @@ const successMessage = ref('')
 const errorMessage = ref('')
 
 
-  // email.send(sendEmail)
-  //   .then((response) => {      
-  //     successMessage.value = 'Запрос успешно отправлено!'
-  //     errorMessage.value = ''
-  //   })
-  //   .catch((error) => {   
-  //     errorMessage.value = 'Произошла ошибка при отправке письма.'
-  //     successMessage.value = ''
-  //   })
-
-
 </script>
 
 <style>

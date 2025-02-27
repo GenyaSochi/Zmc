@@ -6,7 +6,7 @@
       <swiper-container class="сertswiper" watchSlidesProgress="true" slidesPerView="5">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
-            <NuxtImg fit="cover" sizes="200px " height="300" :src="el.img" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" sizes="200px" height="300" :src="el.img" :alt="el.title"></NuxtImg>
           </a>
         </swiper-slide>
       </swiper-container>
@@ -32,7 +32,7 @@ const certificate = [
 
 </script>
 
-<style>
+<style scoped>
 swiper-container {
   overflow: hidden;
 }

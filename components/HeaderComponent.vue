@@ -26,7 +26,6 @@ const popup = ref(false)
 .navtag {
     padding: 15px 0;
     background-color: rgb(30, 33, 61);
-    margin-bottom: 60px;
     font-family: 'Montserrat', light;
     font-size: 20px;
   }

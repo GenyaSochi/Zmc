@@ -27,19 +27,19 @@
 }
 
 .textprod {
-  width: 640px;
+  flex: 1;
   font-size: 24px;
   text-align: center;
   gap: 10px;
   padding: 20px;
   background: linear-gradient(60deg,
-      black 0%,
+  black 0%,
       rgb(95, 90, 90) 80%);
-  color: white;
-}
+      color: white;
+    }
 
 .seeprod {
-  width: 640px;
+  flex: 1;
   background-color: rgb(30, 33, 61);
   color: white;
   font-size: 24px;

@@ -1,7 +1,7 @@
 <template>
   <section id="cost">
-    <div style="display: flex; flex-direction: row;">
-      <form class="formcost" @submit.prevent="">
+    <div class="grid">
+      <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
         <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
         <!-- <img class="imgcost" src="/public/img/accounts100.webp" alt="accounts"> -->
@@ -20,13 +20,15 @@
         </div>
         <div>
           <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
-          <a href="mailto:sales@zmkural.com" class="infocost"">sales@zmkural.com</a>    
+          <a href="mailto:sales@zmkural.com" class="infocost">sales@zmkural.com</a>    
         </div>
-      </form>  
-      <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" cards-effect-per-slide-offset="8" :modules="modules">
-            <swiper-slide v-for="card in cards" :key="card.id" class="showcards">{{ card.title }}</swiper-slide>
-      </swiper-container>
-        </div>
+      </form> 
+      <div style="overflow: hidden;">
+        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" cards-effect-per-slide-offset="8" :modules="modules">
+              <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
+        </swiper-container>
+      </div> 
+    </div>
   </section>
 </template>
 
@@ -52,6 +54,13 @@ const cards = [
 </script>
 
 <style scoped>
+
+.grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-bottom: 30px;
+}
+
 .custom-file-input {
   font-size: 18px;
   padding: 10px;
@@ -60,6 +69,18 @@ const cards = [
   background-color: #f9f9f9;
   cursor: pointer;
   width: 216px;
+}
+
+.swiper swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; 
 }
 
 .custom-file-input::-webkit-file-upload-button {
@@ -94,49 +115,39 @@ const cards = [
 .swiper {
   width: 340px;
   height: 492px; 
+  overflow: visible;
+  max-width: 400px;
 }
 
-.showcards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px; 
-}
-
-.showcards:nth-child(1n) {
+.swiper swiper-slide:nth-child(1n) {
   background-color: rgb(30, 33, 61);
 }
 
-.showcards:nth-child(2n) {
+.swiper swiper-slide:nth-child(2n) {
   background-color: rgb(161, 7, 7);  
 }
 
-.showcards:nth-child(3n) {
+.swiper swiper-slide:nth-child(3n) {
   background-color: rgb(30, 33, 61);
 }
 
-.showcards:nth-child(4n) {
+.swiper swiper-slide:nth-child(4n) {
   background-color: rgb(47, 56, 131);
 }
 
-.showcards:nth-child(5n) {
+.swiper swiper-slide:nth-child(5n) {
   background-color: rgb(161, 7, 7);
 }
 
-.showcards:nth-child(6n) {
+.swiper swiper-slide:nth-child(6n) {
   background-color: rgb(47, 56, 131);
 }
 
-.showcards:nth-child(7n) {
+.swiper swiper-slide:nth-child(7n) {
   background-color: rgb(30, 33, 61);
 }
 
-.showcards:nth-child(8n) {
+.swiper swiper-slide:nth-child(8n) {
   background-color: rgb(161, 7, 7);
 }
 
@@ -146,9 +157,8 @@ const cards = [
       rgb(30, 33, 61)96%);
   color: white;
   font-size: 20px;
-  width: 1150px;
   padding-bottom: 30px;
-  margin: 0 60px 30px 60px;
+  margin-left: 30px;
 }
 
 /* .imgcost {

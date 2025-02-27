@@ -108,24 +108,16 @@ onUnmounted(() => {
   padding-bottom: 400px;
 }
 .video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  height: 160px;
   z-index: -1000;
   overflow: hidden;
 }
 
 #myVideo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  top: 80px;
+  width: 100%;
   z-index: -1000;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 </style>

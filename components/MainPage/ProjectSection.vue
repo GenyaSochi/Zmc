@@ -2,13 +2,13 @@
   <section>
     <div class="proj">
       <h2 class="ourproj">наши проекты</h2>
-      <swiper-container pagination="true" pagination-clickable="true" navigation="true" centered-slides="true">
+      <swiper-container class="swiper" pagination="true" navigation="true" centered-slides="true">
         <swiper-slide v-for="el of slide" :key="el.id">
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>          
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
-            <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" :src="el.imgproduct"
+            <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" style="overflow: hidden;" :src="el.imgproduct"
             :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
@@ -54,6 +54,9 @@ const slide = [
   display: flex;
   justify-content: center;
   height: 700px;
+}
+.swiper {
+  max-width: 100vw;
 }
 .ourproj {
   text-transform: uppercase;
@@ -128,7 +131,6 @@ const slide = [
 }
 .imgstyle {
   height: 564px;
-  width: 100vw;
   overflow: hidden;
   display: flex;
   position: relative;

@@ -10,9 +10,6 @@ a {
   text-decoration: none;
 }
 
-swiper-container {
-  overflow: hidden;
-}
 swiper-container{
   --swiper-theme-color: black !important;
 }
