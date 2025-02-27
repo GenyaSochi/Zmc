@@ -22,49 +22,40 @@
           <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
           <a href="mailto:sales@zmkural.com" class="infocost"">sales@zmkural.com</a>    
         </div>
-      </form>
-      <swiper-container class="cards" effect="cards" grabCursor="true" modules="modules">
-        <swiper-slide v-for="card of cards" :key="card.id">
-          <div class="card">
-        <h3>{{ card.title }}</h3>
-      </div>
-        </swiper-slide>
+      </form>  
+      <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" cards-effect-per-slide-offset="8" :modules="modules">
+            <swiper-slide v-for="card in cards" :key="card.id" class="showcards">{{ card.title }}</swiper-slide>
       </swiper-container>
-
-    </div>
+        </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { register } from 'swiper/element/bundle'
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+import { EffectCards } from 'swiper/modules'
 
-import { register } from 'swiper/element/bundle';
-register();
-
-
+register()
+const modules = [EffectCards]
 
 const cards = [
-  {id = 1, title: 'Плазменная резка металла'},
-  {id = 2, title: 'Рубка листового металла на гильотине'},
-  {id = 3, title: 'Штамповка металла'},
-  {id = 4, title: 'Вальцовка листов'},
-  {id = 5, title: 'Гибка листов'},
-  {id = 6, title: 'Сварочные работы любой сложности'},
-  {id = 7, title: 'Пескоструйная очистка конструкций'},
-  {id = 8, title: 'Изготовление продукции по индивидуальным чертежам'},
+  { id: 1, title: 'Плазменная резка металла' },
+  { id: 2, title: 'Рубка листового металла на гильотине' },
+  { id: 3, title: 'Штамповка металла' },
+  { id: 4, title: 'Вальцовка листов' },
+  { id: 5, title: 'Гибка листов' },
+  { id: 6, title: 'Сварочные работы любой сложности' },
+  { id: 7, title: 'Пескоструйная очистка конструкций' },
+  { id: 8, title: 'Изготовление продукции по индивидуальным чертежам' },
 ]
 </script>
 
 <style scoped>
-
-.mySwiper {
-  width: 100%;
-  height: 300px;
-}
-
 .custom-file-input {
   font-size: 18px;
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid black;
   border-radius: 5px;
   background-color: #f9f9f9;
   cursor: pointer;
@@ -91,7 +82,7 @@ const cards = [
 
 .h2cost {
   padding: 30px 0;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .allcards {
@@ -100,29 +91,64 @@ const cards = [
   flex-wrap: wrap;
 }
 
-.cards {
-  color: white;
-  width: 244px;
-  height: 230px;
-  padding: 6px;
+.swiper {
+  width: 340px;
+  height: 492px; 
+}
+
+.showcards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  background:  rgb(30, 33, 61);
-  border: 2px solid black;  
-}  
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; 
+}
+
+.showcards:nth-child(1n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.showcards:nth-child(2n) {
+  background-color: rgb(161, 7, 7);  
+}
+
+.showcards:nth-child(3n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.showcards:nth-child(4n) {
+  background-color: rgb(47, 56, 131);
+}
+
+.showcards:nth-child(5n) {
+  background-color: rgb(161, 7, 7);
+}
+
+.showcards:nth-child(6n) {
+  background-color: rgb(47, 56, 131);
+}
+
+.showcards:nth-child(7n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.showcards:nth-child(8n) {
+  background-color: rgb(161, 7, 7);
+}
 
 .formcost {
   background: linear-gradient(90deg,
       rgb(7, 7, 7)39%,
       rgb(30, 33, 61)96%);
   color: white;
-  font-size: 18px;
-  width: 1320px;
+  font-size: 20px;
+  width: 1150px;
   padding-bottom: 30px;
-  margin: 0 30px 30px 30px;
-  position: relative;
-  border: 8px solid rgb(30, 33, 61);
+  margin: 0 60px 30px 60px;
 }
 
 /* .imgcost {

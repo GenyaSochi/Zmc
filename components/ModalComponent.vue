@@ -4,11 +4,11 @@
       <!-- content -->
         <div v-if="popup" class="windowpos" @click.self="popup = false">
             <div class="window">
-                <p style="color: white; padding: 20px;">Мы Вам перезвоним! :)</p>
+                <p style="color: white; padding: 20px;">Мы Вам перезвоним!</p>
                 <input class="name" type="text" id="name" name="name" required placeholder="Ваше имя...">
                 <input class="phone" type="phone" id="phone" name="phone" required placeholder="+7">
                 <div>
-                  <!-- <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a> -->
+                  <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
                 <button @click="" class="butwindow">отправить запрос</button> 
                 <p v-if="successMessage">{{ successMessage }}</p>
                 <p v-if="errorMessage">{{ errorMessage }}</p>  
@@ -45,7 +45,7 @@ const errorMessage = ref('')
 .window {
   border-radius: 10px;
   width: 350px;
-  height: 214px;
+  height: 254px;
   padding: 10px;
   background-color: rgb(30, 33, 61);
   position: relative;
@@ -77,7 +77,7 @@ const errorMessage = ref('')
 .butwindow {
   color: white;
   border: 2px solid white;
-  width: 255px;
+  width: 299px;
   text-align: center;
   margin: 0 0 10px 20px;
 }
