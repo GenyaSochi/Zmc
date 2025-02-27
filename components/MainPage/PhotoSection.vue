@@ -37,5 +37,6 @@ const photos = [
   background-color: rgb(30, 33, 61);
   padding: 30px 56px 30px 118px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 </style>

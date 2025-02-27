@@ -8,7 +8,7 @@
                 <input class="name" type="text" id="name" name="name" required placeholder="Ваше имя...">
                 <input class="phone" type="phone" id="phone" name="phone" required placeholder="+7">
                 <div>
-                  <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
+                  <!-- <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a> -->
                 <button @click="" class="butwindow">отправить запрос</button> 
                 <p v-if="successMessage">{{ successMessage }}</p>
                 <p v-if="errorMessage">{{ errorMessage }}</p>  
