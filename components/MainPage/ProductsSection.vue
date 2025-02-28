@@ -18,7 +18,7 @@
 <script setup lang="ts">
 </script>
 
-<style>
+<style scoped>
 .prod {
   display: flex;
   gap: 22px;

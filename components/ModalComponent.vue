@@ -30,7 +30,7 @@ const errorMessage = ref('')
 
 </script>
 
-<style>
+<style scoped>
 .window {
   border-radius: 10px;
   width: 350px;

@@ -58,7 +58,7 @@ const slide = [
 .swiper {
   max-width: 100vw;
 }
-.ourproj {
+.ourproj { 
   text-transform: uppercase;
   color: white;
   font-size: 34px;
@@ -67,6 +67,7 @@ const slide = [
   padding: 30px 0;
 }
 .ouradvant {
+  text-align: center;
   text-transform: uppercase;
   color: white;
   font-size: 34px;

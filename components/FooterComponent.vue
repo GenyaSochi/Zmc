@@ -41,7 +41,7 @@
 const popup = ref(false)
 </script>
 
-<style>
+<style scoped>
 .footercont {
   background:linear-gradient(90deg,
    rgb(14, 13, 13)39%,

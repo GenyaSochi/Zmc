@@ -32,7 +32,7 @@ const photos = [
 ]
 </script>
 
-<style>
+<style scoped>
 .photocontainer {
   background-color: rgb(30, 33, 61);
   padding: 30px 56px 30px 118px;

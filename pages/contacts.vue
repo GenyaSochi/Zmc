@@ -63,6 +63,7 @@ const datacompany = [
 
 <style scoped>
 .contacts {
+  padding-top: 30px;
   font-size: 34px;
 }
 

@@ -25,30 +25,30 @@
 <script setup lang="ts">
 
 // Инициализируем массив цифр
-const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0]);
+const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0])
 
 // Функция для увеличения чисел
 const incrementDigits = () => {
   for (let i = digits.value.length - 1; i >= 0; i--) {
     if (digits.value[i] < 9) {
-      digits.value[i]++;
+      digits.value[i]++
       break;
     } else {
-      digits.value[i] = 0;
+      digits.value[i] = 0
     }
   }
-};
+}
 
 // Запускаем интервал каждые 1000 мс
-let interval: NodeJS.Timeout;
+let interval: NodeJS.Timeout
 onMounted(() => {
-  interval = setInterval(incrementDigits, 1000);
-});
+  interval = setInterval(incrementDigits, 1000)
+})
 
 // Очищаем интервал при уничтожении компонента
 onUnmounted(() => {
-  clearInterval(interval);
-});
+  clearInterval(interval)
+})
 
 </script>
 

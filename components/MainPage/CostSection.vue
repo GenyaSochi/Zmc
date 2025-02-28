@@ -102,6 +102,7 @@ const cards = [
 }
 
 .h2cost {
+  text-align: center;
   padding: 30px 0;
   font-size: 20px;
 }

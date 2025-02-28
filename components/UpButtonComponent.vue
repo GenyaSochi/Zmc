@@ -32,7 +32,7 @@ const totop = ()=>{
 }
 </script>
 
-<style>
+<style scoped>
 .button{  
   background-color: rgba(56, 52, 52, 0.7);
   width: 80px;
