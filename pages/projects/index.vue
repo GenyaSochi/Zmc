@@ -1,10 +1,9 @@
 <template>
   <div class="container">
     <h1 class="h1">Проекты компании</h1>
-    <div class="view"
-      v-for="project of data" :key="project.name">
+    <div class="view" v-for="project of data" :key="project.name">
       <h2 class="h2">
-        {{project.name}}
+        {{ project.name }}
       </h2>
       <div class="projectinfo" style="justify-content: space-between;">
         <div>
@@ -34,7 +33,7 @@
 <script setup lang="ts">
 
 // const projectsStore = useProjects()
-const {data} = await useFetch('/api/projects/project')
+const { data } = await useFetch('/api/projects/project')
 
 
 
@@ -94,7 +93,6 @@ function translit(word: string) {
   height: 500px;
 }
 
-
 .heading {
   font-weight: bold;
 }
@@ -115,6 +113,6 @@ function translit(word: string) {
   height: 300px;
   width: 520px;
   object-fit: cover;
-  filter: grayscale(100%) drop-shadow(2px 4px 6px black);  
+  filter: grayscale(100%) drop-shadow(2px 4px 6px black);
 }
 </style>
