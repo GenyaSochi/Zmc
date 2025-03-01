@@ -1,7 +1,6 @@
 <template>
     <ClientOnly>
-    <Teleport to="body">
-      <!-- content -->
+    <Teleport to="body">    
         <div v-if="popup" class="windowpos" @click.self="popup = false">
             <div class="window">
                 <p style="color: white; padding: 20px;">Мы Вам перезвоним!</p>

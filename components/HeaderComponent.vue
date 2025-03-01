@@ -28,6 +28,7 @@ const popup = ref(false)
     background-color: rgb(30, 33, 61);
     font-family: 'Montserrat', light;
     font-size: 20px;
+    margin-bottom: 30px;
   }
 .nav {
     display: flex;

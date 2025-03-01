@@ -32,7 +32,8 @@ const products = data.value?.products
 </script>
 
 <style scoped>
-h1 {  
+h1 { 
+  padding-top: 30px; 
   text-transform: uppercase;
   font-size: 34px;
 }

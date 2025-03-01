@@ -1,29 +1,32 @@
 <template>
 	<div class="container">
+		<div class="div"></div>
 		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
+		<div class="div"></div>
 		<div style="display: flex; align-items: center;gap: 82px;">
-			<NuxtImg style="margin-top: 30px; filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
+			<NuxtImg style="filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ data?.name }}</p>
 		</div>
-		<div class="detailet">подробное описание<div>
-				<NuxtLink to="/cost"><button class="buttons">Расчитать</button></NuxtLink>	
-				<NuxtLink to="/call"><button class="buttons">Заказать</button></NuxtLink>
+		<div class="div"></div>
+		<div class="detailet">подробное описание
+			<a href="#cost"><button class="buttons">Рассчитать</button></a>
+			<button @click="popup=true" class="buttons">Заказать</button>
+			</div>
+			<div>
+				<p class="titleproduct">{{ data?.title }}</p>
+				<div v-html="data?.html"></div>
 			</div>
 		</div>
-		<div>
-			<p class="titleproduct">{{ data?.title }}</p>
-			<div v-html="data?.html"></div>
-		</div>
-	</div>
+
+	<ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
 import type { product } from '@prisma/client';
 const route = useRoute()
 
-// const catalogStore = useCatalog()
 const { data } = await useFetch<product|null>(`/api/products/${route.params.name}`)
-
+	const popup = ref(false)
 </script>
 
 <style>
@@ -37,10 +40,9 @@ const { data } = await useFetch<product|null>(`/api/products/${route.params.name
 	text-align: center;
 }
 
-.buttons {
+.buttons {	
 	border: 1px solid black;
 	padding: 10px;
-	margin-right: 30px;
 	width: 300px;
 	text-align: center;
 	font-family: 'Montserrat', light;
@@ -51,17 +53,21 @@ const { data } = await useFetch<product|null>(`/api/products/${route.params.name
 .detailet {
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-top: 30px;
 	font-family: 'Montserrat', light;
 	font-size: 26px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	gap: 145px;
 }
 
 .titleproduct {
 	font-family: 'Montserrat', medium;
 	font-size: 26px;
 	padding: 12px 0 30px 0;
+}
+
+.div {
+	padding: 30px;
 }
 </style>
