@@ -98,4 +98,17 @@ const popup = ref(false)
   padding-bottom: 12px;
   font-size: 19px;
 } 
+
+@media screen and (max-width:1200px) {
+  
+}
+@media screen and (max-width:998px) {
+  
+}
+@media screen and (max-width:768px) {
+  
+}
+@media screen and (max-width:576px) {
+  
+}
 </style>

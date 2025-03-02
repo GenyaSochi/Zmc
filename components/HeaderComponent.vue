@@ -2,23 +2,31 @@
   <nav class="navtag">        
       <div class="container nav">
         <span><img src="/img/sitelogo1.webp" width="160px" style="padding: 0 20px" alt="logo"></span>
-        <div class="link">         
+        <div class="link">
+          <div class="menu-icon" @click="toggleMenu">☰</div> 
+          <div class="link" :class="{ active: isMenuOpen }">        
           <NuxtLink to="/" class="nav">Главная</NuxtLink>
           <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
           <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
           <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>                 
         </div>
-        <div class="but">
+        <div class="but" :class="{ active: isMenuOpen }">
           <a href="#cost" class="butnav">Рассчитать стоимость</a>      
           <button class="butnav" @click="popup=true">Заказать звонок</button>       
         </div>       
-      </div>         
+      </div>  
+    </div>        
   </nav>
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
 const popup = ref(false)
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+}
 
 </script>
 
@@ -59,9 +67,88 @@ const popup = ref(false)
   font-size: 20px;
 }
 
-.button:hover {
-  color: black;
-  background-color: white;
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+} 
+/* Адаптация для экранов меньше 1200px */
+@media screen and (max-width: 1200px) {
+  .link {
+    gap: 40px;
+  }
+
+  .butnav {
+    width: 200px;
+  }
 }
 
+/* Адаптация для экранов меньше 998px */
+@media screen and (max-width: 998px) {
+  .link {
+    gap: 30px;
+  }
+
+  .but {
+    gap: 20px;
+  }
+
+  .butnav {
+    width: 180px;
+    font-size: 18px;
+  }
+}
+
+/* Адаптация для экранов меньше 768px */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .link,
+  .but {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(30, 33, 61);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .link.active,
+  .but.active {
+    display: flex;
+  }
+
+  .butnav {
+    width: 100%;
+  }
+}
+
+/* Адаптация для экранов меньше 576px */
+@media screen and (max-width: 576px) {
+  .nav {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    align-self: flex-end;
+  }
+
+  .link,
+  .but {
+    top: 80px;
+  }
+
+  .butnav {
+    font-size: 16px;
+  }
+}
 </style>
