@@ -9,7 +9,7 @@
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
       <div class="but">
-        <a href="#cost" class="butnav">Рассчитать стоимость</a>
+        <a href="/#cost" class="butnav">Рассчитать стоимость</a>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
       <button class="burger" @click="toggleMenu">
@@ -38,7 +38,6 @@ const toggleMenu = () => {
   background-color: rgb(30, 33, 61);
   font-family: 'Montserrat', light;
   font-size: 20px;
-
 }
 
 .nav {
@@ -95,49 +94,31 @@ const toggleMenu = () => {
   transform-origin: 1px;
 }
 
-/* 
-@media screen and (max-width:1200px) {
+
+/* @media screen and (max-width:1200px) {
   .navtag {
-  padding: 15px 0;
-  background-color: rgb(30, 33, 61);
-  font-family: 'Montserrat', light;
-  font-size: 20px;
- 
+  padding: 20px 0;
+  font-size: 22px; 
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  height: 110px;
-  font-family: 'Montserrat', light;
+  font-size: 22px;  
 }
 
 .but {
-  font-size: 18px;
-  font-family: 'Montserrat', light;
-  padding: 5px;
-  display: flex;
-  gap: 30px;
+  font-size: 22px; 
 }
 
 .link {
   display: flex;
-  gap: 60px;
+  gap: 30px;
 }
 
-.butnav {
-  border: 2px solid white;
-  padding: 5px;
-  width: 294px;
-  text-align: center;
-  font-size: 20px;
+.butnav { 
+  font-size: 22px;
 }
 
-} */
+}
 
 @media screen and (max-width:998px) {
   .navtag {
@@ -162,36 +143,45 @@ const toggleMenu = () => {
     padding-right: 12px;
   }
 
-  .butnav {
-    border: 2px solid white;
-    padding: 5px;
+  .butnav {   
     width: 189px;
-    text-align: center;
     font-size: 18px;
   }
 
   .logo img {
     width: 120px;
-
   }
-}
+} */
 
 /* @media screen and (max-width:768px) {
   .burger {
+    display: flex;   
+  }
+
+  .navtag { 
+    padding: 15px 0; 
+    font-size: 16px;
+    height: 80px;
+  }
+
+  .nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 30px;  
   }
 
   .link {
     display: none;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     position: absolute;
-    top: 110px;
+    top: 41px;
     left: 0;
     width: 100%;
     background-color: rgb(30, 33, 61);
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 20px 35px; 
   }
 
   .link.active {
@@ -205,9 +195,9 @@ const toggleMenu = () => {
   .logo {
     display: none;
   }
-}
+} */
 
-@media screen and (max-width:576px) {
+/* @media screen and (max-width:576px) {
   .burger {
     display: flex;
   }
@@ -216,7 +206,7 @@ const toggleMenu = () => {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 110px;
+    top: 36px;
     left: 0;
     width: 100%;
     background-color: rgb(30, 33, 61);
@@ -226,7 +216,12 @@ const toggleMenu = () => {
   .link.active {
     display: flex;
   }
-
+  .navtag {
+    padding: 16px 20px;
+    background-color: rgb(30, 33, 61);
+    height: 58px;  
+    font-size: 14px;
+}
   .nav {
     display: flex;
     align-items: center;

@@ -1,15 +1,13 @@
 <template>
-	<div class="container">
-		<div class="div"></div>
-		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
-		<div class="div"></div>
+	<div class="container">	
+		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>	
 		<div style="display: flex; align-items: center;gap: 82px;">
 			<NuxtImg style="filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ data?.name }}</p>
 		</div>
 		<div class="div"></div>
 		<div class="detailet">подробное описание
-			<a href="#cost"><button class="buttons">Рассчитать</button></a>
+			<a href="/#cost"><button class="buttons">Рассчитать</button></a>
 			<button @click="popup=true" class="buttons">Заказать</button>
 			</div>
 			<div>
@@ -38,6 +36,8 @@ const { data } = await useFetch<product|null>(`/api/products/${route.params.name
 	border-radius: 5px;
 	width: 260px;
 	text-align: center;
+	display: block;
+	margin: 30px 0;
 }
 
 .buttons {	

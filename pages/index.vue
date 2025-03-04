@@ -8,5 +8,4 @@
 <MainPagePhotoSection></MainPagePhotoSection>
 <MainPageCostSection></MainPageCostSection>
 
-
 </template>
