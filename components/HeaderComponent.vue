@@ -1,6 +1,6 @@
 <template>
   <nav class="navtag">
-    <div class="container nav">
+    <div class="nav">
       <span class="logo"><img src="/img/sitelogo1.webp" width="160px" style="padding: 0 20px" alt="logo"></span>
       <div class="link" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
@@ -43,7 +43,7 @@ const toggleMenu = () => {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -52,7 +52,7 @@ const toggleMenu = () => {
 }
 
 .but {
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Montserrat', light;
   padding: 5px;
   display: flex;
@@ -94,31 +94,95 @@ const toggleMenu = () => {
   transform-origin: 1px;
 }
 
-
-/* @media screen and (max-width:1200px) {
-  .navtag {
-  padding: 20px 0;
-  font-size: 22px; 
+@media screen and (max-width:1920px) {
+.navtag {
+  font-size: 22px;
 }
 
 .nav {
-  font-size: 22px;  
+  font-size: 22px; 
 }
 
 .but {
-  font-size: 22px; 
+  font-size: 22px;
+}
+
+
+.butnav {  
+  font-size: 22px;
+}
+}
+
+@media screen and (max-width:1398px) {
+.navtag {
+  font-size: 20px;
+}
+
+.nav {
+  font-size: 20px; 
+}
+
+.but {
+  font-size: 20px;
+}
+
+.butnav {
+  font-size: 20px;
+}
+}
+
+@media screen and (max-width:1358px) {
+.navtag { 
+  font-size: 20px;
+}
+
+.nav {
+  font-size: 20px;  
+}
+
+.but {
+  font-size: 20px;  
+  gap: 20px;
 }
 
 .link {
   display: flex;
-  gap: 30px;
+  gap: 38px;
 }
 
-.butnav { 
-  font-size: 22px;
+.butnav {
+  width: 260px;  
+  font-size: 20px;
+}
 }
 
+  @media screen and (max-width:1230px) {
+.navtag { 
+  font-size: 18px;
 }
+
+.nav {
+  font-size: 18px;   
+}
+
+.but {
+  font-size: 18px; 
+  gap: 20px;
+}
+
+.link {
+  display: flex;
+  gap: 32px;
+}
+
+.butnav {
+  width: 196px;
+  font-size: 18px;
+}
+.logo img {
+    width: 120px;
+  }
+} 
 
 @media screen and (max-width:998px) {
   .navtag {
@@ -133,8 +197,7 @@ const toggleMenu = () => {
 
   .but {
     font-size: 18px;   
-    gap: 12px;   
-    margin-right: 16px;
+    gap: 12px;      
   }
 
   .link {
@@ -149,11 +212,43 @@ const toggleMenu = () => {
   }
 
   .logo img {
-    width: 120px;
+    width: 110px;
   }
-} */
+}
 
-/* @media screen and (max-width:768px) {
+@media screen and (max-width:942px) {
+  .navtag {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .nav {   
+    font-size: 16px;  
+    text-align: center; 
+  }
+
+  .but {
+    font-size: 16px;   
+    gap: 12px;    
+  }
+
+  .link {
+    display: flex;
+    gap: 18px;
+    padding-right: 12px;
+  }
+
+  .butnav {   
+    width: 180px;
+    font-size: 16px;
+  }
+
+  .logo img {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
   .burger {
     display: flex;   
   }
@@ -165,11 +260,7 @@ const toggleMenu = () => {
   }
 
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-    height: 30px;  
+    font-size: 16px;   
   }
 
   .link {
@@ -177,11 +268,11 @@ const toggleMenu = () => {
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 41px;
+    padding-bottom: 10px;
+    top: 44px;
     left: 0;
     width: 100%;
-    background-color: rgb(30, 33, 61);
-    padding: 20px 35px; 
+    background-color: rgb(30, 33, 61);  
   }
 
   .link.active {
@@ -195,7 +286,7 @@ const toggleMenu = () => {
   .logo {
     display: none;
   }
-} */
+}
 
 /* @media screen and (max-width:576px) {
   .burger {
