@@ -199,6 +199,8 @@ const toggleMenu = () => {
 
   .nav {
     font-size: 17px;
+    display: flex;
+    justify-content: space-around;
   }
 
   .but {
@@ -227,6 +229,7 @@ const toggleMenu = () => {
 
   .nav {
     display: flex;
+    justify-content: space-evenly;
     font-size: 16px;
   }
 
@@ -237,7 +240,7 @@ const toggleMenu = () => {
 
   .link {
     display: flex;
-    gap: 10px;
+    gap: 22px;
   }
 
   .butnav {
@@ -268,7 +271,7 @@ const toggleMenu = () => {
 
   .link {
     display: flex;
-    gap: 12px;
+    gap: 32px;
     padding-right: 12px;
   }
 
@@ -332,8 +335,7 @@ const toggleMenu = () => {
 
   .link {
     display: flex;
-    gap: 10px;
-    padding-right: 12px;
+    gap: 48px;   
   }
 
   .butnav {
@@ -366,7 +368,7 @@ const toggleMenu = () => {
 
   .link {
     display: flex;  
-    padding: 0 10px;
+    padding: 0 14px;
   }
 
   .butnav {
@@ -380,47 +382,48 @@ const toggleMenu = () => {
 }
 
 @media screen and (max-width:576px) {
-  .link {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 36px;
-    left: 0;
-    width: 100%;
-    background-color: rgb(30, 33, 61);
-    box-sizing: border-box;
-  }
-
-  .link.active {
-    display: flex;
-  }
   .navtag {
-    padding: 16px 20px;
-    background-color: rgb(30, 33, 61);
-    height: 58px;  
-    font-size: 14px;
+  padding: 15px 0;
+  background-color: rgb(30, 33, 61);
+  font-family: 'Montserrat', light;
+  font-size: 20px;
 }
-  .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    padding: 10px;    
-  }
 
-  .but {
-    display: none;
-  }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  height: 110px;
+  font-family: 'Montserrat', light;
+}
 
-  .logo {
-    display: none;
-  }
+.but {
+  font-size: 20px;
+  font-family: 'Montserrat', light;
+  padding: 5px;
+  display: flex;
+  gap: 30px;
+}
 
-  .burger {
+.link {
+  display: flex;
+  gap: 60px;
+}
+
+.butnav {
+  border: 2px solid white;
+  padding: 5px;
+  width: 294px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.burger {
   display: none;
-  /* flex-direction: column;
+  flex-direction: column;
   justify-content: space-around;
   width: 30px;
   height: 25px;
@@ -428,7 +431,7 @@ const toggleMenu = () => {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10; */
+  z-index: 10;
 }
 
 .burger span {
