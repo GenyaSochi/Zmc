@@ -193,4 +193,23 @@ const slide = [
   align-content: space-between;
   gap: 66px;
 }
+
+@media screen and (max-width:1920px) {
+  
+}
+@media screen and (max-width:1600px) {
+  
+}
+@media screen and (max-width:1355px) {
+  
+}
+@media screen and (max-width:992px) {
+  
+}
+@media screen and (max-width:768px) {
+  
+}
+@media screen and (max-width:576px) {
+  
+}
 </style>

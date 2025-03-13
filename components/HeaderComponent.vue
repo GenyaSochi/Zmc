@@ -131,10 +131,6 @@ const toggleMenu = () => {
     gap: 15px;
   }
 
-  .link {
-    gap: 15px;
-  }
-
   .butnav {
     width: 247px;
   }
@@ -184,10 +180,6 @@ const toggleMenu = () => {
     flex-direction: column;
   }
 
-  .link {
-    gap: 10px;
-  }
-
   .butnav {
     text-align: center;
     width: 236px;
@@ -204,18 +196,19 @@ const toggleMenu = () => {
     font-size: 16px;
   }
   .burger {
-    display: flex;
+    display: flex;    
   }
 
   .navtag {
-    padding: 15px 0;
-    height: 80px;
+    padding: 30px 0;
+    height: 100px;
   }
 
   .nav {   
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
+    height: 40px;
   }
 
   .link {
@@ -224,10 +217,10 @@ const toggleMenu = () => {
     gap: 10px;
     position: absolute;
     padding-bottom: 10px;
-    top: 44px;
+    top: 74px;
     left: 0;
     width: 100%;
-    background-color: rgb(30, 33, 61);
+    background-color: rgb(30, 33, 61);   
   }
 
   .link.active {
@@ -243,39 +236,42 @@ const toggleMenu = () => {
   }
 }
 
-/* @media screen and (max-width:576px) {
+@media screen and (max-width:576px) {
+
+  .navtag,.nav,.but,.butnav {
+    font-size: 15px;
+  }
+  
   .burger {
+    display: flex;    
+  }
+
+  .navtag {
+    padding: 30px 0;
+    height: 100px;
+  }
+
+  .nav {   
     display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    height: 40px;
   }
 
   .link {
     display: none;
     flex-direction: column;
+    gap: 10px;
     position: absolute;
-    top: 36px;
+    padding-bottom: 10px;
+    top: 74px;
     left: 0;
     width: 100%;
-    background-color: rgb(30, 33, 61);
-    box-sizing: border-box;
+    background-color: rgb(30, 33, 61);   
   }
 
   .link.active {
     display: flex;
-  }
-  .navtag {
-    padding: 16px 20px;
-    background-color: rgb(30, 33, 61);
-    height: 58px;  
-    font-size: 14px;
-}
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    padding: 10px;    
   }
 
   .but {
@@ -285,5 +281,5 @@ const toggleMenu = () => {
   .logo {
     display: none;
   }
-} */
+} 
 </style>

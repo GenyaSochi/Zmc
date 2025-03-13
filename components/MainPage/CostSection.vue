@@ -162,13 +162,6 @@ const cards = [
   margin-left: 30px;
 }
 
-/* .imgcost {
-  position: absolute;
-  right: 24%;
-  top: 31%;
-  z-index: 1;
-} */
-
 .workcost {
   font-size: 20px;
   text-align: center;
@@ -218,5 +211,23 @@ const cards = [
   margin-left: 30px;
   font-size: 20px;
   margin-bottom: 12px;
+}
+@media screen and (max-width:1920px) {
+  
+}
+@media screen and (max-width:1600px) {
+  
+}
+@media screen and (max-width:1355px) {
+  
+}
+@media screen and (max-width:992px) {
+  
+}
+@media screen and (max-width:768px) {
+  
+}
+@media screen and (max-width:576px) {
+  
 }
 </style>

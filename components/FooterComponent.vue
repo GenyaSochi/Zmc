@@ -99,10 +99,16 @@ const popup = ref(false)
   font-size: 19px;
 } 
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1920px) {
   
 }
-@media screen and (max-width:998px) {
+@media screen and (max-width:1600px) {
+  
+}
+@media screen and (max-width:1355px) {
+  
+}
+@media screen and (max-width:992px) {
   
 }
 @media screen and (max-width:768px) {

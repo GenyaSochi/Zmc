@@ -90,7 +90,6 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;  
   background: url(/img/silver1.webp); 
-  /* font-weight: bold; */
   color: white;
 }
 
@@ -120,4 +119,48 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
+@media screen and (max-width:1920px) {
+  
+}
+@media screen and (max-width:1600px) {
+  .h1view, .heading  {
+  font-size: 22px;
+}
+.video {
+  height: 160px; 
+}
+}
+@media screen and (max-width:1355px) {
+  .h1view, .heading  {  
+  font-size: 21px;
+}
+.video {
+  height: 30px; 
+}
+}
+
+@media screen and (max-width:992px) {
+  .h1view, .heading  {
+  font-size: 20px;
+}
+.video {
+  display: none;
+}
+}
+@media screen and (max-width:768px) {
+  .h1view, .heading  {
+  font-size: 19px;
+}
+.video {
+  display: none;
+}
+}
+@media screen and (max-width:576px) {
+  .h1view, .heading  {
+  font-size: 18px;
+}
+.video {
+  display: none;
+}
+}
 </style>
