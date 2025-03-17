@@ -8,7 +8,7 @@
         <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
-      <div class="but">
+      <div class="but" :class="{ 'active': isMenuOpen }">
         <a href="/#cost" class="butnav">Рассчитать стоимость</a>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
@@ -96,7 +96,10 @@ const toggleMenu = () => {
 
 @media screen and (max-width:1920px) {
 
-  .navtag, .nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 20px;
   }
 
@@ -119,12 +122,16 @@ const toggleMenu = () => {
 
 @media screen and (max-width:1600px) {
 
-  .navtag,.nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 19px;
   }
 
   .nav {
     justify-content: space-evenly;
+    padding-right: 20px;
   }
 
   .but {
@@ -135,6 +142,10 @@ const toggleMenu = () => {
     width: 247px;
   }
 
+  .link {
+    gap: 24px;
+  }
+
   .logo {
     width: 120px;
   }
@@ -142,12 +153,16 @@ const toggleMenu = () => {
 
 @media screen and (max-width:1355px) {
 
-  .navtag,.nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 18px;
   }
 
   .nav {
     justify-content: space-evenly;
+    padding-right: 10px;
   }
 
   .but .link {
@@ -155,7 +170,7 @@ const toggleMenu = () => {
   }
 
   .butnav {
-    width: 236px;
+    width: 224px;
   }
 
   .logo {
@@ -165,12 +180,16 @@ const toggleMenu = () => {
 
 @media screen and (max-width:992px) {
 
-  .navtag,.nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 17px;
   }
 
   .nav {
     justify-content: space-evenly;
+    padding-left: 10px;
   }
 
   .but {
@@ -182,7 +201,11 @@ const toggleMenu = () => {
 
   .butnav {
     text-align: center;
-    width: 236px;
+    width: 212px;
+  }
+
+  .link {
+    gap: 10px;
   }
 
   .logo {
@@ -192,11 +215,15 @@ const toggleMenu = () => {
 
 @media screen and (max-width:768px) {
 
-  .navtag,.nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 16px;
   }
+
   .burger {
-    display: flex;    
+    display: flex;
   }
 
   .navtag {
@@ -204,9 +231,10 @@ const toggleMenu = () => {
     height: 100px;
   }
 
-  .nav {   
+  .nav {
     display: flex;
     justify-content: flex-start;
+    text-align: center;
     padding-left: 20px;
     height: 40px;
   }
@@ -214,13 +242,13 @@ const toggleMenu = () => {
   .link {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     position: absolute;
     padding-bottom: 10px;
     top: 74px;
     left: 0;
     width: 100%;
-    background-color: rgb(30, 33, 61);   
+    background-color: rgb(30, 33, 61);
   }
 
   .link.active {
@@ -238,12 +266,15 @@ const toggleMenu = () => {
 
 @media screen and (max-width:576px) {
 
-  .navtag,.nav,.but,.butnav {
+  .navtag,
+  .nav,
+  .but,
+  .butnav {
     font-size: 15px;
   }
-  
+
   .burger {
-    display: flex;    
+    display: flex;
   }
 
   .navtag {
@@ -251,7 +282,7 @@ const toggleMenu = () => {
     height: 100px;
   }
 
-  .nav {   
+  .nav {
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
@@ -267,19 +298,29 @@ const toggleMenu = () => {
     top: 74px;
     left: 0;
     width: 100%;
-    background-color: rgb(30, 33, 61);   
+    height: 295px;
+    background-color: rgb(30, 33, 61);
   }
 
   .link.active {
     display: flex;
   }
+  .but.active {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 272px;
+    gap: 18px;
+  }
 
-  .but {
-    display: none;
+  .butnav {
+    border: none;   
+    width: none;
+    text-align: left;   
   }
 
   .logo {
     display: none;
   }
-} 
+}
 </style>

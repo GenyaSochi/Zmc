@@ -1,12 +1,12 @@
 <template>
   <section>
-      <div class="video">
-        <video autoplay muted id="myVideo" src="/public/video/ministart.mp4"></video>
-      </div>
+    <div class="video">
+      <video autoplay muted id="myVideo" src="/public/video/ministart.mp4"></video>
+    </div>
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
       заказчика.</p>
-    <h2 class="digits">Количество выпущенной продукции 
+    <h2 class="digits">Количество выпущенной продукции
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
     </h2>
     <div style="background-color: white;height: 100%;"></div>
@@ -60,10 +60,10 @@ onUnmounted(() => {
   justify-content: center;
   gap: 10px;
   padding: 77px 0;
-  background:linear-gradient(90deg,
-   rgb(14, 13, 13)39%,
-   rgb(30, 33, 61)96%); 
-  color: white; 
+  background: linear-gradient(90deg,
+      rgb(14, 13, 13)39%,
+      rgb(30, 33, 61)96%);
+  color: white;
 }
 
 .h1view {
@@ -75,11 +75,12 @@ onUnmounted(() => {
 .num {
   border: 2px solid white;
   padding-top: 9px;
-  color: white;  
+  color: white;
   height: 50px;
   width: 54px;
   text-align: center;
 }
+
 .cardcontainer {
   font-size: 22px;
   border-radius: 10px;
@@ -88,8 +89,8 @@ onUnmounted(() => {
   padding: 0 10px;
   display: flex;
   align-items: center;
-  justify-content: center;  
-  background: url(/img/silver1.webp); 
+  justify-content: center;
+  background: url(/img/silver1.webp);
   color: white;
 }
 
@@ -101,11 +102,14 @@ onUnmounted(() => {
   background-color: white;
   padding: 80px 0;
 }
+
 .heading {
   text-align: center;
   color: black;
   padding-bottom: 400px;
+  font-size: 22px;
 }
+
 .video {
   height: 160px;
   z-index: -1000;
@@ -119,48 +123,80 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
-@media screen and (max-width:1920px) {
-  
-}
+@media screen and (max-width:1920px) {}
+
 @media screen and (max-width:1600px) {
-  .h1view, .heading  {
-  font-size: 22px;
+
+  .h1view,
+  .heading {
+    font-size: 22px;
+  }
+
+  .video {
+    height: 130px;
+  }
 }
-.video {
-  height: 160px; 
-}
-}
+
 @media screen and (max-width:1355px) {
-  .h1view, .heading  {  
-  font-size: 21px;
-}
-.video {
-  height: 30px; 
-}
+
+  .h1view,
+  .heading {
+    font-size: 20px;
+  }
+
+  .video {
+    height: 75px;
+  }
+
+  .heading {
+    padding-bottom: 316px;
+  }
 }
 
 @media screen and (max-width:992px) {
-  .h1view, .heading  {
-  font-size: 20px;
+  .h1view {
+    font-size: 18px;
+  }
+
+  .heading {
+    padding-bottom: 210px;
+    font-size: 18px;
+  }
+
+  .video {
+    height: 33px;
+  }
 }
-.video {
-  display: none;
-}
-}
+
 @media screen and (max-width:768px) {
-  .h1view, .heading  {
-  font-size: 19px;
+
+  .h1view,
+  .heading {
+    font-size: 17px;
+  }
+
+  .video {
+    height: 48px;
+  }
+
+  .heading {
+    padding-bottom: 160px;
+  }
 }
-.video {
-  display: none;
-}
-}
+
 @media screen and (max-width:576px) {
-  .h1view, .heading  {
-  font-size: 18px;
-}
-.video {
-  display: none;
-}
+
+  .h1view,
+  .heading {
+    font-size: 16px;
+  }
+
+  .video {
+    height: 30px;
+  }
+
+  .heading {
+    padding-bottom: 100px;
+  }
 }
 </style>
