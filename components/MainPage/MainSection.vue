@@ -123,7 +123,19 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
-@media screen and (max-width:1920px) {}
+@media screen and (max-width:1920px) {
+  .digits {
+  font-size: 22px;
+  gap: 10px;
+  padding: 77px 0;
+}
+
+.num { 
+  padding-top: 9px;
+  height: 48px;
+  width: 52px;
+}
+}
 
 @media screen and (max-width:1600px) {
 
@@ -135,6 +147,18 @@ onUnmounted(() => {
   .video {
     height: 130px;
   }
+
+  .digits {
+  font-size: 20px;
+  gap: 10px;
+  padding: 60px 0;
+}
+
+.num { 
+  padding-top: 9px;
+  height: 46px;
+  width: 50px;
+}
 }
 
 @media screen and (max-width:1355px) {
@@ -151,6 +175,18 @@ onUnmounted(() => {
   .heading {
     padding-bottom: 316px;
   }
+
+  .digits {
+  font-size: 18px;
+  gap: 10px;
+  padding: 54px 0;
+}
+
+.num { 
+  padding-top: 9px;
+  height: 44px;
+  width: 48px;
+}
 }
 
 @media screen and (max-width:992px) {
@@ -166,6 +202,18 @@ onUnmounted(() => {
   .video {
     height: 33px;
   }
+
+  .digits {
+  font-size: 18px;
+  gap: 10px;
+  padding: 54px 0;
+}
+
+.num { 
+  padding-top: 7px;
+  height: 42px;
+  width: 46px;
+}
 }
 
 @media screen and (max-width:768px) {
