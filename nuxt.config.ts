@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
     },
   },
+  app: {
+    baseURL: '/Zmc/',
+  },
   yandexMaps: {
     apikey: '498959e6-8e81-4af7-ad42-1178937d5ea7',
   },
