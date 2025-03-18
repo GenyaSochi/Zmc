@@ -192,11 +192,30 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 30px;
+    height: 12px;
   }
 
   .heading {
-    padding-bottom: 100px;
+    padding-bottom: 86px;
   }
+}
+
+@media screen and (max-width:350px) {
+
+.h1view,
+.heading {
+  font-size: 15px;
+}
+
+.video {
+  height: 12px;
+}
+
+.heading {
+  padding-bottom: 33px;
+}
+.h1view {
+    padding-bottom: 52px;
+}
 }
 </style>
