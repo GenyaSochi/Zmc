@@ -305,6 +305,7 @@ const toggleMenu = () => {
   .link.active {
     display: flex;
   }
+
   .but.active {
     display: flex;
     position: absolute;
@@ -314,9 +315,9 @@ const toggleMenu = () => {
   }
 
   .butnav {
-    border: none;   
+    border: none;
     width: none;
-    text-align: left;   
+    text-align: left;
   }
 
   .logo {
