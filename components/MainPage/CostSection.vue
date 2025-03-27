@@ -219,7 +219,11 @@ const cards = [
   
 }
 @media screen and (max-width:1355px) {
-  
+  .formcost {
+    width: 100%;
+    height: 494px;
+    border-radius: 10px;
+  }
 }
 @media screen and (max-width:992px) {
   

@@ -9,7 +9,7 @@
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
       <div class="but" :class="{ 'active': isMenuOpen }">
-        <a href="/#cost" class="butnav">Рассчитать стоимость</a>
+        <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
       <button class="burger" @click="toggleMenu">
@@ -33,11 +33,16 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
+
 .navtag {
   padding: 15px 0;
   background-color: rgb(30, 33, 61);
   font-family: 'Montserrat', light;
-  font-size: 20px;
+  font-size: 20px;  
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
 }
 
 .nav {
@@ -48,7 +53,7 @@ const toggleMenu = () => {
   color: white;
   font-size: 20px;
   height: 110px;
-  font-family: 'Montserrat', light;
+  font-family: 'Montserrat', light;  
 }
 
 .but {
@@ -160,13 +165,12 @@ const toggleMenu = () => {
     font-size: 18px;
   }
 
-  .nav {
-    justify-content: space-evenly;
+  .nav { 
     padding-right: 10px;
   }
-
+  
   .but .link {
-    gap: 10px;
+    gap: 40px;
   }
 
   .butnav {

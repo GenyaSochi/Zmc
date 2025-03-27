@@ -69,7 +69,18 @@
   
 }
 @media screen and (max-width:1355px) {
-  
+  .textprod {
+    font-size: 21px;
+  }
+  .seeprod {
+    font-size: 21px;
+  }
+  .exc {
+    right: 12%;
+  }
+  .photocontainer {
+    padding: 30px 23px 30px 37px;
+  }
 }
 @media screen and (max-width:992px) {
   

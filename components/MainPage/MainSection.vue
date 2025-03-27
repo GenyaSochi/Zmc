@@ -54,7 +54,7 @@ onUnmounted(() => {
 
 <style scoped>
 .digits {
-  font-size: 24px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,6 +186,10 @@ onUnmounted(() => {
   padding-top: 9px;
   height: 44px;
   width: 48px;
+}
+
+.allcontainer { 
+  padding: 40px 20px;
 }
 }
 

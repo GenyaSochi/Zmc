@@ -8,7 +8,7 @@
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>          
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
-            <NuxtImg fit="cover" sizes="1850px sm:500px md:1024px xxl:1850px" height="500" style="overflow: hidden;" :src="el.imgproduct"
+            <NuxtImg fit="cover" sizes="1850px sm:500px md:1224px xxl:1850px" height="500" style="overflow: hidden;" :src="el.imgproduct"
             :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
@@ -201,6 +201,34 @@ const slide = [
   
 }
 @media screen and (max-width:1355px) {
+  .blockproduct {
+  flex-wrap: nowrap;
+  gap: 66px;
+  padding: 0 26px;
+}
+.advant {
+  padding: 20px;    
+  width: 286px;
+  height: 200px;
+}
+.advanttext {
+  padding-bottom: 62px;
+  font-size: 22px;
+}
+.productstyle { 
+  height: 470px;
+}
+.ouradvant {
+  font-size: 32px;
+}
+.quant  {
+  font-size: 70px;
+  left: 135px;
+}
+.title {
+  font-size: 44px;
+  left: 122px;
+}
   
 }
 @media screen and (max-width:992px) {

@@ -1,9 +1,9 @@
 <template>
   <section id="photo">
     <div class="photocontainer">
-      <swiper-container watchSlidesProgress="true" slidesPerView="6">
+      <swiper-container watchSlidesProgress="true" slidesPerView="8">
         <swiper-slide v-for="photo of photos" :key="photo.id">
-          <NuxtImg fit="cover" sizes="200px " height="300" :src="photo.img" :alt="photo.title"></NuxtImg>
+          <NuxtImg fit="cover" sizes="205px " height="300" :src="photo.img" :alt="photo.title"></NuxtImg>
         </swiper-slide>
       </swiper-container>
     </div>
@@ -46,7 +46,9 @@ const photos = [
   
 }
 @media screen and (max-width:1355px) {
-  
+  .photocontainer {
+    padding: 22px 22px 22px 34px;
+  }
 }
 @media screen and (max-width:992px) {
   

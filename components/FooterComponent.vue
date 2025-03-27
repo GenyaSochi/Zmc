@@ -103,7 +103,9 @@ const popup = ref(false)
   
 }
 @media screen and (max-width:1600px) {
-  
+  .footercont { 
+  gap: 120px;  
+}
 }
 @media screen and (max-width:1355px) {
   
