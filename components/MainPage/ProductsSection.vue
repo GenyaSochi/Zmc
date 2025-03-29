@@ -68,12 +68,12 @@
 @media screen and (max-width:1600px) {
   
 }
-@media screen and (max-width:1355px) {
+@media screen and (max-width:1366px) {
   .textprod {
-    font-size: 21px;
+    font-size: 19px;
   }
   .seeprod {
-    font-size: 21px;
+    font-size: 19px;
   }
   .exc {
     right: 12%;

@@ -44,8 +44,10 @@ h2 {
 @media screen and (max-width:1600px) {
   
 }
-@media screen and (max-width:1355px) {
-  
+@media screen and (max-width:1366px) {
+  .addresscont {
+    font-size: 28px;
+  }
 }
 @media screen and (max-width:992px) {
   

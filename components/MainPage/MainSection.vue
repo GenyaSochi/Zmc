@@ -125,16 +125,16 @@ onUnmounted(() => {
 
 @media screen and (max-width:1920px) {
   .digits {
-  font-size: 22px;
-  gap: 10px;
-  padding: 77px 0;
-}
+    font-size: 22px;
+    gap: 10px;
+    padding: 77px 0;
+  }
 
-.num { 
-  padding-top: 9px;
-  height: 48px;
-  width: 52px;
-}
+  .num {
+    padding-top: 9px;
+    height: 48px;
+    width: 52px;
+  }
 }
 
 @media screen and (max-width:1600px) {
@@ -149,19 +149,19 @@ onUnmounted(() => {
   }
 
   .digits {
-  font-size: 20px;
-  gap: 10px;
-  padding: 60px 0;
+    font-size: 20px;
+    gap: 10px;
+    padding: 60px 0;
+  }
+
+  .num {
+    padding-top: 9px;
+    height: 46px;
+    width: 50px;
+  }
 }
 
-.num { 
-  padding-top: 9px;
-  height: 46px;
-  width: 50px;
-}
-}
-
-@media screen and (max-width:1355px) {
+@media screen and (max-width:1366px) {
 
   .h1view,
   .heading {
@@ -177,20 +177,26 @@ onUnmounted(() => {
   }
 
   .digits {
-  font-size: 18px;
-  gap: 10px;
-  padding: 54px 0;
-}
+    font-size: 18px;
+    gap: 10px;
+    padding: 54px 0;
+  }
 
-.num { 
-  padding-top: 9px;
-  height: 44px;
-  width: 48px;
-}
+  .num {
+    padding-top: 9px;
+    height: 44px;
+    width: 48px;
+  }
 
-.allcontainer { 
-  padding: 40px 20px;
-}
+  .allcontainer {
+    padding: 56px 20px;
+  }
+
+  .cardcontainer {
+    font-size: 18px;
+    height: 162px;
+  }
+  
 }
 
 @media screen and (max-width:992px) {
@@ -208,16 +214,16 @@ onUnmounted(() => {
   }
 
   .digits {
-  font-size: 18px;
-  gap: 10px;
-  padding: 54px 0;
-}
+    font-size: 18px;
+    gap: 10px;
+    padding: 54px 0;
+  }
 
-.num { 
-  padding-top: 7px;
-  height: 42px;
-  width: 46px;
-}
+  .num {
+    padding-top: 7px;
+    height: 42px;
+    width: 46px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -254,20 +260,21 @@ onUnmounted(() => {
 
 @media screen and (max-width:350px) {
 
-.h1view,
-.heading {
-  font-size: 15px;
-}
+  .h1view,
+  .heading {
+    font-size: 15px;
+  }
 
-.video {
-  height: 12px;
-}
+  .video {
+    height: 12px;
+  }
 
-.heading {
-  padding-bottom: 33px;
-}
-.h1view {
+  .heading {
+    padding-bottom: 33px;
+  }
+
+  .h1view {
     padding-bottom: 52px;
-}
+  }
 }
 </style>

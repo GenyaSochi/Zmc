@@ -156,7 +156,7 @@ const toggleMenu = () => {
   }
 }
 
-@media screen and (max-width:1355px) {
+@media screen and (max-width:1366px) {
 
   .navtag,
   .nav,
@@ -169,16 +169,18 @@ const toggleMenu = () => {
     padding-right: 10px;
   }
   
-  .but .link {
+  .link {
     gap: 40px;
   }
-
+  .but {
+    gap: 30px;
+  }
   .butnav {
     width: 224px;
   }
 
   .logo {
-    display: none;
+    padding: 0 60px 0 0;
   }
 }
 

@@ -115,7 +115,7 @@ const cards = [
 
 .swiper {
   width: 340px;
-  height: 492px; 
+  height: 264px; 
   overflow: visible;
   max-width: 400px;
 }
@@ -160,6 +160,7 @@ const cards = [
   font-size: 20px;
   padding-bottom: 30px;
   margin-left: 30px;
+  border-radius: 10px;
 }
 
 .workcost {
@@ -218,11 +219,18 @@ const cards = [
 @media screen and (max-width:1600px) {
   
 }
-@media screen and (max-width:1355px) {
-  .formcost {
-    width: 100%;
-    height: 494px;
+@media screen and (max-width:1366px) {
+  .formcost {   
+    height: 450px;
     border-radius: 10px;
+  }
+
+  .h2cost {
+    padding: 18px 0;
+    font-size: 18px;
+  }
+  .infocost {
+    font-size: 18px;
   }
 }
 @media screen and (max-width:992px) {

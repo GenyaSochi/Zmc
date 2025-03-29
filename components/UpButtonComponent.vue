@@ -62,4 +62,11 @@ const totop = ()=>{
  justify-content: center;
 }
 
+@media screen and (max-width:1366px) {
+  .button {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 </style>

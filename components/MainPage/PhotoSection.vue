@@ -34,7 +34,7 @@ const photos = [
 
 <style scoped>
 .photocontainer {
-  background-color: rgb(30, 33, 61);
+  /* background-color: rgb(30, 33, 61); */
   padding: 30px 56px 30px 118px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -45,7 +45,7 @@ const photos = [
 @media screen and (max-width:1600px) {
   
 }
-@media screen and (max-width:1355px) {
+@media screen and (max-width:1366px) {
   .photocontainer {
     padding: 22px 22px 22px 34px;
   }

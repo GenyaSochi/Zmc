@@ -73,8 +73,16 @@ swiper-container {
 @media screen and (max-width:1600px) {
   
 }
-@media screen and (max-width:1355px) {
-  
+@media screen and (max-width:1366px) {
+  .сerttext {
+    font-size: 28px;
+  }
+  .certimg {
+    left: 63%;
+  }
+ .сertcontainer {
+  height: 500px;
+ }
 }
 @media screen and (max-width:992px) {
   
