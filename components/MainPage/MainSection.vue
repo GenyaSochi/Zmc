@@ -11,8 +11,7 @@
     </h2>
     <div style="background-color: white;height: 100%;"></div>
     <div class="allcontainer">
-      <NuxtLink to="/catalog" class="cardcontainer" style="text-align: center;">Выпускаем более ста видов опор
-      </NuxtLink>
+      <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>
       <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
@@ -90,8 +89,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/img/silver1.webp);
+  /* background: url(/img/silver1.webp); */
+  background:  rgb(30, 33, 61);
   color: white;
+  text-align: center;
 }
 
 .allcontainer {
@@ -224,6 +225,17 @@ onUnmounted(() => {
     height: 42px;
     width: 46px;
   }
+  .allcontainer {
+    flex-direction: column;
+    padding: 20px;
+    gap: 13px;
+  }
+.cardcontainer {
+  width: 954px;
+  height: 50px;
+  background:  rgb(30, 33, 61);
+}
+
 }
 
 @media screen and (max-width:768px) {

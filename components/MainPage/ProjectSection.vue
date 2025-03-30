@@ -274,7 +274,20 @@ const slide = [
   }
 }
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:992px) {
+  .quant {
+    font-size: 58px;
+  }
+  .ouradvant {
+    font-size: 26px;
+  }
+  .advanttext {
+    font-size: 20px;
+  }
+  .blockproduct {
+    
+  }
+}
 
 @media screen and (max-width:768px) {}
 

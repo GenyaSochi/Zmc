@@ -3,8 +3,7 @@
     <div class="grid">
       <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
-        <!-- <img class="imgcost" src="/public/img/accounts100.webp" alt="accounts"> -->
+        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>       
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
           <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
@@ -17,13 +16,10 @@
         <div class="perscost">
           <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.
           </NuxtLink>
-        </div>
-        <div>
-          <a href="tel:+7(351)304-42-35" class="infocost">тел. +7 (351) 304-42-35</a>
-          <a href="mailto:sales@zmkural.com" class="infocost">sales@zmkural.com</a>    
-        </div>
+        </div>  
       </form> 
       <div style="overflow: hidden;">
+        <p class="textswiper">Услуги по металлообработке</p>
         <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" cards-effect-per-slide-offset="8" :modules="modules">
               <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
@@ -118,6 +114,7 @@ const cards = [
   height: 264px; 
   overflow: visible;
   max-width: 400px;
+  padding-top: 20px;
 }
 
 .swiper swiper-slide:nth-child(1n) {
@@ -152,6 +149,9 @@ const cards = [
   background-color: rgb(161, 7, 7);
 }
 
+.textswiper {
+  padding: 0 0 30px 194px;
+}
 .formcost {
   background: linear-gradient(90deg,
       rgb(7, 7, 7)39%,
@@ -179,6 +179,7 @@ const cards = [
   width: 216px;
   height: 48px;
   border-radius: 5px;
+  font-size: 18px;
 }
 
 .allinputcost {
@@ -214,9 +215,12 @@ const cards = [
   margin-bottom: 12px;
 }
 @media screen and (max-width:1920px) {
-  
+
 }
 @media screen and (max-width:1600px) {
+  .textswiper {
+    padding: 0 0 30px 129px;
+  }
   
 }
 @media screen and (max-width:1366px) {
@@ -229,8 +233,15 @@ const cards = [
     padding: 18px 0;
     font-size: 18px;
   }
-  .infocost {
+  .infocost, .workcost {
     font-size: 18px;
+  }
+
+  .custom-file-input, .butcost, .inputcost {
+    font-size: 16px;
+  }
+  .textswiper {
+    padding: 0 0 30px 87px; 
   }
 }
 @media screen and (max-width:992px) {

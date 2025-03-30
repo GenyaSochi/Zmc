@@ -1,7 +1,7 @@
 <template>
   <div class="footercont">
     <div>
-      <img src="/img/sitelogo1.webp" width="128px" style="margin: 40px 0 0 120px;" alt="logo">
+      <img src="/img/sitelogo1.webp" width="128px" class="imgfoot" alt="logo">
       <p class="footinfo">Завод металлоконструкций Урал</p>
     </div>
 
@@ -64,14 +64,16 @@ const popup = ref(false)
   text-align: center;
   margin: 50px 0 36px 0;
 }
-:hover .lobtn {
+
+.lobtn:hover {
   background: white;
-  color:  rgb(30, 33, 61);
-  transition: 3s;
+  color: rgb(30, 33, 61);
+  transition: 2s;
 }
+
 .footinfo {
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 0 0 0;
   font-size: 19px;
 }
 
@@ -115,11 +117,19 @@ const popup = ref(false)
   padding-bottom: 14px;
 }
 
+.imgfoot {
+  margin: 40px 0 0 127px;
+}
+
 @media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
   .footercont {
     gap: 120px;
+  }
+
+  .footinfo {
+    padding: 10px 0 0 118px;
   }
 }
 
@@ -137,12 +147,25 @@ const popup = ref(false)
     font-size: 18px;
   }
 
-  .req .tel {
+  .req,
+  .tel {
     font-size: 18px;
   }
 
   .contact {
     font-size: 18px;
+  }
+
+  .footercont {
+    gap: 84px;
+  }
+
+  .footinfo {
+    padding: 10px 0 0 36px;
+  }
+
+  .imgfoot {
+    margin: 40px 0 0 54px;
   }
 }
 
