@@ -118,7 +118,7 @@ const popup = ref(false)
 }
 
 .imgfoot {
-  margin: 40px 0 0 127px;
+  margin: 40px 0 0 147px;
 }
 
 @media screen and (max-width:1920px) {}
@@ -129,7 +129,10 @@ const popup = ref(false)
   }
 
   .footinfo {
-    padding: 10px 0 0 118px;
+    padding: 10px 0 0 86px;
+  }
+  .imgfoot {
+    margin: 40px 0 0 106px;
   }
 }
 

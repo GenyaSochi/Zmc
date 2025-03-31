@@ -221,7 +221,9 @@ const cards = [
   .textswiper {
     padding: 0 0 30px 129px;
   }
-  
+  .grid {
+    padding: 0 30px;
+  }
 }
 @media screen and (max-width:1366px) {
   .formcost {   

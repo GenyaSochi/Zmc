@@ -6,7 +6,7 @@
       <swiper-container class="сertswiper" watchSlidesProgress="true" slidesPerView="5">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
-            <NuxtImg fit="cover" sizes="200px" height="300" :src="el.img" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" class="cert" :src="el.img" :alt="el.title"></NuxtImg>
           </a>
         </swiper-slide>
       </swiper-container>
@@ -67,10 +67,25 @@ swiper-container {
   left: 61%;
   top: 3%
 }
+
+.cert {
+  height: 300px;
+  size: 200px;
+}
 @media screen and (max-width:1920px) {
   
 }
 @media screen and (max-width:1600px) {
+  .cert {
+  height: 280px;
+  size: 180px;
+}
+.сertcontainer {
+  height: 556px;
+}
+.certimg {
+  left: 63%;
+}
   
 }
 @media screen and (max-width:1366px) {
@@ -83,7 +98,11 @@ swiper-container {
  .сertcontainer {
   height: 500px;
  }
-}
+ .cert {
+  height: 260px;
+  size: 180px;
+ }
+
 @media screen and (max-width:992px) {
   
 }
@@ -92,5 +111,6 @@ swiper-container {
 }
 @media screen and (max-width:576px) {
   
+}
 }
 </style>

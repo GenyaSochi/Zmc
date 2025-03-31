@@ -160,6 +160,9 @@ onUnmounted(() => {
     height: 46px;
     width: 50px;
   }
+  .allcontainer {
+    padding: 60px 20px;
+  }
 }
 
 @media screen and (max-width:1366px) {
@@ -184,9 +187,7 @@ onUnmounted(() => {
   }
 
   .num {
-    padding-top: 9px;
-    height: 44px;
-    width: 48px;
+    padding-top: 6px; 
   }
 
   .allcontainer {
@@ -221,9 +222,7 @@ onUnmounted(() => {
   }
 
   .num {
-    padding-top: 7px;
-    height: 42px;
-    width: 46px;
+    padding-top: 5px;    
   }
   .allcontainer {
     flex-direction: column;
