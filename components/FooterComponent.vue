@@ -73,7 +73,7 @@ const popup = ref(false)
 
 .footinfo {
   text-align: center;
-  padding: 10px 0 0 0;
+  padding: 10px 70px 0 0;
   font-size: 19px;
 }
 

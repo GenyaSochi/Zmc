@@ -54,9 +54,8 @@ onUnmounted(() => {
 <style scoped>
 .digits {
   font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
   gap: 10px;
   padding: 77px 0;
   background: linear-gradient(90deg,

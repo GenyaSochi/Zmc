@@ -20,7 +20,7 @@
       </form> 
       <div style="overflow: hidden;">
         <p class="textswiper">Услуги по металлообработке</p>
-        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" cards-effect-per-slide-offset="8" :modules="modules">
+        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true" cards-effect-per-slide-offset="8" :modules="modules">
               <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
       </div> 
@@ -150,7 +150,7 @@ const cards = [
 }
 
 .textswiper {
-  padding: 0 0 30px 194px;
+  padding: 0 0 30px 231px;
 }
 .formcost {
   background: linear-gradient(90deg,
@@ -180,6 +180,7 @@ const cards = [
   height: 48px;
   border-radius: 5px;
   font-size: 18px;
+  padding: 20px;
 }
 
 .allinputcost {

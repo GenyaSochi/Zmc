@@ -8,7 +8,7 @@
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
-            <NuxtImg fit="cover" sizes="1850px sm:500px md:1224px xxl:1850px" class="imgsize" :src="el.imgproduct" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" sizes="1850px sm:500px md:1224px xxl:1850px" :src="el.imgproduct" :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
@@ -18,7 +18,7 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным.</h3>
       <div class="blockproduct">
-        <div class="production"> Экскурсия на производство<a class="butproj"
+        <div class="production">Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
             src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
@@ -43,7 +43,7 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'выпущеной готовой продукции', quantity: '> 1500', unit: 'тонн', imgproduct: '/img/masts.webp' },
+  { id: 1, title: 'выпущено готовой продукции', quantity: '> 1500', unit: 'тонн', imgproduct: '/img/masts.webp' },
   { id: 2, title: 'производственных площадей', quantity: '> 2800', unit: 'м²', imgproduct: '/img/photozavod1.webp' },
   { id: 3, title: 'продукции изготовлено по', title1: 'индивидуальным параметрам', quantity: '> 350', unit: 'тонн', imgproduct: '/img/nonstandart.webp' },
   { id: 4, title: 'высококвалифицированных', title1: 'специалистов', quantity: '> 110', unit: '', imgproduct: '/img/spec.webp' },
@@ -84,12 +84,11 @@ const slide = [
 
 .quant {
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 80px;
   position: absolute;
   font-weight: bold;
   font-style: oblique;
-  filter: drop-shadow(2px 4px 6px black);
   top: 252px;
   left: 79px;
   font-family: 'Montserrat', light;
@@ -97,7 +96,7 @@ const slide = [
 
 .title {
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 48px;
   position: absolute;
   left: 77px;
@@ -105,12 +104,11 @@ const slide = [
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
-  filter: drop-shadow(2px 4px 6px black);
 }
 
 .title1 {
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 48px;
   position: absolute;
   left: 69px;
@@ -118,7 +116,6 @@ const slide = [
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
-  filter: drop-shadow(2px 4px 6px black);
 }
 
 .production {
@@ -147,9 +144,10 @@ const slide = [
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   filter: grayscale(1);
   margin-top: 88px;
+  padding-right: 50px; 
 }
 
 .advanttext {
@@ -218,7 +216,9 @@ const slide = [
   height: 596px;
 }
 
-@media screen and (max-width:1920px) {}
+@media screen and (max-width:1920px) {
+  
+}
 
 @media screen and (max-width:1600px) {}
 
