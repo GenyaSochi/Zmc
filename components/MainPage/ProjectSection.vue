@@ -8,7 +8,7 @@
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
-            <NuxtImg fit="cover" sizes="1850px sm:500px md:1224px xxl:1850px" :src="el.imgproduct" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" :src="el.imgproduct" :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
@@ -58,7 +58,7 @@ const slide = [
 }
 
 .swiper {
-  max-width: 100vw;
+  max-width: 100vw;  
 }
 
 .ourproj {
@@ -84,23 +84,23 @@ const slide = [
 
 .quant {
   text-transform: uppercase;
-  color: black;
-  font-size: 80px;
+  color: rgba(30, 33, 61, 1);
+  font-size: 70px;
   position: absolute;
   font-weight: bold;
   font-style: oblique;
-  top: 252px;
-  left: 79px;
+  top: 130px;
+  left: 119px;
   font-family: 'Montserrat', light;
 }
 
 .title {
   text-transform: uppercase;
-  color: black;
-  font-size: 48px;
+  color:rgba(30, 33, 61, 1);
+  font-size: 34px;
   position: absolute;
-  left: 77px;
-  bottom: 137px;
+  left: 107px;
+  bottom: 292px;
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
@@ -108,11 +108,11 @@ const slide = [
 
 .title1 {
   text-transform: uppercase;
-  color: black;
-  font-size: 48px;
+  color: rgba(30, 33, 61, 1);
+  font-size: 34px;
   position: absolute;
-  left: 69px;
-  bottom: 76px;
+  left: 99px;
+  bottom: 239px;
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
@@ -139,14 +139,13 @@ const slide = [
 }
 
 .imgstyle {
-  height: 564px;
+  height: 560px;
   overflow: hidden;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  filter: grayscale(1);
-  margin-top: 88px;
+  /* filter: grayscale(1); */
   padding-right: 50px; 
 }
 
@@ -310,3 +309,4 @@ const slide = [
 
 @media screen and (max-width:576px) {}
 </style>
+<!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

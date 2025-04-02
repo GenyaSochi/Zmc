@@ -17,7 +17,7 @@
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
     </div>
-    <h2 class="digits">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
+    <h2 class="digitsprod">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
   </section>
 </template>
 
@@ -41,7 +41,7 @@ const incrementDigits = () => {
 // Запускаем интервал каждые 1000 мс
 let interval: NodeJS.Timeout
 onMounted(() => {
-  interval = setInterval(incrementDigits, 1000)
+  interval = setInterval(incrementDigits, 3000)
 })
 
 // Очищаем интервал при уничтожении компонента
@@ -54,14 +54,26 @@ onUnmounted(() => {
 <style scoped>
 .digits {
   font-size: 28px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
   text-align: center;
-  gap: 10px;
-  padding: 77px 0;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
   color: white;
+  padding: 44px 0;
+}
+.digitsprod {
+  font-size: 28px;
+  height: 158px; 
+  padding-top: 58px; 
+  background: linear-gradient(90deg,
+      rgb(14, 13, 13)39%,
+      rgb(30, 33, 61)96%);
+  color: white;
+  margin-bottom: 90px;
+  text-align: center;
 }
 
 .h1view {
@@ -124,10 +136,9 @@ onUnmounted(() => {
 }
 
 @media screen and (max-width:1920px) {
-  .digits {
-    font-size: 22px;
+  .digits {   
     gap: 10px;
-    padding: 77px 0;
+    padding: 60px 0;
   }
 
   .num {
