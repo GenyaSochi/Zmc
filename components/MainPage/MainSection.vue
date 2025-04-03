@@ -53,7 +53,7 @@ onUnmounted(() => {
 
 <style scoped>
 .digits {
-  font-size: 28px;
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;  
@@ -64,15 +64,15 @@ onUnmounted(() => {
   color: white;
   padding: 44px 0;
 }
+
 .digitsprod {
-  font-size: 28px;
+  font-size: 22px;
   height: 158px; 
   padding-top: 58px; 
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
-  color: white;
-  margin-bottom: 90px;
+  color: white; 
   text-align: center;
 }
 

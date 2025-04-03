@@ -19,7 +19,11 @@
         </div>  
       </form> 
       <div style="overflow: hidden;">
-        <p class="textswiper">Услуги по металлообработке</p>
+        <div class="textswiper">
+          <div class="textswiper_left blur"></div>
+          <div class="textswiper_right blur"></div>
+          <span class="msg">Услуги по металлообработке</span>
+        </div>
         <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true" cards-effect-per-slide-offset="8" :modules="modules">
               <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
@@ -150,7 +154,30 @@ const cards = [
 }
 
 .textswiper {
-  padding: 0 0 30px 231px;
+  text-align: center;
+  /* background: rgb(161, 7, 7); */
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 80px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.blur {
+  position: absolute;
+  height: 91px;
+  width: 87px;
+  background-color: white;
+  z-index: 1;
+  filter: blur(10px);
+}
+.textswiper_left {
+  left:-43px;
+  top:-15px
+}
+.textswiper_right {
+  right:-43px;
+  top:-15px
 }
 .formcost {
   background: linear-gradient(90deg,
@@ -215,6 +242,23 @@ const cards = [
   font-size: 20px;
   margin-bottom: 12px;
 }
+
+.msg {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 12s linear infinite;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
 @media screen and (max-width:1920px) {
 
 }

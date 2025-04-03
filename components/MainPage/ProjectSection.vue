@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div class="proj">
       <h2 class="ourproj">наши проекты</h2>
+    <div class="proj">
       <swiper-container class="swiper" pagination="true" navigation="true" centered-slides="true">
         <swiper-slide v-for="el of slide" :key="el.id">
           <div class="imgstyle">
@@ -54,20 +54,28 @@ const slide = [
 .proj {
   display: flex;
   justify-content: center;
-  height: 700px;
+  height: 605px;
 }
 
 .swiper {
   max-width: 100vw;  
 }
 
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 30%);   
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 93px);
+}
+
 .ourproj {
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 34px;
-  display: flex;
-  position: absolute;
   padding: 30px 0;
+  text-align: center;
 }
 
 .ouradvant {
@@ -89,8 +97,8 @@ const slide = [
   position: absolute;
   font-weight: bold;
   font-style: oblique;
-  top: 130px;
-  left: 119px;
+  top: 170px;
+  left: 169px;
   font-family: 'Montserrat', light;
 }
 
@@ -99,8 +107,8 @@ const slide = [
   color:rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 107px;
-  bottom: 292px;
+  left: 141px;
+  bottom: 239px;
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
@@ -111,8 +119,8 @@ const slide = [
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 99px;
-  bottom: 239px;
+  left: 141px;
+  bottom: 194px;
   font-weight: bold;
   font-style: oblique;
   font-family: 'Montserrat', light;
@@ -146,7 +154,7 @@ const slide = [
   align-items: center;
   justify-content: flex-end;
   /* filter: grayscale(1); */
-  padding-right: 50px; 
+  padding-right: 84px; 
 }
 
 .advanttext {

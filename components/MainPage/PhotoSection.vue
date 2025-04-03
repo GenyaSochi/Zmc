@@ -35,8 +35,7 @@ const photos = [
 <style scoped>
 .photocontainer {
   /* background-color: rgb(30, 33, 61); */
-  padding: 30px 56px 30px 118px;
-  margin-bottom: 30px;
+  padding: 30px 56px 60px 118px; 
   cursor: pointer;
 }
 @media screen and (max-width:1920px) {
