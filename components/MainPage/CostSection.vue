@@ -155,7 +155,6 @@ const cards = [
 
 .textswiper {
   text-align: center;
-  /* background: rgb(161, 7, 7); */
   color: black;
   text-transform: uppercase;
   position: relative;
