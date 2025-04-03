@@ -22,7 +22,7 @@
         <div class="textswiper">
           <div class="textswiper_left blur"></div>
           <div class="textswiper_right blur"></div>
-          <span class="msg">Услуги по металлообработке</span>
+          <span class="msg">услуги по металлообработке</span>
         </div>
         <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true" cards-effect-per-slide-offset="8" :modules="modules">
               <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
