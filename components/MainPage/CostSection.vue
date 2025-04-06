@@ -291,7 +291,54 @@ const cards = [
   }
 }
 @media screen and (max-width:992px) {
+  .h2cost {
+    font-size: 16px;
+  }
+  .infocost {
+    font-size: 16px;
+  }
+  .workcost {
+    font-size: 16px;
+    padding: 0px 48px 12px 48px;
+  }
+  .inputcost {
+    font-size: 14px;
+    width: 214px;
+    height: 33px;
+  }
+  .allinputcost {
+    gap: 15px;
+    padding-bottom: 10px;
+  }
   
+.custom-file-input::before {
+  padding: 8px 20px;
+}
+.butcost {
+  font-size: 14px;
+}
+.formcost {
+  margin-left: 0;
+  padding-bottom: 0;
+  height: 327px;
+}
+.butinfo {
+  font-size: 12px;
+}
+.swiper swiper-slide {
+  font-size: 18px;
+}
+.grid {
+  gap: 20px;
+}
+.msg {
+  font-size: 18px;
+}
+.swiper {
+  height: 145px;
+width: 284px;
+padding-top: 0;
+}
 }
 @media screen and (max-width:768px) {
   

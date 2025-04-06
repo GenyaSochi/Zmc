@@ -69,4 +69,12 @@ const totop = ()=>{
   }
 }
 
+
+@media screen and (max-width:992px) {
+  .button {
+    width: 56px;
+    height: 56px;
+    bottom: 12px;
+  }
+}
 </style>

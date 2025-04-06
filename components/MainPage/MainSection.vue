@@ -56,7 +56,7 @@ onUnmounted(() => {
   font-size: 22px;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   text-align: center;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
@@ -67,12 +67,12 @@ onUnmounted(() => {
 
 .digitsprod {
   font-size: 22px;
-  height: 158px; 
-  padding-top: 58px; 
+  height: 158px;
+  padding-top: 58px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
-  color: white; 
+  color: white;
   text-align: center;
 }
 
@@ -101,7 +101,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   /* background: url(/img/silver1.webp); */
-  background:  rgb(30, 33, 61);
+  background: rgb(30, 33, 61);
   color: white;
   text-align: center;
 }
@@ -136,13 +136,12 @@ onUnmounted(() => {
 }
 
 @media screen and (max-width:1920px) {
-  .digits {   
+  .digits {
     gap: 10px;
     padding: 60px 0;
   }
 
   .num {
-    padding-top: 9px;
     height: 48px;
     width: 52px;
   }
@@ -166,10 +165,11 @@ onUnmounted(() => {
   }
 
   .num {
-    padding-top: 9px;
-    height: 46px;
-    width: 50px;
+    padding-top: 5px;
+    height: 42px;
+    width: 46px;
   }
+
   .allcontainer {
     padding: 60px 20px;
   }
@@ -193,11 +193,11 @@ onUnmounted(() => {
   .digits {
     font-size: 18px;
     gap: 10px;
-    padding: 54px 0;
+    padding: 43px 0;
   }
 
   .num {
-    padding-top: 6px; 
+    padding-top: 6px;
   }
 
   .allcontainer {
@@ -208,7 +208,10 @@ onUnmounted(() => {
     font-size: 18px;
     height: 162px;
   }
-  
+  .digitsprod {
+    height: 126px;
+    padding-top: 48px;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -228,23 +231,33 @@ onUnmounted(() => {
   .digits {
     font-size: 18px;
     gap: 10px;
-    padding: 54px 0;
+    padding: 34px 0;
+  }
+  .digitsprod {
+    font-size: 18px;
+    height: 82px;
+    padding-top: 34px;
+  }
+  .num {
+    padding-top: 4px;
+    height: 36px;
+    width: 39px;
+    font-size: 20px;
   }
 
-  .num {
-    padding-top: 5px;    
-  }
   .allcontainer {
     flex-direction: column;
     padding: 20px;
     gap: 13px;
   }
-.cardcontainer {
-  width: 954px;
-  height: 50px;
-  background:  rgb(30, 33, 61);
-}
 
+  .cardcontainer {
+    width: 954px;
+    height: 50px;
+    background: rgb(30, 33, 61);
+  }
+
+  
 }
 
 @media screen and (max-width:768px) {

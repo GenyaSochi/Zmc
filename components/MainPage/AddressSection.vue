@@ -29,20 +29,21 @@ h2 {
 .addresscont {
   text-transform: uppercase;
   font-size: 34px;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .card {
   position: relative;
   overflow: hidden;
-  margin: 30px 0;
   padding: 0 120px;
 }
 @media screen and (max-width:1920px) {
   
 }
 @media screen and (max-width:1600px) {
-  
+  .addresscont {
+    font-size: 30px;
+  }
 }
 @media screen and (max-width:1366px) {
   .addresscont {
@@ -50,7 +51,16 @@ h2 {
   }
 }
 @media screen and (max-width:992px) {
-  
+  .addresscont {
+    font-size: 24px;
+    padding-top: 15px;
+  }
+  .card {
+    padding: 15px 30px;
+  }
+  iframe {
+    height: 400px;
+  }
 }
 @media screen and (max-width:768px) {
   

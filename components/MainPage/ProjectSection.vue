@@ -1,6 +1,6 @@
 <template>
   <section>
-      <h2 class="ourproj">наши проекты</h2>
+    <h2 class="ourproj">наши проекты</h2>
     <div class="proj">
       <swiper-container class="swiper" pagination="true" navigation="true" centered-slides="true">
         <swiper-slide v-for="el of slide" :key="el.id">
@@ -8,7 +8,7 @@
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>
             <p class="title">{{ el.title }}</p>
             <p class="title1">{{ el.title1 }}</p>
-            <NuxtImg fit="cover" :src="el.imgproduct" :alt="el.title"></NuxtImg>
+            <NuxtImg class="imgsize" fit="cover" :src="el.imgproduct" :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
@@ -20,7 +20,7 @@
       <div class="blockproduct">
         <div class="production">Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
-            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;"></div>
+            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;" class="imgproj"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
             соответствием техническим
@@ -30,8 +30,7 @@
             гордимсякачеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span>
         </div>
         <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с
-            нашими
-            конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
+            нашими конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов, учитывая
             потребности каждого проекта.</span></div>
       </div>
     </div>
@@ -58,15 +57,19 @@ const slide = [
 }
 
 .swiper {
-  max-width: 100vw;  
+  max-width: 100vw;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    position: absolute;
-    top: var(--swiper-navigation-top-offset, 30%);   
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 93px);
 }
 
@@ -98,16 +101,16 @@ const slide = [
   font-weight: bold;
   font-style: oblique;
   top: 170px;
-  left: 169px;
+  left: 66px;
   font-family: 'Montserrat', light;
 }
 
 .title {
   text-transform: uppercase;
-  color:rgba(30, 33, 61, 1);
+  color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 141px;
+  left: 66px;
   bottom: 239px;
   font-weight: bold;
   font-style: oblique;
@@ -119,7 +122,7 @@ const slide = [
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 141px;
+  left: 66px;
   bottom: 194px;
   font-weight: bold;
   font-style: oblique;
@@ -154,7 +157,7 @@ const slide = [
   align-items: center;
   justify-content: flex-end;
   /* filter: grayscale(1); */
-  padding-right: 84px; 
+  padding-right: 84px;
 }
 
 .advanttext {
@@ -219,15 +222,47 @@ const slide = [
 }
 
 .imgsize {
-  overflow: hidden;  
+  overflow: hidden;
   height: 596px;
 }
 
-@media screen and (max-width:1920px) {
-  
-}
+@media screen and (max-width:1920px) {}
 
-@media screen and (max-width:1600px) {}
+@media screen and (max-width:1600px) {
+  .imgsize {
+    height: 508px;
+  }
+
+  .quant {
+    font-size: 63px;
+    left: 86px;
+  }
+
+  .title {
+    font-size: 32px;
+    left: 86px;
+    bottom: 268px;
+  }
+
+  .title1 {
+    font-size: 32px;
+    left: 86px;
+    bottom: 232px;
+  }
+
+  .ourproj {
+    font-size: 30px;
+    padding: 30px 0 0 0;
+  }
+
+  .ouradvant {
+    font-size: 30px;
+  }
+
+  .proj {
+    height: 580px;
+  }
+}
 
 @media screen and (max-width:1366px) {
 
@@ -257,13 +292,20 @@ const slide = [
   }
 
   .quant {
-    font-size: 70px;
-    left: 135px;
+    font-size: 56px;
+    left: 86px;
   }
 
   .title {
-    font-size: 44px;
-    left: 122px;
+    font-size: 28px;
+    left: 86px;
+    bottom: 213px;
+  }
+
+  .title1 {
+    font-size: 28px;
+    left: 86px;
+    bottom: 179px;
   }
 
   .textspan {
@@ -283,6 +325,24 @@ const slide = [
   .butproj {
     font-size: 18px;
   }
+
+  .imgsize {
+    height: 415px;
+  }
+
+  .imgstyle {
+    height: 478px;
+  }
+
+  .ourproj {
+    padding: 30px 0 0 0;
+    font-size: 28px;
+  }
+
+  .proj {
+    height: 490px;
+  }
+
 }
 
 @media screen and (max-width:992px) {
@@ -295,22 +355,82 @@ const slide = [
   }
 
   .advanttext {
-    font-size: 20px;
+    font-size: 18px;
+    padding-bottom: 24px;
   }
 
   .imgstyle {
     margin-top: 0;
+    height: 349px;
+  }
+
+  .imgsize {
+    height: 312px;
   }
 
   .quant {
     left: 108px;
-    font-size: 52px;
+    font-size: 36px;
+    top: 120px;
+  }
+
+  .units {
+    font-size: 36px;
   }
 
   .title {
-    font-size: 44px;
+    font-size: 17px;
     left: 99px;
+    bottom: 167px;
   }
+
+  .title1 {
+    font-size: 17px;
+    left: 96px;
+    bottom: 151px;
+  }
+
+  .production {
+    font-size: 17px;
+    height: 235px;
+  }
+
+  .textspan {
+    font-size: 17px;
+  }
+
+  .ourproj {
+    font-size: 24px;
+    padding: 30px 0 0 0;
+  }
+
+  .ouradvant {
+    font-size: 24px;
+    padding-bottom: 12px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 32%);
+  }
+
+  .proj {
+    height: 368px;
+  }
+
+  .productstyle {
+    padding-right: 19px;
+    height: 404px;
+  }
+
+  .advant {
+    height: 235px;
+  }
+
+  .butproj {
+    margin-top: 0;
+  }
+  
 }
 
 @media screen and (max-width:768px) {}

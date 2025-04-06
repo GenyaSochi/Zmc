@@ -3,7 +3,7 @@
     <div class="photocontainer">
       <swiper-container watchSlidesProgress="true" slidesPerView="8">
         <swiper-slide v-for="photo of photos" :key="photo.id">
-          <NuxtImg fit="cover" sizes="205px " height="300" :src="photo.img" :alt="photo.title"></NuxtImg>
+          <NuxtImg class="imgphoto" fit="cover" sizes="205px " :src="photo.img" :alt="photo.title"></NuxtImg>
         </swiper-slide>
       </swiper-container>
     </div>
@@ -34,9 +34,11 @@ const photos = [
 
 <style scoped>
 .photocontainer {
-  /* background-color: rgb(30, 33, 61); */
   padding: 30px 56px 60px 118px; 
   cursor: pointer;
+}
+.imgphoto {
+  height: 300px;
 }
 @media screen and (max-width:1920px) {
   
@@ -46,11 +48,16 @@ const photos = [
 }
 @media screen and (max-width:1366px) {
   .photocontainer {
-    padding: 22px 22px 22px 34px;
+    padding: 22px 22px 60px 34px;
   }
 }
 @media screen and (max-width:992px) {
-  
+  .photocontainer {
+    padding: 0px 22px 30px 34px;
+  }
+  .imgphoto {
+  height: 240px;
+}
 }
 @media screen and (max-width:768px) {
   

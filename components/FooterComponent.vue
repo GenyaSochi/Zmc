@@ -52,7 +52,7 @@ const popup = ref(false)
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .lobtn {
@@ -131,6 +131,7 @@ const popup = ref(false)
   .footinfo {
     padding: 10px 0 0 86px;
   }
+
   .imgfoot {
     margin: 40px 0 0 106px;
   }
@@ -172,7 +173,42 @@ const popup = ref(false)
   }
 }
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:992px) {
+  .footinfo {
+    text-align: none;
+    padding: 0;
+    font-size: 0;
+  }
+  .imgfoot {
+    margin: 0;
+  }
+  img  {
+    width: 0;
+  }
+  .contact {
+    font-size: 17px;
+    margin-top: 30px;
+  }
+  .footercont {
+    grid-template-columns: 1px 1fr 1fr;
+    height: 313px;
+  }
+  .info {
+    font-size: 17px;
+  }
+  .lobtn {
+    font-size: 17px;
+    margin: 20px 0 16px 0;
+  }
+  .infosoc {
+    font-size: 17px;
+  }
+  .infofoot {
+    font-size: 17px;
+    margin: 0;
+  }
+  
+}
 
 @media screen and (max-width:768px) {}
 

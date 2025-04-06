@@ -8,9 +8,9 @@
         самые амбициозные задачи.</p>
       <NuxtLink to="/catalog" class="seeprod">Каталог продукции<img src="/public/img/apper100.webp" alt="apper"
           class="apper"></NuxtLink>
-      <a target="_blank" href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-        class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc"
-          ></a>
+      <a target="_blank"
+        href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
+        class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc"></a>
     </div>
   </section>
 </template>
@@ -33,10 +33,10 @@
   gap: 10px;
   padding: 20px;
   background: linear-gradient(60deg,
-  black 0%,
+      black 0%,
       rgb(95, 90, 90) 80%);
-      color: white;
-    }
+  color: white;
+}
 
 .seeprod {
   flex: 1;
@@ -62,33 +62,51 @@
   top: 31%;
   z-index: 1;
 }
-@media screen and (max-width:1920px) {
-  
-}
-@media screen and (max-width:1600px) {
-  
-}
+
+@media screen and (max-width:1920px) {}
+
+@media screen and (max-width:1600px) {}
+
 @media screen and (max-width:1366px) {
   .textprod {
     font-size: 19px;
   }
+
   .seeprod {
     font-size: 19px;
   }
+
   .exc {
     right: 12%;
   }
+
   .photocontainer {
     padding: 30px 23px 30px 37px;
   }
 }
+
 @media screen and (max-width:992px) {
-  
-}
-@media screen and (max-width:768px) {
-  
-}
-@media screen and (max-width:576px) {
-  
-}
+  .textprod {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .seeprod {
+    font-size: 17px;
+    padding: 5px;
+  }
+  }
+  .apper {
+    width: 60px;
+    left: 48%;
+    top: 38%;
+  }
+  .exc {
+    width: 60px;
+    right: 13%;
+    top: 35%;
+  }
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {}
 </style>
