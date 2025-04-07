@@ -97,7 +97,7 @@
   }
   .apper {
     width: 60px;
-    left: 48%;
+    left: 49%;
     top: 38%;
   }
   .exc {
