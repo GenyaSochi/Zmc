@@ -100,11 +100,11 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: url(/img/silver1.webp); */
   background: rgb(30, 33, 61);
   color: white;
   text-align: center;
 }
+
 
 .allcontainer {
   display: flex;
@@ -208,6 +208,7 @@ onUnmounted(() => {
     font-size: 18px;
     height: 162px;
   }
+
   .digitsprod {
     height: 126px;
     padding-top: 48px;
@@ -233,11 +234,13 @@ onUnmounted(() => {
     gap: 10px;
     padding: 34px 0;
   }
+
   .digitsprod {
     font-size: 18px;
     height: 82px;
     padding-top: 34px;
   }
+
   .num {
     padding-top: 4px;
     height: 36px;
@@ -257,7 +260,7 @@ onUnmounted(() => {
     background: rgb(30, 33, 61);
   }
 
-  
+
 }
 
 @media screen and (max-width:768px) {

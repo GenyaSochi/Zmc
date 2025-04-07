@@ -37,35 +37,37 @@ h2 {
   overflow: hidden;
   padding: 0 120px;
 }
-@media screen and (max-width:1920px) {
-  
-}
+
+@media screen and (max-width:1920px) {}
+
 @media screen and (max-width:1600px) {
   .addresscont {
     font-size: 30px;
   }
 }
+
 @media screen and (max-width:1366px) {
   .addresscont {
     font-size: 28px;
   }
 }
+
 @media screen and (max-width:992px) {
   .addresscont {
     font-size: 24px;
     padding-top: 15px;
   }
+
   .card {
     padding: 15px 30px;
   }
+
   iframe {
     height: 400px;
   }
 }
-@media screen and (max-width:768px) {
-  
-}
-@media screen and (max-width:576px) {
-  
-}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {}
 </style>

@@ -33,12 +33,11 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
-
 .navtag {
   padding: 15px 0;
   background-color: rgb(30, 33, 61);
   font-family: 'Montserrat', light;
-  font-size: 20px;  
+  font-size: 20px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -53,7 +52,7 @@ const toggleMenu = () => {
   color: white;
   font-size: 20px;
   height: 110px;
-  font-family: 'Montserrat', light;  
+  font-family: 'Montserrat', light;
 }
 
 .but {
@@ -165,16 +164,18 @@ const toggleMenu = () => {
     font-size: 18px;
   }
 
-  .nav { 
+  .nav {
     padding-right: 10px;
   }
-  
+
   .link {
     gap: 40px;
   }
+
   .but {
     gap: 30px;
   }
+
   .butnav {
     width: 224px;
   }

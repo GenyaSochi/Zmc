@@ -3,7 +3,7 @@
     <div class="grid">
       <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>       
+        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
           <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
@@ -16,18 +16,19 @@
         <div class="perscost">
           <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.
           </NuxtLink>
-        </div>  
-      </form> 
+        </div>
+      </form>
       <div style="overflow: hidden;">
         <div class="textswiper">
           <div class="textswiper_left blur"></div>
           <div class="textswiper_right blur"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true" cards-effect-per-slide-offset="8" :modules="modules">
-              <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
+        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true"
+          cards-effect-per-slide-offset="8" :modules="modules">
+          <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
-      </div> 
+      </div>
     </div>
   </section>
 </template>
@@ -54,7 +55,6 @@ const cards = [
 </script>
 
 <style scoped>
-
 .grid {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -80,7 +80,7 @@ const cards = [
   font-size: 20px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .custom-file-input::-webkit-file-upload-button {
@@ -115,7 +115,7 @@ const cards = [
 
 .swiper {
   width: 340px;
-  height: 264px; 
+  height: 264px;
   overflow: visible;
   max-width: 400px;
   padding-top: 20px;
@@ -126,7 +126,7 @@ const cards = [
 }
 
 .swiper swiper-slide:nth-child(2n) {
-  background-color: rgb(161, 7, 7);  
+  background-color: rgb(161, 7, 7);
 }
 
 .swiper swiper-slide:nth-child(3n) {
@@ -162,6 +162,7 @@ const cards = [
   padding: 20px 0;
   overflow: hidden;
 }
+
 .blur {
   position: absolute;
   height: 91px;
@@ -170,14 +171,17 @@ const cards = [
   z-index: 1;
   filter: blur(10px);
 }
+
 .textswiper_left {
-  left:-43px;
-  top:-15px
+  left: -43px;
+  top: -15px
 }
+
 .textswiper_right {
-  right:-43px;
-  top:-15px
+  right: -43px;
+  top: -15px
 }
+
 .formcost {
   background: linear-gradient(90deg,
       rgb(7, 7, 7)39%,
@@ -253,24 +257,26 @@ const cards = [
   0% {
     transform: translate(100%, 0);
   }
+
   100% {
     transform: translate(-100%, 0);
   }
 }
 
-@media screen and (max-width:1920px) {
+@media screen and (max-width:1920px) {}
 
-}
 @media screen and (max-width:1600px) {
   .textswiper {
     padding: 0 0 30px 129px;
   }
+
   .grid {
     padding: 0 30px;
   }
 }
+
 @media screen and (max-width:1366px) {
-  .formcost {   
+  .formcost {
     height: 450px;
     border-radius: 10px;
   }
@@ -279,71 +285,86 @@ const cards = [
     padding: 18px 0;
     font-size: 18px;
   }
-  .infocost, .workcost {
+
+  .infocost,
+  .workcost {
     font-size: 18px;
   }
 
-  .custom-file-input, .butcost, .inputcost {
+  .custom-file-input,
+  .butcost,
+  .inputcost {
     font-size: 16px;
   }
+
   .textswiper {
-    padding: 0 0 30px 87px; 
+    padding: 0 0 30px 87px;
   }
 }
+
 @media screen and (max-width:992px) {
   .h2cost {
     font-size: 16px;
   }
+
   .infocost {
     font-size: 16px;
   }
+
   .workcost {
     font-size: 16px;
     padding: 0px 48px 12px 48px;
   }
+
   .inputcost {
     font-size: 14px;
     width: 214px;
     height: 33px;
   }
+
   .allinputcost {
     gap: 15px;
     padding-bottom: 10px;
   }
-  
-.custom-file-input::before {
-  padding: 8px 20px;
+
+  .custom-file-input::before {
+    padding: 8px 20px;
+  }
+
+  .butcost {
+    font-size: 14px;
+  }
+
+  .formcost {
+    margin-left: 0;
+    padding-bottom: 0;
+    height: 327px;
+  }
+
+  .butinfo {
+    font-size: 12px;
+  }
+
+  .swiper swiper-slide {
+    font-size: 18px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .msg {
+    font-size: 18px;
+  }
+
+  .swiper {
+    height: 145px;
+    width: 284px;
+    padding-top: 0;
+  }
 }
-.butcost {
-  font-size: 14px;
-}
-.formcost {
-  margin-left: 0;
-  padding-bottom: 0;
-  height: 327px;
-}
-.butinfo {
-  font-size: 12px;
-}
-.swiper swiper-slide {
-  font-size: 18px;
-}
-.grid {
-  gap: 20px;
-}
-.msg {
-  font-size: 18px;
-}
-.swiper {
-  height: 145px;
-width: 284px;
-padding-top: 0;
-}
-}
-@media screen and (max-width:768px) {
-  
-}
-@media screen and (max-width:576px) {
-  
-}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {}
 </style>
