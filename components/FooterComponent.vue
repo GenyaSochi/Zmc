@@ -1,6 +1,6 @@
 <template>
   <div class="footercont">
-    <div>
+    <div class="img">
       <img src="/img/sitelogo1.webp" width="128px" class="imgfoot" alt="logo">
       <p class="footinfo">Завод металлоконструкций Урал</p>
     </div>
@@ -9,15 +9,13 @@
       <p class="contact">Контакты</p>
       <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, пом. 10</p>
       <p class="info">по будням с 8:00 до 17:00</p>
-      <a href="tel:+7(351)304-42-35" class="tel"> тел. +7(351) 304-42-35</a>
+      <a href="tel:+7(351)304-42-35" class="tel">тел. +7(351) 304-42-35</a>
       <div class="mail">
         <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
       </div>
       <p class="infofoot">&copy; 2024 «Завод металлоконструкций Урал».</p>
-      <p style="text-align: center; font-size: 16px;">Все права защищены.</p>
-      <p class="politic">
-        <NuxtLink to="/privacy" style="font-size: 16px;">Политика конфиденциальности</NuxtLink>
-      </p>
+      <p class="rights">Все права защищены.</p>      
+        <NuxtLink to="/privacy" class="politic">Политика конфиденциальности</NuxtLink>    
     </div>
 
     <div>
@@ -51,8 +49,7 @@ const popup = ref(false)
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  /* font-size: 20px; */
+  gap: 20px; 
 }
 
 .lobtn {
@@ -85,6 +82,8 @@ const popup = ref(false)
 
 .politic {
   text-align: center;
+  font-size: 16px;
+  padding-left: 200px;
 }
 
 .info {
@@ -120,7 +119,10 @@ const popup = ref(false)
 .imgfoot {
   margin: 40px 0 0 147px;
 }
-
+.rights {
+  text-align: center;
+  font-size: 16px;
+}
 @media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
@@ -129,17 +131,24 @@ const popup = ref(false)
   }
 
   .footinfo {
-    padding: 10px 0 0 86px;
+    padding: 10px 0 0 25px;
   }
 
   .imgfoot {
     margin: 40px 0 0 106px;
+  }
+  .lobtn {
+    margin: 50px 0 39px 0;
+  }
+  .politic {
+    padding-left: 114px;
   }
 }
 
 @media screen and (max-width:1366px) {
   .lobtn {
     font-size: 18px;
+    margin: 50px 0 42px 0;
   }
 
   .infosoc {
@@ -169,7 +178,11 @@ const popup = ref(false)
   }
 
   .imgfoot {
-    margin: 40px 0 0 54px;
+    margin: 40px 0 0 82px;
+  }
+
+  .politic {
+    padding-left: 86px;
   }
 }
 
@@ -184,22 +197,25 @@ const popup = ref(false)
     margin: 0;
   }
 
-  img {
-    width: 0;
-  }
-
   .contact {
     font-size: 17px;
-    margin-top: 30px;
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .img {
+    display: none;
   }
 
   .footercont {
-    grid-template-columns: 1px 1fr 1fr;
-    height: 313px;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 
   .info {
     font-size: 17px;
+    text-align: center;
+    
   }
 
   .lobtn {
@@ -214,6 +230,10 @@ const popup = ref(false)
   .infofoot {
     font-size: 17px;
     margin: 0;
+    text-align: right;
+  }
+  .tel {
+    padding-left: 142px;
   }
 
 }

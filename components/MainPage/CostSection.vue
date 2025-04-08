@@ -304,11 +304,11 @@ const cards = [
 
 @media screen and (max-width:992px) {
   .h2cost {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .infocost {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .workcost {
@@ -347,6 +347,7 @@ const cards = [
 
   .swiper swiper-slide {
     font-size: 18px;
+    height: 200px;
   }
 
   .grid {
@@ -362,6 +363,7 @@ const cards = [
     width: 284px;
     padding-top: 0;
   }
+  
 }
 
 @media screen and (max-width:768px) {}

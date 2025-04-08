@@ -67,6 +67,8 @@ const totop = () => {
   .button {
     width: 70px;
     height: 70px;
+    bottom: 20px;
+    left: 82px;
   }
 }
 
@@ -76,6 +78,7 @@ const totop = () => {
     width: 56px;
     height: 56px;
     bottom: 12px;
+
   }
 }
 </style>
