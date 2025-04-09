@@ -10,11 +10,11 @@
       <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
       <p class="info">по будням с 8:00 до 17:00</p>
       <a href="tel:+7(351)304-42-35" class="tel">тел. +7(351) 304-42-35</a>
-      <br> 
-      <a href="mailto:sales@zmkural.com" class="mail">sales@zmkural.com</a>    
+      <br>
+      <a href="mailto:sales@zmkural.com" class="mail">sales@zmkural.com</a>
       <p class="infofoot">&copy; 2024 «Завод металлоконструкций Урал».</p>
-      <p class="rights">Все права защищены.</p>      
-        <NuxtLink to="/privacy" class="politic">Политика конфиденциальности</NuxtLink>    
+      <p class="rights">Все права защищены.</p>
+      <NuxtLink to="/privacy" class="politic">Политика конфиденциальности</NuxtLink>
     </div>
 
     <div>
@@ -48,7 +48,7 @@ const popup = ref(false)
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .lobtn {
@@ -73,7 +73,7 @@ const popup = ref(false)
   font-size: 19px;
 }
 
-.contact { 
+.contact {
   padding-top: 100px;
   font-size: 19px;
 }
@@ -93,13 +93,14 @@ const popup = ref(false)
   padding-bottom: 12px;
   font-size: 19px;
 }
+
 .infosoc {
   font-size: 19px;
 }
 
 .infofoot {
   padding: 50px 0 12px 0;
-  font-size: 18px; 
+  font-size: 18px;
   text-align: center;
 }
 
@@ -120,13 +121,16 @@ const popup = ref(false)
 .imgfoot {
   margin: 40px 0 0 147px;
 }
+
 .rights {
   text-align: center;
   font-size: 16px;
 }
+
 .imgsize {
   margin: 0 0 20px 16px;
 }
+
 @media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
@@ -141,9 +145,11 @@ const popup = ref(false)
   .imgfoot {
     margin: 40px 0 0 106px;
   }
+
   .lobtn {
     margin: 50px 0 39px 0;
   }
+
   .politic {
     padding-left: 114px;
   }
@@ -177,6 +183,7 @@ const popup = ref(false)
   .footercont {
     gap: 84px;
   }
+
   .jobs {
     font-size: 18px;
   }
@@ -240,20 +247,24 @@ const popup = ref(false)
   .infofoot {
     font-size: 15px;
     margin: 0;
-   
   }
+
   .tel {
     padding-left: 142px;
   }
+
   .mail {
     padding-left: 142px;
   }
+
   .jobs {
     font-size: 15px;
   }
+
   .rights {
     font-size: 15px;
   }
+
   .politic {
     font-size: 15px;
   }
