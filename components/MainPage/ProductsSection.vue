@@ -93,21 +93,21 @@
 
   .seeprod {
     font-size: 17px;
-    padding: 5px;
+    padding-top: 10px;
+  }
+  .apper {
+    width: 60px;
+    left: 47%;
+    top: 38%;
+  }
+  
+  .exc {
+    width: 60px;
+    right: 13%;
+    top: 35%;
   }
 }
 
-.apper {
-  width: 60px;
-  left: 49%;
-  top: 38%;
-}
-
-.exc {
-  width: 60px;
-  right: 13%;
-  top: 35%;
-}
 
 @media screen and (max-width:768px) {}
 

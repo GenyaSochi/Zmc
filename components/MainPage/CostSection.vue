@@ -88,7 +88,7 @@ const cards = [
 }
 
 .custom-file-input::before {
-  content: 'Выберите файл';
+  content: 'Выбрать файл';
   display: inline-block;
   background: rgb(30, 33, 61);
   color: white;

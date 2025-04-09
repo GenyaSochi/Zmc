@@ -7,12 +7,11 @@
 
     <div>
       <p class="contact">Контакты</p>
-      <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск, ул. Герцена, д. 9, пом. 10</p>
+      <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
       <p class="info">по будням с 8:00 до 17:00</p>
       <a href="tel:+7(351)304-42-35" class="tel">тел. +7(351) 304-42-35</a>
-      <div class="mail">
-        <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a>
-      </div>
+      <br> 
+      <a href="mailto:sales@zmkural.com" class="mail">sales@zmkural.com</a>    
       <p class="infofoot">&copy; 2024 «Завод металлоконструкций Урал».</p>
       <p class="rights">Все права защищены.</p>      
         <NuxtLink to="/privacy" class="politic">Политика конфиденциальности</NuxtLink>    
@@ -21,15 +20,15 @@
     <div>
       <button @click="popup = true" class="lobtn">Заказать звонок</button>
       <p class="infosoc">Мы в социальных сетях</p>
-      <div style="padding-bottom: 10px;">
+      <div>
         <a href="https://vk.com/zmkural" target="_blank" style="font-size: 19px;"><img src="/public/img/vk.webp"
             width="64" alt="vk"></a>
         <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-          target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30"
-            style="margin: 0 0 20px 14px;" alt="rutube"></a>
+          target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30" class="imgsize"
+            alt="rutube"></a>
       </div>
-      <div style="padding-bottom: 10px;">
-        <NuxtLink to="job" class="info">Вакансии компании</NuxtLink>
+      <div>
+        <NuxtLink to="job" class="jobs">Вакансии компании</NuxtLink>
       </div>
       <a href="companydetails.pdf" class="req" target="_blank">Скачать реквизиты компании</a>
     </div>
@@ -70,13 +69,12 @@ const popup = ref(false)
 
 .footinfo {
   text-align: center;
-  padding: 10px 70px 0 0;
+  padding: 10px 4px 0 0;
   font-size: 19px;
 }
 
-.contact {
-  padding-bottom: 12px;
-  margin-top: 132px;
+.contact { 
+  padding-top: 100px;
   font-size: 19px;
 }
 
@@ -87,18 +85,21 @@ const popup = ref(false)
 }
 
 .info {
-  padding-bottom: 12px;
+  padding: 10px 0 10px 0;
   font-size: 19px;
 }
 
+.jobs {
+  padding-bottom: 12px;
+  font-size: 19px;
+}
 .infosoc {
   font-size: 19px;
 }
 
 .infofoot {
-  padding: 12px 0 12px 0;
-  font-size: 18px;
-  margin-top: 40px;
+  padding: 50px 0 12px 0;
+  font-size: 18px; 
   text-align: center;
 }
 
@@ -123,6 +124,9 @@ const popup = ref(false)
   text-align: center;
   font-size: 16px;
 }
+.imgsize {
+  margin: 0 0 20px 16px;
+}
 @media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
@@ -131,7 +135,7 @@ const popup = ref(false)
   }
 
   .footinfo {
-    padding: 10px 0 0 25px;
+    padding: 10px 0 0 87px;
   }
 
   .imgfoot {
@@ -143,12 +147,13 @@ const popup = ref(false)
   .politic {
     padding-left: 114px;
   }
+
 }
 
 @media screen and (max-width:1366px) {
   .lobtn {
     font-size: 18px;
-    margin: 50px 0 42px 0;
+    margin: 50px 0 36px 0;
   }
 
   .infosoc {
@@ -172,13 +177,17 @@ const popup = ref(false)
   .footercont {
     gap: 84px;
   }
+  .jobs {
+    font-size: 18px;
+  }
 
   .footinfo {
-    padding: 10px 0 0 36px;
+    padding: 10px 0 0 34px;
+    font-size: 18px;
   }
 
   .imgfoot {
-    margin: 40px 0 0 82px;
+    margin: 40px 0 0 60px;
   }
 
   .politic {
@@ -199,7 +208,7 @@ const popup = ref(false)
 
   .contact {
     font-size: 17px;
-    margin-top: 48px;
+    padding-top: 30px;
     text-align: center;
   }
 
@@ -209,18 +218,19 @@ const popup = ref(false)
 
   .footercont {
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 88px;
   }
 
   .info {
     font-size: 17px;
     text-align: center;
-    
+    padding-left: 32px;
   }
 
   .lobtn {
     font-size: 17px;
     margin: 20px 0 16px 0;
+    width: 210px;
   }
 
   .infosoc {
@@ -228,14 +238,25 @@ const popup = ref(false)
   }
 
   .infofoot {
-    font-size: 17px;
+    font-size: 15px;
     margin: 0;
-    text-align: right;
+   
   }
   .tel {
     padding-left: 142px;
   }
-
+  .mail {
+    padding-left: 142px;
+  }
+  .jobs {
+    font-size: 15px;
+  }
+  .rights {
+    font-size: 15px;
+  }
+  .politic {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width:768px) {}
