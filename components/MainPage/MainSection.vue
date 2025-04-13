@@ -94,7 +94,7 @@ onUnmounted(() => {
 .cardcontainer {
   font-size: 22px;
   border-radius: 10px;
-  width: 275px;
+  width: 100%;
   height: 166px;
   padding: 0 10px;
   display: flex;
@@ -112,7 +112,7 @@ onUnmounted(() => {
   text-align: center;
   gap: 45px;
   background-color: white;
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .heading {
@@ -213,6 +213,7 @@ onUnmounted(() => {
     height: 126px;
     padding-top: 48px;
   }
+
 }
 
 @media screen and (max-width:992px) {
@@ -238,7 +239,7 @@ onUnmounted(() => {
   .digitsprod {
     font-size: 18px;
     height: 82px;
-    padding-top: 34px;
+    padding-top: 30px;
   }
 
   .num {
@@ -255,12 +256,10 @@ onUnmounted(() => {
   }
 
   .cardcontainer {
-    width: 954px;
+    width: 100%;
     height: 50px;
     background: rgb(30, 33, 61);
   }
-
-
 }
 
 @media screen and (max-width:768px) {
@@ -277,7 +276,37 @@ onUnmounted(() => {
   .heading {
     padding-bottom: 160px;
   }
+
+  .digits {
+    font-size: 16px;
+    gap: 5px;
+    padding: 22px 0;
+  }
+
+  .num {
+    height: 34px;
+    width: 36px;
+    font-size: 18px;
+  }
+
+  .cardcontainer {
+    font-size: 16px;
+    height: 35px;
+  }
+
+  .allcontainer {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .digitsprod {
+    font-size: 16px;
+    height: 71px;
+    padding-top: 18px;
+  }
+  
 }
+
 
 @media screen and (max-width:576px) {
 

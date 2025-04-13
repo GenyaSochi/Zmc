@@ -1,7 +1,7 @@
 <template>
+    <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
     <div class="job">
-        <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
-        <br>
+    <div>
         <p>Наше предприятие – один из лидеров по производству опор трубопроводов.
             Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания»,
             «Трубная металлургическая компания» и других представителей отрасли.</p>
@@ -31,9 +31,15 @@
         <p>-инженера-конструктора отдела КМД.</p>
         <br>
         <p>По всем интересующим вопросам обращайтесь по телефону <b>+79000244766</b> 
-            или электронной почте <b>hr@zmkural.com</b>.</p>
-            <br>
+            или электронной почте <b>hr@zmkural.com</b>.</p>         
     </div>
+    <div>
+        <img src="/public/img/protect100.webp" alt="" class="imgposition"><p class="imgjob">Стабильность и надёжность</p>
+        <img src="/public/img/money100.webp" alt="" class="imgposition"><p class="imgjob">Конкурентная заработная плата и социальные гарантии</p>
+        <img src="/public/img/dev100.webp" alt="" class="imgposition"><p class="imgjob">Современные условия труда и возможности для развития</p>
+        <img src="/public/img/team100.webp" alt="" class="imgposition"><p class="imgjob">Командный дух и корпоративная культура</p>
+    </div>
+</div>
 </template>
 
 <script setup lang="ts"></script>
@@ -41,10 +47,21 @@
 <style>
 .jobinfo {
     font-size: 34px;
-    padding-bottom: 30px;
+    padding: 30px 0;  
 }
-
-.job{
-    padding: 0 300px 100px 300px; 
+.job {
+    display: flex;
+    padding: 0 200px 60px 200px;
+    gap: 120px;
+ 
+}
+.imgjob {
+    padding: 20px 0;
+}
+.imgview {
+    padding: 20px;
+}
+.imgposition {
+padding-left: 140px;
 }
 </style>

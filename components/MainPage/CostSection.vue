@@ -58,7 +58,7 @@ const cards = [
 .grid {
   display: grid;
   grid-template-columns: 60% 40%;
-  margin-bottom: 30px;
+  padding: 0 30px 30px 30px;
 }
 
 .custom-file-input {
@@ -188,8 +188,7 @@ const cards = [
       rgb(30, 33, 61)96%);
   color: white;
   font-size: 20px;
-  padding-bottom: 30px;
-  margin-left: 30px;
+  padding-bottom: 30px; 
   border-radius: 10px;
 }
 
@@ -269,15 +268,11 @@ const cards = [
   .textswiper {
     padding: 0 0 30px 129px;
   }
-
-  .grid {
-    padding: 0 30px;
-  }
 }
 
 @media screen and (max-width:1366px) {
   .formcost {
-    height: 450px;
+    height: 398px;
     border-radius: 10px;
   }
 
@@ -299,7 +294,7 @@ const cards = [
 
   .textswiper {
     padding: 0 0 30px 87px;
-  }
+  } 
 }
 
 @media screen and (max-width:992px) {
@@ -338,7 +333,7 @@ const cards = [
   .formcost {
     margin-left: 0;
     padding-bottom: 0;
-    height: 327px;
+    height: 306px;
   }
 
   .butinfo {
@@ -346,7 +341,7 @@ const cards = [
   }
 
   .swiper swiper-slide {
-    font-size: 18px;
+    font-size: 17px;
     height: 200px;
   }
 
@@ -355,18 +350,39 @@ const cards = [
   }
 
   .msg {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .swiper {
     height: 145px;
     width: 284px;
     padding-top: 0;
-  }
-  
+  }  
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .swiper swiper-slide {
+   display: none;
+  }
+  .h2cost {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .workcost {
+    font-size: 15px;
+  }
+  .allinputcost {
+    gap: 5px;
+  }
+  .custom-file-input {
+    font-size: 14px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
 
 @media screen and (max-width:576px) {}
 </style>

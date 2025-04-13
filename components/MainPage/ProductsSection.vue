@@ -71,15 +71,12 @@
   .textprod {
     font-size: 19px;
   }
-
   .seeprod {
     font-size: 19px;
   }
-
   .exc {
     right: 12%;
   }
-
   .photocontainer {
     padding: 30px 23px 30px 37px;
   }
@@ -90,7 +87,6 @@
     font-size: 14px;
     padding: 10px;
   }
-
   .seeprod {
     font-size: 17px;
     padding-top: 10px;
@@ -99,8 +95,7 @@
     width: 60px;
     left: 47%;
     top: 38%;
-  }
-  
+  }  
   .exc {
     width: 60px;
     right: 13%;
@@ -109,7 +104,14 @@
 }
 
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .textprod {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+}
 
 @media screen and (max-width:576px) {}
 </style>

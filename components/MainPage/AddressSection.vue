@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div class="addresscont">
-      <h2>где мы находимся</h2>
+    <h2 class="addresscont">где мы находимся</h2>
+    <div>
       <ClientOnly>
         <div class="card">
           <a href="https://yandex.ru/maps/11214/ozersk/?utm_medium=mapframe&utm_source=maps"
@@ -54,8 +54,7 @@ h2 {
 
 @media screen and (max-width:992px) {
   .addresscont {
-    font-size: 24px;
-    padding-top: 15px;
+    font-size: 24px;    
   }
 
   .card {
@@ -67,7 +66,19 @@ h2 {
   }
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .addresscont {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  iframe {
+    height: 340px;
+  }
+  .card {
+    padding: 15px 20px 0 20px;
+  }
+  }
+
 
 @media screen and (max-width:576px) {}
 </style>

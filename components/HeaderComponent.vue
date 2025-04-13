@@ -1,7 +1,7 @@
 <template>
   <nav class="navtag">
     <div class="nav">
-      <span class="logo"><img src="/img/sitelogo1.webp" width="160px" style="padding: 0 20px" alt="logo"></span>
+      <img src="/img/sitelogo1.webp" alt="logo" class="logo">
       <div class="link" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
@@ -47,7 +47,7 @@ const toggleMenu = () => {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -96,6 +96,10 @@ const toggleMenu = () => {
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
+}
+.logo {
+  width: 160px;
+  padding: 0 20px;
 }
 
 @media screen and (max-width:1920px) {
@@ -181,7 +185,8 @@ const toggleMenu = () => {
   }
 
   .logo {
-    padding: 0 60px 0 0;
+    width: 122px;
+   padding-left: 20px;
   }
 }
 

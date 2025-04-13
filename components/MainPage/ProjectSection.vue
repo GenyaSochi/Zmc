@@ -20,7 +20,7 @@
       <div class="blockproduct">
         <div class="production">Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
-            src="/public/img/rutubesquare.webp" alt="rutube" style="width: 90px;" class="imgproj"></div>
+            src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
             соответствием техническим
@@ -159,6 +159,10 @@ const slide = [
   justify-content: flex-end;
   /* filter: grayscale(1); */
   padding-right: 84px;
+}
+
+.imgproj {
+  width: 90px;
 }
 
 .advanttext {
@@ -343,7 +347,6 @@ const slide = [
   .proj {
     height: 490px;
   }
-
 }
 
 @media screen and (max-width:992px) {
@@ -432,9 +435,92 @@ const slide = [
     margin-top: 0;
   }
 
+  .imgproj {
+    width: 64px;
+  }
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .ourproj {
+    font-size: 20px;
+    padding: 20px 0 0 0;
+  }
+
+  .imgsize {
+    height: 232px;
+  }
+
+  .quant {
+    font-size: 28px;
+    left: 54px;
+    top: 84px;
+  }
+
+  .units {
+    font-size: 24px;
+  }
+
+  .imgstyle {
+    height: 260px;
+  }
+
+  .proj {
+    height: 282px;
+  }
+
+  .title {
+    font-size: 14px;
+    left: 52px;
+    bottom: 125px;
+  }
+
+  .title1 {
+    font-size: 14px;
+    left: 49px;
+    bottom: 106px;
+  }
+
+  .ouradvant {
+    font-size : 20px;
+  }
+  .productstyle {
+    padding-top: 20px;
+  }
+  .advanttext {
+    font-size: 16px;  
+    padding-bottom: 16px;
+  }
+  .imgproj {
+    width: 0;
+  }
+  .production {
+    font-size: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    height: 100px;
+  }
+  .textsmall1, .textsmall2, .textsmall3 {
+    display: none;
+  }
+  .textspan {
+    font-size: 16px;
+  }
+  .butproj {
+    font-size: 16px;
+  }
+  .blockproduct {
+    gap: 22px;
+  }
+  .advant {
+    height: 100px;
+  }
+  .productstyle {
+    height: 222px;
+  }
+}
 
 @media screen and (max-width:576px) {}
 </style>

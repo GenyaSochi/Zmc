@@ -33,7 +33,7 @@
     </div>
     <div>
       <p class="infofoot">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены.
-        <NuxtLink style="font-size: 18px;" to="/privacy">Политика конфиденциальности.</NuxtLink>
+        <NuxtLink class="politiclink" to="/privacy">Политика конфиденциальности.</NuxtLink>
       </p>
     </div>
   </footer>
@@ -45,6 +45,9 @@ const popup = ref(false)
 </script>
 
 <style scoped>
+.politiclink {
+  font-size: 18px;
+}
 .footer_color {
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
@@ -150,19 +153,30 @@ const popup = ref(false)
     padding-bottom: 10px;
     font-size: 18px;
   }
+  .imgfoot {
+    width: 82px;
+  }
+  .footer_color {
+    padding: 20px 20px 20px 0;
+  }
+  .politiclink {
+  font-size: 16px;
+}
 }
 
-@media screen and (max-width:992px) {
-  .infofoot,
+@media screen and (max-width:992px) {  
   .infosoc,
   .req,
   .tel,
   .contact,
   .jobs,
-  .footinfo {
+  .footinfo,
+  .mail {
     font-size: 17px;
   }
-
+  .infofoot {
+    font-size: 15px;
+  }
   .info {
     padding-bottom: 10px;
     font-size: 17px;
@@ -177,12 +191,17 @@ const popup = ref(false)
     align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    padding-bottom: 10px;
   }
 
   .lobtn {
     width: 176px;
     font-size: 17px;
   }
+  .politiclink {
+  font-size: 15px;
+}
+
 }
 
 

@@ -60,7 +60,9 @@ const photos = [
 }
 }
 @media screen and (max-width:768px) {
-  
+  .imgphoto {
+    height: 180px;
+  }
 }
 @media screen and (max-width:576px) {
   
