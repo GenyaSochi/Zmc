@@ -481,18 +481,22 @@ const slide = [
   }
 
   .ouradvant {
-    font-size : 20px;
+    font-size: 20px;
   }
+
   .productstyle {
     padding-top: 20px;
   }
+
   .advanttext {
-    font-size: 16px;  
+    font-size: 16px;
     padding-bottom: 16px;
   }
+
   .imgproj {
     width: 0;
   }
+
   .production {
     font-size: 16px;
     flex-direction: column;
@@ -502,26 +506,66 @@ const slide = [
     gap: 10px;
     height: 100px;
   }
-  .textsmall1, .textsmall2, .textsmall3 {
+
+  .textsmall1,
+  .textsmall2,
+  .textsmall3 {
     display: none;
   }
+
   .textspan {
     font-size: 16px;
   }
+
   .butproj {
     font-size: 16px;
   }
+
   .blockproduct {
     gap: 22px;
   }
+
   .advant {
     height: 100px;
   }
+
   .productstyle {
     height: 222px;
   }
 }
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+  .ourproj {
+    font-size: 18px;
+    padding: 10px 0 0 0;
+  }
+
+  .imgstyle {
+    height: 245px;
+  }
+
+  .imgsize {
+    height: 208px;
+  }
+
+  swiper-slide {
+    width: 616px;
+  }
+
+  .quant {
+    font-size: 22px;
+    left: 46px;
+  }
+
+  .units {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 10px;
+    left: 44px;
+    bottom: 118px;
+  }
+}
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

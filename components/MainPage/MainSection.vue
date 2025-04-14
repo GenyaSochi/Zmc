@@ -304,7 +304,7 @@ onUnmounted(() => {
     height: 71px;
     padding-top: 18px;
   }
-  
+
 }
 
 
@@ -322,7 +322,31 @@ onUnmounted(() => {
   .heading {
     padding-bottom: 86px;
   }
+
+  .num {
+    height: 29px;
+    width: 33px;
+    font-size: 15px;
+  }
+
+  .digits {
+    font-size: 15px;
+    gap: 5px;
+    padding: 16px 10px;
+  }
+
+  .cardcontainer {
+    font-size: 15px;
+    height: 32px;
+  }
+
+  .digitsprod {
+    font-size: 15px;
+    height: 67px;
+    padding-top: 16px;
+  }
 }
+
 
 @media screen and (max-width:350px) {
 

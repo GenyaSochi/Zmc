@@ -63,6 +63,9 @@ const photos = [
   .imgphoto {
     height: 180px;
   }
+  .photocontainer {
+    padding: 0px 22px 10px 34px;
+  }
 }
 @media screen and (max-width:576px) {
   

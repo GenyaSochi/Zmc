@@ -5,19 +5,20 @@
         <img src="/img/sitelogo1.webp" width="128px" class="imgfoot" alt="logo">
         Завод металлоконструкций Урал
       </p>
-
       <div>
         <p class="contact">Контакты</p>
-        <p class="info">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
-        <p class="info">по будням с 8:00 до 17:00</p>
-        <a href="tel:+7(351)304-42-35" class="tel">тел. +7(351) 304-42-35</a>
         <br>
-        <a href="mailto:sales@zmkural.com" class="mail">sales@zmkural.com</a>
+        <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
+        <p class="contact">по будням с 8:00 до 17:00</p>
+        <br>
+        <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
+        <br>
+        <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
       </div>
 
       <div>
         <button @click="popup = true" class="lobtn">Заказать звонок</button>
-        <p class="infosoc">Мы в социальных сетях</p>
+        <p class="contact">Мы в социальных сетях</p>
         <div>
           <a href="https://vk.com/zmkural" target="_blank" style="font-size: 19px;"><img src="/public/img/vk.webp"
               width="64" alt="vk"></a>
@@ -26,14 +27,14 @@
               alt="rutube"></a>
         </div>
         <div>
-          <NuxtLink to="job" class="jobs">Вакансии компании</NuxtLink>
+          <NuxtLink to="job" class="contact">Вакансии компании</NuxtLink>
         </div>
-        <a href="companydetails.pdf" class="req" target="_blank">Скачать реквизиты компании</a>
+        <a href="companydetails.pdf" class="contact" target="_blank">Скачать реквизиты компании</a>
       </div>
     </div>
     <div>
-      <p class="infofoot">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены.
-        <NuxtLink class="politiclink" to="/privacy">Политика конфиденциальности.</NuxtLink>
+      <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены.
+        <NuxtLink class="confid" to="/privacy">Политика конфиденциальности.</NuxtLink>
       </p>
     </div>
   </footer>
@@ -48,6 +49,7 @@ const popup = ref(false)
 .politiclink {
   font-size: 18px;
 }
+
 .footer_color {
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
@@ -70,6 +72,7 @@ const popup = ref(false)
   font-size: 19px;
   width: 257px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .lobtn:hover {
@@ -82,46 +85,16 @@ const popup = ref(false)
   display: flex;
   font-size: 19px;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .contact {
   font-size: 19px;
 }
 
-.info {
-  padding: 10px 0 10px 0;
-  font-size: 19px;
-}
-
-.jobs {
-  padding-bottom: 12px;
-  font-size: 19px;
-}
-
-.infosoc {
-  font-size: 19px;
-  padding-top: 10px;
-}
-
-.infofoot {
-  font-size: 18px;
+.confid {
+  font-size: 17px;
   text-align: center;
-}
-
-.mail {
-  padding-bottom: 12px;
-  font-size: 19px;
-}
-
-.req {
-  font-size: 19px;
-}
-
-.tel {
-  font-size: 19px;
-  padding-bottom: 14px;
+  padding-top: 20px;
 }
 
 .imgsize {
@@ -130,7 +103,7 @@ const popup = ref(false)
 
 .imgfoot {
   padding-bottom: 10px;
-  width: 122px;
+  width: 104px;
 }
 
 @media screen and (max-width:1920px) {}
@@ -138,48 +111,36 @@ const popup = ref(false)
 @media screen and (max-width:1600px) {}
 
 @media screen and (max-width:1366px) {
-  .infofoot,
-  .lobtn,
-  .infosoc,
-  .req,
-  .tel,
-  .contact,
-  .jobs,
-  .footinfo {
+
+  .lobtn .contact,
+  .footinfo,
+  .info {
     font-size: 18px;
   }
 
-  .info {
-    padding-bottom: 10px;
-    font-size: 18px;
-  }
   .imgfoot {
     width: 82px;
   }
+
   .footer_color {
     padding: 20px 20px 20px 0;
   }
-  .politiclink {
-  font-size: 16px;
-}
+
+  .confid {
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width:992px) {  
-  .infosoc,
-  .req,
-  .tel,
+@media screen and (max-width:992px) {
+
   .contact,
-  .jobs,
   .footinfo,
-  .mail {
-    font-size: 17px;
-  }
-  .infofoot {
-    font-size: 15px;
-  }
   .info {
-    padding-bottom: 10px;
     font-size: 17px;
+  }
+
+  .confid {
+    font-size: 15px;
   }
 
   .footinfo {
@@ -195,17 +156,25 @@ const popup = ref(false)
   }
 
   .lobtn {
-    width: 176px;
+    width: 211px;
     font-size: 17px;
+    margin-bottom: 10px;
   }
-  .politiclink {
-  font-size: 15px;
-}
-
 }
 
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .contact {
+    font-size: 16px;
+  }
+  .lobtn {
+    width: 196px;
+    font-size: 16px;
+  }
+  .confid {
+    font-size: 14px;
+  }
+}
 
 @media screen and (max-width:576px) {}
 </style>

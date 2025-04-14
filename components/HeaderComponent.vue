@@ -97,6 +97,7 @@ const toggleMenu = () => {
   position: relative;
   transform-origin: 1px;
 }
+
 .logo {
   width: 160px;
   padding: 0 20px;
@@ -104,28 +105,6 @@ const toggleMenu = () => {
 
 @media screen and (max-width:1920px) {
 
-  .navtag,
-  .nav,
-  .but,
-  .butnav {
-    font-size: 20px;
-  }
-
-  .nav {
-    justify-content: space-evenly;
-  }
-
-  .but {
-    gap: 30px;
-  }
-
-  .link {
-    gap: 40px;
-  }
-
-  .logo {
-    width: 140px;
-  }
 }
 
 @media screen and (max-width:1600px) {
@@ -155,7 +134,7 @@ const toggleMenu = () => {
   }
 
   .logo {
-    width: 120px;
+    width: 144px;
   }
 }
 
@@ -186,7 +165,7 @@ const toggleMenu = () => {
 
   .logo {
     width: 122px;
-   padding-left: 20px;
+    padding-left: 20px;
   }
 }
 

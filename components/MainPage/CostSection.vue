@@ -18,7 +18,7 @@
           </NuxtLink>
         </div>
       </form>
-      <div style="overflow: hidden;">
+      <div class="allswiper">
         <div class="textswiper">
           <div class="textswiper_left blur"></div>
           <div class="textswiper_right blur"></div>
@@ -55,6 +55,10 @@ const cards = [
 </script>
 
 <style scoped>
+.allswiper {
+  overflow: hidden;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -188,7 +192,7 @@ const cards = [
       rgb(30, 33, 61)96%);
   color: white;
   font-size: 20px;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
   border-radius: 10px;
 }
 
@@ -294,7 +298,15 @@ const cards = [
 
   .textswiper {
     padding: 0 0 30px 87px;
-  } 
+  }
+
+  .msg {
+    font-size: 20px;
+  }
+
+  .swiper swiper-slide {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -357,29 +369,39 @@ const cards = [
     height: 145px;
     width: 284px;
     padding-top: 0;
-  }  
+  }
 }
 
 @media screen and (max-width:768px) {
   .swiper swiper-slide {
-   display: none;
+    display: none;
   }
+
   .h2cost {
     font-size: 16px;
     padding: 10px;
   }
+
   .workcost {
     font-size: 15px;
   }
+
   .allinputcost {
     gap: 5px;
   }
+
   .custom-file-input {
     font-size: 14px;
   }
+
   .grid {
     display: flex;
     flex-direction: column-reverse;
+    height: 352px;
+  }
+
+  .formcost {
+    height: 275px;
   }
 
 }
