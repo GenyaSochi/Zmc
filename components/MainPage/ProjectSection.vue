@@ -317,10 +317,7 @@ const slide = [
     font-size: 18px;
   }
 
-  .textsmall3 {
-    font-size: 13px;
-  }
-
+ 
   .production {
     font-size: 18px;
     width: 286px;
@@ -438,6 +435,12 @@ const slide = [
   .imgproj {
     width: 64px;
   }
+  .textsmall1 {
+    padding-top: 29px;
+  }
+  .textsmall3 {
+    padding-top: 29px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -542,10 +545,11 @@ const slide = [
 
   .imgstyle {
     height: 245px;
+    padding-right: 46px;
   }
 
   .imgsize {
-    height: 208px;
+    height: 204px;
   }
 
   swiper-slide {
@@ -565,6 +569,21 @@ const slide = [
     font-size: 10px;
     left: 44px;
     bottom: 118px;
+  }
+  .title1 {
+    font-size: 10px;
+    left: 39px;
+    bottom: 101px;
+  }
+  .proj {
+    height: 256px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 42%);
+  }
+  .ouradvant {
+    font-size: 18px;
   }
 }
 </style>

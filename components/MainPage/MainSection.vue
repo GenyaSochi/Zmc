@@ -62,7 +62,7 @@ onUnmounted(() => {
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
   color: white;
-  padding: 44px 0;
+  padding: 44px 0;  
 }
 
 .digitsprod {
@@ -73,7 +73,7 @@ onUnmounted(() => {
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
   color: white;
-  text-align: center;
+  text-align: center; 
 }
 
 .h1view {
@@ -259,6 +259,7 @@ onUnmounted(() => {
     width: 100%;
     height: 50px;
     background: rgb(30, 33, 61);
+    border-radius: 0;
   }
 }
 
@@ -292,11 +293,12 @@ onUnmounted(() => {
   .cardcontainer {
     font-size: 16px;
     height: 35px;
+    border-radius: 0;
   }
 
   .allcontainer {
-    padding: 10px;
-    gap: 10px;
+    padding: 10px 0;
+    gap: 10px;  
   }
 
   .digitsprod {
@@ -304,9 +306,7 @@ onUnmounted(() => {
     height: 71px;
     padding-top: 18px;
   }
-
 }
-
 
 @media screen and (max-width:576px) {
 
@@ -320,13 +320,14 @@ onUnmounted(() => {
   }
 
   .heading {
-    padding-bottom: 86px;
+    padding-bottom: 116px;
+    padding: 0 20px 164px 20px;
   }
 
   .num {
     height: 29px;
-    width: 33px;
-    font-size: 15px;
+    width: 30px;
+    font-size: 14px;
   }
 
   .digits {
@@ -345,6 +346,7 @@ onUnmounted(() => {
     height: 67px;
     padding-top: 16px;
   }
+
 }
 
 

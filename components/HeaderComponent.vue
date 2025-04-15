@@ -15,7 +15,7 @@
       <button class="burger" @click="toggleMenu">
         <span></span>
         <span></span>
-        <span></span>
+        <span></span>      
       </button>
     </div>
   </nav>
@@ -87,6 +87,7 @@ const toggleMenu = () => {
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  position: absolute;
 }
 
 .burger span {
@@ -99,7 +100,7 @@ const toggleMenu = () => {
 }
 
 .logo {
-  width: 160px;
+  width: 144px;
   padding: 0 20px;
 }
 
@@ -218,7 +219,7 @@ const toggleMenu = () => {
   }
 
   .navtag {
-    padding: 30px 0;
+    padding: 22px 0;
     height: 100px;
   }
 
@@ -264,9 +265,7 @@ const toggleMenu = () => {
     font-size: 15px;
   }
 
-  .burger {
-    display: flex;
-  }
+  
 
   .navtag {
     padding: 30px 0;
@@ -312,7 +311,10 @@ const toggleMenu = () => {
   }
 
   .logo {
-    display: none;
+    display: 64px;
+  }
+  .burger {
+    left: 480px;
   }
 }
 </style>

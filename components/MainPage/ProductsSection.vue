@@ -113,5 +113,10 @@
   }
 }
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+  .seeprod {
+    font-size: 14px;
+    padding: 10px 0px;
+  }
+}
 </style>

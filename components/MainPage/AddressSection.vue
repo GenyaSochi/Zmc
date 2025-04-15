@@ -69,7 +69,7 @@ h2 {
 @media screen and (max-width:768px) {
   .addresscont {
     font-size: 20px;
-    padding-top: 10px;
+    padding: 10px 0 0 0;  
   }
   iframe {
     height: 340px;
@@ -80,5 +80,13 @@ h2 {
   }
 
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+  .addresscont {
+    font-size: 18px;
+    padding: 10px 0 0 0;
+  }
+  iframe {
+    height: 300px;
+  }
+}
 </style>
