@@ -229,6 +229,9 @@ const toggleMenu = () => {
     text-align: center;
     padding-left: 20px;
     height: 40px;
+    top: 29px;
+    position: absolute;
+    left: 650px;  
   }
 
   .link {
@@ -254,6 +257,7 @@ const toggleMenu = () => {
   .logo {
     display: none;
   }
+
 }
 
 @media screen and (max-width:576px) {
@@ -264,8 +268,6 @@ const toggleMenu = () => {
   .butnav {
     font-size: 15px;
   }
-
-  
 
   .navtag {
     padding: 30px 0;

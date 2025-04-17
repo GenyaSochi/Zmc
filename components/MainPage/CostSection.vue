@@ -392,19 +392,34 @@ const cards = [
 
   .custom-file-input {
     font-size: 14px;
+    padding: 5px; 
+    border-radius: 8px;
   }
 
   .grid {
     display: flex;
     flex-direction: column-reverse;
     height: 352px;
+    padding: 0 0px 30px 0px;
   }
 
   .formcost {
     height: 275px;
+    border-radius: 0;
+  }
+  
+}
+
+@media screen and (max-width:576px) {
+  .grid {
+    padding: 0 0px 30px 0px;
+  }
+  .formcost {
+    border-radius: 0;
+  }
+  .custom-file-input {
+    padding: 5px;
   }
 
 }
-
-@media screen and (max-width:576px) {}
 </style>

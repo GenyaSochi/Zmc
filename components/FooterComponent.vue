@@ -7,10 +7,8 @@
       </p>
       <div>
         <p class="contact">Контакты</p>
-        <br>
         <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
         <p class="contact">по будням с 8:00 до 17:00</p>
-        <br>
         <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
         <br>
         <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
@@ -94,7 +92,7 @@ const popup = ref(false)
 .confid {
   font-size: 17px;
   text-align: center;
-  padding-top: 20px;
+  padding: 10px 0;
 }
 
 .imgsize {
@@ -105,10 +103,6 @@ const popup = ref(false)
   padding-bottom: 10px;
   width: 104px;
 }
-
-@media screen and (max-width:1920px) {}
-
-@media screen and (max-width:1600px) {}
 
 @media screen and (max-width:1366px) {
 
@@ -158,23 +152,36 @@ const popup = ref(false)
   .lobtn {
     width: 211px;
     font-size: 17px;
-    margin-bottom: 10px;
   }
 }
-
 
 @media screen and (max-width:768px) {
   .contact {
     font-size: 16px;
   }
+
   .lobtn {
     width: 196px;
     font-size: 16px;
   }
+
   .confid {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+  .footer_color {
+    padding: 10px 0 0 10px;
+  }
+
+  .contact {
+    padding-top: 0;
+  }
+
+  .lobtn {
+    margin-bottom: 4px;
+  }
+
+}
 </style>

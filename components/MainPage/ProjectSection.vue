@@ -585,6 +585,10 @@ const slide = [
   .ouradvant {
     font-size: 18px;
   }
+  .butproj {
+    border-radius: 5px;
+    padding: 2px 3px 5px 2px;
+  }
 }
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

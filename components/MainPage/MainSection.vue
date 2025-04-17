@@ -251,7 +251,7 @@ onUnmounted(() => {
 
   .allcontainer {
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 0;
     gap: 13px;
   }
 
@@ -304,7 +304,7 @@ onUnmounted(() => {
   .digitsprod {
     font-size: 16px;
     height: 71px;
-    padding-top: 18px;
+    padding-top: 22px;
   }
 }
 
@@ -326,7 +326,7 @@ onUnmounted(() => {
 
   .num {
     height: 29px;
-    width: 30px;
+    width: 29px;
     font-size: 14px;
   }
 

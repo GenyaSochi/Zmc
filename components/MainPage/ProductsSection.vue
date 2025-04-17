@@ -103,7 +103,6 @@
   }
 }
 
-
 @media screen and (max-width:768px) {
   .textprod {
     display: none;
@@ -118,5 +117,6 @@
     font-size: 14px;
     padding: 10px 0px;
   }
+  
 }
 </style>
