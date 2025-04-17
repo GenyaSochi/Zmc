@@ -12,11 +12,11 @@
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
-      <button class="burger" @click="toggleMenu">
+      <button class="burger" @click="toggleMenu ">
         <span></span>
         <span></span>
         <span></span>      
-      </button>
+    </button>
     </div>
   </nav>
   <ModalComponent v-model="popup"></ModalComponent>
@@ -80,13 +80,13 @@ const toggleMenu = () => {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
+  width: 50px;
   height: 25px;
-  background: transparent;
-  border: none;
+  /* background: transparent; */
+  /* border: none; */
   cursor: pointer;
-  padding: 0;
-  z-index: 10;
+  /* padding: 0;
+  z-index: 10; */
   position: absolute;
 }
 
@@ -233,18 +233,18 @@ const toggleMenu = () => {
     position: absolute;
     left: 650px;  
   }
-
-  .link {
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    position: absolute;
-    padding-bottom: 10px;
-    top: 74px;
-    left: 0;
-    width: 100%;
-    background-color: rgb(30, 33, 61);
-  }
+  /* 
+    .link {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      position: absolute;
+      padding-bottom: 10px;
+      top: 74px;
+      left: 0;
+      width: 100%;
+      background-color: rgb(30, 33, 61);
+    } */
 
   .link.active {
     display: flex;
@@ -255,9 +255,11 @@ const toggleMenu = () => {
   }
 
   .logo {
-    display: none;
+    display: flex;
+    position: absolute;
+    right: 549px;
+    width: 110px;
   }
-
 }
 
 @media screen and (max-width:576px) {
@@ -277,22 +279,14 @@ const toggleMenu = () => {
   .nav {
     display: flex;
     justify-content: flex-start;
+    text-align: center;
     padding-left: 20px;
     height: 40px;
+    top: 29px;
+    position: absolute;
+    left: 650px;  
   }
 
-  .link {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    padding-bottom: 10px;
-    top: 74px;
-    left: 0;
-    width: 100%;
-    height: 295px;
-    background-color: rgb(30, 33, 61);
-  }
 
   .link.active {
     display: flex;
@@ -312,9 +306,12 @@ const toggleMenu = () => {
     text-align: left;
   }
 
-  .logo {
-    display: 64px;
-  }
+  /* .logo {   
+    display: flex;
+    position: absolute;
+    right: 549px;
+    width: 110px;
+  } */
   .burger {
     left: 480px;
   }
