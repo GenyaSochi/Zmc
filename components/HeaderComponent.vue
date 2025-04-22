@@ -3,20 +3,20 @@
     <div class="nav">
       <img src="/img/sitelogo1.webp" alt="logo" class="logo">
       <div class="link" :class="{ 'active': isMenuOpen }">
-        <NuxtLink to="/" class="nav">Главная</NuxtLink>
-        <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
-        <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
-        <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
-      </div>
-      <div class="but" :class="{ 'active': isMenuOpen }">
-        <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
-        <button class="butnav" @click="popup = true">Заказать звонок</button>
+        <NuxtLink to="/" class="nav" @click="popup = true">Главная</NuxtLink>
+        <NuxtLink to="/catalog" class="nav" @click="popup = true">Каталог продукции</NuxtLink>
+        <NuxtLink to="/projects" class="nav" @click="popup = true">Проекты</NuxtLink>
+        <NuxtLink to="/contacts" class="nav" @click="popup = true">Контакты</NuxtLink>
       </div>
       <button class="burger" @click="toggleMenu ">
         <span></span>
         <span></span>
         <span></span>      
     </button>
+      <div class="but" :class="{ 'active': isMenuOpen }">
+        <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
+        <button class="butnav" @click="popup = true">Заказать звонок</button>
+      </div>
     </div>
   </nav>
   <ModalComponent v-model="popup"></ModalComponent>
@@ -31,6 +31,7 @@ const toggleMenu = () => {
 }
 
 </script>
+ 
 
 <style scoped>
 .navtag {

@@ -213,7 +213,6 @@ onUnmounted(() => {
     height: 126px;
     padding-top: 48px;
   }
-
 }
 
 @media screen and (max-width:992px) {
@@ -303,8 +302,8 @@ onUnmounted(() => {
 
   .digitsprod {
     font-size: 16px;
-    height: 71px;
-    padding-top: 22px;
+    height: 78px;
+    padding-top: 27px;
   }
 }
 
@@ -321,17 +320,17 @@ onUnmounted(() => {
 
   .heading {
     padding-bottom: 116px;
-    padding: 0 20px 164px 20px;
+    padding: 0;
   }
 
   .num {
-    height: 29px;
-    width: 29px;
-    font-size: 14px;
+    height: 25px;
+    width: 42px;
+    font-size: 13px;
   }
 
   .digits {
-    font-size: 15px;
+    font-size: 14px;
     gap: 5px;
     padding: 16px 10px;
   }
@@ -346,6 +345,12 @@ onUnmounted(() => {
     height: 67px;
     padding-top: 16px;
   }
+  .heading  {
+    padding-bottom: 85px;
+  }
+  .h1view {
+  font-size: 14px;
+}
 
 }
 

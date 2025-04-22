@@ -589,6 +589,20 @@ const slide = [
     border-radius: 5px;
     padding: 2px 3px 5px 2px;
   }
+.production {
+  display: flex;
+  font-size: 13px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  height: 79px;
+    }
+}
+
+.advant {
+  display: none;
 }
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->
