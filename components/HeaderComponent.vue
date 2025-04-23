@@ -1,6 +1,11 @@
 <template>
   <nav class="navtag">
     <div class="nav">
+        <button class="burger" @click="toggleMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       <img src="/img/sitelogo1.webp" alt="logo" class="logo">
       <div class="link" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/" class="nav" @click="popup = true">Главная</NuxtLink>
@@ -8,11 +13,6 @@
         <NuxtLink to="/projects" class="nav" @click="popup = true">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav" @click="popup = true">Контакты</NuxtLink>
       </div>
-      <button class="burger" @click="toggleMenu ">
-        <span></span>
-        <span></span>
-        <span></span>      
-    </button>
       <div class="but" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
@@ -31,7 +31,7 @@ const toggleMenu = () => {
 }
 
 </script>
- 
+
 
 <style scoped>
 .navtag {
@@ -77,37 +77,36 @@ const toggleMenu = () => {
   font-size: 20px;
 }
 
-.burger {
+.burger { 
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
   width: 50px;
-  height: 25px;
-  /* background: transparent; */
-  /* border: none; */
+  height: 35px;
+  border: none;
+  position: relative;
+  background-color: red;
   cursor: pointer;
-  /* padding: 0;
-  z-index: 10; */
-  position: absolute;
 }
 
 .burger span {
-  width: 100%;
+  width: 50px;
   height: 3px;
   background: white;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  left: 10px;  
 }
+.burger span:nth-child(1){
+  transform: translateY(-10px);
+}
+.burger span:nth-child(3){
+  transform: translateY(10px);
+}
+
 
 .logo {
   width: 144px;
   padding: 0 20px;
 }
 
-@media screen and (max-width:1920px) {
-
-}
+@media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
 
@@ -225,15 +224,14 @@ const toggleMenu = () => {
   }
 
   .nav {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    padding-left: 20px;
-    height: 40px;
-    top: 29px;
     position: absolute;
-    left: 650px;  
+    right: 0;
+    top: 0;
   }
+.burger {
+  display: flex;
+    flex-direction: column;
+}
   /* 
     .link {
       display: none;
@@ -285,7 +283,7 @@ const toggleMenu = () => {
     height: 40px;
     top: 29px;
     position: absolute;
-    left: 650px;  
+    left: 650px;
   }
 
 
@@ -307,14 +305,23 @@ const toggleMenu = () => {
     text-align: left;
   }
 
-  /* .logo {   
-    display: flex;
+  .logo {   
+    /* display: flex; */
     position: absolute;
     right: 549px;
     width: 110px;
-  } */
+  }
   .burger {
     left: 480px;
   }
+
+  .link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: blueviolet;
+    display: block;
+  }
+ 
 }
 </style>

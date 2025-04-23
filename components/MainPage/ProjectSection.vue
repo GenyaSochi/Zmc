@@ -601,8 +601,6 @@ const slide = [
     }
 }
 
-.advant {
-  display: none;
-}
+
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->
