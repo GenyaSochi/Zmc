@@ -62,7 +62,7 @@ onUnmounted(() => {
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
   color: white;
-  padding: 44px 0;  
+  padding: 44px 0;
 }
 
 .digitsprod {
@@ -73,7 +73,7 @@ onUnmounted(() => {
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
   color: white;
-  text-align: center; 
+  text-align: center;
 }
 
 .h1view {
@@ -279,7 +279,7 @@ onUnmounted(() => {
 
   .digits {
     font-size: 16px;
-    gap: 5px;
+    gap: 8px;
     padding: 22px 0;
   }
 
@@ -297,7 +297,7 @@ onUnmounted(() => {
 
   .allcontainer {
     padding: 10px 0;
-    gap: 10px;  
+    gap: 10px;
   }
 
   .digitsprod {
@@ -305,12 +305,15 @@ onUnmounted(() => {
     height: 78px;
     padding-top: 27px;
   }
+
+  .num {
+    height: 33px;
+  }
 }
 
 @media screen and (max-width:576px) {
 
-  .h1view,
-  .heading {
+  .h1view {
     font-size: 16px;
   }
 
@@ -319,13 +322,13 @@ onUnmounted(() => {
   }
 
   .heading {
-    padding-bottom: 116px;
-    padding: 0;
+    font-size: 16px;
+    padding-bottom: 126px;
   }
 
   .num {
-    height: 25px;
-    width: 42px;
+    height: 26px;
+    width: 28px;
     font-size: 13px;
   }
 
@@ -345,13 +348,10 @@ onUnmounted(() => {
     height: 67px;
     padding-top: 16px;
   }
-  .heading  {
-    padding-bottom: 85px;
-  }
-  .h1view {
-  font-size: 14px;
-}
 
+  .h1view {
+    font-size: 14px;
+  }
 }
 
 
@@ -360,6 +360,8 @@ onUnmounted(() => {
   .h1view,
   .heading {
     font-size: 15px;
+    /* background-color:  rgb(30, 33, 61);
+    color: white; */
   }
 
   .video {
@@ -371,7 +373,13 @@ onUnmounted(() => {
   }
 
   .h1view {
-    padding-bottom: 52px;
+    padding-bottom: 62px;
+  }
+
+  .num {
+    height: 22px;
+    width: 43px;
+    padding-top: 2px;
   }
 }
 </style>

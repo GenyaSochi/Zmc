@@ -110,6 +110,7 @@
   img {
     display: none;
   }
+  
 }
 
 @media screen and (max-width:576px) {

@@ -317,7 +317,7 @@ const slide = [
     font-size: 18px;
   }
 
- 
+
   .production {
     font-size: 18px;
     width: 286px;
@@ -435,9 +435,11 @@ const slide = [
   .imgproj {
     width: 64px;
   }
+
   .textsmall1 {
     padding-top: 29px;
   }
+
   .textsmall3 {
     padding-top: 29px;
   }
@@ -504,7 +506,8 @@ const slide = [
     font-size: 16px;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: none;
+    text-align: center;
     padding: 10px;
     gap: 10px;
     height: 100px;
@@ -522,6 +525,8 @@ const slide = [
 
   .butproj {
     font-size: 16px;
+    padding: 5px;
+    width: 96px;
   }
 
   .blockproduct {
@@ -570,37 +575,36 @@ const slide = [
     left: 44px;
     bottom: 118px;
   }
+
   .title1 {
     font-size: 10px;
     left: 39px;
     bottom: 101px;
   }
+
   .proj {
     height: 256px;
   }
+
   .swiper-button-next,
   .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 42%);
   }
+
   .ouradvant {
     font-size: 18px;
   }
+
   .butproj {
     border-radius: 5px;
     padding: 2px 3px 5px 2px;
   }
-.production {
-  display: flex;
-  font-size: 13px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10px;
-  gap: 10px;
-  height: 79px;
-    }
+
+  .production {   
+    height: 100px;
+  }
+  
+  
 }
-
-
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

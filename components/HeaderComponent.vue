@@ -1,12 +1,12 @@
 <template>
   <nav class="navtag">
     <div class="nav">
+      <img src="/img/sitelogo1.webp" alt="logo" class="logo">
         <button class="burger" @click="toggleMenu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-      <img src="/img/sitelogo1.webp" alt="logo" class="logo">
       <div class="link" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/" class="nav" @click="popup = true">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav" @click="popup = true">Каталог продукции</NuxtLink>
@@ -83,7 +83,7 @@ const toggleMenu = () => {
   height: 35px;
   border: none;
   position: relative;
-  background-color: red;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -228,8 +228,8 @@ const toggleMenu = () => {
     right: 0;
     top: 0;
   }
-.burger {
-  display: flex;
+  .burger {
+    display: flex;
     flex-direction: column;
 }
   /* 
@@ -256,9 +256,10 @@ const toggleMenu = () => {
   .logo {
     display: flex;
     position: absolute;
-    right: 549px;
+    right: 654px;
+    top: 25px;
     width: 110px;
-  }
+  }  
 }
 
 @media screen and (max-width:576px) {
@@ -308,20 +309,38 @@ const toggleMenu = () => {
   .logo {   
     /* display: flex; */
     position: absolute;
-    right: 549px;
+    right: 468px;
     width: 110px;
+    top: -4px;
   }
   .burger {
-    left: 480px;
+    left: 229px;
+    top: 16px;
   }
 
-  .link {
+  /* .link {
     position: absolute;
     left: 0;
     top: 0;
     background-color: blueviolet;
     display: block;
+  } */
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    padding-left: 20px;
+    height: 40px;
+    top: 29px;
+    position: absolute;
+    left: 250px;
+  }   
+}
+
+@media screen and (max-width:350px){
+  .logo {
+    right: 240px;    
   }
- 
+  
 }
 </style>

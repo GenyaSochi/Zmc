@@ -177,11 +177,14 @@ const popup = ref(false)
 
   .contact {
     padding-top: 0;
+    padding-bottom: 5px;
+}
   }
 
   .lobtn {
     margin-bottom: 4px;
+    width: 164px;
   }
 
-}
+
 </style>

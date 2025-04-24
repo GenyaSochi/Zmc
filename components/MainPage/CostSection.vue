@@ -418,8 +418,15 @@ const cards = [
     border-radius: 0;
   }
   .custom-file-input {
+    width: 192px;
     padding: 5px;
   }
-
+  .inputcost {
+    width: 190px;
+  }
+  .butcost {
+    width: 176px;
+  }
+  
 }
 </style>
