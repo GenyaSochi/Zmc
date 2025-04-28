@@ -412,7 +412,8 @@ const cards = [
 
 @media screen and (max-width:576px) {
   .grid {
-    padding: 0 0px 30px 0px;
+    height: 303px;
+    padding-bottom: 10px;
   }
   .formcost {
     border-radius: 0;
@@ -427,6 +428,18 @@ const cards = [
   .butcost {
     width: 176px;
   }
-  
+  .textswiper {
+    padding: 0;
+  }
+  .h2cost {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .workcost {
+    font-size: 14px;  
+  }
+  .perscost {
+    padding-bottom: 13px;
+  }
 }
 </style>

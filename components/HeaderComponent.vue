@@ -1,24 +1,24 @@
 <template>
-  <nav class="navtag">
+  <header class="navtag">
     <div class="nav">
       <img src="/img/sitelogo1.webp" alt="logo" class="logo">
-        <button class="burger" @click="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       <div class="link" :class="{ 'active': isMenuOpen }">
-        <NuxtLink to="/" class="nav" @click="popup = true">Главная</NuxtLink>
-        <NuxtLink to="/catalog" class="nav" @click="popup = true">Каталог продукции</NuxtLink>
-        <NuxtLink to="/projects" class="nav" @click="popup = true">Проекты</NuxtLink>
-        <NuxtLink to="/contacts" class="nav" @click="popup = true">Контакты</NuxtLink>
+        <NuxtLink to="/" class="nav">Главная</NuxtLink>
+        <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
+        <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
+        <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
       <div class="but" :class="{ 'active': isMenuOpen }">
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
     </div>
-  </nav>
+    <button class="burger" @click="toggleMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
@@ -29,13 +29,11 @@ const isMenuOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
-
 </script>
-
 
 <style scoped>
 .navtag {
-  padding: 15px 0;
+  padding: 10px 0;
   background-color: rgb(30, 33, 61);
   font-family: 'Montserrat', light;
   font-size: 20px;
@@ -52,7 +50,7 @@ const toggleMenu = () => {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  height: 110px;
+  height: 76px;
   font-family: 'Montserrat', light;
 }
 
@@ -77,7 +75,7 @@ const toggleMenu = () => {
   font-size: 20px;
 }
 
-.burger { 
+.burger {
   display: none;
   width: 50px;
   height: 35px;
@@ -91,18 +89,19 @@ const toggleMenu = () => {
   width: 50px;
   height: 3px;
   background: white;
-  left: 10px;  
+  left: 10px;
 }
-.burger span:nth-child(1){
+
+.burger span:nth-child(1) {
   transform: translateY(-10px);
 }
-.burger span:nth-child(3){
+
+.burger span:nth-child(3) {
   transform: translateY(10px);
 }
 
-
 .logo {
-  width: 144px;
+  width: 142px;
   padding: 0 20px;
 }
 
@@ -207,8 +206,6 @@ const toggleMenu = () => {
 
 @media screen and (max-width:768px) {
 
-  .navtag,
-  .nav,
   .but,
   .butnav {
     font-size: 16px;
@@ -216,37 +213,37 @@ const toggleMenu = () => {
 
   .burger {
     display: flex;
+    flex-direction: column;
+    left: 686px;
+    top: 40px;
   }
 
   .navtag {
-    padding: 22px 0;
-    height: 100px;
+    height: 90px;
+    font-size: 16px;
   }
 
   .nav {
     position: absolute;
     right: 0;
     top: 0;
+    font-size: 16px;
   }
-  .burger {
+
+  .nav.active {
     display: flex;
-    flex-direction: column;
-}
-  /* 
-    .link {
-      display: none;
-      flex-direction: column;
-      gap: 8px;
-      position: absolute;
-      padding-bottom: 10px;
-      top: 74px;
-      left: 0;
-      width: 100%;
-      background-color: rgb(30, 33, 61);
-    } */
+  }
+
+  .link {
+    position: absolute;
+  }
 
   .link.active {
     display: flex;
+    gap: 10px;
+    position: absolute;
+    transform: translateY(300px);
+    height: 200px;
   }
 
   .but {
@@ -256,24 +253,24 @@ const toggleMenu = () => {
   .logo {
     display: flex;
     position: absolute;
-    right: 654px;
+    right: 27rem;
     top: 25px;
     width: 110px;
-  }  
+  }
+
 }
 
 @media screen and (max-width:576px) {
 
   .navtag,
-  .nav,
   .but,
   .butnav {
     font-size: 15px;
   }
 
   .navtag {
-    padding: 30px 0;
-    height: 100px;
+    padding: 24px 0;
+    height: 100%;
   }
 
   .nav {
@@ -285,8 +282,8 @@ const toggleMenu = () => {
     top: 29px;
     position: absolute;
     left: 650px;
+    font-size: 15px;
   }
-
 
   .link.active {
     display: flex;
@@ -306,41 +303,24 @@ const toggleMenu = () => {
     text-align: left;
   }
 
-  .logo {   
-    /* display: flex; */
-    position: absolute;
-    right: 468px;
-    width: 110px;
-    top: -4px;
-  }
-  .burger {
-    left: 229px;
-    top: 16px;
-  }
-
-  /* .link {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: blueviolet;
-    display: block;
-  } */
-  .nav {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    padding-left: 20px;
-    height: 40px;
-    top: 29px;
-    position: absolute;
-    left: 250px;
-  }   
-}
-
-@media screen and (max-width:350px){
   .logo {
-    right: 240px;    
+    position: absolute;
+    right: 572px;
+    width: 110px;
+    top: -14px;
+  }
+
+  .burger {
+    left: 500px;
+    top: 10px;
   }
   
+}
+
+@media screen and (max-width:350px) {
+  .logo {
+    right: 240px;
+  }
+
 }
 </style>

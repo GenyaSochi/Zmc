@@ -394,6 +394,7 @@ const slide = [
   .production {
     font-size: 17px;
     height: 235px;
+    padding: 0px 18px 26px 26px;
   }
 
   .textspan {
@@ -436,12 +437,10 @@ const slide = [
     width: 64px;
   }
 
-  .textsmall1 {
-    padding-top: 29px;
-  }
-
+  .textsmall1,
+  .textsmall2,
   .textsmall3 {
-    padding-top: 29px;
+    padding-top: 5px;
   }
 }
 
@@ -549,21 +548,22 @@ const slide = [
   }
 
   .imgstyle {
-    height: 245px;
-    padding-right: 46px;
+    height: 216px;
+    padding-right: 42px;
   }
 
   .imgsize {
-    height: 204px;
+    height: 194px;
   }
 
   swiper-slide {
-    width: 616px;
+    width: 100%;
   }
 
   .quant {
     font-size: 22px;
     left: 46px;
+    top: 50px;
   }
 
   .units {
@@ -573,26 +573,30 @@ const slide = [
   .title {
     font-size: 10px;
     left: 44px;
-    bottom: 118px;
+    bottom: 125px;
   }
 
   .title1 {
     font-size: 10px;
-    left: 39px;
-    bottom: 101px;
+    left: 42px;
+    bottom: 110px;
   }
 
   .proj {
     height: 256px;
   }
-
+  
   .swiper-button-next,
   .swiper-button-prev {
-    top: var(--swiper-navigation-top-offset, 42%);
+    top: var(--swiper-navigation-top-offset, 41%);
   }
 
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 26px);
+  }
   .ouradvant {
     font-size: 18px;
+    padding-top: 10px;
   }
 
   .butproj {
@@ -600,11 +604,36 @@ const slide = [
     padding: 2px 3px 5px 2px;
   }
 
-  .production {   
-    height: 100px;
+  .production {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 0;
   }
-  
-  
+  .advanttext {
+    font-size: 13px;
+  }
+  .blockproduct {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  .productstyle {
+    padding: 10px;
+    height: 100%;
+  }
+  .advant {
+    height: 30px;
+    border-radius: 0;
+    padding: 6px 0;
+    width: 100%;
+  }
 }
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

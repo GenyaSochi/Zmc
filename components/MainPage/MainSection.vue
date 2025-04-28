@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="video">
-      <video autoplay muted id="myVideo" src="/public/video/ministart.mp4"></video>
+      <video autoplay muted id="myVideo" src="/public/video/newvideostart.mp4"></video>
     </div>
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
@@ -105,7 +105,6 @@ onUnmounted(() => {
   text-align: center;
 }
 
-
 .allcontainer {
   display: flex;
   justify-content: center;
@@ -118,12 +117,12 @@ onUnmounted(() => {
 .heading {
   text-align: center;
   color: black;
-  padding-bottom: 400px;
+  padding-bottom: 300px;
   font-size: 22px;
 }
 
 .video {
-  height: 160px;
+  height: 30px;
   z-index: -1000;
   overflow: hidden;
 }
@@ -154,10 +153,6 @@ onUnmounted(() => {
     font-size: 22px;
   }
 
-  .video {
-    height: 130px;
-  }
-
   .digits {
     font-size: 20px;
     gap: 10px;
@@ -177,17 +172,13 @@ onUnmounted(() => {
 
 @media screen and (max-width:1366px) {
 
-  .h1view,
-  .heading {
+  .h1view {
     font-size: 20px;
   }
 
-  .video {
-    height: 75px;
-  }
-
   .heading {
-    padding-bottom: 316px;
+    font-size: 20px;
+    padding-bottom: 228px;
   }
 
   .digits {
@@ -218,15 +209,15 @@ onUnmounted(() => {
 @media screen and (max-width:992px) {
   .h1view {
     font-size: 18px;
+    padding-bottom: 7px;
   }
 
   .heading {
-    padding-bottom: 210px;
+    padding-bottom: 175px;
     font-size: 18px;
   }
-
   .video {
-    height: 33px;
+    height: 23px;
   }
 
   .digits {
@@ -263,20 +254,17 @@ onUnmounted(() => {
 }
 
 @media screen and (max-width:768px) {
-
-  .h1view,
   .heading {
-    font-size: 17px;
+    font-size: 15px;
+    padding-bottom: 127px;
   }
-
   .video {
-    height: 48px;
+    height: 18px;
   }
-
-  .heading {
-    padding-bottom: 160px;
+  .h1view  {
+    font-size: 15px;
+    padding-bottom: 0px;
   }
-
   .digits {
     font-size: 16px;
     gap: 8px;
@@ -314,26 +302,27 @@ onUnmounted(() => {
 @media screen and (max-width:576px) {
 
   .h1view {
-    font-size: 16px;
+    font-size: 14px;
+    padding-bottom: 60px;
   }
 
   .video {
-    height: 12px;
+    height: 10px;
   }
 
   .heading {
-    font-size: 16px;
-    padding-bottom: 126px;
+    font-size: 14px;
+    padding-bottom: 29px;
   }
 
   .num {
-    height: 26px;
-    width: 28px;
+    height: 27px;
+    width: 27px;
     font-size: 13px;
   }
 
   .digits {
-    font-size: 14px;
+    font-size: 13px;
     gap: 5px;
     padding: 16px 10px;
   }
@@ -344,14 +333,16 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    font-size: 15px;
+    font-size: 13px;
     height: 67px;
     padding-top: 16px;
   }
 
   .h1view {
     font-size: 14px;
+    padding-bottom: 86px;
   }
+  
 }
 
 
@@ -368,9 +359,7 @@ onUnmounted(() => {
     height: 12px;
   }
 
-  .heading {
-    padding-bottom: 33px;
-  }
+
 
   .h1view {
     padding-bottom: 62px;
