@@ -1,14 +1,14 @@
 <template>
   <header class="navtag">
-    <div class="nav">
+    <div class="nav_all">
       <img src="/img/sitelogo1.webp" alt="logo" class="logo">
-      <div class="link" :class="{ 'active': isMenuOpen }">
+      <div class="link">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
         <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
-      <div class="but" :class="{ 'active': isMenuOpen }">
+      <div class="but">
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
@@ -18,6 +18,16 @@
       <span></span>
       <span></span>
     </button>
+    <Teleport to="body">
+      <div @click="isMenuOpen=false" :class="{ hidden:!isMenuOpen,'active': isMenuOpen }">
+        <NuxtLink to="/" >Главная</NuxtLink>
+        <NuxtLink to="/catalog" >Каталог продукции</NuxtLink>
+        <NuxtLink to="/projects" >Проекты</NuxtLink>
+        <NuxtLink to="/contacts" >Контакты</NuxtLink>
+        <NuxtLink to="/#cost" >Рассчитать стоимость</NuxtLink>
+        <button @click="popup = true">Заказать звонок</button>
+      </div>
+    </Teleport>
   </header>
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
@@ -43,6 +53,20 @@ const toggleMenu = () => {
   overflow: hidden;
 }
 
+.hidden, .active {
+  display: none;
+}
+
+.nav_all {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  height: 76px;
+  font-family: 'Montserrat', light;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -80,7 +104,7 @@ const toggleMenu = () => {
   width: 50px;
   height: 35px;
   border: none;
-  position: relative;
+  position: absolute;
   background-color: transparent;
   cursor: pointer;
 }
@@ -214,8 +238,8 @@ const toggleMenu = () => {
   .burger {
     display: flex;
     flex-direction: column;
-    left: 686px;
-    top: 40px;
+    right: 54px;
+    top: 42px;
   }
 
   .navtag {
@@ -224,14 +248,22 @@ const toggleMenu = () => {
   }
 
   .nav {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 16px;
+   display: none;
   }
 
-  .nav.active {
+  .active {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    z-index: 101;
+    padding-left: 10px;
+    background-color: rgb(30, 33, 61);
+    color: white;
   }
 
   .link {
@@ -253,7 +285,7 @@ const toggleMenu = () => {
   .logo {
     display: flex;
     position: absolute;
-    right: 27rem;
+    left: 0;
     top: 25px;
     width: 110px;
   }
