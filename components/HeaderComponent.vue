@@ -20,10 +20,10 @@
     </button>
     <Teleport to="body">
       <div @click="isMenuOpen=false" :class="{ hidden:!isMenuOpen,'active': isMenuOpen }">
-        <NuxtLink to="/" >Главная</NuxtLink>
-        <NuxtLink to="/catalog" >Каталог продукции</NuxtLink>
-        <NuxtLink to="/projects" >Проекты</NuxtLink>
-        <NuxtLink to="/contacts" >Контакты</NuxtLink>
+        <NuxtLink to="/">Главная</NuxtLink>
+        <NuxtLink to="/catalog">Каталог продукции</NuxtLink>
+        <NuxtLink to="/projects">Проекты</NuxtLink>
+        <NuxtLink to="/contacts"  >Контакты</NuxtLink>
         <NuxtLink to="/#cost" >Рассчитать стоимость</NuxtLink>
         <button @click="popup = true">Заказать звонок</button>
       </div>
@@ -248,7 +248,7 @@ const toggleMenu = () => {
   }
 
   .nav {
-   display: none;
+   display: none;   
   }
 
   .active {
@@ -264,6 +264,8 @@ const toggleMenu = () => {
     padding-left: 10px;
     background-color: rgb(30, 33, 61);
     color: white;
+    font-size: 16px;
+    padding-bottom: 5px;
   }
 
   .link {
@@ -275,7 +277,7 @@ const toggleMenu = () => {
     gap: 10px;
     position: absolute;
     transform: translateY(300px);
-    height: 200px;
+    height: 200px;    
   }
 
   .but {
@@ -288,6 +290,10 @@ const toggleMenu = () => {
     left: 0;
     top: 25px;
     width: 110px;
+  }
+  a {
+    font-size: 16px;
+    padding-bottom: 5px;
   }
 
 }
