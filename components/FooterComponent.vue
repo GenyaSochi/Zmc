@@ -2,27 +2,26 @@
   <footer class="footer_color">
     <div class="footercont">
       <p class="footinfo">
-        <img src="/img/sitelogo1.webp" width="128px" class="imgfoot" alt="logo">
+        <img src="/img/sitelogo1.webp" width="128px" class="imglogo" alt="logo">
         Завод металлоконструкций Урал
       </p>
       <div>
-        <p class="contact">Контакты</p>
+        <p class="contactmain">Контакты</p>
         <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
         <p class="contact">по будням с 8:00 до 17:00</p>
         <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
         <br>
         <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
       </div>
-
       <div>
         <button @click="popup = true" class="lobtn">Заказать звонок</button>
         <p class="contact">Мы в социальных сетях</p>
-        <div>
-          <a href="https://vk.com/zmkural" target="_blank" style="font-size: 19px;"><img src="/public/img/vk.webp"
-              width="64" alt="vk"></a>
+        <div class="imgall">
+          <a href="https://vk.com/zmkural" target="_blank"><img src="/public/img/vk.webp"
+              width="64" alt="vk" class="imgvk"></a>
           <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-            target="_blank" style="font-size: 19px;"><img src="/public/img/R_white.webp" width="30" class="imgsize"
-              alt="rutube"></a>
+            target="_blank"><img src="/public/img/R_white.webp" width="30"
+              alt="rutube" class="imgru"></a>
         </div>
         <div>
           <NuxtLink to="job" class="contact">Вакансии компании</NuxtLink>
@@ -68,7 +67,7 @@ const popup = ref(false)
   padding: 10px 0 10px 0;
   color: white;
   font-size: 19px;
-  width: 257px;
+  width: 235px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -88,31 +87,54 @@ const popup = ref(false)
 .contact {
   font-size: 19px;
 }
-
+.contactmain {
+  font-size: 19px;
+}
 .confid {
   font-size: 17px;
   text-align: center;
   padding: 10px 0;
 }
 
-.imgsize {
-  margin: 0 0 20px 16px;
-}
-
-.imgfoot {
+.imglogo {
   padding-bottom: 10px;
   width: 104px;
 }
+.imgall {
+  display: flex;   
+  align-items: center;
+  gap: 10px;
+}
+.imgvk {
+  width: 64px;
+}
+.imgru {
+width: 30px;
+}
+
+@media screen and (max-width:1600px)  {
+  .lobtn {
+    width: 235px;
+  }
+  .contactmain {
+    padding-bottom: 17px;
+  }
+  }
+
 
 @media screen and (max-width:1366px) {
 
-  .lobtn .contact,
+  .contact,
   .footinfo,
   .info {
     font-size: 18px;
   }
 
-  .imgfoot {
+  .lobtn {
+    font-size: 18px;
+    width: 222px;
+  }
+  .imglogo {
     width: 82px;
   }
 
@@ -177,14 +199,27 @@ const popup = ref(false)
 
   .contact {
     padding-top: 0;
-    padding-bottom: 5px;
-}
+    padding-bottom: 0;  
+    font-size: 15px;
+} 
   }
 
   .lobtn {
     margin-bottom: 4px;
-    width: 164px;
+    width: 199px;
+    padding: 5px 0 5px 0;
   }
 
-
+  .contactmain {
+    padding-bottom: 13px;
+    font-size: 15px;
+  }
+  
+  .imgvk {
+    width: 40px;
+  }
+  .imgru {
+    width: 24px;
+    padding-bottom: 5px;
+  }
 </style>

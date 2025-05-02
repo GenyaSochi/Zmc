@@ -583,17 +583,19 @@ const slide = [
   }
 
   .proj {
-    height: 256px;
+    height: 235px;
   }
-  
+
   .swiper-button-next,
   .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 41%);
   }
 
-  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: var(--swiper-pagination-bottom, 26px);
   }
+
   .ouradvant {
     font-size: 18px;
     padding-top: 10px;
@@ -614,9 +616,11 @@ const slide = [
     font-size: 16px;
     border-radius: 0;
   }
+
   .advanttext {
     font-size: 13px;
   }
+
   .blockproduct {
     display: flex;
     flex-direction: column;
@@ -624,15 +628,48 @@ const slide = [
     align-items: flex-start;
     padding-left: 0;
   }
+
   .productstyle {
     padding: 10px;
     height: 100%;
   }
+
   .advant {
     height: 30px;
     border-radius: 0;
     padding: 6px 0;
     width: 100%;
+  }
+
+  @media screen and (max-width:350px) {
+    .ourproj {
+      font-size: 15px;
+    }
+
+    .imgsize {
+      height: 170px;
+    }
+
+    .imgstyle {
+      padding-right: 46px;
+      height: 187px;
+    }
+
+    .proj {
+      height: 210px;
+    }
+
+    .quant {
+      left: 60px;
+      top: 128px;
+      color: white;
+    }
+
+    .title {
+      left: 59px;
+      bottom: 21px;
+      color: white;
+    }
   }
 }
 </style>

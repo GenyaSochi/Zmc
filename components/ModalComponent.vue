@@ -3,7 +3,7 @@
     <Teleport to="body">    
         <div v-if="popup" class="windowpos" @click.self="popup = false">
             <div class="window">
-                <p style="color: white; padding: 20px;">Мы Вам перезвоним!</p>
+                <p class="form">Форма обратной связи</p>
                 <input class="name" type="text" id="name" name="name" required placeholder="Ваше имя...">
                 <input class="phone" type="phone" id="phone" name="phone" required placeholder="+7">
                 <div>
@@ -32,8 +32,8 @@ const errorMessage = ref('')
 <style scoped>
 .window {
   border-radius: 10px;
-  width: 350px;
-  height: 254px;
+  width: 270px;
+  height: 178px;
   padding: 10px;
   background-color: rgb(30, 33, 61);
   position: relative;
@@ -55,18 +55,29 @@ const errorMessage = ref('')
   border: 2px solid white;
   color: white;
   margin: 0 0 10px 20px;
+  font-size: 16px;
+  padding-left: 10px;
 }
 .phone {
   border: 2px solid white;
   color: white;
   margin: 0 0 10px 20px;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
 .butwindow {
   color: white;
   border: 2px solid white;
-  width: 299px;
-  text-align: center;
+  width: 218px;  
   margin: 0 0 10px 20px;
+  font-size: 16px;
+  padding-left: 10px;  
+}
+
+.form {
+  color: white;
+  padding: 10px 0 20px 20px;
+  font-size: 16px;
 }
 </style>

@@ -216,6 +216,7 @@ onUnmounted(() => {
     padding-bottom: 175px;
     font-size: 18px;
   }
+
   .video {
     height: 23px;
   }
@@ -258,13 +259,16 @@ onUnmounted(() => {
     font-size: 15px;
     padding-bottom: 127px;
   }
+
   .video {
     height: 18px;
   }
-  .h1view  {
+
+  .h1view {
     font-size: 15px;
     padding-bottom: 0px;
   }
+
   .digits {
     font-size: 16px;
     gap: 8px;
@@ -303,11 +307,11 @@ onUnmounted(() => {
 
   .h1view {
     font-size: 14px;
-    padding-bottom: 60px;
+    padding-bottom: 103px;
   }
 
   .video {
-    height: 10px;
+    height: 6px;
   }
 
   .heading {
@@ -342,33 +346,41 @@ onUnmounted(() => {
     font-size: 14px;
     padding-bottom: 86px;
   }
-  
-}
 
+}
 
 @media screen and (max-width:350px) {
 
-  .h1view,
   .heading {
-    font-size: 15px;
-    /* background-color:  rgb(30, 33, 61);
-    color: white; */
+    font-size: 12px;
   }
-
-  .video {
-    height: 12px;
-  }
-
-
 
   .h1view {
-    padding-bottom: 62px;
+    padding: 0 10px 43px 10px;
+    font-size: 12px;
   }
 
   .num {
-    height: 22px;
-    width: 43px;
-    padding-top: 2px;
+    height: 19px;
+    width: 46px;
+    padding-top: 0px;
+  }
+
+  .heading {
+    padding-bottom: 10px;
+  }
+
+  .digits {
+    font-size: 12px;
+    padding: 10px;
+  }
+  
+  .cardcontainer {
+    font-size: 14px;
+  }
+  
+  .digitsprod {
+    font-size: 12px;
   }
 }
 </style>

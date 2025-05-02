@@ -19,13 +19,13 @@
       <span></span>
     </button>
     <Teleport to="body">
-      <div @click="isMenuOpen=false" :class="{ hidden:!isMenuOpen,'active': isMenuOpen }">
+      <div @click="isMenuOpen = false" :class="{ hidden: !isMenuOpen, 'active': isMenuOpen }">
         <NuxtLink to="/">Главная</NuxtLink>
         <NuxtLink to="/catalog">Каталог продукции</NuxtLink>
         <NuxtLink to="/projects">Проекты</NuxtLink>
-        <NuxtLink to="/contacts"  >Контакты</NuxtLink>
-        <NuxtLink to="/#cost" >Рассчитать стоимость</NuxtLink>
-        <button @click="popup = true">Заказать звонок</button>
+        <NuxtLink to="/contacts">Контакты</NuxtLink>
+        <NuxtLink to="/#cost">Рассчитать стоимость</NuxtLink>
+        <button @click="popup = true" class="butnav">Заказать звонок</button>
       </div>
     </Teleport>
   </header>
@@ -53,7 +53,8 @@ const toggleMenu = () => {
   overflow: hidden;
 }
 
-.hidden, .active {
+.hidden,
+.active {
   display: none;
 }
 
@@ -67,6 +68,7 @@ const toggleMenu = () => {
   height: 76px;
   font-family: 'Montserrat', light;
 }
+
 .nav {
   display: flex;
   align-items: center;
@@ -248,7 +250,7 @@ const toggleMenu = () => {
   }
 
   .nav {
-   display: none;   
+    display: none;
   }
 
   .active {
@@ -265,7 +267,7 @@ const toggleMenu = () => {
     background-color: rgb(30, 33, 61);
     color: white;
     font-size: 16px;
-    padding-bottom: 5px;
+    padding-bottom: 21px;
   }
 
   .link {
@@ -277,7 +279,7 @@ const toggleMenu = () => {
     gap: 10px;
     position: absolute;
     transform: translateY(300px);
-    height: 200px;    
+    height: 200px;
   }
 
   .but {
@@ -291,6 +293,7 @@ const toggleMenu = () => {
     top: 25px;
     width: 110px;
   }
+
   a {
     font-size: 16px;
     padding-bottom: 5px;
@@ -300,7 +303,6 @@ const toggleMenu = () => {
 
 @media screen and (max-width:576px) {
 
-  .navtag,
   .but,
   .butnav {
     font-size: 15px;
@@ -308,7 +310,8 @@ const toggleMenu = () => {
 
   .navtag {
     padding: 24px 0;
-    height: 100%;
+    height: 80px;
+    font-size: 15px;
   }
 
   .nav {
@@ -330,7 +333,7 @@ const toggleMenu = () => {
   .but.active {
     display: flex;
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 272px;
     gap: 18px;
   }
@@ -343,21 +346,39 @@ const toggleMenu = () => {
 
   .logo {
     position: absolute;
-    right: 572px;
+    left: 10px0;
     width: 110px;
-    top: -14px;
+    top: 14px;
   }
 
   .burger {
-    left: 500px;
-    top: 10px;
+    right: 20px;
+    top: 33px;
   }
-  
+
+  .active {
+    width: 224px;
+    top: 68px;
+  }
+
 }
 
 @media screen and (max-width:350px) {
   .logo {
-    right: 240px;
+    width: 94px;
+    top: 19px;
+  }
+  .burger span {
+    width: 40px;
+  }
+  .burger {
+    right: 10px;
+  }
+  a {
+    font-size: 14px;
+  }
+  .but, .butnav {
+    font-size: 14px;
   }
 
 }
