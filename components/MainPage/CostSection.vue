@@ -399,7 +399,7 @@ const cards = [
   .grid {
     display: flex;
     flex-direction: column-reverse;
-    height: 352px;
+    height: 342px;
     padding: 0 0px 30px 0px;
   }
 
@@ -427,13 +427,14 @@ const cards = [
   }
   .butcost {
     width: 176px;
+    margin-left: 110px;
   }
   .textswiper {
     padding: 0;
   }
   .h2cost {
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 15px;
   }
   .workcost {
     font-size: 14px;  
@@ -441,5 +442,6 @@ const cards = [
   .perscost {
     padding-bottom: 13px;
   }
+  
 }
 </style>

@@ -603,7 +603,7 @@ const slide = [
 
   .butproj {
     border-radius: 5px;
-    padding: 2px 3px 5px 2px;
+    padding: 2px 3px 1px 2px;
   }
 
   .production {
@@ -641,7 +641,7 @@ const slide = [
     width: 100%;
   }
 
-  @media screen and (max-width:350px) {
+  @media screen and (max-width:320px) {
     .ourproj {
       font-size: 15px;
     }
@@ -653,6 +653,7 @@ const slide = [
     .imgstyle {
       padding-right: 46px;
       height: 187px;
+
     }
 
     .proj {

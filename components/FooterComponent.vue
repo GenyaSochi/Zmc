@@ -113,9 +113,7 @@ width: 30px;
 }
 
 @media screen and (max-width:1600px)  {
-  .lobtn {
-    width: 235px;
-  }
+
   .contactmain {
     padding-bottom: 17px;
   }
@@ -190,6 +188,10 @@ width: 30px;
   .confid {
     font-size: 14px;
   }
+
+  .contactmain {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width:576px) {
@@ -206,7 +208,7 @@ width: 30px;
 
   .lobtn {
     margin-bottom: 4px;
-    width: 199px;
+    font-size: 15px;
     padding: 5px 0 5px 0;
   }
 
@@ -221,5 +223,10 @@ width: 30px;
   .imgru {
     width: 24px;
     padding-bottom: 5px;
+  }
+
+  
+  @media screen and (max-width: 320px){
+
   }
 </style>

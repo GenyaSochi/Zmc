@@ -232,15 +232,21 @@ const toggleMenu = () => {
 
 @media screen and (max-width:768px) {
 
-  .but,
+  .but {
+    font-size: 16px;
+  }
+
   .butnav {
     font-size: 16px;
+    border: none;
+    text-align: left;
+    padding: 0;
   }
 
   .burger {
     display: flex;
     flex-direction: column;
-    right: 54px;
+    right: 25px;
     top: 42px;
   }
 
@@ -298,7 +304,6 @@ const toggleMenu = () => {
     font-size: 16px;
     padding-bottom: 5px;
   }
-
 }
 
 @media screen and (max-width:576px) {
@@ -361,18 +366,21 @@ const toggleMenu = () => {
     top: 68px;
   }
 
+  .burger span {
+    width: 42px;
+  }
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:320px) {
   .logo {
     width: 94px;
     top: 19px;
   }
   .burger span {
-    width: 40px;
+    width: 35px;
   }
   .burger {
-    right: 10px;
+    right: 0;
   }
   a {
     font-size: 14px;

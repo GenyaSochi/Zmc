@@ -6,10 +6,11 @@
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
       заказчика.</p>
-    <h2 class="digits">Количество выпущенной продукции
-      <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
-    </h2>
-    <div style="background-color: white;height: 100%;"></div>
+      <div class="digits">
+      <h2>Количество выпущенной продукции</h2>
+        <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
+      </div>
+
     <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>
       <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
@@ -52,6 +53,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+
 .digits {
   font-size: 22px;
   display: flex;
@@ -307,7 +309,7 @@ onUnmounted(() => {
 
   .h1view {
     font-size: 14px;
-    padding-bottom: 103px;
+    padding-bottom: 91px;
   }
 
   .video {
@@ -349,14 +351,14 @@ onUnmounted(() => {
 
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:320px) {
 
   .heading {
     font-size: 12px;
   }
 
   .h1view {
-    padding: 0 10px 43px 10px;
+    padding: 0 10px 30px 10px;
     font-size: 12px;
   }
 
@@ -373,14 +375,21 @@ onUnmounted(() => {
   .digits {
     font-size: 12px;
     padding: 10px;
+    height: 53px;
   }
   
   .cardcontainer {
-    font-size: 14px;
-  }
+    font-size: 12px;
+    height: 20px;
+    gap: 5px;
+    }
   
   .digitsprod {
     font-size: 12px;
+    padding: 0 5px;
+    height: 42px;
   }
+
+  
 }
 </style>
