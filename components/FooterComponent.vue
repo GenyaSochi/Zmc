@@ -17,11 +17,10 @@
         <button @click="popup = true" class="lobtn">Заказать звонок</button>
         <p class="contact">Мы в социальных сетях</p>
         <div class="imgall">
-          <a href="https://vk.com/zmkural" target="_blank"><img src="/public/img/vk.webp"
-              width="64" alt="vk" class="imgvk"></a>
+          <a href="https://vk.com/zmkural" target="_blank"><img src="/public/img/vk.webp" width="64" alt="vk"
+              class="imgvk"></a>
           <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-            target="_blank"><img src="/public/img/R_white.webp" width="30"
-              alt="rutube" class="imgru"></a>
+            target="_blank"><img src="/public/img/R_white.webp" width="30" alt="rutube" class="imgru"></a>
         </div>
         <div>
           <NuxtLink to="job" class="contact">Вакансии компании</NuxtLink>
@@ -87,9 +86,12 @@ const popup = ref(false)
 .contact {
   font-size: 19px;
 }
+
 .contactmain {
   font-size: 19px;
+  padding-bottom: 32px;
 }
+
 .confid {
   font-size: 17px;
   text-align: center;
@@ -100,24 +102,23 @@ const popup = ref(false)
   padding-bottom: 10px;
   width: 104px;
 }
+
 .imgall {
-  display: flex;   
+  display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .imgvk {
   width: 64px;
 }
+
 .imgru {
-width: 30px;
+  width: 30px;
 }
 
-@media screen and (max-width:1600px)  {
-
-  .contactmain {
-    padding-bottom: 17px;
-  }
-  }
+@media screen and (max-width:1600px) {  
+}
 
 
 @media screen and (max-width:1366px) {
@@ -132,6 +133,7 @@ width: 30px;
     font-size: 18px;
     width: 222px;
   }
+
   .imglogo {
     width: 82px;
   }
@@ -173,7 +175,12 @@ width: 30px;
     width: 211px;
     font-size: 17px;
   }
-}
+
+  .contactmain {
+    padding-bottom: 5px;
+  }
+  }
+
 
 @media screen and (max-width:768px) {
   .contact {
@@ -201,32 +208,32 @@ width: 30px;
 
   .contact {
     padding-top: 0;
-    padding-bottom: 0;  
+    padding-bottom: 0;
     font-size: 15px;
-} 
   }
-
   .lobtn {
     margin-bottom: 4px;
     font-size: 15px;
     padding: 5px 0 5px 0;
+    width: 186px;
   }
-
+  
   .contactmain {
-    padding-bottom: 13px;
+    padding-bottom: 11px;
     font-size: 15px;
   }
   
   .imgvk {
     width: 40px;
   }
+  
   .imgru {
     width: 24px;
     padding-bottom: 5px;
   }
+}
 
-  
-  @media screen and (max-width: 320px){
 
-  }
+
+@media screen and (max-width: 320px) {}
 </style>

@@ -75,4 +75,10 @@ const photos = [
     padding: 0 10px 10px 10px;
   }
 }
+
+@media screen and (max-widht:320px) {
+  .imgphoto {
+    height: 80px;
+  }
+}
 </style>

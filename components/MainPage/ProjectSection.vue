@@ -652,8 +652,7 @@ const slide = [
 
     .imgstyle {
       padding-right: 46px;
-      height: 187px;
-
+      height: 187px;   
     }
 
     .proj {
@@ -662,14 +661,52 @@ const slide = [
 
     .quant {
       left: 60px;
-      top: 128px;
+      top: 88px;
       color: white;
     }
 
     .title {
       left: 59px;
-      bottom: 21px;
+      bottom: 60px;
       color: white;
+    }
+
+    .title1 {
+      left: 58px;
+      bottom: 48px;
+      color: white;
+    }
+
+    .imgsize {
+      width: 226px;
+    }
+
+    .swiper-pagination-bullet-active {
+      margin: 5px;
+      bottom: 12px;
+    }
+
+    .ouradvant {
+      font-size: 15px;  
+      padding-top: 0;
+      padding-bottom: 3px;
+    }
+
+    .advanttext {
+      font-size: 12px;
+      padding-bottom: 7px;
+    }
+    .production {
+      font-size: 13px;
+    }
+
+    .butproj {
+      padding: 0px 3px 1px 2px;
+      font-size: 13px;
+    }
+
+    .textspan {
+      font-size: 13px;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <header class="navtag">
     <div class="nav_all">
-      <img src="/img/sitelogo1.webp" alt="logo" class="logo">
+      <NuxtLink to="/"><img src="/img/sitelogo1.webp" alt="logo" class="logo"></NuxtLink> 
       <div class="link">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
@@ -388,6 +388,12 @@ const toggleMenu = () => {
   .but, .butnav {
     font-size: 14px;
   }
+
+  .active {
+    width: 177px;
+    padding-bottom: 18px;    
+  }
+  
 
 }
 </style>

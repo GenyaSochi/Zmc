@@ -363,7 +363,7 @@ onUnmounted(() => {
   }
 
   .num {
-    height: 19px;
+    height: 18px;
     width: 46px;
     padding-top: 0px;
   }
@@ -390,6 +390,7 @@ onUnmounted(() => {
     height: 42px;
   }
 
+  
   
 }
 </style>

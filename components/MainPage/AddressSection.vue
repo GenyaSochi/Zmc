@@ -89,4 +89,14 @@ h2 {
     height: 300px;
   }
 }
+
+@media screen and (max-width:320px) {
+  .addresscont {
+    font-size: 15px;
+  }
+  .card {
+    padding: 6px 9px;
+    height: 200px;
+  }
+}
 </style>

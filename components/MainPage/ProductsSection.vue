@@ -125,9 +125,22 @@
     font-size: 14px;
     padding: 10px 0px;
   }
+
   .prod {
     padding: 10px;
+  }    
+}
+
+@media screen and (max-width:320px) {
+  .seeprod {
+    font-size: 10px;
+    padding: 5px 0px;
   }
 
+  .prod {
+    padding: 10px;
+  }    
 }
+
+
 </style>

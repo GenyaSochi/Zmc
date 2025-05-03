@@ -412,7 +412,7 @@ const cards = [
 
 @media screen and (max-width:576px) {
   .grid {
-    height: 303px;
+    height: 324px;
     padding-bottom: 10px;
   }
   .formcost {
@@ -442,6 +442,8 @@ const cards = [
   .perscost {
     padding-bottom: 13px;
   }
-  
+  .msg {
+    font-size: 12px;
+  }  
 }
 </style>
