@@ -117,8 +117,7 @@ const popup = ref(false)
   width: 30px;
 }
 
-@media screen and (max-width:1600px) {  
-}
+@media screen and (max-width:1600px) {}
 
 
 @media screen and (max-width:1366px) {
@@ -179,7 +178,7 @@ const popup = ref(false)
   .contactmain {
     padding-bottom: 5px;
   }
-  }
+}
 
 
 @media screen and (max-width:768px) {
@@ -211,22 +210,23 @@ const popup = ref(false)
     padding-bottom: 0;
     font-size: 15px;
   }
+
   .lobtn {
     margin-bottom: 4px;
     font-size: 15px;
     padding: 5px 0 5px 0;
     width: 186px;
   }
-  
+
   .contactmain {
     padding-bottom: 11px;
     font-size: 15px;
   }
-  
+
   .imgvk {
     width: 40px;
   }
-  
+
   .imgru {
     width: 24px;
     padding-bottom: 5px;
@@ -235,5 +235,39 @@ const popup = ref(false)
 
 
 
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+  .contactmain {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .contact {
+    font-size: 12px;
+  }
+
+  .lobtn {
+    margin-bottom: 4px;
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+    width: 129px;
+  }
+
+  .imgvk {
+    width: 33px;
+  }
+
+  .imgru {
+    width: 19px;
+    padding-bottom: 8px;
+  }
+
+  .confid {
+    font-size: 10px;
+  }
+
+  .footercont {
+    padding-bottom: 0px;
+  }
+  
+}
 </style>

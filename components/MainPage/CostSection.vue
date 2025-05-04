@@ -392,7 +392,7 @@ const cards = [
 
   .custom-file-input {
     font-size: 14px;
-    padding: 5px; 
+    padding: 5px;
     border-radius: 8px;
   }
 
@@ -407,7 +407,7 @@ const cards = [
     height: 275px;
     border-radius: 0;
   }
-  
+
 }
 
 @media screen and (max-width:576px) {
@@ -415,35 +415,92 @@ const cards = [
     height: 324px;
     padding-bottom: 10px;
   }
+
   .formcost {
     border-radius: 0;
   }
+
   .custom-file-input {
     width: 192px;
     padding: 5px;
   }
+
   .inputcost {
     width: 190px;
   }
+
   .butcost {
     width: 176px;
     margin-left: 110px;
   }
+
   .textswiper {
     padding: 0;
   }
+
   .h2cost {
     padding: 10px 0;
     font-size: 15px;
   }
+
   .workcost {
-    font-size: 14px;  
+    font-size: 14px;
   }
+
   .perscost {
     padding-bottom: 13px;
   }
+
   .msg {
     font-size: 12px;
-  }  
+  }
+}
+
+@media screen and (max-width:320px) {
+  .h2cost {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+
+  .workcost {
+    font-size: 11px;
+  }
+
+  .allinputcost {
+    font-size: 11px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+  }
+
+  .butcost {
+    width: 189px;
+    margin-left: 2px;
+    font-size: 11px;
+    height: 26px;
+  }
+
+  .custom-file-input {
+    font-size: 11px;
+    padding: 3px;
+  }
+
+  .inputcost {
+    padding: 15px;
+    font-size: 11px;
+    height: 20px;
+  }
+
+  .perscost {
+    padding-left: 10px;
+    font-size: 11px;
+  }
+
+  .butinfo {
+    font-size: 11px;
+  }
+
+  .grid {
+    height: 300px;
+  }
 }
 </style>

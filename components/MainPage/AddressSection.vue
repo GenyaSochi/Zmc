@@ -4,10 +4,9 @@
     <div>
       <ClientOnly>
         <div class="card">
-          <a href="https://yandex.ru/maps/11214/ozersk/?utm_medium=mapframe&utm_source=maps"
-            style="color:#eee;font-size:12px;position:absolute;top:0px;">Озёрск</a>
+          <a href="https://yandex.ru/maps/11214/ozersk/?utm_medium=mapframe&utm_source=maps" class="map_oz">Озёрск</a>
           <a href="https://yandex.ru/maps/11214/ozersk/?from=mapframe&ll=60.725401%2C55.763619&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_medium=mapframe&utm_source=maps&z=16.52"
-            style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск
+            class="map_yandex">Яндекс Карты — транспорт, навигация, поиск
             мест</a>
           <iframe
             src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=60.725401%2C55.763619&scroll=false&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_source=mapframe&z=16.52"
@@ -22,6 +21,20 @@
 </script>
 
 <style scoped>
+.map_oz {
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+}
+
+.map_yandex {
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  top: 14px;
+}
+
 h2 {
   text-align: center;
 }
@@ -54,7 +67,7 @@ h2 {
 
 @media screen and (max-width:992px) {
   .addresscont {
-    font-size: 24px;    
+    font-size: 24px;
   }
 
   .card {
@@ -69,15 +82,17 @@ h2 {
 @media screen and (max-width:768px) {
   .addresscont {
     font-size: 20px;
-    padding: 10px 0 0 0;  
+    padding: 10px 0 0 0;
   }
+
   iframe {
     height: 340px;
   }
+
   .card {
     padding: 15px 20px 0 20px;
   }
-  }
+}
 
 
 @media screen and (max-width:576px) {
@@ -85,6 +100,7 @@ h2 {
     font-size: 18px;
     padding: 10px 0 0 0;
   }
+
   iframe {
     height: 300px;
   }
@@ -93,10 +109,16 @@ h2 {
 @media screen and (max-width:320px) {
   .addresscont {
     font-size: 15px;
+    padding: 5px 0 0 0;
   }
+
   .card {
     padding: 6px 9px;
     height: 200px;
+  }
+
+  iframe {
+    height: 180px;
   }
 }
 </style>

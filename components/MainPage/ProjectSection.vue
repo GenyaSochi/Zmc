@@ -640,7 +640,7 @@ const slide = [
     padding: 6px 0;
     width: 100%;
   }
-
+}
   @media screen and (max-width:320px) {
     .ourproj {
       font-size: 15px;
@@ -694,21 +694,29 @@ const slide = [
 
     .advanttext {
       font-size: 12px;
-      padding-bottom: 7px;
+      padding: 5px 9px; 
     }
     .production {
-      font-size: 13px;
+      font-size: 11px;
+      padding: 4px;
     }
 
     .butproj {
       padding: 0px 3px 1px 2px;
-      font-size: 13px;
+      font-size: 11px;
     }
 
     .textspan {
-      font-size: 13px;
+      font-size: 11px;
+    }
+    
+    .advant {
+      height: 24px;
+    }
+    .productstyle {
+      padding: 8px;
     }
   }
-}
+
 </style>
 <!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->

@@ -6,10 +6,10 @@
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
       заказчика.</p>
-      <div class="digits">
+    <div class="digits">
       <h2>Количество выпущенной продукции</h2>
-        <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
-      </div>
+      <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
+    </div>
 
     <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>
@@ -53,7 +53,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-
 .digits {
   font-size: 22px;
   display: flex;
@@ -377,20 +376,20 @@ onUnmounted(() => {
     padding: 10px;
     height: 53px;
   }
-  
+
   .cardcontainer {
     font-size: 12px;
     height: 20px;
     gap: 5px;
-    }
-  
-  .digitsprod {
-    font-size: 12px;
-    padding: 0 5px;
-    height: 42px;
   }
 
+  .digitsprod {
+    font-size: 12px;
+    padding: 5px 34px;
+    height: 53px;
+  }
   
-  
+
+
 }
 </style>
