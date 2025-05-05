@@ -9,9 +9,11 @@
         <p class="contactmain">Контакты</p>
         <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
         <p class="contact">по будням с 8:00 до 17:00</p>
-        <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
-        <br>
-        <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
+        <div style="display: flex; flex-direction: column;">
+
+          <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
+          <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
+        </div>
       </div>
       <div>
         <button @click="popup = true" class="lobtn">Заказать звонок</button>
@@ -22,10 +24,10 @@
           <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
             target="_blank"><img src="/public/img/R_white.webp" width="30" alt="rutube" class="imgru"></a>
         </div>
-        <div>
+        <div style="display: flex; flex-direction: column;">
           <NuxtLink to="job" class="contact">Вакансии компании</NuxtLink>
+          <a href="companydetails.pdf" class="contact" target="_blank">Скачать реквизиты компании</a>
         </div>
-        <a href="companydetails.pdf" class="contact" target="_blank">Скачать реквизиты компании</a>
       </div>
     </div>
     <div>
@@ -180,7 +182,6 @@ const popup = ref(false)
   }
 }
 
-
 @media screen and (max-width:768px) {
   .contact {
     font-size: 16px;
@@ -246,11 +247,12 @@ const popup = ref(false)
   }
 
   .lobtn {
-    margin-bottom: 4px;
+    margin-top: 10px;
     font-size: 12px;
     padding: 5px 0 5px 0;
-    width: 129px;
+    width: 148px;
   }
+  
 
   .imgvk {
     width: 33px;
@@ -266,8 +268,11 @@ const popup = ref(false)
   }
 
   .footercont {
-    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0px;   
+    font-size: 12px;
   }
-  
+
 }
 </style>

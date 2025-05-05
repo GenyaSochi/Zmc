@@ -502,5 +502,8 @@ const cards = [
   .grid {
     height: 300px;
   }
+  .msg {
+    font-size: 16px;
+  }
 }
 </style>
