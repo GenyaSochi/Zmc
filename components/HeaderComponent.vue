@@ -233,11 +233,11 @@ const toggleMenu = () => {
 @media screen and (max-width:768px) {
 
   .but {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .butnav {
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     text-align: left;
     padding: 0;
@@ -252,7 +252,7 @@ const toggleMenu = () => {
 
   .navtag {
     height: 90px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .nav {
@@ -273,7 +273,7 @@ const toggleMenu = () => {
     background-color: rgb(30, 33, 61);
     color: white;
     font-size: 16px;
-    padding-bottom: 21px;
+    padding-bottom: 8px;
   }
 
   .link {
@@ -290,6 +290,7 @@ const toggleMenu = () => {
 
   .but {
     display: none;
+    
   }
 
   .logo {
@@ -301,22 +302,17 @@ const toggleMenu = () => {
   }
 
   a {
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 5px;
   }
 }
 
 @media screen and (max-width:576px) {
 
-  .but,
-  .butnav {
-    font-size: 15px;
-  }
-
   .navtag {
     padding: 24px 0;
     height: 80px;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .nav {
@@ -371,29 +367,4 @@ const toggleMenu = () => {
   }
 }
 
-@media screen and (max-width:320px) {
-  .logo {
-    width: 94px;
-    top: 19px;
-  }
-  .burger span {
-    width: 35px;
-  }
-  .burger {
-    right: 0;
-  }
-  a {
-    font-size: 14px;
-  }
-  .but, .butnav {
-    font-size: 14px;
-  }
-
-  .active {
-    width: 177px;
-    padding-bottom: 18px;    
-  }
-  
-
-}
 </style>

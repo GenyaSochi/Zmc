@@ -119,20 +119,16 @@ const popup = ref(false)
   width: 30px;
 }
 
-@media screen and (max-width:1600px) {}
-
-
 @media screen and (max-width:1366px) {
-
   .contact,
   .footinfo,
   .info {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .lobtn {
-    font-size: 18px;
-    width: 222px;
+    font-size: 20px;
+    width: 205px;
   }
 
   .imglogo {
@@ -144,7 +140,7 @@ const popup = ref(false)
   }
 
   .confid {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -153,11 +149,11 @@ const popup = ref(false)
   .contact,
   .footinfo,
   .info {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .confid {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .footinfo {
@@ -174,30 +170,34 @@ const popup = ref(false)
 
   .lobtn {
     width: 211px;
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .contactmain {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width:768px) {
   .contact {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .lobtn {
-    width: 196px;
-    font-size: 16px;
+    width: 184px;
+    font-size: 18px;
   }
 
   .confid {
-    font-size: 14px;
+    font-size: 17px;
+  } 
+
+  .imgvk {
+    width: 60px;
   }
 
-  .contactmain {
-    font-size: 16px;
+  .imgru {
+    padding-bottom: 10px;
   }
 }
 
@@ -232,47 +232,5 @@ const popup = ref(false)
     width: 24px;
     padding-bottom: 5px;
   }
-}
-
-
-
-@media screen and (max-width: 320px) {
-  .contactmain {
-    font-size: 12px;
-    padding-bottom: 10px;
-  }
-
-  .contact {
-    font-size: 12px;
-  }
-
-  .lobtn {
-    margin-top: 10px;
-    font-size: 12px;
-    padding: 5px 0 5px 0;
-    width: 148px;
-  }
-  
-
-  .imgvk {
-    width: 33px;
-  }
-
-  .imgru {
-    width: 19px;
-    padding-bottom: 8px;
-  }
-
-  .confid {
-    font-size: 10px;
-  }
-
-  .footercont {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 0px;   
-    font-size: 12px;
-  }
-
 }
 </style>

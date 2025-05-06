@@ -266,7 +266,6 @@ const cards = [
   }
 }
 
-@media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
   .textswiper {
@@ -282,18 +281,18 @@ const cards = [
 
   .h2cost {
     padding: 18px 0;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .infocost,
   .workcost {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .custom-file-input,
   .butcost,
   .inputcost {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .textswiper {
@@ -305,17 +304,17 @@ const cards = [
   }
 
   .swiper swiper-slide {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width:992px) {
   .h2cost {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .infocost {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .workcost {
@@ -349,11 +348,11 @@ const cards = [
   }
 
   .butinfo {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .swiper swiper-slide {
-    font-size: 17px;
+    font-size: 19px;
     height: 200px;
   }
 
@@ -377,15 +376,6 @@ const cards = [
     display: none;
   }
 
-  .h2cost {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .workcost {
-    font-size: 15px;
-  }
-
   .allinputcost {
     gap: 5px;
   }
@@ -406,6 +396,10 @@ const cards = [
   .formcost {
     height: 275px;
     border-radius: 0;
+  }
+
+  .h2cost {
+    padding: 9px 0;
   }
 
 }
@@ -453,57 +447,6 @@ const cards = [
 
   .msg {
     font-size: 12px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .h2cost {
-    padding: 5px 0;
-    font-size: 12px;
-  }
-
-  .workcost {
-    font-size: 11px;
-  }
-
-  .allinputcost {
-    font-size: 11px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-  }
-
-  .butcost {
-    width: 189px;
-    margin-left: 2px;
-    font-size: 11px;
-    height: 26px;
-  }
-
-  .custom-file-input {
-    font-size: 11px;
-    padding: 3px;
-  }
-
-  .inputcost {
-    padding: 15px;
-    font-size: 11px;
-    height: 20px;
-  }
-
-  .perscost {
-    padding-left: 10px;
-    font-size: 11px;
-  }
-
-  .butinfo {
-    font-size: 11px;
-  }
-
-  .grid {
-    height: 300px;
-  }
-  .msg {
-    font-size: 16px;
   }
 }
 </style>

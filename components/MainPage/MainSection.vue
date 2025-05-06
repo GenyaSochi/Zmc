@@ -5,7 +5,7 @@
     </div>
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
-      заказчика.</p>
+      заказчика</p>
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
@@ -18,7 +18,7 @@
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
     </div>
-    <h2 class="digitsprod">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества.</h2>
+    <h2 class="digitsprod">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</h2>
   </section>
 </template>
 
@@ -183,7 +183,7 @@ onUnmounted(() => {
   }
 
   .digits {
-    font-size: 18px;
+    font-size: 20px;
     gap: 10px;
     padding: 43px 0;
   }
@@ -197,7 +197,7 @@ onUnmounted(() => {
   }
 
   .cardcontainer {
-    font-size: 18px;
+    font-size: 20px;
     height: 162px;
   }
 
@@ -210,7 +210,7 @@ onUnmounted(() => {
 @media screen and (max-width:992px) {
   .h1view {
     font-size: 18px;
-    padding-bottom: 7px;
+    padding-bottom: 3px;
   }
 
   .heading {
@@ -223,13 +223,13 @@ onUnmounted(() => {
   }
 
   .digits {
-    font-size: 18px;
+    font-size: 20px;
     gap: 10px;
     padding: 34px 0;
   }
 
   .digitsprod {
-    font-size: 18px;
+    font-size: 20px;
     height: 82px;
     padding-top: 30px;
   }
@@ -252,26 +252,17 @@ onUnmounted(() => {
     height: 50px;
     background: rgb(30, 33, 61);
     border-radius: 0;
-  }
+  }  
 }
 
 @media screen and (max-width:768px) {
-  .heading {
-    font-size: 15px;
-    padding-bottom: 127px;
-  }
 
   .video {
     height: 18px;
   }
 
-  .h1view {
-    font-size: 15px;
-    padding-bottom: 0px;
-  }
-
   .digits {
-    font-size: 16px;
+    font-size: 18px;
     gap: 8px;
     padding: 22px 0;
   }
@@ -283,7 +274,7 @@ onUnmounted(() => {
   }
 
   .cardcontainer {
-    font-size: 16px;
+    font-size: 18px;
     height: 35px;
     border-radius: 0;
   }
@@ -294,7 +285,7 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    font-size: 16px;
+    font-size: 18px;
     height: 78px;
     padding-top: 27px;
   }
@@ -302,22 +293,19 @@ onUnmounted(() => {
   .num {
     height: 33px;
   }
+
+  .heading {
+    padding-bottom: 132px;
+  }
 }
 
 @media screen and (max-width:576px) {
-
-  .h1view {
-    font-size: 14px;
-    padding-bottom: 91px;
-  }
-
   .video {
     height: 6px;
   }
 
-  .heading {
-    font-size: 14px;
-    padding-bottom: 29px;
+  .heading { 
+    padding: 0 50px 18px 50px;
   }
 
   .num {
@@ -327,69 +315,25 @@ onUnmounted(() => {
   }
 
   .digits {
-    font-size: 13px;
+    font-size: 17px;
     gap: 5px;
     padding: 16px 10px;
   }
 
   .cardcontainer {
-    font-size: 15px;
+    font-size: 17px;
     height: 32px;
   }
 
   .digitsprod {
-    font-size: 13px;
+    font-size: 17px;
     height: 67px;
     padding-top: 16px;
   }
 
-  .h1view {
-    font-size: 14px;
-    padding-bottom: 86px;
+  .h1view {   
+    padding-bottom: 100px;
   }
-
-}
-
-@media screen and (max-width:320px) {
-
-  .heading {
-    font-size: 12px;
-  }
-
-  .h1view {
-    padding: 0 10px 30px 10px;
-    font-size: 12px;
-  }
-
-  .num {
-    height: 18px;
-    width: 46px;
-    padding-top: 0px;
-  }
-
-  .heading {
-    padding-bottom: 10px;
-  }
-
-  .digits {
-    font-size: 12px;
-    padding: 10px;
-    height: 53px;
-  }
-
-  .cardcontainer {
-    font-size: 12px;
-    height: 20px;
-    gap: 5px;
-  }
-
-  .digitsprod {
-    font-size: 12px;
-    padding: 5px 34px;
-    height: 53px;
-  }
-  
-
 
 }
 </style>

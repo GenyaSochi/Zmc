@@ -72,11 +72,9 @@ swiper-container {
   height: 300px;
   size: 200px;
 }
-@media screen and (max-width:1920px) {
-  
-}
+
 @media screen and (max-width:1600px) {
-  .cert {
+.cert {
   height: 280px;
   size: 180px;
 }
@@ -85,6 +83,9 @@ swiper-container {
 }
 .certimg {
   left: 63%;
+}
+.сerttext {
+  font-size: 30px;
 }
   
 }
@@ -104,13 +105,43 @@ swiper-container {
  }
 
 @media screen and (max-width:992px) {
-  
+  .сerttext {
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+  .certimg {
+    width: 55px;
+    top: 5%;
+  }
+
+  .сertcontainer {
+    height: 420px;
+  }
 }
 @media screen and (max-width:768px) {
-  
+  .сerttext {
+    font-size: 20px;
+  }
+  .сertcontainer {
+    padding: 12px 0;
+    height: 288px;
+  }
+  .certimg {
+    width: 50px;
+    top: 2%;
+    left: 64%;
+  }
+  .cert {
+    height: 184px;
+  }
 }
 @media screen and (max-width:576px) {
-  
+  .сerttext {
+    font-size: 18px;
+  }
+  .certimg {
+    left: 66%;
+  }
 }
 }
 </style>

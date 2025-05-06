@@ -3,7 +3,7 @@
 <MainPageMainSection></MainPageMainSection>
 <MainPageProjectSection></MainPageProjectSection>
 <MainPageAddressSection></MainPageAddressSection>
-<MainPageSertSection></MainPageSertSection>
+<MainPageCertSection></MainPageCertSection>
 <MainPageProductsSection></MainPageProductsSection>
 <MainPagePhotoSection></MainPagePhotoSection>
 <MainPageCostSection></MainPageCostSection>

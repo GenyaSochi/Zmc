@@ -80,14 +80,4 @@ const totop = () => {
     left: 11px;
   }
 }
-
-@media screen and (max-width:320){
-  .button {
-    width: 40px;
-    height: 40px;
-  }
-  .arrow {
-    font-size: 30px;
-  }
-}
 </style>

@@ -63,10 +63,6 @@
   z-index: 1;
 }
 
-@media screen and (max-width:1920px) {}
-
-@media screen and (max-width:1600px) {}
-
 @media screen and (max-width:1366px) {
   .textprod {
     font-size: 19px;
@@ -118,31 +114,12 @@
     display: none;
   }
 
+  .prod {
+    padding: 20px 10px;
+  }
 }
 
 @media screen and (max-width:576px) {
-  .seeprod {
-    font-size: 14px;
-    padding: 10px 0px;
-  }
-
-  .prod {
-    padding: 10px;
-  }    
+   
 }
-
-@media screen and (max-width:320px) {
-  .seeprod {
-    font-size: 10px;
-    padding: 5px 0px;
-  }
-
-  .prod {
-    padding: 10px;
-    gap: 10px;
-  }  
-    
-}
-
-
 </style>

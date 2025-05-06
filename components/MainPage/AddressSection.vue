@@ -51,11 +51,13 @@ h2 {
   padding: 0 120px;
 }
 
-@media screen and (max-width:1920px) {}
-
 @media screen and (max-width:1600px) {
   .addresscont {
     font-size: 30px;
+  }
+
+  .card {
+    padding: 0 120px 30px 120px;
   }
 }
 
@@ -68,6 +70,7 @@ h2 {
 @media screen and (max-width:992px) {
   .addresscont {
     font-size: 24px;
+    padding: 15px 0 0px 0;
   }
 
   .card {
@@ -90,7 +93,7 @@ h2 {
   }
 
   .card {
-    padding: 15px 20px 0 20px;
+    padding: 15px 20px 20px 20px;
   }
 }
 
@@ -103,22 +106,6 @@ h2 {
 
   iframe {
     height: 300px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .addresscont {
-    font-size: 15px;
-    padding: 5px 0 0 0;
-  }
-
-  .card {
-    padding: 6px 9px;
-    height: 200px;
-  }
-
-  iframe {
-    height: 180px;
   }
 }
 </style>

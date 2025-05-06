@@ -200,19 +200,19 @@ const slide = [
 }
 
 .textsmall1 {
-  font-size: 14px;
+  font-size: 17px;
   text-align: center;
   padding-top: 12px;
 }
 
 .textsmall2 {
-  font-size: 14px;
+  font-size: 17px;
   text-align: center;
   padding-top: 10px;
 }
 
 .textsmall3 {
-  font-size: 14px;
+  font-size: 17px;
   text-align: center;
   padding-top: 12px;
 }
@@ -278,7 +278,7 @@ const slide = [
   }
 
   .advant {
-    padding: 12px;
+    padding: 20px 10px 10px 10px;
     width: 286px;
     height: 200px;
   }
@@ -314,18 +314,17 @@ const slide = [
   }
 
   .textspan {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-
   .production {
-    font-size: 18px;
+    font-size: 20px;
     width: 286px;
     height: 200px;
   }
 
   .butproj {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .imgsize {
@@ -426,6 +425,7 @@ const slide = [
   }
 
   .advant {
+    padding: 12px 10px 10px 10px;
     height: 235px;
   }
 
@@ -493,7 +493,7 @@ const slide = [
   }
 
   .advanttext {
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 16px;
   }
 
@@ -502,14 +502,14 @@ const slide = [
   }
 
   .production {
-    font-size: 16px;
+    font-size: 18px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: none;
     text-align: center;
     padding: 10px;
     gap: 10px;
-    height: 100px;
+    height: 108px;
   }
 
   .textsmall1,
@@ -519,11 +519,11 @@ const slide = [
   }
 
   .textspan {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .butproj {
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px;
     width: 96px;
   }
@@ -533,11 +533,11 @@ const slide = [
   }
 
   .advant {
-    height: 100px;
+    height: 108px;
   }
 
   .productstyle {
-    height: 222px;
+    height: 234px;
   }
 }
 
@@ -618,7 +618,7 @@ const slide = [
   }
 
   .advanttext {
-    font-size: 13px;
+    font-size: 17px;
   }
 
   .blockproduct {
@@ -641,82 +641,4 @@ const slide = [
     width: 100%;
   }
 }
-  @media screen and (max-width:320px) {
-    .ourproj {
-      font-size: 15px;
-    }
-
-    .imgsize {
-      height: 170px;
-    }
-
-    .imgstyle {
-      padding-right: 46px;
-      height: 187px;   
-    }
-
-    .proj {
-      height: 210px;
-    }
-
-    .quant {
-      left: 60px;
-      top: 88px;
-      color: white;
-    }
-
-    .title {
-      left: 59px;
-      bottom: 60px;
-      color: white;
-    }
-
-    .title1 {
-      left: 58px;
-      bottom: 48px;
-      color: white;
-    }
-
-    .imgsize {
-      width: 226px;
-    }
-
-    .swiper-pagination-bullet-active {
-      margin: 5px;
-      bottom: 12px;
-    }
-
-    .ouradvant {
-      font-size: 15px;  
-      padding-top: 0;
-      padding-bottom: 3px;
-    }
-
-    .advanttext {
-      font-size: 12px;
-      padding: 5px 9px; 
-    }
-    .production {
-      font-size: 11px;
-      padding: 4px;
-    }
-
-    .butproj {
-      padding: 0px 3px 1px 2px;
-      font-size: 11px;
-    }
-
-    .textspan {
-      font-size: 11px;
-    }
-    
-    .advant {
-      height: 24px;
-    }
-    .productstyle {
-      padding: 8px;
-    }
-  }
-
 </style>
-<!-- sizes="1850px sm:500px md:1224px xxl:1850px" -->
