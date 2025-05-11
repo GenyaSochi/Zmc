@@ -31,8 +31,8 @@
       </div>
     </div>
     <div>
-      <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены.
-        <NuxtLink class="confid" to="/privacy">Политика конфиденциальности.</NuxtLink>
+      <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены
+        <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
       </p>
     </div>
   </footer>
@@ -67,8 +67,8 @@ const popup = ref(false)
   border: 2px solid white;
   padding: 10px 0 10px 0;
   color: white;
-  font-size: 19px;
-  width: 235px;
+  font-size: 20px;
+  width: 247px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -81,16 +81,16 @@ const popup = ref(false)
 
 .footinfo {
   display: flex;
-  font-size: 19px;
+  font-size: 20px;
   flex-direction: column;
 }
 
 .contact {
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .contactmain {
-  font-size: 19px;
+  font-size: 20px;
   padding-bottom: 32px;
 }
 
@@ -101,7 +101,6 @@ const popup = ref(false)
 }
 
 .imglogo {
-  padding-bottom: 10px;
   width: 104px;
 }
 
@@ -120,14 +119,8 @@ const popup = ref(false)
 }
 
 @media screen and (max-width:1366px) {
-  .contact,
-  .footinfo,
-  .info {
-    font-size: 20px;
-  }
 
-  .lobtn {
-    font-size: 20px;
+  .lobtn {   
     width: 205px;
   }
 
@@ -209,19 +202,20 @@ const popup = ref(false)
   .contact {
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .lobtn {
-    margin-bottom: 4px;
-    font-size: 15px;
+    margin-bottom: 5px;
+    font-size: 17px;
     padding: 5px 0 5px 0;
     width: 186px;
   }
 
   .contactmain {
+    padding-top: 28px;
     padding-bottom: 11px;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .imgvk {
@@ -231,6 +225,9 @@ const popup = ref(false)
   .imgru {
     width: 24px;
     padding-bottom: 5px;
+  }
+  .confid {
+    font-size: 16px;
   }
 }
 </style>

@@ -4,8 +4,9 @@
       <video autoplay muted id="myVideo" src="/public/video/newvideostart.mp4"></video>
     </div>
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
-    <p class="heading">Наличие собственного конструкторского отдела. Изготовление опор по чертежам
-      заказчика</p>
+    <p class="heading">Наличие собственного конструкторского отдела.</p>
+    <p class="heading1">Изготовление опор по чертежам заказчика</p>
+   
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
@@ -64,6 +65,7 @@ onUnmounted(() => {
       rgb(30, 33, 61)96%);
   color: white;
   padding: 44px 0;
+  gap: 10px;
 }
 
 .digitsprod {
@@ -81,6 +83,7 @@ onUnmounted(() => {
   text-align: center;
   color: black;
   padding-bottom: 20px;
+  font-size: 22px;
 }
 
 .num {
@@ -118,12 +121,19 @@ onUnmounted(() => {
 .heading {
   text-align: center;
   color: black;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+
+.heading1 {
+  text-align: center;
+  color: black;
   padding-bottom: 300px;
   font-size: 22px;
 }
 
 .video {
-  height: 30px;
+  height: 55px;
   z-index: -1000;
   overflow: hidden;
 }
@@ -135,23 +145,18 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
-@media screen and (max-width:1920px) {
-  .digits {
-    gap: 10px;
-    padding: 60px 0;
-  }
-
-  .num {
-    height: 48px;
-    width: 52px;
-  }
-}
-
 @media screen and (max-width:1600px) {
 
-  .h1view,
+  .h1view {
+    font-size: 22px;
+  }
+
   .heading {
     font-size: 22px;
+  }
+
+  .heading1 {
+    padding-bottom: 300px;
   }
 
   .digits {
@@ -169,6 +174,10 @@ onUnmounted(() => {
   .allcontainer {
     padding: 60px 20px;
   }
+
+  .video {
+    height: 55px;
+  }
 }
 
 @media screen and (max-width:1366px) {
@@ -179,7 +188,11 @@ onUnmounted(() => {
 
   .heading {
     font-size: 20px;
-    padding-bottom: 228px;
+  }
+
+  .heading1 {
+    font-size: 20px;
+    padding-bottom: 275px;
   }
 
   .digits {
@@ -205,21 +218,29 @@ onUnmounted(() => {
     height: 126px;
     padding-top: 48px;
   }
+
+  .video {
+    height: 33px;
+  }
 }
 
 @media screen and (max-width:992px) {
   .h1view {
     font-size: 18px;
-    padding-bottom: 3px;
+    padding-bottom: 139px;
   }
 
   .heading {
-    padding-bottom: 175px;
     font-size: 18px;
   }
 
+  .heading1 {
+    font-size: 18px;
+    padding-bottom: 115px;
+  }
+
   .video {
-    height: 23px;
+    height: 31px;
   }
 
   .digits {
@@ -252,7 +273,7 @@ onUnmounted(() => {
     height: 50px;
     background: rgb(30, 33, 61);
     border-radius: 0;
-  }  
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -295,45 +316,92 @@ onUnmounted(() => {
   }
 
   .heading {
-    padding-bottom: 132px;
+    padding-bottom: 7px;
+  }
+
+  .heading1 {
+    padding-bottom: 75px;
+  }
+
+  .h1view {
+    padding-bottom: 110px;
   }
 }
 
 @media screen and (max-width:576px) {
   .video {
-    height: 6px;
+    height: 5px;
   }
 
-  .heading { 
-    padding: 0 50px 18px 50px;
+  .heading {
+    padding-bottom: 5px;
+  }
+
+  .heading1 {
+    padding-bottom: 40px;
   }
 
   .num {
     height: 27px;
-    width: 27px;
+    width: 34px;
     font-size: 13px;
   }
 
   .digits {
-    font-size: 17px;
     gap: 5px;
     padding: 16px 10px;
   }
 
   .cardcontainer {
-    font-size: 17px;
     height: 32px;
   }
 
   .digitsprod {
-    font-size: 17px;
     height: 67px;
     padding-top: 16px;
   }
 
-  .h1view {   
-    padding-bottom: 100px;
+  .h1view {
+    padding-bottom: 88px;
+    padding-top: 10px;
   }
 
-}
+  @media screen and (max-width:410px) {
+    .video {
+      height: 0;
+    }
+
+    .h1view {
+      font-size: 14px;
+      padding: 5px 2px 60px 2px;
+    }
+
+    .heading {
+      font-size: 15px;
+    }
+
+    .heading1 {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    .digits {
+      font-size: 16px;
+    }
+    .num {
+      padding-top: 2px;
+      height: 23px;
+      width: 48px;
+    }
+    .cardcontainer {
+      font-size: 16px;
+    }
+    .digitsprod {
+      padding-top: 7px;
+      font-size: 16px;
+    }
+
+    }
+  }
+
 </style>

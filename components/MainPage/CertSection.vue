@@ -112,10 +112,14 @@ swiper-container {
   .certimg {
     width: 55px;
     top: 5%;
+    left: 65%;
   }
 
   .сertcontainer {
-    height: 420px;
+    height: 380px;
+  }
+  .cert {
+    height: 240px;
   }
 }
 @media screen and (max-width:768px) {
@@ -124,12 +128,12 @@ swiper-container {
   }
   .сertcontainer {
     padding: 12px 0;
-    height: 288px;
+    height: 250px;
   }
   .certimg {
     width: 50px;
     top: 2%;
-    left: 64%;
+    left: 66%;
   }
   .cert {
     height: 184px;
@@ -140,7 +144,10 @@ swiper-container {
     font-size: 18px;
   }
   .certimg {
-    left: 66%;
+    left: 69%;
+  }
+  .cert {
+    height: 136px;
   }
 }
 }

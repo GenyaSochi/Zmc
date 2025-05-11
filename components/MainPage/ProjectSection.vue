@@ -16,7 +16,7 @@
     <div id="advant" class="productstyle">
       <h2 class="ouradvant">наши преимущества</h2>
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
-        сделают наше сотрудничество выгодным.</h3>
+        сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
         <div class="production">Экскурсия на производство<a class="butproj"
             href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
@@ -24,15 +24,14 @@
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
             соответствием техническим
-            требованиям.</span>
+            требованиям</span>
         </div>
         <div class="advant"><span class="textspan">Неизменно высокое качество</span><span class="textsmall2">Мы
-            гордимсякачеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени.</span>
+            гордимсякачеством наших изделий, что гарантирует Вам безупречность каждой партии и экономию времени</span>
         </div>
         <div class="advant"><span class="textspan">Прямая коммуникация</span><span class="textsmall3">Общение напрямую с
             нашими конструкторами - преимущество, которое обеспечивает качественную проработку технических вопросов,
-            учитывая
-            потребности каждого проекта.</span></div>
+            учитывая потребности каждого проекта</span></div>
       </div>
     </div>
   </section>
@@ -141,7 +140,7 @@ const slide = [
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
   width: 320px;
-  height: 210px;
+  height: 237px;
 }
 
 .butproj {
@@ -157,7 +156,6 @@ const slide = [
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  /* filter: grayscale(1); */
   padding-right: 84px;
 }
 
@@ -173,12 +171,12 @@ const slide = [
 }
 
 .advant {
-  padding: 26px;
+  padding: 20px;
   border-radius: 10px;
   font-size: 22px;
   background-color: rgba(250, 250, 250, 0.7);
   width: 320px;
-  height: 210px;
+  height: 237px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -202,19 +200,18 @@ const slide = [
 .textsmall1 {
   font-size: 17px;
   text-align: center;
-  padding-top: 12px;
 }
 
 .textsmall2 {
   font-size: 17px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0;
 }
 
 .textsmall3 {
   font-size: 17px;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 26px;
 }
 
 .blockproduct {
@@ -230,8 +227,6 @@ const slide = [
   overflow: hidden;
   height: 596px;
 }
-
-@media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
   .imgsize {
@@ -392,7 +387,7 @@ const slide = [
 
   .production {
     font-size: 17px;
-    height: 235px;
+    height: 250px;
     padding: 0px 18px 26px 26px;
   }
 
@@ -426,7 +421,7 @@ const slide = [
 
   .advant {
     padding: 12px 10px 10px 10px;
-    height: 235px;
+    height: 250px;
   }
 
   .butproj {
@@ -441,6 +436,7 @@ const slide = [
   .textsmall2,
   .textsmall3 {
     padding-top: 5px;
+    font-size: 15px;
   }
 }
 
@@ -524,8 +520,8 @@ const slide = [
 
   .butproj {
     font-size: 18px;
-    padding: 5px;
-    width: 96px;
+    padding: 3px;
+    width: 135px;
   }
 
   .blockproduct {
@@ -613,8 +609,8 @@ const slide = [
     flex-direction: row;
     width: 100%;
     height: 100%;
-    font-size: 16px;
     border-radius: 0;
+    padding: 5px;
   }
 
   .advanttext {
@@ -635,10 +631,39 @@ const slide = [
   }
 
   .advant {
-    height: 30px;
+    height: 40px;
     border-radius: 0;
     padding: 6px 0;
     width: 100%;
+  }
+
+  .textspan {
+    font-size: 19px;
+  }
+
+  @media screen and (max-width:410px) {
+    .imgsize {
+      height: 344px;
+      width: 377px;
+      padding-right: 0px;
+    }
+
+    .imgstyle {
+      padding-right: 16px;
+    }
+
+    .ourproj {
+      padding: 10px 0 7px 0;
+    }
+
+    svg {
+      width: 0;
+      height: 0;
+    }
+
+    .proj {
+      height: 244px;
+    }
   }
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="grid">
       <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-        <p class="workcost">Наши менеджеры работают по будням с 8.00 до 17.00</p>
+        <p class="workcost">по будням с 8.00 до 17.00</p>
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
           <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="perscost">
-          <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных.
+          <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
           </NuxtLink>
         </div>
       </form>
@@ -292,7 +292,7 @@ const cards = [
   .custom-file-input,
   .butcost,
   .inputcost {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .textswiper {
@@ -338,7 +338,7 @@ const cards = [
   }
 
   .butcost {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .formcost {
@@ -381,7 +381,7 @@ const cards = [
   }
 
   .custom-file-input {
-    font-size: 14px;
+    font-size: 17px;
     padding: 5px;
     border-radius: 8px;
   }
@@ -401,17 +401,21 @@ const cards = [
   .h2cost {
     padding: 9px 0;
   }
+  .butcost {
+    font-size: 17px;
+  }
 
 }
 
 @media screen and (max-width:576px) {
   .grid {
-    height: 324px;
+    height: 334px;
     padding-bottom: 10px;
   }
 
   .formcost {
     border-radius: 0;
+    height: 283px;
   }
 
   .custom-file-input {
@@ -434,19 +438,22 @@ const cards = [
 
   .h2cost {
     padding: 10px 0;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .workcost {
-    font-size: 14px;
+    font-size: 17px;
   }
 
+  .butinfo {
+    font-size: 17px;
+  }
   .perscost {
     padding-bottom: 13px;
   }
 
   .msg {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 </style>

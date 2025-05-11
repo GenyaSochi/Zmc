@@ -297,7 +297,7 @@ const toggleMenu = () => {
     display: flex;
     position: absolute;
     left: 0;
-    top: 25px;
+    top: 20px;
     width: 110px;
   }
 
@@ -347,7 +347,7 @@ const toggleMenu = () => {
 
   .logo {
     position: absolute;
-    left: 10px0;
+    left: 10px;
     width: 110px;
     top: 14px;
   }
@@ -364,6 +364,24 @@ const toggleMenu = () => {
 
   .burger span {
     width: 42px;
+  }
+
+  @media screen and (max-width:410px){
+    .butnav {
+      font-size: 16px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    .active {
+      padding-bottom: 3px;
+    }
+    .logo {
+      left: -7px;
+    }
+    
   }
 }
 

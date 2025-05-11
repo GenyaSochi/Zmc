@@ -100,7 +100,7 @@
 
   .exc {
     width: 60px;
-    right: 13%;
+    right: 15%;
     top: 35%;
   }
 }
