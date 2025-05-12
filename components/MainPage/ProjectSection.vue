@@ -645,24 +645,44 @@ const slide = [
     .imgsize {
       height: 344px;
       width: 377px;
-      padding-right: 0px;
     }
 
     .imgstyle {
-      padding-right: 16px;
+      padding-right: 10px;
     }
 
     .ourproj {
       padding: 10px 0 7px 0;
     }
 
-    svg {
-      width: 0;
-      height: 0;
+    swiper-container {
+      --swiper-theme-color: #fff !important;        
     }
 
     .proj {
       height: 244px;
+    }
+
+    .title {
+      bottom: 44px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .title1 {
+      font-size: 14px;
+      left: 44px;
+      bottom: 26px;
+      color: white;
+    }
+
+    .quant {
+      left: 44px;
+      top: 124px;
+      color: white;
+    }
+    .ouradvant {
+      padding-top: 0;
     }
   }
 }

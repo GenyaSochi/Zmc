@@ -455,5 +455,27 @@ const cards = [
   .msg {
     font-size: 18px;
   }
+
+  @media screen and (max-width:410px) {
+    .h2cost {
+      font-size: 16px;
+    }
+    .workcost {
+      font-size: 16px;
+    }
+    .butcost {
+      width: 189px;
+      margin-left: 2px;
+    }
+    .butinfo {
+      font-size: 15px;
+    }
+    .formcost {
+      height: 316px;
+    }
+    .grid {
+      height: 364px;
+    }
+  }
 }
 </style>

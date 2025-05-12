@@ -1,12 +1,12 @@
 <template>
   <section>
     <div class="video">
-      <video autoplay muted id="myVideo" src="/public/video/newvideostart.mp4"></video>
+      <video autoplay muted id="myVideo" src="/public/video/start.mp4"></video>
     </div>
     <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
-    <p class="heading">Наличие собственного конструкторского отдела.</p>
+    <p class="heading">Наличие собственного конструкторского отдела</p>
     <p class="heading1">Изготовление опор по чертежам заказчика</p>
-   
+
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
@@ -373,7 +373,8 @@ onUnmounted(() => {
 
     .h1view {
       font-size: 14px;
-      padding: 5px 2px 60px 2px;
+      padding-top: 5px;
+      padding-bottom: 60px;
     }
 
     .heading {
@@ -388,20 +389,21 @@ onUnmounted(() => {
     .digits {
       font-size: 16px;
     }
+
     .num {
       padding-top: 2px;
       height: 23px;
       width: 48px;
     }
+
     .cardcontainer {
       font-size: 16px;
     }
+
     .digitsprod {
       padding-top: 7px;
       font-size: 16px;
     }
-
-    }
   }
-
+}
 </style>

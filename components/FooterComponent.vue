@@ -120,7 +120,7 @@ const popup = ref(false)
 
 @media screen and (max-width:1366px) {
 
-  .lobtn {   
+  .lobtn {
     width: 205px;
   }
 
@@ -183,7 +183,7 @@ const popup = ref(false)
 
   .confid {
     font-size: 17px;
-  } 
+  }
 
   .imgvk {
     width: 60px;
@@ -226,8 +226,34 @@ const popup = ref(false)
     width: 24px;
     padding-bottom: 5px;
   }
+
   .confid {
     font-size: 16px;
+  }
+
+  @media screen and (max-width:410px) {
+    .contactmain {
+      padding-top: 6px;
+    }
+
+    .lobtn {
+      margin-bottom: 24px;
+    }
+
+    .footer_color {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+
+    .lobtn {
+      width: 158px;
+      font-size: 16px;
+    }
+
+    .confid {
+      font-size: 15px;
+    }
   }
 }
 </style>

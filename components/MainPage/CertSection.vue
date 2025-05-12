@@ -74,81 +74,111 @@ swiper-container {
 }
 
 @media screen and (max-width:1600px) {
-.cert {
-  height: 280px;
-  size: 180px;
+  .cert {
+    height: 280px;
+    size: 180px;
+  }
+
+  .сertcontainer {
+    height: 556px;
+  }
+
+  .certimg {
+    left: 63%;
+  }
+
+  .сerttext {
+    font-size: 30px;
+  }
+
 }
-.сertcontainer {
-  height: 556px;
-}
-.certimg {
-  left: 63%;
-}
-.сerttext {
-  font-size: 30px;
-}
-  
-}
+
 @media screen and (max-width:1366px) {
   .сerttext {
     font-size: 28px;
   }
+
   .certimg {
     left: 63%;
   }
- .сertcontainer {
-  height: 500px;
- }
- .cert {
-  height: 260px;
-  size: 180px;
- }
-
-@media screen and (max-width:992px) {
-  .сerttext {
-    font-size: 24px;
-    padding-bottom: 50px;
-  }
-  .certimg {
-    width: 55px;
-    top: 5%;
-    left: 65%;
-  }
 
   .сertcontainer {
-    height: 380px;
+    height: 500px;
   }
+
   .cert {
-    height: 240px;
+    height: 260px;
+    size: 180px;
   }
-}
-@media screen and (max-width:768px) {
-  .сerttext {
-    font-size: 20px;
+
+  @media screen and (max-width:992px) {
+    .сerttext {
+      font-size: 24px;
+      padding-bottom: 50px;
+    }
+
+    .certimg {
+      width: 55px;
+      top: 5%;
+      left: 65%;
+    }
+
+    .сertcontainer {
+      height: 380px;
+    }
+
+    .cert {
+      height: 240px;
+    }
   }
-  .сertcontainer {
-    padding: 12px 0;
-    height: 250px;
+
+  @media screen and (max-width:768px) {
+    .сerttext {
+      font-size: 20px;
+    }
+
+    .сertcontainer {
+      padding: 12px 0;
+      height: 250px;
+    }
+
+    .certimg {
+      width: 50px;
+      top: 2%;
+      left: 66%;
+    }
+
+    .cert {
+      height: 184px;
+    }
   }
-  .certimg {
-    width: 50px;
-    top: 2%;
-    left: 66%;
+
+  @media screen and (max-width:576px) {
+    .сerttext {
+      font-size: 18px;
+    }
+
+    .certimg {
+      left: 69%;
+    }
+
+    .cert {
+      height: 136px;
+    }
   }
-  .cert {
-    height: 184px;
+
+  @media screen and (max-width:410px) {
+    .certimg {
+      left: 76%;
+    }
+
+    .cert {
+      height: 98px;
+    }
+
+    .сertcontainer {
+      height: 201px;
+    }
   }
-}
-@media screen and (max-width:576px) {
-  .сerttext {
-    font-size: 18px;
-  }
-  .certimg {
-    left: 69%;
-  }
-  .cert {
-    height: 136px;
-  }
-}
 }
 </style>

@@ -40,12 +40,7 @@ const photos = [
 .imgphoto {
   height: 300px;
 }
-@media screen and (max-width:1920px) {
-  
-}
-@media screen and (max-width:1600px) {
-  
-}
+
 @media screen and (max-width:1366px) {
   .photocontainer {
     padding: 22px 22px 60px 34px;
@@ -74,5 +69,11 @@ const photos = [
   .photocontainer {
     padding: 0 10px 10px 10px;
   }
+  @media screen and (max-width:410px) {
+  .imgphoto {
+    height: 90px;
+  }
+  
+}
 }
 </style>

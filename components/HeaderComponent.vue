@@ -380,8 +380,7 @@ const toggleMenu = () => {
     }
     .logo {
       left: -7px;
-    }
-    
+    }    
   }
 }
 
