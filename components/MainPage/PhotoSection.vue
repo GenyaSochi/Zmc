@@ -1,7 +1,7 @@
 <template>
   <section id="photo">
     <div class="photocontainer">
-      <swiper-container watchSlidesProgress="true" slidesPerView="8">
+      <swiper-container ref="swiperCont" :init="true">
         <swiper-slide v-for="photo of photos" :key="photo.id">
           <NuxtImg class="imgphoto" fit="cover" sizes="205px " :src="photo.img" :alt="photo.title"></NuxtImg>
         </swiper-slide>
@@ -30,6 +30,13 @@ const photos = [
   { id: 14, img: '/img/zmc14.webp', title: 'photo' },
   { id: 15, img: '/img/zmc15.webp', title: 'photo' },
 ]
+
+const swiperCont=ref(null)
+
+const swiper = useSwiper(swiperCont,{
+  slidesPerView:8,
+  watchSlidesProgress: true
+})
 </script>
 
 <style scoped>

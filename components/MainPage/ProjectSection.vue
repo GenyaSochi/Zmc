@@ -2,7 +2,7 @@
   <section>
     <h2 class="ourproj">наши проекты</h2>
     <div class="proj">
-      <swiper-container class="swiper" pagination="true" navigation="true" centered-slides="true">
+      <swiper-container class="swiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of slide" :key="el.id">
           <div class="imgstyle">
             <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>
@@ -47,6 +47,15 @@ const slide = [
   { id: 3, title: 'продукции изготовлено по', title1: 'индивидуальным параметрам', quantity: '> 350', unit: 'тонн', imgproduct: '/img/nonstandart.webp' },
   { id: 4, title: 'высококвалифицированных', title1: 'специалистов', quantity: '> 110', unit: '', imgproduct: '/img/spec.webp' },
 ]
+
+const swiperCont=ref(null)
+
+const swiper = useSwiper(swiperCont,{
+  pagination: true,
+  navigation: true,
+  
+})
+
 </script>
 
 <style scoped>
@@ -648,7 +657,7 @@ const slide = [
     }
 
     .imgstyle {
-      padding-right: 10px;
+      padding-right: 0px;
     }
 
     .ourproj {
@@ -656,7 +665,7 @@ const slide = [
     }
 
     swiper-container {
-      --swiper-theme-color: #fff !important;        
+      --swiper-theme-color: transparent !important;        
     }
 
     .proj {

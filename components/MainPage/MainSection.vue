@@ -374,7 +374,7 @@ onUnmounted(() => {
     .h1view {
       font-size: 14px;
       padding-top: 5px;
-      padding-bottom: 60px;
+      padding-bottom: 46px;
     }
 
     .heading {
@@ -401,7 +401,7 @@ onUnmounted(() => {
     }
 
     .digitsprod {
-      padding-top: 7px;
+      padding: 5px;
       font-size: 16px;
     }
   }

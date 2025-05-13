@@ -244,15 +244,29 @@ const popup = ref(false)
       display: flex;
       flex-direction: column;
       font-size: 16px;
+      padding: 0;
     }
 
     .lobtn {
       width: 158px;
       font-size: 16px;
+      margin: 10px 0;
     }
 
     .confid {
       font-size: 15px;
+    }
+
+    .footercont {
+      display: block;
+      text-align: center;
+    }
+
+    .imgall {
+      display: block;
+    }
+    .imgru {
+      padding-bottom: 10px;
     }
   }
 }

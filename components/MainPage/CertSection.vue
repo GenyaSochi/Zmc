@@ -1,9 +1,9 @@
 <template>
   <section id="cert">
-    <div class="сertcontainer">
-      <h2 class="сerttext">наши сертификаты</h2>
+    <div class="certcontainer">
+      <h2 class="certtext">наши сертификаты</h2>
       <img class="certimg" src="/public/img/reward100.webp" alt="reward">
-      <swiper-container class="сertswiper" watchSlidesProgress="true" slidesPerView="5">
+      <swiper-container class="certswiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
             <NuxtImg fit="cover" class="cert" :src="el.img" :alt="el.title"></NuxtImg>
@@ -18,6 +18,12 @@
 
 import { register } from 'swiper/element/bundle'
 register()
+
+const swiperCont=ref(null)
+
+const swiper = useSwiper(swiperCont,{
+  slidesPerView:5
+})
 
 const certificate = [
   { id: 1, img: '/img/cert1.webp', title: 'certificate', pdf: 'cert1_pdf.pdf' },
@@ -37,7 +43,7 @@ swiper-container {
   overflow: hidden;
 }
 
-.сertcontainer {
+.certcontainer {
   padding: 30px 0;
   height: 600px;
   position: relative;
@@ -46,7 +52,7 @@ swiper-container {
       rgb(30, 33, 61)96%);
 }
 
-.сerttext {
+.certtext {
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -54,12 +60,12 @@ swiper-container {
   font-size: 34px;
 }
 
-.сertswiper swiper-slide {
+/* .certswiper swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
+} */
 
 .certimg {
   position: absolute;
@@ -79,7 +85,7 @@ swiper-container {
     size: 180px;
   }
 
-  .сertcontainer {
+  .certcontainer {
     height: 556px;
   }
 
@@ -87,14 +93,14 @@ swiper-container {
     left: 63%;
   }
 
-  .сerttext {
+  .certtext {
     font-size: 30px;
   }
 
 }
 
 @media screen and (max-width:1366px) {
-  .сerttext {
+  .certtext {
     font-size: 28px;
   }
 
@@ -102,7 +108,7 @@ swiper-container {
     left: 63%;
   }
 
-  .сertcontainer {
+  .certcontainer {
     height: 500px;
   }
 
@@ -112,7 +118,7 @@ swiper-container {
   }
 
   @media screen and (max-width:992px) {
-    .сerttext {
+    .certtext {
       font-size: 24px;
       padding-bottom: 50px;
     }
@@ -123,7 +129,7 @@ swiper-container {
       left: 65%;
     }
 
-    .сertcontainer {
+    .certcontainer {
       height: 380px;
     }
 
@@ -133,11 +139,11 @@ swiper-container {
   }
 
   @media screen and (max-width:768px) {
-    .сerttext {
+    .certtext {
       font-size: 20px;
     }
 
-    .сertcontainer {
+    .certcontainer {
       padding: 12px 0;
       height: 250px;
     }
@@ -154,7 +160,7 @@ swiper-container {
   }
 
   @media screen and (max-width:576px) {
-    .сerttext {
+    .certtext {
       font-size: 18px;
     }
 
@@ -176,7 +182,7 @@ swiper-container {
       height: 98px;
     }
 
-    .сertcontainer {
+    .certcontainer {
       height: 201px;
     }
   }

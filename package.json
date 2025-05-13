@@ -16,6 +16,7 @@
     "@prisma/nuxt": "^0.0.35",
     "emailjs-com": "^3.2.0",
     "nuxt": "^3.13.0",
+    "nuxt-swiper": "^2.0.1",
     "pdfvuer": "^2.0.1",
     "swiper": "^11.1.14",
     "vue": "latest",

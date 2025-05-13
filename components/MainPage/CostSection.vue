@@ -6,12 +6,10 @@
         <p class="workcost">по будням с 8.00 до 17.00</p>
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
-          <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">
-          <div>
+          <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">       
             <input type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf"
               class="custom-file-input">
-            <button class="butcost" type="submit">Отправить заявку</button>
-          </div>
+            <button class="butcost" type="submit">Отправить заявку</button>         
         </div>
         <div class="perscost">
           <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
@@ -41,6 +39,8 @@ import { EffectCards } from 'swiper/modules'
 
 register()
 const modules = [EffectCards]
+
+
 
 const cards = [
   { id: 1, title: 'Плазменная резка металла' },
@@ -464,8 +464,8 @@ const cards = [
       font-size: 16px;
     }
     .butcost {
-      width: 189px;
-      margin-left: 2px;
+      width: 100%;
+      margin: 5px 0 0 2px;
     }
     .butinfo {
       font-size: 15px;
@@ -474,7 +474,23 @@ const cards = [
       height: 316px;
     }
     .grid {
-      height: 364px;
+      height: 100%;
+      gap: 0;
+    }
+    .inputcost {
+      width: 100%;
+    }
+    .custom-file-input {
+      width: 100%;
+    }
+    .allinputcost {
+      padding: 0 30px;
+    }
+    .swiper {
+      display: none;
+    }
+    .perscost {
+      padding-bottom: 0;
     }
   }
 }

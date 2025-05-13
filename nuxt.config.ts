@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@prisma/nuxt', '@nuxt/image','vue-yandex-maps/nuxt'],
+  modules: ['@pinia/nuxt', '@prisma/nuxt', '@nuxt/image', 'vue-yandex-maps/nuxt', 'nuxt-swiper'],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
