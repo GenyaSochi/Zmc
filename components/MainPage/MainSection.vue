@@ -84,6 +84,7 @@ onUnmounted(() => {
   color: black;
   padding-bottom: 20px;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .num {
@@ -123,6 +124,7 @@ onUnmounted(() => {
   color: black;
   padding-bottom: 5px;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .heading1 {
@@ -130,6 +132,7 @@ onUnmounted(() => {
   color: black;
   padding-bottom: 300px;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .video {

@@ -12,7 +12,7 @@
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
-    </div>
+    </div>   
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>
@@ -42,6 +42,7 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
+
 .navtag {
   padding: 10px 0;
   background-color: rgb(30, 33, 61);

@@ -175,7 +175,8 @@ swiper-container {
 
   @media screen and (max-width:410px) {
     .certimg {
-      left: 76%;
+     display: none;
+      
     }
 
     .cert {
