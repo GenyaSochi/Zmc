@@ -211,18 +211,19 @@ const swiper = useSwiper(swiperCont,{
 .textsmall1 {
   font-size: 17px;
   text-align: center;
+  padding-top: 20px;
 }
 
 .textsmall2 {
   font-size: 17px;
   text-align: center;
-  padding-top: 0;
+  padding-top: 0px;
 }
 
 .textsmall3 {
   font-size: 17px;
   text-align: center;
-  padding-top: 26px;
+  padding-top: 23px;
 }
 
 .blockproduct {
@@ -238,6 +239,9 @@ const swiper = useSwiper(swiperCont,{
   overflow: hidden;
   height: 596px;
 }
+swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
 
 @media screen and (max-width:1600px) {
   .imgsize {
@@ -273,6 +277,12 @@ const swiper = useSwiper(swiperCont,{
   .proj {
     height: 580px;
   }
+  swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
+    .textsmall1, .textsmall2, .textsmall3 {
+      padding-top: 24px;
+    }
 }
 
 @media screen and (max-width:1366px) {
@@ -349,6 +359,9 @@ const swiper = useSwiper(swiperCont,{
   .proj {
     height: 490px;
   }
+  swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -420,6 +433,9 @@ const swiper = useSwiper(swiperCont,{
   .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 32%);
   }
+  swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
 
   .proj {
     height: 368px;
@@ -443,10 +459,16 @@ const swiper = useSwiper(swiperCont,{
     width: 64px;
   }
 
-  .textsmall1,
-  .textsmall2,
-  .textsmall3 {
+  .textsmall1 {
+    font-size: 15px;
+    padding-top: 26px;
+  }
+  .textsmall2 {
+    font-size: 15px;
     padding-top: 5px;
+  }
+  .textsmall3 {
+    padding-top: 26px;
     font-size: 15px;
   }
 }
@@ -546,6 +568,10 @@ const swiper = useSwiper(swiperCont,{
   .productstyle {
     height: 234px;
   }
+  swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
+
 }
 
 @media screen and (max-width:576px) {
@@ -623,7 +649,6 @@ const swiper = useSwiper(swiperCont,{
     border-radius: 0;
     padding: 5px;
   }
-
   .advanttext {
     font-size: 17px;
   }
@@ -637,7 +662,7 @@ const swiper = useSwiper(swiperCont,{
   }
 
   .productstyle {
-    padding: 10px;
+    padding: 0 10px;
     height: 100%;
   }
 
@@ -651,6 +676,10 @@ const swiper = useSwiper(swiperCont,{
   .textspan {
     font-size: 19px;
   }
+
+  swiper-container {
+      --swiper-theme-color: grey !important;        
+    }
 
   @media screen and (max-width:410px) {
     .imgsize {

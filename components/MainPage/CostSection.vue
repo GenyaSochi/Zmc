@@ -22,8 +22,7 @@
           <div class="textswiper_right blur"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-        <swiper-container class="swiper" effect="cards" grab-cursor="true" cards-effect-rotate="true" loop="true"
-          cards-effect-per-slide-offset="8" :modules="modules">
+        <swiper-container class="swiper"  ref="swiperCont" :init="true" :modules="modules" effect="cards">
           <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
       </div>
@@ -32,15 +31,19 @@
 </template>
 
 <script setup lang="ts">
-import { register } from 'swiper/element/bundle'
-import 'swiper/css'
-import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
-
-register()
-const modules = [EffectCards]
-
-
+import 'swiper/css'
+const modules = [EffectCards ]
+const swiperCont=ref(null)
+const swiper = useSwiper(swiperCont,{
+  effect: 'cards',
+  grabCursor: true,
+  cardsEffect: {
+    rotate: true,
+    perSlideOffset: 8
+  },
+  loop: true,
+})
 
 const cards = [
   { id: 1, title: 'Плазменная резка металла' },
@@ -220,7 +223,7 @@ const cards = [
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   padding-left: 30px;
   padding-bottom: 25px;
 }
@@ -230,10 +233,9 @@ const cards = [
   padding: 5px;
   border-radius: 5px;
   height: 43px;
-  width: 190px;
+  width: 215px;
   font-size: 18px;
-  text-align: center;
-  margin-left: 40px;
+  text-align: center;  
 }
 
 .perscost {
@@ -344,7 +346,7 @@ const cards = [
   .formcost {
     margin-left: 0;
     padding-bottom: 0;
-    height: 306px;
+    height: 362px;
   }
 
   .butinfo {
@@ -409,13 +411,13 @@ const cards = [
 
 @media screen and (max-width:576px) {
   .grid {
-    height: 334px;
+    height: 359px;
     padding-bottom: 10px;
   }
 
   .formcost {
     border-radius: 0;
-    height: 283px;
+    height: 100%;
   }
 
   .custom-file-input {
@@ -428,8 +430,7 @@ const cards = [
   }
 
   .butcost {
-    width: 176px;
-    margin-left: 110px;
+    width: 190px;
   }
 
   .textswiper {

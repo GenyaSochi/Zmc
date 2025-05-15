@@ -361,7 +361,7 @@ onUnmounted(() => {
 
   .digitsprod {
     height: 67px;
-    padding-top: 16px;
+    padding: 16px 5px 0 5px;
   }
 
   .h1view {

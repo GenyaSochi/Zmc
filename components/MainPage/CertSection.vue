@@ -44,7 +44,7 @@ swiper-container {
 }
 
 .certcontainer {
-  padding: 30px 0;
+  padding: 20px 20px 20px 140px;
   height: 600px;
   position: relative;
   background: linear-gradient(90deg,
@@ -87,6 +87,7 @@ swiper-container {
 
   .certcontainer {
     height: 556px;
+    padding: 20px 20px 20px 100px;
   }
 
   .certimg {
@@ -110,6 +111,7 @@ swiper-container {
 
   .certcontainer {
     height: 500px;
+    padding: 18px 20px 20px 76px;
   }
 
   .cert {
@@ -125,12 +127,13 @@ swiper-container {
 
     .certimg {
       width: 55px;
-      top: 5%;
+      top: 4%;
       left: 65%;
     }
 
     .certcontainer {
       height: 380px;
+      padding: 18px 20px 20px 37px;
     }
 
     .cert {
@@ -143,14 +146,13 @@ swiper-container {
       font-size: 20px;
     }
 
-    .certcontainer {
-      padding: 12px 0;
+    .certcontainer {      
       height: 250px;
     }
 
     .certimg {
       width: 50px;
-      top: 2%;
+      top: 4%;
       left: 66%;
     }
 
@@ -185,6 +187,9 @@ swiper-container {
 
     .certcontainer {
       height: 201px;
+    }
+    .certtext {
+      padding-bottom: 26px;
     }
   }
 }
