@@ -1,7 +1,7 @@
 <template>
   <header class="navtag">
     <div class="nav_all">
-      <NuxtLink to="/"><img src="/img/sitelogo1.webp" alt="logo" class="logo"></NuxtLink> 
+      <NuxtLink to="/"><img src="/img/sitelogo1.webp" alt="logo" class="logo"></NuxtLink>
       <div class="link">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
@@ -12,7 +12,12 @@
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
-    </div>   
+    </div>
+    <div style="color: white; display: flex; gap: 148px; justify-content: center;">
+      <p style="font-size: 20px;">17 лет производим опоры для трубопроводов</p>
+      <p style="font-size: 20px;">Наличие собственного конструкторского отдела</p>
+      <p style="font-size: 20px;">Изготовление опор по чертежам заказчика</p>
+    </div>
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>
@@ -42,7 +47,6 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
-
 .navtag {
   padding: 10px 0;
   background-color: rgb(30, 33, 61);
@@ -291,7 +295,7 @@ const toggleMenu = () => {
 
   .but {
     display: none;
-    
+
   }
 
   .logo {
@@ -367,7 +371,7 @@ const toggleMenu = () => {
     width: 42px;
   }
 
-  @media screen and (max-width:410px){
+  @media screen and (max-width:410px) {
     .butnav {
       font-size: 16px;
     }
@@ -379,10 +383,10 @@ const toggleMenu = () => {
     .active {
       padding-bottom: 3px;
     }
+
     .logo {
       left: -7px;
-    }    
+    }
   }
 }
-
 </style>

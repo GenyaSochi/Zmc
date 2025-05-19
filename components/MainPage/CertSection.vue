@@ -19,10 +19,10 @@
 import { register } from 'swiper/element/bundle'
 register()
 
-const swiperCont=ref(null)
+const swiperCont = ref(null)
 
-const swiper = useSwiper(swiperCont,{
-  slidesPerView:5
+const swiper = useSwiper(swiperCont, {
+  slidesPerView: 5
 })
 
 const certificate = [
@@ -70,8 +70,9 @@ swiper-container {
 .certimg {
   position: absolute;
   z-index: 2;
-  left: 61%;
-  top: 3%
+  left: 64%;
+  top: 1%;
+  color: red;
 }
 
 .cert {
@@ -146,7 +147,7 @@ swiper-container {
       font-size: 20px;
     }
 
-    .certcontainer {      
+    .certcontainer {
       height: 250px;
     }
 
@@ -177,8 +178,8 @@ swiper-container {
 
   @media screen and (max-width:410px) {
     .certimg {
-     display: none;
-      
+      display: none;
+
     }
 
     .cert {
@@ -188,6 +189,7 @@ swiper-container {
     .certcontainer {
       height: 201px;
     }
+
     .certtext {
       padding-bottom: 26px;
     }

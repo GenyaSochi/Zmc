@@ -3,9 +3,9 @@
     <div class="video">
       <video autoplay muted id="myVideo" src="/public/video/start.mp4"></video>
     </div>
-    <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
+    <!-- <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
     <p class="heading">Наличие собственного конструкторского отдела</p>
-    <p class="heading1">Изготовление опор по чертежам заказчика</p>
+    <p class="heading1">Изготовление опор по чертежам заказчика</p> -->
 
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
@@ -105,9 +105,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(30, 33, 61);
+  background: rgb(38, 41, 70);
   color: white;
-  text-align: center;
+  text-align: center;      
+  font-weight: 500;
 }
 
 .allcontainer {
@@ -116,7 +117,7 @@ onUnmounted(() => {
   text-align: center;
   gap: 45px;
   background-color: white;
-  padding: 80px 20px;
+  padding: 80px 20px;  
 }
 
 .heading {
@@ -136,7 +137,7 @@ onUnmounted(() => {
 }
 
 .video {
-  height: 55px;
+height: 442px;
   z-index: -1000;
   overflow: hidden;
 }

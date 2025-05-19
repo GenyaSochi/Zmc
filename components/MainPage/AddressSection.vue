@@ -48,7 +48,7 @@ h2 {
 .card {
   position: relative;
   overflow: hidden;
-  padding: 0 120px;
+  padding: 0 120px 40px;
 }
 
 @media screen and (max-width:1600px) {

@@ -95,7 +95,7 @@ const swiper = useSwiper(swiperCont,{
 .ouradvant {
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 34px;
   padding-bottom: 30px;
 }
@@ -149,9 +149,11 @@ const swiper = useSwiper(swiperCont,{
   padding: 10px 18px 26px 26px;
   border-radius: 10px;
   font-size: 22px;
-  background-color: rgba(250, 250, 250, 0.7);
+  /* background-color: rgba(250, 250, 250, 0.7); */
+  background-color: #eee;
   width: 320px;
   height: 237px;
+  font-weight: 600;
 }
 
 .butproj {
@@ -176,7 +178,7 @@ const swiper = useSwiper(swiperCont,{
 
 .advanttext {
   font-size: 24px;
-  color: white;
+  color: black;
   padding-bottom: 96px;
   text-align: center;
 }
@@ -185,7 +187,8 @@ const swiper = useSwiper(swiperCont,{
   padding: 20px;
   border-radius: 10px;
   font-size: 22px;
-  background-color: rgba(250, 250, 250, 0.7);
+  /* background-color: rgba(250, 250, 250, 0.7); */
+  background-color: #eee;
   width: 320px;
   height: 237px;
   display: flex;
@@ -194,9 +197,9 @@ const swiper = useSwiper(swiperCont,{
 }
 
 .productstyle {
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
       rgb(30, 33, 61)0%,
-      rgb(10, 10, 10)100%);
+      rgb(10, 10, 10)100%); */
   justify-content: center;
   padding-top: 30px;
   height: 600px;
@@ -206,12 +209,13 @@ const swiper = useSwiper(swiperCont,{
   text-align: center;
   padding-bottom: 10px;
   font-size: 22px;
+  font-weight: 600;
 }
 
 .textsmall1 {
   font-size: 17px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 3px;
 }
 
 .textsmall2 {
