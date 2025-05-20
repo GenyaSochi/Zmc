@@ -19,7 +19,14 @@
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
     </div>
-    <h2 class="digitsprod">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</h2>
+    <div class="digitsprod">
+      <p>17 лет производим опоры для трубопроводов</p>
+      <p>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
+      <div style="display: flex; gap: 30px;"> 
+        <p>Наличие собственного конструкторского отдела</p>
+        <p>Изготовление опор по чертежам заказчика</p>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -55,7 +62,7 @@ onUnmounted(() => {
 
 <style scoped>
 .digits {
-  font-size: 22px;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,20 +70,24 @@ onUnmounted(() => {
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
+  font-weight: 600;
   color: white;
   padding: 44px 0;
   gap: 10px;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .digitsprod {
   font-size: 22px;
   height: 158px;
-  padding-top: 58px;
+  padding: 20px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
-      rgb(30, 33, 61)96%);
+      rgb(30, 33, 61) 96%);
   color: white;
   text-align: center;
+  font-weight: 600;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .h1view {
@@ -105,10 +116,23 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(38, 41, 70);
+  background: rgb(30, 33, 61);
+  background: linear-gradient(to left, rgb(30, 33, 61) 0%, rgb(7, 149, 231) 50%, rgb(30, 33, 61) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: sans-serif;
   color: white;
-  text-align: center;      
-  font-weight: 500;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  transition: font-size 2s ease-in-out;
+}
+
+.cardcontainer:hover {
+  font-size: 24px;
+    box-shadow: 4px 4px 20px rgb(30, 33, 61);
+  /* transform: scale(1);  */
 }
 
 .allcontainer {
@@ -117,8 +141,17 @@ onUnmounted(() => {
   text-align: center;
   gap: 45px;
   background-color: white;
-  padding: 80px 20px;  
+  padding: 80px 20px;
+  animation: cards cubic-bezier(.04, 1.01, 1, -1.07) infinite 5s;
 }
+
+/* @keyframes cards {
+  from {}
+
+  40% {}
+
+  to {}
+} */
 
 .heading {
   text-align: center;
@@ -137,7 +170,7 @@ onUnmounted(() => {
 }
 
 .video {
-height: 442px;
+  height: 442px;
   z-index: -1000;
   overflow: hidden;
 }

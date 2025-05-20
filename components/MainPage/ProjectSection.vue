@@ -50,12 +50,12 @@ const slide = [
   { id: 4, title: 'высококвалифицированных', title1: 'специалистов', quantity: '> 110', unit: '', imgproduct: '/img/spec.webp' },
 ]
 
-const swiperCont=ref(null)
+const swiperCont = ref(null)
 
-const swiper = useSwiper(swiperCont,{
+const swiper = useSwiper(swiperCont, {
   pagination: true,
   navigation: true,
-  
+
 })
 
 </script>
@@ -97,7 +97,7 @@ const swiper = useSwiper(swiperCont,{
   text-transform: uppercase;
   color: black;
   font-size: 34px;
-  padding-bottom: 30px;
+  padding-bottom: 30px;  
 }
 
 .units {
@@ -146,14 +146,15 @@ const swiper = useSwiper(swiperCont,{
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 10px 18px 26px 26px;
+  padding: 0px 18px 26px 26px;
   border-radius: 10px;
   font-size: 22px;
   /* background-color: rgba(250, 250, 250, 0.7); */
   background-color: #eee;
-  width: 320px;
-  height: 237px;
+  width: 340px;
+  height: 264px;
   font-weight: 600;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .butproj {
@@ -189,11 +190,12 @@ const swiper = useSwiper(swiperCont,{
   font-size: 22px;
   /* background-color: rgba(250, 250, 250, 0.7); */
   background-color: #eee;
-  width: 320px;
-  height: 237px;
+  width: 340px;
+  height: 264px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .productstyle {
@@ -207,7 +209,6 @@ const swiper = useSwiper(swiperCont,{
 
 .textspan {
   text-align: center;
-  padding-bottom: 10px;
   font-size: 22px;
   font-weight: 600;
 }
@@ -215,19 +216,19 @@ const swiper = useSwiper(swiperCont,{
 .textsmall1 {
   font-size: 17px;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 43px;
 }
 
 .textsmall2 {
   font-size: 17px;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 19px;
 }
 
 .textsmall3 {
   font-size: 17px;
   text-align: center;
-  padding-top: 23px;
+  padding-top: 45px;
 }
 
 .blockproduct {
@@ -243,9 +244,10 @@ const swiper = useSwiper(swiperCont,{
   overflow: hidden;
   height: 596px;
 }
+
 swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
+  --swiper-theme-color: grey !important;
+}
 
 @media screen and (max-width:1600px) {
   .imgsize {
@@ -281,12 +283,16 @@ swiper-container {
   .proj {
     height: 580px;
   }
+
   swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
-    .textsmall1, .textsmall2, .textsmall3 {
-      padding-top: 24px;
-    }
+    --swiper-theme-color: grey !important;
+  }
+
+  .textsmall1,
+  .textsmall2,
+  .textsmall3 {
+    padding-top: 24px;
+  }
 }
 
 @media screen and (max-width:1366px) {
@@ -363,9 +369,10 @@ swiper-container {
   .proj {
     height: 490px;
   }
+
   swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
+    --swiper-theme-color: grey !important;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -437,9 +444,10 @@ swiper-container {
   .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 32%);
   }
+
   swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
+    --swiper-theme-color: grey !important;
+  }
 
   .proj {
     height: 368px;
@@ -467,10 +475,12 @@ swiper-container {
     font-size: 15px;
     padding-top: 26px;
   }
+
   .textsmall2 {
     font-size: 15px;
     padding-top: 5px;
   }
+
   .textsmall3 {
     padding-top: 26px;
     font-size: 15px;
@@ -572,9 +582,10 @@ swiper-container {
   .productstyle {
     height: 234px;
   }
+
   swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
+    --swiper-theme-color: grey !important;
+  }
 
 }
 
@@ -653,6 +664,7 @@ swiper-container {
     border-radius: 0;
     padding: 5px;
   }
+
   .advanttext {
     font-size: 17px;
   }
@@ -682,8 +694,8 @@ swiper-container {
   }
 
   swiper-container {
-      --swiper-theme-color: grey !important;        
-    }
+    --swiper-theme-color: grey !important;
+  }
 
   @media screen and (max-width:410px) {
     .imgsize {
@@ -700,7 +712,7 @@ swiper-container {
     }
 
     swiper-container {
-      --swiper-theme-color: transparent !important;        
+      --swiper-theme-color: transparent !important;
     }
 
     .proj {
@@ -725,6 +737,7 @@ swiper-container {
       top: 124px;
       color: white;
     }
+
     .ouradvant {
       padding-top: 0;
     }

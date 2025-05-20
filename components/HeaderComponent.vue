@@ -13,11 +13,11 @@
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
     </div>
-    <div style="color: white; display: flex; gap: 148px; justify-content: center;">
+    <!-- <div style="color: white; display: flex; gap: 148px; justify-content: center;">
       <p style="font-size: 20px;">17 лет производим опоры для трубопроводов</p>
       <p style="font-size: 20px;">Наличие собственного конструкторского отдела</p>
       <p style="font-size: 20px;">Изготовление опор по чертежам заказчика</p>
-    </div>
+    </div> -->
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>
