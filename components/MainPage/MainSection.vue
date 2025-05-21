@@ -22,7 +22,7 @@
     <div class="digitsprod">
       <p>17 лет производим опоры для трубопроводов</p>
       <p>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
-      <div style="display: flex; gap: 30px;"> 
+      <div class="digitsprod1">
         <p>Наличие собственного конструкторского отдела</p>
         <p>Изготовление опор по чертежам заказчика</p>
       </div>
@@ -90,6 +90,14 @@ onUnmounted(() => {
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
+.digitsprod1 {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
 .h1view {
   text-align: center;
   color: black;
@@ -131,7 +139,7 @@ onUnmounted(() => {
 
 .cardcontainer:hover {
   font-size: 24px;
-    box-shadow: 4px 4px 20px rgb(30, 33, 61);
+  box-shadow: 4px 4px 20px rgb(30, 33, 61);
   /* transform: scale(1);  */
 }
 
