@@ -1,7 +1,7 @@
 <template>
     <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
     <div class="job">
-    <div>
+    <div class="text">
         <p>Наше предприятие – один из лидеров по производству опор трубопроводов.
             Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания»,
             «Трубная металлургическая компания» и других представителей отрасли.</p>
@@ -62,6 +62,19 @@
     padding: 20px;
 }
 .imgposition {
-padding-left: 140px;
+padding-left: 64px;
+}
+.text {
+    font-size: 24px;
+}
+
+@media screen and(max-width:1360px){
+    .jobinfo {
+        font-size: 30px;
+    }
+    .text {
+        font-size: 22px;
+    }
+    
 }
 </style>

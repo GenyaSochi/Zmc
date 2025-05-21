@@ -243,6 +243,7 @@ const swiper = useSwiper(swiperCont, {
 .imgsize {
   overflow: hidden;
   height: 596px;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 swiper-container {

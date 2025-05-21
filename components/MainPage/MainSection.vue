@@ -3,10 +3,7 @@
     <div class="video">
       <video autoplay muted id="myVideo" src="/public/video/start.mp4"></video>
     </div>
-    <!-- <h1 class="h1view">17 лет производим опоры для трубопроводов</h1>
-    <p class="heading">Наличие собственного конструкторского отдела</p>
-    <p class="heading1">Изготовление опор по чертежам заказчика</p> -->
-
+     
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
@@ -22,10 +19,8 @@
     <div class="digitsprod">
       <p>17 лет производим опоры для трубопроводов</p>
       <p>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
-      <div class="digitsprod1">
-        <p>Наличие собственного конструкторского отдела</p>
-        <p>Изготовление опор по чертежам заказчика</p>
-      </div>
+      <p>Наличие собственного конструкторского отдела</p>
+      <p>Изготовление опор по чертежам заказчика</p>      
     </div>
   </section>
 </template>
@@ -58,9 +53,12 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
+
 </script>
 
 <style scoped>
+
+
 .digits {
   font-size: 24px;
   display: flex;
@@ -88,14 +86,6 @@ onUnmounted(() => {
   text-align: center;
   font-weight: 600;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
-}
-
-.digitsprod1 {
-  font-size: 22px;
-  font-weight: 600;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
 }
 
 .h1view {
