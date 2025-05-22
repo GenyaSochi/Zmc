@@ -1,8 +1,7 @@
 <template>
   <section id="cert">
+    <h2 class="certtext">наши сертификаты</h2>
     <div class="certcontainer">
-      <h2 class="certtext">наши сертификаты</h2>
-      <img class="certimg" src="/public/img/reward100.webp" alt="reward">
       <swiper-container class="certswiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
@@ -22,7 +21,7 @@ register()
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 5
+  slidesPerView: 5,  
 })
 
 const certificate = [
@@ -40,44 +39,31 @@ const certificate = [
 
 <style scoped>
 swiper-container {
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .certcontainer {
-  padding: 20px 20px 20px 140px;
-  height: 600px;
-  position: relative;
-  background: linear-gradient(90deg,
-      rgb(7, 7, 7)39%,
-      rgb(30, 33, 61)96%);
+ padding-left: 60px;
+  height: 368px;
+  position: relative;     
 }
 
 .certtext {
   text-align: center;
   text-transform: uppercase;
-  color: white;
-  padding-bottom: 82px;
+  color: black;
+  padding-bottom: 40px;
   font-size: 34px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
-
-/* .certswiper swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-} */
-
-.certimg {
-  position: absolute;
-  z-index: 2;
-  left: 64%;
-  top: 1%;
-  color: red;
-}
-
 .cert {
   height: 300px;
   size: 200px;
+  box-shadow: 1px 0px 6px rgb(30, 33, 61);
+}
+
+.cert:hover {
+  box-shadow: 2px 6px 15px rgb(30, 33, 61);
 }
 
 @media screen and (max-width:1600px) {
@@ -85,36 +71,15 @@ swiper-container {
     height: 280px;
     size: 180px;
   }
-
-  .certcontainer {
-    height: 556px;
-    padding: 20px 20px 20px 100px;
-  }
-
-  .certimg {
-    left: 63%;
-  }
-
   .certtext {
     font-size: 30px;
   }
-
 }
 
 @media screen and (max-width:1366px) {
   .certtext {
     font-size: 28px;
   }
-
-  .certimg {
-    left: 63%;
-  }
-
-  .certcontainer {
-    height: 500px;
-    padding: 18px 20px 20px 76px;
-  }
-
   .cert {
     height: 260px;
     size: 180px;
@@ -125,18 +90,6 @@ swiper-container {
       font-size: 24px;
       padding-bottom: 50px;
     }
-
-    .certimg {
-      width: 55px;
-      top: 4%;
-      left: 65%;
-    }
-
-    .certcontainer {
-      height: 380px;
-      padding: 18px 20px 20px 37px;
-    }
-
     .cert {
       height: 240px;
     }
@@ -145,18 +98,7 @@ swiper-container {
   @media screen and (max-width:768px) {
     .certtext {
       font-size: 20px;
-    }
-
-    .certcontainer {
-      height: 250px;
-    }
-
-    .certimg {
-      width: 50px;
-      top: 4%;
-      left: 66%;
-    }
-
+    } 
     .cert {
       height: 184px;
     }
@@ -166,30 +108,15 @@ swiper-container {
     .certtext {
       font-size: 18px;
     }
-
-    .certimg {
-      left: 69%;
-    }
-
     .cert {
       height: 136px;
     }
   }
 
   @media screen and (max-width:410px) {
-    .certimg {
-      display: none;
-
-    }
-
-    .cert {
+     .cert {
       height: 98px;
     }
-
-    .certcontainer {
-      height: 201px;
-    }
-
     .certtext {
       padding-bottom: 26px;
     }

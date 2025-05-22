@@ -114,22 +114,16 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(30, 33, 61);
-  background: linear-gradient(to left, rgb(30, 33, 61) 0%, rgb(7, 149, 231) 50%, rgb(30, 33, 61) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: sans-serif;
-  color: white;
+  background-clip: text; 
+  color: rgb(30, 33, 61);
   text-align: center;
   font-weight: 700;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);
-  transition: font-size 2s ease-in-out;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61); 
 }
 
 .cardcontainer:hover {
-  font-size: 24px;
   box-shadow: 4px 4px 20px rgb(30, 33, 61);
+  transition: box-shadow 0.5s ease-in-out;
   /* transform: scale(1);  */
 }
 
