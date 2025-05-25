@@ -69,6 +69,7 @@ const toggleMenu = () => {
   justify-content: space-evenly;
   text-decoration: none;
   color: white;
+  text-shadow: 0px 0px #f6f6f6;
   font-size: 20px;
   height: 76px;
   font-family: 'Montserrat', light;
@@ -80,6 +81,7 @@ const toggleMenu = () => {
   justify-content: space-evenly;
   text-decoration: none;
   color: white;
+  text-shadow: 0px 0px #f6f6f6;
   font-size: 20px;
   height: 76px;
   font-family: 'Montserrat', light;
@@ -100,6 +102,7 @@ const toggleMenu = () => {
 
 .butnav {
   border: 2px solid white;
+  box-shadow: 0px 0px #f6f6f6f6;
   padding: 5px;
   width: 294px;
   text-align: center;
@@ -120,6 +123,7 @@ const toggleMenu = () => {
   width: 50px;
   height: 3px;
   background: white;
+  text-shadow: 0px 0px #f6f6f6;
   left: 10px;
 }
 
@@ -134,6 +138,7 @@ const toggleMenu = () => {
 .logo {
   width: 142px;
   padding: 0 20px;
+  box-shadow: 0px 0px #f6f6f6f6;
 }
 
 @media screen and (max-width:1920px) {}

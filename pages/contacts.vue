@@ -99,7 +99,6 @@ const datacompany = [
 
 .reccomp {
   font-size: 34px;
-  padding-bottom: 60px;
 }
 
 .recbottom {
@@ -123,5 +122,23 @@ const datacompany = [
   display: flex;
   justify-content: center;
   width: 402px;
+}
+
+@media screen and(max-width:1360px) {
+  .contacts {
+    font-size: 30px;
+  }
+
+  .contactstel {
+    font-size: 24px;
+  }
+
+  .order {
+    font-size: 24px;
+  }
+
+  .reccomp {
+    font-size: 28px;
+  }
 }
 </style>

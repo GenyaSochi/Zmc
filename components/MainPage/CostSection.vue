@@ -256,6 +256,7 @@ const cards = [
   overflow: hidden;
   animation: marquee 12s linear infinite;
   display: inline-block;
+  text-shadow: 1px 0px 2px rgb(30,33,61);
 }
 
 @keyframes marquee {

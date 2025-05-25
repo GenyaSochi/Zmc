@@ -58,7 +58,6 @@ onUnmounted(() => {
 
 <style scoped>
 
-
 .digits {
   font-size: 24px;
   display: flex;
@@ -70,6 +69,7 @@ onUnmounted(() => {
       rgb(30, 33, 61)96%);
   font-weight: 600;
   color: white;
+  text-shadow: 0px 0px #f6f6f6;
   padding: 44px 0;
   gap: 10px;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
@@ -136,14 +136,6 @@ onUnmounted(() => {
   padding: 80px 20px;
   animation: cards cubic-bezier(.04, 1.01, 1, -1.07) infinite 5s;
 }
-
-/* @keyframes cards {
-  from {}
-
-  40% {}
-
-  to {}
-} */
 
 .heading {
   text-align: center;

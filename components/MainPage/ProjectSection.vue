@@ -85,7 +85,7 @@ const swiper = useSwiper(swiperCont, {
   font-size: 34px;
   padding: 30px 0;
   text-align: center;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  text-shadow: 1px 0px 6px rgb(30,33,61);
 }
 .ouradvant {
   text-align: center;
@@ -93,7 +93,7 @@ const swiper = useSwiper(swiperCont, {
   color: black;
   font-size: 34px;
   padding-bottom: 30px;  
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  text-shadow: 1px 0px 6px rgb(30,33,61);
 }
 .units {
   font-size: 48px;
@@ -168,7 +168,7 @@ const swiper = useSwiper(swiperCont, {
   color: black;
   padding-bottom: 96px;
   text-align: center;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  text-shadow: 1px 0px 6px rgb(30,33,61);
 }
 .advant {
   padding: 32px 20px 20px 20px;
