@@ -5,11 +5,11 @@
     <p class="contactsinfo1 ">по будням с 8:00 до 17:00</p>
     <div>
       <p class="contactstel">+7(351) 304-42-35</p>
-      <p class="tel">Позвоните нам</p>
+      <p class="info">Позвоните нам</p>
     </div>
     <div>
-      <p class="order">sales@zmkural.com</p>
-      <p>Получите расчет заказа</p>
+      <p class="mail">sales@zmkural.com</p>
+      <p class="info">Получите расчет заказа</p>
     </div>
   </div>
   <ClientOnly>
@@ -37,7 +37,6 @@
         <p>{{ el.res4 }}</p>
       </div>
     </div>
-    <div class="recbottom"></div>
   </div>
   <a href="companydetails.pdf" class="details" target="_blank">Скачать реквизиты компании</a>
 </template>
@@ -80,11 +79,12 @@ const datacompany = [
   font-size: 28px;
 }
 
-.tel {
+.info {
   padding-bottom: 20px;
+  font-size: 18px;
 }
 
-.order {
+.mail {
   font-size: 28px;
 }
 
@@ -99,10 +99,7 @@ const datacompany = [
 
 .reccomp {
   font-size: 34px;
-}
-
-.recbottom {
-  margin-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .card {
@@ -124,21 +121,98 @@ const datacompany = [
   width: 402px;
 }
 
-@media screen and(max-width:1360px) {
+@media screen and(max-width:1600px) {
+
+  .contacts,
+  .reccomp {
+    font-size: 32px;
+  }
+}
+
+@media screen and(max-width:1366px) {
   .contacts {
     font-size: 30px;
   }
 
-  .contactstel {
-    font-size: 24px;
-  }
-
+  .contactstel,
   .order {
     font-size: 24px;
   }
 
   .reccomp {
     font-size: 28px;
+  }
+}
+
+@media screen and(max-width:992px) {
+  .contacts {
+    font-size: 28px;
+  }
+
+  .contactstel,
+  .order {
+    font-size: 22px;
+  }
+
+  .reccomp {
+    font-size: 27px;
+  }
+
+  .card {
+    padding: 0 144px;
+  }
+}
+
+@media screen and(max-width:768px) {
+  .contacts {
+    font-size: 26px;
+  }
+
+  .contactstel,
+  .order {
+    font-size: 20px;
+  }
+
+  .reccomp {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 0px 94px;
+  }
+}
+
+@media screen and(max-width:576px) {
+  .contacts {
+    font-size: 24px;
+  }
+
+  .contactstel,
+  .order {
+    font-size: 18px;
+  }
+
+  .reccomp {
+    font-size: 25px;
+  }
+
+  .card {
+    padding: 0px 25px;
+  }
+}
+
+@media screen and(max-width:410px) {
+  .contacts {
+    font-size: 22px;
+  }
+
+  .contactstel,
+  .order {
+    font-size: 18px;
+  }
+
+  .reccomp {
+    font-size: 24px;
   }
 }
 </style>
