@@ -43,7 +43,7 @@ h2 {
   text-transform: uppercase;
   font-size: 34px;
   padding: 30px 0 20px 0;
-  text-shadow: 1px 0px 6px rgb(30, 33, 61);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .card {

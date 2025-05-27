@@ -54,6 +54,7 @@ const popup = ref(false)
       rgb(30, 33, 61)96%);
   color: white;
   padding: 20px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .footercont {
@@ -71,6 +72,7 @@ const popup = ref(false)
   width: 247px;
   text-align: center;
   margin-bottom: 10px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .lobtn:hover {

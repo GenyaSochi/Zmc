@@ -3,7 +3,7 @@
     <div class="grid">
       <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-        <p class="workcost">по будням с 8.00 до 17.00</p>
+        <p class="workcost">по будням с 8.00 до 17.00</p> 
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
           <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">       
@@ -87,6 +87,7 @@ const cards = [
   font-size: 20px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   border-radius: 10px;
 }
 
@@ -98,6 +99,7 @@ const cards = [
   content: 'Выбрать файл';
   display: inline-block;
   background: rgb(30, 33, 61);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -112,6 +114,7 @@ const cards = [
   text-align: center;
   padding: 30px 0;
   font-size: 20px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .allcards {
@@ -203,10 +206,12 @@ const cards = [
   font-size: 20px;
   text-align: center;
   padding: 0 48px 20px 48px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .butinfo {
   font-size: 16px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .inputcost {
@@ -230,6 +235,7 @@ const cards = [
 
 .butcost {
   background-color: rgb(161, 7, 7);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   padding: 5px;
   border-radius: 5px;
   height: 43px;
@@ -256,7 +262,7 @@ const cards = [
   overflow: hidden;
   animation: marquee 12s linear infinite;
   display: inline-block;
-  text-shadow: 1px 0px 2px rgb(30,33,61);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 @keyframes marquee {

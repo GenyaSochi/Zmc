@@ -75,11 +75,11 @@ function translit(word: string) {
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 34px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .h2 {
   font-size: 34px;
-  margin-bottom: 60px;
 }
 
 .view {

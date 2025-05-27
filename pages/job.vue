@@ -68,7 +68,7 @@ padding-left: 64px;
     font-size: 24px;
 }
 
-@media screen and(max-width:1360px){
+@media screen and (max-width:1366px){
     .jobinfo {
         font-size: 30px;
     }

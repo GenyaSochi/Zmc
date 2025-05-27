@@ -36,6 +36,7 @@ const products = data.value?.products
   padding-top: 30px; 
   text-transform: uppercase;
   font-size: 34px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 .h2_name{
   text-align: center;

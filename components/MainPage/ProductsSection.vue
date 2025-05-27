@@ -36,11 +36,13 @@
       black 0%,
       rgb(95, 90, 90) 80%);
   color: white;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .seeprod {
   flex: 1;
   background-color: rgb(30, 33, 61);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   color: white;
   font-size: 24px;
   text-align: center;
@@ -51,7 +53,7 @@
 
 .apper {
   position: absolute;
-  left: 47%;
+  left: 48%;
   top: 33%;
   z-index: 1;
 }

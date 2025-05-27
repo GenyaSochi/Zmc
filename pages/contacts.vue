@@ -100,6 +100,7 @@ const datacompany = [
 .reccomp {
   font-size: 34px;
   padding-bottom: 20px;
+  text-shadow: 1px 0px 6px rgb(160, 158, 158);
 }
 
 .card {
@@ -111,6 +112,7 @@ const datacompany = [
 
 .details {
   background-color: rgb(56, 52, 52);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   color: white;
   padding: 10px;
   margin-left: 200px;
@@ -121,7 +123,7 @@ const datacompany = [
   width: 402px;
 }
 
-@media screen and(max-width:1600px) {
+@media screen and (max-width:1600px) {
 
   .contacts,
   .reccomp {
@@ -129,7 +131,7 @@ const datacompany = [
   }
 }
 
-@media screen and(max-width:1366px) {
+@media screen and (max-width:1366px) {
   .contacts {
     font-size: 30px;
   }
@@ -144,7 +146,7 @@ const datacompany = [
   }
 }
 
-@media screen and(max-width:992px) {
+@media screen and (max-width:992px) {
   .contacts {
     font-size: 28px;
   }
@@ -163,7 +165,7 @@ const datacompany = [
   }
 }
 
-@media screen and(max-width:768px) {
+@media screen and (max-width:768px) {
   .contacts {
     font-size: 26px;
   }
@@ -182,7 +184,7 @@ const datacompany = [
   }
 }
 
-@media screen and(max-width:576px) {
+@media screen and (max-width:576px) {
   .contacts {
     font-size: 24px;
   }
@@ -201,7 +203,7 @@ const datacompany = [
   }
 }
 
-@media screen and(max-width:410px) {
+@media screen and (max-width:410px) {
   .contacts {
     font-size: 22px;
   }

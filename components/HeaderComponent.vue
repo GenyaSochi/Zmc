@@ -12,12 +12,7 @@
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
-    </div>
-    <!-- <div style="color: white; display: flex; gap: 148px; justify-content: center;">
-      <p style="font-size: 20px;">17 лет производим опоры для трубопроводов</p>
-      <p style="font-size: 20px;">Наличие собственного конструкторского отдела</p>
-      <p style="font-size: 20px;">Изготовление опор по чертежам заказчика</p>
-    </div> -->
+    </div> 
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>
@@ -62,14 +57,13 @@ const toggleMenu = () => {
 .active {
   display: none;
 }
-
 .nav_all {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   text-decoration: none;
   color: white;
-  text-shadow: 0px 0px #f6f6f6;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   font-size: 20px;
   height: 76px;
   font-family: 'Montserrat', light;
@@ -81,7 +75,7 @@ const toggleMenu = () => {
   justify-content: space-evenly;
   text-decoration: none;
   color: white;
-  text-shadow: 0px 0px #f6f6f6;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   font-size: 20px;
   height: 76px;
   font-family: 'Montserrat', light;
@@ -102,7 +96,7 @@ const toggleMenu = () => {
 
 .butnav {
   border: 2px solid white;
-  box-shadow: 0px 0px #f6f6f6f6;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   padding: 5px;
   width: 294px;
   text-align: center;

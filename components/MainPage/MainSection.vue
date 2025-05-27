@@ -53,7 +53,6 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-
 </script>
 
 <style scoped>
@@ -69,10 +68,10 @@ onUnmounted(() => {
       rgb(30, 33, 61)96%);
   font-weight: 600;
   color: white;
-  text-shadow: 0px 0px #f6f6f6;
+  text-shadow: 0px 0px 2px #f6f6f6;
   padding: 44px 0;
   gap: 10px;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  box-shadow: 2px 2px 12px rgb(30, 33, 61);
 }
 
 .digitsprod {
@@ -86,6 +85,7 @@ onUnmounted(() => {
   text-align: center;
   font-weight: 600;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  text-shadow: 0px 0px 2px #f6f6f6;
 }
 
 .h1view {
