@@ -28,13 +28,13 @@
   <div>
     <h1 class="reccomp">Реквизиты компании</h1>
     <div class="rec" v-for="el of datacompany" :key="el.id">
-      <p>{{ el.heading }}</p>
+      <p class="rec_info">{{ el.heading }}</p>
       <div>
-        <p>{{ el.res }}</p>
-        <p>{{ el.res1 }}</p>
-        <p>{{ el.res2 }}</p>
-        <p>{{ el.res3 }}</p>
-        <p>{{ el.res4 }}</p>
+        <p class="rec_info">{{ el.res }}</p>
+        <p class="rec_info">{{ el.res1 }}</p>
+        <p class="rec_info">{{ el.res2 }}</p>
+        <p class="rec_info">{{ el.res3 }}</p>
+        <p class="rec_info">{{ el.res4 }}</p>
       </div>
     </div>
   </div>
@@ -89,12 +89,16 @@ const datacompany = [
 }
 
 .rec {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 208px;
-  padding: 20px 0;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 118px;
+  padding: 20px 100px 30px 100px;
   border-bottom: 1px solid #EAEAEA;
-  font-size: 18px;
+}
+
+.rec_info {
+  font-size: 24px;
+  display: flex;
 }
 
 .reccomp {
@@ -106,8 +110,7 @@ const datacompany = [
 .card {
   position: relative;
   overflow: hidden;
-  margin: 40px 0;
-  padding: 0 244px;
+  padding: 30px 244px;
 }
 
 .details {
@@ -115,12 +118,12 @@ const datacompany = [
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
   color: white;
   padding: 10px;
-  margin-left: 200px;
+  margin-left: 98px;
   margin-bottom: 30px;
   width: 340px;
   display: flex;
   justify-content: center;
-  width: 402px;
+  width: 487px;
 }
 
 @media screen and (max-width:1600px) {
@@ -129,11 +132,15 @@ const datacompany = [
   .reccomp {
     font-size: 32px;
   }
+
+  .card {
+    padding: 30px 198px;
+  }
 }
 
 @media screen and (max-width:1366px) {
   .contacts {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .contactstel,
@@ -144,11 +151,31 @@ const datacompany = [
   .reccomp {
     font-size: 28px;
   }
+
+  .mail {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 30px 100px;
+  }
+
+  .rec_info {
+    font-size: 22px;
+  }
+
+  .rec {
+    padding: 20px 50px 30px 50px;
+  }
+  .details {
+    width: 447px;
+    margin-left: 48px;
+  }
 }
 
 @media screen and (max-width:992px) {
   .contacts {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .contactstel,
@@ -157,13 +184,29 @@ const datacompany = [
   }
 
   .reccomp {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   .card {
-    padding: 0 144px;
+    padding: 20px 65px;
+  }
+
+  .rec {
+    padding: 20px;
+  }
+
+  .rec_info {
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  .details {
+    margin-left: 14px;
+    font-size: 18px;
+    width: 370px;
   }
 }
+
 
 @media screen and (max-width:768px) {
   .contacts {
@@ -180,7 +223,11 @@ const datacompany = [
   }
 
   .card {
-    padding: 0px 94px;
+    padding: 20px 94px;
+  }
+
+  .details {
+    width: 310px;
   }
 }
 
@@ -190,16 +237,16 @@ const datacompany = [
   }
 
   .contactstel,
-  .order {
-    font-size: 18px;
+  .order, .mail {
+    font-size: 20px;
   }
 
   .reccomp {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .card {
-    padding: 0px 25px;
+    padding: 20px 25px;
   }
 }
 
@@ -214,7 +261,18 @@ const datacompany = [
   }
 
   .reccomp {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .rec_info {
+    font-size: 16px;
+  }
+  .details {
+    font-size: 16px;
+    width: 320px;    
+    margin: 0 10px 20px 50px;
+  }
+  .rec {
+    gap: 0px;
   }
 }
 </style>

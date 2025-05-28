@@ -12,7 +12,7 @@
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
         <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
-    </div> 
+    </div>
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>
@@ -57,6 +57,7 @@ const toggleMenu = () => {
 .active {
   display: none;
 }
+
 .nav_all {
   display: flex;
   align-items: center;
@@ -134,8 +135,6 @@ const toggleMenu = () => {
   padding: 0 20px;
   box-shadow: 0px 0px #f6f6f6f6;
 }
-
-@media screen and (max-width:1920px) {}
 
 @media screen and (max-width:1600px) {
 
@@ -231,6 +230,10 @@ const toggleMenu = () => {
 
   .logo {
     display: none;
+  }
+
+  .nav_all {
+    justify-content: space-around;
   }
 }
 
@@ -385,6 +388,9 @@ const toggleMenu = () => {
 
     .logo {
       left: -7px;
+    }
+    .nav {
+        box-shadow: 1px 0px 6px rgb(114, 114, 114);
     }
   }
 }
