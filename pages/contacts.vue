@@ -132,12 +132,15 @@ const datacompany = [
   .reccomp {
     font-size: 32px;
   }
-
   .card {
     padding: 30px 198px;
   }
+  .details {
+    width: 382px;
+  }
+   
 }
-
+  
 @media screen and (max-width:1366px) {
   .contacts {
     font-size: 27px;
@@ -168,7 +171,7 @@ const datacompany = [
     padding: 20px 50px 30px 50px;
   }
   .details {
-    width: 447px;
+    width: 346px;
     margin-left: 48px;
   }
 }
@@ -203,7 +206,7 @@ const datacompany = [
   .details {
     margin-left: 14px;
     font-size: 18px;
-    width: 370px;
+    width: 290px;
   }
 }
 
@@ -227,26 +230,37 @@ const datacompany = [
   }
 
   .details {
-    width: 310px;
+    width: 290px;
+  }
+  iframe {
+    height: 400px;
   }
 }
 
 @media screen and (max-width:576px) {
   .contacts {
     font-size: 24px;
+    font-weight: 600;
   }
 
   .contactstel,
   .order, .mail {
     font-size: 20px;
+    font-weight: 600;
   }
 
   .reccomp {
-    font-size: 24px;
+    font-size: 24px;    
   }
 
   .card {
     padding: 20px 25px;
+  }
+  iframe {
+    height: 300px;
+  }
+  .details {
+    width: 247px;
   }
 }
 
