@@ -25,7 +25,7 @@
         <swiper-container class="swiper"  ref="swiperCont" :init="true" :modules="modules" effect="cards">
           <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
-      </div>
+      </div>   
     </div>
   </section>
 </template>

@@ -9,7 +9,7 @@
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
     </div>
 
-    <div class="allcontainer">
+    <div class="allcontainer" v-for="cont">
       <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>
       <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
@@ -53,6 +53,9 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
+// const cont = ref ('grey')
+
+// const change_cont = document.getElementById
 </script>
 
 <style scoped>
