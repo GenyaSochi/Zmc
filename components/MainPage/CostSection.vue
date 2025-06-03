@@ -398,12 +398,12 @@ const cards = [
   .grid {
     display: flex;
     flex-direction: column-reverse;
-    height: 342px;
-    padding: 0 0px 30px 0px;
+    height: 350px;
+    padding: 0 0px 10px 0px;
   }
 
   .formcost {
-    height: 275px;
+    height: 298px;
     border-radius: 0;
   }
 

@@ -75,7 +75,7 @@ h2 {
   }
 
   .card {
-    padding: 15px 30px;
+    padding: 15px 30px 30px 30px  ;
   }
 
   iframe {
@@ -107,6 +107,9 @@ h2 {
 
   iframe {
     height: 300px;
+  }
+  .card {
+    padding: 15px 20px 34px 20px;
   }
 }
 </style>

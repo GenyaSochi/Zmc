@@ -9,7 +9,7 @@
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
     </div>
 
-    <div class="allcontainer" v-for="cont">
+    <div class="allcontainer">
       <NuxtLink to="/catalog" class="cardcontainer">Выпускаем более ста видов опор</NuxtLink>
       <NuxtLink to="/projects" class="cardcontainer">Реализованные проекты</NuxtLink>
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
@@ -17,10 +17,10 @@
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
     </div>
     <div class="digitsprod">
-      <p>17 лет производим опоры для трубопроводов</p>
-      <p>Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
-      <p>Наличие собственного конструкторского отдела</p>
-      <p>Изготовление опор по чертежам заказчика</p>      
+      <p class="text">17 лет производим опоры для трубопроводов</p>
+      <p class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
+      <p class="text">Наличие собственного конструкторского отдела</p>
+      <p class="text">Изготовление опор по чертежам заказчика</p>      
     </div>
   </section>
 </template>
@@ -53,9 +53,6 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-// const cont = ref ('grey')
-
-// const change_cont = document.getElementById
 </script>
 
 <style scoped>
@@ -130,6 +127,9 @@ onUnmounted(() => {
   /* transform: scale(1);  */
 }
 
+.text {
+  font-size: 22px;
+}
 .allcontainer {
   display: flex;
   justify-content: center;
@@ -200,51 +200,40 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 55px;
+    height: 410px;
   }
 }
 
 @media screen and (max-width:1366px) {
-
   .h1view {
     font-size: 20px;
   }
-
   .heading {
     font-size: 20px;
   }
-
   .heading1 {
     font-size: 20px;
     padding-bottom: 275px;
   }
-
   .digits {
     font-size: 20px;
     gap: 10px;
     padding: 43px 0;
   }
 
+  .digitsprod {
+    height: 149px;
+    padding: 20px;
+  }
   .num {
     padding-top: 6px;
   }
-
   .allcontainer {
     padding: 56px 20px;
   }
-
   .cardcontainer {
     font-size: 20px;
     height: 162px;
-  }
-
-  .digitsprod {
-    height: 126px;
-    padding-top: 48px;
-  }
-
-  .video {
-    height: 33px;
   }
 }
 
@@ -264,7 +253,7 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 31px;
+    height: 300px;
   }
 
   .digits {
@@ -272,13 +261,6 @@ onUnmounted(() => {
     gap: 10px;
     padding: 34px 0;
   }
-
-  .digitsprod {
-    font-size: 20px;
-    height: 82px;
-    padding-top: 30px;
-  }
-
   .num {
     padding-top: 4px;
     height: 36px;
@@ -286,6 +268,9 @@ onUnmounted(() => {
     font-size: 20px;
   }
 
+  .text {
+  font-size: 20px;
+}
   .allcontainer {
     flex-direction: column;
     padding: 20px 0;
@@ -297,14 +282,20 @@ onUnmounted(() => {
     height: 50px;
     background: rgb(30, 33, 61);
     border-radius: 0;
+    color: white;
   }
+  .digitsprod {
+    height: 130px;
+  }
+ 
 }
 
 @media screen and (max-width:768px) {
 
   .video {
-    height: 18px;
-  }
+    height: 250px;
+    }
+  
 
   .digits {
     font-size: 18px;
@@ -320,20 +311,17 @@ onUnmounted(() => {
 
   .cardcontainer {
     font-size: 18px;
-    height: 35px;
     border-radius: 0;
   }
 
   .allcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 10px 0;
     gap: 10px;
   }
 
-  .digitsprod {
-    font-size: 18px;
-    height: 78px;
-    padding-top: 27px;
-  }
+
 
   .num {
     height: 33px;
@@ -354,7 +342,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:576px) {
   .video {
-    height: 5px;
+    height: 200px;
   }
 
   .heading {
@@ -380,10 +368,7 @@ onUnmounted(() => {
     height: 32px;
   }
 
-  .digitsprod {
-    height: 67px;
-    padding: 16px 5px 0 5px;
-  }
+  
 
   .h1view {
     padding-bottom: 88px;
@@ -423,11 +408,7 @@ onUnmounted(() => {
     .cardcontainer {
       font-size: 16px;
     }
-
-    .digitsprod {
-      padding: 5px;
-      font-size: 16px;
-    }
+ 
   }
 }
 </style>

@@ -101,7 +101,6 @@ const swiper = useSwiper(swiperCont, {
 .quant {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   font-size: 70px;
   position: absolute;
   font-weight: bold;
@@ -113,7 +112,6 @@ const swiper = useSwiper(swiperCont, {
 .title {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   font-size: 34px;
   position: absolute;
   left: 66px;
@@ -125,7 +123,6 @@ const swiper = useSwiper(swiperCont, {
 .title1 {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   font-size: 34px;
   position: absolute;
   left: 66px;
@@ -278,7 +275,7 @@ swiper-container {
   .advant {
     padding: 32px 20px 20px 20px;
     width: 286px;
-    height: 200px;
+    height: 208px;
   }
 
   .advanttext {
@@ -316,7 +313,7 @@ swiper-container {
   .production {
     font-size: 20px;
     width: 286px;
-    height: 200px;
+    height: 208px;
   }
   .butproj {
     font-size: 20px;
@@ -425,7 +422,7 @@ swiper-container {
   }
 
   .advant {
-    
+    padding: 20px 20px 20px 20px;  
     height: 250px;
   }
 
@@ -499,11 +496,12 @@ swiper-container {
 
   .productstyle {
     padding-top: 20px;
+    height: 256px;
   }
 
   .advanttext {
     font-size: 18px;
-    padding-bottom: 16px;
+    padding-bottom: 27px;
   }
 
   .imgproj {
@@ -538,7 +536,7 @@ swiper-container {
   }
 
   .blockproduct {
-    gap: 22px;
+    gap: 5px;
   }
 
   .advant {

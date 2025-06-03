@@ -88,16 +88,21 @@ swiper-container {
   @media screen and (max-width:992px) {
     .certtext {
       font-size: 24px;
-      padding-bottom: 50px;
+      padding-bottom: 25px;
     }
     .cert {
       height: 240px;
+    }
+    .certcontainer {
+      padding-left: 18px;
+      height: 208px;
     }
   }
 
   @media screen and (max-width:768px) {
     .certtext {
       font-size: 20px;
+      padding-top: 15px;
     } 
     .cert {
       height: 184px;
