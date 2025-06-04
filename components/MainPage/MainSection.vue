@@ -3,7 +3,7 @@
     <div class="video">
       <video autoplay muted id="myVideo" src="/public/video/start.mp4"></video>
     </div>
-     
+
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
       <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
@@ -20,7 +20,7 @@
       <p class="text">17 лет производим опоры для трубопроводов</p>
       <p class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
       <p class="text">Наличие собственного конструкторского отдела</p>
-      <p class="text">Изготовление опор по чертежам заказчика</p>      
+      <p class="text">Изготовление опор по чертежам заказчика</p>
     </div>
   </section>
 </template>
@@ -56,7 +56,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-
 .digits {
   font-size: 24px;
   display: flex;
@@ -114,11 +113,11 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-clip: text; 
+  background-clip: text;
   color: rgb(30, 33, 61);
   text-align: center;
   font-weight: 700;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61); 
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .cardcontainer:hover {
@@ -130,6 +129,7 @@ onUnmounted(() => {
 .text {
   font-size: 22px;
 }
+
 .allcontainer {
   display: flex;
   justify-content: center;
@@ -208,13 +208,16 @@ onUnmounted(() => {
   .h1view {
     font-size: 20px;
   }
+
   .heading {
     font-size: 20px;
   }
+
   .heading1 {
     font-size: 20px;
     padding-bottom: 275px;
   }
+
   .digits {
     font-size: 20px;
     gap: 10px;
@@ -225,12 +228,15 @@ onUnmounted(() => {
     height: 149px;
     padding: 20px;
   }
+
   .num {
     padding-top: 6px;
   }
+
   .allcontainer {
     padding: 56px 20px;
   }
+
   .cardcontainer {
     font-size: 20px;
     height: 162px;
@@ -261,6 +267,7 @@ onUnmounted(() => {
     gap: 10px;
     padding: 34px 0;
   }
+
   .num {
     padding-top: 4px;
     height: 36px;
@@ -269,33 +276,39 @@ onUnmounted(() => {
   }
 
   .text {
-  font-size: 20px;
-}
+    font-size: 20px;
+  }
+
   .allcontainer {
-    flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 5px;
     gap: 13px;
   }
 
   .cardcontainer {
     width: 100%;
-    height: 50px;
+    height: 130px;
     background: rgb(30, 33, 61);
     border-radius: 0;
     color: white;
+    font-size: 18px;
+    border-radius: 10px;
   }
+
   .digitsprod {
-    height: 130px;
+    height: 142px;
   }
- 
+
 }
 
 @media screen and (max-width:768px) {
 
   .video {
     height: 250px;
-    }
-  
+  }
+
+  .text {
+    font-size: 18px;
+  }
 
   .digits {
     font-size: 18px;
@@ -309,19 +322,17 @@ onUnmounted(() => {
     font-size: 18px;
   }
 
-  .cardcontainer {
-    font-size: 18px;
-    border-radius: 0;
-  }
-
   .allcontainer {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px 0;
+    display: grid;
+    padding: 20px 10px;
     gap: 10px;
   }
 
-
+  .digitsprod {
+    height: 145px;
+    background: linear-gradient(65deg, rgb(14, 13, 13) 18%, rgb(30, 33, 61) 75%);
+  }
 
   .num {
     height: 33px;
@@ -364,11 +375,6 @@ onUnmounted(() => {
     padding: 16px 10px;
   }
 
-  .cardcontainer {
-    height: 32px;
-  }
-
-  
 
   .h1view {
     padding-bottom: 88px;
@@ -377,7 +383,7 @@ onUnmounted(() => {
 
   @media screen and (max-width:410px) {
     .video {
-      height: 0;
+      height: 150px;
     }
 
     .h1view {
@@ -396,7 +402,7 @@ onUnmounted(() => {
     }
 
     .digits {
-      font-size: 16px;
+      font-size: 17px;
     }
 
     .num {
@@ -405,10 +411,18 @@ onUnmounted(() => {
       width: 48px;
     }
 
-    .cardcontainer {
-      font-size: 16px;
+    .text {
+      font-size: 17px;
     }
- 
+
+    .digitsprod {
+      height: 210px;
+    }
+
+    .allcontainer {
+      grid-template-columns: 1fr 1fr;
+      font-size: 17px;
+    }
   }
 }
 </style>

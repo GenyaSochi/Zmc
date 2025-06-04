@@ -10,8 +10,13 @@
       </div>
       <div class="but">
         <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
-        <button class="butnav" @click="popup = true">Заказать звонок</button>
       </div>
+      <div>
+        <button @click="popup = true" class="buttel">+7 (351) 304-42-35</button>
+        <button @click="popup = true" class="buttel">+7 (900) 075-70-21</button>
+        <NuxtLink to="/#cost" class="buttel">sales@zmkural.com</NuxtLink>
+      </div>
+      <!-- <button class="butnav" @click="popup = true">Заказать звонок</button> -->
     </div>
     <button class="burger" @click="toggleMenu">
       <span></span>
@@ -61,7 +66,7 @@ const toggleMenu = () => {
 .nav_all {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-decoration: none;
   color: white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -96,9 +101,24 @@ const toggleMenu = () => {
 }
 
 .butnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   border: 2px solid white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
   padding: 5px;
+  width: 294px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.buttel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 20px;
+  font-family: 'Montserrat', light;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
   width: 294px;
   text-align: center;
   font-size: 20px;
@@ -200,7 +220,10 @@ const toggleMenu = () => {
 
 @media screen and (max-width:992px) {
 
-  .navtag,
+  .navtag {
+    padding-left: 20px;
+  }
+
   .nav,
   .but,
   .butnav {
@@ -225,7 +248,7 @@ const toggleMenu = () => {
   }
 
   .link {
-    gap: 10px;
+    gap: 30px;
   }
 
   .logo {
@@ -235,12 +258,19 @@ const toggleMenu = () => {
   .nav_all {
     justify-content: space-around;
   }
+
+  .buttel {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width:768px) {
 
   .but {
     font-size: 18px;
+  }
+  .buttel {
+    display: none;
   }
 
   .butnav {
@@ -312,6 +342,7 @@ const toggleMenu = () => {
     font-size: 18px;
     padding-bottom: 5px;
   }
+  
 }
 
 @media screen and (max-width:576px) {
@@ -389,8 +420,9 @@ const toggleMenu = () => {
     .logo {
       left: -7px;
     }
+
     .nav {
-        box-shadow: 1px 0px 6px rgb(114, 114, 114);
+      box-shadow: 1px 0px 6px rgb(114, 114, 114);
     }
   }
 }

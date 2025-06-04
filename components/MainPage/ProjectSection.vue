@@ -63,6 +63,7 @@ const swiper = useSwiper(swiperCont, {
   justify-content: center;
   height: 605px;
 }
+
 .swiper {
   max-width: 100vw;
 }
@@ -72,6 +73,7 @@ const swiper = useSwiper(swiperCont, {
   position: absolute;
   top: var(--swiper-navigation-top-offset, 50%);
 }
+
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
@@ -87,17 +89,20 @@ const swiper = useSwiper(swiperCont, {
   text-align: center;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
+
 .ouradvant {
   text-align: center;
   text-transform: uppercase;
   color: black;
   font-size: 34px;
-  padding-bottom: 30px;  
+  padding-bottom: 30px;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
+
 .units {
   font-size: 48px;
 }
+
 .quant {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
@@ -109,6 +114,7 @@ const swiper = useSwiper(swiperCont, {
   left: 66px;
   font-family: 'Montserrat', light;
 }
+
 .title {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
@@ -120,6 +126,7 @@ const swiper = useSwiper(swiperCont, {
   font-style: oblique;
   font-family: 'Montserrat', light;
 }
+
 .title1 {
   text-transform: uppercase;
   color: rgba(30, 33, 61, 1);
@@ -131,6 +138,7 @@ const swiper = useSwiper(swiperCont, {
   font-style: oblique;
   font-family: 'Montserrat', light;
 }
+
 .production {
   display: flex;
   flex-wrap: wrap;
@@ -146,11 +154,13 @@ const swiper = useSwiper(swiperCont, {
   font-weight: 600;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
+
 .butproj {
   border: 2px solid white;
   padding: 5px 32px 5px 5px;
   margin-top: 46px;
 }
+
 .imgstyle {
   height: 560px;
   overflow: hidden;
@@ -160,9 +170,11 @@ const swiper = useSwiper(swiperCont, {
   justify-content: flex-end;
   padding-right: 84px;
 }
+
 .imgproj {
   width: 90px;
 }
+
 .advanttext {
   font-size: 24px;
   color: black;
@@ -170,6 +182,7 @@ const swiper = useSwiper(swiperCont, {
   text-align: center;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
+
 .advant {
   padding: 32px 20px 20px 20px;
   border-radius: 10px;
@@ -182,31 +195,37 @@ const swiper = useSwiper(swiperCont, {
   justify-content: flex-start;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
-.productstyle { 
+
+.productstyle {
   justify-content: center;
   padding-top: 30px;
   height: 578px;
 }
+
 .textspan {
   text-align: center;
   font-size: 22px;
   font-weight: 600;
 }
+
 .textsmall1 {
   font-size: 17px;
   text-align: center;
   padding-top: 43px;
 }
+
 .textsmall2 {
   font-size: 17px;
   text-align: center;
   padding-top: 42px;
 }
+
 .textsmall3 {
   font-size: 17px;
   text-align: center;
   padding-top: 42px;
 }
+
 .blockproduct {
   display: flex;
   flex-wrap: wrap;
@@ -215,6 +234,7 @@ const swiper = useSwiper(swiperCont, {
   align-content: space-between;
   gap: 66px;
 }
+
 .imgsize {
   overflow: hidden;
   height: 596px;
@@ -229,27 +249,33 @@ swiper-container {
   .imgsize {
     height: 508px;
   }
+
   .quant {
     font-size: 63px;
     left: 86px;
   }
+
   .title {
     font-size: 32px;
     left: 86px;
     bottom: 268px;
   }
+
   .title1 {
     font-size: 32px;
     left: 86px;
     bottom: 232px;
   }
+
   .ourproj {
     font-size: 30px;
     padding: 30px 0 0 0;
   }
+
   .ouradvant {
     font-size: 30px;
   }
+
   .proj {
     height: 580px;
   }
@@ -275,7 +301,7 @@ swiper-container {
   .advant {
     padding: 32px 20px 20px 20px;
     width: 286px;
-    height: 208px;
+    height: 272px;
   }
 
   .advanttext {
@@ -284,7 +310,7 @@ swiper-container {
   }
 
   .productstyle {
-    height: 470px;
+    height: 490px;
   }
 
   .ouradvant {
@@ -301,11 +327,13 @@ swiper-container {
     left: 86px;
     bottom: 213px;
   }
+
   .title1 {
     font-size: 28px;
     left: 86px;
     bottom: 179px;
   }
+
   .textspan {
     font-size: 20px;
   }
@@ -313,8 +341,9 @@ swiper-container {
   .production {
     font-size: 20px;
     width: 286px;
-    height: 208px;
+    height: 272px;
   }
+
   .butproj {
     font-size: 20px;
   }
@@ -322,13 +351,16 @@ swiper-container {
   .imgsize {
     height: 415px;
   }
+
   .imgstyle {
     height: 478px;
   }
+
   .ourproj {
     padding: 30px 0 0 0;
     font-size: 28px;
   }
+
   .proj {
     height: 490px;
   }
@@ -385,7 +417,7 @@ swiper-container {
 
   .production {
     font-size: 17px;
-    height: 250px;
+    height: 295px;
     padding: 0px 18px 26px 26px;
   }
 
@@ -418,12 +450,12 @@ swiper-container {
 
   .productstyle {
     padding-right: 19px;
-    height: 404px;
+    height: 464px;
   }
 
   .advant {
-    padding: 20px 20px 20px 20px;  
-    height: 250px;
+    padding: 20px 20px 20px 20px;
+    height: 295px;
   }
 
   .butproj {
@@ -668,7 +700,7 @@ swiper-container {
     }
 
     .imgstyle {
-      padding-right: 0px;
+      padding-left: 5px;
     }
 
     .ourproj {

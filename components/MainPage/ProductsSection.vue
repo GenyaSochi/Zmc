@@ -87,6 +87,7 @@
   .textprod {
     font-size: 14px;
     padding: 10px;
+    opacity: 0.8;
   }
 
   .seeprod {
@@ -105,6 +106,7 @@
     right: 15%;
     top: 35%;
   }
+
 }
 
 @media screen and (max-width:768px) {
@@ -121,7 +123,5 @@
   }
 }
 
-@media screen and (max-width:576px) {
-   
-}
+@media screen and (max-width:576px) {}
 </style>

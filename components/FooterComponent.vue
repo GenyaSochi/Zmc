@@ -123,7 +123,7 @@ const popup = ref(false)
 @media screen and (max-width:1366px) {
 
   .lobtn {
-    width: 205px;
+    width: 224px;
   }
 
   .imglogo {
@@ -182,7 +182,7 @@ const popup = ref(false)
   }
 
   .lobtn {
-    width: 184px;
+    width: 222px;
     font-size: 18px;
   }
 

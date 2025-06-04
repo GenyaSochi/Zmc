@@ -21,7 +21,7 @@ register()
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 5,  
+  slidesPerView: 5,
 })
 
 const certificate = [
@@ -39,13 +39,13 @@ const certificate = [
 
 <style scoped>
 swiper-container {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .certcontainer {
- padding-left: 60px;
+  padding-left: 60px;
   height: 368px;
-  position: relative;     
+  position: relative;
 }
 
 .certtext {
@@ -56,6 +56,7 @@ swiper-container {
   font-size: 34px;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
+
 .cert {
   height: 300px;
   size: 200px;
@@ -71,6 +72,7 @@ swiper-container {
     height: 280px;
     size: 180px;
   }
+
   .certtext {
     font-size: 30px;
   }
@@ -80,9 +82,14 @@ swiper-container {
   .certtext {
     font-size: 28px;
   }
+
   .cert {
     height: 260px;
     size: 180px;
+  }
+
+  .certcontainer {
+    height: 308px;
   }
 
   @media screen and (max-width:992px) {
@@ -90,12 +97,14 @@ swiper-container {
       font-size: 24px;
       padding-bottom: 25px;
     }
+
     .cert {
-      height: 240px;
+      height: 214px;
     }
+
     .certcontainer {
       padding-left: 18px;
-      height: 208px;
+      height: 225px;
     }
   }
 
@@ -103,7 +112,8 @@ swiper-container {
     .certtext {
       font-size: 20px;
       padding-top: 15px;
-    } 
+    }
+
     .cert {
       height: 184px;
     }
@@ -113,17 +123,28 @@ swiper-container {
     .certtext {
       font-size: 18px;
     }
+
     .cert {
       height: 136px;
+    }
+
+    .certcontainer {
+      height: 145px;
     }
   }
 
   @media screen and (max-width:410px) {
-     .cert {
+    .cert {
       height: 98px;
     }
+
     .certtext {
-      padding-bottom: 26px;
+      padding-bottom: 13px;
+    }
+
+    .certcontainer {
+      height: 108px;
+      padding-left: 5px;
     }
   }
 }

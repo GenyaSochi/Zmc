@@ -31,19 +31,20 @@ const photos = [
   { id: 15, img: '/img/zmc15.webp', title: 'photo' },
 ]
 
-const swiperCont=ref(null)
+const swiperCont = ref(null)
 
-const swiper = useSwiper(swiperCont,{
-  slidesPerView:8,
+const swiper = useSwiper(swiperCont, {
+  slidesPerView: 8,
   watchSlidesProgress: true
 })
 </script>
 
 <style scoped>
 .photocontainer {
-  padding: 30px 56px 60px 118px; 
+  padding: 30px 56px 60px 118px;
   cursor: pointer;
 }
+
 .imgphoto {
   height: 300px;
 }
@@ -52,35 +53,46 @@ const swiper = useSwiper(swiperCont,{
   .photocontainer {
     padding: 22px 22px 60px 34px;
   }
+
+  .imgphoto {
+    height: 264px;
+  }
 }
+
 @media screen and (max-width:992px) {
   .photocontainer {
     padding: 0px 22px 30px 34px;
   }
+
   .imgphoto {
-  height: 240px;
+    height: 208px;
+  }
 }
-}
+
 @media screen and (max-width:768px) {
   .imgphoto {
     height: 180px;
   }
+
   .photocontainer {
     padding: 0px 22px 10px 34px;
   }
 }
+
 @media screen and (max-width:576px) {
   .imgphoto {
     height: 118px;
   }
+
   .photocontainer {
     padding: 0 10px 10px 10px;
   }
+
   @media screen and (max-width:410px) {
-  .imgphoto {
-    height: 90px;
+    .imgphoto {
+      height: 90px;
+    }
+
   }
-  
-}
 }
 </style>
