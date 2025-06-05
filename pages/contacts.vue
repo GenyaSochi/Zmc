@@ -137,8 +137,7 @@ const datacompany = [
   }
   .details {
     width: 382px;
-  }
-   
+  }   
 }
   
 @media screen and (max-width:1366px) {

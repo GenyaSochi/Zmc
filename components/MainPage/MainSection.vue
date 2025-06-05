@@ -416,7 +416,7 @@ onUnmounted(() => {
     }
 
     .digitsprod {
-      height: 210px;
+      height: 186px;
     }
 
     .allcontainer {

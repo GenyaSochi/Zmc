@@ -592,8 +592,7 @@ swiper-container {
   }
 
   .imgstyle {
-    height: 216px;
-    padding-right: 42px;
+    height: 216px;    
   }
 
   .imgsize {
@@ -646,8 +645,7 @@ swiper-container {
   }
 
   .butproj {
-    border-radius: 5px;
-    padding: 2px 3px 1px 2px;
+   display: none;   
   }
 
   .production {
@@ -656,9 +654,10 @@ swiper-container {
     align-content: center;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 40px;
     border-radius: 0;
     padding: 5px;
+    font-size: 19px;
   }
 
   .advanttext {
@@ -696,13 +695,9 @@ swiper-container {
   @media screen and (max-width:410px) {
     .imgsize {
       height: 344px;
-      width: 377px;
+      width: 100%;
     }
-
-    .imgstyle {
-      padding-left: 5px;
-    }
-
+   
     .ourproj {
       padding: 10px 0 7px 0;
     }
@@ -736,6 +731,9 @@ swiper-container {
 
     .ouradvant {
       padding-top: 0;
+    }
+    .imgstyle {
+      padding-right: 0;
     }
   }
 }
