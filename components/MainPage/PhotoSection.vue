@@ -13,6 +13,7 @@
 <script setup lang="ts">
 import { register } from 'swiper/element/bundle'
 register()
+
 const photos = [
   { id: 1, img: '/img/zmc1.webp', title: 'photo' },
   { id: 2, img: '/img/zmc2.webp', title: 'photo' },
@@ -34,8 +35,10 @@ const photos = [
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 8,
-  watchSlidesProgress: true
+  slidesPerView: 3,
+  watchSlidesProgress: true,
+  navigation: true,
+  pagination: true,
 })
 </script>
 
@@ -81,18 +84,22 @@ const swiper = useSwiper(swiperCont, {
 
 @media screen and (max-width:576px) {
   .imgphoto {
-    height: 118px;
+    height: 196px;
   }
 
   .photocontainer {
     padding: 0 10px 10px 10px;
   }
+     swiper-container {
+      --swiper-theme-color: grey !important;
+    }
+}
 
   @media screen and (max-width:410px) {
     .imgphoto {
-      height: 90px;
+      height: 200px;
     }
 
   }
-}
+
 </style>

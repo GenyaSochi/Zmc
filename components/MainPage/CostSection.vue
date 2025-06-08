@@ -418,7 +418,7 @@ const cards = [
 
 @media screen and (max-width:576px) {
   .grid {
-    height: 359px;
+    height: 388px;
     padding-bottom: 10px;
   }
 

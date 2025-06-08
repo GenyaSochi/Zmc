@@ -15,6 +15,8 @@
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
+      <NuxtLink to="/catalog" class="support"><img src="/public/img/ohomutnoback.webp" alt="опора" width="146">
+      </NuxtLink>
     </div>
     <div class="digitsprod">
       <p class="text">17 лет производим опоры для трубопроводов</p>
@@ -75,7 +77,7 @@ onUnmounted(() => {
 
 .digitsprod {
   font-size: 22px;
-  height: 158px;
+  height: 143px;
   padding: 20px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
@@ -113,8 +115,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-clip: text;
   color: rgb(30, 33, 61);
+  text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
   font-weight: 700;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
@@ -169,6 +171,31 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
+.support {
+  display: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 166px;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  animation: supp 5s infinite ease;
+}
+
+@keyframes supp {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  50% {
+    transform: rotateY(140deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
 @media screen and (max-width:1600px) {
 
   .h1view {
@@ -202,6 +229,7 @@ onUnmounted(() => {
   .video {
     height: 410px;
   }
+
 }
 
 @media screen and (max-width:1366px) {
@@ -349,6 +377,11 @@ onUnmounted(() => {
   .h1view {
     padding-bottom: 110px;
   }
+
+  .support {
+    display: flex;
+    height: 130px;
+  }
 }
 
 @media screen and (max-width:576px) {
@@ -416,12 +449,16 @@ onUnmounted(() => {
     }
 
     .digitsprod {
-      height: 186px;
+      height: 212px;
     }
 
     .allcontainer {
       grid-template-columns: 1fr 1fr;
       font-size: 17px;
+    }
+
+    .cardcontainer {
+      width: 176px;
     }
   }
 }

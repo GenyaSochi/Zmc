@@ -21,7 +21,9 @@ register()
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 5,
+  slidesPerView: 3,
+  pagination: true,
+  navigation: true
 })
 
 const certificate = [
@@ -125,11 +127,17 @@ swiper-container {
     }
 
     .cert {
-      height: 136px;
+      height: 170px;
     }
 
     .certcontainer {
-      height: 145px;
+      display: flex;
+      height: 202px;
+      padding-left: 0;
+    }
+
+    swiper-container {
+      --swiper-theme-color: grey !important;
     }
   }
 

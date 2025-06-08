@@ -592,7 +592,8 @@ swiper-container {
   }
 
   .imgstyle {
-    height: 216px;    
+    height: 216px;  
+    padding-right: 48px;  
   }
 
   .imgsize {
