@@ -21,9 +21,7 @@ register()
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 3,
-  pagination: true,
-  navigation: true
+  slidesPerView: 3
 })
 
 const certificate = [

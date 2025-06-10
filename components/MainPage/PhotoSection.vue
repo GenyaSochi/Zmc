@@ -36,9 +36,7 @@ const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
   slidesPerView: 3,
-  watchSlidesProgress: true,
-  navigation: true,
-  pagination: true,
+  watchSlidesProgress: true
 })
 </script>
 

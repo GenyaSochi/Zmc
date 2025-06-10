@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
+
     <h1 class="h1">Проекты компании</h1>
+    <div class="o">
     <div class="view" v-for="project of data" :key="project.name">
       <h2 class="h2">
         {{ project.name }}
@@ -14,11 +15,11 @@
         <p>{{ project.year }}</p>   
         <p class="heading">Конечный потребитель</p>
         <p>{{ project.enduser }}</p>
-        </div>
         <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
+        </div>
       </div>
     </div>
- 
+  
 </template>
 
 <script setup lang="ts">
@@ -62,6 +63,11 @@ function translit(word: string) {
 </script>
 
 <style scoped>
+.o {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 .h1 {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -69,18 +75,14 @@ function translit(word: string) {
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 .h2 {
-  font-size: 34px;
-  padding-bottom: 30px;
+  font-size: 34px; 
+  padding-bottom: 20px; 
 }
-.view {
-  margin: 0 120px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+.view { 
   padding: 22px 22px 0 22px;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
   box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
-  height: 414px;
+  height: 540px;
 }
 
 .heading {
@@ -102,11 +104,28 @@ function translit(word: string) {
 
 .imgstile {
   position: relative;
-  left: 529px;
-  bottom: 304px; 
+  left: 336px;
+  bottom: 178px;
   height: 300px;
   width: 520px;
   object-fit: cover;
   filter: grayscale(100%) drop-shadow(2px 4px 6px black);
+}
+
+@media screen and (max-width:1600px) {
+  .view {
+    height: 662px;
+  }
+  .h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width:1366px) {
+
+
+  .h2 {
+    font-size: 27px;
+  }
 }
 </style>
