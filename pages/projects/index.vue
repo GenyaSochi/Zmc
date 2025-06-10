@@ -5,29 +5,20 @@
       <h2 class="h2">
         {{ project.name }}
       </h2>
-      <div class="projectinfo" style="justify-content: space-between;">
-        <div>
-          <div class="projectinfo">
-            <p class="heading">Вид продукции</p>
-            <p>{{ project.project }}</p>
-          </div>
-          <div class="projectinfo">
-            <p class="heading">Объем</p>
-            <p>{{ project.quantity }}</p>
-          </div>
-          <div class="projectinfo">
-            <p class="heading">Год</p>
-            <p>{{ project.year }}</p>
-          </div>
-          <div class="projectinfo">
-            <p class="heading">Конечный потребитель</p>
-            <p>{{ project.enduser }}</p>
-          </div>
+      <div class="projectinfo">            
+        <p class="heading">Вид продукции</p>
+        <p>{{ project.project }}</p>       
+        <p class="heading">Объем</p>
+        <p>{{ project.quantity }}</p>        
+        <p class="heading">Год</p>
+        <p>{{ project.year }}</p>   
+        <p class="heading">Конечный потребитель</p>
+        <p>{{ project.enduser }}</p>
         </div>
         <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
       </div>
     </div>
-  </div>
+ 
 </template>
 
 <script setup lang="ts">
@@ -77,11 +68,10 @@ function translit(word: string) {
   font-size: 34px;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
-
 .h2 {
   font-size: 34px;
+  padding-bottom: 30px;
 }
-
 .view {
   margin: 0 120px;
   display: flex;
@@ -90,7 +80,7 @@ function translit(word: string) {
   padding: 22px 22px 0 22px;
   margin-bottom: 20px;
   box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
-  height: 500px;
+  height: 414px;
 }
 
 .heading {
@@ -99,6 +89,7 @@ function translit(word: string) {
 
 .projectinfo {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   padding-bottom: 10px;
 }
@@ -110,6 +101,9 @@ function translit(word: string) {
 }
 
 .imgstile {
+  position: relative;
+  left: 529px;
+  bottom: 304px; 
   height: 300px;
   width: 520px;
   object-fit: cover;
