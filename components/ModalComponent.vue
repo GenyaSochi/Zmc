@@ -4,13 +4,12 @@
         <div v-if="popup" class="windowpos" @click.self="popup = false">
             <div class="window">
                 <p class="form">Форма обратной связи</p>
-                <input class="name" type="text" id="name" name="name" required placeholder="Ваше имя...">
-                <input class="phone" type="phone" id="phone" name="phone" required placeholder="+7">
+                <input class="name" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя...">
+                <input class="phone" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">
                 <div>
                   <!-- <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a> -->
-                <button @click="" class="butwindow">отправить запрос</button> 
-                <p v-if="successMessage">{{ successMessage }}</p>
-                <p v-if="errorMessage">{{ errorMessage }}</p>  
+                <button @click="sendData" class="butwindow">отправить запрос</button> 
+                <p v-if="message">{{ message }}</p>
               </div>             
               </div>
         </div>
@@ -20,13 +19,24 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
 const popup = defineModel({ default: false })
+const name = ref('')
+const phone = ref('')
+const message = ref('')
 
-const successMessage = ref('')
-const errorMessage = ref('')
-
-
+const sendData = async () => {
+  const data = await $fetch<{ok:Boolean, message:string}>('/api/orders/call', {
+    method: 'POST',
+    body: { name:name.value, phone:phone.value }
+  })
+  message.value = data.message
+  setTimeout(()=> {
+    popup.value = false
+    name.value = ''
+    phone.value = ''
+    message.value = ''
+  }, 4000)
+}
 </script>
 
 <style scoped>

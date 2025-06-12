@@ -5,13 +5,14 @@
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
         <p class="workcost">по будням с 8.00 до 17.00</p> 
         <div class="allinputcost">
-          <input class="inputcost" type="text" id="name" name="name" required placeholder="Ваше имя...">
-          <input class="inputcost" type="phone" id="phone" name="phone" required placeholder="+7">       
-            <input type="file" id="file" name="file" required accept=".xls, .doc, .docx, .pdf"
+          <input class="inputcost" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя...">
+          <input class="inputcost" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">       
+            <input type="file" id="file" name="file" @change="handleFiles" required accept=".xls, .doc, .docx, .pdf, .odt"
               class="custom-file-input">
-            <button class="butcost" type="submit">Отправить заявку</button>         
+            <button class="butcost" type="submit" @click="sendData">Отправить заявку</button>   
+            <p v-if="message">{{ message }}</p>      
         </div>
-        <div class="perscost">
+        <div class="perscost" v-if="!message">
           <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
           </NuxtLink>
         </div>
@@ -34,6 +35,39 @@
 import { EffectCards } from 'swiper/modules'
 import 'swiper/css'
 const modules = [EffectCards ]
+const file = ref(null as any)
+const target = ref(null as HTMLInputElement|null)
+
+const name = ref('')
+const phone = ref('')
+const message = ref('')
+const handleFiles = (event: Event ) => {
+  target.value = event.target as HTMLInputElement
+  // @ts-ignore
+  file.value = target.value.files[0]
+}
+
+const sendData = async () => {
+  const fD = new FormData()
+  fD.append('zayavka', 'ok')
+  fD.append('name', name.value)
+  fD.append('phone', phone.value)
+  fD.append('file', file.value)
+  const data = await $fetch<{ok:Boolean, message:string}>('/api/orders/calc', {
+    method: 'POST',
+    body: fD
+  })
+  console.log(data)
+  message.value = data.message
+  setTimeout(()=> {
+    message.value = ''
+    name.value = ''
+    phone.value = ''
+    if (target.value) target.value.value = ''
+  }, 4000)
+}
+
+
 const swiperCont=ref(null)
 const swiper = useSwiper(swiperCont,{
   effect: 'cards',
