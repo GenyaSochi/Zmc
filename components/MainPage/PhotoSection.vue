@@ -35,8 +35,19 @@ const photos = [
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 3,
-  watchSlidesProgress: true
+  slidesPerView: 5,
+  watchSlidesProgress: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 3
+    }
+  },
+  breakpoints: {
+    410: {
+      slidesPerView: 3
+    }
+  }
+
 })
 </script>
 
@@ -86,18 +97,18 @@ const swiper = useSwiper(swiperCont, {
   }
 
   .photocontainer {
-    padding: 0 10px 10px 10px;
+    padding: 0 0px 10px 40px;
   }
-     swiper-container {
-      --swiper-theme-color: grey !important;
-    }
+
+  swiper-container {
+    --swiper-theme-color: grey !important;
+  }
 }
 
-  @media screen and (max-width:410px) {
-    .imgphoto {
-      height: 200px;
-    }
-
+@media screen and (max-width:410px) {
+  .imgphoto {
+    height: 200px;
   }
 
+}
 </style>
