@@ -27,6 +27,9 @@ const popup = ref(false)
 </script>
 
 <style>
+.cont {
+	padding: 0 40px;
+}
 .buttonback {
 	border: 1px solid black;
 	padding: 10px;
@@ -75,4 +78,25 @@ const popup = ref(false)
 	align-items: center;
 	gap: 82px;
 }
+  @media screen and (max-width:1600px) {
+
+  }
+  @media screen and (max-width:1366px) {
+
+  }
+   @media screen and (max-width:992px) {
+
+  }
+   @media screen and (max-width:768px) {
+
+  }
+   @media screen and (max-width:576px) {
+
+  }
+   @media screen and (max-width:410px) {
+
+  }
+   @media screen and (max-width:320px) {
+
+  }
 </style>
