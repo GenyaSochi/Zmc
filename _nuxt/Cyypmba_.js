@@ -1,0 +1,1 @@
+import{n as o,r as t,B as r,t as a,q as i}from"./CHLeRg1P.js";const c=o({__name:"details",setup(s){const n=t(0),e=t(0);return r(()=>{n.value=window.innerWidth,e.value=window.innerHeight}),(d,u)=>a(i(n))+" x "+a(i(e))}});export{c as default};
