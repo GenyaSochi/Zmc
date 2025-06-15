@@ -29,10 +29,8 @@
 
 <script setup lang="ts">
 
-// Инициализируем массив цифр
 const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0])
 
-// Функция для увеличения чисел
 const incrementDigits = () => {
   for (let i = digits.value.length - 1; i >= 0; i--) {
     if (digits.value[i] < 9) {
@@ -44,17 +42,14 @@ const incrementDigits = () => {
   }
 }
 
-// Запускаем интервал каждые 1000 мс
 let interval: NodeJS.Timeout
 onMounted(() => {
   interval = setInterval(incrementDigits, 3000)
 })
 
-// Очищаем интервал при уничтожении компонента
 onUnmounted(() => {
   clearInterval(interval)
 })
-
 </script>
 
 <style scoped>
@@ -455,6 +450,7 @@ onUnmounted(() => {
     .allcontainer {
       grid-template-columns: 1fr 1fr;
       font-size: 17px;
+      padding: 20px 20px;
     }
 
     .cardcontainer {

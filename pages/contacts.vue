@@ -132,14 +132,16 @@ const datacompany = [
   .reccomp {
     font-size: 32px;
   }
+
   .card {
     padding: 30px 198px;
   }
+
   .details {
-    width: 382px;
-  }   
+    width: 403px;
+  }
 }
-  
+
 @media screen and (max-width:1366px) {
   .contacts {
     font-size: 27px;
@@ -169,9 +171,11 @@ const datacompany = [
   .rec {
     padding: 20px 50px 30px 50px;
   }
+
   .details {
-    width: 346px;
+    width: 412px;
     margin-left: 48px;
+    font-size: 22px;
   }
 }
 
@@ -205,7 +209,7 @@ const datacompany = [
   .details {
     margin-left: 14px;
     font-size: 18px;
-    width: 290px;
+    width: 310px;
   }
 }
 
@@ -228,9 +232,6 @@ const datacompany = [
     padding: 20px 94px;
   }
 
-  .details {
-    width: 290px;
-  }
   iframe {
     height: 400px;
   }
@@ -243,24 +244,24 @@ const datacompany = [
   }
 
   .contactstel,
-  .order, .mail {
+  .order,
+  .mail {
     font-size: 20px;
     font-weight: 600;
   }
 
   .reccomp {
-    font-size: 24px;    
+    font-size: 24px;
   }
 
   .card {
     padding: 20px 25px;
   }
+
   iframe {
     height: 300px;
   }
-  .details {
-    width: 247px;
-  }
+
 }
 
 @media screen and (max-width:410px) {
@@ -276,16 +277,31 @@ const datacompany = [
   .reccomp {
     font-size: 22px;
   }
+
   .rec_info {
     font-size: 16px;
   }
+
   .details {
     font-size: 16px;
-    width: 320px;    
+    width: 320px;
     margin: 0 10px 20px 50px;
   }
+
   .rec {
     gap: 0px;
+  }
+
+  @media screen and (max-width:320px) {
+    .rec {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .details {
+      margin: 0 0 20px 0;
+    }
   }
 }
 </style>

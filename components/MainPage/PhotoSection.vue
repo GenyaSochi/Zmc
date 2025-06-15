@@ -7,11 +7,13 @@
         </swiper-slide>
       </swiper-container>
     </div>
+
   </section>
 </template>
 
 <script setup lang="ts">
 import { register } from 'swiper/element/bundle'
+import { onMounted } from 'vue'
 register()
 
 const photos = [
@@ -35,20 +37,33 @@ const photos = [
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 5,
+  slidesPerView: 6,
   watchSlidesProgress: true,
   breakpoints: {
+    1600: {
+      slidesPerView: 6
+    },
+    1366: {
+      slidesPerView: 5
+    },
+    992: {
+      slidesPerView: 5
+    },
+    768: {
+      slidesPerView: 4
+    },
     576: {
       slidesPerView: 3
-    }
-  },
-  breakpoints: {
+    },
     410: {
       slidesPerView: 3
+    },
+    320: {
+      slidesPerView: 2
     }
   }
-
 })
+
 </script>
 
 <style scoped>
@@ -110,5 +125,23 @@ const swiper = useSwiper(swiperCont, {
     height: 200px;
   }
 
+  .photocontainer {
+    padding: 0 0px 20px 0px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .photocontainer {
+    padding: 0 0 20px 20px;
+  }
+
+  swiper-container {
+   
+    text-align: center;
+  }
+
+  swiper-slide {
+    width: 146px;
+  }
 }
 </style>

@@ -135,10 +135,10 @@ const popup = ref(false)
   }
 
   .confid {
-    font-size: 18px;
+    font-size: 19px;
   }
   .contact {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
@@ -147,11 +147,11 @@ const popup = ref(false)
   .contact,
   .footinfo,
   .info {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .confid {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .footinfo {
@@ -173,17 +173,14 @@ const popup = ref(false)
 
   .contactmain {
     padding-bottom: 10px;
+    font-size: 19px;
   }
 }
 
 @media screen and (max-width:768px) {
-  .contact {
-    font-size: 18px;
-  }
 
   .lobtn {
     width: 222px;
-    font-size: 18px;
   }
 
   .confid {

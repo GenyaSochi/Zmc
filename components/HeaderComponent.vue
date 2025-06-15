@@ -276,7 +276,7 @@ const toggleMenu = () => {
   .butnav {
     font-size: 18px;
     border: none;
-    text-align: left;
+    justify-content: flex-start;
     padding: 0;
   }
 
@@ -379,8 +379,7 @@ const toggleMenu = () => {
 
   .butnav {
     border: none;
-    width: none;
-    text-align: left;
+    width: none;   
   }
 
   .logo {

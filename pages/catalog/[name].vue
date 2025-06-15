@@ -1,20 +1,19 @@
 <template>
-	<div class="container">	
-		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>	
-		<div style="display: flex; align-items: center;gap: 82px;">
+	<div>
+		<NuxtLink to="/catalog" class="buttonback">Вернуться назад</NuxtLink>
+		<div class="catalog">
 			<NuxtImg style="filter: grayscale(1);" sizes="300px" :src="data?.img" :alt="data?.name"></NuxtImg>
 			<p style="font-size: 38px; font-family: 'Montserrat', medium;">{{ data?.name }}</p>
 		</div>
 		<div class="div"></div>
 		<div class="detailet">подробное описание
-			<a href="/#cost"><button class="buttons">Рассчитать</button></a>
-			<button @click="popup=true" class="buttons">Заказать</button>
-			</div>
-			<div>
-				<p class="titleproduct">{{ data?.title }}</p>
-				<div v-html="data?.html"></div>
-			</div>
+			<button @click="popup = true" class="buttons">Задать вопрос о товаре</button>
 		</div>
+		<div>
+			<p class="titleproduct">{{ data?.title }}</p>
+			<div v-html="data?.html"></div>
+		</div>
+	</div>
 
 	<ModalComponent v-model="popup"></ModalComponent>
 </template>
@@ -23,8 +22,8 @@
 import type { product } from '@prisma/client';
 const route = useRoute()
 
-const { data } = await useFetch<product|null>(`/api/products/${route.params.name}`)
-	const popup = ref(false)
+const { data } = await useFetch<product | null>(`/api/products/${route.params.name}`)
+const popup = ref(false)
 </script>
 
 <style>
@@ -40,10 +39,10 @@ const { data } = await useFetch<product|null>(`/api/products/${route.params.name
 	margin: 30px 0;
 }
 
-.buttons {	
+.buttons {
 	border: 1px solid black;
 	padding: 10px;
-	width: 300px;
+	width: 364px;
 	text-align: center;
 	font-family: 'Montserrat', light;
 	font-size: 26px;
@@ -69,5 +68,11 @@ const { data } = await useFetch<product|null>(`/api/products/${route.params.name
 
 .div {
 	padding: 30px;
+}
+
+.catalog {
+	display: flex;
+	align-items: center;
+	gap: 82px;
 }
 </style>

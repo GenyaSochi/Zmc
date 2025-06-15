@@ -513,7 +513,7 @@ const cards = [
       font-size: 15px;
     }
     .formcost {
-      height: 316px;
+      height: 330px;
     }
     .grid {
       height: 100%;
@@ -534,6 +534,11 @@ const cards = [
     .perscost {
       padding-bottom: 0;
     }
+  }
+  @media screen and (max-width:230px) {
+  .formcost {
+    height: 330px;
+  }
   }
 }
 </style>

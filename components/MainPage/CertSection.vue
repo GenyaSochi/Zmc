@@ -23,16 +23,28 @@ const swiperCont = ref(null)
 const swiper = useSwiper(swiperCont, {
   slidesPerView: 5,
   breakpoints: {
+    1600: {
+      slidesPerView: 5
+    },
+    1366: {
+       slidesPerView: 5
+    },
+    992: {
+       slidesPerView: 5
+    },
+    768: {
+       slidesPerView: 4
+    },
     576: {
       slidesPerView: 3
-    }
-  },
-  breakpoints: {
+    },
     410: {
       slidesPerView: 3
+    },
+    320: {
+      slidesPerView: 2
     }
   }
-
 })
 
 const certificate = [
@@ -153,7 +165,7 @@ swiper-container {
 
   @media screen and (max-width:410px) {
     .cert {
-      height: 150px;
+      height: 164px;
     }
 
     .certtext {
@@ -161,13 +173,26 @@ swiper-container {
     }
 
     .certcontainer {
-      height: 150px;
+      height: 166px;
       padding-left: 0;
     }
 
     swiper-container {
-      padding-left: 20px;
+      padding-left: 10px;
     }
   }
+  @media screen and (max-width:320px) {
+    swiper-container {
+      padding-left: 0px;
+      text-align: center;
 }
+    }
+    wiper-slide {
+      width: 146px;
+    }
+    .certcontainer {
+      padding-left: 20px;
+    }
+}
+
 </style>

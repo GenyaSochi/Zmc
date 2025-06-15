@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h1 class="h1_name">каталог продукции</h1>    
     <div v-for="type of types" :key="type.id">
         <h2 class="h2_name">{{ type.name }}</h2>
