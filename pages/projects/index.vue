@@ -8,13 +8,13 @@
       </h2>
       <div class="projectinfo">            
         <p class="heading">Вид продукции</p>
-        <p>{{ project.project }}</p>       
+        <p class="hie">{{ project.project }}</p>       
         <p class="heading">Объем</p>
-        <p>{{ project.quantity }}</p>        
+        <p class="text">{{ project.quantity }}</p>        
         <p class="heading">Год</p>
-        <p>{{ project.year }}</p>   
+        <p class="text">{{ project.year }}</p>   
         <p class="heading">Конечный потребитель</p>
-        <p>{{ project.enduser }}</p>
+        <p class="text">{{ project.enduser }}</p>
         <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
         </div>
       </div>
@@ -63,8 +63,16 @@ function translit(word: string) {
 </script>
 
 <style scoped>
+.text {
+  font-size: 28px;
+}
+.hie {
+  height: 48px;
+  font-size: 28px;
+}
 .o {
   display: grid;
+  align-items: stretch;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
@@ -82,11 +90,11 @@ function translit(word: string) {
   padding: 22px 22px 0 22px;
   margin: 0 20px 20px 20px;
   box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
-  height: 540px;
 }
 
 .heading {
   font-weight: bold;
+  font-size: 32px;
 }
 
 .projectinfo {
@@ -103,29 +111,112 @@ function translit(word: string) {
 }
 
 .imgstile {
-  position: relative;
-  left: 336px;
-  bottom: 178px;
+  /* left: 336px;
+  bottom: 170px; */
   height: 300px;
-  width: 520px;
+  width: 100%;
   object-fit: cover;
   filter: grayscale(100%) drop-shadow(2px 4px 6px black);
+  padding: 10px;
 }
 
+
 @media screen and (max-width:1600px) {
-  .view {
-    height: 662px;
-  }
-  .h2 {
+   .h2, .h1 {
     font-size: 32px;
+  }
+  .heading  {
+    font-size: 30px;
   }
 }
 
 @media screen and (max-width:1366px) {
+  .h2, .h1 {
+    font-size: 28px;
+  }
+  .heading  {
+    font-size: 28px;
+  }
+  .hie, .text {
+    font-size: 26px;
+  }
+}
 
+@media screen and (max-width:992px) {
+  .o {
+    grid-template-columns: 1fr;
+  }  
+  .h2, .h1 {
+    font-size: 28px;
+  }
+  .heading  {
+    font-size: 26px;
+  }
+  .hie, .text {
+    font-size: 24px;
+  }
+}
 
-  .h2 {
-    font-size: 27px;
+@media screen and (max-width:768px) {
+  .h2, .h1 {
+    font-size: 26px;
+  }
+  .heading  {
+    font-size: 24px;
+  }
+  .hie, .text {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width:576px) {
+  .h2, .h1 {
+    font-size: 24px;
+  }
+  .heading  {
+    font-size: 22px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .hie {    
+    height: 54px;
+  }
+}
+@media screen and (max-width:410px) {
+  .imgstile {
+    width: 341px;
+  }
+  .h2, .h1 {
+    font-size: 22px;
+  }
+  .heading  {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .hie {
+    height: 68px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:320px) {
+  .view {
+    margin: 0;
+    height: 690px;
+  }
+  .imgstile {
+    width: 275px;
+    height: 220px;
+  }
+  .h2, .h1 {
+    font-size: 24px;
+  }
+  .heading  {
+    font-size: 18px;
+  }
+  .hie, .text {
+    font-size: 20px;
   }
 }
 </style>
