@@ -78,7 +78,7 @@ const swiper = useSwiper(swiperCont, {
 
 @media screen and (max-width:1366px) {
   .photocontainer {
-    padding: 22px 22px 60px 34px;
+    padding: 22px 22px 60px 88px;
   }
 
   .imgphoto {
@@ -88,7 +88,7 @@ const swiper = useSwiper(swiperCont, {
 
 @media screen and (max-width:992px) {
   .photocontainer {
-    padding: 0px 22px 30px 34px;
+    padding: 0px 22px 30px 50px;
   }
 
   .imgphoto {
@@ -102,7 +102,7 @@ const swiper = useSwiper(swiperCont, {
   }
 
   .photocontainer {
-    padding: 0px 22px 10px 34px;
+    padding: 0px 22px 10px 65px;
   }
 }
 
@@ -132,11 +132,11 @@ const swiper = useSwiper(swiperCont, {
 
 @media screen and (max-width:320px) {
   .photocontainer {
-    padding: 0 0 20px 20px;
+    padding: 0 0 20px 0px;
   }
 
   swiper-container {
-   
+
     text-align: center;
   }
 

@@ -27,13 +27,13 @@ const swiper = useSwiper(swiperCont, {
       slidesPerView: 5
     },
     1366: {
-       slidesPerView: 5
+      slidesPerView: 5
     },
     992: {
-       slidesPerView: 5
+      slidesPerView: 5
     },
     768: {
-       slidesPerView: 4
+      slidesPerView: 4
     },
     576: {
       slidesPerView: 3
@@ -112,87 +112,88 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 308px;
+    height: 308px;  
+    padding-left: 32px;
   }
-
-  @media screen and (max-width:992px) {
-    .certtext {
-      font-size: 24px;
-      padding-bottom: 25px;
-    }
-
-    .cert {
-      height: 214px;
-    }
-
-    .certcontainer {
-      padding-left: 18px;
-      height: 225px;
-    }
-
-  }
-
-  @media screen and (max-width:768px) {
-    .certtext {
-      font-size: 20px;
-      padding-top: 15px;
-    }
-
-    .cert {
-      height: 184px;
-    }
-  }
-
-  @media screen and (max-width:576px) {
-    .certtext {
-      font-size: 18px;
-    }
-
-    .cert {
-      height: 190px;
-    }
-
-    .certcontainer {
-      display: flex;
-      height: 202px;
-    }
-
-    swiper-container {
-      --swiper-theme-color: grey !important;
-      padding-left: 25px;
-    }
-  }
-
-  @media screen and (max-width:410px) {
-    .cert {
-      height: 164px;
-    }
-
-    .certtext {
-      padding-bottom: 13px;
-    }
-
-    .certcontainer {
-      height: 166px;
-      padding-left: 0;
-    }
-
-    swiper-container {
-      padding-left: 10px;
-    }
-  }
-  @media screen and (max-width:320px) {
-    swiper-container {
-      padding-left: 0px;
-      text-align: center;
-}
-    }
-    wiper-slide {
-      width: 146px;
-    }
-    .certcontainer {
-      padding-left: 20px;
-    }
 }
 
+@media screen and (max-width:992px) {
+  .certtext {
+    font-size: 24px;
+    padding-bottom: 25px;
+  }
+
+  .cert {
+    height: 214px;
+  }
+
+  .certcontainer {
+
+    height: 225px;
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  .certtext {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+
+  .cert {
+    height: 184px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .certtext {
+    font-size: 18px;
+  }
+
+  .cert {
+    height: 190px;
+  }
+
+  .certcontainer {
+    display: flex;
+    height: 202px;
+  }
+
+  swiper-container {
+    --swiper-theme-color: grey !important;  
+  }
+}
+
+@media screen and (max-width:410px) {
+  .cert {
+    height: 164px;
+  }
+
+  .certtext {
+    padding-bottom: 13px;
+  }
+
+  .certcontainer {
+    height: 166px;
+    padding-left: 0;
+  }
+
+  swiper-container {
+    padding-left: 10px;
+  }
+  swiper-slide {
+  width: 160px;
+}
+}
+
+@media screen and (max-width:320px) {
+  swiper-container {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+swiper-slide {
+  width: 146px;
+}
 </style>

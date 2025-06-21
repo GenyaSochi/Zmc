@@ -3,14 +3,14 @@
     <div class="grid">
       <form class="formcost" @submit.prevent>
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
-        <p class="workcost">по будням с 8.00 до 17.00</p> 
+        <p class="workcost">по будням с 8.00 до 17.00</p>
         <div class="allinputcost">
           <input class="inputcost" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя...">
-          <input class="inputcost" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">       
-            <input type="file" id="file" name="file" @change="handleFiles" required accept=".xls, .doc, .docx, .pdf, .odt"
-              class="custom-file-input">
-            <button class="butcost" type="submit" @click="sendData">Отправить заявку</button>   
-            <p v-if="message">{{ message }}</p>      
+          <input class="inputcost" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">
+          <input type="file" id="file" name="file" @change="handleFiles" required accept=".xls, .doc, .docx, .pdf, .odt"
+            class="custom-file-input">
+          <button class="butcost" type="submit" @click="sendData">Отправить заявку</button>
+          <p v-if="message">{{ message }}</p>
         </div>
         <div class="perscost" v-if="!message">
           <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
@@ -23,10 +23,10 @@
           <div class="textswiper_right blur"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-        <swiper-container class="swiper"  ref="swiperCont" :init="true" :modules="modules" effect="cards">
+        <swiper-container class="swiper" ref="swiperCont" :init="true" :modules="modules" effect="cards">
           <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
-      </div>   
+      </div>
     </div>
   </section>
 </template>
@@ -34,14 +34,14 @@
 <script setup lang="ts">
 import { EffectCards } from 'swiper/modules'
 import 'swiper/css'
-const modules = [EffectCards ]
+const modules = [EffectCards]
 const file = ref(null as any)
-const target = ref(null as HTMLInputElement|null)
+const target = ref(null as HTMLInputElement | null)
 
 const name = ref('')
 const phone = ref('')
 const message = ref('')
-const handleFiles = (event: Event ) => {
+const handleFiles = (event: Event) => {
   target.value = event.target as HTMLInputElement
   // @ts-ignore
   file.value = target.value.files[0]
@@ -53,13 +53,13 @@ const sendData = async () => {
   fD.append('name', name.value)
   fD.append('phone', phone.value)
   fD.append('file', file.value)
-  const data = await $fetch<{ok:Boolean, message:string}>('/api/orders/calc', {
+  const data = await $fetch<{ ok: Boolean, message: string }>('/api/orders/calc', {
     method: 'POST',
     body: fD
   })
   console.log(data)
   message.value = data.message
-  setTimeout(()=> {
+  setTimeout(() => {
     message.value = ''
     name.value = ''
     phone.value = ''
@@ -68,8 +68,8 @@ const sendData = async () => {
 }
 
 
-const swiperCont=ref(null)
-const swiper = useSwiper(swiperCont,{
+const swiperCont = ref(null)
+const swiper = useSwiper(swiperCont, {
   effect: 'cards',
   grabCursor: true,
   cardsEffect: {
@@ -275,7 +275,7 @@ const cards = [
   height: 43px;
   width: 215px;
   font-size: 18px;
-  text-align: center;  
+  text-align: center;
 }
 
 .perscost {
@@ -444,6 +444,7 @@ const cards = [
   .h2cost {
     padding: 9px 0;
   }
+
   .butcost {
     font-size: 17px;
   }
@@ -490,6 +491,7 @@ const cards = [
   .butinfo {
     font-size: 17px;
   }
+
   .perscost {
     padding-bottom: 13px;
   }
@@ -502,43 +504,54 @@ const cards = [
     .h2cost {
       font-size: 16px;
     }
+
     .workcost {
       font-size: 16px;
     }
+
     .butcost {
       width: 100%;
       margin: 5px 0 0 2px;
     }
+
     .butinfo {
       font-size: 15px;
     }
+
     .formcost {
       height: 330px;
     }
+
     .grid {
       height: 100%;
       gap: 0;
     }
+
     .inputcost {
       width: 100%;
     }
+
     .custom-file-input {
       width: 100%;
     }
+
     .allinputcost {
       padding: 0 30px;
     }
+
     .swiper {
       display: none;
     }
+
     .perscost {
       padding-bottom: 0;
     }
   }
-  @media screen and (max-width:230px) {
+}
+
+@media screen and (max-width:320px) {
   .formcost {
-    height: 330px;
-  }
+    height: 374px;
   }
 }
 </style>

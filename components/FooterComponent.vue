@@ -194,11 +194,14 @@ const popup = ref(false)
   .imgru {
     padding-bottom: 10px;
   }
+  .footercont {
+    justify-items: end;
+  }
 }
 
 @media screen and (max-width:576px) {
   .footer_color {
-    padding: 10px 0 0 10px;
+    padding: 10px 10px 10px 10px;
   }
 
   .contact {
@@ -260,8 +263,9 @@ const popup = ref(false)
     }
 
     .footercont {
-      display: block;
+      display: flex;
       text-align: center;
+      flex-direction: column;
     }
 
     .imgall {

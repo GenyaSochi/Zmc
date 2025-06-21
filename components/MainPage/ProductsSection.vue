@@ -123,5 +123,12 @@
   }
 }
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:320px) {
+  .prod {
+    flex-direction: column;
+  }
+  .seeprod {
+    font-size: 16px;
+  }
+}
 </style>

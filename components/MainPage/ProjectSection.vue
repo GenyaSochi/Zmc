@@ -528,7 +528,7 @@ swiper-container {
 
   .productstyle {
     padding-top: 20px;
-    height: 256px;
+    height: 351px;
   }
 
   .advanttext {
@@ -562,21 +562,19 @@ swiper-container {
   }
 
   .butproj {
-    font-size: 18px;
-    padding: 3px;
-    width: 135px;
+    display: none;
   }
 
   .blockproduct {
-    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+    padding-left: 0;
   }
 
   .advant {
     height: 108px;
-  }
-
-  .productstyle {
-    height: 234px;
   }
 
   swiper-container {
@@ -592,8 +590,8 @@ swiper-container {
   }
 
   .imgstyle {
-    height: 216px;  
-    padding-right: 48px;  
+    height: 216px;
+    padding-right: 48px;
   }
 
   .imgsize {
@@ -646,7 +644,7 @@ swiper-container {
   }
 
   .butproj {
-   display: none;   
+    display: none;
   }
 
   .production {
@@ -658,19 +656,11 @@ swiper-container {
     height: 40px;
     border-radius: 0;
     padding: 5px;
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .advanttext {
     font-size: 17px;
-  }
-
-  .blockproduct {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    padding-left: 0;
   }
 
   .productstyle {
@@ -686,56 +676,66 @@ swiper-container {
   }
 
   .textspan {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   swiper-container {
     --swiper-theme-color: grey !important;
   }
+}
 
-  @media screen and (max-width:410px) {
-    .imgsize {
-      height: 344px;
-      width: 100%;
-    }
-   
-    .ourproj {
-      padding: 10px 0 7px 0;
-    }
-
-    swiper-container {
-      --swiper-theme-color: transparent !important;
-    }
-
-    .proj {
-      height: 244px;
-    }
-
-    .title {
-      bottom: 44px;
-      font-size: 14px;
-      color: white;
-    }
-
-    .title1 {
-      font-size: 14px;
-      left: 44px;
-      bottom: 26px;
-      color: white;
-    }
-
-    .quant {
-      left: 44px;
-      top: 124px;
-      color: white;
-    }
-
-    .ouradvant {
-      padding-top: 0;
-    }
-    .imgstyle {
-      padding-right: 0;
-    }
+@media screen and (max-width:410px) {
+  .imgsize {
+    height: 344px;
+    width: 100%;
   }
+
+  .ourproj {
+    padding: 10px 0 7px 0;
+  }
+
+  swiper-container {
+    --swiper-theme-color: transparent !important;
+  }
+
+  .proj {
+    height: 244px;
+  }
+
+  .title {
+    bottom: 44px;
+    font-size: 14px;
+    color: white;
+  }
+
+  .title1 {
+    font-size: 14px;
+    left: 44px;
+    bottom: 26px;
+    color: white;
+  }
+
+  .quant {
+    left: 44px;
+    top: 124px;
+    color: white;
+  }
+
+  .ouradvant {
+    padding-top: 0;
+  }
+
+  .imgstyle {
+    padding-right: 0;
+  }
+}
+
+@media screen and(max-width:320px) {
+/* .textspan {
+  font-size: 18px;
+}
+.production {
+  font-size: 18px;
+} */
 }
 </style>

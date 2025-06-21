@@ -257,7 +257,7 @@ onUnmounted(() => {
   }
 
   .allcontainer {
-    padding: 56px 20px;
+    padding: 56px 30px;
   }
 
   .cardcontainer {
@@ -303,8 +303,8 @@ onUnmounted(() => {
   }
 
   .allcontainer {
-    padding: 20px 5px;
-    gap: 13px;
+    padding: 20px 20px;
+    gap: 20px;
   }
 
   .cardcontainer {
@@ -377,6 +377,7 @@ onUnmounted(() => {
     display: flex;
     height: 130px;
   }
+  
 }
 
 @media screen and (max-width:576px) {
