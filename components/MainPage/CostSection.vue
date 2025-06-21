@@ -49,7 +49,7 @@ const handleFiles = (event: Event ) => {
 
 const sendData = async () => {
   const fD = new FormData()
-  fD.append('zayavka', 'ok')
+  fD.append('zayavka', 'заявка отправлена')
   fD.append('name', name.value)
   fD.append('phone', phone.value)
   fD.append('file', file.value)
