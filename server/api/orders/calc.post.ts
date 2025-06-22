@@ -6,5 +6,6 @@ export default defineEventHandler(async (event) => {
 
     messagePopup({...data, src:`http://localhost:3000/Zmc/files/${files[0].newFileName}` })
 
-    return {message: 'ok'}
+    return {message: 'Заявка отправлена'}
 })
+

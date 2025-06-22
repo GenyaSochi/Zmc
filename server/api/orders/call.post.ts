@@ -1,3 +1,4 @@
+import { scrypt } from "crypto"
 import { callPopup } from "~/lib/nodemailer"
 
 export default defineEventHandler(async (event) => {
@@ -5,11 +6,12 @@ export default defineEventHandler(async (event) => {
     if (data.name && data.phone) {
         try {
             callPopup(data)
-            return {ok:true, message:'zayavka otpravlena'}
+            return {ok:true, message:'Заявка отправлена'}
         } catch (e) {
-            return {ok:false, message:'oshibka'}
+            return {ok:false, message:'ошибка'}
         }
     } else {
-        return {ok:false, message:'ne zapolnen tel or name'}
+        return {ok:false, message:'не заполнен телефон или имя'}
     }
 })
+

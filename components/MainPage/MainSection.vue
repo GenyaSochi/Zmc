@@ -377,7 +377,7 @@ onUnmounted(() => {
     display: flex;
     height: 130px;
   }
-  
+
 }
 
 @media screen and (max-width:576px) {
@@ -456,6 +456,29 @@ onUnmounted(() => {
 
     .cardcontainer {
       width: 176px;
+    }
+  }
+
+  @media screen and (max-width:320px) {
+    .digitsprod {
+      height: 236px;
+    }
+
+    .video {
+      height: 124px;
+    }
+
+    .digits {
+      font-size: 10px;
+    }
+
+    .allcontainer {
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .cardcontainer {
+      width: 146px;
+      font-size: 16px;
     }
   }
 }

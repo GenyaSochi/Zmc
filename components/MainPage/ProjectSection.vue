@@ -730,12 +730,28 @@ swiper-container {
   }
 }
 
-@media screen and(max-width:320px) {
-/* .textspan {
-  font-size: 18px;
-}
-.production {
-  font-size: 18px;
-} */
+@media screen and (max-width:320px) {
+  .textspan {
+    font-size: 18px;
+  }
+
+  .production {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .advant {
+    text-align: center;
+  }
+
+  .title {
+    bottom: 33px;
+    left: 36px;
+  }
+
+  .title1 {
+    left: 36px;
+    bottom: 16px;
+  }
 }
 </style>

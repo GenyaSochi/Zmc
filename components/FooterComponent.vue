@@ -50,7 +50,7 @@ const popup = ref(false)
 
 .footer_color {
   background: linear-gradient(90deg,
-      rgb(14, 13, 13)39%,
+      rgb(12, 13, 13)9%,
       rgb(30, 33, 61)96%);
   color: white;
   padding: 20px;
