@@ -119,7 +119,7 @@ function translit(word: string) {
 
 .imgstile {
   height: 300px;
-  width: 740px;
+  width: 100%;
   object-fit: cover;
   filter: grayscale(100%) drop-shadow(2px 4px 6px black);
   padding: 10px;
@@ -167,10 +167,6 @@ function translit(word: string) {
   .text {
     font-size: 24px;
   }
-
-  .imgstile {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width:992px) {
@@ -197,11 +193,7 @@ function translit(word: string) {
   .text {
     font-size: 24px;
     height: 30px;
-  }
-
-  .imgstile {
-    width: 620px;
-  }
+  } 
 }
 
 @media screen and (max-width:768px) {
@@ -221,10 +213,6 @@ function translit(word: string) {
   .hie,
   .text {
     font-size: 22px;
-  }
-
-  .imgstile {
-    width: 100%;
   }
 }
 
@@ -250,18 +238,11 @@ function translit(word: string) {
   .hie {
     height: 42px;
     font-size: 20px;
-  }
-
-  .imgstile {
-    width: 100%;
-  }
+  } 
 }
 
 
 @media screen and (max-width:410px) {
-  /* .imgstile {
-    width: 341px;
-  } */
 
   .h1 {
     font-size: 22px;
@@ -282,11 +263,7 @@ function translit(word: string) {
   .hie {
     height: 68px;
     font-size: 20px;
-  }
-
-  .imgstile {
-    width: 100%;
-  }
+  }  
 }
 
 @media screen and (max-width:320px) {
