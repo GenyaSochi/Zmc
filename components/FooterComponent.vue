@@ -218,7 +218,7 @@ const popup = ref(false)
   }
 
   .contactmain {
-    padding-top: 28px;
+    padding-top: 10px;
     padding-bottom: 11px;
     font-size: 17px;
   }

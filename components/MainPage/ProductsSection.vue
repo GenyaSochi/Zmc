@@ -10,7 +10,7 @@
           class="apper"></NuxtLink>
       <a target="_blank"
         href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-        class="seeprod">Экскурсия на производство <img src="/public/img/exc100.webp" alt="exc" class="exc"></a>
+        class="seeprod">Экскурсия на производство<img src="/public/img/exc100.webp" alt="exc" class="exc"></a>
     </div>
   </section>
 </template>

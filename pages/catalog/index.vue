@@ -2,14 +2,15 @@
   <div class="cont">
     <h1 class="h1_name">каталог продукции</h1>
     <div v-for="type of types" :key="type.id">
+
       <h2 class="h2_name">{{ type.name }}</h2>
       <template v-if="type?.outs.length">
         <div class="catalogcontainer2">
           <div v-for="out of type.outs" :key="out.id">
             <h2 class="h2_name">{{ out.name }}</h2>
             <div class="butview">
-              <NuxtLink class="but"" v-for="el of products?.filter((el: any) => el.out_id == out.id && el.type_id ==
-                type.id)"
+              <NuxtLink class="but"
+                v-for="el of products?.filter((el: any) => el.out_id == out.id && el.type_id == type.id)"
                 :key="el.title_en" :to="`/catalog/${el.title_en}`">{{ el.name }}</NuxtLink>
             </div>
           </div>
@@ -42,7 +43,7 @@ const products = data.value?.products
 
 .but {
   display: flex;
-  border: 1px solid red;
+  border: 1px solid black;
   width: 265px;
   height: 68px;
   border-radius: 5px;
@@ -51,6 +52,7 @@ const products = data.value?.products
   padding: 7px;
   margin: 10px;
   font-size: 24px;
+  text-align: center;
 }
 
 .butall {
@@ -59,8 +61,7 @@ const products = data.value?.products
   flex-wrap: wrap;
   justify-content: center;
   font-size: 24px;
-  padding-bottom: 30px;
-  color: blue;
+  padding-bottom: 30px;  
 }
 
 .cont {
@@ -106,7 +107,13 @@ const products = data.value?.products
   .h2_name {
     font-size: 32px;
   }
+  .butview {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
+  }
+
 
 @media screen and (max-width:1366px) {
   .h1_name {
@@ -136,6 +143,9 @@ const products = data.value?.products
   .h2_name {
     font-size: 26px;
   }
+  .but {
+    width: 220px;
+  }
 }
 
 @media screen and (max-width:576px) {
@@ -145,6 +155,18 @@ const products = data.value?.products
 
   .h2_name {
     font-size: 24px;
+    padding: 10px 0 10px 0;
+  }
+  .but {
+    width: 157px;
+    height: 46px;
+    font-size: 18px;
+  }
+  .butall {
+    padding-bottom: 0px;
+  }
+  .cont {
+    padding: 0 10px;
   }
 }
 
@@ -156,7 +178,12 @@ const products = data.value?.products
   .h2_name {
     font-size: 22px;
   }
+  .catalogcontainer2 {
+    display: grid;
+    grid-template-columns: 1fr;
 }
+  }
+
 
 @media screen and (max-width:320px) {
   .h1_name {
@@ -165,6 +192,9 @@ const products = data.value?.products
 
   .h2_name {
     font-size: 20px;
+  }
+  .butall {
+    padding-bottom: 10px;
   }
 }
 </style>

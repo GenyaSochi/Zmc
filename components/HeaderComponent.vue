@@ -232,7 +232,7 @@ const toggleMenu = () => {
 
   .nav {
     justify-content: space-evenly;
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   .but {
@@ -260,7 +260,7 @@ const toggleMenu = () => {
   }
 
   .buttel {
-    padding-left: 20px;
+    padding-left: 56px;
   }
 }
 
