@@ -122,7 +122,8 @@ const swiper = useSwiper(swiperCont, {
 
 @media screen and (max-width:410px) {
   .imgphoto {
-    height: 200px;
+    height: 190px;
+    width: 130px;
   }
 
   .photocontainer {

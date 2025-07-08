@@ -77,7 +77,6 @@ swiper-container {
   color: black;
   padding-bottom: 40px;
   font-size: 34px;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .cert {
@@ -183,6 +182,9 @@ swiper-container {
   }
   swiper-slide {
   width: 160px;
+}
+img {
+  width: 116px;
 }
 }
 

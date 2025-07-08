@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     if (data.name && data.phone) {
         try {
             callPopup(data)
-            return {ok:true, message:'Заявка отправлена'}
+            return {ok:true, message:'Запрос отправлен'}
         } catch (e) {
             return {ok:false, message:'ошибка'}
         }

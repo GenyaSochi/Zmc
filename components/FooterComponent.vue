@@ -167,7 +167,7 @@ const popup = ref(false)
   }
 
   .lobtn {
-    width: 211px;
+    width: 236px;
     font-size: 19px;
   }
 

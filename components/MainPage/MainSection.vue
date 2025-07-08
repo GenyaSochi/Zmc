@@ -15,7 +15,7 @@
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
-      <NuxtLink to="/catalog" class="support"><img src="/public/img/ohomutnoback.webp" alt="опора" width="146">
+      <NuxtLink to="/catalog" class="support"><img src="/public/img/ohomutnoback.webp" alt="опора" width="164">
       </NuxtLink>
     </div>
     <div class="digitsprod">
@@ -175,6 +175,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   animation: supp 5s infinite ease;
+  overflow: hidden;
 }
 
 @keyframes supp {
@@ -393,6 +394,13 @@ onUnmounted(() => {
     padding-bottom: 40px;
   }
 
+  .allcontainer {
+      grid-template-columns: 49% 49%;
+      justify-content: space-between;
+      font-size: 17px;
+      padding: 10px;
+    }
+  
   .num {
     height: 27px;
     width: 34px;
@@ -431,7 +439,7 @@ onUnmounted(() => {
     }
 
     .digits {
-      font-size: 17px;
+      font-size: 10px;
     }
 
     .num {
@@ -445,39 +453,10 @@ onUnmounted(() => {
     }
 
     .digitsprod {
-      height: 212px;
-    }
-
-    .allcontainer {
-      grid-template-columns: 1fr 1fr;
-      font-size: 17px;
-      padding: 20px 20px;
-    }
-
-    .cardcontainer {
-      width: 176px;
-    }
-  }
-
-  @media screen and (max-width:320px) {
-    .digitsprod {
       height: 236px;
     }
 
-    .video {
-      height: 124px;
-    }
-
-    .digits {
-      font-size: 10px;
-    }
-
-    .allcontainer {
-      justify-content: space-between;
-      padding: 10px;
-    }
     .cardcontainer {
-      width: 146px;
       font-size: 16px;
     }
   }

@@ -7,7 +7,7 @@
           <input class="name" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя...">
           <input class="phone" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">
           <button @click="sendData" class="butwindow">отправить запрос</button>
-          <p class="mess" v-if="message">{{ message }} </p>
+          <p class="mess" v-if="message">{{ message }}</p>
           <div>
             <!-- <a href="mailto:sales@zmkural.com" class="info">sales@zmkural.com</a> -->
           </div>
@@ -42,6 +42,7 @@ const sendData = async () => {
 <style scoped>
 .mess {
   color: white;
+  text-align: center;
 }
 .window {
   border-radius: 10px;

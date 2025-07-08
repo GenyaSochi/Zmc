@@ -61,7 +61,7 @@ const products = data.value?.products
   flex-wrap: wrap;
   justify-content: center;
   font-size: 24px;
-  padding-bottom: 30px;  
+  padding-bottom: 30px;
 }
 
 .cont {
@@ -72,13 +72,14 @@ const products = data.value?.products
   padding-top: 30px;
   text-transform: uppercase;
   font-size: 34px;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  font-weight: bold;
 }
 
 .h2_name {
   text-align: center;
   font-size: 34px;
   padding: 30px 0 30px 0;
+  font-weight: 600;
 }
 
 .catalogcontainer1 {
@@ -107,12 +108,13 @@ const products = data.value?.products
   .h2_name {
     font-size: 32px;
   }
+
   .butview {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-}
   }
+}
 
 
 @media screen and (max-width:1366px) {
@@ -143,6 +145,7 @@ const products = data.value?.products
   .h2_name {
     font-size: 26px;
   }
+
   .but {
     width: 220px;
   }
@@ -157,14 +160,17 @@ const products = data.value?.products
     font-size: 24px;
     padding: 10px 0 10px 0;
   }
+
   .but {
     width: 157px;
     height: 46px;
     font-size: 18px;
   }
+
   .butall {
     padding-bottom: 0px;
   }
+
   .cont {
     padding: 0 10px;
   }
@@ -176,13 +182,18 @@ const products = data.value?.products
   }
 
   .h2_name {
-    font-size: 22px;
+    font-size: 21px;
   }
+
   .catalogcontainer2 {
     display: grid;
     grid-template-columns: 1fr;
-}
   }
+
+  .but {
+    width: 177px;
+  }
+}
 
 
 @media screen and (max-width:320px) {
@@ -193,6 +204,7 @@ const products = data.value?.products
   .h2_name {
     font-size: 20px;
   }
+
   .butall {
     padding-bottom: 10px;
   }

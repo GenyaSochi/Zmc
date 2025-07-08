@@ -106,7 +106,6 @@
     right: 15%;
     top: 35%;
   }
-
 }
 
 @media screen and (max-width:768px) {

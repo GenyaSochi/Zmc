@@ -260,9 +260,10 @@ const toggleMenu = () => {
   }
 
   .buttel {
-    padding-left: 56px;
+    padding-left: 20px;
+    font-size: 17px;
+    }
   }
-}
 
 @media screen and (max-width:768px) {
 
