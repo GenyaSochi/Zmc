@@ -62,11 +62,11 @@ onUnmounted(() => {
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61)96%);
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   text-shadow: 0px 0px 2px #f6f6f6;
   padding: 44px 0;
-  gap: 10px;
+  gap: 20px;
   box-shadow: 2px 2px 12px rgb(30, 33, 61);
 }
 
@@ -113,7 +113,7 @@ onUnmounted(() => {
   color: rgb(30, 33, 61);
   text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
@@ -209,7 +209,6 @@ onUnmounted(() => {
   .digits {
     font-size: 20px;
     gap: 10px;
-    padding: 60px 0;
   }
 
   .num {
@@ -223,9 +222,8 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 410px;
+    height: 310px;
   }
-
 }
 
 @media screen and (max-width:1366px) {
@@ -258,12 +256,20 @@ onUnmounted(() => {
   }
 
   .allcontainer {
-    padding: 56px 30px;
+    padding: 40px 12px;
+    gap: 15px;
+    overflow: hidden;
   }
 
   .cardcontainer {
-    font-size: 20px;
-    height: 162px;
+    width: 100%;
+    height: 130px;
+    background: rgb(30, 33, 61);
+    border-radius: 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 400;
   }
 }
 
@@ -283,19 +289,20 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 300px;
+    height: 250px;
   }
 
   .digits {
-    font-size: 20px;
-    gap: 10px;
-    padding: 34px 0;
+    font-size: 18px;
+    gap: 5px;
+    padding: 30px 10px;
+    font-weight: 400;
   }
 
   .num {
     padding-top: 4px;
     height: 36px;
-    width: 39px;
+    width: 40px;
     font-size: 20px;
   }
 
@@ -303,12 +310,14 @@ onUnmounted(() => {
     font-size: 20px;
   }
 
-  .allcontainer {
-    padding: 20px 20px;
-    gap: 20px;
-  }
+  .allcontainer[data-v-02b6184c] {
+        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        padding: 20px 10px;
+        gap: 10px;
+    }
 
-  .cardcontainer {
+  /* .cardcontainer {
     width: 100%;
     height: 130px;
     background: rgb(30, 33, 61);
@@ -316,7 +325,7 @@ onUnmounted(() => {
     color: white;
     font-size: 18px;
     border-radius: 10px;
-  }
+  } */
 
   .digitsprod {
     height: 142px;
@@ -327,22 +336,17 @@ onUnmounted(() => {
 @media screen and (max-width:768px) {
 
   .video {
-    height: 250px;
+    height: 174px;
   }
 
-  .text {
-    font-size: 18px;
-  }
-
+  .text,
   .digits {
-    font-size: 18px;
-    gap: 8px;
-    padding: 22px 0;
+    font-size: 16px;
   }
 
   .num {
     height: 34px;
-    width: 36px;
+
     font-size: 18px;
   }
 
@@ -383,7 +387,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:576px) {
   .video {
-    height: 200px;
+    height: 120px;
   }
 
   .heading {
@@ -395,32 +399,30 @@ onUnmounted(() => {
   }
 
   .allcontainer {
-      grid-template-columns: 49% 49%;
-      justify-content: space-between;
-      font-size: 17px;
-      padding: 10px;
-    }
-  
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+    font-size: 17px;
+    padding: 10px;
+  }
+
   .num {
-    height: 27px;
-    width: 34px;
+    height: 26px;
     font-size: 13px;
+    padding-top: 3px;
   }
 
   .digits {
-    gap: 5px;
-    padding: 16px 10px;
+    gap: 2px;
   }
-
 
   .h1view {
     padding-bottom: 88px;
     padding-top: 10px;
   }
 
-  @media screen and (max-width:410px) {
+  /* @media screen and (max-width:410px) {
     .video {
-      height: 150px;
+      height: 130px;
     }
 
     .h1view {
@@ -459,6 +461,6 @@ onUnmounted(() => {
     .cardcontainer {
       font-size: 16px;
     }
-  }
+  } */
 }
 </style>

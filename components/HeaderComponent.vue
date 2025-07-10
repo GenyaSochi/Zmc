@@ -66,7 +66,7 @@ const toggleMenu = () => {
 .nav_all {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-decoration: none;
   color: white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -115,7 +115,7 @@ const toggleMenu = () => {
 .buttel {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   font-size: 20px;
   font-family: 'Montserrat', light;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -201,7 +201,7 @@ const toggleMenu = () => {
   }
 
   .link {
-    gap: 40px;
+    gap: 10px;
   }
 
   .but {
@@ -213,26 +213,39 @@ const toggleMenu = () => {
   }
 
   .logo {
-    width: 122px;
+    width: 114px;
     padding-left: 20px;
+  }
+
+  .nav_all {
+    gap: 5px;
+  }
+
+  .buttel {
+    font-size: 18px;
+    width: 196px;
   }
 }
 
 @media screen and (max-width:992px) {
 
   .navtag {
-    padding-left: 20px;
+    padding-left: 5px;
   }
 
-  .nav,
-  .but,
-  .butnav {
+  .but {
     font-size: 17px;
+  }
+
+  .butnav {
+    display: none;
   }
 
   .nav {
     justify-content: space-evenly;
-    padding-left: 20px;
+    padding-left: 0;
+    font-size: 17px;
+    text-align: center;
   }
 
   .but {
@@ -248,7 +261,7 @@ const toggleMenu = () => {
   }
 
   .link {
-    gap: 30px;
+    gap: 13px;
   }
 
   .logo {
@@ -260,16 +273,17 @@ const toggleMenu = () => {
   }
 
   .buttel {
-    padding-left: 20px;
+    padding-left: 0;
     font-size: 17px;
-    }
   }
+}
 
 @media screen and (max-width:768px) {
 
   .but {
     font-size: 18px;
   }
+
   .buttel {
     display: none;
   }
@@ -343,7 +357,7 @@ const toggleMenu = () => {
     font-size: 18px;
     padding-bottom: 5px;
   }
-  
+
 }
 
 @media screen and (max-width:576px) {
@@ -380,7 +394,7 @@ const toggleMenu = () => {
 
   .butnav {
     border: none;
-    width: none;   
+    width: none;
   }
 
   .logo {
