@@ -111,7 +111,7 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 308px;  
+    height: 308px;
     padding-left: 32px;
   }
 }
@@ -159,7 +159,7 @@ swiper-container {
   }
 
   swiper-container {
-    --swiper-theme-color: grey !important;  
+    --swiper-theme-color: grey !important;
   }
 }
 
@@ -175,27 +175,16 @@ swiper-container {
   .certcontainer {
     height: 166px;
     padding-left: 0;
+    text-align: center;
   }
 
   swiper-container {
     padding-left: 10px;
   }
-  swiper-slide {
-  width: 160px;
-}
-img {
-  width: 116px;
-}
-}
 
-@media screen and (max-width:320px) {
-  swiper-container {
-    padding-left: 0px;
-    text-align: center;
+
+  img {
+    width: 116px;
   }
-}
-
-swiper-slide {
-  width: 146px;
 }
 </style>

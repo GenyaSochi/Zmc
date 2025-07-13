@@ -6,7 +6,7 @@
 
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
-      <span v-for="(digit, index) in digits" :key="index" class="num">{{ digit }}</span>
+      <span class="num" v-for="(digit, index) in digits" :key="index">{{ digit }}</span>
     </div>
 
     <div class="allcontainer">
@@ -79,7 +79,6 @@ onUnmounted(() => {
       rgb(30, 33, 61) 96%);
   color: white;
   text-align: center;
-  font-weight: 600;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
   text-shadow: 0px 0px 2px #f6f6f6;
 }
@@ -110,7 +109,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(30, 33, 61);
+  color: white;
+  background-color: rgb(30, 33, 61);
   text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
   font-weight: 500;
@@ -247,7 +247,7 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 149px;
+    height: 167px;
     padding: 20px;
   }
 
@@ -311,11 +311,11 @@ onUnmounted(() => {
   }
 
   .allcontainer[data-v-02b6184c] {
-        grid-template-columns: 1fr 1fr 1fr;
-        display: grid;
-        padding: 20px 10px;
-        gap: 10px;
-    }
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    padding: 20px 10px;
+    gap: 10px;
+  }
 
   /* .cardcontainer {
     width: 100%;
@@ -331,6 +331,10 @@ onUnmounted(() => {
     height: 142px;
   }
 
+  .support {
+    display: flex;
+    height: 130px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -346,12 +350,11 @@ onUnmounted(() => {
 
   .num {
     height: 34px;
-
     font-size: 18px;
   }
 
   .allcontainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     display: grid;
     padding: 20px 10px;
     gap: 10px;
@@ -377,12 +380,6 @@ onUnmounted(() => {
   .h1view {
     padding-bottom: 110px;
   }
-
-  .support {
-    display: flex;
-    height: 130px;
-  }
-
 }
 
 @media screen and (max-width:576px) {
@@ -399,10 +396,10 @@ onUnmounted(() => {
   }
 
   .allcontainer {
-    grid-template-columns: 49% 49%;
-    justify-content: space-between;
     font-size: 17px;
     padding: 10px;
+    gap: 5px;
+    grid-template-columns: 49% 49%;
   }
 
   .num {
@@ -420,47 +417,8 @@ onUnmounted(() => {
     padding-top: 10px;
   }
 
-  /* @media screen and (max-width:410px) {
-    .video {
-      height: 130px;
-    }
-
-    .h1view {
-      font-size: 14px;
-      padding-top: 5px;
-      padding-bottom: 46px;
-    }
-
-    .heading {
-      font-size: 15px;
-    }
-
-    .heading1 {
-      font-size: 15px;
-      padding-bottom: 10px;
-    }
-
-    .digits {
-      font-size: 10px;
-    }
-
-    .num {
-      padding-top: 2px;
-      height: 23px;
-      width: 48px;
-    }
-
-    .text {
-      font-size: 17px;
-    }
-
-    .digitsprod {
-      height: 236px;
-    }
-
-    .cardcontainer {
-      font-size: 16px;
-    }
-  } */
+  .digitsprod {
+    height: 204px;
+  }
 }
 </style>

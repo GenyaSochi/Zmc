@@ -86,7 +86,7 @@ const swiper = useSwiper(swiperCont, {
   color: black;
   font-size: 34px;
   padding: 30px 0;
-  text-align: center;  
+  text-align: center;
 }
 
 .ouradvant {
@@ -166,7 +166,7 @@ const swiper = useSwiper(swiperCont, {
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 84px;
+  padding-right: 48px;
 }
 
 .imgproj {
@@ -234,7 +234,7 @@ const swiper = useSwiper(swiperCont, {
 
 .imgsize {
   overflow: hidden;
-  height: 596px;
+  height: 550px;
   box-shadow: 3px 6px 9px rgb(30, 33, 61);
 }
 
@@ -244,22 +244,26 @@ swiper-container {
 
 @media screen and (max-width:1600px) {
   .imgsize {
-    height: 508px;
+    height: 450px;
+  }
+
+  .imgstyle {
+    padding-right: 50px;
   }
 
   .quant {
-    font-size: 63px;
+    font-size: 58px;
     left: 86px;
   }
 
   .title {
-    font-size: 32px;
+    font-size: 28px;
     left: 86px;
     bottom: 268px;
   }
 
   .title1 {
-    font-size: 32px;
+    font-size: 28px;
     left: 86px;
     bottom: 232px;
   }
@@ -311,23 +315,23 @@ swiper-container {
   }
 
   .ouradvant {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .quant {
     font-size: 56px;
-    left: 86px;
+    left: 46px;
   }
 
   .title {
-    font-size: 28px;
-    left: 86px;
+    font-size: 20px;
+    left: 46px;
     bottom: 213px;
   }
 
   .title1 {
-    font-size: 28px;
-    left: 86px;
+    font-size: 20px;
+    left: 46px;
     bottom: 179px;
   }
 
@@ -346,7 +350,7 @@ swiper-container {
   }
 
   .imgsize {
-    height: 415px;
+    height: 318px;
   }
 
   .imgstyle {
@@ -387,11 +391,10 @@ swiper-container {
   }
 
   .imgsize {
-    height: 312px;
+    height: 230px;
   }
 
   .quant {
-    left: 108px;
     font-size: 36px;
     top: 120px;
   }
@@ -402,14 +405,12 @@ swiper-container {
 
   .title {
     font-size: 17px;
-    left: 99px;
     bottom: 167px;
   }
 
   .title1 {
     font-size: 17px;
-    left: 96px;
-    bottom: 151px;
+    bottom: 146px;
   }
 
   .production {
@@ -486,7 +487,7 @@ swiper-container {
   }
 
   .imgsize {
-    height: 232px;
+    height: 212px;
   }
 
   .quant {
@@ -507,18 +508,7 @@ swiper-container {
     height: 282px;
   }
 
-  .title {
-    font-size: 14px;
-    left: 52px;
-    bottom: 125px;
-  }
-
-  .title1 {
-    font-size: 14px;
-    left: 49px;
-    bottom: 106px;
-  }
-
+ 
   .ouradvant {
     font-size: 20px;
   }
@@ -537,25 +527,11 @@ swiper-container {
     width: 0;
   }
 
-  .production {
-    font-size: 18px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: none;
-    text-align: center;
-    padding: 10px;
-    gap: 10px;
-    height: 108px;
-  }
 
   .textsmall1,
   .textsmall2,
   .textsmall3 {
     display: none;
-  }
-
-  .textspan {
-    font-size: 18px;
   }
 
   .butproj {
@@ -568,14 +544,32 @@ swiper-container {
     gap: 10px;
     align-items: flex-start;
     padding-left: 0;
-  }
-
-  .advant {
-    height: 108px;
-  }
+  } 
 
   swiper-container {
     --swiper-theme-color: grey !important;
+  } 
+   .textspan {
+    font-size: 18px;
+  }
+
+  .production {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .advant {
+    text-align: center;
+  }
+
+  .title {
+    bottom: 114px;
+    left: 49px;
+  }
+
+  .title1 {
+    left: 49px;
+    bottom: 91px;
   }
 
 }
@@ -725,30 +719,7 @@ swiper-container {
   .imgstyle {
     padding-right: 0;
   }
-}
+} 
 
-@media screen and (max-width:320px) {
-  .textspan {
-    font-size: 18px;
-  }
 
-  .production {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .advant {
-    text-align: center;
-  }
-
-  .title {
-    bottom: 33px;
-    left: 36px;
-  }
-
-  .title1 {
-    left: 36px;
-    bottom: 16px;
-  }
-}
 </style>

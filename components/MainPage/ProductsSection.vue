@@ -92,7 +92,7 @@
 
   .seeprod {
     font-size: 17px;
-    padding-top: 10px;
+    padding: 5px;
   }
 
   .apper {
@@ -105,6 +105,9 @@
     width: 60px;
     right: 15%;
     top: 35%;
+  }
+  .photocontainer {
+    text-align: center;
   }
 }
 
@@ -122,12 +125,5 @@
   }
 }
 
-@media screen and (max-width:320px) {
-  .prod {
-    flex-direction: column;
-  }
-  .seeprod {
-    font-size: 16px;
-  }
-}
+
 </style>
