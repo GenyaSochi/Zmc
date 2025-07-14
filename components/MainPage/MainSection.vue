@@ -6,7 +6,7 @@
 
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
-      <span class="num" v-for="(digit, index) in digits" :key="index">{{ digit }}</span>
+      <div class="num" v-for="(digit, index) in digits" :key="index">{{ digit }}</div>
     </div>
 
     <div class="allcontainer">
@@ -404,6 +404,7 @@ onUnmounted(() => {
 
   .num {
     height: 26px;
+    width: 45px;
     font-size: 13px;
     padding-top: 3px;
   }

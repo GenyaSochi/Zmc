@@ -320,18 +320,18 @@ swiper-container {
 
   .quant {
     font-size: 56px;
-    left: 46px;
+    left: 86px;
   }
 
   .title {
     font-size: 20px;
-    left: 46px;
+    left: 86px;
     bottom: 213px;
   }
 
   .title1 {
     font-size: 20px;
-    left: 46px;
+    left: 86px;
     bottom: 179px;
   }
 
@@ -350,7 +350,8 @@ swiper-container {
   }
 
   .imgsize {
-    height: 318px;
+    height: 395px;
+
   }
 
   .imgstyle {
@@ -358,7 +359,7 @@ swiper-container {
   }
 
   .ourproj {
-    padding: 30px 0 0 0;
+    padding: 30px 0 20px 0;
     font-size: 28px;
   }
 
@@ -371,10 +372,25 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:992px) {
-  .quant {
-    font-size: 58px;
+@media screen and (max-width:1110px) {
+
+  .title,
+  .title1 {
+    left: 46px;
   }
+
+  .quant {
+    left: 46px;
+  }
+
+
+  .imgsize {
+    height: 374px;
+  }
+}
+
+
+@media screen and (max-width:992px) {
 
   .ouradvant {
     font-size: 26px;
@@ -388,15 +404,18 @@ swiper-container {
   .imgstyle {
     margin-top: 0;
     height: 349px;
+    padding-right: 0;
   }
 
   .imgsize {
-    height: 230px;
+    margin: auto;
   }
 
   .quant {
     font-size: 36px;
     top: 120px;
+    left: 252px;
+    color: white;
   }
 
   .units {
@@ -406,11 +425,15 @@ swiper-container {
   .title {
     font-size: 17px;
     bottom: 167px;
+    left: 252px;
+    color: white;
   }
 
   .title1 {
     font-size: 17px;
     bottom: 146px;
+    left: 252px;
+    color: white;
   }
 
   .production {
@@ -425,7 +448,6 @@ swiper-container {
 
   .ourproj {
     font-size: 24px;
-    padding: 30px 0 0 0;
   }
 
   .ouradvant {
@@ -443,11 +465,10 @@ swiper-container {
   }
 
   .proj {
-    height: 368px;
+    height: 396px;
   }
 
   .productstyle {
-    padding-right: 19px;
     height: 464px;
   }
 
@@ -483,17 +504,12 @@ swiper-container {
 @media screen and (max-width:768px) {
   .ourproj {
     font-size: 20px;
-    padding: 20px 0 0 0;
-  }
-
-  .imgsize {
-    height: 212px;
   }
 
   .quant {
     font-size: 28px;
-    left: 54px;
-    top: 84px;
+    left: 149px;
+    top: 128px;
   }
 
   .units {
@@ -501,14 +517,15 @@ swiper-container {
   }
 
   .imgstyle {
-    height: 260px;
+    width: 100%;
+    height: 303px;
   }
 
   .proj {
-    height: 282px;
+    height: 337px;
   }
 
- 
+
   .ouradvant {
     font-size: 20px;
   }
@@ -544,12 +561,13 @@ swiper-container {
     gap: 10px;
     align-items: flex-start;
     padding-left: 0;
-  } 
+  }
 
   swiper-container {
     --swiper-theme-color: grey !important;
-  } 
-   .textspan {
+  }
+
+  .textspan {
     font-size: 18px;
   }
 
@@ -564,162 +582,30 @@ swiper-container {
 
   .title {
     bottom: 114px;
-    left: 49px;
+    left: 149px;
   }
 
   .title1 {
-    left: 49px;
+    left: 149px;
     bottom: 91px;
   }
-
 }
 
-@media screen and (max-width:576px) {
-  .ourproj {
-    font-size: 18px;
-    padding: 10px 0 0 0;
-  }
-
-  .imgstyle {
-    height: 216px;
-    padding-right: 48px;
-  }
-
-  .imgsize {
-    height: 194px;
-  }
-
-  swiper-slide {
-    width: 100%;
-  }
-
-  .quant {
-    font-size: 22px;
-    left: 46px;
-    top: 50px;
-  }
-
-  .units {
-    font-size: 20px;
-  }
-
-  .title {
-    font-size: 10px;
-    left: 44px;
-    bottom: 125px;
-  }
-
-  .title1 {
-    font-size: 10px;
-    left: 42px;
-    bottom: 110px;
-  }
-
-  .proj {
-    height: 235px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: var(--swiper-navigation-top-offset, 41%);
-  }
-
-  .swiper-horizontal>.swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 26px);
-  }
-
-  .ouradvant {
-    font-size: 18px;
-    padding-top: 10px;
-  }
-
-  .butproj {
-    display: none;
-  }
-
-  .production {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    border-radius: 0;
-    padding: 5px;
-    font-size: 18px;
-  }
-
-  .advanttext {
-    font-size: 17px;
-  }
-
-  .productstyle {
-    padding: 0 10px;
-    height: 100%;
-  }
-
-  .advant {
-    height: 40px;
-    border-radius: 0;
-    padding: 6px 0;
-    width: 100%;
-  }
-
-  .textspan {
-    font-size: 18px;
-  }
-
-  swiper-container {
-    --swiper-theme-color: grey !important;
-  }
-}
-
-@media screen and (max-width:410px) {
-  .imgsize {
-    height: 344px;
-    width: 100%;
-  }
-
-  .ourproj {
-    padding: 10px 0 7px 0;
-  }
-
+@media screen and (max-width:651px) {
   swiper-container {
     --swiper-theme-color: transparent !important;
   }
 
-  .proj {
-    height: 244px;
-  }
-
   .title {
-    bottom: 44px;
-    font-size: 14px;
-    color: white;
+    left: 30px;
   }
 
   .title1 {
-    font-size: 14px;
-    left: 44px;
-    bottom: 26px;
-    color: white;
+    left: 30px;
   }
 
   .quant {
-    left: 44px;
-    top: 124px;
-    color: white;
+    left: 30px;
   }
-
-  .ouradvant {
-    padding-top: 0;
-  }
-
-  .imgstyle {
-    padding-right: 0;
-  }
-} 
-
-
+}
 </style>

@@ -198,6 +198,7 @@ const toggleMenu = () => {
 
   .nav {
     padding-right: 10px;
+    text-align: center;
   }
 
   .link {
