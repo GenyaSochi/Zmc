@@ -6,7 +6,9 @@
 
     <div class="digits">
       <h2>Количество выпущенной продукции</h2>
-      <div class="num" v-for="(digit, index) in digits" :key="index">{{ digit }}</div>
+      <div class="allnum">
+        <div class="num" v-for="(digit, index) in digits" :key="index">{{ digit }}</div>
+      </div>
     </div>
 
     <div class="allcontainer">
@@ -53,9 +55,14 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.allnum {
+  display: flex;
+  gap: 10px;
+}
 .digits {
   font-size: 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -343,9 +350,13 @@ onUnmounted(() => {
     height: 174px;
   }
 
-  .text,
+  .text {
+    font-size: 16px;
+  }
+ 
   .digits {
     font-size: 16px;
+    gap: 10px;
   }
 
   .num {
@@ -403,14 +414,10 @@ onUnmounted(() => {
   }
 
   .num {
-    height: 26px;
-    width: 45px;
+    height: 28px;
+    width: 30px;
     font-size: 13px;
     padding-top: 3px;
-  }
-
-  .digits {
-    gap: 2px;
   }
 
   .h1view {
@@ -419,7 +426,21 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 204px;
+    height: 140px;
+  }
+  .allnum {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width:453px) {
+  .digitsprod {
+    height: 153px;
+  }
+}
+@media screen and (max-width:424px) {
+  .digitsprod {
+    height: 212px;
   }
 }
 </style>

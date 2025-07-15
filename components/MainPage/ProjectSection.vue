@@ -176,7 +176,7 @@ const swiper = useSwiper(swiperCont, {
 .advanttext {
   font-size: 24px;
   color: black;
-  padding-bottom: 96px;
+  padding-bottom: 38px;
   text-align: center;
 }
 
@@ -196,7 +196,7 @@ const swiper = useSwiper(swiperCont, {
 .productstyle {
   justify-content: center;
   padding-top: 30px;
-  height: 578px;
+  height: 520px;
 }
 
 .textspan {
@@ -225,11 +225,10 @@ const swiper = useSwiper(swiperCont, {
 
 .blockproduct {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: space-between;
-  gap: 66px;
+  gap: 30px;
 }
 
 .imgsize {
@@ -244,7 +243,7 @@ swiper-container {
 
 @media screen and (max-width:1600px) {
   .imgsize {
-    height: 450px;
+    height: 470px;
   }
 
   .imgstyle {
@@ -270,7 +269,6 @@ swiper-container {
 
   .ourproj {
     font-size: 30px;
-    padding: 30px 0 0 0;
   }
 
   .ouradvant {
@@ -290,20 +288,32 @@ swiper-container {
   .textsmall3 {
     padding-top: 24px;
   }
+
+  .advant {
+    height: 335px;
+    width: 310px;
+  }
+
+  .production {
+    height: 335px;
+    width: 310px;
+  }
+
+  .productstyle {
+    height: 540px;
+  }
 }
 
 @media screen and (max-width:1366px) {
   .blockproduct {
-    flex-wrap: nowrap;
-    gap: 44px;
     padding-left: 20px;
   }
 
   .advant {
     padding: 32px 20px 20px 20px;
-    width: 286px;
-    height: 272px;
-  }
+    width: 270px;
+    }
+  
 
   .advanttext {
     padding-bottom: 62px;
@@ -311,7 +321,7 @@ swiper-container {
   }
 
   .productstyle {
-    height: 490px;
+    height: 560px;
   }
 
   .ouradvant {
@@ -341,8 +351,8 @@ swiper-container {
 
   .production {
     font-size: 20px;
-    width: 286px;
-    height: 272px;
+    height: 335px;
+    width: 270px;
   }
 
   .butproj {
@@ -359,7 +369,6 @@ swiper-container {
   }
 
   .ourproj {
-    padding: 30px 0 20px 0;
     font-size: 28px;
   }
 
@@ -372,7 +381,7 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:1110px) {
+@media screen and (max-width:1130px) {
 
   .title,
   .title1 {
@@ -383,11 +392,11 @@ swiper-container {
     left: 46px;
   }
 
-
   .imgsize {
     height: 374px;
   }
 }
+
 
 
 @media screen and (max-width:992px) {
@@ -436,11 +445,11 @@ swiper-container {
     color: white;
   }
 
-  .production {
+  /* .production {
     font-size: 17px;
     height: 295px;
     padding: 0px 18px 26px 26px;
-  }
+  } */
 
   .textspan {
     font-size: 17px;
@@ -591,21 +600,32 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:651px) {
+@media screen and (max-width:652px) {
   swiper-container {
     --swiper-theme-color: transparent !important;
   }
 
-  .title {
-    left: 30px;
+  .title,
+  .title1,
+  .quant {
+    left: 104px;
   }
 
-  .title1 {
-    left: 30px;
+  .ourproj {
+    padding: 20px 0;
   }
+}
 
+@media screen and (max-width:493px) {
+
+  .title,
+  .title1,
   .quant {
     left: 30px;
+  }
+
+  .productstyle {
+    padding-top: 5px;
   }
 }
 </style>
