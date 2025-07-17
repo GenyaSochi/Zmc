@@ -324,16 +324,6 @@ onUnmounted(() => {
     gap: 10px;
   }
 
-  /* .cardcontainer {
-    width: 100%;
-    height: 130px;
-    background: rgb(30, 33, 61);
-    border-radius: 0;
-    color: white;
-    font-size: 18px;
-    border-radius: 10px;
-  } */
-
   .digitsprod {
     height: 142px;
   }
@@ -395,7 +385,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:576px) {
   .video {
-    height: 120px;
+    height: 156px;
   }
 
   .heading {

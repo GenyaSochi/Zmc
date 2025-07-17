@@ -229,6 +229,7 @@ const swiper = useSwiper(swiperCont, {
   align-items: center;
   align-content: space-between;
   gap: 30px;
+  padding: 0 20px 0 20px;
 }
 
 .imgsize {
@@ -305,18 +306,15 @@ swiper-container {
 }
 
 @media screen and (max-width:1366px) {
-  .blockproduct {
-    padding-left: 20px;
-  }
 
   .advant {
-    padding: 32px 20px 20px 20px;
+    padding: 32px 10px 20px 10px;
     width: 270px;
-    }
-  
+  }
+
 
   .advanttext {
-    padding-bottom: 62px;
+    padding-bottom: 47px;
     font-size: 22px;
   }
 
@@ -325,7 +323,7 @@ swiper-container {
   }
 
   .ouradvant {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .quant {
@@ -395,11 +393,30 @@ swiper-container {
   .imgsize {
     height: 374px;
   }
+
+  .advant,
+  .production {
+    height: 382px;
+  }
+
+  .productstyle {
+    height: 620px;
+  }
 }
 
+@media screen and (max-width:996px) {
+  .productstyle {
+    height: 560px;
+  }
 
-
-@media screen and (max-width:992px) {
+  .blockproduct {
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    justify-items: center;
+    padding: 0 150px 0 150px;
+    height: 460px;
+  }
 
   .ouradvant {
     font-size: 26px;
@@ -445,12 +462,6 @@ swiper-container {
     color: white;
   }
 
-  /* .production {
-    font-size: 17px;
-    height: 295px;
-    padding: 0px 18px 26px 26px;
-  } */
-
   .textspan {
     font-size: 17px;
   }
@@ -477,15 +488,6 @@ swiper-container {
     height: 396px;
   }
 
-  .productstyle {
-    height: 464px;
-  }
-
-  .advant {
-    padding: 20px 20px 20px 20px;
-    height: 295px;
-  }
-
   .butproj {
     margin-top: 0;
   }
@@ -508,7 +510,13 @@ swiper-container {
     padding-top: 26px;
     font-size: 15px;
   }
+
+  .advant,
+  .production {
+    height: 222px;
+  }
 }
+
 
 @media screen and (max-width:768px) {
   .ourproj {
@@ -553,23 +561,9 @@ swiper-container {
     width: 0;
   }
 
-
-  .textsmall1,
-  .textsmall2,
-  .textsmall3 {
-    display: none;
-  }
-
   .butproj {
-    display: none;
-  }
-
-  .blockproduct {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
-    padding-left: 0;
+    margin-left: 38px;
+    padding: 5px 15px 5px 20px;
   }
 
   swiper-container {
@@ -616,16 +610,48 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:493px) {
+@media screen and (max-width:563px) {
 
-  .title,
-  .title1,
-  .quant {
-    left: 30px;
+  .textsmall1,
+  .textsmall2,
+  .textsmall3,
+  .butproj {
+    display: none;
+  }
+
+  .advanttext {
+    padding-bottom: 17px;
+  }
+
+  .advant {
+    height: 73px;
+    padding: 18px 10px 20px 10px;
+    width: 240px;
+  }
+
+  .production {
+    height: 73px;
+    padding: 18px 10px 20px 10px;
+    width: 240px;
+  }
+
+  .blockproduct {
+    height: 0;
   }
 
   .productstyle {
-    padding-top: 5px;
+    height: 242px;
+  }
+
+  @media screen and (max-width:504px) {
+    .blockproduct {
+      grid-template-columns: 1fr;
+    }
+
+    .productstyle {
+      height: 418px;
+      padding-top: 6px;
+    }
   }
 }
 </style>

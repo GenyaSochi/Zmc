@@ -127,22 +127,12 @@ const swiper = useSwiper(swiperCont, {
   }
 
   .photocontainer {
+    text-align: center;
     padding: 0 0px 20px 0px;
   }
-}
-
-@media screen and (max-width:320px) {
-  .photocontainer {
-    padding: 0 0 20px 0px;
-  }
-
-  swiper-container {
-
-    text-align: center;
-  }
-
   swiper-slide {
     width: 146px;
   }
 }
+
 </style>

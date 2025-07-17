@@ -116,10 +116,11 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:996px) {
   .certtext {
     font-size: 24px;
     padding-bottom: 25px;
+    padding-top: 75px;
   }
 
   .cert {
@@ -127,16 +128,14 @@ swiper-container {
   }
 
   .certcontainer {
-
     height: 225px;
   }
-
 }
 
 @media screen and (max-width:768px) {
   .certtext {
     font-size: 20px;
-    padding-top: 15px;
+    padding-top: 258px;
   }
 
   .cert {
@@ -144,9 +143,10 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:563px) {
   .certtext {
     font-size: 18px;
+    padding-top: 72px;
   }
 
   .cert {
