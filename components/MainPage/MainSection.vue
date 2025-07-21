@@ -385,7 +385,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:576px) {
   .video {
-    height: 156px;
+    height: 142px;
   }
 
   .heading {

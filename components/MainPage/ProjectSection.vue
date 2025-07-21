@@ -652,6 +652,50 @@ swiper-container {
       height: 418px;
       padding-top: 6px;
     }
+
+    .quant {
+      top: 113px;
+      left: 80px;
+    }
+
+    .title {
+      left: 80px;
+      bottom: 132px;
+    }
+
+    .title1 {
+      left: 80px;
+      bottom: 105px;
+    }
+  }
+
+  @media screen and (max-width:419px) {
+    .quant {
+      left: 50px;
+    }
+
+    .title {
+      left: 50px;
+    }
+
+    .title1 {
+      left: 50px;
+    }
+  }
+   @media screen and (max-width:396px) {
+    .quant {
+      left: 26px;      
+    }
+
+    .title {
+      left: 26px;
+      font-size: 16px;
+    }
+
+    .title1 {
+      left: 26px;
+      font-size: 16px;
+    }
   }
 }
 </style>

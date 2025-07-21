@@ -90,7 +90,6 @@ function translit(word: string) {
   font-size: 34px;
   padding-bottom: 20px;
   height: 94px;
-
 }
 
 .view {
@@ -100,7 +99,7 @@ function translit(word: string) {
 }
 
 .heading {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 32px;
 }
 
@@ -147,26 +146,27 @@ function translit(word: string) {
 
 @media screen and (max-width:1366px) {
   .h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .h2 {
-    font-size: 28px;
+    font-size: 26px;
     height: 62px;
   }
 
   .heading {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .hie {
-    font-size: 24px;
-    height: 40px;
+    font-size: 22px;
+    height: 68px;
   }
 
   .text {
-    font-size: 24px;
+    font-size: 22px;
   }
+
 }
 
 @media screen and (max-width:992px) {
@@ -181,7 +181,7 @@ function translit(word: string) {
   }
 
   .h2 {
-    font-size: 28px;
+    font-size: 26px;
     height: 44px;
   }
 
@@ -189,11 +189,19 @@ function translit(word: string) {
     font-size: 26px;
   }
 
-  .hie,
   .text {
     font-size: 24px;
     height: 30px;
-  } 
+  }
+
+  .hie {
+    font-size: 24px;
+    height: 42px;
+  }
+
+  .imgstile {
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -210,9 +218,13 @@ function translit(word: string) {
     font-size: 24px;
   }
 
-  .hie,
   .text {
     font-size: 22px;
+  }
+
+  .hie {
+    font-size: 22px;
+    height: 63px;
   }
 }
 
@@ -238,9 +250,15 @@ function translit(word: string) {
   .hie {
     height: 42px;
     font-size: 20px;
-  } 
+  }
 }
 
+@media screen and (max-width:541px) {
+
+  .hie {
+    height: 61px;
+  }
+}
 
 @media screen and (max-width:410px) {
 
@@ -263,45 +281,16 @@ function translit(word: string) {
   .hie {
     height: 68px;
     font-size: 20px;
-  }  
+  }
 }
 
-@media screen and (max-width:320px) {
-  .view {
-    margin: 0;
-    height: 690px;
-    padding: 0px 22px 0 22px;
-  }
-
-  .imgstile {
-    width: 275px;
-    height: 220px;
-  }
-
+@media screen and (max-width:386px) {
   .h2 {
-    font-size: 20px;
-    height: 44px;
-  }
-
-  .heading {
-    font-size: 18px;
+    height: 82px;
   }
 
   .hie {
-    font-size: 17px;
-    height: 58px;
-  }
-
-  .text {
-    font-size: 20px;
-    height: 35px;
-  }
-
-  .view {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 647px;
+    height: 87px;
   }
 }
 </style>

@@ -131,7 +131,7 @@ const popup = ref(false)
   }
 
   .footer_color {
-    padding: 20px 20px 20px 0;
+    padding: 20px 20px 20px 20px;
   }
 
   .confid {
