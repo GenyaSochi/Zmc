@@ -235,6 +235,14 @@ const datacompany = [
   iframe {
     height: 400px;
   }
+  .rec {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .details {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:576px) {
@@ -261,47 +269,6 @@ const datacompany = [
   iframe {
     height: 300px;
   }
-
 }
 
-@media screen and (max-width:410px) {
-  .contacts {
-    font-size: 22px;
-  }
-
-  .contactstel,
-  .order {
-    font-size: 18px;
-  }
-
-  .reccomp {
-    font-size: 22px;
-  }
-
-  .rec_info {
-    font-size: 16px;
-  }
-
-  .details {
-    font-size: 16px;
-    width: 320px;
-    margin: 0 10px 20px 50px;
-  }
-
-  .rec {
-    gap: 0px;
-  }
-
-  @media screen and (max-width:320px) {
-    .rec {
-      gap: 10px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .details {
-      margin: 0 0 20px 0;
-    }
-  }
-}
 </style>

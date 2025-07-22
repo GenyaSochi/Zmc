@@ -156,6 +156,7 @@ swiper-container {
   .certcontainer {
     display: flex;
     height: 202px;
+    padding: 0 14px;
   }
 
   swiper-container {

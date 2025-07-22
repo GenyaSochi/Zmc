@@ -182,7 +182,7 @@ function translit(word: string) {
 
   .h2 {
     font-size: 26px;
-    height: 44px;
+    height: 62px;
   }
 
   .heading {
@@ -279,7 +279,7 @@ function translit(word: string) {
   }
 
   .hie {
-    height: 68px;
+    height: 85px;
     font-size: 20px;
   }
 }
