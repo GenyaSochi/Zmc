@@ -11,6 +11,8 @@ a {
 
 swiper-container{
   --swiper-theme-color: black !important;
+  --swiper-pagination-bottom: 0px;
+  /* height: 290px; */
 }
 
 .container {

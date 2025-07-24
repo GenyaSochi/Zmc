@@ -22,23 +22,15 @@ const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
   slidesPerView: 5,
+  pagination: true,
   breakpoints: {
     1600: {
-      slidesPerView: 5
-    },
-    1366: {
-      slidesPerView: 5
-    },
-    992: {
       slidesPerView: 5
     },
     768: {
       slidesPerView: 4
     },
     576: {
-      slidesPerView: 3
-    },
-    410: {
       slidesPerView: 3
     },
     320: {
@@ -63,12 +55,12 @@ const certificate = [
 <style scoped>
 swiper-container {
   overflow: hidden;
+  height: 340px;
 }
 
 .certcontainer {
   padding-left: 60px;
   height: 368px;
-  position: relative;
 }
 
 .certtext {
@@ -98,6 +90,11 @@ swiper-container {
   .certtext {
     font-size: 30px;
   }
+
+  swiper-container {
+    height: 330px;
+  }
+
 }
 
 @media screen and (max-width:1366px) {
@@ -114,6 +111,10 @@ swiper-container {
     height: 308px;
     padding-left: 32px;
   }
+
+  swiper-container {
+    height: 298px;
+  }
 }
 
 @media screen and (max-width:996px) {
@@ -128,18 +129,26 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 225px;
+    height: 246px;
+  }
+
+  swiper-container {
+    height: 244px;
   }
 }
 
 @media screen and (max-width:768px) {
   .certtext {
     font-size: 20px;
-    padding-top: 258px;
+    padding-top: 271px;
   }
 
   .cert {
     height: 184px;
+  }
+
+  swiper-container {
+    height: 216px;
   }
 }
 
@@ -159,12 +168,13 @@ swiper-container {
     padding: 0 14px;
   }
 
+  
   swiper-container {
-    --swiper-theme-color: grey !important;
+    --swiper-theme-color: grey !important;    
+    height: 216px;           
   }
 }
-
-@media screen and (max-width:410px) {
+@media screen and (max-width:466px) {
   .cert {
     height: 164px;
   }
@@ -174,16 +184,19 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 166px;
+    height: 222px;
     padding-left: 0;
     text-align: center;
   }
 
+  swiper-slide {
+    width: 186px;
+  }
   swiper-container {
     padding-left: 10px;
   }
 
-
+ 
   img {
     width: 116px;
   }
