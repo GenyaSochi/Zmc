@@ -38,6 +38,7 @@ const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
   slidesPerView: 6,
+  pagination: true,
   watchSlidesProgress: true,
   breakpoints: {
     1366: {
@@ -52,7 +53,10 @@ const swiper = useSwiper(swiperCont, {
     576: {
       slidesPerView: 3
     },
-    460: {
+    420: {
+       slidesPerView: 3
+    },
+    320: {
       slidesPerView: 2
     }
   }
@@ -61,9 +65,15 @@ const swiper = useSwiper(swiperCont, {
 </script>
 
 <style scoped>
+swiper-container {
+  overflow: hidden;
+  height: 340px;
+}
+
 .photocontainer {
-  padding: 30px 56px 60px 118px;
+  text-align: center;
   cursor: pointer;
+  padding: 0 0 30px 0;
 }
 
 .imgphoto {
@@ -71,18 +81,20 @@ const swiper = useSwiper(swiperCont, {
 }
 
 @media screen and (max-width:1366px) {
-  .photocontainer {
-    padding: 22px 22px 60px 88px;
-  }
+
 
   .imgphoto {
     height: 264px;
   }
+
+  swiper-container {
+    height: 305px;
+  }
 }
 
 @media screen and (max-width:992px) {
-  .photocontainer {
-    padding: 0px 22px 30px 50px;
+  swiper-container {
+    height: 248px;
   }
 
   .imgphoto {
@@ -95,8 +107,11 @@ const swiper = useSwiper(swiperCont, {
     height: 180px;
   }
 
+  swiper-container {
+    height: 216px;
+  }
   .photocontainer {
-    padding: 0px 22px 10px 65px;
+    padding: 0 0 20px 0;
   }
 }
 
@@ -105,9 +120,7 @@ const swiper = useSwiper(swiperCont, {
     height: 196px;
   }
 
-  .photocontainer {
-    padding: 0 10px 10px 26px;
-  }
+
 
   swiper-container {
     --swiper-theme-color: grey !important;
@@ -120,13 +133,9 @@ const swiper = useSwiper(swiperCont, {
     width: 130px;
   }
 
-  .photocontainer {
-    text-align: center;
-    padding: 0 10px 10px 10px;
-  }
+
   swiper-slide {
     width: 146px;
   }
 }
-
 </style>

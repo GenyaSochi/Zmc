@@ -33,6 +33,9 @@ const swiper = useSwiper(swiperCont, {
     576: {
       slidesPerView: 3
     },
+     420: {
+       slidesPerView: 3
+    },
     320: {
       slidesPerView: 2
     }
@@ -59,7 +62,7 @@ swiper-container {
 }
 
 .certcontainer {
-  padding-left: 60px;
+  text-align: center;
   height: 368px;
 }
 
@@ -109,7 +112,6 @@ swiper-container {
 
   .certcontainer {
     height: 308px;
-    padding-left: 32px;
   }
 
   swiper-container {
@@ -129,7 +131,7 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 246px;
+    height: 226px;
   }
 
   swiper-container {
@@ -159,24 +161,25 @@ swiper-container {
   }
 
   .cert {
-    height: 190px;
+    height: 184px;
   }
 
   .certcontainer {
     display: flex;
-    height: 202px;
-    padding: 0 14px;
+    height: 212px;
   }
 
-  
+
   swiper-container {
-    --swiper-theme-color: grey !important;    
-    height: 216px;           
+    --swiper-theme-color: grey !important;
+    height: 216px;
   }
 }
+
 @media screen and (max-width:466px) {
+
   .cert {
-    height: 164px;
+    height: 184px;
   }
 
   .certtext {
@@ -184,21 +187,20 @@ swiper-container {
   }
 
   .certcontainer {
-    height: 222px;
     padding-left: 0;
     text-align: center;
   }
 
-  swiper-slide {
+  /* swiper-slide {
     width: 186px;
   }
+
   swiper-container {
     padding-left: 10px;
   }
 
- 
   img {
     width: 116px;
-  }
+  } */
 }
 </style>
