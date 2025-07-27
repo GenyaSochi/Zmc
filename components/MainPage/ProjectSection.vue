@@ -18,8 +18,7 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a class="butproj"
-            href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ">Смотреть</a><img
+        <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural" class="butproj">Смотреть</a><img
             src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
