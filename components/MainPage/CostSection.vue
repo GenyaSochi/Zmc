@@ -9,6 +9,7 @@
           <input class="inputcost" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">
           <input type="file" id="file" name="file" @change="handleFiles" required accept=".xls, .doc, .docx, .pdf, .odt"
             class="custom-file-input">
+          <p v-if="file">{{ file.name }}</p>
           <button class="butcost" type="submit" @click="sendData">Отправить заявку</button>
           <p v-if="message">{{ message }}</p>
         </div>
@@ -63,6 +64,7 @@ const sendData = async () => {
     message.value = ''
     name.value = ''
     phone.value = ''
+    file.value = null
     if (target.value) target.value.value = ''
   }, 4000)
 }
@@ -250,6 +252,8 @@ const cards = [
 
 .inputcost {
   background-color: white;
+  color: #0056b3;
+  font-weight: 500;
   text-align: start;
   width: 216px;
   height: 48px;
