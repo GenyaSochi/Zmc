@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <p>LK</p>
+</template>
 <script setup lang="ts">
 import {ref} from 'vue'
 // import {users} from 'vue'
