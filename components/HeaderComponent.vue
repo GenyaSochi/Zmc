@@ -1,6 +1,6 @@
 <template>
   <header class="navtag">
-    <div class="nav_all">
+    <nav class="nav_all">
       <NuxtLink to="/"><img src="/img/sitelogo1.webp" alt="logo" class="logo"></NuxtLink>
       <div class="link">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
@@ -17,7 +17,7 @@
         <NuxtLink to="/#cost" class="buttel">sales@zmkural.com</NuxtLink>
       </div>
       <!-- <button class="butnav" @click="popup = true">Заказать звонок</button> -->
-    </div>
+    </nav>
     <button class="burger" @click="toggleMenu">
       <span></span>
       <span></span>

@@ -66,7 +66,7 @@ const sendData = async () => {
     phone.value = ''
     file.value = null
     if (target.value) target.value.value = ''
-  }, 4000)
+  }, 10000)
 }
 
 
@@ -322,7 +322,7 @@ const cards = [
 
 @media screen and (max-width:1366px) {
   .formcost {
-    height: 398px;
+    height: 435px;
     border-radius: 10px;
   }
 
@@ -391,7 +391,7 @@ const cards = [
   .formcost {
     margin-left: 0;
     padding-bottom: 0;
-    height: 362px;
+    height: 402px;
   }
 
   .butinfo {
@@ -436,12 +436,12 @@ const cards = [
   .grid {
     display: flex;
     flex-direction: column-reverse;
-    height: 350px;
+    height: 406px;
     padding: 0 0px 10px 0px;
   }
 
   .formcost {
-    height: 298px;
+    height: 345px;
     border-radius: 0;
   }
 
@@ -550,12 +550,6 @@ const cards = [
     .perscost {
       padding-bottom: 0;
     }
-  }
-}
-
-@media screen and (max-width:320px) {
-  .formcost {
-    height: 374px;
   }
 }
 </style>

@@ -29,7 +29,7 @@ if (data.value?.html) {
 const popup = ref(false)
 </script>
 
-<style>
+<style scoped>
 .catalogall {
 	padding: 0 40px 0 40px;
 }
