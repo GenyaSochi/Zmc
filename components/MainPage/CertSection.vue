@@ -5,7 +5,7 @@
       <swiper-container class="certswiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
-            <NuxtImg fit="cover" class="cert" :src="el.img" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" class="cert" sizes="200px sm:120px md:180px"  loading="lazy" :src="el.img" :alt="el.title"></NuxtImg>
           </a>
         </swiper-slide>
       </swiper-container>
