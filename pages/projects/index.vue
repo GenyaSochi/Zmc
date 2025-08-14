@@ -1,5 +1,4 @@
 <template>
-
   <h1 class="h1">Проекты компании</h1>
   <div class="o">
     <div class="view" v-for="project of data" :key="project.name">
@@ -15,6 +14,7 @@
         <p class="text">{{ project.year }}</p>
         <p class="heading">Конечный потребитель</p>
         <p class="text">{{ project.enduser }}</p>
+      <p>{{ project.description }}</p>
         <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
       </div>
     </div>
@@ -24,7 +24,6 @@
 
 <script setup lang="ts">
 
-// const projectsStore = useProjects()
 const { data } = await useFetch('/api/projects/project')
 
 

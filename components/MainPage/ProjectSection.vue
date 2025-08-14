@@ -18,8 +18,8 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural" class="butproj">Смотреть</a><img
-            src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div>
+        <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
+            class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div>
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
             соответствием техническим
@@ -108,7 +108,7 @@ const swiper = useSwiper(swiperCont, {
   font-weight: bold;
   font-style: oblique;
   top: 170px;
-  left: 66px;
+  left: 164px;
   font-family: 'Montserrat', light;
 }
 
@@ -117,7 +117,7 @@ const swiper = useSwiper(swiperCont, {
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 66px;
+  left: 164px;
   bottom: 239px;
   font-weight: bold;
   font-style: oblique;
@@ -129,7 +129,7 @@ const swiper = useSwiper(swiperCont, {
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 66px;
+  left: 164px;
   bottom: 194px;
   font-weight: bold;
   font-style: oblique;
@@ -239,6 +239,11 @@ const swiper = useSwiper(swiperCont, {
 
 swiper-container {
   --swiper-theme-color: grey !important;
+}
+@media screen and (max-width:1700px) {
+  .quant, .title, .title1 {
+    left: 106px;
+  }
 }
 
 @media screen and (max-width:1600px) {
@@ -681,9 +686,10 @@ swiper-container {
       left: 50px;
     }
   }
-   @media screen and (max-width:396px) {
+
+  @media screen and (max-width:396px) {
     .quant {
-      left: 26px;      
+      left: 26px;
     }
 
     .title {

@@ -4,7 +4,7 @@ import prisma from "~/lib/prisma"
 export default defineEventHandler(async (event) => {
 
   const projects = [
-    { id: 1, name: 'Опоры трубопроводов', project: 'Опоры трубопроводов', quantity: '850 тонн', year: 2022, enduser: ' Иркутский завод полимеров', img: '/img/izp.webp' },
+    { id: 1, name: 'Опоры трубопроводов ИЗП', project: 'Опоры трубопроводов', quantity: '850 тонн', year: 2022, enduser: ' Иркутский завод полимеров', description:'ЗМК «Урал» участвует в строительстве первого в Восточной Сибири завода по производству полимеров из этана — Иркутского завода полимеров (ИЗП). Компания отвечает за изготовление и поставку опор трубопроводов. Проект реализуется с участием японской инжиниринговой компании Toyo Engineering Corporation, которая выполняет проектирование и обеспечивает поставки оборудования и материалов. На строительной площадке ИЗП будет установлено более 1,1 тыс. единиц оборудования от ведущих мировых производителей из Японии, Южной Кореи, Китая и России.', img: '/img/izp.webp' },
     { id: 2, name: 'Опоры по чертежам заказчика', project: 'Опоры газохода', quantity: '7 тонн', year: 2022, enduser: 'ООО "ОЗНО"', img: '/img/opt1.webp' },
     { id: 3, name: 'Опоры разгрузочные', project: 'Опора ОР по ТУ 25.11.23-011-73847543-2020', quantity: 'Три образца', year: 2021, enduser: 'ПАО Газпром', img: '/img/opt2.webp' },
     { id: 4, name: 'Тестовые образцы для ПАО Газпром', project: 'Опоры ОСП 1420', quantity: '2 тонны', year: 2021, enduser: 'ПАО Газпром', img: '/img/opt3.webp' },
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
   ]
 
 
-  const project = projects.map(el => ({ id: el.id, name: el.name, project: el.project, quantity: el.quantity, year: el.year, enduser: el.enduser, img: el.img, }))
+  const project = projects.map(el => ({ id: el.id, name: el.name, project: el.project, quantity: el.quantity, year: el.year, enduser: el.enduser, description: el.description, img: el.img, }))
 
   const data = await prisma.project.createMany({
     data: projects

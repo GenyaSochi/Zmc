@@ -47,10 +47,11 @@ model product {
 
 model project {
   id        Int   @id @default(autoincrement())
-  name      String
-  project   String
-  quantity  String
-  year      Int
-  enduser   String
-  img       String
+  name        String
+  project     String
+  quantity    String
+  year        Int
+  enduser     String
+  description String?
+  img         String
 }
