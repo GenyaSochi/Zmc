@@ -10,29 +10,29 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model user {
+model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
   pass  String  
 }
 
-model type {
+model Type {
   id        Int   @id @default(autoincrement())
   name      String
-  outs      out[]
-  products  product[]
+  outs      Out[]
+  products  Product[]
 }
 
-model out {
+model Out {
   id        Int   @id @default(autoincrement())
   name      String
   type_id   Int
-  type      type  @relation(fields: [type_id], references: [id])
-  products  product[]
+  type      Type  @relation(fields: [type_id], references: [id])
+  products  Product[]
 }
 
-model product {
+model Product {
   id        Int     @id @default(autoincrement())
   name      String
   title     String  @unique
@@ -41,11 +41,11 @@ model product {
   html      String 
   type_id   Int
   out_id    Int?
-  type      type    @relation(fields: [type_id], references: [id])
-  out       out?    @relation(fields: [out_id], references: [id])
+  type      Type    @relation(fields: [type_id], references: [id])
+  out       Out?    @relation(fields: [out_id], references: [id])
 }
 
-model project {
+model Project {
   id        Int   @id @default(autoincrement())
   name        String
   project     String

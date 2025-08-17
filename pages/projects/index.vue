@@ -7,15 +7,15 @@
       </h2>
       <div class="projectinfo">
         <p class="heading">Вид продукции</p>
-        <p class="hie">{{ project.project }}</p>
+        <p class="hie">{{ project.projectName }}</p>
         <p class="heading">Объем</p>
         <p class="text">{{ project.quantity }}</p>
         <p class="heading">Год</p>
         <p class="text">{{ project.year }}</p>
         <p class="heading">Конечный потребитель</p>
-        <p class="text">{{ project.enduser }}</p>
+        <p class="text">{{ project.endUser }}</p>
       <p>{{ project.description }}</p>
-        <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
+        <NuxtImg :src="project.img" :alt="project.projectName" sizes="520px" class="imgstile"></NuxtImg>
       </div>
     </div>
   </div>

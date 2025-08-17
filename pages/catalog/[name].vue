@@ -18,10 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import type { product } from '@prisma/client';
+import type { Product, User } from '@prisma/client';
 const route = useRoute()
 
-const { data } = await useFetch<product | null>(`/api/products/${route.params.name}`)
+const { data } = await useFetch<Product | null>(`/api/products/${route.params.name}`)
 if (data.value?.html) {
 	data.value.html = data.value?.html.split('<table').join('<div class="tablescroll"><table')
 	data.value.html = data.value?.html.split('</table>').join('</table></div>')
