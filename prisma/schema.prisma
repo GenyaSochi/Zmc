@@ -10,43 +10,43 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  pass  String  
+model user {
+  id          Int     @id @default(autoincrement())
+  email       String  @unique
+  name        String?
+  pass        String  
 }
 
-model Type {
-  id        Int   @id @default(autoincrement())
-  name      String
-  outs      Out[]
-  products  Product[]
+model type {
+  id          Int   @id @default(autoincrement())
+  name        String
+  outs        out[]
+  products    product[]
 }
 
-model Out {
-  id        Int   @id @default(autoincrement())
-  name      String
-  type_id   Int
-  type      Type  @relation(fields: [type_id], references: [id])
-  products  Product[]
+model out {
+  id          Int   @id @default(autoincrement())
+  name        String
+  type_id     Int
+  type        type  @relation(fields: [type_id], references: [id])
+  products    product[]
 }
 
-model Product {
-  id        Int     @id @default(autoincrement())
-  name      String
-  title     String  @unique
-  title_en  String  @unique
-  img       String
-  html      String 
-  type_id   Int
-  out_id    Int?
-  type      Type    @relation(fields: [type_id], references: [id])
-  out       Out?    @relation(fields: [out_id], references: [id])
+model product {
+  id          Int     @id @default(autoincrement())
+  name        String
+  title       String  @unique
+  title_en    String  @unique
+  img         String
+  html        String 
+  type_id     Int
+  out_id      Int?
+  type        type    @relation(fields: [type_id], references: [id])
+  out         out?    @relation(fields: [out_id], references: [id])
 }
 
-model Project {
-  id        Int   @id @default(autoincrement())
+model project {
+  id          Int   @id @default(autoincrement())
   name        String
   project     String
   quantity    String
