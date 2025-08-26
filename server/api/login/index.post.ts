@@ -1,33 +1,31 @@
 import prisma from "~/lib/prisma"
-import * as bcrypt from 'bcrypt'
 
 export default defineEventHandler(async (event) => {
   try {
     const data = await readBody(event)
     
-    if (!data.login || !data.pass) {
-      setResponseStatus(event, 400)
-      return { error: 'Login and password required' }
+    if (!data.email || !data.pass) {
+      return { ok:false, user:null, massage: 'Email and password required' }
+      // setResponseStatus(event, 400)
+      // return { error: 'Login and password required' }
     }
 
     // Ищем пользователя по login
     const user = await prisma.user.findUnique({
-      where: { login: data.login }
+      where: { email: data.email }
     })
 
     // Проверяем пароль через bcrypt
-    if (user && await bcrypt.compare(data.pass, user.pass)) {
+    if (user && data.pass==user.pass) {
       // Возвращаем данные без пароля
       const { pass, ...safeUser } = user
-      return safeUser
+      return { ok:true, user:safeUser }
     }
 
-    setResponseStatus(event, 401)
-    return { error: 'Invalid credentials' }
+    return { ok:false, user:null, massage: 'Invalid credentials' }
 
   } catch (error) {
     console.error('Login error:', error)
-    setResponseStatus(event, 500)
-    return { error: 'Server error' }
+    return { ok:false, user:null, error: 'Server error' }
   }
 })
