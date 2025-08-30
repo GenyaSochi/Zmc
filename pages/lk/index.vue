@@ -1,16 +1,20 @@
 <template>
+
   <div class="lk">
-    <p>LK</p>
-    <input type="введите логин" class="llk">
-    <input type="введите пароль" class="llk" v-model="pass">
+    <p>Личный кабинет</p>
+    <input type="text" class="llk" required placeholder="введите логин">
+    <input type="text" class="llk" v-model="pass" required placeholder="введите пароль">
     {{ md5(pass) }}
   </div>
+
 </template>
 
 
 <script setup lang="ts">
 import md5 from 'md5'
 const pass = ref('')
+
+
 // import type { project, product, user } from '@prisma/client';
 
 // const route = useRoute()
@@ -45,14 +49,19 @@ const pass = ref('')
 </script>
 
 <style scoped>
-.lk{
- height: 400px;
+.lk {
+  height: 100%;
+
 }
 
 .llk {
   color: black;
   height: 60px;
-  background-color: blue;
+  background-color: white;
+  border: 2px solid black;
   margin: 20px;
 }
+
+
+
 </style>
