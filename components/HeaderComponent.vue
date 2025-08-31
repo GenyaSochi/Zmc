@@ -31,9 +31,6 @@
         <NuxtLink to="/contacts">Контакты</NuxtLink>
         <NuxtLink to="/#cost">Рассчитать стоимость</NuxtLink>
         <button @click="popup = true" class="butnav">Заказать звонок</button>
-        <NuxtLink to="/lk">личный кабинет</NuxtLink>
-        <NuxtLink to="/products">продукт</NuxtLink>
-        <NuxtLink to="/projects">проект</NuxtLink>
       </div>
     </Teleport>
   </header>

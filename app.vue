@@ -1,8 +1,7 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-  <NuxtPage />
-  <FooterComponent></FooterComponent>
-  <UpButtonComponent></UpButtonComponent>  
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>  
 </template>
 
 <script setup lang="ts">

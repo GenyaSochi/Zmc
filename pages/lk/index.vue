@@ -1,19 +1,35 @@
 <template>
-
-  <div class="lk">
-    <p>Личный кабинет</p>
-    <input type="text" class="llk" required placeholder="введите логин">
-    <input type="text" class="llk" v-model="pass" required placeholder="введите пароль">
-    {{ md5(pass) }}
-  </div>
-
+  <form @submit.prevent="logIn" class="lk">
+    <div v-if="!userStore.user">
+      <p class="entrance">Вход для сотрудников</p>
+      <label for="login" class="entrance">Введите логин:</label>
+      <input type="text" class="llk" v-model="email" required placeholder="логин">
+      <label for="login" class="entrance">Введите пароль:</label>
+      <input type="text" class="llk" v-model="pass" required placeholder="пароль">
+      <button type="submit" class="btn">войти</button>
+    </div>
+    <div v-else>
+      <NuxtLink to="/lk">личный кабинет</NuxtLink><br>
+      <NuxtLink to="/lk/products">продукт</NuxtLink><br>
+      <NuxtLink to="/lk/projects">проект</NuxtLink>
+    </div>
+  </form>
 </template>
 
 
 <script setup lang="ts">
 import md5 from 'md5'
 const pass = ref('')
+const email = ref('')
+const userStore = useUser()
 
+definePageMeta({
+  layout: 'admin'
+})
+
+const logIn = async()=>{
+  userStore.logIn(email.value,md5(pass.value))
+}
 
 // import type { project, product, user } from '@prisma/client';
 
@@ -50,8 +66,10 @@ const pass = ref('')
 
 <style scoped>
 .lk {
-  height: 100%;
-
+  height: 600px;
+  width: 400px;
+  padding: 20px;
+  
 }
 
 .llk {
@@ -59,9 +77,17 @@ const pass = ref('')
   height: 60px;
   background-color: white;
   border: 2px solid black;
-  margin: 20px;
+  margin: 10px;
+  padding: 10px;
 }
 
+.btn {
+  border: 2px solid black;
+  padding: 14px;
+  margin: 10px;
+}
 
-
+.entrance {
+  margin: 10px;
+}
 </style>
