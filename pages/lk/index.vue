@@ -6,7 +6,7 @@
       <input type="text" class="llk" v-model="email" required placeholder="логин">
       <label for="login" class="entrance">Введите пароль:</label>
       <input type="text" class="llk" v-model="pass" required placeholder="пароль">
-      <button type="submit" class="btn">войти</button>
+      <button @click="userStore.logOut" type="submit" class="btn">войти</button>
     </div>
     <div v-else>
       <NuxtLink to="/lk">личный кабинет</NuxtLink><br>

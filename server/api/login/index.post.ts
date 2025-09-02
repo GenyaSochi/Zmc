@@ -5,10 +5,7 @@ export default defineEventHandler(async (event) => {
     const data = await readBody(event)
     
     if (!data.email || !data.pass) {
-      return null
-      // return { ok:false, user:null, massage: 'Email and password required' }
-      // setResponseStatus(event, 400)
-      // return { error: 'Login and password required' }
+      return null    
     }
 
     // Ищем пользователя по login
@@ -16,20 +13,16 @@ export default defineEventHandler(async (event) => {
       where: { email: data.email }
     })
 
-    // Проверяем пароль через bcrypt
+   
     if (user && data.pass==user.pass) {
       // Возвращаем данные без пароля
-      const { pass, ...safeUser } = user
-      // return { ok:true, user:safeUser }
+      const { pass, ...safeUser } = user      
       return safeUser
-    }
-
-    // return { ok:false, user:null, massage: 'Invalid credentials' }
+    }  
     return null
 
   } catch (error) {
     console.error('Login error:', error)
     return null
-    // return { ok:false, user:null, error: 'Server error' }
   }
 })
