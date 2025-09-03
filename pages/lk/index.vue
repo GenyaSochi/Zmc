@@ -27,6 +27,9 @@ definePageMeta({
   layout: 'admin'
 })
 
+// definePageMeta({
+//   middleware: 'adm'
+// })
 const logIn = async()=>{
   userStore.logIn(email.value,md5(pass.value))
 }
