@@ -24,12 +24,10 @@ const email = ref('')
 const userStore = useUser()
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: 'adm'
 })
 
-// definePageMeta({
-//   middleware: 'adm'
-// })
 const logIn = async()=>{
   userStore.logIn(email.value,md5(pass.value))
 }

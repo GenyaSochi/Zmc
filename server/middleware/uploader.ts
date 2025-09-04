@@ -29,8 +29,7 @@ const useFiles = async (event: any) => {
             file.on('data', (chunk:any) => {
                 data.push(chunk)
               })
-              .on('close', async () => {
-                // merge data chunks with buffer and attach them to body
+              .on('close', async () => {          
                 fileAsBuffer = Buffer.concat(data)
                 fs.createWriteStream(saveTo).write(fileAsBuffer)                
               })
@@ -46,9 +45,7 @@ const useFiles = async (event: any) => {
         } else {
             const newFileName = Date.now() + info.filename + '.webp'
             console.log(path.join(process.cwd(), '../public/img'))
-            const saveTo = path.join(process.cwd(), '../public/img', `${newFileName}`)
-            // console.log('saveTo', saveTo)
-            // file.pipe(fs.createWriteStream(saveTo))
+            const saveTo = path.join(process.cwd(), '../public/img', `${newFileName}`)   
             
             const data = [] as any
             let fileAsBuffer
@@ -56,8 +53,7 @@ const useFiles = async (event: any) => {
             file.on('data', (chunk:any) => {
               data.push(chunk)
             })
-            .on('close', async () => {
-              // merge data chunks with buffer and attach them to body
+            .on('close', async () => {    
               fileAsBuffer = Buffer.concat(data)
               
               await sharp(fileAsBuffer)
@@ -80,8 +76,7 @@ const useFiles = async (event: any) => {
       })
       busboy.on('finish', () => {
         event.context.files = files
-        event.context.fields = fields
-        // resolve({ files, fields })
+        event.context.fields = fields      
         resolve({})
       })
       req.pipe(busboy)
