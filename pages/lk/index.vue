@@ -25,7 +25,7 @@ const userStore = useUser()
 
 definePageMeta({
   layout: 'admin',
-  middleware: 'adm'
+  // middleware: 'adm'//ошибка использования
 })
 
 const logIn = async()=>{

@@ -7,7 +7,6 @@
       <p v-if="error">{{ error }}</p>
       <input type="submit" @click="type = 'login'" value="Login">
       <input type="submit" @click="type = 'reg'" value="Register">
-
     </form>
   </div>
 </template>
@@ -33,6 +32,5 @@ const logIn = async () => {
   } else {
     error.value = 'не введён логин либо пароль'
   }
-
 }
 </script>
