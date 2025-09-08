@@ -21,13 +21,13 @@ export const useUser = defineStore('useUser', () => {
   }
   const logIn = async (email: string, pass: string) => {
     //console.log(email, pass)
-    user.value = await $fetch<User |undefined>('/api/login', {
+    user.value = await $fetch<User | undefined>('/api/login', {
       method: 'POST',
       body: { email, pass }
     })
     // console.log(user.value)
     if (user.value) {
-      const userToLocal = {...user.value}
+      const userToLocal = { ...user.value }
       // @ts-ignore
       localStorage.user = JSON.stringify(userToLocal)
       return ''
@@ -35,29 +35,26 @@ export const useUser = defineStore('useUser', () => {
       return 'Проверьте логин либо пароль'
     }
   }
-const regIn = async (email: string, pass: string) => {
-      user.value = await $fetch<User |undefined>('/api/regin', {
+
+  const regIn = async (email: string, pass: string) => {
+    user.value = await $fetch<User | undefined>('/api/regin', {
       method: 'POST',
       body: { email, pass }
     })
-    // console.log(user.value)
     if (user.value) {
-      const userToLocal = {...user.value}
-      // @ts-ignore
-      localStorage.user = JSON.stringify(userToLocal)
+      localStorage.user = JSON.stringify(user.value)
       return ''
     } else {
       return 'Проверьте логин либо пароль'
-    }
-
-}
+    }      
+  } 
 
   const autoLogin = async () => {
     if (localStorage.user) {
       const tempUser = JSON.parse(localStorage.user)
       const data = await $fetch<regData>('/api/autologin', {
         method: 'POST',
-        body: { ...tempUser }//если в локалсторадж есть юзер, мы его достаем и проверяем
+        body: { ...tempUser }//если в локалсторо  ж есть юзер, мы его достаем и проверяем
       })
       if (data.ok) {
         user.value = data.user

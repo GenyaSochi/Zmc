@@ -1,7 +1,7 @@
 import { useUser } from "~/stores/useUser";
 const userStore = useUser()//берем юзера из юзерстора
 
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware((to, from) => {//промежуточная функция, которая срабатывает при каждом перемещении между страницами
   if (!userStore.user && to.path.includes('/lk')){
     return navigateTo('/login')//если нет юзера и путь, куда он собирается перейти, содержит лк, тогда мы его отправляем на логин
   }

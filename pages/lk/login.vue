@@ -5,8 +5,8 @@
       <input type="text" placeholder="пароль">
       {{ md5(pass) }}
       <p v-if="error">{{ error }}</p>
-      <input type="submit" @click="type = 'login'" value="Login">
-      <input type="submit" @click="type = 'reg'" value="Register">
+      <input type="submit" @click="type= 'login'" value="Login">
+      <input type="submit" @click="type= 'reg'" value="Registration">
     </form>
   </div>
 </template>
