@@ -2,11 +2,12 @@
   <form @submit.prevent="logIn" class="lk">
     <div v-if="!userStore.user">
       <p class="entrance">Вход для сотрудников</p>
-      <label for="login" class="entrance">Введите логин:</label>
+      <label for="login" class="text">Введите логин:</label>
       <input type="text" class="llk" v-model="email" required placeholder="логин">
-      <label for="login" class="entrance">Введите пароль:</label>
+      <label for="login" class="text">Введите пароль:</label>
       <input type="text" class="llk" v-model="pass" required placeholder="пароль">
       <button @click="userStore.logOut" type="submit" class="btn">войти</button>
+      <button @click="userStore.logOut" type="submit" class="btn">зарегистрироваться</button>
     </div>
     <div v-else>
       <NuxtLink to="/lk">личный кабинет</NuxtLink><br>
@@ -28,10 +29,12 @@ definePageMeta({
   // middleware: 'adm'//ошибка использования
 })
 
-const logIn = async()=>{
-  userStore.logIn(email.value,md5(pass.value))
+const logIn = async () => {
+  userStore.logIn(email.value, md5(pass.value))
 }
-
+const regIn = async () => {
+  userStore.regIn(email.value, md5(pass.value))
+}
 // import type { project, product, user } from '@prisma/client';
 
 // const route = useRoute()
@@ -67,28 +70,41 @@ const logIn = async()=>{
 
 <style scoped>
 .lk {
-  height: 600px;
-  width: 400px;
+  height: 100%;
+  max-width: 340px;
   padding: 20px;
-  
+  border: 2px solid grey;
+  border-radius: 10px;
+  margin: 20px 0 0 20px;
 }
 
 .llk {
   color: black;
   height: 60px;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid grey;
   margin: 10px;
   padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .btn {
-  border: 2px solid black;
+  border: 2px solid grey;
   padding: 14px;
   margin: 10px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .entrance {
-  margin: 10px;
+  font-size: 23px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.text {
+ font-size: 20px;
+  text-align: center;
+  padding: 0 0 10px 10px;
 }
 </style>

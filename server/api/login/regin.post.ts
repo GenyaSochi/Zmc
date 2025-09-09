@@ -3,7 +3,7 @@ import prisma from "~/lib/prisma";
 export default defineEventHandler(async (event)=>{
   const data = await readBody(event)
   if (data.email && data.pass) {
-    const user = await prisma.user.findUnique({
+    const newUser = await prisma.user.findUnique({
       select:{
         id:true,
       },
@@ -11,6 +11,16 @@ export default defineEventHandler(async (event)=>{
         email: data.email
       }
     })
-    return
+    if(newUser){
+      return{ok: false, user:null, massage:'not unique'}
+    }
+       const user = await prisma.user.create({
+        data
+    })
+    return {ok: true, user , massage:''}
+  }else {
+    return {
+      error: 'not found'
+    }
   }
 })

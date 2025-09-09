@@ -37,16 +37,16 @@ export const useUser = defineStore('useUser', () => {
   }
 
   const regIn = async (email: string, pass: string) => {
-    user.value = await $fetch<User | undefined>('/api/regin', {
+    const data = await $fetch<regData>('/api/regin', {
       method: 'POST',
       body: { email, pass }
     })
-    if (user.value) {
-      localStorage.user = JSON.stringify(user.value)
+    if (data.ok) {
+      localStorage.user = JSON.stringify(data.user)
       return ''
     } else {
-      return 'Проверьте логин либо пароль'
-    }      
+      return data?.massage
+    }         
   } 
 
   const autoLogin = async () => {
@@ -54,7 +54,7 @@ export const useUser = defineStore('useUser', () => {
       const tempUser = JSON.parse(localStorage.user)
       const data = await $fetch<regData>('/api/autologin', {
         method: 'POST',
-        body: { ...tempUser }//если в локалсторо  ж есть юзер, мы его достаем и проверяем
+        body: { ...tempUser }//если в локалсторадж  уже есть юзер, мы его достаем и проверяем
       })
       if (data.ok) {
         user.value = data.user
