@@ -15,7 +15,13 @@ export default defineEventHandler(async (event)=>{
       return{ok: false, user:null, massage:'not unique'}
     }
        const user = await prisma.user.create({
-        data
+        data,
+        select: {
+          id: true,
+          email: true,
+          // pass: true,
+          token: true,
+        }
     })
     return {ok: true, user , massage:''}
   }else {

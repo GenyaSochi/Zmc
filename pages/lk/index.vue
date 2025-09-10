@@ -3,7 +3,7 @@
     <div v-if="!userStore.user">
       <p class="entrance">Вход для сотрудников</p>
       <label for="login" class="text">Введите логин:</label>
-      <input type="text" class="llk" v-model="email" required placeholder="логин">
+      <input type="text" class="llk" v-model="email" required placeholder="электронная почта">
       <label for="login" class="text">Введите пароль:</label>
       <input type="text" class="llk" v-model="pass" required placeholder="пароль">
       <button @click="userStore.logOut" type="submit" class="btn">войти</button>
@@ -30,7 +30,7 @@ definePageMeta({
 })
 
 const logIn = async () => {
-  userStore.logIn(email.value, md5(pass.value))
+  userStore.logIn(email.value, md5(pass.value))    
 }
 const regIn = async () => {
   userStore.regIn(email.value, md5(pass.value))

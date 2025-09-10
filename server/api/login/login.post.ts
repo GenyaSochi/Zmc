@@ -7,8 +7,7 @@ export default defineEventHandler(async (event) =>{
       select: {
         id: true,
         email: true,
-        token: true,
-        pass: true,        
+        token: true,            
       },
       where:{
         email: data.email,

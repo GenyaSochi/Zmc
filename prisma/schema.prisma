@@ -14,7 +14,7 @@ model user {
   id          Int     @id @default(autoincrement())
   email       String  @unique
   token       String  @unique @default(uuid())
-  pass        String  
+  pass        String  @default("nopass")
 }
 
 model type {

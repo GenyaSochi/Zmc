@@ -28,8 +28,6 @@ const logIn = async () => {
       error.value = await userStore.logIn(email.value, md5(pass.value))
     } else {
       error.value = await userStore.regIn(email.value, md5(pass.value))
-    }if(!error.value) {
-      navigateTo('/lk')
     }
   } else {
     error.value = 'не введён логин либо пароль'

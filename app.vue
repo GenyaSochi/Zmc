@@ -8,6 +8,7 @@
 import { useUser } from '~~/stores/useUser';
 onMounted(()=>{
   const userStore = useUser()
+  if(import.meta.client)
   userStore.autoLogin()
 })
 </script>

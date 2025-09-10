@@ -17,7 +17,7 @@ export const useUser = defineStore('useUser', () => {
   const logOut = () => {
     user.value = undefined // Сбрасываем состояние пользователя
     delete localStorage.user // Удаляем пользователя из localStorage
-    // navigateTo('/lk') // Перенаправляем на страницу входа
+    navigateTo('/lk') // Перенаправляем на страницу входа
   }
   const logIn = async (email: string, pass: string) => {
     //console.log(email, pass)
@@ -42,6 +42,7 @@ export const useUser = defineStore('useUser', () => {
       body: { email, pass }
     })
     if (data.ok) {
+      user.value = data.user
       localStorage.user = JSON.stringify(data.user)
       return ''
     } else {
@@ -55,7 +56,8 @@ export const useUser = defineStore('useUser', () => {
       const data = await $fetch<regData>('/api/autologin', {
         method: 'POST',
         body: { ...tempUser }//если в локалсторадж  уже есть юзер, мы его достаем и проверяем
-      })
+      }) 
+
       if (data.ok) {
         user.value = data.user
       }
