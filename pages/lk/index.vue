@@ -1,20 +1,22 @@
 <template>
-  <form @submit.prevent="logIn" class="lk">
-    <div v-if="!userStore.user">
+  <form v-if="!userStore.user" @submit.prevent class="lk">
+    <div>
       <p class="entrance">Вход для сотрудников</p>
       <label for="login" class="text">Введите логин:</label>
       <input type="text" class="llk" v-model="email" required placeholder="электронная почта">
       <label for="login" class="text">Введите пароль:</label>
-      <input type="text" class="llk" v-model="pass" required placeholder="пароль">
-      <button @click="userStore.logOut" type="submit" class="btn">войти</button>
-      <button @click="userStore.logOut" type="submit" class="btn">зарегистрироваться</button>
-    </div>
-    <div v-else>
-      <NuxtLink to="/lk">личный кабинет</NuxtLink><br>
-      <NuxtLink to="/lk/products">продукт</NuxtLink><br>
-      <NuxtLink to="/lk/projects">проект</NuxtLink>
+      <input type="password" class="llk" v-model="pass" required placeholder="пароль">
+      <p v-if="message">{{ message }}</p>
+      <button @click="logIn" type="submit" class="btn">войти</button>
+      <button @click="regIn" type="submit" class="btn">зарегистрироваться</button>
     </div>
   </form>
+  <div v-else>
+    <NuxtLink to="/lk/products">продукт</NuxtLink><br>
+    <NuxtLink to="/lk/projects">проект</NuxtLink><br>
+    <NuxtLink v-if="userStore.user.admin" to="/lk/users">пользователи</NuxtLink>
+    <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
+  </div>
 </template>
 
 
@@ -23,17 +25,17 @@ import md5 from 'md5'
 const pass = ref('')
 const email = ref('')
 const userStore = useUser()
+const message = ref('')
 
 definePageMeta({
   layout: 'admin',
-  // middleware: 'adm'//ошибка использования
 })
 
 const logIn = async () => {
-  userStore.logIn(email.value, md5(pass.value))    
+  message.value = await userStore.logIn(email.value, md5(pass.value))    
 }
 const regIn = async () => {
-  userStore.regIn(email.value, md5(pass.value))
+  message.value = await userStore.regIn(email.value, md5(pass.value))
 }
 // import type { project, product, user } from '@prisma/client';
 

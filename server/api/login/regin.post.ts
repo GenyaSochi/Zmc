@@ -19,8 +19,8 @@ export default defineEventHandler(async (event)=>{
         select: {
           id: true,
           email: true,
-          // pass: true,
           token: true,
+          active: true,
         }
     })
     return {ok: true, user , massage:''}

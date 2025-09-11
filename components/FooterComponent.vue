@@ -25,7 +25,7 @@
             target="_blank"><img src="/public/img/R_white.webp" width="30" alt="rutube" class="imgru"></a>
         </div>
         <div style="display: flex; flex-direction: column;">
-          <NuxtLink to="job" class="contact">Вакансии компании</NuxtLink>
+          <NuxtLink to="/job" class="contact">Вакансии компании</NuxtLink>
           <a href="companydetails.pdf" class="contact" target="_blank">Скачать реквизиты компании</a>
         </div>
       </div>
