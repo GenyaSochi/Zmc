@@ -6,10 +6,13 @@
     <NuxtLink to="/lk/projects">проект</NuxtLink><br>
     <NuxtLink v-if="userStore.user?.admin"  to="/lk/users">пользователи</NuxtLink>
   </div>
+  {{ product }}
 </template>
 
 <script setup lang="ts">
+const router = useRoute()
 const userStore = useUser()
+const product = await $fetch('/api/products/'+router.params.id)
 definePageMeta({
   layout: 'admin',
   middleware: 'adm'

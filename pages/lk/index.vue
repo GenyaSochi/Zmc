@@ -26,6 +26,8 @@ const pass = ref('')
 const email = ref('')
 const userStore = useUser()
 const message = ref('')
+// const user = ref({} as {email:string, pass:string, pass2?:string})//нужно ли добавлять юзера для этой страницы?
+// const route = useRoute()
 
 definePageMeta({
   layout: 'admin',
@@ -39,7 +41,6 @@ const regIn = async () => {
 }
 // import type { project, product, user } from '@prisma/client';
 
-// const route = useRoute()
 
 // interface User {
 //   name: string,

@@ -1,3 +1,14 @@
+import prisma from "~/lib/prisma"
+
 export default defineEventHandler(async (event)=>{
-  return {a:1}
+
+  const products = await prisma.product.findMany({
+    select:{
+      id:true,
+      name:true
+    }
+  })
+
+  return products
+
 })
