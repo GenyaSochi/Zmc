@@ -1,9 +1,11 @@
 <template>
-  <h1>Пользователи</h1>
-  <NuxtLink to="/lk">личный кабинет</NuxtLink><br>
-  <NuxtLink to="/lk/products">продукт</NuxtLink><br>
-  <NuxtLink to="/lk/projects">проект</NuxtLink><br>
-  <NuxtLink to="/lk/users">пользователи</NuxtLink>
+  <AccountMenuComponent>
+    <template #top>
+      <h1>Пользователи</h1>
+    </template>
+    <br>
+    <button>add user</button>
+  </AccountMenuComponent>
   {{ users }}
 </template>
 

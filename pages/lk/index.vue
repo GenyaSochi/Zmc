@@ -12,10 +12,13 @@
     </div>
   </form>
   <div v-else>
-    <NuxtLink to="/lk/products">продукт</NuxtLink><br>
-    <NuxtLink to="/lk/projects">проект</NuxtLink><br>
-    <NuxtLink v-if="userStore.user.admin" to="/lk/users">пользователи</NuxtLink>
-    <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
+    <AccountMenuComponent>
+      <template #top>
+        <h1>Personal account</h1>
+      </template>
+      <br>
+      <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
+    </AccountMenuComponent>
   </div>
 </template>
 
