@@ -4,7 +4,7 @@ import sharp from 'sharp'
 import fs from 'fs'
 
 export default defineEventHandler(async (event) => {
-  if (event.method === 'POST') {
+  if (event.method === 'POST' || event.method === 'PUT') {
     const contentType = getRequestHeader(event, "content-type")
     if (contentType?.includes('multipart/form-data;')) await useFiles(event)
   }
@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
 const useFiles = async (event: any) => {
   const { req } = event
-  if (req.method === 'POST') {
+  if (req.method === 'POST'||req.method === 'PUT') {
     return new Promise((resolve) => {
       const files = [] as any
       const fields = {} as any
@@ -20,55 +20,55 @@ const useFiles = async (event: any) => {
       busboy.on('file', (name:string, file:any, info:any) => {
         const { filename, encoding, mimeType } = info
         if (fields.zayavka) {
-            const newFileName = Date.now() + info.filename
-            console.log(`File [${name}]: filename: ${filename}, encoding: ${encoding}, mimeType: ${mimeType}`)
-            const saveTo = path.join(process.cwd(), 'public/files', `${newFileName}`)
-            const data = [] as any
-            let fileAsBuffer
-    
-            file.on('data', (chunk:any) => {
-                data.push(chunk)
-              })
-              .on('close', async () => {          
-                fileAsBuffer = Buffer.concat(data)
-                fs.createWriteStream(saveTo).write(fileAsBuffer)                
-              })
-              .on('end', () => {
-                files.push({
-                  fieldname: name,
-                  filename,
-                  newFileName,
-                  encoding,
-                  mimetype: mimeType,
-                })
-              })           
+          const newFileName = Date.now() + info.filename
+          // console.log(`File [${name}]: filename: ${filename}, encoding: ${encoding}, mimeType: ${mimeType}`)
+          const saveTo = path.join(process.cwd(), 'public/files', `${newFileName}`)
+          const data = [] as any
+          let fileAsBuffer
+  
+          file.on('data', (chunk:any) => {
+            data.push(chunk)
+          })
+          .on('close', async () => {          
+            fileAsBuffer = Buffer.concat(data)
+            fs.createWriteStream(saveTo).write(fileAsBuffer)                
+          })
+          .on('end', () => {
+            files.push({
+              fieldname: name,
+              filename,
+              newFileName,
+              encoding,
+              mimetype: mimeType,
+            })
+          })           
         } else {
-            const newFileName = Date.now() + info.filename + '.webp'
-            console.log(path.join(process.cwd(), '../public/img'))
-            const saveTo = path.join(process.cwd(), '../public/img', `${newFileName}`)   
+          const newFileName = Date.now() + info.filename?.match(/\d?[a-zA-Z.-]?/g)?.join('')?.replace(/\..+$/, '') + '.webp'
+          // console.log(path.join(process.cwd(), 'public/img', newFileName))
+          const saveTo = path.join(process.cwd(), 'public/img', `${newFileName}`)   
+          
+          const data = [] as any
+          let fileAsBuffer
+  
+          file.on('data', (chunk:any) => {
+            data.push(chunk)
+          })
+          .on('close', async () => {    
+            fileAsBuffer = Buffer.concat(data)
             
-            const data = [] as any
-            let fileAsBuffer
-    
-            file.on('data', (chunk:any) => {
-              data.push(chunk)
+            await sharp(fileAsBuffer)
+            .webp({ quality: 80 })
+            .toFile(saveTo)
+          })
+          .on('end', () => {
+            files.push({
+              fieldname: name,
+              filename,
+              newFileName,
+              encoding,
+              mimetype: mimeType,
             })
-            .on('close', async () => {    
-              fileAsBuffer = Buffer.concat(data)
-              
-              await sharp(fileAsBuffer)
-              .webp({ quality: 80 })
-              .toFile(saveTo)
-            })
-            .on('end', () => {
-              files.push({
-                fieldname: name,
-                filename,
-                newFileName,
-                encoding,
-                mimetype: mimeType,
-              })
-            })
+          })
         }
       })
       busboy.on('field', (name:string, value:any, info:any) => {

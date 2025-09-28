@@ -3,14 +3,12 @@ import prisma from "~/lib/prisma"
 export default defineEventHandler(async (event)=>{
   const id = Number(event.context.params?.id)
   try {
-    const product = await prisma.product.findUnique({
+    const project = await prisma.project.findUnique({
       where: {
         id
       }
     })
-    const type = await prisma.type.findMany({})
-    const out = await prisma.out.findMany({})
-    return {product, type, out}
+    return project
   } catch(err){
     return null
   }
