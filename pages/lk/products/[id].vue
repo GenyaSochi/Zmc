@@ -1,9 +1,10 @@
 <template>
   <AccountMenuComponent>
     <template #top>
-      <h1>Продукция</h1>
-    </template>
+      <h1>Personal account</h1>
+    </template>    
   </AccountMenuComponent>
+ 
   <input type="text" v-model="product.name"><br>
   <input type="text" v-model="product.title"><br>
   <select v-model="product.type_id">
@@ -20,7 +21,7 @@
   </div>
 
   <EditorContent v-if="editor" :editor="editor" />
-  <button @click="save">Save</button>
+  <button @click="save" class="button-save">Сохранить изменения</button>
 </template>
 
 <script setup lang="ts">
@@ -100,4 +101,7 @@ const save = ()=>{
   left: 0;
 }
 
+.button-save {
+  border: 2px solid gray;
+}
 </style>

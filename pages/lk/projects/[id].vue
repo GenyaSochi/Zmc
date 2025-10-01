@@ -1,7 +1,7 @@
 <template>
   <AccountMenuComponent>
     <template #top>
-      <h1>Проекты</h1>
+      <h1>Personal account</h1>
     </template>
   </AccountMenuComponent>
   

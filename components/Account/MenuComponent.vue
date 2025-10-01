@@ -4,7 +4,7 @@
     <NuxtLink to="/lk/projects">проект</NuxtLink><br>
     <NuxtLink to="/lk/products">продукт</NuxtLink><br>
     <NuxtLink to="/lk">личный кабинет</NuxtLink><br>
-    <NuxtLink v-if="userStore.user?.admin"  to="/lk/users">пользователи</NuxtLink>
+    <NuxtLink v-if="userStore.user?.admin" to="/lk/users">пользователи</NuxtLink>
     <slot></slot>
   </div>
 </template>

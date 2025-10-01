@@ -4,7 +4,7 @@
       <h1>Пользователи</h1>
     </template>
     <br>
-    <button>add user</button>
+    <button>добавить пользователя</button>
   </AccountMenuComponent>
   {{ users }}
 </template>

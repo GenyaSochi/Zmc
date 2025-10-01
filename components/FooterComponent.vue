@@ -30,10 +30,11 @@
         </div>
       </div>
     </div>
-    <div>
-      <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»<br>Все права защищены
+    <div class="confids">
+      <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»</p>
+      <p class="confid">Все права защищены</p>        
         <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
-      </p>
+     <NuxtLink class="confid" to="/lk">личный кабинет</NuxtLink>
     </div>
   </footer>
   <ModalComponent v-model="popup"></ModalComponent>
@@ -97,9 +98,8 @@ const popup = ref(false)
 }
 
 .confid {
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
-  padding: 10px 0;
 }
 
 .imglogo {
@@ -118,6 +118,11 @@ const popup = ref(false)
 
 .imgru {
   width: 30px;
+}
+
+.confids {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width:1366px) {
