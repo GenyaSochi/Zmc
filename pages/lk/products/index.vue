@@ -4,7 +4,6 @@
       <h1>Продукция</h1>
     </template>
     <br>
-    <button>редактировать</button>
   </AccountMenuComponent>
   <template v-for="product of products" :key="product.id">
     <NuxtLink :to="`/lk/products/${product.id}`">{{product.name}}</NuxtLink><br>
@@ -19,4 +18,6 @@ definePageMeta({
   middleware: 'adm'
 })
 const products = await $fetch('/api/products')
+
+
 </script>

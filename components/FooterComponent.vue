@@ -34,7 +34,7 @@
       <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»</p>
       <p class="confid">Все права защищены</p>        
         <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
-     <NuxtLink class="confid" to="/lk">личный кабинет</NuxtLink>
+     <NuxtLink class="confid" to="/lk">Личный кабинет</NuxtLink>
     </div>
   </footer>
   <ModalComponent v-model="popup"></ModalComponent>

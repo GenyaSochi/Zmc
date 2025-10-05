@@ -20,6 +20,6 @@ const userStore = useUser()
   width: 400px;
   height: 300px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px; 
 }
 </style>

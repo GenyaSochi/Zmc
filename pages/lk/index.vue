@@ -14,7 +14,7 @@
   <div v-else>
     <AccountMenuComponent>
       <template #top>
-        <h1>Personal account</h1>
+        <h1>Персональная страница</h1>
       </template>
       <br>
       <button @click="userStore.logOut" type="submit" class="btn">Выход</button>

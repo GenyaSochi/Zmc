@@ -1,5 +1,4 @@
 import prisma from "~/lib/prisma"
-import translit from "~/lib/translit"
 
 export default defineEventHandler(async (event)=>{
   try {
@@ -12,10 +11,9 @@ export default defineEventHandler(async (event)=>{
       const fdData = Object.fromEntries(fd.entries())
       data = JSON.parse(fdData.data as string)
     }
-    data.title_en = translit(data.title)
     const id = data.id
     delete data.id
-		await prisma.product.update({
+		await prisma.project.update({
 		 	data,
       where: {
         id

@@ -4,7 +4,6 @@
       <h1>Проекты</h1>
     </template>
     <br>
-    <button>редактировать</button>
   </AccountMenuComponent>
   <template v-for="project of projects" :key="project.id">
     <NuxtLink :to="`/lk/projects/${project.id}`">{{project.name}}</NuxtLink><br>

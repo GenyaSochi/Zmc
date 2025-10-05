@@ -8,6 +8,8 @@ export default defineEventHandler(async (event) => {
         id: true,
         email: true,
         token: true,
+        active: true,      
+        admin: true 
       },
       where: {
         email: data.email,

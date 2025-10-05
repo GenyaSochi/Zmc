@@ -44,7 +44,7 @@ const totop = () => {
   cursor: pointer;
   position: fixed;
   bottom: -18px;
-  left: 18px;
+  right: 18px;
   transition: .4s linear;
   opacity: 0;
   z-index: 1;
@@ -68,7 +68,7 @@ const totop = () => {
     width: 70px;
     height: 70px;
     bottom: 20px;
-    left: 17px;
+    right: 17px;
   }
 }
 
@@ -77,7 +77,7 @@ const totop = () => {
     width: 56px;
     height: 56px;
     bottom: 12px;
-    left: 11px;
+    right: 11px;
   }
 }
 </style>
