@@ -17,9 +17,9 @@ const userStore = useUser()
 .proj_all {
   padding: 30px 10px 10px 30px;
   border: 2px solid gray;
-  width: 400px;
+  max-width: 800px;
   height: 300px;
   border-radius: 10px;
-  margin: 20px; 
+  margin: 20px auto; 
 }
 </style>

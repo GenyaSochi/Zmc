@@ -6,20 +6,22 @@
     <br>
   </AccountMenuComponent>
 
-  <div class="user-check">
-      <p>почта</p>
-      <p>активный</p>
-      <p>админ</p>
-      <p></p>
-    </div>
-  <template v-for="user of users" :key="user.id">
+  <div class="editing-projects">
     <div class="user-check">
-      <p>{{ user.email }}</p>
-      <input type="checkbox" v-model="user.active">
-      <input type="checkbox" v-model="user.admin">
-      <button @click="save(user)" class="save-btn">save</button>
-    </div>
-  </template>
+        <p>почта</p>
+        <p>активный</p>
+        <p>админ</p>
+        <p></p>
+      </div>
+    <template v-for="user of users" :key="user.id">
+      <div class="user-check">
+        <p>{{ user.email }}</p>
+        <input type="checkbox" v-model="user.active">
+        <input type="checkbox" v-model="user.admin">
+        <button @click="save(user)" class="save-btn">save</button>
+      </div>
+    </template>
+  </div>
 
 </template>
 

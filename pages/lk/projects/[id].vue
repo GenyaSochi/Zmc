@@ -1,21 +1,21 @@
 <template>
   <AccountMenuComponent>
     <template #top>
-      <h1 class="edit-prod">Редактировать проект</h1>
+      <h1 class="edit-proj">Редактировать проект</h1>
     </template>
-    <button @click="save" class="button-save">сохранить изменения</button>
   </AccountMenuComponent>
-  <div style="display: flex; flex-direction: column; width: 600px;">
-    <input type="text" v-model="project.name"><br>
-    <input type="text" v-model="project.quantity"><br>
-    <input type="text" v-model="project.year"><br>
-    <input type="text" v-model="project.enduser"><br>
-    <input type="text" v-model="project.description"><br>
+  <div class="editing-projects">
+    <input type="text" v-model="project.name" >
     <div style="position: relative;">
       <label class="label" for="fileUpload"></label>
       <input class="fileInput" type="file" id="fileUpload" @change="fileChange" accept="image/*">
       <img :src="previewImage || project.img" />
     </div>
+    <input type="text" v-model="project.quantity">
+    <input type="text" v-model="project.year">
+    <input type="text" v-model="project.enduser">
+    <textarea v-model="project.description"></textarea>
+    <button @click="save" class="button-save">сохранить изменения</button>
   </div>
 </template>
 
@@ -64,11 +64,36 @@ const save = () => {
 </script>
 
 <style>
-.fileInput {
+.editing-projects .fileInput {
   display: none;
 }
 
-.label {
+.editing-projects img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.editing-projects input[type=text] {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+}
+.editing-projects textarea {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+  height: 400px;
+}
+
+.editing-projects .label {
   display: block;
   position: absolute;
   top: 0;
@@ -77,15 +102,22 @@ const save = () => {
   left: 0;
 }
 
-.button-save {
+.editing-projects .button-save {
   border: 2px solid gray;
   padding: 10px;
   border-radius: 5px;
-  margin-top: 40px;
+  margin: 40px 0;
+
 }
 
-.edit-prod {
+.edit-proj {
   padding-bottom: 20px;
   text-align: center;
+}
+
+.editing-projects {  
+  max-width: 800px;
+  padding-left: 16px;
+  margin: 0 auto 30px;
 }
 </style>

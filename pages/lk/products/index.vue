@@ -5,9 +5,11 @@
     </template>
     <br>
   </AccountMenuComponent>
-  <template v-for="product of products" :key="product.id">
-    <NuxtLink :to="`/lk/products/${product.id}`">{{product.name}}</NuxtLink><br>
-  </template>
+  <div class="editing-product">
+    <template v-for="product of products" :key="product.id">
+      <NuxtLink :to="`/lk/products/${product.id}`">{{product.name}}</NuxtLink>
+    </template>
+  </div>
   
 </template>
 
@@ -21,3 +23,12 @@ const products = await $fetch('/api/products')
 
 
 </script>
+
+<style>
+.editing-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+</style>

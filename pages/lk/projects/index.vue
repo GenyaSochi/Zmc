@@ -5,9 +5,11 @@
     </template>
     <br>
   </AccountMenuComponent>
-  <template v-for="project of projects" :key="project.id">
-    <NuxtLink :to="`/lk/projects/${project.id}`">{{project.name}}</NuxtLink><br>
-  </template>
+  <div class="editing-projects">
+    <template v-for="project of projects" :key="project.id">
+      <NuxtLink :to="`/lk/projects/${project.id}`">{{project.name}}</NuxtLink><br>
+    </template>
+  </div>
   
 </template>
 
