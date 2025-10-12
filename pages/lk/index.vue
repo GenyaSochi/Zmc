@@ -42,36 +42,7 @@ const logIn = async () => {
 const regIn = async () => {
   message.value = await userStore.regIn(email.value, md5(pass.value))
 }
-// import type { project, product, user } from '@prisma/client';
 
-
-// interface User {
-//   name: string,
-//   login: string,
-//   pass: string,
-// }
-
-// export const useUser = defineStore('user', () => {//user реактивная переменная
-//   const user = ref(undefined as undefined | User)//пользователь не авторизован или объкт типа User
-//   user.value = undefined // Сбрасываем состояние пользователя
-//   delete localStorage.user // Удаляем пользователя из localStorage
-//   navigateTo('/lk')// перенаправит на страницу входа в лк
-
-
-// const logIn = async (login: string, pass: string) => {
-//   try {
-//     user.value = await $fetch<User>('/api/login', {
-//       method: 'POST',
-//       body: { login, pass }
-//     })
-//     return user.value
-//   } catch (error) {
-//     console.error('Ошибка авторизации:', error)
-//     user.value = undefined
-//     throw new Error('Неверный логин или пароль')
-//   }
-// }
-// })
 </script>
 
 <style scoped>
@@ -96,11 +67,16 @@ const regIn = async () => {
 }
 
 .btn {
-  border: 2px solid grey;
+  border: 3px solid  #1e3a8a;
   padding: 14px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 10px;
   font-size: 18px;
+}
+.btn:hover {
+  color:  white;
+  background:  #1e3a8a;
+  transition: background-color 0.3s ease;
 }
 
 .entrance {
@@ -112,5 +88,10 @@ const regIn = async () => {
  font-size: 20px;
   text-align: center;
   padding: 0 0 10px 10px;
+}
+
+h1 {
+  color: #1e3a8a;
+  font-weight: 700;
 }
 </style>

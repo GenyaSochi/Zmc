@@ -16,7 +16,7 @@ const userStore = useUser()
 <style scoped>
 .proj_all {
   padding: 30px 10px 10px 30px;
-  border: 2px solid gray;
+  border: 5px solid #1e3a8a;
   max-width: 800px;
   height: 300px;
   border-radius: 10px;
