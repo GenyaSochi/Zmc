@@ -63,7 +63,7 @@ const save = () => {
 
 </script>
 
-<style>
+<style scoped>
 .editing-projects .fileInput {
   display: none;
 }
@@ -117,7 +117,6 @@ const save = () => {
 
 .editing-projects {  
   max-width: 800px;
-  padding-left: 16px;
   margin: 0 auto 30px;
 }
 </style>

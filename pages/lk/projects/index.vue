@@ -5,9 +5,9 @@
     </template>
     <br>
   </AccountMenuComponent>
-  <div>
+  <div class="editing-projects">
     <template v-for="project of projects" :key="project.id">
-      <NuxtLink :to="`/lk/projects/${project.id}`" class="editing-projects">{{project.name}}</NuxtLink><br>
+      <NuxtLink :to="`/lk/projects/${project.id}`" class="link">{{project.name}}</NuxtLink>
     </template>
   </div>
   
@@ -23,13 +23,19 @@ const projects = await $fetch('/api/projects/project')
 
 <style scoped>
 .editing-projects {
+  display: grid;
+  gap: 5px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.editing-projects .link   {
   border: 1px solid gray;
   border-radius: 5px;  
-  display: block;
-  margin: 0  auto;
   padding: 3px;
 }
-.editing-projects:hover   {
+
+.editing-projects .link:hover   {
   background-color: #1e3a8a;  
   color: white;
   transition: background-color 0.3s ease;
