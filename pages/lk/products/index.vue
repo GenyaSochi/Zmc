@@ -2,7 +2,7 @@
   <AccountMenuComponent>
     <template #top>
       <h1>Продукция</h1>
-    </template>
+    </template>   
     <br>
   </AccountMenuComponent>
   <div class="editing-product">
@@ -29,8 +29,8 @@ const products = await $fetch('/api/products')
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 800px;
-  margin: 0 auto 30px;
-  gap: 5px;
+  margin: 30px auto;
+  gap: 5px; 
 }
 
 .redact-product {

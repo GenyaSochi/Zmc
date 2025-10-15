@@ -24,98 +24,42 @@
   <div class="info-text">
     <EditorContent v-if="editor" :editor="editor" />
     <div>
+      <p><b>Стили редактирования</b></p>
       <div v-if="editor" class="info-editor">
         <button @click="editor.chain().focus().toggleBold().run()"
-          :disabled="!editor.can().chain().focus().toggleBold().run()" :class="{ 'is-active': editor.isActive('bold') }"
-          class="info-font">
-          жирный
-        </button>
+          :disabled="!editor.can().chain().focus().toggleBold().run()":class="{ 'is-active': editor.isActive('bold') }">жирный</button>
         <button @click="editor.chain().focus().toggleItalic().run()"
-          :disabled="!editor.can().chain().focus().toggleItalic().run()"
-          :class="{ 'is-active': editor.isActive('italic') }" class="info-font">
-          курсив
-        </button>
+          :disabled="!editor.can().chain().focus().toggleItalic().run()":class="{ 'is-active': editor.isActive('italic') }">курсив</button>
         <button @click="editor.chain().focus().toggleStrike().run()"
-          :disabled="!editor.can().chain().focus().toggleStrike().run()"
-          :class="{ 'is-active': editor.isActive('strike') }" class="info-font">
-          перечёркнутый
-        </button>
-        <button @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 2 }) }" class="info-font">
-          h2
-        </button>
-        <button @click="editor.chain().focus().toggleHeading({ level: 3 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 3 }) }" class="info-font">
-          h3
-        </button>
-        <button @click="editor.chain().focus().toggleHeading({ level: 4 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 4 }) }" class="info-font">
-          h4
-        </button>
-        <button @click="editor.chain().focus().toggleHeading({ level: 5 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 5 }) }" class="info-font">
-          h5
-        </button>
-        <button @click="editor.chain().focus().toggleHeading({ level: 6 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 6 }) }" class="info-font">
-          h6
-        </button>
-        <button @click="editor.chain().focus().toggleBulletList().run()"
-          :class="{ 'is-active': editor.isActive('bulletList') }" class="info-font">
-          маркированный список
-        </button>
-        <button @click="editor.chain().focus().toggleOrderedList().run()"
-          :class="{ 'is-active': editor.isActive('orderedList') }" class="info-font">
-          упорядоченный список
-        </button>
-        <button @click="editor.chain().focus().toggleCodeBlock().run()"
-          :class="{ 'is-active': editor.isActive('codeBlock') }" class="info-font">
-          выделить параграф
-        </button>
-        <!-- <button @click="editor.chain().focus().toggleBlockquote().run()"
-:class="{ 'is-active': editor.isActive('blockquote') }">
-цитата из блока
-</button> -->
-        <button @click="editor.chain().focus().setHorizontalRule().run()" class="info-font">
-          скрыть абзац
-        </button>
-        <button @click="editor.chain().focus().setHardBreak().run()" class="info-font">
-          удалить
-        </button>
-        <button @click="editor.chain().focus().undo().run()" :disabled="!editor.can().chain().focus().undo().run()"
-          class="info-font">
-          отменить изменение
-        </button>
-        <!-- <button @click="editor.chain().focus().redo().run()" :disabled="!editor.can().chain().focus().redo().run()">
-  изменить
-</button> -->
-        <button @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()"
-          class="info-font">вставить
-          таблицу</button>
-        <button @click="editor.chain().focus().addColumnBefore().run()" class="info-font">добавить столбец
-          перед</button>
-        <button @click="editor.chain().focus().addColumnAfter().run()" class="info-font">добавить столбец после</button>
-        <button @click="editor.chain().focus().deleteColumn().run()" class="info-font">удалить столбец</button>
-        <button @click="editor.chain().focus().addRowBefore().run()" class="info-font">добавить строку перед</button>
-        <button @click="editor.chain().focus().addRowAfter().run()" class="info-font">добавить строку после</button>
-        <button @click="editor.chain().focus().deleteRow().run()" class="info-font">удалить строку</button>
-        <button @click="editor.chain().focus().deleteTable().run()" class="info-font">удалить таблицу</button>
-        <button @click="editor.chain().focus().mergeCells().run()" class="info-font">объединить ячейки</button>
-        <button @click="editor.chain().focus().splitCell().run()" class="info-font">разделить ячейки</button>
-        <button @click="editor.chain().focus().toggleHeaderColumn().run()" class="info-font">переключение столбца
-          заголовка</button>
-        <button @click="editor.chain().focus().toggleHeaderRow().run()" class="info-font">переключение строки
-          заголовка</button>
-        <button @click="editor.chain().focus().toggleHeaderCell().run()" class="info-font">переключить ячейку
-          заголовка</button>
-        <button @click="editor.chain().focus().mergeOrSplit().run()" class="info-font">слияние или разделение</button>
-        <!-- <button @click="editor.chain().focus().setCellAttribute('colspan', 2).run()">установить атрибут ячейки</button> -->
-        <button @click="editor.chain().focus().fixTables().run()" class="info-font">редактирование текста
-          таблицы</button>
-        <button @click="editor.chain().focus().goToNextCell().run()" class="info-font">перейти к следующей
-          ячейке</button>
-        <button @click="editor.chain().focus().goToPreviousCell().run()" class="info-font">перейти к предыдущей
-          ячейке</button>
+          :disabled="!editor.can().chain().focus().toggleStrike().run()":class="{ 'is-active': editor.isActive('strike') }">перечёркнутый</button>
+        <button @click="editor.chain().focus().toggleHeading({ level: 2 }).run()":class="{ 'is-active': editor.isActive('heading', { level: 2 }) }">h2</button>
+        <button @click="editor.chain().focus().toggleHeading({ level: 3 }).run()":class="{ 'is-active': editor.isActive('heading', { level: 3 }) }">h3</button>
+        <button @click="editor.chain().focus().toggleHeading({ level: 4 }).run()":class="{ 'is-active': editor.isActive('heading', { level: 4 }) }">h4</button>
+        <button @click="editor.chain().focus().toggleHeading({ level: 5 }).run()":class="{ 'is-active': editor.isActive('heading', { level: 5 }) }">h5</button>
+        <button @click="editor.chain().focus().toggleHeading({ level: 6 }).run()":class="{ 'is-active': editor.isActive('heading', { level: 6 }) }">h6</button>
+        <button @click="editor.chain().focus().toggleBulletList().run()":class="{ 'is-active': editor.isActive('bulletList') }">маркированный список</button>
+        <button @click="editor.chain().focus().toggleOrderedList().run()":class="{ 'is-active': editor.isActive('orderedList') }">упорядоченный список</button>
+        <button @click="editor.chain().focus().toggleCodeBlock().run()":class="{ 'is-active': editor.isActive('codeBlock') }">выделить параграф</button>
+        <button @click="editor.chain().focus().setHorizontalRule().run()">скрыть абзац</button>
+        <button @click="editor.chain().focus().setHardBreak().run()">удалить</button>
+        <button @click="editor.chain().focus().undo().run()" :disabled="!editor.can().chain().focus().undo().run()">отменить изменение</button>  
+        <button @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()">вставить таблицу</button>
+        <button @click="editor.chain().focus().addColumnBefore().run()">добавить столбец перед</button>
+        <button @click="editor.chain().focus().addColumnAfter().run()">добавить столбец после</button>
+        <button @click="editor.chain().focus().deleteColumn().run()">удалить столбец</button>
+        <button @click="editor.chain().focus().addRowBefore().run()">добавить строку перед</button>
+        <button @click="editor.chain().focus().addRowAfter().run()">добавить строку после</button>
+        <button @click="editor.chain().focus().deleteRow().run()">удалить строку</button>
+        <button @click="editor.chain().focus().deleteTable().run()">удалить таблицу</button>
+        <button @click="editor.chain().focus().mergeCells().run()">объединить ячейки</button>
+        <button @click="editor.chain().focus().splitCell().run()">разделить ячейки</button>
+        <button @click="editor.chain().focus().toggleHeaderColumn().run()">переключение столбца заголовка</button>
+        <button @click="editor.chain().focus().toggleHeaderRow().run()">переключение строки заголовка</button>
+        <button @click="editor.chain().focus().toggleHeaderCell().run()">переключить ячейку заголовка</button>
+        <button @click="editor.chain().focus().mergeOrSplit().run()">слияние или разделение</button>     
+        <button @click="editor.chain().focus().fixTables().run()">редактирование текста таблицы</button>
+        <button @click="editor.chain().focus().goToNextCell().run()">перейти к следующей ячейке</button>
+        <button @click="editor.chain().focus().goToPreviousCell().run()">перейти к предыдущей ячейке</button>
       </div>
     </div>
   </div>
@@ -244,18 +188,20 @@ h1 {
 
 .info-text {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 400px;
   width: 1400px;
-  gap: 10px;  
+  gap: 10px;
+  margin: 30px auto;
 }
 
 .info-editor {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   position: sticky;
   top: 10px;
-  font-size: 16px;
+  font-size: 20px;
+  /* margin-left: 20px; */
 }
 
 .info-font {
