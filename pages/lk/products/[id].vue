@@ -200,8 +200,10 @@ h1 {
   gap: 10px;
   position: sticky;
   top: 10px;
-  font-size: 20px;
-  /* margin-left: 20px; */
+  font-size: 16px;
+  border-left: 1px solid gray;
+  padding: 14px;
+
 }
 
 .info-font {

@@ -24,7 +24,7 @@
       <span></span>
     </button>
     <Teleport to="body">
-      <div @click="isMenuOpen = false" :class="{ hidden: !isMenuOpen, 'active': isMenuOpen }">
+      <div @click="isMenuOpen = false" :style="`top:${top}px`" :class="{ hidden: !isMenuOpen, 'active': isMenuOpen }">
         <NuxtLink to="/">Главная</NuxtLink>
         <NuxtLink to="/catalog">Каталог продукции</NuxtLink>
         <NuxtLink to="/projects">Проекты</NuxtLink>
@@ -40,10 +40,21 @@
 <script setup lang="ts">
 const popup = ref(false)
 const isMenuOpen = ref(false)
+const top = ref(0)
 
 const toggleMenu = () => {
+  top.value = !isMenuOpen.value ? window.pageYOffset+80 : 0
   isMenuOpen.value = !isMenuOpen.value
 }
+function closeOnScroll() {
+  isMenuOpen.value = false
+}
+onMounted(()=>{
+  document.addEventListener('scroll', closeOnScroll)
+})
+onBeforeUnmount(()=>{
+  document.removeEventListener('scroll', closeOnScroll)
+})
 </script>
 
 <style scoped>

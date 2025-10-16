@@ -2,7 +2,7 @@
   <section>
     <h2 class="addresscont">где мы находимся</h2>
     <div>
-      <ClientOnly>
+      <ClientOnly >
         <div class="card">
           <a href="https://yandex.ru/maps/11214/ozersk/?utm_medium=mapframe&utm_source=maps" class="map_oz">Озёрск</a>
           <a href="https://yandex.ru/maps/11214/ozersk/?from=mapframe&ll=60.725401%2C55.763619&mode=usermaps&source=mapframe&um=constructor%3A2d85f1366eca4cae667da78986b84a6bfe6739faacd5d3f424e1c7bb7c8cb947&utm_medium=mapframe&utm_source=maps&z=16.52"
