@@ -7,8 +7,13 @@
       <label for="login" class="text">Введите пароль:</label>
       <input type="password" class="llk" v-model="pass" required placeholder="пароль">
       <p v-if="message">{{ message }}</p>
-      <button @click="logIn" type="submit" class="btn">войти</button>
-      <button @click="regIn" type="submit" class="btn">зарегистрироваться</button>
+      <div style="display: flex; padding: 10px 0; gap: 10px; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; gap:10px;">
+          <button @click="logIn" type="submit" class="btn">войти</button>
+          <NuxtLink to="/" class="btn">на сайт</NuxtLink>
+        </div>
+        <button @click="regIn" type="submit" class="btn">зарегистрироваться</button>
+      </div>
     </div>
   </form>
   <div v-else>
@@ -16,8 +21,6 @@
       <template #top>
         <h1>Персональная страница</h1>
       </template>
-      <br>
-      <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
     </AccountMenuComponent>
   </div>
 </template>
@@ -37,7 +40,7 @@ definePageMeta({
 })
 
 const logIn = async () => {
-  message.value = await userStore.logIn(email.value, md5(pass.value))    
+  message.value = await userStore.logIn(email.value, md5(pass.value))
 }
 const regIn = async () => {
   message.value = await userStore.regIn(email.value, md5(pass.value))
@@ -67,15 +70,17 @@ const regIn = async () => {
 }
 
 .btn {
-  border: 3px solid  #1e3a8a;
+  border: 3px solid #1e3a8a;
   padding: 14px;
-  margin: 10px 0;
+  text-align: center;
   border-radius: 10px;
   font-size: 18px;
+  flex: 1;
 }
+
 .btn:hover {
-  color:  white;
-  background:  #1e3a8a;
+  color: white;
+  background: #1e3a8a;
   transition: background-color 0.3s ease;
 }
 
@@ -84,8 +89,9 @@ const regIn = async () => {
   text-align: center;
   padding-bottom: 10px;
 }
+
 .text {
- font-size: 20px;
+  font-size: 20px;
   text-align: center;
   padding: 0 0 10px 10px;
 }

@@ -1,54 +1,63 @@
 <template>
     <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
-    <div class="job">
-        <div>
-            <p class="text">Наше предприятие – один из лидеров по производству опор трубопроводов.
-                Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания»,
-                «Трубная металлургическая компания» и других представителей отрасли.</p>
-            <br>
-            <p class="text">ЗМК "Урал" выпускает более 100 видов продукции, нами реализованы десятки проектов.</p>
-            <br>
-            <p class="text">Мы предлагаем стабильную и перспективную работу, которая подарит Вам возможность
-                развиваться и расти вместе с надежной компанией в команде профессионалов.</p>
-            <br>
-            <p class="text"><b>Предлагаем:</b></p>
-            <br>
-            <p class="text">-достойную заработную плату;</p>
-            <p class="text">-социальные гарантии, включая оплачиваемый отпуск и медицинскую страховку;</p>
-            <p class="text">-возможности для профессионального роста.</p>
-            <br>
-            <p class="text">Наша цель – создать комфортные условия для работы, чтобы вы могли сосредоточиться на главном
-                – своем развитии и успехе.</p>
-            <br>
+    <div style="display: grid;">
+        <div class="job">
+            <div v-for="descriptionJob of descriptionJobs" key="id">
+                <p>{{ descriptionJob.description }}</p>
+            </div>
+
             <p class="text"><b>Приглашаем:</b></p>
-            <br>
-            <p class="text">-начальника отдела ПТО;</p>
-            <p class="text">-заместителя начальника производства;</p>
-            <p class="text">-стропальщика;</p>
-            <p class="text">-комплектовщика;</p>
-            <p class="text">-укладчика-упаковщика;</p>
-            <p class="text">-мастера заготовительного цеха;</p>
-            <p class="text">-менеджера в отдел сопровождения (сбыт);</p>
-            <p class="text">-инженера-конструктора отдела КМД.</p>
-            <br>
-            <p class="text">По всем интересующим вопросам обращайтесь по телефону <b><span
-                        class="tel">+79000244766</span></b>
-                или электронной почте <b><span class="tel">hr@zmkural.com</span></b></p>
+            <div v-for="editJob of editJobs" key="id">
+                <p>{{ editJob.titleJob }}</p>
+            </div>
+
+            <div v-for="infoJob of infoJobs" key="id">
+                <p>{{ infoJob.text }}</p>
+            </div>
+
         </div>
-        <div>
-            <img src="/public/img/protect100.webp" alt="" class="imgposition">
-            <p class="imgjob">Стабильность и надёжность</p>
-            <img src="/public/img/money100.webp" alt="" class="imgposition">
-            <p class="imgjob">Конкурентная заработная плата и социальные гарантии</p>
-            <img src="/public/img/dev100.webp" alt="" class="imgposition">
-            <p class="imgjob">Современные условия труда и возможности для развития</p>
-            <img src="/public/img/team100.webp" alt="" class="imgposition">
-            <p class="imgjob">Командный дух и корпоративная культура</p>
+        <div v-for="imgJob of imgJobs" key="id" class="imgposition">
+            <p><img :src="imgJob.img" :alt="imgJob.textImg"></p>
+            <p>{{ imgJob.textImg }}</p>
         </div>
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const editJobs = [
+    { id: 1, titleJob: "-начальника отдела ПТО;" },
+    { id: 2, titleJob: "-заместителя начальника производства;" },
+    { id: 3, titleJob: "-стропальщика;" },
+    { id: 4, titleJob: "-комплектовщика;" },
+    { id: 5, titleJob: "-укладчика-упаковщика;" },
+    { id: 6, titleJob: "-мастера заготовительного цеха;" },
+    { id: 7, titleJob: "-менеджера в отдел сопровождения (сбыт);" },
+    { id: 8, titleJob: "-инженера-конструктора отдела КМД." },]
+
+const descriptionJobs = [
+    { id: 1, description: "Наше предприятие – один из лидеров по производству опор трубопроводов.Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания», «Трубная металлургическая компания» и других представителей отрасли." },
+    { id: 2, description: "ЗМК Урал выпускает более 100 видов продукции, нами реализованы десятки проектов" },
+    { id: 3, description: "Мы предлагаем стабильную и перспективную работу, которая подарит Вам возможность развиваться и расти вместе с надежной компанией в команде профессионалов." },
+    { id: 4, description: "Предлагаем:" },
+    { id: 5, description: "-достойную заработную плату;" },
+    { id: 6, description: "-социальные гарантии, включая оплачиваемый отпуск и медицинскую страховку;" },
+    { id: 7, description: "-возможности для профессионального роста." },
+    { id: 8, description: "Наша цель – создать комфортные условия для работы, чтобы вы могли сосредоточиться на главном – своем развитии и успехе." },
+]
+
+const infoJobs = [
+    { id: 1, text: "По всем интересующим вопросам обращайтесь по телефону:" },
+    { id: 2, text: "+79000244766" },
+    { id: 3, text: "hr@zmkural.com" },
+]
+
+const imgJobs = [
+    { id: 1, img: "/img/protect100.webp", textImg: 'Стабильность и надёжность' },
+    { id: 2, img: "/img/money100.webp", textImg: 'Конкурентная заработная плата и социальные гарантии' },
+    { id: 3, img: "/img/dev100.webp", textImg: 'Современные условия труда и возможности для развития' },
+    { id: 4, img: "/img/team100.webp", textImg: 'Командный дух и корпоративная культура' },
+]
+</script>
 
 <style>
 .jobinfo {
@@ -59,8 +68,7 @@
 .job {
     display: flex;
     padding: 0 200px 60px 200px;
-    gap: 120px;
-
+    flex-direction: column;
 }
 
 .imgjob {
@@ -84,7 +92,7 @@
     font-size: 24px;
 }
 
-@media screen and (max-width:1366px) {
+/* @media screen and (max-width:1366px) {
     .jobinfo {
         font-size: 27px;
     }
@@ -165,5 +173,5 @@
             display: none;
         }
     }
-}
+} */
 </style>

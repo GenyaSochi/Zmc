@@ -58,10 +58,8 @@ model project {
   img         String
 }
 
-// model img {
-//   id          Int     @id @default(autoincrement())
-//   img         String
-//   product_id  Int
-//   project_id  Int
-//   @@map("image")
-// }// нужна для создания множества изображений
+model job {
+  id          Int     @id @default(autoincrement())
+  title       String  
+  description String  
+}
