@@ -1,39 +1,30 @@
 <template>
     <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
-    <div style="display: grid;">
+    <div>
         <div class="job">
             <div v-for="descriptionJob of descriptionJobs" key="id">
                 <p>{{ descriptionJob.description }}</p>
             </div>
 
             <p class="text"><b>Приглашаем:</b></p>
-            <div v-for="editJob of editJobs" key="id">
-                <p>{{ editJob.titleJob }}</p>
+            <div v-for="job of jobs" key="id">
+                <p>- {{ job.title }};</p>
             </div>
 
             <div v-for="infoJob of infoJobs" key="id">
                 <p>{{ infoJob.text }}</p>
             </div>
-
         </div>
-        <div v-for="imgJob of imgJobs" key="id" class="imgposition">
-            <p><img :src="imgJob.img" :alt="imgJob.textImg"></p>
-            <p>{{ imgJob.textImg }}</p>
-        </div>
+   
+            <div v-for="imgJob of imgJobs" key="id" class="imgposition">
+                <p><img :src="imgJob.img" :alt="imgJob.textImg"></p>
+                <p>{{ imgJob.textImg }}</p>
+            </div>
     </div>
 </template>
 
 <script setup lang="ts">
-const editJobs = [
-    { id: 1, titleJob: "-начальника отдела ПТО;" },
-    { id: 2, titleJob: "-заместителя начальника производства;" },
-    { id: 3, titleJob: "-стропальщика;" },
-    { id: 4, titleJob: "-комплектовщика;" },
-    { id: 5, titleJob: "-укладчика-упаковщика;" },
-    { id: 6, titleJob: "-мастера заготовительного цеха;" },
-    { id: 7, titleJob: "-менеджера в отдел сопровождения (сбыт);" },
-    { id: 8, titleJob: "-инженера-конструктора отдела КМД." },]
-
+const jobs = await $fetch('/api/jobs')
 const descriptionJobs = [
     { id: 1, description: "Наше предприятие – один из лидеров по производству опор трубопроводов.Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания», «Трубная металлургическая компания» и других представителей отрасли." },
     { id: 2, description: "ЗМК Урал выпускает более 100 видов продукции, нами реализованы десятки проектов" },
@@ -63,34 +54,35 @@ const imgJobs = [
 .jobinfo {
     font-size: 34px;
     padding: 30px 0;
-}
+} 
 
 .job {
     display: flex;
-    padding: 0 200px 60px 200px;
+    gap: 10px;
+    padding: 20px;
     flex-direction: column;
 }
 
-.imgjob {
+/* .imgjob {
     padding: 20px 0;
     font-size: 24px;
 }
 
 .imgview {
     padding: 20px;
-}
+} */
 
-.imgposition {
+/* .imgposition {
     padding-left: 64px;
-}
+} */
 
-.text {
+/* .text {
     font-size: 24px;
 }
 
 .tel {
     font-size: 24px;
-}
+} */
 
 /* @media screen and (max-width:1366px) {
     .jobinfo {
