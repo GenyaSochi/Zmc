@@ -37,7 +37,7 @@ const save = (user: User) => {
 }
 </script>
 
-<style>
+<style scoped>
 .edit-user {
   max-width: 800px;
   margin: 50px auto;
@@ -65,5 +65,8 @@ const save = (user: User) => {
   border-bottom: 1px solid grey;
   max-width: 1200px;
 }
-
+h1 {
+  color: #1e3a8a;
+  font-weight: 700;
+}
 </style>

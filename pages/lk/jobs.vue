@@ -1,7 +1,7 @@
 <template>
   <AccountMenuComponent>
     <template #top>
-      <h1>Пользователи</h1>
+      <h1>Вакансии</h1>
     </template>
     <br>
   </AccountMenuComponent>
@@ -35,7 +35,7 @@ const save = (job: Job) => {
 }
 </script>
 
-<style>
+<style scoped>
 .edit-user {
   max-width: 800px;
   margin: 50px auto;
@@ -57,12 +57,18 @@ const save = (job: Job) => {
 
 .user-check {
   display: grid;
-  grid-template-columns: 360px 150px 100px 160px;
+  grid-template-columns: 360px 150px 225px;
   align-items: center;
+  justify-items: start;
   gap: 10px;
-  text-align: center;
+  text-align: start;
   border-bottom: 1px solid grey;
   max-width: 1200px;
+  
 }
 
+h1 {
+  color: #1e3a8a;
+  font-weight: 700;
+}
 </style>

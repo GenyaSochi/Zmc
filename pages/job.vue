@@ -1,60 +1,73 @@
 <template>
     <h1 class="jobinfo">Вакансии компании ЗМК "Урал"</h1>
-    <div>
+    <div class="job-container">
         <div class="job">
-            <div v-for="descriptionJob of descriptionJobs" key="id">
-                <p>{{ descriptionJob.description }}</p>
-            </div>
 
-            <p class="text"><b>Приглашаем:</b></p>
+            <p>Наше предприятие – один из лидеров по производству опор трубопроводов.Мы гордимся доверием таких
+                гигантов,
+                как
+                «Газпром», «Иркутская нефтяная компания», «Трубная металлургическая компания» и других представителей
+                отрасли.
+            </p>
+            <p>ЗМК Урал выпускает более 100 видов продукции, нами реализованы десятки проектов</p>
+            <p>Мы предлагаем стабильную и перспективную работу, которая подарит Вам возможность развиваться и расти
+                вместе с
+                надежной компанией в команде профессионалов.</p>
+            <p class="text">Предлагаем:</p>
+            <p>-достойную заработную плату;</p>
+            <p>-социальные гарантии, включая оплачиваемый отпуск и медицинскую страховку;</p>
+            <p>-возможности для профессионального роста.</p>
+            <p>Наша цель – создать комфортные условия для работы, чтобы вы могли сосредоточиться на главном – своем
+                развитии
+                и
+                успехе.</p>
+
+            <p class="text">Открыты вакансии:</p>
             <div v-for="job of jobs" key="id">
                 <p>- {{ job.title }};</p>
             </div>
 
-            <div v-for="infoJob of infoJobs" key="id">
-                <p>{{ infoJob.text }}</p>
+            <p class="text">По всем интересующим вопросам обращайтесь:</p>
+            <p>тел. +79000244766</p>
+            <p>hr@zmkural.com</p>
+        </div>
+        <div class="imgposition">
+            <div>
+                <img src="/img/protect100.webp" alt="">
+                <p>Стабильность и надёжность</p>
+            </div>
+            <div>
+                <img src="/img/money100.webp" alt="">
+                <p>Конкурентная заработная плата и социальные гарантии</p>
+            </div>
+            <div>
+                <img src="/img/dev100.webp" alt="">
+                <p>Современные условия труда и возможности для развития</p>
+            </div>
+            <div>
+                <img src="/img/team100.webp" alt="">
+                <p>Командный дух и корпоративная культура</p>
             </div>
         </div>
-   
-            <div v-for="imgJob of imgJobs" key="id" class="imgposition">
-                <p><img :src="imgJob.img" :alt="imgJob.textImg"></p>
-                <p>{{ imgJob.textImg }}</p>
-            </div>
     </div>
+
 </template>
 
 <script setup lang="ts">
 const jobs = await $fetch('/api/jobs')
-const descriptionJobs = [
-    { id: 1, description: "Наше предприятие – один из лидеров по производству опор трубопроводов.Мы гордимся доверием таких гигантов, как «Газпром», «Иркутская нефтяная компания», «Трубная металлургическая компания» и других представителей отрасли." },
-    { id: 2, description: "ЗМК Урал выпускает более 100 видов продукции, нами реализованы десятки проектов" },
-    { id: 3, description: "Мы предлагаем стабильную и перспективную работу, которая подарит Вам возможность развиваться и расти вместе с надежной компанией в команде профессионалов." },
-    { id: 4, description: "Предлагаем:" },
-    { id: 5, description: "-достойную заработную плату;" },
-    { id: 6, description: "-социальные гарантии, включая оплачиваемый отпуск и медицинскую страховку;" },
-    { id: 7, description: "-возможности для профессионального роста." },
-    { id: 8, description: "Наша цель – создать комфортные условия для работы, чтобы вы могли сосредоточиться на главном – своем развитии и успехе." },
-]
 
-const infoJobs = [
-    { id: 1, text: "По всем интересующим вопросам обращайтесь по телефону:" },
-    { id: 2, text: "+79000244766" },
-    { id: 3, text: "hr@zmkural.com" },
-]
-
-const imgJobs = [
-    { id: 1, img: "/img/protect100.webp", textImg: 'Стабильность и надёжность' },
-    { id: 2, img: "/img/money100.webp", textImg: 'Конкурентная заработная плата и социальные гарантии' },
-    { id: 3, img: "/img/dev100.webp", textImg: 'Современные условия труда и возможности для развития' },
-    { id: 4, img: "/img/team100.webp", textImg: 'Командный дух и корпоративная культура' },
-]
 </script>
 
 <style>
+.job-container {
+    display: flex;
+    padding: 0 60px;
+}
 .jobinfo {
     font-size: 34px;
     padding: 30px 0;
-} 
+    text-align: center;
+}
 
 .job {
     display: flex;
@@ -63,35 +76,34 @@ const imgJobs = [
     flex-direction: column;
 }
 
-/* .imgjob {
+.imgposition {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.text {
+    font-size: 36px;    
+}
+
+.imgjob {
     padding: 20px 0;
     font-size: 24px;
 }
 
 .imgview {
     padding: 20px;
-} */
-
-/* .imgposition {
-    padding-left: 64px;
-} */
-
-/* .text {
-    font-size: 24px;
 }
 
 .tel {
-    font-size: 24px;
-} */
+    font-size: 32px;
+}
 
-/* @media screen and (max-width:1366px) {
+@media screen and (max-width:1366px) {
     .jobinfo {
         font-size: 27px;
-    }
-
-    .job {
-        padding: 0 100px 60px 100px;
-    }
+    }   
 }
 
 @media screen and (max-width:992px) {
@@ -102,10 +114,6 @@ const imgJobs = [
     .text,
     .imgjob {
         font-size: 22px;
-    }
-
-    .job {
-        padding: 0 80px 60px 80px;
     }
 
     .imgposition {
@@ -120,16 +128,21 @@ const imgJobs = [
     .tel {
         font-size: 20px;
     }
-
-    .job {
-        padding: 0 60px 60px 60px;
-        gap: 60px;
+ 
+    .imgposition {
+        display: none;
+    }
+    .job-container {
+        padding: 0 20px;
     }
 }
 
 @media screen and (max-width:576px) {
     .jobinfo {
         font-size: 24px;
+    }
+     .job-container {
+        padding: 0 10px;
     }
 }
 
@@ -142,11 +155,6 @@ const imgJobs = [
     .imgjob,
     .tel {
         font-size: 18px;
-    }
-
-    .job {
-        padding: 0 10px 30px 10px;
-        gap: 20px;
     }
 
     .imgposition {
@@ -165,5 +173,5 @@ const imgJobs = [
             display: none;
         }
     }
-} */
+}
 </style>
