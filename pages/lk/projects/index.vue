@@ -3,7 +3,7 @@
     <template #top>
       <h1>Проекты</h1>
     </template>
-    <br>
+    <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
   </AccountMenuComponent>
   <div class="editing-projects">
     <template v-for="project of projects" :key="project.id">

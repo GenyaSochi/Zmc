@@ -3,18 +3,18 @@
     <template #top>
       <h1 class="edit-proj">Редактировать проект</h1>
     </template>
-    <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
   </AccountMenuComponent>
   <div class="editing-projects">
-    <input type="text" v-model="project.name">
+    <input type="text" v-model="project.name" placeholder="name">
     <div style="position: relative;">
       <label class="label" for="fileUpload"></label>
       <input class="fileInput" type="file" id="fileUpload" @change="fileChange" accept="image/*">
-      <img :src="previewImage || project.img" />
+      <img v-if="previewImage || project.img" :src="previewImage || project.img" />
+      <div v-else>Добавить картинку</div>
     </div>
-    <input type="text" v-model="project.quantity">
-    <input type="text" v-model="project.year">
-    <input type="text" v-model="project.enduser">
+    <input type="text" v-model="project.quantity" placeholder="quant">
+    <input type="text" v-model="project.year" placeholder="year">
+    <input type="text" v-model="project.enduser" placeholder="end">
     <textarea v-model="project.description"></textarea>   
     <button @click="save" class="button-save">сохранить изменения</button> 
   </div>
@@ -22,9 +22,7 @@
 
 <script setup lang="ts">
 import type { project as Project } from '@prisma/client'
-const router = useRoute()
-const project = await $fetch<Project>('/api/projects/by_id/' + router.params.id)
-
+const project = ref({} as Project)
 definePageMeta({
   layout: 'admin',
   middleware: 'adm'
@@ -49,17 +47,21 @@ const fileChange = (event: Event) => {
 }
 
 const save = () => {
-  const year = parseInt(project.year.toString())
+  const year = parseInt(project.value.year.toString())
   if (!year) {
     alert('Неверно указан год')
     return
   }
-  project.project = project.name
-  project.year = year
+  if (!files?.length) {
+    alert('Добавьте фото')
+    return
+  }
+  project.value.project = project.value.name
+  project.value.year = year
   const data = new FormData()
   if (files?.length) data.append('img', files[0])
-  data.append('data', JSON.stringify(project))
-  $fetch('/api/projects', { method: 'PUT', body: data })
+  data.append('data', JSON.stringify(project.value))
+  $fetch('/api/projects', { method: 'POST', body: data })
   navigateTo('/lk/projects')
 }
 
