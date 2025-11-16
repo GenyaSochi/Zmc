@@ -2,8 +2,8 @@
   <AccountMenuComponent>
     <template #top>
       <h1>Продукция</h1>
-    </template>   
-    <br>
+    </template>
+    <NuxtLink to="/lk/products/create" class="btn">Добавить</NuxtLink>
   </AccountMenuComponent>
   <div class="editing-product">
     <template v-for="product of products" :key="product.id">
@@ -30,7 +30,7 @@ const products = await $fetch('/api/products')
   grid-template-columns: 1fr 1fr;
   max-width: 800px;
   margin: 30px auto;
-  gap: 5px; 
+  gap: 5px;
 }
 
 .redact-product {
