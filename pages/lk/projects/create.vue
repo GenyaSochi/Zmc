@@ -16,7 +16,7 @@
     <input type="text" v-model="project.year" placeholder="year">
     <input type="text" v-model="project.enduser" placeholder="end">
     <textarea v-model="project.description"></textarea>   
-    <button @click="save" class="button-save">сохранить изменения</button> 
+    <button @click="save" class="button-save">Сохранить изменения</button> 
   </div>
 </template>
 
