@@ -8,10 +8,10 @@
   <div class="info-style">
     <input type="text" v-model="product.name" class="info-prod">
     <input type="text" v-model="product.title" class="info-prod">
-    <select v-model="product.type_id" class="info-prod">
+    <select v-model="product.type_id" @change="changeProductType" class="info-prod">
       <option v-for="el of type" :key="el.id" :value="el.id" class="info-prod">{{ el.name }}</option>
     </select>
-    <select v-model="product.out_id" class="info-prod">
+    <select v-if="showOut" v-model="product.out_id" class="info-prod">
       <option :value="null">Без номера выпуска</option>
       <option v-for="el of out" :key="el.id" :value="el.id">{{ el.name }}</option>
     </select>
@@ -73,12 +73,21 @@ import { TableKit } from '@tiptap/extension-table'
 import StarterKit from '@tiptap/starter-kit'
 import { Editor, EditorContent } from '@tiptap/vue-3'
 
+const showOut = ref(false)
 const router = useRoute()
 const { product, type, out } = await $fetch<{ product: Product, type: Type[], out: Out[] }>('/api/products/by_id/' + router.params.id)
 definePageMeta({
   layout: 'admin',
   middleware: 'adm'
 })
+
+const changeProductType = () => {
+  showOut.value = false
+  product.out_id=null
+  if (product.type_id == 4) {
+    showOut.value = true
+  }
+}
 
 const editor = ref(null as any)
 onMounted(() => {

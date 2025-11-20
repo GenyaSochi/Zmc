@@ -8,10 +8,10 @@
   <div class="info-style">
     <input type="text" v-model="product.name" class="info-prod" placeholder="name">
     <input type="text" v-model="product.title" class="info-prod" placeholder="title">
-    <select v-model="product.type_id" class="info-prod">
+    <select v-model="product.type_id" @change="product.out_id=null" class="info-prod">
       <option v-for="el of type" :key="el.id" :value="el.id" class="info-prod">{{ el.name }}</option>
     </select>
-    <select v-model="product.out_id" class="info-prod">
+    <select v-if="product.type_id==4" v-model="product.out_id" class="info-prod">
       <option :value="null">Без номера выпуска</option>
       <option v-for="el of out" :key="el.id" :value="el.id">{{ el.name }}</option>
     </select>
