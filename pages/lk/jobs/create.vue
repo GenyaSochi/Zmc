@@ -5,21 +5,19 @@
     </template>
     <br>
   </AccountMenuComponent>
-
-  <div class="edit-user">
+    <div class="edit-user">
     <div class="user-check">
       <p>название</p>
       <p>описание</p>
       <p></p>
     </div>
-    <template v-for="job of jobs" :key="job.id">
-      <div class="user-check">
-        <input type="text" v-model="job.title"/>
-        <input type="text" v-model="job.description"/>
-        <button @click="save(job)" class="save-btn">сохранить</button>
-      </div>
-    </template> 
-    <NuxtLink to="jobs/create" class="add-btn">добавить</NuxtLink>
+    
+    <div class="user-check">
+      <input type="text" placeholder="должность" v-model="job.title">
+      <input type="text" placeholder="описание" v-model="job.description">
+      <button @click="save()" class="save-btn">сохранить</button>
+    </div>
+    
   </div>
 </template>
 
@@ -29,12 +27,12 @@ definePageMeta({
   layout: 'admin',
   middleware: 'adm'
 })
-const {data:jobs, refresh} = await useFetch<Job[]>('/api/jobs')
+const job = ref({} as Job)
 
-const save = (job: Job) => {
-  $fetch('/api/jobs', { method: 'PUT', body: job })
+const save = () => {
+  $fetch('/api/jobs', { method: 'POST', body: job.value })
+  navigateTo('/lk/jobs')
 }
-onMounted(()=>refresh())
 </script>
 
 <style scoped>
@@ -72,15 +70,5 @@ onMounted(()=>refresh())
 h1 {
   color: #1e3a8a;
   font-weight: 700;
-}
-
-.add-btn {
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 2px;
-  text-align: center;
-  margin: 10px; 
-  width: 200px;
-  display: block;
 }
 </style>
