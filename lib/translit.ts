@@ -25,6 +25,6 @@ export default function translit(word: string) {
       answer += converter[word[i]];
     }
   }
-  answer = answer.trim().replaceAll(' ', '_').replaceAll(',', '').replaceAll('.', '').replaceAll('"', '').replaceAll("'", '').replaceAll('-', '_').toLocaleLowerCase()
+  answer = answer.trim().replaceAll(' ', '_').replaceAll('(', '').replaceAll(')', '').replaceAll(',', '').replaceAll('.', '').replaceAll('"', '').replaceAll("'", '').replaceAll('-', '_').toLocaleLowerCase()
   return answer;
 }
