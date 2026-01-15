@@ -113,7 +113,7 @@ onBeforeUnmount(()=>{
 
 .butnav {
   display: flex;
-  align-items: center;
+  align-items: center;  
   justify-content: space-around;
   border: 2px solid white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -126,7 +126,7 @@ onBeforeUnmount(()=>{
 .buttel {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   font-size: 20px;
   font-family: 'Montserrat', light;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -199,7 +199,6 @@ onBeforeUnmount(()=>{
 }
 
 @media screen and (max-width:1366px) {
-
   .navtag,
   .nav,
   .but,

@@ -240,8 +240,12 @@ const swiper = useSwiper(swiperCont, {
 swiper-container {
   --swiper-theme-color: grey !important;
 }
+
 @media screen and (max-width:1700px) {
-  .quant, .title, .title1 {
+
+  .quant,
+  .title,
+  .title1 {
     left: 106px;
   }
 }
@@ -252,7 +256,7 @@ swiper-container {
   }
 
   .imgstyle {
-    padding-right: 50px;
+    padding-right: 80px;
   }
 
   .quant {
@@ -316,7 +320,6 @@ swiper-container {
     width: 270px;
   }
 
-
   .advanttext {
     padding-bottom: 47px;
     font-size: 22px;
@@ -363,11 +366,11 @@ swiper-container {
 
   .imgsize {
     height: 395px;
-
   }
 
   .imgstyle {
     height: 478px;
+    padding-right: 115px;
   }
 
   .ourproj {
@@ -387,11 +390,11 @@ swiper-container {
 
   .title,
   .title1 {
-    left: 46px;
+    left: 66px;
   }
 
   .quant {
-    left: 46px;
+    left: 66px;
   }
 
   .imgsize {
@@ -405,6 +408,25 @@ swiper-container {
 
   .productstyle {
     height: 620px;
+  }
+
+  .imgstyle {
+    padding-right: 85px;
+  }
+}
+@media screen and (max-width:1047px) {
+
+  .title,
+  .title1 {
+    left: 60px;
+  }
+
+  .quant {
+    left: 60px;
+  }
+  
+  .imgstyle {
+    padding-right: 62px;
   }
 }
 

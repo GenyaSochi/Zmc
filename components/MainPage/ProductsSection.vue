@@ -60,7 +60,7 @@
 
 .exc {
   position: absolute;
-  right: 14%;
+  right: 15%;
   top: 31%;
   z-index: 1;
 }
