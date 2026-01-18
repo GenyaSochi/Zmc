@@ -18,8 +18,9 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
-            class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div>
+        <div class="production">Экскурсия на производство<a class="butproj">Смотреть</a></div>
+        <!-- <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
+            class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div> -->
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
             удовлетворяем любые запросы по объёмам и типам продукции, сочетая индивидуальный подход с точным
             соответствием техническим
@@ -138,8 +139,8 @@ const swiper = useSwiper(swiperCont, {
 
 .production {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: white;
   padding: 0px 18px 26px 26px;
@@ -150,12 +151,16 @@ const swiper = useSwiper(swiperCont, {
   height: 264px;
   font-weight: 600;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  text-align: center;
+  gap: 75px;
 }
 
 .butproj {
   border: 2px solid white;
-  padding: 5px 32px 5px 5px;
-  margin-top: 46px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 240px;
+  justify-content: center;
 }
 
 .imgstyle {
@@ -165,7 +170,8 @@ const swiper = useSwiper(swiperCont, {
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 48px;
+  padding-right: 200px;
+  border-radius: 10px;
 }
 
 .imgproj {
@@ -213,7 +219,7 @@ const swiper = useSwiper(swiperCont, {
 .textsmall2 {
   font-size: 17px;
   text-align: center;
-  padding-top: 42px;
+  padding-top: 20px;
 }
 
 .textsmall3 {
@@ -241,22 +247,38 @@ swiper-container {
   --swiper-theme-color: grey !important;
 }
 
-@media screen and (max-width:1700px) {
+@media screen and (max-width:1769px) {
 
   .quant,
   .title,
   .title1 {
     left: 106px;
   }
+
+  .imgstyle {
+    padding-right: 160px;
+  }
 }
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width:1769px) {
+  .imgstyle {
+    padding-right: 140px;
+  }
+}
+
+@media screen and (max-width:1670px) {
+  .imgstyle {
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width:1609px) {
   .imgsize {
     height: 470px;
   }
 
   .imgstyle {
-    padding-right: 80px;
+    padding-right: 100px;
   }
 
   .quant {
@@ -306,6 +328,7 @@ swiper-container {
   .production {
     height: 335px;
     width: 310px;
+    gap: 130px;
   }
 
   .productstyle {
@@ -358,6 +381,7 @@ swiper-container {
     font-size: 20px;
     height: 335px;
     width: 270px;
+    gap: 141px;
   }
 
   .butproj {
@@ -401,9 +425,13 @@ swiper-container {
     height: 374px;
   }
 
-  .advant,
+  .advant {
+    height: 382px;
+  }
+
   .production {
     height: 382px;
+    gap: 180px;
   }
 
   .productstyle {
@@ -414,7 +442,14 @@ swiper-container {
     padding-right: 85px;
   }
 }
+
 @media screen and (max-width:1047px) {
+
+  .textsmall1,
+  .textsmall2,
+  .textsmall3 {
+    display: none;
+  }
 
   .title,
   .title1 {
@@ -424,9 +459,23 @@ swiper-container {
   .quant {
     left: 60px;
   }
-  
+
   .imgstyle {
-    padding-right: 62px;
+    padding-right: 50px;
+  }
+
+  .production {
+    height: 186px;
+    gap: 26px;
+    padding: 38px 18px 26px 26px;
+  }
+
+  .productstyle {
+    height: 432px;
+  }
+
+  .advant {
+    height: 186px;
   }
 }
 
@@ -436,12 +485,12 @@ swiper-container {
   }
 
   .blockproduct {
-    gap: 15px;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
     display: grid;
     justify-items: center;
     padding: 0 150px 0 150px;
-    height: 460px;
+    height: 408px;
   }
 
   .ouradvant {
@@ -536,11 +585,6 @@ swiper-container {
     padding-top: 26px;
     font-size: 15px;
   }
-
-  .advant,
-  .production {
-    height: 222px;
-  }
 }
 
 
@@ -551,8 +595,8 @@ swiper-container {
 
   .quant {
     font-size: 28px;
-    left: 149px;
-    top: 128px;
+    left: 164px;
+    top: 125px;
   }
 
   .units {
@@ -601,127 +645,73 @@ swiper-container {
   }
 
   .production {
-    font-size: 18px;
-    text-align: center;
+    display: none;
   }
 
   .advant {
-    text-align: center;
+    display: none;
+  }
+
+  .blockproduct,
+  .productstyle {
+    height: 0;
   }
 
   .title {
     bottom: 114px;
-    left: 149px;
+    left: 164px;
   }
 
   .title1 {
-    left: 149px;
-    bottom: 91px;
+    left: 164px;
+    bottom: 84px;
   }
 }
 
-@media screen and (max-width:652px) {
+
+@media screen and (max-width:653px) {
   swiper-container {
     --swiper-theme-color: transparent !important;
   }
 
   .title,
-  .title1,
   .quant {
-    left: 104px;
+    left: 94px;
+    bottom: 100px;
+  }
+
+  .title1 {
+    left: 94px;
+    bottom: 73px;
   }
 
   .ourproj {
     padding: 20px 0;
   }
-}
 
-@media screen and (max-width:563px) {
-
-  .textsmall1,
-  .textsmall2,
-  .textsmall3,
-  .butproj {
-    display: none;
-  }
-
-  .advanttext {
-    padding-bottom: 17px;
-  }
-
-  .advant {
-    height: 73px;
-    padding: 18px 10px 20px 10px;
-    width: 240px;
-  }
-
-  .production {
-    height: 73px;
-    padding: 18px 10px 20px 10px;
-    width: 240px;
-  }
-
-  .blockproduct {
-    height: 0;
-  }
-
-  .productstyle {
-    height: 242px;
-  }
-
-  @media screen and (max-width:504px) {
-    .blockproduct {
-      grid-template-columns: 1fr;
-    }
-
-    .productstyle {
-      height: 418px;
-      padding-top: 6px;
-    }
-
-    .quant {
-      top: 113px;
-      left: 80px;
-    }
-
+   @media screen and (max-width:427px){
     .title {
-      left: 80px;
-      bottom: 132px;
+      bottom: 110px;
+    }
+   }
+  @media screen and (max-width:413px) {
+    .title1 {
+      left: 54px;
+      bottom: 59px;
+    }
+  }
+
+  @media screen and (max-width:403px) {
+
+    .title,
+    .quant {
+      left: 54px;
+      bottom: 100px;
     }
 
     .title1 {
-      left: 80px;
-      bottom: 105px;
-    }
-  }
-
-  @media screen and (max-width:419px) {
-    .quant {
-      left: 50px;
-    }
-
-    .title {
-      left: 50px;
-    }
-
-    .title1 {
-      left: 50px;
-    }
-  }
-
-  @media screen and (max-width:396px) {
-    .quant {
-      left: 26px;
-    }
-
-    .title {
-      left: 26px;
-      font-size: 16px;
-    }
-
-    .title1 {
-      left: 26px;
-      font-size: 16px;
+      left: 54px;
+      bottom: 62px;
     }
   }
 }

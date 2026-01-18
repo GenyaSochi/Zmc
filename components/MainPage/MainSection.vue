@@ -161,7 +161,7 @@ onUnmounted(() => {
 }
 
 .video {
-  height: 442px;
+  height: 552px;
   z-index: -1000;
   overflow: hidden;
 }
@@ -229,7 +229,7 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 310px;
+    height: 420px;
   }
 }
 
@@ -278,6 +278,9 @@ onUnmounted(() => {
     border-radius: 10px;
     font-weight: 400;
   }
+  .video {
+    height: 380px;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -296,7 +299,7 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 250px;
+    height: 240px;
   }
 
   .digits {
@@ -425,7 +428,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:453px) {
   .digitsprod {
-    height: 153px;
+    height: 171px;
   }
 }
 @media screen and (max-width:424px) {

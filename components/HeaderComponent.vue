@@ -43,16 +43,16 @@ const isMenuOpen = ref(false)
 const top = ref(0)
 
 const toggleMenu = () => {
-  top.value = !isMenuOpen.value ? window.pageYOffset+80 : 0
+  top.value = !isMenuOpen.value ? window.pageYOffset + 80 : 0
   isMenuOpen.value = !isMenuOpen.value
 }
 function closeOnScroll() {
   isMenuOpen.value = false
 }
-onMounted(()=>{
+onMounted(() => {
   document.addEventListener('scroll', closeOnScroll)
 })
-onBeforeUnmount(()=>{
+onBeforeUnmount(() => {
   document.removeEventListener('scroll', closeOnScroll)
 })
 </script>
@@ -113,7 +113,7 @@ onBeforeUnmount(()=>{
 
 .butnav {
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: space-around;
   border: 2px solid white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -199,6 +199,7 @@ onBeforeUnmount(()=>{
 }
 
 @media screen and (max-width:1366px) {
+
   .navtag,
   .nav,
   .but,
@@ -239,17 +240,8 @@ onBeforeUnmount(()=>{
 }
 
 @media screen and (max-width:992px) {
-
   .navtag {
     padding-left: 5px;
-  }
-
-  .but {
-    font-size: 17px;
-  }
-
-  .butnav {
-    display: none;
   }
 
   .nav {
@@ -264,15 +256,16 @@ onBeforeUnmount(()=>{
     text-align: center;
     display: flex;
     flex-direction: column;
+    font-size: 17px;
   }
 
   .butnav {
     text-align: center;
-    width: 212px;
+    width: 170px;
   }
 
   .link {
-    gap: 13px;
+    gap: 5px;
   }
 
   .logo {
@@ -290,9 +283,9 @@ onBeforeUnmount(()=>{
 }
 
 @media screen and (max-width:768px) {
-
   .but {
-    font-size: 18px;
+    font-size: 27px;
+    display: none;
   }
 
   .buttel {
@@ -300,10 +293,11 @@ onBeforeUnmount(()=>{
   }
 
   .butnav {
-    font-size: 18px;
+    font-size: 27px;
     border: none;
+    width: 300px;
+    display: flex;
     justify-content: flex-start;
-    padding: 0;
   }
 
   .burger {
@@ -325,8 +319,8 @@ onBeforeUnmount(()=>{
   .active {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    width: 300px;
+    gap: 35px;
+    width: 373px;
     background-color: white;
     position: absolute;
     right: 0;
@@ -351,11 +345,6 @@ onBeforeUnmount(()=>{
     height: 200px;
   }
 
-  .but {
-    display: none;
-
-  }
-
   .logo {
     display: flex;
     position: absolute;
@@ -365,10 +354,9 @@ onBeforeUnmount(()=>{
   }
 
   a {
-    font-size: 18px;
+    font-size: 27px;
     padding-bottom: 5px;
   }
-
 }
 
 @media screen and (max-width:576px) {
@@ -403,10 +391,10 @@ onBeforeUnmount(()=>{
     gap: 18px;
   }
 
-  .butnav {
+  /* .butnav {
     border: none;
     width: none;
-  }
+  } */
 
   .logo {
     position: absolute;
@@ -421,7 +409,7 @@ onBeforeUnmount(()=>{
   }
 
   .active {
-    width: 224px;
+
     top: 68px;
   }
 
@@ -430,14 +418,6 @@ onBeforeUnmount(()=>{
   }
 
   @media screen and (max-width:410px) {
-    .butnav {
-      font-size: 16px;
-    }
-
-    a {
-      font-size: 16px;
-    }
-
     .active {
       padding-bottom: 3px;
     }

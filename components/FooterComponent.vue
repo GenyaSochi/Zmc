@@ -32,9 +32,9 @@
     </div>
     <div class="confids">
       <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»</p>
-      <p class="confid">Все права защищены</p>        
-        <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
-     <NuxtLink class="confid" to="/lk">Личный кабинет</NuxtLink>
+      <p class="confid">Все права защищены</p>
+      <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
+      <NuxtLink class="confid" to="/lk">Личный кабинет</NuxtLink>
     </div>
   </footer>
   <ModalComponent v-model="popup"></ModalComponent>
@@ -63,6 +63,7 @@ const popup = ref(false)
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding: 5px 5px 10px 5px;
 }
 
 .lobtn {
@@ -90,6 +91,7 @@ const popup = ref(false)
 
 .contact {
   font-size: 20px;
+  padding: 5px;
 }
 
 .contactmain {
@@ -100,6 +102,7 @@ const popup = ref(false)
 .confid {
   font-size: 16px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .imglogo {
@@ -142,6 +145,7 @@ const popup = ref(false)
   .confid {
     font-size: 19px;
   }
+
   .contact {
     font-size: 19px;
   }
@@ -199,20 +203,27 @@ const popup = ref(false)
   .imgru {
     padding-bottom: 10px;
   }
+
   .footercont {
-    justify-items: end;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .imgall {
+    display: block;
+  }
+
+  .contact {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width:576px) {
   .footer_color {
     padding: 10px 10px 10px 10px;
-  }
-
-  .contact {
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 17px;
   }
 
   .lobtn {
@@ -267,15 +278,10 @@ const popup = ref(false)
       font-size: 15px;
     }
 
-    .footercont {
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-    }
-
     .imgall {
       display: block;
     }
+
     .imgru {
       padding-bottom: 10px;
     }

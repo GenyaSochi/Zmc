@@ -46,21 +46,20 @@
   color: white;
   font-size: 24px;
   text-align: center;
-  padding: 10px 0;
-  text-transform: uppercase;
-  padding-top: 20px;
+  padding: 20px 5px 20px 5px;
+  text-transform: uppercase; 
 }
 
 .apper {
   position: absolute;
-  left: 48%;
+  left: 47%;
   top: 33%;
   z-index: 1;
 }
 
 .exc {
   position: absolute;
-  right: 15%;
+  right: 13%;
   top: 31%;
   z-index: 1;
 }
@@ -92,7 +91,7 @@
 
   .seeprod {
     font-size: 17px;
-    padding: 5px;
+    text-align: center;
   }
 
   .apper {
@@ -122,6 +121,7 @@
 
   .prod {
     padding: 20px 10px;
+    flex-direction: column;
   }
 }
 

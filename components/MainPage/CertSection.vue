@@ -123,7 +123,7 @@ swiper-container {
   .certtext {
     font-size: 24px;
     padding-bottom: 25px;
-    padding-top: 75px;
+    padding-top: 26px;
   }
 
   .cert {
@@ -142,7 +142,7 @@ swiper-container {
 @media screen and (max-width:768px) {
   .certtext {
     font-size: 20px;
-    padding-top: 271px;
+    padding-top: 110px;
   }
 
   .cert {
@@ -155,11 +155,6 @@ swiper-container {
 }
 
 @media screen and (max-width:563px) {
-  .certtext {
-    font-size: 18px;
-    padding-top: 72px;
-  }
-
   .cert {
     height: 184px;
   }
@@ -184,6 +179,7 @@ swiper-container {
 
   .certtext {
     padding-bottom: 13px;
+    padding-top: 122px;
   }
 
   .certcontainer {
