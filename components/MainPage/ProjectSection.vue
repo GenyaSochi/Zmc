@@ -18,7 +18,8 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a class="butproj">Смотреть</a></div>
+        <div class="production">Экскурсия на производство<a class="butproj" href="https://vk.com/zmkural">Смотреть</a>
+        </div>
         <!-- <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
             class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div> -->
         <div class="advant"><span class="textspan">Гибкость в производстве</span><span class="textsmall1">Мы
@@ -109,8 +110,11 @@ const swiper = useSwiper(swiperCont, {
   font-weight: bold;
   font-style: oblique;
   top: 170px;
-  left: 164px;
-  font-family: 'Montserrat', light;
+  left: 364px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .title {
@@ -118,11 +122,12 @@ const swiper = useSwiper(swiperCont, {
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 164px;
+  left: 364px;
   bottom: 239px;
+ font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-style: oblique;
-  font-family: 'Montserrat', light;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .title1 {
@@ -130,11 +135,12 @@ const swiper = useSwiper(swiperCont, {
   color: rgba(30, 33, 61, 1);
   font-size: 34px;
   position: absolute;
-  left: 164px;
+  left: 364px;
   bottom: 194px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-style: oblique;
-  font-family: 'Montserrat', light;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .production {
@@ -170,7 +176,7 @@ const swiper = useSwiper(swiperCont, {
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 200px;
+  padding-right: 340px;
   border-radius: 10px;
 }
 
@@ -247,28 +253,55 @@ swiper-container {
   --swiper-theme-color: grey !important;
 }
 
-@media screen and (max-width:1769px) {
+@media screen and (max-width:2192px) {
 
   .quant,
   .title,
   .title1 {
-    left: 106px;
+    left: 206px;
   }
 
   .imgstyle {
-    padding-right: 160px;
+    padding-right: 240px;
   }
 }
 
-@media screen and (max-width:1769px) {
+@media screen and (max-width:1936px) {
+  .imgstyle {
+    padding-right: 220px;
+  }
+}
+
+@media screen and (max-width:1896px) {
+  .imgstyle {
+    padding-right: 180px;
+  }
+}
+
+@media screen and (max-width:1844px) {
   .imgstyle {
     padding-right: 140px;
   }
 }
 
-@media screen and (max-width:1670px) {
+@media screen and (max-width:1820px) {
   .imgstyle {
     padding-right: 100px;
+  }
+}
+
+@media screen and (max-width:1769px) {
+
+  .quant,
+  .title,
+  .title1 {
+    left: 96px;
+  }
+}
+
+@media screen and (max-width:1670px) {
+  .imgstyle {
+    padding-right: 40px;
   }
 }
 
@@ -277,24 +310,20 @@ swiper-container {
     height: 470px;
   }
 
-  .imgstyle {
-    padding-right: 100px;
-  }
-
   .quant {
     font-size: 58px;
-    left: 86px;
+    left: 185px;
   }
 
   .title {
     font-size: 28px;
-    left: 86px;
+    left: 185px;
     bottom: 268px;
   }
 
   .title1 {
     font-size: 28px;
-    left: 86px;
+    left: 185px;
     bottom: 232px;
   }
 
@@ -336,6 +365,24 @@ swiper-container {
   }
 }
 
+@media screen and (max-width:1472px) {
+
+  .quant,
+  .title,
+  .title1 {
+    left: 130px;
+  }
+}
+
+@media screen and (max-width:1429px) {
+
+  .quant,
+  .title,
+  .title1 {
+    left: 100px;
+  }
+}
+
 @media screen and (max-width:1366px) {
 
   .advant {
@@ -358,18 +405,18 @@ swiper-container {
 
   .quant {
     font-size: 56px;
-    left: 86px;
+    left: 170px;
   }
 
   .title {
     font-size: 20px;
-    left: 86px;
+    left: 170px;
     bottom: 213px;
   }
 
   .title1 {
     font-size: 20px;
-    left: 86px;
+    left: 170px;
     bottom: 179px;
   }
 
@@ -410,7 +457,20 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:1130px) {
+@media screen and (max-width:1262px) {
+
+  .quant,
+  .title,
+  .title1 {
+    left: 120px;
+  }
+
+  .imgstyle {
+    padding-right: 66px;
+  }
+}
+
+@media screen and (max-width:1162px) {
 
   .title,
   .title1 {
@@ -443,7 +503,7 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:1047px) {
+@media screen and (max-width:1095px) {
 
   .textsmall1,
   .textsmall2,
@@ -479,7 +539,12 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:996px) {
+@media screen and (max-width:1056px){
+  .quant, .title, .title1 {
+    left: 50px;
+  }
+}
+@media screen and (max-width:1017px) {
   .productstyle {
     height: 560px;
   }
@@ -505,8 +570,9 @@ swiper-container {
   .imgstyle {
     margin-top: 0;
     height: 349px;
-    padding-right: 0;
-  }
+    padding-right: 0;    
+    }
+  
 
   .imgsize {
     margin: auto;
@@ -515,7 +581,7 @@ swiper-container {
   .quant {
     font-size: 36px;
     top: 120px;
-    left: 252px;
+    left: 291px;
     color: white;
   }
 
@@ -526,14 +592,14 @@ swiper-container {
   .title {
     font-size: 17px;
     bottom: 167px;
-    left: 252px;
+    left: 291px;
     color: white;
   }
 
   .title1 {
     font-size: 17px;
     bottom: 146px;
-    left: 252px;
+    left: 291px;
     color: white;
   }
 
@@ -587,6 +653,15 @@ swiper-container {
   }
 }
 
+@media screen and (max-width:912px) {
+
+  .quant,
+  .title,
+  .title1 {
+    left: 247px;
+  }
+
+}
 
 @media screen and (max-width:768px) {
   .ourproj {
@@ -676,24 +751,34 @@ swiper-container {
 
   .title,
   .quant {
-    left: 94px;
-    bottom: 100px;
+    left: 89px;
+    bottom: 107px;
   }
 
   .title1 {
-    left: 94px;
-    bottom: 73px;
+    left: 89px;
+    bottom: 65px;
   }
 
   .ourproj {
     padding: 20px 0;
   }
 
-   @media screen and (max-width:427px){
+  @media screen and (max-width:452px) {
+
+    .quant,
+    .title,
+    .title1 {
+      left: 64px;
+    }
+  }
+
+  @media screen and (max-width:427px) {
     .title {
       bottom: 110px;
     }
-   }
+  }
+
   @media screen and (max-width:413px) {
     .title1 {
       left: 54px;
