@@ -120,7 +120,7 @@
   }
 
   .prod {
-    padding: 20px 10px;
+    padding: 20px 0;
     flex-direction: column;
   }
 }

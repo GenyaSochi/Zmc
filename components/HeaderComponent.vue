@@ -207,8 +207,7 @@ onBeforeUnmount(() => {
     font-size: 18px;
   }
 
-  .nav {
-    padding-right: 10px;
+  .nav {   
     text-align: center;
   }
 
@@ -221,11 +220,12 @@ onBeforeUnmount(() => {
   }
 
   .butnav {
-    width: 224px;
+    /* width: 224px; */
+    display: none;
   }
 
   .logo {
-    width: 114px;
+    /* width: 114px; */
     padding-left: 20px;
   }
 
@@ -284,7 +284,7 @@ onBeforeUnmount(() => {
 
 @media screen and (max-width:768px) {
   .but {
-    font-size: 27px;
+    font-size: 20px;
     display: none;
   }
 
@@ -293,11 +293,12 @@ onBeforeUnmount(() => {
   }
 
   .butnav {
-    font-size: 27px;
+    font-size: 20px;
     border: none;
     width: 300px;
     display: flex;
     justify-content: flex-start;
+    padding: 0 0 10px 15px;
   }
 
   .burger {
@@ -319,7 +320,7 @@ onBeforeUnmount(() => {
   .active {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 30px;
     width: 373px;
     background-color: white;
     position: absolute;
@@ -350,12 +351,12 @@ onBeforeUnmount(() => {
     position: absolute;
     left: 0;
     top: 20px;
-    width: 110px;
+    width: 124px;
   }
 
   a {
-    font-size: 27px;
-    padding-bottom: 5px;
+    font-size: 20px;
+    padding-left: 15px;    
   }
 }
 
@@ -398,8 +399,7 @@ onBeforeUnmount(() => {
 
   .logo {
     position: absolute;
-    left: 10px;
-    width: 110px;
+    left: 10px;   
     top: 14px;
   }
 

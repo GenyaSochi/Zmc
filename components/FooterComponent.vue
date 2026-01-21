@@ -211,7 +211,8 @@ const popup = ref(false)
   }
 
   .imgall {
-    display: block;
+    gap: 20px;
+    justify-content: center;
   }
 
   .contact {
@@ -276,15 +277,7 @@ const popup = ref(false)
 
     .confid {
       font-size: 15px;
-    }
-
-    .imgall {
-      display: block;
-    }
-
-    .imgru {
-      padding-bottom: 10px;
-    }
+    }     
   }
 }
 </style>

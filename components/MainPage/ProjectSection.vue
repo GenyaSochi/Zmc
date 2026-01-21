@@ -124,7 +124,7 @@ const swiper = useSwiper(swiperCont, {
   position: absolute;
   left: 364px;
   bottom: 239px;
- font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-style: oblique;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
@@ -176,8 +176,7 @@ const swiper = useSwiper(swiperCont, {
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 340px;
-  border-radius: 10px;
+  padding-right: 340px;  
 }
 
 .imgproj {
@@ -301,7 +300,7 @@ swiper-container {
 
 @media screen and (max-width:1670px) {
   .imgstyle {
-    padding-right: 40px;
+    padding-right: 67px;
   }
 }
 
@@ -539,11 +538,15 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:1056px){
-  .quant, .title, .title1 {
+@media screen and (max-width:1056px) {
+
+  .quant,
+  .title,
+  .title1 {
     left: 50px;
   }
 }
+
 @media screen and (max-width:1017px) {
   .productstyle {
     height: 560px;
@@ -570,9 +573,9 @@ swiper-container {
   .imgstyle {
     margin-top: 0;
     height: 349px;
-    padding-right: 0;    
-    }
-  
+    padding-right: 0;
+  }
+
 
   .imgsize {
     margin: auto;
@@ -749,15 +752,19 @@ swiper-container {
     --swiper-theme-color: transparent !important;
   }
 
-  .title,
+  .title {
+    left: 30px;
+    bottom: 112px;
+  }
+
   .quant {
-    left: 89px;
+    left: 30px;
     bottom: 107px;
   }
 
   .title1 {
-    left: 89px;
-    bottom: 65px;
+    left: 30px;
+    bottom: 84px;
   }
 
   .ourproj {
@@ -766,11 +773,11 @@ swiper-container {
 
   @media screen and (max-width:452px) {
 
-    .quant,
+    /* .quant,
     .title,
     .title1 {
-      left: 64px;
-    }
+      left: 30px;
+    } */
   }
 
   @media screen and (max-width:427px) {
@@ -781,8 +788,13 @@ swiper-container {
 
   @media screen and (max-width:413px) {
     .title1 {
-      left: 54px;
-      bottom: 59px;
+      /* left: 54px; */
+      bottom: 83px;
+    }
+
+    .title {
+      /* left: 54px; */
+      bottom: 114px;
     }
   }
 
@@ -790,12 +802,12 @@ swiper-container {
 
     .title,
     .quant {
-      left: 54px;
+      /* left: 54px; */
       bottom: 100px;
     }
 
     .title1 {
-      left: 54px;
+      /* left: 54px; */
       bottom: 62px;
     }
   }

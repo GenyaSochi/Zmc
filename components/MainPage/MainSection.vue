@@ -17,11 +17,10 @@
       <a href="#advant" class="cardcontainer">Наши преимущества</a>
       <a href="#cert" class="cardcontainer">Наши сертификаты</a>
       <a href="#photo" class="cardcontainer">Фотографии завода</a>
-      <NuxtLink to="/catalog" class="support"><img src="/public/img/ohomutnoback.webp" alt="опора" width="164">
-      </NuxtLink>
+      <a href="#cost" class="cost">Рассчитать стоимость</a>
     </div>
     <div class="digitsprod">
-      <p class="text">17 лет производим опоры для трубопроводов</p>
+      <p class="text"><i>17 лет производим опоры для трубопроводов</i></p>
       <p class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
       <p class="text">Наличие собственного конструкторского отдела</p>
       <p class="text">Изготовление опор по чертежам заказчика</p>
@@ -59,6 +58,7 @@ onUnmounted(() => {
   display: flex;
   gap: 10px;
 }
+
 .digits {
   font-size: 24px;
   display: flex;
@@ -121,13 +121,30 @@ onUnmounted(() => {
   text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
   font-weight: 500;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);  
+}
+
+.cost {
+  font-size: 22px;
+  border-radius: 10px;
+  width: 100%;
+  height: 166px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(30, 33, 61);
+  text-shadow: 0px 0px 2px #f6f6f6;
+  text-align: center;
+  font-weight: 500;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  display: none;
 }
 
 .cardcontainer:hover {
   box-shadow: 4px 4px 20px rgb(30, 33, 61);
   transition: box-shadow 0.5s ease-in-out;
-  /* transform: scale(1);  */
 }
 
 .text {
@@ -173,7 +190,7 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
-.support {
+/* .support {
   display: none;
   border-radius: 10px;
   width: 100%;
@@ -183,7 +200,7 @@ onUnmounted(() => {
   justify-content: center;
   animation: supp 5s infinite ease;
   overflow: hidden;
-}
+} */
 
 @keyframes supp {
   0% {
@@ -274,13 +291,13 @@ onUnmounted(() => {
     background: rgb(30, 33, 61);
     border-radius: 0;
     color: white;
-    font-size: 18px;
     border-radius: 10px;
-    font-weight: 400;
   }
+
   .video {
     height: 380px;
   }
+  
 }
 
 @media screen and (max-width:992px) {
@@ -330,8 +347,13 @@ onUnmounted(() => {
   .digitsprod {
     height: 142px;
   }
-
+/* 
   .support {
+    display: flex;
+    height: 130px;
+  } */
+
+  .cost {
     display: flex;
     height: 130px;
   }
@@ -346,7 +368,7 @@ onUnmounted(() => {
   .text {
     font-size: 16px;
   }
- 
+
   .digits {
     font-size: 16px;
     gap: 10px;
@@ -410,7 +432,7 @@ onUnmounted(() => {
     height: 28px;
     width: 30px;
     font-size: 13px;
-    padding-top: 3px;
+    padding-top: 5px;
   }
 
   .h1view {
@@ -421,6 +443,7 @@ onUnmounted(() => {
   .digitsprod {
     height: 140px;
   }
+
   .allnum {
     gap: 5px;
   }
@@ -430,7 +453,13 @@ onUnmounted(() => {
   .digitsprod {
     height: 171px;
   }
+
+  .cardcontainer,
+  .cost {
+    font-size: 18px;   
+  }
 }
+
 @media screen and (max-width:424px) {
   .digitsprod {
     height: 212px;
