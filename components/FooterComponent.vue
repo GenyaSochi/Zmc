@@ -112,7 +112,7 @@ const popup = ref(false)
 .imgall {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .imgvk {

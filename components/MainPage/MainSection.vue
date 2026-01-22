@@ -20,10 +20,11 @@
       <a href="#cost" class="cost">Рассчитать стоимость</a>
     </div>
     <div class="digitsprod">
-      <p class="text"><i>17 лет производим опоры для трубопроводов</i></p>
-      <p class="text">Продукция, выпускаемая заводом, соответствует отравслевым стандартам и нормам качества</p>
-      <p class="text">Наличие собственного конструкторского отдела</p>
-      <p class="text">Изготовление опор по чертежам заказчика</p>
+      <p class="text1">17 лет производим опоры для трубопроводов</p>
+      <p class="text2">Продукция завода соответствует отравслевым стандартам и нормам качества</p>
+      <p class="text3">Наличие собственного конструкторского отдела</p>
+      <p class="text4">Изготовление опор по чертежам заказчика</p>   
+
     </div>
   </section>
 </template>
@@ -60,7 +61,7 @@ onUnmounted(() => {
 }
 
 .digits {
-  font-size: 24px;
+  font-size: 29px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -78,16 +79,15 @@ onUnmounted(() => {
 }
 
 .digitsprod {
-  font-size: 22px;
-  height: 143px;
-  padding: 20px;
+  height: 195px;
+  /* padding: 20px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
       rgb(30, 33, 61) 96%);
   color: white;
   text-align: center;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
-  text-shadow: 0px 0px 2px #f6f6f6;
+  text-shadow: 0px 0px 2px #f6f6f6; */
 }
 
 .h1view {
@@ -95,12 +95,12 @@ onUnmounted(() => {
   color: black;
   padding-bottom: 20px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 500;  
 }
 
 .num {
   border: 2px solid white;
-  padding-top: 9px;
+  padding-top: 5px;
   color: white;
   height: 50px;
   width: 54px;
@@ -121,7 +121,7 @@ onUnmounted(() => {
   text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
   font-weight: 500;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);  
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
 }
 
 .cost {
@@ -147,8 +147,27 @@ onUnmounted(() => {
   transition: box-shadow 0.5s ease-in-out;
 }
 
-.text {
-  font-size: 22px;
+.text1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.text2 {
+  text-align: center;
+  font-size: 34px;
+  color: rgb(30, 33, 61);  
+}
+
+.text3 {
+  font-size: 40px;
+  text-align: center; 
+}
+
+.text4 {
+  text-align: center;
+  font-size: 34px;
+  color: rgb(30, 33, 61);  
 }
 
 .allcontainer {
@@ -295,9 +314,9 @@ onUnmounted(() => {
   }
 
   .video {
-    height: 380px;
+    height: 339px;
   }
-  
+
 }
 
 @media screen and (max-width:992px) {
@@ -347,7 +366,8 @@ onUnmounted(() => {
   .digitsprod {
     height: 142px;
   }
-/* 
+
+  /* 
   .support {
     display: flex;
     height: 130px;
@@ -456,7 +476,7 @@ onUnmounted(() => {
 
   .cardcontainer,
   .cost {
-    font-size: 18px;   
+    font-size: 18px;
   }
 }
 

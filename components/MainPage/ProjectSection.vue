@@ -162,7 +162,7 @@ const swiper = useSwiper(swiperCont, {
 }
 
 .butproj {
-  border: 2px solid white;
+  border: 2px solid gray;
   padding: 20px;
   border-radius: 10px;
   max-width: 240px;
@@ -188,10 +188,11 @@ const swiper = useSwiper(swiperCont, {
   color: black;
   padding-bottom: 38px;
   text-align: center;
+  font-weight: 600;
 }
 
 .advant {
-  padding: 32px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   border-radius: 10px;
   font-size: 22px;
   background-color: #eee;
@@ -481,7 +482,7 @@ swiper-container {
   }
 
   .imgsize {
-    height: 374px;
+    height: 374px;    
   }
 
   .advant {
@@ -498,7 +499,7 @@ swiper-container {
   }
 
   .imgstyle {
-    padding-right: 85px;
+    padding-right: 60px;
   }
 }
 
@@ -657,10 +658,17 @@ swiper-container {
 }
 
 @media screen and (max-width:912px) {
-
-  .quant,
-  .title,
+ 
+  .title {
+    left: 247px;
+    bottom: 156px;
+  }
+ 
   .title1 {
+    left: 247px;
+    bottom: 131px;
+  }
+    .quant {
     left: 247px;
   }
 
@@ -753,18 +761,18 @@ swiper-container {
   }
 
   .title {
-    left: 30px;
+    left: 103px;
     bottom: 112px;
   }
 
   .quant {
-    left: 30px;
+    left: 103px;
     bottom: 107px;
   }
 
   .title1 {
-    left: 30px;
-    bottom: 84px;
+    left: 103px;
+    bottom: 69px;
   }
 
   .ourproj {
