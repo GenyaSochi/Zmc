@@ -320,7 +320,7 @@ onBeforeUnmount(() => {
   .active {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     width: 373px;
     background-color: white;
     position: absolute;
@@ -409,7 +409,7 @@ onBeforeUnmount(() => {
   }
 
   .active {
-
+    padding-left: 25px;
     top: 68px;
   }
 
@@ -423,7 +423,7 @@ onBeforeUnmount(() => {
     }
 
     .logo {
-      left: -7px;
+      left: 2px;
     }
 
     .nav {

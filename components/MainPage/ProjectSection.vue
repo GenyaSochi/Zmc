@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="ourproj">наши проекты</h2>
+    <h2 class="ourproj">наше производство</h2>
     <div class="proj">
       <swiper-container class="swiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of slide" :key="el.id">
@@ -95,7 +95,7 @@ const swiper = useSwiper(swiperCont, {
   text-transform: uppercase;
   color: black;
   font-size: 34px;
-  padding-bottom: 30px;
+  padding: 34px;
 }
 
 .units {
@@ -149,7 +149,7 @@ const swiper = useSwiper(swiperCont, {
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 0px 18px 26px 26px;
+  padding: 0px 18px 26px 18px;
   border-radius: 10px;
   font-size: 22px;
   background-color: #eee;
@@ -176,7 +176,7 @@ const swiper = useSwiper(swiperCont, {
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 340px;  
+  padding-right: 340px;
 }
 
 .imgproj {
@@ -312,23 +312,24 @@ swiper-container {
 
   .quant {
     font-size: 58px;
-    left: 185px;
+    left: 142px;
   }
 
   .title {
     font-size: 28px;
-    left: 185px;
+    left: 142px;
     bottom: 268px;
   }
 
   .title1 {
     font-size: 28px;
-    left: 185px;
+    left: 142px;
     bottom: 232px;
   }
 
   .ourproj {
     font-size: 30px;
+    padding: 20px 0;
   }
 
   .ouradvant {
@@ -361,7 +362,7 @@ swiper-container {
   }
 
   .productstyle {
-    height: 540px;
+    height: 573px;
   }
 }
 
@@ -372,18 +373,26 @@ swiper-container {
   .title1 {
     left: 130px;
   }
+
+  .productstyle {
+    height: 599px;
+  }
 }
 
-@media screen and (max-width:1429px) {
+@media screen and (max-width:1430px) {
 
   .quant,
   .title,
   .title1 {
-    left: 100px;
+    left: 89px;
   }
 }
 
 @media screen and (max-width:1366px) {
+
+  .ourproj {
+    font-size: 28px;
+  }
 
   .advant {
     padding: 32px 10px 20px 10px;
@@ -391,16 +400,17 @@ swiper-container {
   }
 
   .advanttext {
-    padding-bottom: 47px;
-    font-size: 22px;
+    padding: 0 20px 47px 20px;
+    font-size: 24px;
   }
 
   .productstyle {
-    height: 560px;
+    height: 583px;
   }
 
   .ouradvant {
     font-size: 28px;
+    padding: 26px;
   }
 
   .quant {
@@ -444,10 +454,6 @@ swiper-container {
     padding-right: 115px;
   }
 
-  .ourproj {
-    font-size: 28px;
-  }
-
   .proj {
     height: 490px;
   }
@@ -482,7 +488,7 @@ swiper-container {
   }
 
   .imgsize {
-    height: 374px;    
+    height: 374px;
   }
 
   .advant {
@@ -521,13 +527,13 @@ swiper-container {
   }
 
   .imgstyle {
-    padding-right: 50px;
+    padding-right: 36px;
   }
 
   .production {
     height: 186px;
     gap: 26px;
-    padding: 38px 18px 26px 26px;
+    padding: 38px 18px 26px 18px;
   }
 
   .productstyle {
@@ -577,7 +583,6 @@ swiper-container {
     padding-right: 0;
   }
 
-
   .imgsize {
     margin: auto;
   }
@@ -585,7 +590,7 @@ swiper-container {
   .quant {
     font-size: 36px;
     top: 120px;
-    left: 291px;
+    left: 286px;
     color: white;
   }
 
@@ -594,25 +599,19 @@ swiper-container {
   }
 
   .title {
-    font-size: 17px;
     bottom: 167px;
-    left: 291px;
+    left: 286px;
     color: white;
   }
 
   .title1 {
-    font-size: 17px;
     bottom: 146px;
-    left: 291px;
+    left: 286px;
     color: white;
   }
 
   .textspan {
     font-size: 17px;
-  }
-
-  .ourproj {
-    font-size: 24px;
   }
 
   .ouradvant {
@@ -655,33 +654,47 @@ swiper-container {
     padding-top: 26px;
     font-size: 15px;
   }
+
+  .ourproj {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width:912px) {
- 
+
   .title {
-    left: 247px;
-    bottom: 156px;
+    left: 230px;
+    bottom: 162px;
   }
- 
+
   .title1 {
-    left: 247px;
-    bottom: 131px;
-  }
-    .quant {
-    left: 247px;
-  }
-
-}
-
-@media screen and (max-width:768px) {
-  .ourproj {
-    font-size: 20px;
+    left: 230px;
+    bottom: 137px;
   }
 
   .quant {
-    font-size: 28px;
-    left: 164px;
+    left: 230px;
+  }
+}
+
+@media screen and (max-width:813px) {
+
+  .title {
+    left: 205px;
+  }
+
+  .title1 {
+    left: 205px;
+  }
+
+  .quant {
+    left: 205px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .quant {
+    left: 158px;
     top: 125px;
   }
 
@@ -698,19 +711,18 @@ swiper-container {
     height: 337px;
   }
 
-
   .ouradvant {
     font-size: 20px;
   }
 
   .productstyle {
     padding-top: 20px;
-    height: 351px;
+    height: 280px;
   }
 
   .advanttext {
     font-size: 18px;
-    padding-bottom: 27px;
+    padding: 10px 20px 10px 20px;
   }
 
   .imgproj {
@@ -718,8 +730,8 @@ swiper-container {
   }
 
   .butproj {
-    margin-left: 38px;
     padding: 5px 15px 5px 20px;
+    border-radius: 5px;
   }
 
   swiper-container {
@@ -731,26 +743,41 @@ swiper-container {
   }
 
   .production {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0;
+    height: 75px;
   }
 
   .advant {
     display: none;
   }
 
-  .blockproduct,
-  .productstyle {
-    height: 0;
+  .blockproduct {
+    display: flex;
+    height: 122px;
+    padding: 0;
+  }
+
+  .production {
+    padding: 0 20px;
+    width: 768px;
+    height: 94px;
+    justify-content: space-evenly;
   }
 
   .title {
-    bottom: 114px;
-    left: 164px;
+    bottom: 109px;
+    left: 158px;
   }
 
   .title1 {
-    left: 164px;
+    left: 158px;
     bottom: 84px;
+  }
+
+  .ourproj {
+    font-size: 20px;
   }
 }
 
@@ -761,63 +788,129 @@ swiper-container {
   }
 
   .title {
-    left: 103px;
-    bottom: 112px;
+    left: 89px;
+    bottom: 113px;
   }
 
   .quant {
-    left: 103px;
-    bottom: 107px;
+    left: 89px;
+    top: 100px;
   }
 
   .title1 {
-    left: 103px;
-    bottom: 69px;
+    left: 89px;
+  }
+}
+
+@media screen and (max-width:465px) {
+  .title {
+    left: 40px;
+    bottom: 106px;
   }
 
-  .ourproj {
-    padding: 20px 0;
+  .quant {
+    left: 40px;
   }
 
-  @media screen and (max-width:452px) {
-
-    /* .quant,
-    .title,
-    .title1 {
-      left: 30px;
-    } */
+  .title1 {
+    left: 40px;
+    bottom: 83px;
   }
 
-  @media screen and (max-width:427px) {
-    .title {
-      bottom: 110px;
-    }
+  .ouradvant {
+    padding-bottom: 27px;
   }
 
-  @media screen and (max-width:413px) {
-    .title1 {
-      /* left: 54px; */
-      bottom: 83px;
-    }
+  .productstyle {
+    height: 315px;
+  }
+}
 
-    .title {
-      /* left: 54px; */
-      bottom: 114px;
-    }
+@media screen and (max-width:432px) {
+  .title {
+    left: 30px;
+    bottom: 108px;
   }
 
-  @media screen and (max-width:403px) {
+  .quant {
+    left: 30px;
+    top: 106px;
+  }
 
-    .title,
-    .quant {
-      /* left: 54px; */
-      bottom: 100px;
-    }
+  .title1 {
+    left: 30px;
+    bottom: 82px;
+  }
+}
 
-    .title1 {
-      /* left: 54px; */
-      bottom: 62px;
-    }
+@media screen and (max-width:422px) {
+  .title {
+    bottom: 108px;
+  }
+  .title1 {
+    bottom: 62px;
+  }
+}
+
+@media screen and (max-width:413px) {
+  .title1 {
+    font-size: 19px;
+    left: 20px;
+    bottom: 81px;
+  }
+
+  .title {
+    bottom: 107px;
+    font-size: 19px;
+    left: 20px;
+  }
+
+  .quant {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width:403px) {
+
+  .quant {
+    left: 10px;
+    top: 143px;
+  }
+
+  .title {
+    bottom: 83px;
+    left: 10px;
+  }
+
+  .title1 {
+    bottom: 57px;
+    left: 10px;
+  }
+
+  .blockproduct {
+    height: 96px;
+  }
+
+  .advanttext {
+    padding: 10px 20px 20px 20px;
+  }
+}
+
+@media screen and (max-width:385px) {
+  .title {
+    bottom: 100px;
+  }
+
+  .title1 {
+    bottom: 58px;
+  }
+
+  .quant {
+    top: 114px;
+  }
+
+  .productstyle {
+    height: 339px;
   }
 }
 </style>

@@ -5,7 +5,8 @@
       <swiper-container class="certswiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
-            <NuxtImg fit="cover" class="cert" sizes="200px sm:120px md:180px"  loading="lazy" :src="el.img" :alt="el.title"></NuxtImg>
+            <NuxtImg fit="cover" class="cert" sizes="200px sm:120px md:180px" loading="lazy" :src="el.img"
+              :alt="el.title"></NuxtImg>
           </a>
         </swiper-slide>
       </swiper-container>
@@ -21,10 +22,13 @@ register()
 const swiperCont = ref(null)
 
 const swiper = useSwiper(swiperCont, {
-  slidesPerView: 5,
+  slidesPerView: 6,
   pagination: true,
   breakpoints: {
     1600: {
+      slidesPerView: 6
+    },
+    1120: {
       slidesPerView: 5
     },
     768: {
@@ -33,8 +37,8 @@ const swiper = useSwiper(swiperCont, {
     576: {
       slidesPerView: 3
     },
-     420: {
-       slidesPerView: 3
+    420: {
+      slidesPerView: 3
     },
     320: {
       slidesPerView: 2
@@ -70,7 +74,7 @@ swiper-container {
   text-align: center;
   text-transform: uppercase;
   color: black;
-  padding-bottom: 40px;
+  padding: 20px 0;
   font-size: 34px;
 }
 
@@ -118,12 +122,14 @@ swiper-container {
     height: 298px;
   }
 }
-
+@media screen and (max-width:1017px) {
+  .certtext {
+    padding: 20px 0 20px 0;   
+  }
+}
 @media screen and (max-width:996px) {
   .certtext {
-    font-size: 24px;
-    padding-bottom: 25px;
-    padding-top: 26px;
+    font-size: 24px;    
   }
 
   .cert {
@@ -141,12 +147,11 @@ swiper-container {
 
 @media screen and (max-width:768px) {
   .certtext {
-    font-size: 20px;
-    padding-top: 110px;
+    font-size: 20px;   
   }
-
+  
   .cert {
-    height: 184px;
+    height: 184px;    
   }
 
   swiper-container {
@@ -178,25 +183,17 @@ swiper-container {
   }
 
   .certtext {
-    padding-bottom: 13px;
-    padding-top: 122px;
+    padding: 20px 0 30px 0;
   }
 
   .certcontainer {
     padding-left: 0;
     text-align: center;
   }
-
-  /* swiper-slide {
-    width: 186px;
+}
+@media screen and (max-width:407px){
+ .certtext {
+    padding-top: 26px; 
   }
-
-  swiper-container {
-    padding-left: 10px;
-  }
-
-  img {
-    width: 116px;
-  } */
 }
 </style>

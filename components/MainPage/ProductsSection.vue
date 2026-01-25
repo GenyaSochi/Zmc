@@ -52,14 +52,14 @@
 
 .apper {
   position: absolute;
-  left: 47%;
+  left: 48%;
   top: 33%;
   z-index: 1;
 }
 
 .exc {
   position: absolute;
-  right: 13%;
+  right: 15%;
   top: 31%;
   z-index: 1;
 }

@@ -42,7 +42,7 @@ const swiper = useSwiper(swiperCont, {
   watchSlidesProgress: true,
   breakpoints: {
     1366: {
-      slidesPerView: 5
+      slidesPerView: 6
     },
     992: {
       slidesPerView: 5

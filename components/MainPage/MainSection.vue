@@ -23,8 +23,7 @@
       <p class="text1">17 лет производим опоры для трубопроводов</p>
       <p class="text2">Продукция завода соответствует отравслевым стандартам и нормам качества</p>
       <p class="text3">Наличие собственного конструкторского отдела</p>
-      <p class="text4">Изготовление опор по чертежам заказчика</p>   
-
+      <p class="text4">Изготовление опор по чертежам заказчика</p>
     </div>
   </section>
 </template>
@@ -79,7 +78,7 @@ onUnmounted(() => {
 }
 
 .digitsprod {
-  height: 195px;
+  height: 278px;
   /* padding: 20px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
@@ -95,12 +94,12 @@ onUnmounted(() => {
   color: black;
   padding-bottom: 20px;
   font-size: 22px;
-  font-weight: 500;  
+  font-weight: 500;
 }
 
 .num {
   border: 2px solid white;
-  padding-top: 5px;
+  padding-top: 7px;
   color: white;
   height: 50px;
   width: 54px;
@@ -151,23 +150,26 @@ onUnmounted(() => {
   font-size: 40px;
   font-weight: 500;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .text2 {
   text-align: center;
   font-size: 34px;
-  color: rgb(30, 33, 61);  
+  color: rgb(30, 33, 61);
+  padding-bottom: 10px;
 }
 
 .text3 {
   font-size: 40px;
-  text-align: center; 
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .text4 {
   text-align: center;
   font-size: 34px;
-  color: rgb(30, 33, 61);  
+  color: rgb(30, 33, 61);
 }
 
 .allcontainer {
@@ -267,6 +269,24 @@ onUnmounted(() => {
   .video {
     height: 420px;
   }
+
+  .text1,
+  .text3 {
+    font-size: 36px;
+  }
+
+  .text2,
+  .text4 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:1449px) {
+  .digitsprod {
+    padding: 0 10px;
+    height: 235px;
+  }
+
 }
 
 @media screen and (max-width:1366px) {
@@ -290,7 +310,7 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 167px;
+    height: 192px;
     padding: 20px;
   }
 
@@ -317,6 +337,43 @@ onUnmounted(() => {
     height: 339px;
   }
 
+  .text1,
+  .text3 {
+    font-size: 32px;
+  }
+
+  .text2,
+  .text4 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width:1128px) {
+  .digitsprod {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width:1070px) {
+  .digitsprod {
+    height: 189px;
+  }
+
+  .text1,
+  .text3 {
+    font-size: 28px;
+  }
+
+  .text2,
+  .text4 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:1013px) {
+  .digitsprod {
+    height: 166px;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -364,7 +421,7 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 142px;
+    height: 200px;
   }
 
   /* 
@@ -406,11 +463,6 @@ onUnmounted(() => {
     gap: 10px;
   }
 
-  .digitsprod {
-    height: 145px;
-    background: linear-gradient(65deg, rgb(14, 13, 13) 18%, rgb(30, 33, 61) 75%);
-  }
-
   .num {
     height: 33px;
   }
@@ -425,6 +477,28 @@ onUnmounted(() => {
 
   .h1view {
     padding-bottom: 110px;
+  }
+
+  .text1,
+  .text3 {
+    font-size: 24px;
+  }
+
+  .text2,
+  .text4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:624px) {
+  .digitsprod {
+    height: 238px;
+  }
+}
+
+@media screen and (max-width:613px) {
+  .digitsprod {
+    height: 243px;
   }
 }
 
@@ -461,7 +535,7 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 140px;
+    height: 248px;
   }
 
   .allnum {
@@ -469,9 +543,21 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width:453px) {
+@media screen and (max-width:529px) {
   .digitsprod {
-    height: 171px;
+    height: 278px;
+  }
+}
+
+@media screen and (max-width:502px) {
+  .digitsprod {
+    height: 291px;
+  }
+}
+
+@media screen and (max-width:453px) {
+  .digitsprod {   
+    font-weight: 500;
   }
 
   .cardcontainer,
@@ -480,9 +566,22 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width:424px) {
+@media screen and (max-width:436px) {
   .digitsprod {
-    height: 212px;
+    height: 286px;
   }
 }
+
+@media screen and (max-width:381px) {
+  .digitsprod {
+    height: 322px;
+    
+  }
+}
+  @media screen and (max-width:366px) {
+  .digitsprod {
+    height: 342px;
+  }
+}
+
 </style>
