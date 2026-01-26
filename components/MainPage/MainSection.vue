@@ -78,7 +78,7 @@ onUnmounted(() => {
 }
 
 .digitsprod {
-  height: 278px;
+  height: 234px;
   /* padding: 20px;
   background: linear-gradient(90deg,
       rgb(14, 13, 13)39%,
