@@ -74,7 +74,7 @@ swiper-container {
   text-align: center;
   text-transform: uppercase;
   color: black;
-  padding: 20px 0;
+  padding: 40px 0;
   font-size: 34px;
 }
 
@@ -124,9 +124,10 @@ swiper-container {
 }
 @media screen and (max-width:1017px) {
   .certtext {
-    padding: 20px 0 20px 0;   
+    padding: 20px 0 50px 0;
+    } 
   }
-}
+
 @media screen and (max-width:996px) {
   .certtext {
     font-size: 24px;    

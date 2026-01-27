@@ -86,7 +86,7 @@ const swiper = useSwiper(swiperCont, {
   text-transform: uppercase;
   color: black;
   font-size: 34px;
-  padding: 30px 0;
+  padding: 30px 0 46px 0;
   text-align: center;
 }
 
@@ -186,7 +186,7 @@ const swiper = useSwiper(swiperCont, {
 .advanttext {
   font-size: 24px;
   color: black;
-  padding-bottom: 38px;
+  padding-bottom: 50px;
   text-align: center;
   font-weight: 600;
 }
@@ -531,17 +531,31 @@ swiper-container {
   }
 
   .production {
-    height: 186px;
+    width: 100%;
+    height: 65px;
     gap: 26px;
-    padding: 38px 18px 26px 18px;
+    padding: 0;
+    font-size: 18px;    
   }
 
   .productstyle {
-    height: 432px;
+    height: 580px;
   }
 
   .advant {
-    height: 186px;
+    width: 100%;
+    height: 65px; 
+    justify-content: center;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .blockproduct {
+    flex-direction: column;
+  }
+
+  .butproj {
+    display: none;
   }
 }
 
@@ -559,14 +573,14 @@ swiper-container {
     height: 560px;
   }
 
-  .blockproduct {
+  /* .blockproduct {
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     display: grid;
     justify-items: center;
     padding: 0 150px 0 150px;
     height: 408px;
-  }
+  } */
 
   .ouradvant {
     font-size: 26px;
@@ -742,7 +756,7 @@ swiper-container {
     font-size: 18px;
   }
 
-  .production {
+  /* .production {
     display: flex;
     flex-direction: row;
     border-radius: 0;
@@ -751,20 +765,20 @@ swiper-container {
 
   .advant {
     display: none;
-  }
-
+  } */
+  /* 
   .blockproduct {
     display: flex;
     height: 122px;
     padding: 0;
-  }
-
+  } */
+  /* 
   .production {
     padding: 0 20px;
     width: 768px;
     height: 94px;
     justify-content: space-evenly;
-  }
+  } */
 
   .title {
     bottom: 109px;
@@ -847,6 +861,7 @@ swiper-container {
   .title {
     bottom: 108px;
   }
+
   .title1 {
     bottom: 62px;
   }

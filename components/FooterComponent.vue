@@ -6,8 +6,9 @@
         Завод металлоконструкций Урал
       </p>
       <div>
-        <p class="contactmain">Контакты</p>
-        <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,<br>ул. Герцена, д. 9, пом. 10</p>
+        <p class="contact">Контакты</p>
+        <p class="contact">ООО "ЗМК Урал", 456783, г. Озёрск,</p>
+        <p class="contact">ул. Герцена, д. 9, пом. 10</p>
         <p class="contact">по будням с 8:00 до 17:00</p>
         <div style="display: flex; flex-direction: column;">
 
@@ -87,16 +88,12 @@ const popup = ref(false)
   display: flex;
   font-size: 20px;
   flex-direction: column;
+  gap: 10px;
 }
 
 .contact {
   font-size: 20px;
-  padding: 5px;
-}
-
-.contactmain {
-  font-size: 20px;
-  padding-bottom: 32px;
+  padding: 10px 0;
 }
 
 .confid {
@@ -179,11 +176,6 @@ const popup = ref(false)
     width: 236px;
     font-size: 19px;
   }
-
-  .contactmain {
-    padding-bottom: 10px;
-    font-size: 19px;
-  }
 }
 
 @media screen and (max-width:768px) {
@@ -234,12 +226,6 @@ const popup = ref(false)
     width: 212px;
   }
 
-  .contactmain {
-    padding-top: 10px;
-    padding-bottom: 11px;
-    font-size: 17px;
-  }
-
   .imgvk {
     width: 40px;
   }
@@ -277,7 +263,7 @@ const popup = ref(false)
 
     .confid {
       font-size: 15px;
-    }     
+    }
   }
 }
 </style>

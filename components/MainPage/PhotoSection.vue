@@ -54,7 +54,7 @@ const swiper = useSwiper(swiperCont, {
       slidesPerView: 3
     },
     420: {
-       slidesPerView: 3
+      slidesPerView: 3
     },
     320: {
       slidesPerView: 2
@@ -73,7 +73,7 @@ swiper-container {
 .photocontainer {
   text-align: center;
   cursor: pointer;
-  padding: 0 0 30px 0;
+  padding: 0px 0 60px 0;
 }
 
 .imgphoto {
@@ -110,6 +110,7 @@ swiper-container {
   swiper-container {
     height: 216px;
   }
+
   .photocontainer {
     padding: 0 0 20px 0;
   }

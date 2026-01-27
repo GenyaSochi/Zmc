@@ -22,7 +22,7 @@
 .prod {
   display: flex;
   gap: 22px;
-  padding: 30px;
+  padding: 30px 30px 80px 30px;
   position: relative;
 }
 
