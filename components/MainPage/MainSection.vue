@@ -580,8 +580,9 @@ onUnmounted(() => {
 }
   @media screen and (max-width:366px) {
   .digitsprod {
-    height: 342px;
+    height: 358px;
+    }
   }
-}
+
 
 </style>
