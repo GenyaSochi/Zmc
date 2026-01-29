@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
   border: 2px solid white;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
   padding: 5px;
-  width: 294px;
+  width: 100%;
   text-align: center;
   font-size: 20px;
 }
@@ -321,7 +321,7 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 373px;
+    width: minmax(100%, 373px);
     background-color: white;
     position: absolute;
     right: 0;

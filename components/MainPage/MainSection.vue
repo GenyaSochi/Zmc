@@ -77,18 +77,6 @@ onUnmounted(() => {
   box-shadow: 2px 2px 12px rgb(30, 33, 61);
 }
 
-.digitsprod {
-  height: 234px;
-  /* padding: 20px;
-  background: linear-gradient(90deg,
-      rgb(14, 13, 13)39%,
-      rgb(30, 33, 61) 96%);
-  color: white;
-  text-align: center;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);
-  text-shadow: 0px 0px 2px #f6f6f6; */
-}
-
 .h1view {
   text-align: center;
   color: black;
@@ -211,18 +199,6 @@ onUnmounted(() => {
   z-index: -1000;
 }
 
-/* .support {
-  display: none;
-  border-radius: 10px;
-  width: 100%;
-  height: 166px;
-  padding: 0 10px;
-  align-items: center;
-  justify-content: center;
-  animation: supp 5s infinite ease;
-  overflow: hidden;
-} */
-
 @keyframes supp {
   0% {
     transform: rotateY(180deg);
@@ -283,8 +259,7 @@ onUnmounted(() => {
 
 @media screen and (max-width:1449px) {
   .digitsprod {
-    padding: 0 10px;
-    height: 235px;
+    padding: 0 10px;    
   }
 
 }
@@ -310,7 +285,6 @@ onUnmounted(() => {
   }
 
   .digitsprod {
-    height: 192px;
     padding: 20px;
   }
 
@@ -348,17 +322,8 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width:1128px) {
-  .digitsprod {
-    height: 220px;
-  }
-}
-
 @media screen and (max-width:1070px) {
-  .digitsprod {
-    height: 189px;
-  }
-
+ 
   .text1,
   .text3 {
     font-size: 28px;
@@ -367,12 +332,6 @@ onUnmounted(() => {
   .text2,
   .text4 {
     font-size: 22px;
-  }
-}
-
-@media screen and (max-width:1013px) {
-  .digitsprod {
-    height: 166px;
   }
 }
 
@@ -419,16 +378,6 @@ onUnmounted(() => {
     padding: 20px 10px;
     gap: 10px;
   }
-
-  .digitsprod {
-    height: 200px;
-  }
-
-  /* 
-  .support {
-    display: flex;
-    height: 130px;
-  } */
 
   .cost {
     display: flex;
@@ -490,18 +439,6 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width:624px) {
-  .digitsprod {
-    height: 238px;
-  }
-}
-
-@media screen and (max-width:613px) {
-  .digitsprod {
-    height: 243px;
-  }
-}
-
 @media screen and (max-width:576px) {
   .video {
     height: 142px;
@@ -534,55 +471,15 @@ onUnmounted(() => {
     padding-top: 10px;
   }
 
-  .digitsprod {
-    height: 248px;
-  }
-
   .allnum {
     gap: 5px;
   }
 }
 
-@media screen and (max-width:529px) {
-  .digitsprod {
-    height: 278px;
-  }
-}
-
-@media screen and (max-width:502px) {
-  .digitsprod {
-    height: 291px;
-  }
-}
-
 @media screen and (max-width:453px) {
-  .digitsprod {   
-    font-weight: 500;
-  }
-
   .cardcontainer,
   .cost {
     font-size: 18px;
   }
 }
-
-@media screen and (max-width:436px) {
-  .digitsprod {
-    height: 286px;
-  }
-}
-
-@media screen and (max-width:381px) {
-  .digitsprod {
-    height: 322px;
-    
-  }
-}
-  @media screen and (max-width:366px) {
-  .digitsprod {
-    height: 358px;
-    }
-  }
-
-
 </style>
