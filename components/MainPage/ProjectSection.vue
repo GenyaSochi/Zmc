@@ -4,21 +4,20 @@
     <div class="proj">
       <swiper-container class="swiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of slide" :key="el.id">
-          <div class="imgstyle">
-            <p class="quant">{{ el.quantity }} <span class="units">{{ el.unit }}</span></p>
-            <p class="title">{{ el.title }}</p>
-            <p class="title1">{{ el.title1 }}</p>
+          <div class="imgstyle">           
+              <p class="quant">{{ el.quantity }}</p>
+              <p class="title">{{ el.title }}</p>          
             <NuxtImg class="imgsize" fit="cover" :src="el.imgproduct" :alt="el.title"></NuxtImg>
           </div>
         </swiper-slide>
       </swiper-container>
     </div>
-    <div id="advant" class="productstyle">
+    <div id="advant">
       <h2 class="ouradvant">наши преимущества</h2>
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Экскурсия на производство<a class="butproj" href="https://vk.com/zmkural">Смотреть</a>
+        <div class="production">Знакомство с производством<a class="butproj" href="https://vk.com/zmkural">Смотреть</a>
         </div>
         <!-- <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
             class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div> -->
@@ -44,10 +43,10 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const slide = [
-  { id: 1, title: 'выпущено готовой продукции', quantity: '> 1500', unit: 'тонн', imgproduct: '/img/masts.webp' },
-  { id: 2, title: 'производственных площадей', quantity: '> 2800', unit: 'м²', imgproduct: '/img/photozavod1.webp' },
-  { id: 3, title: 'продукции изготовлено по', title1: 'индивидуальным параметрам', quantity: '> 350', unit: 'тонн', imgproduct: '/img/nonstandart.webp' },
-  { id: 4, title: 'высококвалифицированных', title1: 'специалистов', quantity: '> 110', unit: '', imgproduct: '/img/spec.webp' },
+  { id: 1, title: 'выпущено готовой продукции', quantity: '> 1500 тонн', imgproduct: '/img/masts.webp' },
+  { id: 2, title: 'производственных площадей', quantity: '> 2800 м²', imgproduct: '/img/photozavod1.webp' },
+  { id: 3, title: 'продукции изготовлено по индивидуальным параметрам', quantity: '> 350 тонн', imgproduct: '/img/nonstandart.webp' },
+  { id: 4, title: 'высококвалифицированных специалистов', quantity: '> 110', imgproduct: '/img/spec.webp' },
 ]
 
 const swiperCont = ref(null)
@@ -103,17 +102,15 @@ const swiper = useSwiper(swiperCont, {
 }
 
 .quant {
-  text-transform: uppercase;
-  color: rgba(30, 33, 61, 1);
+  display: flex;
+  align-items: center;  
+  gap: 20px;
+  color: white;
   font-size: 70px;
   position: absolute;
-  font-weight: bold;
-  font-style: oblique;
-  top: 170px;
-  left: 364px;
+  font-weight: bold;  
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-style: oblique;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -130,17 +127,14 @@ const swiper = useSwiper(swiperCont, {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.title1 {
-  text-transform: uppercase;
-  color: rgba(30, 33, 61, 1);
-  font-size: 34px;
-  position: absolute;
-  left: 364px;
-  bottom: 194px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-style: oblique;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.imgstyle { 
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+  max-width: 100%;
+  height: auto;   
 }
 
 .production {
@@ -169,16 +163,6 @@ const swiper = useSwiper(swiperCont, {
   justify-content: center;
 }
 
-.imgstyle {
-  height: 560px;
-  overflow: hidden;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 340px;
-}
-
 .imgproj {
   width: 90px;
 }
@@ -202,12 +186,6 @@ const swiper = useSwiper(swiperCont, {
   flex-direction: column;
   justify-content: flex-start;
   box-shadow: 2px 2px 14px rgb(30, 33, 61);
-}
-
-.productstyle {
-  justify-content: center;
-  padding-top: 30px;
-  height: 520px;
 }
 
 .textspan {
@@ -256,39 +234,39 @@ swiper-container {
 @media screen and (max-width:2192px) {
 
   .quant,
-  .title,
-  .title1 {
+  .title
+  {
     left: 206px;
   }
 
-  .imgstyle {
+  /* .imgstyle {
     padding-right: 240px;
-  }
+  } */
 }
 
-@media screen and (max-width:1936px) {
+/* @media screen and (max-width:1936px) {
   .imgstyle {
     padding-right: 220px;
   }
-}
+} */
 
-@media screen and (max-width:1896px) {
+/* @media screen and (max-width:1896px) {
   .imgstyle {
     padding-right: 180px;
   }
-}
+} */
 
-@media screen and (max-width:1844px) {
+/* @media screen and (max-width:1844px) {
   .imgstyle {
     padding-right: 140px;
   }
-}
-
+} */
+/* 
 @media screen and (max-width:1820px) {
   .imgstyle {
     padding-right: 100px;
   }
-}
+} */
 
 @media screen and (max-width:1769px) {
 
@@ -299,16 +277,16 @@ swiper-container {
   }
 }
 
-@media screen and (max-width:1670px) {
+/* @media screen and (max-width:1670px) {
   .imgstyle {
     padding-right: 67px;
   }
-}
+} */
 
 @media screen and (max-width:1609px) {
-  .imgsize {
+  /* .imgsize {
     height: 470px;
-  }
+  } */
 
   .quant {
     font-size: 58px;
@@ -359,23 +337,14 @@ swiper-container {
     height: 335px;
     width: 310px;
     gap: 130px;
-  }
-
-  .productstyle {
-    height: 573px;
-  }
+  }  
 }
 
 @media screen and (max-width:1472px) {
-
   .quant,
   .title,
   .title1 {
     left: 130px;
-  }
-
-  .productstyle {
-    height: 599px;
   }
 }
 
@@ -404,10 +373,6 @@ swiper-container {
     font-size: 24px;
   }
 
-  .productstyle {
-    height: 583px;
-  }
-
   .ouradvant {
     font-size: 28px;
     padding: 26px;
@@ -434,25 +399,25 @@ swiper-container {
     font-size: 20px;
   }
 
-  .production {
+  /* .production {
     font-size: 20px;
     height: 335px;
     width: 270px;
     gap: 141px;
-  }
+  } */
 
   .butproj {
     font-size: 20px;
   }
 
   .imgsize {
-    height: 395px;
+    height: 450px;
   }
-
+/* 
   .imgstyle {
     height: 478px;
     padding-right: 115px;
-  }
+  } */
 
   .proj {
     height: 490px;
@@ -471,9 +436,9 @@ swiper-container {
     left: 120px;
   }
 
-  .imgstyle {
+  /* .imgstyle {
     padding-right: 66px;
-  }
+  } */
 }
 
 @media screen and (max-width:1162px) {
@@ -487,9 +452,9 @@ swiper-container {
     left: 66px;
   }
 
-  .imgsize {
+  /* .imgsize {
     height: 374px;
-  }
+  } */
 
   .advant {
     height: 382px;
@@ -500,13 +465,9 @@ swiper-container {
     gap: 180px;
   }
 
-  .productstyle {
-    height: 620px;
-  }
-
-  .imgstyle {
+  /* .imgstyle {
     padding-right: 60px;
-  }
+  } */
 }
 
 @media screen and (max-width:1095px) {
@@ -526,9 +487,9 @@ swiper-container {
     left: 60px;
   }
 
-  .imgstyle {
+  /* .imgstyle {
     padding-right: 36px;
-  }
+  } */
 
   .production {
     width: 100%;
@@ -536,10 +497,6 @@ swiper-container {
     gap: 26px;
     padding: 0;
     font-size: 18px;
-  }
-
-  .productstyle {
-    height: 580px;
   }
 
   .advant {
@@ -569,19 +526,6 @@ swiper-container {
 }
 
 @media screen and (max-width:1017px) {
-  .productstyle {
-    height: 534px;
-  }
-
-  /* .blockproduct {
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    justify-items: center;
-    padding: 0 150px 0 150px;
-    height: 408px;
-  } */
-
   .ouradvant {
     font-size: 26px;
   }
@@ -591,15 +535,15 @@ swiper-container {
     padding-bottom: 24px;
   }
 
-  .imgstyle {
+  /* .imgstyle {
     margin-top: 0;
     height: 349px;
     padding-right: 0;
-  }
+  } */
 
-  .imgsize {
-    margin: auto;
-  }
+    .imgsize {
+      height: 367px ;
+    }
 
   .quant {
     font-size: 36px;
@@ -716,10 +660,10 @@ swiper-container {
     font-size: 24px;
   }
 
-  .imgstyle {
+  /* .imgstyle {
     width: 100%;
     height: 303px;
-  }
+  } */
 
   .proj {
     height: 337px;
@@ -728,12 +672,6 @@ swiper-container {
   .ouradvant {
     font-size: 20px;
   }
-
-  .productstyle {
-    padding-top: 20px;
-    height: 523px;
-  }
-
 
   .advanttext {
     font-size: 18px;
@@ -835,16 +773,9 @@ swiper-container {
   .ouradvant {
     padding-bottom: 27px;
   }
-
-  .productstyle {
-    height: 539px;
   }
-}
 
-@media screen and (max-width:447px) {
-  .productstyle {
-    height: 573px;
-  }
+@media screen and (max-width:447px) { 
 }
 
 @media screen and (max-width:432px) {
@@ -893,6 +824,9 @@ swiper-container {
 }
 
 @media screen and (max-width:403px) {
+  .imgsize {
+    height: 300px;
+  }
 
   .quant {
     left: 10px;
@@ -917,11 +851,7 @@ swiper-container {
 
   .advanttext {
     padding: 10px 20px 20px 20px;
-  }
-
-  .productstyle {
-    height: 504px;
-  }
+  } 
 
   .production,
   .advant {
@@ -940,11 +870,6 @@ swiper-container {
 
   .quant {
     top: 114px;
-  }
-
-  .productstyle {
-    height: 474px;
-    padding-top: 0px;
-  }
+  } 
 }
 </style>

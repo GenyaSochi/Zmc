@@ -187,7 +187,7 @@ onUnmounted(() => {
 }
 
 .video {
-  height: 552px;
+  height: 525px;
   z-index: -1000;
   overflow: hidden;
 }
@@ -210,6 +210,63 @@ onUnmounted(() => {
 
   100% {
     transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width:1884px) {
+  .video {
+    height: 502px;
+  }
+}
+@media screen and (max-width:1876px) {
+  .video {
+    height: 507px;
+  }
+}
+@media screen and (max-width:1870px) {
+  .video {
+    height: 508px;
+  }
+}
+@media screen and (max-width:1866px) {
+  .video {
+    height: 500px;
+  }
+}
+@media screen and (max-width:1858px) {
+  .video {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width:1848px) {
+  .video {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width:1792px) {
+  .video {
+    height: 465px;
+  }
+}
+@media screen and (max-width:1668px) {
+  .video {
+    height: 442px;
+  }
+}
+@media screen and (max-width:1662px) {
+  .video {
+    height: 451px;
+  }
+}
+@media screen and (max-width:1656px) {
+  .video {
+    height: 448px;
+  }
+}
+@media screen and (max-width:1602px) {
+  .video {
+    height: 429px;
   }
 }
 
@@ -256,14 +313,39 @@ onUnmounted(() => {
     font-size: 30px;
   }
 }
-
+@media screen and (max-width:1524px) {
+  .video {
+    height: 412px;
+  }
+}
+@media screen and (max-width:1474px) {
+  .video {
+    height: 392px;
+  }
+}
+@media screen and (max-width:1458px) {
+  .video {
+    height: 393px;
+  }
+}
 @media screen and (max-width:1449px) {
   .digitsprod {
-    padding: 0 10px;    
+    padding: 0 10px;
   }
-
+   .video {
+    height: 392px;
+  }
 }
-
+@media screen and (max-width:1436px) {
+  .video {
+    height: 385px;
+  }
+}
+@media screen and (max-width:1390px) {
+  .video {
+    height: 372px;
+  }
+}
 @media screen and (max-width:1366px) {
   .h1view {
     font-size: 20px;
@@ -322,8 +404,38 @@ onUnmounted(() => {
   }
 }
 
+@media screen and (max-width:1226px) {
+  .video {
+    height: 328px;
+  }
+}
+@media screen and (max-width:1206px) {
+  .video {
+    height: 321px;
+  }
+}
+@media screen and (max-width:1186px) {
+  .video {
+    height: 316px;
+  }
+}
+@media screen and (max-width:1174px) {
+  .video {
+    height: 310px;
+  }
+}
+@media screen and (max-width:1114px) {
+  .video {
+    height: 296px;
+  }
+}
+@media screen and (max-width:1086px) {
+  .video {
+    height: 286px;
+  }
+}
 @media screen and (max-width:1070px) {
- 
+
   .text1,
   .text3 {
     font-size: 28px;
@@ -332,6 +444,12 @@ onUnmounted(() => {
   .text2,
   .text4 {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width:1030px){
+  .video{
+    height: 273px;
   }
 }
 
@@ -384,7 +502,12 @@ onUnmounted(() => {
     height: 130px;
   }
 }
+@media screen and (max-width:834px) {
 
+  .video {
+    height: 216px;
+  }
+}
 @media screen and (max-width:768px) {
 
   .video {
@@ -438,7 +561,11 @@ onUnmounted(() => {
     font-size: 20px;
   }
 }
-
+@media screen and (max-width:602px) {
+  .video {
+    height: 159px;
+  }
+}
 @media screen and (max-width:576px) {
   .video {
     height: 142px;
@@ -477,9 +604,18 @@ onUnmounted(() => {
 }
 
 @media screen and (max-width:453px) {
+
   .cardcontainer,
   .cost {
     font-size: 18px;
+  }
+  .video{
+    height: 135px;
+  }
+}
+@media screen and (max-width:453px){
+  .video{
+height: 125PX;
   }
 }
 </style>
