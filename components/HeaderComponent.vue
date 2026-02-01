@@ -368,7 +368,11 @@ onBeforeUnmount(() => {
     width: 120px;
   }
 }
-
+@media screen and (max-width: 930px){
+  .butnav{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .desktop-links,
   .desktop-contacts {

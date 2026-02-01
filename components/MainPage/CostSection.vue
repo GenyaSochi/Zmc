@@ -4,63 +4,36 @@
       <form class="formcost" @submit.prevent="sendData">
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
         <p class="workcost">по будням с 8.00 до 17.00</p>
-        
+
         <div class="allinputcost">
-          <input 
-            class="inputcost" 
-            type="text" 
-            id="name" 
-            name="name" 
-            v-model="name" 
-            required 
-            placeholder="Ваше имя"
-            :disabled="isLoading"
-          >
-          
-          <input 
-            class="inputcost" 
-            type="tel" 
-            id="phone" 
-            name="phone" 
-            v-model="phone" 
-            required 
-            placeholder="+7 (___) ___-__-__"
-            :disabled="isLoading"
-            @input="formatPhone"
-          >
-          
+          <input class="inputcost" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя"
+            :disabled="isLoading">
+
+          <input class="inputcost" type="tel" id="phone" name="phone" v-model="phone" required
+            placeholder="+7 (___) ___-__-__" :disabled="isLoading" @input="formatPhone">
+
           <div class="file-upload-container">
             <label for="file" class="file-label">
               <span class="file-label-text">Выбрать файл</span>
               <span class="file-name" v-if="file">{{ truncateFileName(file.name) }}</span>
-              <input 
-                type="file" 
-                id="file" 
-                name="file" 
-                @change="handleFiles" 
-                accept=".xls,.doc,.docx,.pdf,.odt,.xlsx,.txt,.rtf"
-                class="custom-file-input"
-                :disabled="isLoading"
-              >
+              <input type="file" id="file" name="file" @change="handleFiles"
+                accept=".xls,.doc,.docx,.pdf,.odt,.xlsx,.txt,.rtf" class="custom-file-input" :disabled="isLoading"
+                ref="fileInput">
             </label>
             <p class="file-hint">Поддерживаемые форматы: .xls, .doc, .docx, .pdf, .odt</p>
           </div>
-          
-          <button 
-            class="butcost" 
-            type="submit" 
-            :disabled="isLoading || !isFormValid"
-            :class="{ 'butcost--loading': isLoading }"
-          >
+
+          <button class="butcost" type="submit" :disabled="isLoading || !isFormValid"
+            :class="{ 'butcost--loading': isLoading }">
             <span v-if="!isLoading">Отправить заявку</span>
             <span v-else class="loader"></span>
           </button>
-          
-          <p v-if="message" class="message" :class="{ 'message--success': isSuccess, 'message--error': isError }">
+
+          <p v-if="message" class="message" :class="messageClass">
             {{ message }}
           </p>
         </div>
-        
+
         <div class="perscost" v-if="!message">
           <NuxtLink to="/privacy" class="butinfo">
             Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
@@ -68,17 +41,30 @@
         </div>
       </form>
 
-        <div> 
-           <div class="allswiper">
+      <div class="allswiper">
         <div class="textswiper">
-          <div class="textswiper_left blur"></div>
-          <div class="textswiper_right blur"></div>
+          <div class="blur blur-left"></div>
+          <div class="blur blur-right"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-        <swiper-container class="swiper" ref="swiperCont" :init="true" effect="cards">
-          <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
-        </swiper-container>
-      </div>
+
+        <div class="swiper-container">
+          <Swiper :modules="[SwiperEffectCards]" :effect="'cards'" :grabCursor="true" :loop="true" :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }" :cardsEffect="{
+              slideShadows: true,
+              rotate: true,
+              perSlideOffset: 8,
+              perSlideRotate: 2,
+            }" class="swiper">
+            <SwiperSlide v-for="card in cards" :key="card.id">
+              <div class="slide-content">
+                {{ card.title }}
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   </section>
@@ -86,6 +72,18 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { EffectCards } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-cards'
+
+const messageType = ref<'success' | 'error' | null>(null)
+
+const messageClass = computed(() => {
+  if (messageType.value === 'success') return 'message--success'
+  if (messageType.value === 'error') return 'message--error'
+  return ''
+})
 
 const file = ref<File | null>(null)
 const fileInput = ref<HTMLInputElement | null>(null)
@@ -94,25 +92,23 @@ const name = ref('')
 const phone = ref('')
 const message = ref('')
 const isLoading = ref(false)
-const isSuccess = ref(false)
-const isError = ref(false)
 
-// Валидация формы
+const SwiperEffectCards = EffectCards
+
 const isFormValid = computed(() => {
-  return name.value.trim().length >= 2 && 
-         phone.value.replace(/\D/g, '').length >= 11 &&
-         file.value !== null
+  return name.value.trim().length >= 2 &&
+    phone.value.replace(/\D/g, '').length >= 11 &&
+    file.value !== null
 })
 
-// Форматирование телефона
 const formatPhone = (event: Event) => {
   const input = event.target as HTMLInputElement
   let value = input.value.replace(/\D/g, '')
-  
+
   if (value.startsWith('7') || value.startsWith('8')) {
     value = value.substring(1)
   }
-  
+
   if (value.length > 0) {
     value = '+7 ' + value
       .substring(0, 10)
@@ -121,32 +117,51 @@ const formatPhone = (event: Event) => {
       .replace(/(\d{3})(\d{3})/, '($1) $2')
       .replace(/(\d{3})/, '($1')
   }
-  
+
   phone.value = value
 }
 
-// Обработка файлов
 const handleFiles = (event: Event) => {
   const target = event.target as HTMLInputElement
   if (target.files && target.files[0]) {
     const selectedFile = target.files[0]
-    const maxSize = 10 * 1024 * 1024 // 10MB
-    
-    if (selectedFile.size > maxSize) {
-      message.value = 'Файл слишком большой. Максимальный размер: 10MB'
-      isError.value = true
+    const maxSize = 10 * 1024 * 1024
+
+    const allowedExtensions = ['.xls', '.doc', '.docx', '.pdf', '.odt', '.xlsx', '.txt', '.rtf']
+    const fileExtension = selectedFile.name.toLowerCase().substring(selectedFile.name.lastIndexOf('.'))
+
+    if (!allowedExtensions.includes(fileExtension)) {
+      message.value = 'Недопустимый формат файла. Разрешены: .xls, .doc, .docx, .pdf, .odt, .xlsx, .txt, .rtf'
+      messageType.value = 'error'
       target.value = ''
       file.value = null
+
+      setTimeout(() => {
+        message.value = ''
+        messageType.value = null
+      }, 3000)
       return
     }
-    
+
+    if (selectedFile.size > maxSize) {
+      message.value = 'Файл слишком большой. Максимальный размер: 10MB'
+      messageType.value = 'error'
+      target.value = ''
+      file.value = null
+
+      setTimeout(() => {
+        message.value = ''
+        messageType.value = null
+      }, 3000)
+      return
+    }
+
     file.value = selectedFile
-    isError.value = false
+    messageType.value = null
     message.value = ''
   }
 }
 
-// Обрезка длинного имени файла
 const truncateFileName = (fileName: string) => {
   if (fileName.length > 30) {
     return fileName.substring(0, 15) + '...' + fileName.substring(fileName.length - 10)
@@ -154,15 +169,13 @@ const truncateFileName = (fileName: string) => {
   return fileName
 }
 
-// Отправка данных
 const sendData = async () => {
   if (!isFormValid.value || isLoading.value) return
-  
+
   isLoading.value = true
   message.value = ''
-  isSuccess.value = false
-  isError.value = false
-  
+  messageType.value = null
+
   try {
     const formData = new FormData()
     formData.append('name', name.value.trim())
@@ -170,39 +183,50 @@ const sendData = async () => {
     if (file.value) {
       formData.append('file', file.value)
     }
-    
+
     const data = await $fetch<{ ok: boolean, message: string }>('/api/orders/calc', {
       method: 'POST',
       body: formData
     })
-    
-    isSuccess.value = data.ok
-    isError.value = !data.ok
-    message.value = data.message
-    
+
     if (data.ok) {
-      // Сброс формы после успешной отправки
+      messageType.value = 'success'
+      message.value = data.message
+      
+      // Сразу сбрасываем форму при успешной отправке
+      resetForm()
+      
+      // Очищаем сообщение через 5 секунд
       setTimeout(() => {
-        resetForm()
+        message.value = ''
+        messageType.value = null
+      }, 5000)
+    } else {
+      messageType.value = 'error'
+      message.value = data.message
+      
+      // Очищаем сообщение об ошибке через 5 секунд
+      setTimeout(() => {
+        message.value = ''
+        messageType.value = null
       }, 5000)
     }
-    
+
   } catch (error) {
-    isError.value = true
+    messageType.value = 'error'
     message.value = 'Ошибка отправки. Попробуйте позже.'
     console.error('Ошибка отправки формы:', error)
-    
+
     setTimeout(() => {
       message.value = ''
-      isError.value = false
+      messageType.value = null
     }, 5000)
-    
+
   } finally {
     isLoading.value = false
   }
 }
 
-// Сброс формы
 const resetForm = () => {
   name.value = ''
   phone.value = ''
@@ -210,9 +234,6 @@ const resetForm = () => {
   if (fileInput.value) {
     fileInput.value.value = ''
   }
-  message.value = ''
-  isSuccess.value = false
-  isError.value = false
 }
 
 const cards = [
@@ -239,6 +260,7 @@ const cards = [
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .formcost {
@@ -312,6 +334,7 @@ const cards = [
 .file-label {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 12px 20px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -319,6 +342,7 @@ const cards = [
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 50px;
 }
 
 .file-label:hover {
@@ -340,6 +364,7 @@ const cards = [
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 1;
+  text-align: right;
 }
 
 .custom-file-input {
@@ -350,6 +375,7 @@ const cards = [
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
   margin: 5px 0 0;
+  text-align: center;
 }
 
 .butcost {
@@ -366,6 +392,8 @@ const cards = [
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 10px;
+  position: relative;
+  min-height: 50px;
 }
 
 .butcost:hover:not(:disabled) {
@@ -379,22 +407,24 @@ const cards = [
   cursor: not-allowed;
 }
 
-.butcost--loading {
-  position: relative;
-}
-
 .loader {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: white;
   animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .message {
@@ -403,6 +433,7 @@ const cards = [
   border-radius: 8px;
   margin: 10px 0 0;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .message--success {
@@ -428,6 +459,8 @@ const cards = [
   font-size: 14px;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: inline-block;
+  text-align: center;
 }
 
 .butinfo:hover {
@@ -435,12 +468,13 @@ const cards = [
   text-decoration: underline;
 }
 
-
+/* Стили для свайпера */
 .allswiper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .textswiper {
@@ -451,33 +485,30 @@ const cards = [
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .blur {
   position: absolute;
   height: 100%;
   width: 80px;
-  background: linear-gradient(90deg, 
-    rgba(245, 245, 245, 1) 0%, 
-    rgba(245, 245, 245, 0) 100%);
-  z-index: 1;
   top: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.textswiper_left {
+.blur-left {
   left: 0;
-  background: linear-gradient(90deg, 
-    rgba(245, 245, 245, 1) 0%, 
-    rgba(245, 245, 245, 0) 100%);
+  background: linear-gradient(90deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(245, 245, 245, 0) 100%);
 }
 
-.textswiper_right {
+.blur-right {
   right: 0;
-  background: linear-gradient(270deg, 
-    rgba(245, 245, 245, 1) 0%, 
-    rgba(245, 245, 245, 0) 100%);
-  transform: rotate(180deg);
+  background: linear-gradient(270deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(245, 245, 245, 0) 100%);
 }
 
 .msg {
@@ -489,21 +520,34 @@ const cards = [
   font-weight: 600;
   color: rgb(30, 33, 61);
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes marquee {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
-.swiper {
+.swiper-container {
   width: 100%;
   max-width: 400px;
   height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .slide-content {
@@ -513,56 +557,36 @@ const cards = [
   text-align: center;
   color: white;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 20px;
   height: 100%;
+  width: 100%;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  transition: transform 0.3s ease;
 }
 
-swiper-container::part(slide) {
-  background-color: rgb(30, 33, 61);
+/* Кастомные цвета для слайдов */
+.swiper-slide:nth-child(odd) .slide-content {
+  background: linear-gradient(135deg, rgb(30, 33, 61) 0%, rgb(47, 56, 131) 100%);
 }
 
-swiper-container::part(slide):nth-child(2n) {
-  background-color: rgb(161, 7, 7);
+.swiper-slide:nth-child(even) .slide-content {
+  background: linear-gradient(135deg, rgb(161, 7, 7) 0%, rgb(180, 20, 20) 100%);
 }
 
-swiper-container::part(slide):nth-child(3n) {
-  background-color: rgb(30, 33, 61);
-}
-
-swiper-container::part(slide):nth-child(4n) {
-  background-color: rgb(47, 56, 131);
-}
-
-swiper-container::part(slide):nth-child(5n) {
-  background-color: rgb(161, 7, 7);
-}
-
-swiper-container::part(slide):nth-child(6n) {
-  background-color: rgb(47, 56, 131);
-}
-
-swiper-container::part(slide):nth-child(7n) {
-  background-color: rgb(30, 33, 61);
-}
-
-swiper-container::part(slide):nth-child(8n) {
-  background-color: rgb(161, 7, 7);
-}
-
-
+/* Адаптивная верстка */
 @media screen and (max-width: 1200px) {
   .grid {
     gap: 30px;
   }
-  
+
   .h2cost {
     font-size: 26px;
   }
-  
-  .swiper {
+
+  .swiper-container {
     height: 280px;
   }
 }
@@ -572,30 +596,31 @@ swiper-container::part(slide):nth-child(8n) {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .formcost {
     padding: 25px;
+    order: 2;
   }
-  
+
+  .allswiper {
+    order: 1;
+  }
+
   .h2cost {
     font-size: 24px;
   }
-  
+
   .workcost {
     font-size: 16px;
     padding-bottom: 25px;
   }
-  
-  .allswiper {
-    order: -1;
-  }
-  
-  .swiper {
+
+  .swiper-container {
     height: 250px;
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .msg {
     font-size: 18px;
   }
@@ -605,34 +630,35 @@ swiper-container::part(slide):nth-child(8n) {
   #cost {
     padding: 30px 15px;
   }
-  
+
   .formcost {
     padding: 20px;
   }
-  
+
   .h2cost {
     font-size: 22px;
   }
-  
+
   .inputcost {
     height: 45px;
     font-size: 15px;
   }
-  
+
   .butcost {
     padding: 12px;
     font-size: 16px;
+    min-height: 45px;
   }
-  
-  .swiper {
+
+  .swiper-container {
     height: 220px;
   }
-  
+
   .slide-content {
     font-size: 16px;
     padding: 15px;
   }
-  
+
   .msg {
     font-size: 16px;
   }
@@ -642,35 +668,36 @@ swiper-container::part(slide):nth-child(8n) {
   .h2cost {
     font-size: 20px;
   }
-  
+
   .workcost {
     font-size: 15px;
   }
-  
+
   .inputcost {
     height: 42px;
   }
-  
+
   .file-label {
     padding: 10px 15px;
+    min-height: 42px;
   }
-  
+
   .file-label-text {
     font-size: 14px;
   }
-  
-  .swiper {
+
+  .swiper-container {
     height: 200px;
   }
-  
+
   .slide-content {
     font-size: 15px;
   }
-  
+
   .msg {
     font-size: 15px;
   }
-  
+
   .butinfo {
     font-size: 12px;
   }
@@ -680,37 +707,41 @@ swiper-container::part(slide):nth-child(8n) {
   #cost {
     padding: 20px 10px;
   }
-  
+
   .formcost {
     padding: 15px;
   }
-  
+
   .h2cost {
     font-size: 18px;
     padding-bottom: 10px;
   }
-  
+
   .workcost {
     font-size: 14px;
     padding-bottom: 20px;
   }
-  
+
   .allinputcost {
     gap: 15px;
   }
-  
-  .swiper {
+
+  .swiper-container {
     height: 180px;
   }
-  
+
   .slide-content {
     font-size: 14px;
     padding: 12px;
   }
-  
+
   .msg {
     font-size: 14px;
     animation-duration: 12s;
+  }
+
+  .blur {
+    width: 40px;
   }
 }
 </style>

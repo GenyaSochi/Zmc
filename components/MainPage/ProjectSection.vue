@@ -250,7 +250,6 @@ const swiper = useSwiper(swiperCont, {
   box-shadow: 3px 6px 9px rgb(30, 33, 61);
 }
 
-
 swiper-container {
   --swiper-theme-color: white !important;
   overflow: hidden;

@@ -55,17 +55,13 @@
 </template>
 
 <script setup lang="ts">
-// Добавляем обработку ошибок при получении данных
-const { data: jobs, error } = await useFetch('/api/jobs')
 
-// Можно также добавить обработку состояния загрузки
+const { data: jobs, error } = await useFetch('/api/jobs')
 const isLoading = ref(false)
 
 onMounted(async () => {
   isLoading.value = true
-  try {
-    // Если useFetch не используется как выше
-    // jobs.value = await $fetch('/api/jobs')
+  try {    
   } catch (err) {
     console.error('Ошибка загрузки вакансий:', err)
   } finally {

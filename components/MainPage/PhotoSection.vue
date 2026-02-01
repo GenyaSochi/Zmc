@@ -66,8 +66,25 @@ const swiper = useSwiper(swiperCont, {
 
 <style scoped>
 swiper-container {
+  --swiper-theme-color: white !important;
   overflow: hidden;
-  height: 340px;
+  height: 360px;
+}
+swiper-container::part(bullet) {
+  width: 20px !important;
+  height: 20px !important;
+  background: #ccc;
+  opacity: 1;
+  margin: 0 8px !important;
+  transition: all 0.3s ease;
+}
+
+swiper-container::part(bullet-active) {
+  background: rgb(107, 104, 104) !important;
+  width: 25px !important;
+  height: 25px !important;
+  border: 3px solid white !important;
+  box-shadow: 0 0 10px rgba(58, 57, 57, 0.5);
 }
 
 .photocontainer {

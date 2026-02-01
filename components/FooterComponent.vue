@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="footer-section">
-        <button @click="popup = true" class="lobtn">Заказать звонок</button>
+        <button @click="popup = true; closeMenu()" class="lobtn" >Заказать звонок</button>
         <p class="contact">Мы в социальных сетях</p>
         <div class="imgall">
           <a href="https://vk.com/zmkural" target="_blank" rel="noopener noreferrer">
@@ -47,6 +47,39 @@
 
 <script setup lang="ts">
 const popup = ref<boolean>(false)
+  const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+  document.body.style.overflow = ''
+}
+
+const closeOnClickOutside = (event: MouseEvent) => {
+  const target = event.target as HTMLElement
+  if (!target.closest('.mobile-menu') && !target.closest('.burger')) {
+    closeMenu()
+  }
+}
+
+const closeOnResize = () => {
+  if (window.innerWidth > 768) {
+    closeMenu()
+  }
+}
+
+const closeOnScroll = () => {
+  closeMenu()
+}
 </script>
 
 <style scoped>
@@ -93,9 +126,8 @@ const popup = ref<boolean>(false)
   display: flex;
   font-size: 20px;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  gap: 10px;  
 }
 
 .contact {
@@ -222,7 +254,14 @@ const popup = ref<boolean>(false)
     padding: 8px 0;
   }
 }
-
+ @media screen and (max-width: 676px) {
+  .footercont {
+    display: block;
+  }
+  .imgru{
+    padding-bottom: 3px;
+  }
+ }
 @media screen and (max-width: 576px) {
   .footer_color {
     padding: 15px;

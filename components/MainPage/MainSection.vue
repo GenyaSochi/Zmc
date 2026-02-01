@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="video">
-      <video autoplay muted playsinline id="myVideo" src="/video/start.mp4"></video>
+      <video autoplay muted playsinline id="myVideo" src="/video/start.mp4" type="video/mp4"></video>
     </div>
 
     <div class="digits">
@@ -62,8 +62,7 @@ onUnmounted(() => {
   min-height: 250px;
   max-height: 450px;
   overflow: hidden;
-  z-index: 1;
-  background-color: #000; 
+  z-index: 1; 
 }
 
 #myVideo {
