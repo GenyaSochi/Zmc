@@ -122,15 +122,16 @@ swiper-container {
     height: 298px;
   }
 }
+
 @media screen and (max-width:1017px) {
   .certtext {
     padding: 20px 0 50px 0;
-    } 
   }
+}
 
 @media screen and (max-width:996px) {
   .certtext {
-    font-size: 24px;    
+    font-size: 24px;
   }
 
   .cert {
@@ -148,11 +149,11 @@ swiper-container {
 
 @media screen and (max-width:768px) {
   .certtext {
-    font-size: 20px;   
+    font-size: 20px;
   }
-  
+
   .cert {
-    height: 184px;    
+    height: 184px;
   }
 
   swiper-container {
@@ -192,9 +193,10 @@ swiper-container {
     text-align: center;
   }
 }
-@media screen and (max-width:407px){
- .certtext {
-    padding-top: 26px; 
+
+@media screen and (max-width:407px) {
+  .certtext {
+    padding-top: 26px;
   }
 }
 </style>

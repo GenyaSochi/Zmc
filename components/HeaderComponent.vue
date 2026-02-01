@@ -1,59 +1,104 @@
 <template>
   <header class="navtag">
     <nav class="nav_all">
-      <NuxtLink to="/"><img src="/img/sitelogo1.webp" alt="logo" class="logo"></NuxtLink>
-      <div class="link">
+      <NuxtLink to="/" class="logo-link">
+        <img src="/img/sitelogo1.webp" alt="logo" class="logo">
+      </NuxtLink>
+      
+      <div class="link desktop-links">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
         <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
-      <div class="but">
-        <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
+      
+      <div class="desktop-contacts">
+        <div class="but">
+          <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
+        </div>
+        <div class="contacts">
+          <button @click="popup = true" class="buttel">+7 (351) 304-42-35</button>
+          <button @click="popup = true" class="buttel">+7 (900) 075-70-21</button>
+          <a href="mailto:sales@zmkural.com" class="buttel">sales@zmkural.com</a>
+        </div>
       </div>
-      <div>
-        <button @click="popup = true" class="buttel">+7 (351) 304-42-35</button>
-        <button @click="popup = true" class="buttel">+7 (900) 075-70-21</button>
-        <NuxtLink to="/#cost" class="buttel">sales@zmkural.com</NuxtLink>
-      </div>
-      <!-- <button class="butnav" @click="popup = true">Заказать звонок</button> -->
+      
+      <button class="burger" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
-    <button class="burger" @click="toggleMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <Teleport to="body">
-      <div @click="isMenuOpen = false" :style="`top:${top}px`" :class="{ hidden: !isMenuOpen, 'active': isMenuOpen }">
-        <NuxtLink to="/">Главная</NuxtLink>
-        <NuxtLink to="/catalog">Каталог продукции</NuxtLink>
-        <NuxtLink to="/projects">Проекты</NuxtLink>
-        <NuxtLink to="/contacts">Контакты</NuxtLink>
-        <NuxtLink to="/#cost">Рассчитать стоимость</NuxtLink>
-        <button @click="popup = true" class="butnav">Заказать звонок</button>
+    
+       <div v-if="isMenuOpen" class="mobile-menu-overlay" @click="closeMenu"></div>
+    <div class="mobile-menu" :class="{ 'mobile-menu--open': isMenuOpen }">
+      <div class="mobile-menu-content">
+        <NuxtLink to="/" class="mobile-nav" @click="closeMenu">Главная</NuxtLink>
+        <NuxtLink to="/catalog" class="mobile-nav" @click="closeMenu">Каталог продукции</NuxtLink>
+        <NuxtLink to="/projects" class="mobile-nav" @click="closeMenu">Проекты</NuxtLink>
+        <NuxtLink to="/contacts" class="mobile-nav" @click="closeMenu">Контакты</NuxtLink>
+        <NuxtLink to="/#cost" class="mobile-nav" @click="closeMenu">Рассчитать стоимость</NuxtLink>
+        
+        <div class="mobile-contacts">
+          <button @click="popup = true; closeMenu()" class="mobile-contact-btn">+7 (351) 304-42-35</button>
+          <button @click="popup = true; closeMenu()" class="mobile-contact-btn">+7 (900) 075-70-21</button>
+          <a href="mailto:sales@zmkural.com" class="mobile-contact-btn">sales@zmkural.com</a>
+          <button @click="popup = true; closeMenu()" class="mobile-butnav">Заказать звонок</button>
+        </div>
       </div>
-    </Teleport>
+    </div>
   </header>
+  
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
 const popup = ref(false)
 const isMenuOpen = ref(false)
-const top = ref(0)
 
 const toggleMenu = () => {
-  top.value = !isMenuOpen.value ? window.pageYOffset + 80 : 0
   isMenuOpen.value = !isMenuOpen.value
+
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
 }
-function closeOnScroll() {
+
+const closeMenu = () => {
   isMenuOpen.value = false
+  document.body.style.overflow = ''
 }
+
+const closeOnClickOutside = (event: MouseEvent) => {
+  const target = event.target as HTMLElement
+  if (!target.closest('.mobile-menu') && !target.closest('.burger')) {
+    closeMenu()
+  }
+}
+
+const closeOnResize = () => {
+  if (window.innerWidth > 768) {
+    closeMenu()
+  }
+}
+
+const closeOnScroll = () => {
+  closeMenu()
+}
+
 onMounted(() => {
+  document.addEventListener('click', closeOnClickOutside)
+  window.addEventListener('resize', closeOnResize)
   document.addEventListener('scroll', closeOnScroll)
 })
+
 onBeforeUnmount(() => {
+  document.removeEventListener('click', closeOnClickOutside)
+  window.removeEventListener('resize', closeOnResize)
   document.removeEventListener('scroll', closeOnScroll)
+  document.body.style.overflow = '' // Восстанавливаем скролл
 })
 </script>
 
@@ -61,374 +106,330 @@ onBeforeUnmount(() => {
 .navtag {
   padding: 10px 0;
   background-color: rgb(30, 33, 61);
-  font-family: 'Montserrat', light;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
   position: sticky;
   top: 0;
-  z-index: 100;
-  overflow: hidden;
-}
-
-.hidden,
-.active {
-  display: none;
+  z-index: 1000;
+  width: 100%;
 }
 
 .nav_all {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  text-decoration: none;
-  color: white;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  font-size: 20px;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
   height: 76px;
-  font-family: 'Montserrat', light;
 }
 
-.nav {
+.logo-link {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  text-decoration: none;
-  color: white;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  font-size: 20px;
-  height: 76px;
-  font-family: 'Montserrat', light;
-}
-
-.but {
-  font-size: 20px;
-  font-family: 'Montserrat', light;
-  padding: 5px;
-  display: flex;
-  gap: 30px;
-}
-
-.link {
-  display: flex;
-  gap: 60px;
-}
-
-.butnav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border: 2px solid white;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-}
-
-.buttel {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 20px;
-  font-family: 'Montserrat', light;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  width: 294px;
-  text-align: center;
-  font-size: 20px;
-}
-
-.burger {
-  display: none;
-  width: 50px;
-  height: 35px;
-  border: none;
-  position: absolute;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.burger span {
-  width: 50px;
-  height: 3px;
-  background: white;
-  text-shadow: 0px 0px #f6f6f6;
-  left: 10px;
-}
-
-.burger span:nth-child(1) {
-  transform: translateY(-10px);
-}
-
-.burger span:nth-child(3) {
-  transform: translateY(10px);
 }
 
 .logo {
   width: 142px;
-  padding: 0 20px;
-  box-shadow: 0px 0px #f6f6f6f6;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-@media screen and (max-width:1600px) {
+.logo:hover {
+  transform: scale(1.05);
+}
 
-  .navtag,
-  .nav,
-  .but,
-  .butnav {
-    font-size: 19px;
+.desktop-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav:hover {
+  color: #ccc;
+}
+
+.desktop-contacts {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.but {
+  display: flex;
+}
+
+.butnav {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.butnav:hover {
+  background-color: white;
+  color: rgb(30, 33, 61);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buttel {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.buttel:hover {
+  color: #ccc;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 76px;
+  right: -100%;
+  width: 100%;
+  max-width: 400px;
+  height: calc(100vh - 76px);
+  background-color: rgb(30, 33, 61);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-menu--open {
+  right: 0;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.mobile-nav {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s ease;
+}
+
+.mobile-nav:hover {
+  color: #ccc;
+}
+
+.mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-contact-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-contact-btn:hover {
+  color: #ccc;
+}
+
+.mobile-butnav {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.mobile-butnav:hover {
+  background-color: white;
+  color: rgb(30, 33, 61);
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-links {
+    gap: 20px;
   }
-
+  
   .nav {
-    justify-content: space-evenly;
-    padding-right: 20px;
-  }
-
-  .but {
-    gap: 15px;
-  }
-
-  .butnav {
-    width: 247px;
-  }
-
-  .link {
-    gap: 24px;
-  }
-
-  .logo {
-    width: 144px;
-  }
-}
-
-@media screen and (max-width:1366px) {
-
-  .navtag,
-  .nav,
-  .but,
-  .butnav {
-    font-size: 18px;
-  }
-
-  .nav {   
-    text-align: center;
-  }
-
-  .link {
-    gap: 10px;
-  }
-
-  .but {
-    gap: 30px;
-  }
-
-  .butnav {
-    /* width: 224px; */
-    display: none;
-  }
-
-  .logo {
-    /* width: 114px; */
-    padding-left: 20px;
-  }
-
-  .nav_all {
-    gap: 5px;
-  }
-
-  .buttel {
-    font-size: 18px;
-    width: 196px;
-  }
-}
-
-@media screen and (max-width:992px) {
-  .navtag {
-    padding-left: 5px;
-  }
-
-  .nav {
-    justify-content: space-evenly;
-    padding-left: 0;
-    font-size: 17px;
-    text-align: center;
-  }
-
-  .but {
-    gap: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
-  }
-
-  .butnav {
-    text-align: center;
-    width: 170px;
-  }
-
-  .link {
-    gap: 5px;
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .nav_all {
-    justify-content: space-around;
-  }
-
-  .buttel {
-    padding-left: 0;
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .but {
-    font-size: 20px;
-    display: none;
-  }
-
-  .buttel {
-    display: none;
-  }
-
-  .butnav {
-    font-size: 20px;
-    border: none;
-    width: 300px;
-    display: flex;
-    justify-content: flex-start;
-    padding: 0 0 10px 15px;
-  }
-
-  .burger {
-    display: flex;
-    flex-direction: column;
-    right: 25px;
-    top: 42px;
-  }
-
-  .navtag {
-    height: 90px;
-    font-size: 18px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .active {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: minmax(100%, 373px);
-    background-color: white;
-    position: absolute;
-    right: 0;
-    top: 90px;
-    z-index: 101;
-    padding-left: 10px;
-    background-color: rgb(30, 33, 61);
-    color: white;
     font-size: 16px;
-    padding-bottom: 8px;
   }
-
-  .link {
-    position: absolute;
+  
+  .desktop-contacts {
+    gap: 20px;
   }
-
-  .link.active {
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    transform: translateY(300px);
-    height: 200px;
+  
+  .butnav {
+    font-size: 14px;
+    padding: 8px 16px;
   }
-
-  .logo {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 20px;
-    width: 124px;
-  }
-
-  a {
-    font-size: 20px;
-    padding-left: 15px;    
+  
+  .buttel {
+    font-size: 13px;
   }
 }
 
-@media screen and (max-width:576px) {
-
-  .navtag {
-    padding: 24px 0;
-    height: 80px;
-    font-size: 18px;
+@media screen and (max-width: 992px) {
+  .nav_all {
+    padding: 0 15px;
   }
-
+  
+  .desktop-links {
+    gap: 15px;
+  }
+  
   .nav {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    padding-left: 20px;
-    height: 40px;
-    top: 29px;
-    position: absolute;
-    left: 650px;
     font-size: 15px;
   }
-
-  .link.active {
-    display: flex;
-  }
-
-  .but.active {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 272px;
-    gap: 18px;
-  }
-
-  /* .butnav {
-    border: none;
-    width: none;
-  } */
-
+  
   .logo {
-    position: absolute;
-    left: 10px;   
-    top: 14px;
+    width: 120px;
   }
+}
 
+@media screen and (max-width: 768px) {
+  .desktop-links,
+  .desktop-contacts {
+    display: none;
+  }
+  
   .burger {
-    right: 20px;
-    top: 33px;
+    display: flex;
   }
-
-  .active {
-    padding-left: 25px;
-    top: 68px;
+  
+  .mobile-menu-overlay {
+    display: block;
   }
-
-  .burger span {
-    width: 42px;
+  
+  .nav_all {
+    justify-content: space-between;
+    height: 70px;
   }
+  
+  .logo {
+    width: 110px;
+  }
+  
+  .mobile-menu {
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
+}
 
-  @media screen and (max-width:410px) {
-    .active {
-      padding-bottom: 3px;
-    }
-
-    .logo {
-      left: 2px;
-    }
-
-    .nav {
-      box-shadow: 1px 0px 6px rgb(114, 114, 114);
-    }
+@media screen and (max-width: 480px) {
+  .nav_all {
+    padding: 0 10px;
+    height: 60px;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .burger {
+    width: 25px;
+    height: 18px;
+  }
+  
+  .mobile-menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+    max-width: 100%;
+  }
+  
+  .mobile-menu-content {
+    padding: 15px;
+  }
+  
+  .mobile-nav {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  
+  .mobile-contact-btn {
+    font-size: 14px;
   }
 }
 </style>

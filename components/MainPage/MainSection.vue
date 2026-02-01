@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="video">
-      <video autoplay muted id="myVideo" src="/public/video/start.mp4"></video>
+      <video autoplay muted playsinline id="myVideo" src="/video/start.mp4"></video>
     </div>
 
     <div class="digits">
@@ -45,7 +45,7 @@ const incrementDigits = () => {
 
 let interval: NodeJS.Timeout
 onMounted(() => {
-  interval = setInterval(incrementDigits, 3000)
+  interval = setInterval(incrementDigits, 5000)
 })
 
 onUnmounted(() => {
@@ -54,9 +54,27 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.allnum {
-  display: flex;
-  gap: 10px;
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 756px;
+  min-height: 250px;
+  max-height: 450px;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #000; 
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
 }
 
 .digits {
@@ -67,555 +85,241 @@ onUnmounted(() => {
   align-items: center;
   text-align: center;
   background: linear-gradient(90deg,
-      rgb(14, 13, 13)39%,
-      rgb(30, 33, 61)96%);
+      rgb(14, 13, 13) 39%,
+      rgb(30, 33, 61) 96%);
   font-weight: 500;
   color: white;
   text-shadow: 0px 0px 2px #f6f6f6;
-  padding: 44px 0;
+  padding: 44px 20px;
   gap: 20px;
   box-shadow: 2px 2px 12px rgb(30, 33, 61);
 }
 
-.h1view {
-  text-align: center;
-  color: black;
-  padding-bottom: 20px;
-  font-size: 22px;
-  font-weight: 500;
+.allnum {
+  display: flex;
+  gap: 10px;
 }
 
 .num {
   border: 2px solid white;
-  padding-top: 7px;
+  padding: 7px 0;
   color: white;
   height: 50px;
   width: 54px;
   text-align: center;
-}
-
-.cardcontainer {
-  font-size: 22px;
-  border-radius: 10px;
-  width: 100%;
-  height: 166px;
-  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  background-color: rgb(30, 33, 61);
-  text-shadow: 0px 0px 2px #f6f6f6;
-  text-align: center;
-  font-weight: 500;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);
-}
-
-.cost {
-  font-size: 22px;
-  border-radius: 10px;
-  width: 100%;
-  height: 166px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: rgb(30, 33, 61);
-  text-shadow: 0px 0px 2px #f6f6f6;
-  text-align: center;
-  font-weight: 500;
-  box-shadow: 2px 2px 14px rgb(30, 33, 61);
-  display: none;
-}
-
-.cardcontainer:hover {
-  box-shadow: 4px 4px 20px rgb(30, 33, 61);
-  transition: box-shadow 0.5s ease-in-out;
-}
-
-.text1 {
-  font-size: 40px;
-  font-weight: 500;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.text2 {
-  text-align: center;
-  font-size: 34px;
-  color: rgb(30, 33, 61);
-  padding-bottom: 10px;
-}
-
-.text3 {
-  font-size: 40px;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.text4 {
-  text-align: center;
-  font-size: 34px;
-  color: rgb(30, 33, 61);
+  font-size: 24px;
+  border-radius: 5px;
 }
 
 .allcontainer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   background-color: white;
   padding: 80px 20px;
-  animation: cards cubic-bezier(.04, 1.01, 1, -1.07) infinite 5s;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.heading {
-  text-align: center;
-  color: black;
-  padding-bottom: 5px;
+.cardcontainer, .cost {
   font-size: 22px;
-  font-weight: 500;
-}
-
-.heading1 {
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(30, 33, 61);
+  text-shadow: 0px 0px 2px #f6f6f6;
   text-align: center;
-  color: black;
-  padding-bottom: 300px;
-  font-size: 22px;
   font-weight: 500;
+  box-shadow: 2px 2px 14px rgb(30, 33, 61);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  min-height: 166px;
+  text-decoration: none;
 }
 
-.video {
-  height: 525px;
-  z-index: -1000;
-  overflow: hidden;
+.cost {
+  display: flex;
+  background-color: #e74c3c; 
 }
 
-#myVideo {
-  position: absolute;
-  top: 80px;
-  width: 100%;
-  z-index: -1000;
+.cardcontainer:hover, .cost:hover {
+  box-shadow: 4px 4px 20px rgb(30, 33, 61);
+  transform: translateY(-5px);
 }
 
-@keyframes supp {
-  0% {
-    transform: rotateY(180deg);
-  }
-
-  50% {
-    transform: rotateY(140deg);
-  }
-
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-@media screen and (max-width:1884px) {
-  .video {
-    height: 502px;
-  }
-}
-@media screen and (max-width:1876px) {
-  .video {
-    height: 507px;
-  }
-}
-@media screen and (max-width:1870px) {
-  .video {
-    height: 508px;
-  }
-}
-@media screen and (max-width:1866px) {
-  .video {
-    height: 500px;
-  }
-}
-@media screen and (max-width:1858px) {
-  .video {
-    height: 500px;
-  }
+.digitsprod {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media screen and (max-width:1848px) {
-  .video {
-    height: 500px;
-  }
+.text1, .text3 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 20px;
+  color: #333;
 }
 
-@media screen and (max-width:1792px) {
-  .video {
-    height: 465px;
-  }
-}
-@media screen and (max-width:1668px) {
-  .video {
-    height: 442px;
-  }
-}
-@media screen and (max-width:1662px) {
-  .video {
-    height: 451px;
-  }
-}
-@media screen and (max-width:1656px) {
-  .video {
-    height: 448px;
-  }
-}
-@media screen and (max-width:1602px) {
-  .video {
-    height: 429px;
-  }
+.text2, .text4 {
+  text-align: center;
+  font-size: 34px;
+  color: rgb(30, 33, 61);
+  padding-bottom: 30px;
+  line-height: 1.4;
 }
 
-@media screen and (max-width:1600px) {
-
-  .h1view {
-    font-size: 22px;
-  }
-
-  .heading {
-    font-size: 22px;
-  }
-
-  .heading1 {
-    padding-bottom: 300px;
-  }
-
-  .digits {
-    font-size: 20px;
-    gap: 10px;
-  }
-
-  .num {
-    padding-top: 5px;
-    height: 42px;
-    width: 46px;
-  }
-
+@media screen and (max-width: 1200px) {
   .allcontainer {
+    grid-template-columns: repeat(2, 1fr);
     padding: 60px 20px;
   }
-
+  
   .video {
-    height: 420px;
+    height: 540px;
+    max-height: 500px;
   }
-
-  .text1,
-  .text3 {
+  
+  .text1, .text3 {
     font-size: 36px;
   }
-
-  .text2,
-  .text4 {
+  
+  .text2, .text4 {
     font-size: 30px;
   }
 }
-@media screen and (max-width:1524px) {
-  .video {
-    height: 412px;
-  }
-}
-@media screen and (max-width:1474px) {
-  .video {
-    height: 392px;
-  }
-}
-@media screen and (max-width:1458px) {
-  .video {
-    height: 393px;
-  }
-}
-@media screen and (max-width:1449px) {
-  .digitsprod {
-    padding: 0 10px;
-  }
-   .video {
-    height: 392px;
-  }
-}
-@media screen and (max-width:1436px) {
-  .video {
-    height: 385px;
-  }
-}
-@media screen and (max-width:1390px) {
-  .video {
-    height: 372px;
-  }
-}
-@media screen and (max-width:1366px) {
-  .h1view {
-    font-size: 20px;
-  }
 
-  .heading {
-    font-size: 20px;
-  }
-
-  .heading1 {
-    font-size: 20px;
-    padding-bottom: 275px;
-  }
-
+@media screen and (max-width: 992px) {
   .digits {
-    font-size: 20px;
-    gap: 10px;
-    padding: 43px 0;
-  }
-
-  .digitsprod {
-    padding: 20px;
-  }
-
-  .num {
-    padding-top: 6px;
-  }
-
-  .allcontainer {
-    padding: 40px 12px;
+    font-size: 22px;
+    padding: 30px 15px;
     gap: 15px;
-    overflow: hidden;
   }
-
-  .cardcontainer {
-    width: 100%;
-    height: 130px;
-    background: rgb(30, 33, 61);
-    border-radius: 0;
-    color: white;
-    border-radius: 10px;
+  
+  .num {
+    height: 45px;
+    width: 48px;
+    font-size: 20px;
+    padding: 5px 0;
   }
-
+  
+  .cardcontainer, .cost {
+    font-size: 20px;
+    min-height: 140px;
+  }
+  
   .video {
-    height: 339px;
+    height: 486px;
+    min-height: 220px;
+    max-height: 380px;
   }
-
-  .text1,
-  .text3 {
+  
+  .text1, .text3 {
     font-size: 32px;
   }
-
-  .text2,
-  .text4 {
+  
+  .text2, .text4 {
     font-size: 26px;
   }
-}
-
-@media screen and (max-width:1226px) {
-  .video {
-    height: 328px;
-  }
-}
-@media screen and (max-width:1206px) {
-  .video {
-    height: 321px;
-  }
-}
-@media screen and (max-width:1186px) {
-  .video {
-    height: 316px;
-  }
-}
-@media screen and (max-width:1174px) {
-  .video {
-    height: 310px;
-  }
-}
-@media screen and (max-width:1114px) {
-  .video {
-    height: 296px;
-  }
-}
-@media screen and (max-width:1086px) {
-  .video {
-    height: 286px;
-  }
-}
-@media screen and (max-width:1070px) {
-
-  .text1,
-  .text3 {
-    font-size: 28px;
-  }
-
-  .text2,
-  .text4 {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width:1030px){
-  .video{
-    height: 273px;
-  }
-}
-
-@media screen and (max-width:992px) {
-  .h1view {
-    font-size: 18px;
-    padding-bottom: 139px;
-  }
-
-  .heading {
-    font-size: 18px;
-  }
-
-  .heading1 {
-    font-size: 18px;
-    padding-bottom: 115px;
-  }
-
-  .video {
-    height: 240px;
-  }
-
-  .digits {
-    font-size: 18px;
-    gap: 5px;
-    padding: 30px 10px;
-    font-weight: 400;
-  }
-
-  .num {
-    padding-top: 4px;
-    height: 36px;
-    width: 40px;
-    font-size: 20px;
-  }
-
-  .text {
-    font-size: 20px;
-  }
-
-  .allcontainer[data-v-02b6184c] {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    padding: 20px 10px;
-    gap: 10px;
-  }
-
+  
   .cost {
     display: flex;
-    height: 130px;
+  }
+  .digitsprod{
+    padding-top: 20px;
   }
 }
-@media screen and (max-width:834px) {
 
-  .video {
-    height: 216px;
+@media screen and (max-width: 768px) {
+  .allcontainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 40px 15px;
   }
-}
-@media screen and (max-width:768px) {
-
-  .video {
-    height: 174px;
-  }
-
-  .text {
-    font-size: 16px;
-  }
-
+  
   .digits {
-    font-size: 16px;
-    gap: 10px;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 25px 15px;
+    gap: 15px;
   }
-
+  
   .num {
-    height: 34px;
+    height: 40px;
+    width: 42px;
     font-size: 18px;
   }
+  
+    .video {
+    height: 432px;
+    min-height: 200px;
+    max-height: 320px;
+  }
+   #myVideo {   
+    object-position: center 25%;
+  }
+  .text1, .text3 {
+    font-size: 28px;
+  }
+  
+  .text2, .text4 {
+    font-size: 22px;
+  }
+  
+  .digitsprod {
+    padding: 15px 15px;
+  }
+}
 
-  .allcontainer {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
+@media screen and (max-width: 480px) {
+  .video {
+     height: 378px;
+  }
+  #myVideo {
+    object-position: center 20%;
+  }
+  
+  .digits {
+    font-size: 18px;
     padding: 20px 10px;
-    gap: 10px;
   }
-
+  
   .num {
-    height: 33px;
+    height: 35px;
+    width: 38px;
+    font-size: 16px;
   }
-
-  .heading {
-    padding-bottom: 7px;
-  }
-
-  .heading1 {
-    padding-bottom: 75px;
-  }
-
-  .h1view {
-    padding-bottom: 110px;
-  }
-
-  .text1,
-  .text3 {
-    font-size: 24px;
-  }
-
-  .text2,
-  .text4 {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width:602px) {
-  .video {
-    height: 159px;
-  }
-}
-@media screen and (max-width:576px) {
-  .video {
-    height: 142px;
-  }
-
-  .heading {
-    padding-bottom: 5px;
-  }
-
-  .heading1 {
-    padding-bottom: 40px;
-  }
-
-  .allcontainer {
-    font-size: 17px;
-    padding: 10px;
-    gap: 5px;
-    grid-template-columns: 49% 49%;
-  }
-
-  .num {
-    height: 28px;
-    width: 30px;
-    font-size: 13px;
-    padding-top: 5px;
-  }
-
-  .h1view {
-    padding-bottom: 88px;
-    padding-top: 10px;
-  }
-
+  
   .allnum {
     gap: 5px;
   }
-}
-
-@media screen and (max-width:453px) {
-
-  .cardcontainer,
-  .cost {
+  
+  .cardcontainer, .cost {
     font-size: 18px;
+    min-height: 120px;
+    padding: 15px 5px;
   }
-  .video{
-    height: 135px;
+  
+  .text1, .text3 {
+    font-size: 24px;
+  }
+  
+  .text2, .text4 {
+    font-size: 20px;
   }
 }
-@media screen and (max-width:453px){
-  .video{
-height: 125PX;
-  }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.num:last-child {
+  animation: blink 3s infinite;
 }
 </style>

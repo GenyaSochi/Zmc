@@ -2,7 +2,7 @@
   <footer class="footer_color">
     <div class="footercont">
       <p class="footinfo">
-        <img src="/img/sitelogo1.webp" width="128px" class="imglogo" alt="logo">
+        <img src="/img/sitelogo1.webp" width="128" class="imglogo" alt="logo">
         Завод металлоконструкций Урал
       </p>
       <div>
@@ -11,49 +11,49 @@
         <p class="contact">ул. Герцена, д. 9, пом. 10</p>
         <p class="contact">по будням с 8:00 до 17:00</p>
         <div style="display: flex; flex-direction: column;">
-
-          <a class="contact" href="tel:+7(351)304-42-35">тел. +7(351) 304-42-35</a>
+          <a class="contact" href="tel:+73513044235">тел. +7 (351) 304-42-35</a>
           <a class="contact" href="mailto:sales@zmkural.com">sales@zmkural.com</a>
         </div>
       </div>
-      <div>
+      <div class="footer-section">
         <button @click="popup = true" class="lobtn">Заказать звонок</button>
         <p class="contact">Мы в социальных сетях</p>
         <div class="imgall">
-          <a href="https://vk.com/zmkural" target="_blank"><img src="/public/img/vk.webp" width="64" alt="vk"
-              class="imgvk"></a>
+          <a href="https://vk.com/zmkural" target="_blank" rel="noopener noreferrer">
+            <img src="/img/vk.webp" width="64" alt="VK" class="imgvk">
+          </a>
           <a href="https://rutube.ru/video/private/6ad6e7eb360789345ef4b4eff5f8b840/?p=rx3Cznl9PrpNST0nQtvdbQ"
-            target="_blank"><img src="/public/img/R_white.webp" width="30" alt="rutube" class="imgru"></a>
+            target="_blank" rel="noopener noreferrer">
+            <img src="/img/R_white.webp" width="30" alt="Rutube" class="imgru">
+          </a>
         </div>
-        <div style="display: flex; flex-direction: column;">
-          <NuxtLink to="/job" class="contact">Вакансии компании</NuxtLink>
-          <a href="companydetails.pdf" class="contact" target="_blank">Скачать реквизиты компании</a>
+        <div class="footer-links">
+          <NuxtLink to="/job" class="contact link">Вакансии компании</NuxtLink>
+          <a href="/companydetails.pdf" class="contact link" target="_blank" rel="noopener noreferrer">
+            Скачать реквизиты компании
+          </a>
         </div>
       </div>
     </div>
     <div class="confids">
       <p class="confid">&copy; 2024 «Завод металлоконструкций Урал»</p>
       <p class="confid">Все права защищены</p>
-      <NuxtLink class="confid" to="/privacy">Политика конфиденциальности</NuxtLink>
-      <NuxtLink class="confid" to="/lk">Личный кабинет</NuxtLink>
+      <NuxtLink class="confid link" to="/privacy">Политика конфиденциальности</NuxtLink>
+      <NuxtLink class="confid link" to="/lk">Личный кабинет</NuxtLink>
     </div>
   </footer>
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
 <script setup lang="ts">
-const popup = ref(false)
+const popup = ref<boolean>(false)
 </script>
 
 <style scoped>
-.politiclink {
-  font-size: 18px;
-}
-
 .footer_color {
   background: linear-gradient(90deg,
-      rgb(12, 13, 13)9%,
-      rgb(30, 33, 61)96%);
+      rgb(12, 13, 13) 9%,
+      rgb(30, 33, 61) 96%);
   color: white;
   padding: 20px;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
@@ -64,24 +64,29 @@ const popup = ref(false)
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding: 5px 5px 10px 5px;
+  padding: 5px 5px 10px;
+  margin-bottom: 20px;
 }
 
 .lobtn {
   border: 2px solid white;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   color: white;
   font-size: 20px;
   width: 247px;
   text-align: center;
   margin-bottom: 10px;
   text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .lobtn:hover {
   background: white;
   color: rgb(30, 33, 61);
-  transition: 2s;
+  text-shadow: none;
 }
 
 .footinfo {
@@ -89,44 +94,71 @@ const popup = ref(false)
   font-size: 20px;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .contact {
   font-size: 20px;
   padding: 10px 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.8;
 }
 
 .confid {
   font-size: 16px;
   text-align: center;
   padding-bottom: 10px;
+  margin: 0;
 }
 
 .imglogo {
   width: 104px;
+  height: auto;
 }
 
 .imgall {
   display: flex;
   align-items: center;
   gap: 30px;
+  justify-content: center;
+  margin: 10px 0;
 }
 
-.imgvk {
-  width: 64px;
-}
-
+.imgvk,
 .imgru {
-  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.imgvk:hover,
+.imgru:hover {
+  transform: scale(1.1);
 }
 
 .confids {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
 }
 
-@media screen and (max-width:1366px) {
+.footer-section,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+@media screen and (max-width: 1366px) {
   .lobtn {
     width: 224px;
   }
@@ -135,29 +167,17 @@ const popup = ref(false)
     width: 82px;
   }
 
-  .footer_color {
-    padding: 20px 20px 20px 20px;
-  }
-
-  .confid {
-    font-size: 19px;
-  }
-
+  .confid,
   .contact {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width:992px) {
-
+@media screen and (max-width: 992px) {
   .contact,
   .footinfo,
-  .info {
-    font-size: 19px;
-  }
-
-  .confid {
-    font-size: 19px;
+  .lobtn {
+    font-size: 18px;
   }
 
   .footinfo {
@@ -165,27 +185,23 @@ const popup = ref(false)
   }
 
   .footercont {
-    display: grid;
-    align-items: center;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    padding-bottom: 10px;
+    gap: 30px;
   }
 
   .lobtn {
     width: 236px;
-    font-size: 19px;
   }
 }
 
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
   .lobtn {
     width: 222px;
+    font-size: 17px;
   }
 
   .confid {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .imgvk {
@@ -193,77 +209,67 @@ const popup = ref(false)
   }
 
   .imgru {
-    padding-bottom: 10px;
+    width: 28px;
   }
 
   .footercont {
-    display: flex;
-    text-align: center;
     flex-direction: column;
-  }
-
-  .imgall {
-    gap: 20px;
-    justify-content: center;
+    text-align: center;
   }
 
   .contact {
-    padding-top: 10px;
-    padding-bottom: 10px;
     font-size: 17px;
+    padding: 8px 0;
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .footer_color {
-    padding: 10px 10px 10px 10px;
+    padding: 15px;
   }
 
   .lobtn {
-    margin-bottom: 5px;
-    font-size: 17px;
-    padding: 5px 0 5px 0;
     width: 212px;
+    font-size: 16px;
+    padding: 8px 0;
+    margin: 5px 0 15px;
   }
 
   .imgvk {
-    width: 40px;
+    width: 50px;
   }
 
   .imgru {
     width: 24px;
-    padding-bottom: 5px;
   }
 
   .confid {
-    font-size: 16px;
+    font-size: 14px;
+    padding-bottom: 8px;
   }
 
-  @media screen and (max-width:410px) {
-    .contactmain {
-      padding-top: 6px;
-    }
+  .contact {
+    font-size: 16px;
+  }
+}
 
-    .lobtn {
-      margin-bottom: 24px;
-    }
+@media screen and (max-width: 410px) {
+  .footer_color {
+    padding: 10px;
+  }
 
-    .footer_color {
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
-      padding: 0;
-    }
+  .lobtn {
+    width: 200px;
+    font-size: 15px;
+    margin: 10px 0;
+  }
 
-    .lobtn {
-      width: 210px;
-      font-size: 16px;
-      margin: 10px 0;
-    }
+  .confid {
+    font-size: 13px;
+  }
 
-    .confid {
-      font-size: 15px;
-    }
+  .contact {
+    font-size: 15px;
   }
 }
 </style>

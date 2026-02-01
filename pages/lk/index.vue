@@ -32,8 +32,7 @@ const pass = ref('')
 const email = ref('')
 const userStore = useUser()
 const message = ref('')
-// const user = ref({} as {email:string, pass:string, pass2?:string})//нужно ли добавлять юзера для этой страницы?
-// const route = useRoute()
+
 
 definePageMeta({
   layout: 'admin',

@@ -1,85 +1,219 @@
 <template>
   <section id="cost">
     <div class="grid">
-      <form class="formcost" @submit.prevent>
+      <form class="formcost" @submit.prevent="sendData">
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
         <p class="workcost">по будням с 8.00 до 17.00</p>
+        
         <div class="allinputcost">
-          <input class="inputcost" type="text" id="name" name="name" v-model="name" required placeholder="Ваше имя...">
-          <input class="inputcost" type="phone" id="phone" name="phone" v-model="phone" required placeholder="+7">
-          <input type="file" id="file" name="file" @change="handleFiles" required accept=".xls, .doc, .docx, .pdf, .odt"
-            class="custom-file-input">
-          <p v-if="file">{{ file.name }}</p>
-          <button class="butcost" type="submit" @click="sendData">Отправить заявку</button>
-          <p v-if="message">{{ message }}</p>
+          <input 
+            class="inputcost" 
+            type="text" 
+            id="name" 
+            name="name" 
+            v-model="name" 
+            required 
+            placeholder="Ваше имя"
+            :disabled="isLoading"
+          >
+          
+          <input 
+            class="inputcost" 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            v-model="phone" 
+            required 
+            placeholder="+7 (___) ___-__-__"
+            :disabled="isLoading"
+            @input="formatPhone"
+          >
+          
+          <div class="file-upload-container">
+            <label for="file" class="file-label">
+              <span class="file-label-text">Выбрать файл</span>
+              <span class="file-name" v-if="file">{{ truncateFileName(file.name) }}</span>
+              <input 
+                type="file" 
+                id="file" 
+                name="file" 
+                @change="handleFiles" 
+                accept=".xls,.doc,.docx,.pdf,.odt,.xlsx,.txt,.rtf"
+                class="custom-file-input"
+                :disabled="isLoading"
+              >
+            </label>
+            <p class="file-hint">Поддерживаемые форматы: .xls, .doc, .docx, .pdf, .odt</p>
+          </div>
+          
+          <button 
+            class="butcost" 
+            type="submit" 
+            :disabled="isLoading || !isFormValid"
+            :class="{ 'butcost--loading': isLoading }"
+          >
+            <span v-if="!isLoading">Отправить заявку</span>
+            <span v-else class="loader"></span>
+          </button>
+          
+          <p v-if="message" class="message" :class="{ 'message--success': isSuccess, 'message--error': isError }">
+            {{ message }}
+          </p>
         </div>
+        
         <div class="perscost" v-if="!message">
-          <NuxtLink to="/privacy" class="butinfo">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
+          <NuxtLink to="/privacy" class="butinfo">
+            Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных
           </NuxtLink>
         </div>
       </form>
-      <div class="allswiper">
+
+        <div> 
+           <div class="allswiper">
         <div class="textswiper">
           <div class="textswiper_left blur"></div>
           <div class="textswiper_right blur"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-        <swiper-container class="swiper" ref="swiperCont" :init="true" :modules="modules" effect="cards">
+        <swiper-container class="swiper" ref="swiperCont" :init="true" effect="cards">
           <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
         </swiper-container>
+      </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { EffectCards } from 'swiper/modules'
-import 'swiper/css'
-const modules = [EffectCards]
-const file = ref(null as any)
-const target = ref(null as HTMLInputElement | null)
+import { ref, computed } from 'vue'
+
+const file = ref<File | null>(null)
+const fileInput = ref<HTMLInputElement | null>(null)
 
 const name = ref('')
 const phone = ref('')
 const message = ref('')
-const handleFiles = (event: Event) => {
-  target.value = event.target as HTMLInputElement
-  // @ts-ignore
-  file.value = target.value.files[0]
-}
+const isLoading = ref(false)
+const isSuccess = ref(false)
+const isError = ref(false)
 
-const sendData = async () => {
-  const fD = new FormData()
-  fD.append('zayavka', 'ok')
-  fD.append('name', name.value)
-  fD.append('phone', phone.value)
-  fD.append('file', file.value)
-  const data = await $fetch<{ ok: Boolean, message: string }>('/api/orders/calc', {
-    method: 'POST',
-    body: fD
-  })
-  console.log(data)
-  message.value = data.message
-  setTimeout(() => {
-    message.value = ''
-    name.value = ''
-    phone.value = ''
-    file.value = null
-    if (target.value) target.value.value = ''
-  }, 10000)
-}
-
-
-const swiperCont = ref(null)
-const swiper = useSwiper(swiperCont, {
-  effect: 'cards',
-  grabCursor: true,
-  cardsEffect: {
-    rotate: true,
-    perSlideOffset: 8
-  },
-  loop: true,
+// Валидация формы
+const isFormValid = computed(() => {
+  return name.value.trim().length >= 2 && 
+         phone.value.replace(/\D/g, '').length >= 11 &&
+         file.value !== null
 })
+
+// Форматирование телефона
+const formatPhone = (event: Event) => {
+  const input = event.target as HTMLInputElement
+  let value = input.value.replace(/\D/g, '')
+  
+  if (value.startsWith('7') || value.startsWith('8')) {
+    value = value.substring(1)
+  }
+  
+  if (value.length > 0) {
+    value = '+7 ' + value
+      .substring(0, 10)
+      .replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '($1) $2-$3-$4')
+      .replace(/(\d{3})(\d{3})(\d{2})/, '($1) $2-$3')
+      .replace(/(\d{3})(\d{3})/, '($1) $2')
+      .replace(/(\d{3})/, '($1')
+  }
+  
+  phone.value = value
+}
+
+// Обработка файлов
+const handleFiles = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  if (target.files && target.files[0]) {
+    const selectedFile = target.files[0]
+    const maxSize = 10 * 1024 * 1024 // 10MB
+    
+    if (selectedFile.size > maxSize) {
+      message.value = 'Файл слишком большой. Максимальный размер: 10MB'
+      isError.value = true
+      target.value = ''
+      file.value = null
+      return
+    }
+    
+    file.value = selectedFile
+    isError.value = false
+    message.value = ''
+  }
+}
+
+// Обрезка длинного имени файла
+const truncateFileName = (fileName: string) => {
+  if (fileName.length > 30) {
+    return fileName.substring(0, 15) + '...' + fileName.substring(fileName.length - 10)
+  }
+  return fileName
+}
+
+// Отправка данных
+const sendData = async () => {
+  if (!isFormValid.value || isLoading.value) return
+  
+  isLoading.value = true
+  message.value = ''
+  isSuccess.value = false
+  isError.value = false
+  
+  try {
+    const formData = new FormData()
+    formData.append('name', name.value.trim())
+    formData.append('phone', phone.value.replace(/\D/g, ''))
+    if (file.value) {
+      formData.append('file', file.value)
+    }
+    
+    const data = await $fetch<{ ok: boolean, message: string }>('/api/orders/calc', {
+      method: 'POST',
+      body: formData
+    })
+    
+    isSuccess.value = data.ok
+    isError.value = !data.ok
+    message.value = data.message
+    
+    if (data.ok) {
+      // Сброс формы после успешной отправки
+      setTimeout(() => {
+        resetForm()
+      }, 5000)
+    }
+    
+  } catch (error) {
+    isError.value = true
+    message.value = 'Ошибка отправки. Попробуйте позже.'
+    console.error('Ошибка отправки формы:', error)
+    
+    setTimeout(() => {
+      message.value = ''
+      isError.value = false
+    }, 5000)
+    
+  } finally {
+    isLoading.value = false
+  }
+}
+
+// Сброс формы
+const resetForm = () => {
+  name.value = ''
+  phone.value = ''
+  file.value = null
+  if (fileInput.value) {
+    fileInput.value.value = ''
+  }
+  message.value = ''
+  isSuccess.value = false
+  isError.value = false
+}
 
 const cards = [
   { id: 1, title: 'Плазменная резка металла' },
@@ -94,462 +228,489 @@ const cards = [
 </script>
 
 <style scoped>
-.allswiper {
-  overflow: hidden;
+#cost {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 60% 40%;
-  padding: 0 30px 30px 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.custom-file-input {
-  font-size: 18px;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  width: 216px;
-}
-
-.swiper swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.formcost {
+  background: linear-gradient(135deg, rgb(7, 7, 7) 0%, rgb(30, 33, 61) 100%);
   color: white;
-  font-size: 20px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  border-radius: 10px;
-}
-
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-.custom-file-input::before {
-  content: 'Выбрать файл';
-  display: inline-block;
-  background: rgb(30, 33, 61);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.custom-file-input:hover::before {
-  background: #0056b3;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .h2cost {
   text-align: center;
-  padding: 30px 0;
-  font-size: 20px;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-}
-
-.allcards {
-  gap: 30px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.swiper {
-  width: 340px;
-  height: 264px;
-  overflow: visible;
-  max-width: 400px;
-  padding-top: 20px;
-}
-
-.swiper swiper-slide:nth-child(1n) {
-  background-color: rgb(30, 33, 61);
-}
-
-.swiper swiper-slide:nth-child(2n) {
-  background-color: rgb(161, 7, 7);
-}
-
-.swiper swiper-slide:nth-child(3n) {
-  background-color: rgb(30, 33, 61);
-}
-
-.swiper swiper-slide:nth-child(4n) {
-  background-color: rgb(47, 56, 131);
-}
-
-.swiper swiper-slide:nth-child(5n) {
-  background-color: rgb(161, 7, 7);
-}
-
-.swiper swiper-slide:nth-child(6n) {
-  background-color: rgb(47, 56, 131);
-}
-
-.swiper swiper-slide:nth-child(7n) {
-  background-color: rgb(30, 33, 61);
-}
-
-.swiper swiper-slide:nth-child(8n) {
-  background-color: rgb(161, 7, 7);
-}
-
-.textswiper {
-  text-align: center;
-  color: black;
-  text-transform: uppercase;
-  position: relative;
-  margin: 0 80px;
-  padding: 20px 0;
-  overflow: hidden;
-}
-
-.blur {
-  position: absolute;
-  height: 91px;
-  width: 87px;
-  background-color: white;
-  z-index: 1;
-  filter: blur(10px);
-}
-
-.textswiper_left {
-  left: -43px;
-  top: -15px
-}
-
-.textswiper_right {
-  right: -43px;
-  top: -15px
-}
-
-.formcost {
-  background: linear-gradient(90deg,
-      rgb(7, 7, 7)39%,
-      rgb(30, 33, 61)96%);
+  padding: 0 0 15px 0;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
   color: white;
-  font-size: 20px;
-  padding-bottom: 30px;
-  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .workcost {
-  font-size: 20px;
-  text-align: center;
-  padding: 0 48px 20px 48px;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-}
-
-.butinfo {
-  font-size: 16px;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-}
-
-.inputcost {
-  background-color: white;
-  color: #0056b3;
-  font-weight: 500;
-  text-align: start;
-  width: 216px;
-  height: 48px;
-  border-radius: 5px;
   font-size: 18px;
-  padding: 20px;
+  text-align: center;
+  padding: 0 0 30px 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 
 .allinputcost {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.inputcost {
+  background-color: white;
+  color: #333;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.inputcost:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.inputcost::placeholder {
+  color: #999;
+}
+
+.inputcost:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.file-upload-container {
+  margin: 10px 0;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
   gap: 10px;
-  padding-left: 30px;
-  padding-bottom: 25px;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.file-label-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.file-name {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+.file-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 5px 0 0;
 }
 
 .butcost {
   background-color: rgb(161, 7, 7);
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
-  padding: 5px;
-  border-radius: 5px;
-  height: 43px;
-  width: 215px;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
   font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.butcost:hover:not(:disabled) {
+  background-color: rgb(180, 20, 20);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(161, 7, 7, 0.3);
+}
+
+.butcost:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.butcost--loading {
+  position: relative;
+}
+
+.loader {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.message {
   text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+.message--success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.message--error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
 .perscost {
-  padding-left: 30px;
-  align-items: center;
-  padding-bottom: 30px;
-  gap: 10px;
+  text-align: center;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.infocost {
-  margin-left: 30px;
-  font-size: 20px;
-  margin-bottom: 12px;
+.butinfo {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.butinfo:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.allswiper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.textswiper {
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.blur {
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(90deg, 
+    rgba(245, 245, 245, 1) 0%, 
+    rgba(245, 245, 245, 0) 100%);
+  z-index: 1;
+  top: 0;
+}
+
+.textswiper_left {
+  left: 0;
+  background: linear-gradient(90deg, 
+    rgba(245, 245, 245, 1) 0%, 
+    rgba(245, 245, 245, 0) 100%);
+}
+
+.textswiper_right {
+  right: 0;
+  background: linear-gradient(270deg, 
+    rgba(245, 245, 245, 1) 0%, 
+    rgba(245, 245, 245, 0) 100%);
+  transform: rotate(180deg);
 }
 
 .msg {
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 12s linear infinite;
+  animation: marquee 15s linear infinite;
   display: inline-block;
-  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(30, 33, 61);
+  padding: 0 20px;
 }
 
 @keyframes marquee {
   0% {
-    transform: translate(100%, 0);
+    transform: translateX(100%);
   }
-
   100% {
-    transform: translate(-100%, 0);
+    transform: translateX(-100%);
   }
 }
 
-
-@media screen and (max-width:1600px) {
-  .textswiper {
-    padding: 0 0 30px 129px;
-  }
+.swiper {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
 }
 
-@media screen and (max-width:1366px) {
-  .formcost {
-    height: 435px;
-    border-radius: 10px;
-  }
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+swiper-container::part(slide) {
+  background-color: rgb(30, 33, 61);
+}
+
+swiper-container::part(slide):nth-child(2n) {
+  background-color: rgb(161, 7, 7);
+}
+
+swiper-container::part(slide):nth-child(3n) {
+  background-color: rgb(30, 33, 61);
+}
+
+swiper-container::part(slide):nth-child(4n) {
+  background-color: rgb(47, 56, 131);
+}
+
+swiper-container::part(slide):nth-child(5n) {
+  background-color: rgb(161, 7, 7);
+}
+
+swiper-container::part(slide):nth-child(6n) {
+  background-color: rgb(47, 56, 131);
+}
+
+swiper-container::part(slide):nth-child(7n) {
+  background-color: rgb(30, 33, 61);
+}
+
+swiper-container::part(slide):nth-child(8n) {
+  background-color: rgb(161, 7, 7);
+}
+
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    gap: 30px;
+  }
+  
   .h2cost {
-    padding: 18px 0;
-    font-size: 20px;
+    font-size: 26px;
   }
+  
+  .swiper {
+    height: 280px;
+  }
+}
 
-  .infocost,
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .formcost {
+    padding: 25px;
+  }
+  
+  .h2cost {
+    font-size: 24px;
+  }
+  
   .workcost {
-    font-size: 20px;
+    font-size: 16px;
+    padding-bottom: 25px;
   }
-
-  .custom-file-input,
-  .butcost,
-  .inputcost {
-    font-size: 18px;
+  
+  .allswiper {
+    order: -1;
   }
-
-  .textswiper {
-    padding: 0 0 30px 87px;
+  
+  .swiper {
+    height: 250px;
+    max-width: 500px;
+    margin: 0 auto;
   }
-
+  
   .msg {
-    font-size: 20px;
-  }
-
-  .swiper swiper-slide {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width:992px) {
-  .h2cost {
-    font-size: 19px;
+@media screen and (max-width: 768px) {
+  #cost {
+    padding: 30px 15px;
   }
-
-  .infocost {
-    font-size: 18px;
-  }
-
-  .workcost {
-    font-size: 16px;
-    padding: 0px 48px 12px 48px;
-  }
-
-  .inputcost {
-    font-size: 14px;
-    width: 214px;
-    height: 33px;
-  }
-
-  .allinputcost {
-    gap: 15px;
-    padding-bottom: 10px;
-  }
-
-  .custom-file-input::before {
-    padding: 8px 20px;
-  }
-
-  .butcost {
-    font-size: 18px;
-  }
-
+  
   .formcost {
-    margin-left: 0;
-    padding-bottom: 0;
-    height: 402px;
+    padding: 20px;
   }
-
-  .butinfo {
+  
+  .h2cost {
+    font-size: 22px;
+  }
+  
+  .inputcost {
+    height: 45px;
+    font-size: 15px;
+  }
+  
+  .butcost {
+    padding: 12px;
     font-size: 16px;
   }
+  
+  .swiper {
+    height: 220px;
+  }
+  
+  .slide-content {
+    font-size: 16px;
+    padding: 15px;
+  }
+  
+  .msg {
+    font-size: 16px;
+  }
+}
 
-  .swiper swiper-slide {
-    font-size: 19px;
+@media screen and (max-width: 576px) {
+  .h2cost {
+    font-size: 20px;
+  }
+  
+  .workcost {
+    font-size: 15px;
+  }
+  
+  .inputcost {
+    height: 42px;
+  }
+  
+  .file-label {
+    padding: 10px 15px;
+  }
+  
+  .file-label-text {
+    font-size: 14px;
+  }
+  
+  .swiper {
     height: 200px;
   }
-
-  .grid {
-    gap: 20px;
+  
+  .slide-content {
+    font-size: 15px;
   }
-
+  
   .msg {
-    font-size: 17px;
+    font-size: 15px;
   }
-
-  .swiper {
-    height: 145px;
-    width: 284px;
-    padding-top: 0;
+  
+  .butinfo {
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width:768px) {
-  .swiper swiper-slide {
-    display: none;
+@media screen and (max-width: 480px) {
+  #cost {
+    padding: 20px 10px;
   }
-
-  .allinputcost {
-    gap: 5px;
-  }
-
-  .custom-file-input {
-    font-size: 17px;
-    padding: 5px;
-    border-radius: 8px;
-  }
-
-  .grid {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 406px;
-    padding: 0 0px 10px 0px;
-  }
-
+  
   .formcost {
-    height: 345px;
-    border-radius: 0;
+    padding: 15px;
   }
-
+  
   .h2cost {
-    padding: 9px 0;
-  }
-
-  .butcost {
-    font-size: 17px;
-  }
-
-}
-
-@media screen and (max-width:576px) {
-  .grid {
-    height: 388px;
+    font-size: 18px;
     padding-bottom: 10px;
   }
-
-  .formcost {
-    border-radius: 0;
-    height: 100%;
-  }
-
-  .custom-file-input {
-    width: 192px;
-    padding: 5px;
-  }
-
-  .inputcost {
-    width: 190px;
-  }
-
-  .butcost {
-    width: 190px;
-  }
-
-  .textswiper {
-    padding: 0;
-  }
-
-  .h2cost {
-    padding: 10px 0;
-    font-size: 18px;
-  }
-
+  
   .workcost {
-    font-size: 17px;
+    font-size: 14px;
+    padding-bottom: 20px;
   }
-
-  .butinfo {
-    font-size: 17px;
+  
+  .allinputcost {
+    gap: 15px;
   }
-
-  .perscost {
-    padding-bottom: 13px;
+  
+  .swiper {
+    height: 180px;
   }
-
+  
+  .slide-content {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
   .msg {
-    font-size: 18px;
-  }
-
-  @media screen and (max-width:410px) {
-    .h2cost {
-      font-size: 16px;
-    }
-
-    .workcost {
-      font-size: 16px;
-    }
-
-    .butcost {
-      width: 100%;
-      margin: 5px 0 0 2px;
-    }
-
-    .butinfo {
-      font-size: 15px;
-    }
-
-    .formcost {
-      height: 330px;
-    }
-
-    .grid {
-      height: 100%;
-      gap: 0;
-    }
-
-    .inputcost {
-      width: 100%;
-    }
-
-    .custom-file-input {
-      width: 100%;
-    }
-
-    .allinputcost {
-      padding: 0 30px;
-    }
-
-    .swiper {
-      display: none;
-    }
-
-    .perscost {
-      padding-bottom: 0;
-    }
+    font-size: 14px;
+    animation-duration: 12s;
   }
 }
 </style>
