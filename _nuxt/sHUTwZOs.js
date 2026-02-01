@@ -1,0 +1,1 @@
+import{g as o,r as t,k as r,t as a,m as i}from"#entry";const c=o({__name:"details",setup(s){const e=t(0),n=t(0);return r(()=>{e.value=window.innerWidth,n.value=window.innerHeight}),(d,u)=>a(i(e))+" x "+a(i(n))}});export{c as default};
