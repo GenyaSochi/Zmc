@@ -115,7 +115,7 @@ const formatPhone = (event: Event) => {
       .replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '($1) $2-$3-$4')
       .replace(/(\d{3})(\d{3})(\d{2})/, '($1) $2-$3')
       .replace(/(\d{3})(\d{3})/, '($1) $2')
-      .replace(/(\d{3})/, '($1')
+      .replace(/(\d{3})/, '$1')
   }
 
   phone.value = value
@@ -468,7 +468,7 @@ const cards = [
   text-decoration: underline;
 }
 
-/* Стили для свайпера */
+
 .allswiper {
   display: flex;
   flex-direction: column;
@@ -544,10 +544,11 @@ const cards = [
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  overflow: hidden;
+  width: 340px;
+  height: 264px;
+  overflow: visible;
+  max-width: 400px;
+  padding-top: 20px;
 }
 
 .slide-content {
@@ -593,7 +594,7 @@ const cards = [
 
 @media screen and (max-width: 992px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 40px;
   }
 

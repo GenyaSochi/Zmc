@@ -4,33 +4,34 @@
       <NuxtLink to="/" class="logo-link">
         <img src="/img/sitelogo1.webp" alt="logo" class="logo">
       </NuxtLink>
-      
+
       <div class="link desktop-links">
         <NuxtLink to="/" class="nav">Главная</NuxtLink>
         <NuxtLink to="/catalog" class="nav">Каталог продукции</NuxtLink>
         <NuxtLink to="/projects" class="nav">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav">Контакты</NuxtLink>
       </div>
-      
+
       <div class="desktop-contacts">
         <div class="but">
           <NuxtLink to="/#cost" class="butnav">Рассчитать стоимость</NuxtLink>
+          <NuxtLink to="/#lobtn" class="butnav" @click="popup = true; closeMenu()">Заказать звонок</NuxtLink>
         </div>
         <div class="contacts">
-          <button @click="popup = true" class="buttel">+7 (351) 304-42-35</button>
-          <button @click="popup = true" class="buttel">+7 (900) 075-70-21</button>
+          <a href="tel:+73513044235" class="buttel">+7 (351) 304-42-35</a>
+          <a href="tel:+79000757021" class="buttel">+7 (900) 075-70-21</a>
           <a href="mailto:sales@zmkural.com" class="buttel">sales@zmkural.com</a>
         </div>
       </div>
-      
+
       <button class="burger" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-label="Меню">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </nav>
-    
-       <div v-if="isMenuOpen" class="mobile-menu-overlay" @click="closeMenu"></div>
+
+    <div v-if="isMenuOpen" class="mobile-menu-overlay" @click="closeMenu"></div>
     <div class="mobile-menu" :class="{ 'mobile-menu--open': isMenuOpen }">
       <div class="mobile-menu-content">
         <NuxtLink to="/" class="mobile-nav" @click="closeMenu">Главная</NuxtLink>
@@ -38,7 +39,7 @@
         <NuxtLink to="/projects" class="mobile-nav" @click="closeMenu">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="mobile-nav" @click="closeMenu">Контакты</NuxtLink>
         <NuxtLink to="/#cost" class="mobile-nav" @click="closeMenu">Рассчитать стоимость</NuxtLink>
-        
+
         <div class="mobile-contacts">
           <button @click="popup = true; closeMenu()" class="mobile-contact-btn">+7 (351) 304-42-35</button>
           <button @click="popup = true; closeMenu()" class="mobile-contact-btn">+7 (900) 075-70-21</button>
@@ -48,7 +49,7 @@
       </div>
     </div>
   </header>
-  
+
   <ModalComponent v-model="popup"></ModalComponent>
 </template>
 
@@ -164,6 +165,9 @@ onBeforeUnmount(() => {
 
 .but {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
 }
 
 .butnav {
@@ -194,7 +198,7 @@ onBeforeUnmount(() => {
   background: none;
   border: none;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   cursor: pointer;
   padding: 0;
@@ -332,20 +336,20 @@ onBeforeUnmount(() => {
   .desktop-links {
     gap: 20px;
   }
-  
+
   .nav {
     font-size: 16px;
   }
-  
+
   .desktop-contacts {
     gap: 20px;
   }
-  
+
   .butnav {
     font-size: 14px;
     padding: 8px 16px;
   }
-  
+
   .buttel {
     font-size: 13px;
   }
@@ -355,47 +359,50 @@ onBeforeUnmount(() => {
   .nav_all {
     padding: 0 15px;
   }
-  
+
   .desktop-links {
     gap: 15px;
   }
-  
+
   .nav {
     font-size: 15px;
   }
-  
+
   .logo {
     width: 120px;
   }
 }
-@media screen and (max-width: 930px){
-  .butnav{
+
+@media screen and (max-width: 930px) {
+  .butnav {
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
+
   .desktop-links,
   .desktop-contacts {
     display: none;
   }
-  
+
   .burger {
     display: flex;
   }
-  
+
   .mobile-menu-overlay {
     display: block;
   }
-  
+
   .nav_all {
     justify-content: space-between;
     height: 70px;
   }
-  
+
   .logo {
     width: 110px;
   }
-  
+
   .mobile-menu {
     top: 70px;
     height: calc(100vh - 70px);
@@ -407,31 +414,31 @@ onBeforeUnmount(() => {
     padding: 0 10px;
     height: 60px;
   }
-  
+
   .logo {
     width: 100px;
   }
-  
+
   .burger {
     width: 25px;
     height: 18px;
   }
-  
+
   .mobile-menu {
     top: 60px;
     height: calc(100vh - 60px);
     max-width: 100%;
   }
-  
+
   .mobile-menu-content {
     padding: 15px;
   }
-  
+
   .mobile-nav {
     font-size: 16px;
     padding: 12px 0;
   }
-  
+
   .mobile-contact-btn {
     font-size: 14px;
   }

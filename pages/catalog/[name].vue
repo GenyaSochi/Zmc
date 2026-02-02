@@ -187,8 +187,7 @@ const popup = ref(false)
 
 .description-container :deep(p) {
 	margin-bottom: 15px;
-	font-size: 16px;
-	/* color: white;	     */
+	font-size: 20px;	
 }
 
 .description-container :deep(ul),
@@ -201,7 +200,7 @@ const popup = ref(false)
 	margin-bottom: 8px;
 }
 
-/* Стили для адаптивных таблиц */
+
 .description-container :deep(.table-responsive) {
 	overflow-x: auto;
 	margin: 20px 0;
@@ -215,11 +214,12 @@ const popup = ref(false)
 	min-width: 600px;
 }
 
-.description-container :deep(th) {
-	color: white !important;
+.description-container :deep(th) {	
 	padding: 5px;
 	text-align: center !important;
 	border: 1px solid #ddd;
+	background-color: white;	
+	font-weight: 700;
 }
 
 .description-container :deep(td) {

@@ -34,8 +34,11 @@
       </div>
       <div class="contact-item">
         <h3 class="contact-title">Телефоны:</h3>
-        <p class="contact-text">+7 (351) 304-42-35</p>
-        <p class="contact-text">+7 (900) 075-70-21</p>
+        <p class="tel">
+          <a class="contact-text" href="tel:+73513044235">+7 (351) 304-42-35</a>
+          <a class="contact-text" href="tel:+79000757021">+7 (900) 075-70-21</a>
+
+        </p>
       </div>
       <div class="contact-item">
         <h3 class="contact-title">Email:</h3>
@@ -81,9 +84,7 @@ onMounted(() => {
   margin: 0;
 }
 
-.map-container {
-  max-width: 1400px;
-  margin: 0 auto;
+.map-container { 
   padding: 0 20px;
 }
 
@@ -172,7 +173,10 @@ onMounted(() => {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-
+.tel{
+  display: flex;
+  gap: 20px;
+}
 .contact-title {
   font-size: 18px;
   color: rgb(30, 33, 61);

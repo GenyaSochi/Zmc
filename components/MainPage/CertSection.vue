@@ -60,12 +60,12 @@ const certificate = [
 </script>
 
 <style scoped>
-
 swiper-container {
   --swiper-theme-color: white !important;
   overflow: hidden;
   height: 360px;
 }
+
 swiper-container::part(bullet) {
   width: 20px !important;
   height: 20px !important;
@@ -141,80 +141,91 @@ swiper-container::part(bullet-active) {
   }
 }
 
-@media screen and (max-width:1017px) {
-  .certtext {
-    padding: 20px 0 50px 0;
+@media screen and (max-width:1274px) {
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, 264px);
+    left: 0px;
+    width: 100%;
   }
 }
-
-@media screen and (max-width:996px) {
-  .certtext {
-    font-size: 24px;
+  @media screen and (max-width:1017px) {
+    .certtext {
+      padding: 20px 0 50px 0;
+    }
   }
 
-  .cert {
-    height: 214px;
+  @media screen and (max-width:996px) {
+    .certtext {
+      font-size: 24px;
+    }
+
+    .cert {
+      height: 214px;
+    }
+
+    .certcontainer {
+      height: 226px;
+    }
+
+    swiper-container {
+      height: 244px;
+    }
   }
 
-  .certcontainer {
-    height: 226px;
+  @media screen and (max-width:768px) {
+    .certtext {
+      font-size: 20px;
+    }
+
+    .cert {
+      height: 184px;
+    }
+
+    swiper-container {
+      height: 216px;
+    }
   }
 
-  swiper-container {
-    height: 244px;
-  }
-}
+  @media screen and (max-width:563px) {
+    .cert {
+      height: 184px;
+    }
 
-@media screen and (max-width:768px) {
-  .certtext {
-    font-size: 20px;
-  }
+    .certcontainer {
+      display: flex;
+      height: 212px;
+    }
 
-  .cert {
-    height: 184px;
-  }
 
-  swiper-container {
-    height: 216px;
-  }
-}
-
-@media screen and (max-width:563px) {
-  .cert {
-    height: 184px;
+    swiper-container {
+      --swiper-theme-color: grey !important;
+      height: 216px;
+    }
   }
 
-  .certcontainer {
-    display: flex;
-    height: 212px;
+  @media screen and (max-width:466px) {
+
+    .cert {
+      height: 184px;
+    }
+
+    .certtext {
+      padding: 20px 0 30px 0;
+    }
+
+    .certcontainer {
+      padding-left: 0;
+      text-align: center;
+    }
   }
 
-
-  swiper-container {
-    --swiper-theme-color: grey !important;
-    height: 216px;
-  }
-}
-
-@media screen and (max-width:466px) {
-
-  .cert {
-    height: 184px;
-  }
-
-  .certtext {
-    padding: 20px 0 30px 0;
-  }
-
-  .certcontainer {
-    padding-left: 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width:407px) {
-  .certtext {
-    padding-top: 26px;
-  }
-}
-</style>
+  @media screen and (max-width:407px) {
+    .certtext {
+      padding-top: 26px;
+    }
+  }</style>
