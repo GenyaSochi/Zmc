@@ -19,7 +19,7 @@
       <h3 class="advanttext">Выбирая «ЗМК Урал», Вы получите качество и надёжность, которые
         сделают наше сотрудничество выгодным</h3>
       <div class="blockproduct">
-        <div class="production">Знакомство с производством<a class="butproj" href="https://vk.com/zmkural">Смотреть</a>
+        <div class="production">Знакомство с производством<a class="butproj" href="https://vk.com/zmkural" target="_blank">Смотреть</a>
         </div>
         <!-- <div class="production">Экскурсия на производство<a href="https://vk.com/zmkural"
             class="butproj">Смотреть</a><img src="/public/img/rutubesquare.webp" alt="rutube" class="imgproj"></div> -->

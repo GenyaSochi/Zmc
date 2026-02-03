@@ -1,30 +1,42 @@
 <template>
-  <h1 class="h1">Проекты компании</h1>
-  <div class="o">
-    <div class="view" v-for="project of data" :key="project.name">
-      <h2 class="h2">
-        {{ project.name }}
-      </h2>
-      <div class="projectinfo">
-        <p class="heading">Вид продукции</p>
-        <p class="hie">{{ project.project }}</p>
-        <p class="heading">Объем</p>
-        <p class="text">{{ project.quantity }}</p>
-        <p class="heading">Год</p>
-        <p class="text">{{ project.year }}</p>
-        <p class="heading">Конечный потребитель</p>
-        <p class="text">{{ project.enduser }}</p>
-      <p>{{ project.description }}</p>
-        <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="imgstile"></NuxtImg>
+  <div class="projects-page container">
+    <h1 class="title">Проекты компании</h1>
+    <div class="projects">
+      <div class="project-card" v-for="project in data" :key="project.id">
+        <h2 class="project-title">
+          {{ project.name }}
+        </h2>
+        <div class="project-details">
+          <div class="detail-item">
+            <span class="detail-label">Вид продукции</span>
+            <span class="detail-value">{{ project.project }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Объем</span>
+            <span class="detail-value">{{ project.quantity }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Год</span>
+            <span class="detail-value">{{ project.year }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Конечный потребитель</span>
+            <span class="detail-value">{{ project.enduser }}</span>
+          </div>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="image-container">
+          <NuxtImg :src="project.img" :alt="project.project" sizes="520px" class="project-image" loading="lazy" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup lang="ts">
 
 const { data } = await useFetch('/api/projects/project')
+
 
 
 
@@ -59,236 +71,191 @@ function translit(word: string) {
   return answer;
 }
 
+
 </script>
-
 <style scoped>
-.text {
-  font-size: 28px;
+.projects-page {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
 }
 
-.hie {
-  height: 54px;
-  font-size: 28px;
+.title {
+  font-size: 34px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
 }
 
-.o {
-  display: grid;
-  align-items: stretch;
-  grid-template-columns: 1fr 1fr;
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.image-container {
+  width: 100%;
+  height: 280px; 
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: auto; 
+  flex-shrink: 0; 
+}
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  transition: filter 0.3s ease;
+  filter: grayscale(100%) brightness(0.9);
+}
+
+.project-card:hover .project-image {
+  filter: grayscale(0%) brightness(1);
+}
+
+.projects {
+  display: block;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
 }
 
-.h1 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-size: 34px;
-}
-
-.h2 {
-  font-size: 34px;
-  padding-bottom: 20px;
-  height: 94px;
-}
-
-.view {
-  padding: 22px 22px 0 22px;
-  margin: 0 20px 20px 20px;
-  box-shadow: 1px 0px 6px -1px rgba(15, 23, 29, 0.2);
-}
-
-.heading {
-  font-weight: 600;
-  font-size: 32px;
-}
-
-.projectinfo {
+.project-card {
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-bottom: 10px;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e2e8f0;
 }
 
-.imginfo {
-  right: 392px;
-  top: 300px;
-  position: absolute;
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #3b82f6;
 }
 
-.imgstile {
+.card-header {
+  padding: 24px 24px 16px;
+  background: linear-gradient(90deg, #1e293b, #334155);
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  flex: 1;
+  color: white;
+  text-align: left;
+}
+
+.project-details {
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 20px;
+}
+
+.project-description {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 10px 0;
+  text-overflow: ellipsis;
+}
+
+.project-image {
+  width: 500px;
   height: 300px;
-  width: 100%;
   object-fit: cover;
-  filter: grayscale(100%) drop-shadow(2px 4px 6px black);
-  padding: 10px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(100%) brightness(0.9);  
 }
 
-
-@media screen and (max-width:1600px) {
-  .h1 {
-    font-size: 32px;
-    padding-bottom: 29px;
-  }
-
-  .h2 {
-    font-size: 32px;
-  }
-
-  .heading {
-    font-size: 30px;
-  }
-
-  .hie {
-    height: 70px;
-  }
-}
-
-@media screen and (max-width:1366px) {
-  .h1 {
-    font-size: 26px;
-  }
-
-  .h2 {
-    font-size: 26px;
-    height: 62px;
-  }
-
-  .heading {
-    font-size: 26px;
-  }
-
-  .hie {
-    font-size: 22px;
-    height: 68px;
-  }
-
-  .text {
-    font-size: 22px;
-  }
-
-}
-
-@media screen and (max-width:992px) {
-  .o {
+@media (max-width: 1200px) {
+  .projects {
     grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
   }
+}
 
-  .h1 {
+@media (max-width: 768px) {
+  .title {
     font-size: 28px;
-    height: 44px;
-    padding-bottom: 50px;
   }
 
-  .h2 {
-    font-size: 26px;
-    height: 62px;
-  }
-
-  .heading {
-    font-size: 26px;
-  }
-
-  .text {
-    font-size: 24px;
-    height: 30px;
-  }
-
-  .hie {
-    font-size: 24px;
-    height: 42px;
-  }
-
-  .imgstile {
-    padding: 10px 0;
-  }
-}
-
-@media screen and (max-width:768px) {
-
-  .h1 {
-    font-size: 26px;
-  }
-
-  .h2 {
-    font-size: 26px;
-  }
-
-  .heading {
+  .project-title {
     font-size: 24px;
   }
 
-  .text {
-    font-size: 22px;
+  .detail-label {
+    font-size: 16px;
   }
 
-  .hie {
-    font-size: 22px;
-    height: 63px;
-  }
-}
-
-@media screen and (max-width:576px) {
-
-  .h1 {
-    font-size: 22px;
+  .detail-value {
+    font-size: 18px;
   }
 
-  .h2 {
-    font-size: 22px;
-    height: 55px;
-  }
-
-  .heading {
-    font-size: 22px;
-  }
-
-  .text {
-    font-size: 20px;
-  }
-
-  .hie {
-    height: 42px;
-    font-size: 20px;
+  .project-image {
+    height: 250px;
   }
 }
 
-@media screen and (max-width:541px) {
-
-  .hie {
-    height: 61px;
-  }
-}
-
-@media screen and (max-width:410px) {
-
-  .h1 {
-    font-size: 22px;
+@media (max-width: 576px) {
+  .projects-page {
+    padding: 20px 15px;
   }
 
-  .h2 {
-    font-size: 22px;
+  .project-card {
+    padding: 15px;
   }
 
-  .heading {
-    font-size: 20px;
-  }
-
-  .text {
-    font-size: 20px;
-  }
-
-  .hie {
-    height: 85px;
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width:386px) {
-  .h2 {
-    height: 82px;
-  }
-
-  .hie {
-    height: 87px;
+  .project-image {
+    height: 200px;
   }
 }
 </style>

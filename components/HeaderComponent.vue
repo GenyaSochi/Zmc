@@ -355,6 +355,12 @@ onBeforeUnmount(() => {
   }
 }
 
+@media screen and (max-width: 1181px){
+.nav_all {
+  justify-content: space-around;
+}
+}
+
 @media screen and (max-width: 992px) {
   .nav_all {
     padding: 0 15px;

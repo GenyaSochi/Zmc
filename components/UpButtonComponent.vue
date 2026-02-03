@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
   cursor: pointer;
   position: fixed;
   bottom: -80px;
-  right: 18px;
+  right: 30px;
   transition: all 0.4s ease;
   opacity: 0;
   z-index: 1000;
@@ -91,9 +91,9 @@ onBeforeUnmount(() => {
 @media screen and (max-width: 1366px) {
   .button {
     width: 70px;
-    height: 70px;
-    right: 17px;
+    height: 70px;    
     bottom: -70px;
+    right: 20px;
   }
   
   .button-active {
@@ -104,12 +104,17 @@ onBeforeUnmount(() => {
     font-size: 35px;
   }
 }
+@media screen and (max-width: 1307px){
+.button {
+   right: 24px;
+}
+}
 
 @media screen and (max-width: 992px) {
   .button {
     width: 56px;
     height: 56px;
-    right: 11px;
+    right: 15px;
     bottom: -56px;
   }
   
