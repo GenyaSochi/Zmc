@@ -127,6 +127,13 @@ onBeforeUnmount(() => {
   }
 }
 
+@media screen and (max-width: 644px) {
+  .button {
+    right: 20px;
+  }
+}
+
+
 @media screen and (max-width: 576px) {
   .button {
     width: 50px;

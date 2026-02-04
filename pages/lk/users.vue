@@ -64,6 +64,7 @@ const save = (user: User) => {
   text-align: center;
   border-bottom: 1px solid grey;
   max-width: 1200px;
+  padding: 80px 0px;
 }
 h1 {
   color: #1e3a8a;

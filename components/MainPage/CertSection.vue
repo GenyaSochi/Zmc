@@ -1,7 +1,7 @@
 <template>
   <section id="cert">
     <h2 class="certtext">наши сертификаты</h2>
-    <div class="certcontainer">
+    <div class="certcontainer container">
       <swiper-container class="certswiper" ref="swiperCont" :init="true">
         <swiper-slide v-for="el of certificate" :key="el.id">
           <a :href="el.pdf" target="_blank">
@@ -28,8 +28,8 @@ const swiper = useSwiper(swiperCont, {
     1600: {
       slidesPerView: 6
     },
-    1120: {
-      slidesPerView: 5
+    1322: {
+      slidesPerView: 4
     },
     768: {
       slidesPerView: 4

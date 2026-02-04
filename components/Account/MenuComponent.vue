@@ -1,6 +1,8 @@
 <template>
   <div class="proj_all">
-    <div><slot name="top"></slot></div>
+    <div>
+      <slot name="top"></slot>
+    </div>
     <NuxtLink to="/lk/projects">Проект</NuxtLink><br>
     <NuxtLink to="/lk/products">Продукт</NuxtLink><br>
     <NuxtLink to="/lk/jobs">Вакансии</NuxtLink><br>
@@ -10,7 +12,7 @@
       <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
       <NuxtLink to="/" class="btn">На сайт</NuxtLink>
       <slot></slot>
-    </div>  
+    </div>
   </div>
 </template>
 
@@ -23,23 +25,15 @@ const userStore = useUser()
   padding: 30px 10px 20px 30px;
   border: 5px solid #1e3a8a;
   max-width: 800px;
+  min-height: 500px;
   border-radius: 10px;
   margin: 20px auto;
-  position: relative; 
 }
 
 .buttons {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  padding: 90px 0px;
   width: 150px;
 }
 
-@media screen and (max-width:600px) {
-  .buttons {
-    position: relative;
-    width: auto;
-  }
-}
-
+@media screen and (max-width:850px) {}
 </style>

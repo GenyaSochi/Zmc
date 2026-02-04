@@ -21,7 +21,7 @@
     </div>
     <div class="digitsprod">
       <p class="text1">17 лет производим опоры для трубопроводов</p>
-      <p class="text2">Продукция завода соответствует отравслевым стандартам и нормам качества</p>
+      <p class="text2">Продукция завода соответствует отраслевым стандартам и нормам качества</p>
       <p class="text3">Наличие собственного конструкторского отдела</p>
       <p class="text4">Изготовление опор по чертежам заказчика</p>
     </div>
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-
+// Скрипт остается без изменений
 const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0])
 
 const incrementDigits = () => {
@@ -54,7 +54,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-
 .video {
   position: relative;
   width: 100%;
@@ -62,7 +61,7 @@ onUnmounted(() => {
   min-height: 250px;
   max-height: 450px;
   overflow: hidden;
-  z-index: 1; 
+  z-index: 1;
 }
 
 #myVideo {
@@ -141,8 +140,7 @@ onUnmounted(() => {
 }
 
 .cost {
-  display: flex;
-  background-color: #e74c3c; 
+  background-color: #e74c3c;
 }
 
 .cardcontainer:hover, .cost:hover {
@@ -171,6 +169,8 @@ onUnmounted(() => {
   padding-bottom: 30px;
   line-height: 1.4;
 }
+
+/* Адаптивность */
 
 @media screen and (max-width: 1200px) {
   .allcontainer {
@@ -225,10 +225,7 @@ onUnmounted(() => {
     font-size: 26px;
   }
   
-  .cost {
-    display: flex;
-  }
-  .digitsprod{
+  .digitsprod {
     padding-top: 20px;
   }
 }
@@ -253,14 +250,16 @@ onUnmounted(() => {
     font-size: 18px;
   }
   
-    .video {
+  .video {
     height: 432px;
     min-height: 200px;
     max-height: 320px;
   }
-   #myVideo {   
+  
+  #myVideo {   
     object-position: center 25%;
   }
+  
   .text1, .text3 {
     font-size: 28px;
   }
@@ -274,41 +273,161 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .video {
-     height: 378px;
+    height: 350px;
+    min-height: 180px;
+    max-height: 280px;
   }
+  
   #myVideo {
-    object-position: center 20%;
+    object-position: center 15%;
   }
   
   .digits {
     font-size: 18px;
     padding: 20px 10px;
+    gap: 12px;
+  }
+  
+  .digits h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .allnum {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .num {
     height: 35px;
     width: 38px;
     font-size: 16px;
-  }
-  
-  .allnum {
-    gap: 5px;
+    padding: 4px 0;
   }
   
   .cardcontainer, .cost {
     font-size: 18px;
-    min-height: 120px;
-    padding: 15px 5px;
+    min-height: 100px;
+    padding: 15px 8px;
+    border-radius: 8px;
   }
   
   .text1, .text3 {
-    font-size: 24px;
+    font-size: 22px;
+    padding-bottom: 15px;
   }
   
   .text2, .text4 {
+    font-size: 18px;
+    padding-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .digitsprod {
+    padding: 20px 15px;
+  }
+}
+
+/* АДАПТАЦИЯ ДО 352px */
+@media screen and (max-width: 352px) {
+  .video {
+    height: 280px;
+    min-height: 150px;
+    max-height: 220px;
+  }
+  
+  #myVideo {
+    object-position: center 10%;
+  }
+  
+  .digits {
+    font-size: 16px;
+    padding: 15px 8px;
+    gap: 10px;
+  }
+  
+  .digits h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  .allnum {
+    gap: 4px;
+  }
+  
+  .num {
+    height: 30px;
+    width: 32px;
+    font-size: 14px;
+    padding: 3px 0;
+    border-width: 1px;
+  }
+  
+  .allcontainer {
+    padding: 30px 10px;
+    gap: 12px;
+  }
+  
+  .cardcontainer, .cost {
+    font-size: 16px;
+    min-height: 85px;
+    padding: 12px 6px;
+    border-radius: 6px;
+    line-height: 1.3;
+  }
+  
+  .text1, .text3 {
     font-size: 20px;
+    padding-bottom: 12px;
+  }
+  
+  .text2, .text4 {
+    font-size: 16px;
+    padding-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .digitsprod {
+    padding: 15px 10px;
+  }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media screen and (max-width: 320px) {
+  .video {
+    height: 250px;
+    min-height: 140px;
+    max-height: 200px;
+  }
+  
+  .digits h2 {
+    font-size: 16px;
+  }
+  
+  .allnum {
+    gap: 3px;
+  }
+  
+  .num {
+    height: 28px;
+    width: 30px;
+    font-size: 13px;
+  }
+  
+  .cardcontainer, .cost {
+    font-size: 15px;
+    min-height: 80px;
+  }
+  
+  .text1, .text3 {
+    font-size: 18px;
+  }
+  
+  .text2, .text4 {
+    font-size: 15px;
   }
 }
 

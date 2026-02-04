@@ -7,8 +7,8 @@
       <label for="login" class="text">Введите пароль:</label>
       <input type="password" class="llk" v-model="pass" required placeholder="пароль">
       <p v-if="message">{{ message }}</p>
-      <div style="display: flex; padding: 10px 0; gap: 10px; flex-direction: column;">
-        <div style="display: flex; justify-content: space-between; gap:10px;">
+      <div>
+        <div>
           <button @click="logIn" type="submit" class="btn">войти</button>
           <NuxtLink to="/" class="btn">на сайт</NuxtLink>
         </div>
@@ -19,7 +19,7 @@
   <div v-else>
     <AccountMenuComponent>
       <template #top>
-        <h1>Персональная страница</h1>
+        <h1 class="access">Доступ к управлению проектами</h1>
       </template>
     </AccountMenuComponent>
   </div>
@@ -48,6 +48,9 @@ const regIn = async () => {
 </script>
 
 <style scoped>
+.access{
+  padding: 20px 0;
+}
 .lk {
   height: 100%;
   max-width: 340px;

@@ -1,6 +1,6 @@
 <template>
   <section id="cost">
-    <div class="grid">
+    <div class="markup">
       <form class="formcost" @submit.prevent="sendData">
         <h2 class="h2cost">Получить рассчёт стоимости продукции</h2>
         <p class="workcost">по будням с 8.00 до 17.00</p>
@@ -53,11 +53,11 @@
             delay: 3000,
             disableOnInteraction: false,
           }" :cardsEffect="{
-              slideShadows: true,
-              rotate: true,
-              perSlideOffset: 8,
-              perSlideRotate: 2,
-            }" class="swiper">
+            slideShadows: true,
+            rotate: true,
+            perSlideOffset: 8,
+            perSlideRotate: 2,
+          }" class="swiper">
             <SwiperSlide v-for="card in cards" :key="card.id">
               <div class="slide-content">
                 {{ card.title }}
@@ -192,11 +192,11 @@ const sendData = async () => {
     if (data.ok) {
       messageType.value = 'success'
       message.value = data.message
-      
-      // Сразу сбрасываем форму при успешной отправке
+
+
       resetForm()
-      
-      // Очищаем сообщение через 5 секунд
+
+
       setTimeout(() => {
         message.value = ''
         messageType.value = null
@@ -204,8 +204,8 @@ const sendData = async () => {
     } else {
       messageType.value = 'error'
       message.value = data.message
-      
-      // Очищаем сообщение об ошибке через 5 секунд
+
+
       setTimeout(() => {
         message.value = ''
         messageType.value = null
@@ -254,7 +254,7 @@ const cards = [
   padding: 40px 20px;
 }
 
-.grid {
+.markup {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -379,6 +379,7 @@ const cards = [
 }
 
 .butcost {
+  position: relative;
   background-color: rgb(161, 7, 7);
   color: white;
   border: none;
@@ -408,6 +409,13 @@ const cards = [
 }
 
 .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .loader {  
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -419,7 +427,7 @@ const cards = [
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 @keyframes spin {
   to {
@@ -568,7 +576,7 @@ const cards = [
   transition: transform 0.3s ease;
 }
 
-/* Кастомные цвета для слайдов */
+
 .swiper-slide:nth-child(odd) .slide-content {
   background: linear-gradient(135deg, rgb(30, 33, 61) 0%, rgb(47, 56, 131) 100%);
 }
@@ -577,10 +585,14 @@ const cards = [
   background: linear-gradient(135deg, rgb(161, 7, 7) 0%, rgb(180, 20, 20) 100%);
 }
 
-/* Адаптивная верстка */
-@media screen and (max-width: 1200px) {
-  .grid {
+@media screen and (max-width: 1450px) {
+  .markup {
+    grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .formcost {
+    margin: 0 auto;
   }
 
   .h2cost {
@@ -593,19 +605,19 @@ const cards = [
 }
 
 @media screen and (max-width: 992px) {
-  .grid {
+  .markup {
     grid-template-columns: 100%;
     gap: 40px;
   }
 
-  .formcost {
+  /* .formcost {
     padding: 25px;
     order: 2;
   }
 
   .allswiper {
     order: 1;
-  }
+  } */
 
   .h2cost {
     font-size: 24px;
@@ -652,12 +664,18 @@ const cards = [
   }
 
   .swiper-container {
+    max-width: 320px;
+    height: 240px;
+  }
+
+  .swiper {
+    width: 280px;
     height: 220px;
   }
 
   .slide-content {
-    font-size: 16px;
-    padding: 15px;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .msg {
@@ -666,7 +684,9 @@ const cards = [
 }
 
 @media screen and (max-width: 576px) {
-  .h2cost {
+  .swiper-container {
+    display: none;
+    height: 200px;
     font-size: 20px;
   }
 
@@ -688,6 +708,7 @@ const cards = [
   }
 
   .swiper-container {
+    display: none;
     height: 200px;
   }
 
@@ -696,7 +717,13 @@ const cards = [
   }
 
   .msg {
-    font-size: 15px;
+    animation-duration: 8s;
+    font-size: 13px;
+  }
+
+  .textswiper {
+    padding: 15px 0;
+    margin-bottom: 20px;
   }
 
   .butinfo {
@@ -744,5 +771,15 @@ const cards = [
   .blur {
     width: 40px;
   }
+
+  .inputcost,
+  .file-label,
+  .butcost {
+    min-height: 48px;
+  }
+
+  .inputcost {
+    font-size: 16px;
+  }
 }
-</style>
+  </style>

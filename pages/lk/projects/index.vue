@@ -4,6 +4,7 @@
       <h1>Проекты</h1>
     </template>
     <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
+     <NuxtLink class="btn">Удалить</NuxtLink>
   </AccountMenuComponent>
   <div class="editing-projects">
     <template v-for="project of projects" :key="project.id">
@@ -18,7 +19,9 @@ definePageMeta({
   layout: 'admin',
   middleware: 'adm'
 })
+
 const projects = await $fetch('/api/projects/project')
+
 </script>
 
 <style scoped>
@@ -44,5 +47,6 @@ const projects = await $fetch('/api/projects/project')
 h1 {
   color: #1e3a8a;
   font-weight: 700;
+  padding: 0 20px;
 }
 </style>

@@ -11,6 +11,7 @@
       <input class="fileInput" type="file" id="fileUpload" @change="fileChange" accept="image/*">
       <img v-if="previewImage || project.img" :src="previewImage || project.img" />
       <div v-else>Добавить картинку</div>
+      <div @click="delImg">Удалить картинку</div>
     </div>
     <input type="text" v-model="project.quantity" placeholder="quant">
     <input type="text" v-model="project.year" placeholder="year">
@@ -63,6 +64,10 @@ const save = () => {
   data.append('data', JSON.stringify(project.value))
   $fetch('/api/projects', { method: 'POST', body: data })
   navigateTo('/lk/projects')
+}
+
+const delImg = () =>{
+  
 }
 
 </script>

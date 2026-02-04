@@ -1,6 +1,6 @@
 <template>
   <section id="photo">
-    <div class="photocontainer">
+    <div class="photocontainer container">
       <swiper-container ref="swiperCont" :init="true">
         <swiper-slide v-for="photo of photos" :key="photo.id">
           <NuxtImg class="imgphoto" fit="cover" sizes="205px " :src="photo.img" :alt="photo.title"></NuxtImg>
@@ -41,11 +41,18 @@ const swiper = useSwiper(swiperCont, {
   pagination: true,
   watchSlidesProgress: true,
   breakpoints: {
-    1366: {
+  
+    1786: {
       slidesPerView: 6
     },
-    992: {
+    1600: {
       slidesPerView: 5
+    },
+    1430: {
+      slidesPerView: 4
+    },
+    1370: {
+      slidesPerView: 4
     },
     768: {
       slidesPerView: 4
@@ -70,6 +77,7 @@ swiper-container {
   overflow: hidden;
   height: 360px;
 }
+
 swiper-container::part(bullet) {
   width: 20px !important;
   height: 20px !important;
