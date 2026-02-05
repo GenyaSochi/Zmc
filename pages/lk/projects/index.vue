@@ -4,7 +4,7 @@
       <h1>Проекты</h1>
     </template>
     <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
-     <NuxtLink class="btn">Удалить</NuxtLink>
+     <NuxtLink to="lk/projects/delete" class="btn">Удалить</NuxtLink>
   </AccountMenuComponent>
   <div class="editing-projects">
     <template v-for="project of projects" :key="project.id">

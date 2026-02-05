@@ -4,6 +4,8 @@
       <h1 class="edit-proj">Редактировать проект</h1>
     </template>
     <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
+    <button @click="save" class="btn">сохранить изменения</button>
+    <button @click="save" class="btn">удалить</button>
   </AccountMenuComponent>
   <div class="editing-projects">
     <input type="text" v-model="project.name">
@@ -15,8 +17,7 @@
     <input type="text" v-model="project.quantity">
     <input type="text" v-model="project.year">
     <input type="text" v-model="project.enduser">
-    <textarea v-model="project.description"></textarea>   
-    <button @click="save" class="button-save">сохранить изменения</button> 
+    <textarea v-model="project.description"></textarea>
   </div>
 </template>
 
