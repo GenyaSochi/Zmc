@@ -58,7 +58,7 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   height: 756px;
-  min-height: 250px;
+  min-height: 280px;
   max-height: 450px;
   overflow: hidden;
   z-index: 1;
@@ -170,7 +170,6 @@ onUnmounted(() => {
   line-height: 1.4;
 }
 
-/* Адаптивность */
 
 @media screen and (max-width: 1200px) {
   .allcontainer {
@@ -179,7 +178,7 @@ onUnmounted(() => {
   }
   
   .video {
-    height: 540px;
+    height: 440px;
     max-height: 500px;
   }
   
@@ -212,7 +211,7 @@ onUnmounted(() => {
   }
   
   .video {
-    height: 486px;
+    height: 400px;
     min-height: 220px;
     max-height: 380px;
   }
@@ -336,7 +335,7 @@ onUnmounted(() => {
   .video {
     height: 280px;
     min-height: 150px;
-    max-height: 220px;
+    max-height: 190px;
   }
   
   #myVideo {

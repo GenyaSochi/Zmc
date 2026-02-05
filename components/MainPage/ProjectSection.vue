@@ -352,6 +352,11 @@ swiper-container::part(bullet-active) {
 }
 
 @media screen and (max-width: 480px) {
+  swiper-container[data-v-78782c79]::part(bullet-active) {
+    background: white !important;
+    width: 12px !important;
+    height: 12px !important;   
+}
   .quant {
     font-size: 28px;
   }

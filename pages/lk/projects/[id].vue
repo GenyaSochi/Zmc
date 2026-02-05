@@ -4,8 +4,8 @@
       <h1 class="edit-proj">Редактировать проект</h1>
     </template>
     <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
-    <button @click="save" class="btn">сохранить изменения</button>
-    <button @click="save" class="btn">удалить</button>
+    <button @click="save" class="btn">Сохранить изменения</button>
+    <button @click="" class="btn">Удалить</button>
   </AccountMenuComponent>
   <div class="editing-projects">
     <input type="text" v-model="project.name">
@@ -62,7 +62,11 @@ const save = () => {
   data.append('data', JSON.stringify(project))
   $fetch('/api/projects', { method: 'PUT', body: data })
   navigateTo('/lk/projects')
-}
+ }
+
+// const del = () =>{
+//   if()
+// }
 
 </script>
 

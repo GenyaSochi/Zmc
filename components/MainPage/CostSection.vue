@@ -43,39 +43,29 @@
 
       <div class="allswiper">
         <div class="textswiper">
-          <div class="blur blur-left"></div>
-          <div class="blur blur-right"></div>
+          <div class="textswiper_left blur"></div>
+          <div class="textswiper_right blur"></div>
           <span class="msg">услуги по металлообработке</span>
         </div>
-
-        <div class="swiper-container">
-          <Swiper :modules="[SwiperEffectCards]" :effect="'cards'" :grabCursor="true" :loop="true" :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }" :cardsEffect="{
-            slideShadows: true,
-            rotate: true,
-            perSlideOffset: 8,
-            perSlideRotate: 2,
-          }" class="swiper">
-            <SwiperSlide v-for="card in cards" :key="card.id">
-              <div class="slide-content">
-                {{ card.title }}
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
+        <swiper-container class="swiper" ref="swiperCont" :init="true" :autoplay="true" :modules="modules"
+          effect="cards">
+          <swiper-slide v-for="card in cards" :key="card.id">{{ card.title }}</swiper-slide>
+        </swiper-container>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCards } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/effect-cards'
+const modules = [EffectCards]
+
+// const target = ref(null as HTMLInputElement | null)
+import { ref, computed } from 'vue'
+
+const file = ref<File | null>(null)
+const fileInput = ref<HTMLInputElement | null>(null)
 
 const messageType = ref<'success' | 'error' | null>(null)
 
@@ -85,15 +75,11 @@ const messageClass = computed(() => {
   return ''
 })
 
-const file = ref<File | null>(null)
-const fileInput = ref<HTMLInputElement | null>(null)
 
 const name = ref('')
 const phone = ref('')
 const message = ref('')
 const isLoading = ref(false)
-
-const SwiperEffectCards = EffectCards
 
 const isFormValid = computed(() => {
   return name.value.trim().length >= 2 &&
@@ -120,7 +106,6 @@ const formatPhone = (event: Event) => {
 
   phone.value = value
 }
-
 const handleFiles = (event: Event) => {
   const target = event.target as HTMLInputElement
   if (target.files && target.files[0]) {
@@ -245,6 +230,14 @@ const cards = [
   { id: 6, title: 'Сварочные работы любой сложности' },
   { id: 7, title: 'Пескоструйная очистка конструкций' },
   { id: 8, title: 'Изготовление продукции по индивидуальным чертежам' },
+  { id: 9, title: 'Плазменная резка металла' },
+  { id: 10, title: 'Рубка листового металла на гильотине' },
+  { id: 11, title: 'Штамповка металла' },
+  { id: 12, title: 'Вальцовка листов' },
+  { id: 13, title: 'Гибка листов' },
+  { id: 14, title: 'Сварочные работы любой сложности' },
+  { id: 15, title: 'Пескоструйная очистка конструкций' },
+  { id: 16, title: 'Изготовление продукции по индивидуальным чертежам' },
 ]
 </script>
 
@@ -271,6 +264,58 @@ const cards = [
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.allswiper {
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0 30px 30px 30px;
+}
+
+.custom-file-input {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  width: 216px;
+}
+
+.swiper swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  border-radius: 10px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'Выбрать файл';
+  display: inline-block;
+  background: rgb(30, 33, 61);
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-input:hover::before {
+  background: #0056b3;
+}
+
 .h2cost {
   text-align: center;
   padding: 0 0 15px 0;
@@ -282,6 +327,82 @@ const cards = [
   letter-spacing: 0.5px;
 }
 
+.allcards {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.swiper {
+  width: 340px;
+  height: 264px;
+  overflow: visible;
+  max-width: 400px;
+  padding-top: 20px;
+}
+
+.swiper swiper-slide:nth-child(1n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.swiper swiper-slide:nth-child(2n) {
+  background-color: rgb(161, 7, 7);
+}
+
+.swiper swiper-slide:nth-child(3n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.swiper swiper-slide:nth-child(4n) {
+  background-color: rgb(47, 56, 131);
+}
+
+.swiper swiper-slide:nth-child(5n) {
+  background-color: rgb(161, 7, 7);
+}
+
+.swiper swiper-slide:nth-child(6n) {
+  background-color: rgb(47, 56, 131);
+}
+
+.swiper swiper-slide:nth-child(7n) {
+  background-color: rgb(30, 33, 61);
+}
+
+.swiper swiper-slide:nth-child(8n) {
+  background-color: rgb(161, 7, 7);
+}
+
+.textswiper {
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 80px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.blur {
+  position: absolute;
+  height: 91px;
+  width: 87px;
+  background-color: #f5f5f5;
+  z-index: 3;
+  filter: blur(10px);
+}
+
+.textswiper_left {
+  left: -43px;
+  top: -15px
+}
+
+.textswiper_right {
+  right: -43px;
+  top: -15px
+}
+
+
 .workcost {
   font-size: 18px;
   text-align: center;
@@ -291,11 +412,9 @@ const cards = [
   font-weight: 500;
 }
 
-.allinputcost {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 25px;
+.butinfo {
+  font-size: 16px;
+  text-shadow: 1px 0px 6px rgb(114, 114, 114);
 }
 
 .inputcost {
@@ -325,6 +444,13 @@ const cards = [
 .inputcost:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.allinputcost {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
 }
 
 .file-upload-container {
@@ -415,108 +541,16 @@ const cards = [
   transform: translate(-50%, -50%);
 }
 
-/* .loader {  
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-@keyframes spin {
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-.message {
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 10px 0 0;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.message--success {
-  background-color: rgba(46, 204, 113, 0.1);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.3);
-}
-
-.message--error {
-  background-color: rgba(231, 76, 60, 0.1);
-  color: #e74c3c;
-  border: 1px solid rgba(231, 76, 60, 0.3);
-}
-
 .perscost {
   text-align: center;
   padding: 20px 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.butinfo {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  display: inline-block;
-  text-align: center;
-}
-
-.butinfo:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-
-.allswiper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.textswiper {
-  text-align: center;
-  color: #333;
-  text-transform: uppercase;
-  position: relative;
-  width: 100%;
-  padding: 20px 0;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.blur {
-  position: absolute;
-  height: 100%;
-  width: 80px;
-  top: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.blur-left {
-  left: 0;
-  background: linear-gradient(90deg,
-      rgba(245, 245, 245, 1) 0%,
-      rgba(245, 245, 245, 0) 100%);
-}
-
-.blur-right {
-  right: 0;
-  background: linear-gradient(270deg,
-      rgba(245, 245, 245, 1) 0%,
-      rgba(245, 245, 245, 0) 100%);
+.infocost {
+  margin-left: 30px;
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .msg {
@@ -542,50 +576,34 @@ const cards = [
   }
 }
 
-.swiper-container {
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper {
-  width: 340px;
-  height: 264px;
-  overflow: visible;
-  max-width: 400px;
-  padding-top: 20px;
-}
-
-.slide-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.message {
   text-align: center;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 20px;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  user-select: none;
-  transition: transform 0.3s ease;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0 0;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-
-.swiper-slide:nth-child(odd) .slide-content {
-  background: linear-gradient(135deg, rgb(30, 33, 61) 0%, rgb(47, 56, 131) 100%);
+.message--success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
-.swiper-slide:nth-child(even) .slide-content {
-  background: linear-gradient(135deg, rgb(161, 7, 7) 0%, rgb(180, 20, 20) 100%);
+.message--error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width:1600px) {
+  .textswiper {
+    padding: 0 0 30px 129px;
+  }
+}
+
+@media screen and (max-width:1450px) {
   .markup {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -598,26 +616,21 @@ const cards = [
   .h2cost {
     font-size: 26px;
   }
+  
+}
 
-  .swiper-container {
-    height: 280px;
+@media screen and (max-width:1366px) {
+  .swiper swiper-slide {
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
+
   .markup {
     grid-template-columns: 100%;
     gap: 40px;
   }
-
-  /* .formcost {
-    padding: 25px;
-    order: 2;
-  }
-
-  .allswiper {
-    order: 1;
-  } */
 
   .h2cost {
     font-size: 24px;
@@ -628,18 +641,25 @@ const cards = [
     padding-bottom: 25px;
   }
 
-  .swiper-container {
-    height: 250px;
-    max-width: 500px;
-    margin: 0 auto;
+
+  .swiper swiper-slide {
+    font-size: 19px;
+    height: 200px;
   }
 
   .msg {
     font-size: 18px;
   }
+
+  .swiper {
+    height: 216px;
+    width: 284px;
+    padding-top: 0;
+  }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
   #cost {
     padding: 30px 15px;
   }
@@ -663,33 +683,12 @@ const cards = [
     min-height: 45px;
   }
 
-  .swiper-container {
-    max-width: 320px;
-    height: 240px;
-  }
-
-  .swiper {
-    width: 280px;
-    height: 220px;
-  }
-
-  .slide-content {
-    font-size: 14px;
-    padding: 10px;
-  }
-
   .msg {
     font-size: 16px;
   }
 }
 
-@media screen and (max-width: 576px) {
-  .swiper-container {
-    display: none;
-    height: 200px;
-    font-size: 20px;
-  }
-
+@media screen and (max-width:576px) {
   .workcost {
     font-size: 15px;
   }
@@ -707,31 +706,13 @@ const cards = [
     font-size: 14px;
   }
 
-  .swiper-container {
-    display: none;
-    height: 200px;
-  }
-
-  .slide-content {
-    font-size: 15px;
-  }
-
   .msg {
     animation-duration: 8s;
     font-size: 13px;
   }
-
-  .textswiper {
-    padding: 15px 0;
-    margin-bottom: 20px;
-  }
-
-  .butinfo {
-    font-size: 12px;
-  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
   #cost {
     padding: 20px 10px;
   }
@@ -740,32 +721,9 @@ const cards = [
     padding: 15px;
   }
 
-  .h2cost {
-    font-size: 18px;
-    padding-bottom: 10px;
-  }
-
-  .workcost {
-    font-size: 14px;
-    padding-bottom: 20px;
-  }
-
-  .allinputcost {
-    gap: 15px;
-  }
-
-  .swiper-container {
-    height: 180px;
-  }
-
-  .slide-content {
-    font-size: 14px;
-    padding: 12px;
-  }
-
   .msg {
     font-size: 14px;
-    animation-duration: 12s;
+    animation: marquee 20s linear infinite;
   }
 
   .blur {
@@ -773,13 +731,13 @@ const cards = [
   }
 
   .inputcost,
-  .file-label,
-  .butcost {
-    min-height: 48px;
+  .butcost,
+  .file-label {
+    min-height: 44px;
   }
 
   .inputcost {
     font-size: 16px;
   }
 }
-  </style>
+</style>

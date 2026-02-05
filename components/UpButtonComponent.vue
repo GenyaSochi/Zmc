@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
   .button {
     width: 50px;
     height: 50px;
-    right: 10px;
+    right: 42px;
     bottom: -50px;
   }
   
