@@ -121,7 +121,8 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
-.cardcontainer, .cost {
+.cardcontainer,
+.cost {
   font-size: 22px;
   border-radius: 10px;
   padding: 20px 10px;
@@ -143,7 +144,8 @@ onUnmounted(() => {
   background-color: #e74c3c;
 }
 
-.cardcontainer:hover, .cost:hover {
+.cardcontainer:hover,
+.cost:hover {
   box-shadow: 4px 4px 20px rgb(30, 33, 61);
   transform: translateY(-5px);
 }
@@ -154,7 +156,8 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
-.text1, .text3 {
+.text1,
+.text3 {
   font-size: 40px;
   font-weight: 500;
   text-align: center;
@@ -162,7 +165,8 @@ onUnmounted(() => {
   color: #333;
 }
 
-.text2, .text4 {
+.text2,
+.text4 {
   text-align: center;
   font-size: 34px;
   color: rgb(30, 33, 61);
@@ -176,17 +180,19 @@ onUnmounted(() => {
     grid-template-columns: repeat(2, 1fr);
     padding: 60px 20px;
   }
-  
+
   .video {
     height: 440px;
     max-height: 500px;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 36px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 30px;
   }
 }
@@ -197,33 +203,36 @@ onUnmounted(() => {
     padding: 30px 15px;
     gap: 15px;
   }
-  
+
   .num {
     height: 45px;
     width: 48px;
     font-size: 20px;
     padding: 5px 0;
   }
-  
-  .cardcontainer, .cost {
+
+  .cardcontainer,
+  .cost {
     font-size: 20px;
     min-height: 140px;
   }
-  
+
   .video {
     height: 400px;
     min-height: 220px;
     max-height: 380px;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 32px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 26px;
   }
-  
+
   .digitsprod {
     padding-top: 20px;
   }
@@ -235,38 +244,40 @@ onUnmounted(() => {
     gap: 15px;
     padding: 40px 15px;
   }
-  
+
   .digits {
     flex-direction: column;
     font-size: 20px;
     padding: 25px 15px;
     gap: 15px;
   }
-  
+
   .num {
     height: 40px;
     width: 42px;
     font-size: 18px;
   }
-  
+
   .video {
     height: 432px;
     min-height: 200px;
     max-height: 320px;
   }
-  
-  #myVideo {   
+
+  #myVideo {
     object-position: center 25%;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 28px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 22px;
   }
-  
+
   .digitsprod {
     padding: 15px 15px;
   }
@@ -278,161 +289,175 @@ onUnmounted(() => {
     min-height: 180px;
     max-height: 280px;
   }
-  
+
   #myVideo {
     object-position: center 15%;
   }
-  
+
   .digits {
     font-size: 18px;
     padding: 20px 10px;
     gap: 12px;
   }
-  
+
   .digits h2 {
     font-size: 20px;
     line-height: 1.3;
   }
-  
+
   .allnum {
     gap: 6px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .num {
     height: 35px;
     width: 38px;
     font-size: 16px;
     padding: 4px 0;
   }
-  
-  .cardcontainer, .cost {
+
+  .cardcontainer,
+  .cost {
     font-size: 18px;
     min-height: 100px;
     padding: 15px 8px;
     border-radius: 8px;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 22px;
     padding-bottom: 15px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 18px;
     padding-bottom: 20px;
     line-height: 1.3;
   }
-  
+
   .digitsprod {
     padding: 20px 15px;
   }
 }
 
-/* АДАПТАЦИЯ ДО 352px */
-@media screen and (max-width: 352px) {
+@media screen and (max-width: 356px) {
   .video {
     height: 280px;
     min-height: 150px;
     max-height: 190px;
   }
-  
+
   #myVideo {
     object-position: center 10%;
   }
-  
+
   .digits {
     font-size: 16px;
     padding: 15px 8px;
     gap: 10px;
   }
-  
+
   .digits h2 {
     font-size: 18px;
     line-height: 1.2;
   }
-  
+
   .allnum {
     gap: 4px;
   }
-  
+
   .num {
     height: 30px;
-    width: 32px;
+    width: 30px;
     font-size: 14px;
     padding: 3px 0;
     border-width: 1px;
   }
-  
+
   .allcontainer {
     padding: 30px 10px;
     gap: 12px;
   }
-  
-  .cardcontainer, .cost {
+
+  .cardcontainer,
+  .cost {
     font-size: 16px;
     min-height: 85px;
     padding: 12px 6px;
     border-radius: 6px;
     line-height: 1.3;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 20px;
     padding-bottom: 12px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 16px;
     padding-bottom: 15px;
     line-height: 1.2;
   }
-  
+
   .digitsprod {
     padding: 15px 10px;
   }
 }
 
-/* Дополнительная адаптация для очень маленьких экранов */
 @media screen and (max-width: 320px) {
   .video {
     height: 250px;
     min-height: 140px;
     max-height: 200px;
   }
-  
+
   .digits h2 {
     font-size: 16px;
   }
-  
+
   .allnum {
     gap: 3px;
   }
-  
+
   .num {
     height: 28px;
     width: 30px;
     font-size: 13px;
   }
-  
-  .cardcontainer, .cost {
+
+  .cardcontainer,
+  .cost {
     font-size: 15px;
     min-height: 80px;
   }
-  
-  .text1, .text3 {
+
+  .text1,
+  .text3 {
     font-size: 18px;
   }
-  
-  .text2, .text4 {
+
+  .text2,
+  .text4 {
     font-size: 15px;
   }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
 }
 
 .num:last-child {

@@ -641,7 +641,6 @@ const cards = [
     padding-bottom: 25px;
   }
 
-
   .swiper swiper-slide {
     font-size: 19px;
     height: 200px;
