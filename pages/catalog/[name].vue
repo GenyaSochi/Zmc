@@ -29,12 +29,14 @@
 		</div>
 	</div>
 
-	<ModalComponent v-model="popup"></ModalComponent>
+	<ModalCatalogComponent v-model="popup"></ModalCatalogComponent>
 </template>
 
 <script setup lang="ts">
 import type { product } from '@prisma/client';
 const route = useRoute()
+const popup = ref(false)
+
 
 const { data } = await useFetch<product | null>(`/api/products/${route.params.name}`)
 
@@ -47,7 +49,7 @@ if (data.value?.html) {
 		.join('</table></div>')
 }
 
-const popup = ref(false)
+
 </script>
 
 <style scoped>

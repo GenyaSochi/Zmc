@@ -3,7 +3,7 @@ import { callPopup } from "~/lib/nodemailer"
 
 export default defineEventHandler(async (event) => {
     const data = await readBody(event)
-    if (data.name && data.phone) {
+    if (data.name && data.phone && data.question) {
         try {
             callPopup(data)
             return {ok:true, message:'Запрос отправлен'}
