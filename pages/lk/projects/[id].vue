@@ -64,9 +64,6 @@ const save = () => {
   navigateTo('/lk/projects')
  }
 
-// const del = () =>{
-//   if()
-// }
 
 </script>
 

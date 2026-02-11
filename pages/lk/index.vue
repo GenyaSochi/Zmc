@@ -50,7 +50,7 @@ const regIn = async () => {
 
 
 <style scoped>
-/* Общие стили контейнера */
+
 .lk {
   height: 100%;
   max-width: 420px;
@@ -67,7 +67,7 @@ const regIn = async () => {
   overflow: hidden;
 }
 
-/* Декоративный элемент */
+
 .lk::before {
   content: '';
   position: absolute;
@@ -91,7 +91,7 @@ const regIn = async () => {
   z-index: 0;
 }
 
-/* Заголовок */
+
 .entrance {
   font-size: 28px;
   text-align: center;
@@ -115,7 +115,7 @@ const regIn = async () => {
   border-radius: 2px;
 }
 
-/* Метки */
+
 .text {
   font-size: 16px;
   font-weight: 600;
@@ -128,7 +128,7 @@ const regIn = async () => {
   z-index: 1;
 }
 
-/* Поля ввода */
+
 .llk {
   color: #1e293b;
   height: 56px;
@@ -162,7 +162,7 @@ const regIn = async () => {
   font-weight: 400;
 }
 
-/* Сообщение об ошибке/успехе */
+
 p[ v-if="message"] {
   background: linear-gradient(135deg, #fef3f2 0%, #fee2e2 100%);
   color: #dc2626;
@@ -189,7 +189,7 @@ p[ v-if="message"] {
   }
 }
 
-/* Контейнер кнопок */
+
 .lk > div > div:last-of-type {
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@ p[ v-if="message"] {
   margin-bottom: 15px;
 }
 
-/* Кнопки */
+
 .btn {
   border: none;
   padding: 16px 24px;
@@ -223,9 +223,10 @@ p[ v-if="message"] {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.3px;
+  margin: 10px;
 }
 
-/* Кнопка Войти */
+
 .lk > div > div:first-of-type .btn:first-child {
   background: linear-gradient(135deg, #1e3a8a 0%, #2d4ba3 100%);
   color: white;
@@ -249,7 +250,7 @@ p[ v-if="message"] {
     0 1px 2px rgba(30, 58, 138, 0.1);
 }
 
-/* Кнопка На сайт */
+
 .lk > div > div:first-of-type .btn:last-child {
   background: white;
   color: #475569;
@@ -265,7 +266,7 @@ p[ v-if="message"] {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Кнопка Зарегистрироваться */
+
 .lk > div > div:last-of-type .btn {
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
   color: #475569;
@@ -282,13 +283,13 @@ p[ v-if="message"] {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Эффект нажатия для всех кнопок */
+
 .btn:active {
   transform: translateY(-1px);
   transition: transform 0.1s ease;
 }
 
-/* Эффект волны при клике */
+
 .btn::after {
   content: '';
   position: absolute;
@@ -322,7 +323,7 @@ p[ v-if="message"] {
   }
 }
 
-/* Заголовок при авторизации */
+
 .access {
   padding: 30px 0;
   color: #1e3a8a;
@@ -349,7 +350,7 @@ p[ v-if="message"] {
   border-radius: 2px;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
   .lk {
     max-width: 90%;
@@ -403,7 +404,7 @@ p[ v-if="message"] {
   }
 }
 
-/* Анимация появления формы */
+
 .lk {
   animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
   opacity: 0;
@@ -417,14 +418,13 @@ p[ v-if="message"] {
   }
 }
 
-/* Улучшение фокуса для доступности */
+
 .llk:focus-visible,
 .btn:focus-visible {
   outline: 2px solid #1e3a8a;
   outline-offset: 2px;
 }
 
-/* Плавное изменение размера текста при фокусе */
 .llk:focus {
   font-size: 16.5px;
 }

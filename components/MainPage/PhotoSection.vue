@@ -41,7 +41,7 @@ const swiper = useSwiper(swiperCont, {
   pagination: true,
   watchSlidesProgress: true,
   breakpoints: {
-  
+
     1786: {
       slidesPerView: 6
     },
@@ -113,18 +113,25 @@ swiper-container::part(bullet-active) {
   }
 
   swiper-container {
-    height: 305px;
+    height: 330px;
   }
 }
 
 @media screen and (max-width:992px) {
   swiper-container {
-    height: 248px;
+    height: 265px;
   }
 
   .imgphoto {
     height: 208px;
   }
+}
+
+@media screen and (max-width:790px) {
+  swiper-container {
+    height: 238px;
+  }
+
 }
 
 @media screen and (max-width:768px) {
@@ -133,7 +140,7 @@ swiper-container::part(bullet-active) {
   }
 
   swiper-container {
-    height: 216px;
+    height: 240px;
   }
 
   .photocontainer {
@@ -146,19 +153,22 @@ swiper-container::part(bullet-active) {
     height: 196px;
   }
 
-
-
   swiper-container {
     --swiper-theme-color: grey !important;
+    height: 252px;
   }
 }
 
+@media screen and (max-width:471px){
+swiper-container{
+  height: 278px;
+}
+}
 @media screen and (max-width:410px) {
   .imgphoto {
     height: 190px;
     width: 130px;
   }
-
 
   swiper-slide {
     width: 146px;

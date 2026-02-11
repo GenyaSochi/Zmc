@@ -21,7 +21,7 @@ const userStore = useUser()
 </script>
 
 <style scoped>
-/* Основной контейнер */
+
 .proj_all {
   padding: 40px 35px 35px 40px;
   border: 2px solid #e2e8f0;
@@ -42,7 +42,6 @@ const userStore = useUser()
   align-items: start;
 }
 
-/* Декоративный элемент */
 .proj_all::before {
   content: '';
   position: absolute;
@@ -54,7 +53,6 @@ const userStore = useUser()
   border-radius: 20px 20px 0 0;
 }
 
-/* Навигационные ссылки */
 .proj_all > a {
   display: block;
   color: #475569;
@@ -71,12 +69,10 @@ const userStore = useUser()
   overflow: hidden;
 }
 
-/* Убираем <br> */
 .proj_all > br {
   display: none;
 }
 
-/* Эффект наведения для ссылок */
 .proj_all > a:hover {
   color: #1e3a8a;
   background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(30, 58, 138, 0.02) 100%);
@@ -85,7 +81,6 @@ const userStore = useUser()
   box-shadow: 0 5px 15px rgba(30, 58, 138, 0.08);
 }
 
-/* Активная ссылка (можно добавить через :active или router-link-active) */
 .proj_all > a.router-link-active,
 .proj_all > a.nuxt-link-active {
   color: white;
@@ -96,7 +91,6 @@ const userStore = useUser()
   border-color: #1e3a8a;
 }
 
-/* Ссылка для админа */
 .proj_all > a[v-if] {
   margin-top: 25px;
   padding-top: 16px;
@@ -118,7 +112,6 @@ const userStore = useUser()
   letter-spacing: 0.5px;
 }
 
-/* Блок кнопок */
 .buttons {
   padding: 40px 0;
   width: 100%;
@@ -129,7 +122,6 @@ const userStore = useUser()
   margin-top: 30px;
 }
 
-/* Кнопки */
 .btn {
   border: none;
   padding: 16px 24px;
@@ -148,7 +140,6 @@ const userStore = useUser()
   letter-spacing: 0.3px;
 }
 
-/* Кнопка Выход */
 .buttons .btn:first-child {
   background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
@@ -166,7 +157,6 @@ const userStore = useUser()
   background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
 }
 
-/* Кнопка На сайт */
 .buttons .btn:last-child {
   background: white;
   color: #475569;
@@ -182,13 +172,11 @@ const userStore = useUser()
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Эффект нажатия для кнопок */
 .btn:active {
   transform: translateY(-1px);
   transition: transform 0.1s ease;
 }
 
-/* Эффект волны при клике */
 .btn::after {
   content: '';
   position: absolute;
@@ -222,7 +210,6 @@ const userStore = useUser()
   }
 }
 
-/* Слот для контента */
 .proj_all > div:first-child {
   grid-column: 2;
   grid-row: 1 / span 100;
@@ -231,14 +218,12 @@ const userStore = useUser()
   min-height: 500px;
 }
 
-/* Слот для дополнительного контента в кнопках */
 .buttons > slot {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #e2e8f0;
 }
 
-/* Анимация появления */
 .proj_all {
   animation: slideIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
   opacity: 0;
@@ -252,7 +237,7 @@ const userStore = useUser()
   }
 }
 
-/* Адаптивность */
+
 @media screen and (max-width: 850px) {
   .proj_all {
     grid-template-columns: 1fr;
@@ -326,7 +311,6 @@ const userStore = useUser()
   }
 }
 
-/* Улучшение фокуса для доступности */
 .proj_all > a:focus-visible,
 .btn:focus-visible {
   outline: 2px solid #1e3a8a;
@@ -334,7 +318,6 @@ const userStore = useUser()
   border-radius: 12px;
 }
 
-/* Эффект для активной страницы (нужно добавить класс через JS) */
 .proj_all > a.active {
   color: white;
   background: linear-gradient(135deg, #1e3a8a 0%, #2d4ba3 100%);
@@ -344,7 +327,6 @@ const userStore = useUser()
   border-color: #1e3a8a;
 }
 
-/* Индикатор новой страницы */
 .proj_all > a::after {
   content: '→';
   position: absolute;

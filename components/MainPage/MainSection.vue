@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-// Скрипт остается без изменений
+
 const digits = ref([5, 4, 9, 4, 3, 6, 0, 0, 0])
 
 const incrementDigits = () => {
@@ -112,6 +112,9 @@ onUnmounted(() => {
   border-radius: 5px;
 }
 
+.num:last-child{
+  background-color: #e74c3c;
+}
 .allcontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -344,7 +347,21 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width: 356px) {
+@media screen and (max-width: 409px) {
+  .num {
+    height: 26px;
+    width: 26px;
+    font-size: 14px;
+    padding: 3px 0;
+    border-width: 1px;
+  }
+
+  .video {
+    max-height: 252px;
+  }
+}
+
+@media screen and (max-width: 358px) {
   .video {
     height: 280px;
     min-height: 150px;
@@ -368,14 +385,6 @@ onUnmounted(() => {
 
   .allnum {
     gap: 4px;
-  }
-
-  .num {
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    padding: 3px 0;
-    border-width: 1px;
   }
 
   .allcontainer {
@@ -426,8 +435,6 @@ onUnmounted(() => {
   }
 
   .num {
-    height: 28px;
-    width: 30px;
     font-size: 13px;
   }
 

@@ -117,9 +117,8 @@ swiper-container::part(bullet-active) {
   }
 
   swiper-container {
-    height: 330px;
+    height: 336px;
   }
-
 }
 
 @media screen and (max-width:1366px) {
@@ -133,11 +132,7 @@ swiper-container::part(bullet-active) {
   }
 
   .certcontainer {
-    height: 308px;
-  }
-
-  swiper-container {
-    height: 298px;
+    height: 348px;
   }
 }
 
@@ -153,79 +148,99 @@ swiper-container::part(bullet-active) {
     width: 100%;
   }
 }
-  @media screen and (max-width:1017px) {
-    .certtext {
-      padding: 20px 0 50px 0;
-    }
+
+@media screen and (max-width:1017px) {
+  .certtext {
+    padding: 20px 0 50px 0;
+  }
+}
+
+@media screen and (max-width:996px) {
+  .certtext {
+    font-size: 24px;
   }
 
-  @media screen and (max-width:996px) {
-    .certtext {
-      font-size: 24px;
-    }
-
-    .cert {
-      height: 214px;
-    }
-
-    .certcontainer {
-      height: 226px;
-    }
-
-    swiper-container {
-      height: 244px;
-    }
+  .cert {
+    height: 214px;
   }
 
-  @media screen and (max-width:768px) {
-    .certtext {
-      font-size: 20px;
-    }
-
-    .cert {
-      height: 184px;
-    }
-
-    swiper-container {
-      height: 216px;
-    }
+  .certcontainer {
+    height: 265px;
   }
 
-  @media screen and (max-width:563px) {
-    .cert {
-      height: 184px;
-    }
+  swiper-container {
+    height: 267px;
+  }
+}
 
-    .certcontainer {
-      display: flex;
-      height: 212px;
-    }
-
-
-    swiper-container {
-      --swiper-theme-color: grey !important;
-      height: 216px;
-    }
+@media screen and (max-width:790px) {
+  swiper-container {
+    height: 280px;
   }
 
-  @media screen and (max-width:466px) {
+  .certcontainer {
+    height: 280px;
+  }
+}
 
-    .cert {
-      height: 184px;
-    }
-
-    .certtext {
-      padding: 20px 0 30px 0;
-    }
-
-    .certcontainer {
-      padding-left: 0;
-      text-align: center;
-    }
+@media screen and (max-width:768px) {
+  .certtext {
+    font-size: 20px;
   }
 
-  @media screen and (max-width:407px) {
-    .certtext {
-      padding-top: 26px;
-    }
-  }</style>
+  .cert {
+    height: 184px;
+  }
+
+  swiper-container {
+    height: 243px;
+  }
+  .certcontainer{
+    height: 255px;
+  }
+}
+
+@media screen and (max-width:563px) {
+  .cert {
+    height: 184px;
+  }
+
+  .certcontainer {
+    display: flex;
+    height: 242px;
+  }
+
+  swiper-container {
+    --swiper-theme-color: grey !important;
+    height: 236px;
+  }
+}
+
+@media screen and (max-width:326px) {
+  swiper-container::part{
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+/* @media screen and (max-width:466px) {
+
+  .cert {
+    height: 184px;
+  }
+
+  .certtext {
+    padding: 20px 0 30px 0;
+  }
+
+  .certcontainer {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:407px) {
+  .certtext {
+    padding-top: 26px;
+  }
+} */
+</style>

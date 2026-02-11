@@ -148,7 +148,7 @@ onMounted(async () => {
   color: #1a73e8;
 }
 
-/* Адаптивная верстка */
+
 @media screen and (max-width: 1200px) {
   .job-container {
     padding: 0 40px;

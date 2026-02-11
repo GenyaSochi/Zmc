@@ -262,7 +262,7 @@
   margin-bottom: 0;
 }
 
-/* Адаптивная верстка */
+
 @media screen and (max-width: 1366px) {
   .privacy-title {
     font-size: 30px;
