@@ -1,5 +1,4 @@
-import { scrypt } from "crypto"
-import { callPopup } from "~/lib/nodemailer"
+import { callPopup } from "~~/lib/nodemailer"
 
 export default defineEventHandler(async (event) => {
     const data = await readBody(event)

@@ -11,9 +11,14 @@
     "deploy": "nuxt generate && gh-pages -d dist"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.6.0",
     "@nuxt/image": "^1.8.1",
     "@pinia/nuxt": "^0.5.5",
     "@prisma/nuxt": "^0.0.35",
+    "@tiptap/extension-bubble-menu": "^3.19.0",
+    "@tiptap/extension-floating-menu": "^3.19.0",
+    "@tiptap/extension-highlight": "^3.19.0",
+    "@tiptap/extension-image": "^3.19.0",
     "@tiptap/extension-table": "^3.6.1",
     "@tiptap/pm": "^3.6.1",
     "@tiptap/starter-kit": "^3.6.1",

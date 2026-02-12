@@ -222,25 +222,4 @@ swiper-container::part(bullet-active) {
     height: 15px !important;
   }
 }
-/* @media screen and (max-width:466px) {
-
-  .cert {
-    height: 184px;
-  }
-
-  .certtext {
-    padding: 20px 0 30px 0;
-  }
-
-  .certcontainer {
-    padding-left: 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width:407px) {
-  .certtext {
-    padding-top: 26px;
-  }
-} */
 </style>

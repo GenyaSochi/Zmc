@@ -3,7 +3,7 @@
     <template #top>
       <h1 class="edit-prod">Редактировать продукт</h1>
     </template>
-  <NuxtLink to="/lk/products/create" class="btn">Добавить</NuxtLink>
+    <NuxtLink to="/lk/products/create" class="btn">Добавить</NuxtLink>
   </AccountMenuComponent>
   <div class="info-style">
     <input type="text" v-model="product.name" class="info-prod">

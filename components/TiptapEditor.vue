@@ -1,9 +1,7 @@
 <template>
   <div class="editor_block">
     <div v-if="editor">
-      <!-- Панель инструментов -->
       <div class="toolbar">
-        <!-- Форматирование текста -->
         <div class="toolbar-group">
           <button @click="toggleBold" :disabled="!canToggleBold" :class="{ 'is-active': isActive('bold') }">
             Жирный
@@ -14,10 +12,12 @@
           <button @click="toggleStrike" :disabled="!canToggleStrike" :class="{ 'is-active': isActive('strike') }">
             Зачеркнутый
           </button>
-          <button @click="toggleUnderline" :disabled="!canToggleUnderline" :class="{ 'is-active': isActive('underline') }">
+          <button @click="toggleUnderline" :disabled="!canToggleUnderline"
+            :class="{ 'is-active': isActive('underline') }">
             Подчеркнуть
           </button>
-          <button @click="toggleHighlight" :disabled="!canToggleHighlight" :class="{ 'is-active': isActive('highlight') }">
+          <button @click="toggleHighlight" :disabled="!canToggleHighlight"
+            :class="{ 'is-active': isActive('highlight') }">
             Маркер
           </button>
           <button @click="toggleCode" :disabled="!canToggleCode" :class="{ 'is-active': isActive('code') }">
@@ -25,7 +25,6 @@
           </button>
         </div>
 
-        <!-- Заголовки -->
         <div class="toolbar-group">
           <button @click="setParagraph" :class="{ 'is-active': isActive('paragraph') }">
             Абзац
@@ -41,7 +40,7 @@
           </button>
         </div>
 
-        <!-- Списки и блоки -->
+
         <div class="toolbar-group">
           <button @click="toggleBulletList" :class="{ 'is-active': isActive('bulletList') }">
             Маркированный список
@@ -57,7 +56,7 @@
           </button>
         </div>
 
-        <!-- Дополнительные инструменты -->
+
         <div class="toolbar-group">
           <button @click="setHorizontalRule">
             Разделитель
@@ -77,13 +76,8 @@
         </div>
       </div>
 
-      <!-- Всплывающее меню -->
-      <BubbleMenu
-        :editor="editor"
-        :tippy-options="{ duration: 100 }"
-        v-if="editor"
-        class="bubble-menu"
-      >
+
+      <BubbleMenu v-if="editor" :editor="editor" :tippy-options="{ duration: 100 }" class="bubble-menu">
         <div class="bubble-menu-content">
           <button @click="toggleBold" :class="{ 'is-active': isActive('bold') }">
             Ж
@@ -103,13 +97,8 @@
         </div>
       </BubbleMenu>
 
-      <!-- Плавающее меню -->
-      <FloatingMenu
-        :editor="editor"
-        :tippy-options="{ duration: 100 }"
-        v-if="editor"
-        class="floating-menu"
-      >
+
+      <FloatingMenu :editor="editor" :tippy-options="{ duration: 100 }" v-if="editor" class="floating-menu">
         <div class="floating-menu-content">
           <button @click="toggleHeading(1)" :class="{ 'is-active': isActive('heading', { level: 1 }) }">
             H1
@@ -126,27 +115,13 @@
         </div>
       </FloatingMenu>
 
-      <!-- Область редактирования -->
       <EditorContent :editor="editor" class="editor-content" />
 
-      <!-- Загрузка изображений -->
       <div class="image-upload">
         <form @submit.prevent="uploadImage" class="upload-form">
           <div class="upload-fields">
-            <input
-              type="text"
-              v-model="altText"
-              placeholder="Описание изображения"
-              class="alt-input"
-              required
-            />
-            <input
-              type="file"
-              ref="fileInput"
-              accept="image/*"
-              class="file-input"
-              required
-            />
+            <input type="text" v-model="altText" placeholder="Описание изображения" class="alt-input" required />
+            <input type="file" ref="fileInput" accept="image/*" class="file-input" required />
             <button type="submit" class="upload-btn">
               Загрузить
             </button>
@@ -172,11 +147,15 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3'
+import { Editor, EditorContent } from '@tiptap/vue-3'
+import BubbleMenu from '@tiptap/extension-bubble-menu'
+import { FloatingMenu } from '@tiptap/vue-3/menus'
+// @ts-ignore
 import Highlight from '@tiptap/extension-highlight'
+// @ts-ignore
+import Image from '@tiptap/extension-image'
 import Underline from '@tiptap/extension-underline'
 import StarterKit from '@tiptap/starter-kit'
-import Image from '@tiptap/extension-image'
 import type { Editor as EditorType } from '@tiptap/core'
 
 // Props и Emits
@@ -189,7 +168,7 @@ const emit = defineEmits<{
 }>()
 
 // Refs
-const editor = ref<EditorType | null>(null)
+const editor = ref<EditorType | null | any >(null)
 const altText = ref('')
 const fileInput = ref<HTMLInputElement | null>(null)
 const uploadError = ref<string | null>(null)
@@ -227,18 +206,17 @@ const clearFormatting = () => {
   editor.value?.chain().focus().unsetAllMarks().clearNodes().run()
 }
 
-// Сохранение контента
 const saveContent = () => {
   if (!editor.value) return
-  
+
   const html = editor.value.getHTML()
   emit('save', { html })
 }
 
-// Загрузка изображения
+
 const uploadImage = async () => {
   uploadError.value = null
-  
+
   if (!fileInput.value?.files?.[0]) {
     uploadError.value = 'Пожалуйста, выберите файл'
     return
@@ -250,23 +228,21 @@ const uploadImage = async () => {
   }
 
   const file = fileInput.value.files[0]
-  
-  // Проверка типа файла
+
   if (!file.type.startsWith('image/')) {
     uploadError.value = 'Пожалуйста, выберите файл изображения'
     return
   }
 
-  // Проверка размера файла (например, 5MB)
   if (file.size > 5 * 1024 * 1024) {
     uploadError.value = 'Файл слишком большой (макс. 5MB)'
     return
   }
 
   try {
-    // Создание предпросмотра для получения размеров
+
     const img = new Image()
-    
+
     img.onload = async () => {
       const formData = new FormData()
       formData.append('alt', altText.value)
@@ -280,14 +256,20 @@ const uploadImage = async () => {
           body: formData
         })
 
-        // Вставка изображения в редактор
-        editor.value?.chain().focus().setImage({ 
-          src: data.url, 
-          alt: altText.value,
-          title: altText.value
-        }).run()
 
-        // Сброс формы
+        editor.value?.chain()
+          .focus()
+          .insertContent({
+            type: 'image',
+            attrs: {
+              src: data.url,
+              alt: altText.value,
+              title: altText.value
+            }
+          })
+          .run()
+
+
         altText.value = ''
         if (fileInput.value) {
           fileInput.value.value = ''
@@ -303,24 +285,23 @@ const uploadImage = async () => {
       uploadError.value = 'Ошибка при чтении файла изображения'
     }
 
-    img.src = URL.createObjectURL(file)
+    const imageUrl = URL.createObjectURL(file)
+    img.src = imageUrl
   } catch (error) {
     console.error('Ошибка обработки файла:', error)
     uploadError.value = 'Ошибка при обработке файла'
   }
 }
 
-// Обработка вставки текста
 const handlePaste = (event: ClipboardEvent) => {
-  event.preventDefault()
-  
-  const text = event.clipboardData?.getData('text/plain') || ''
-  
-  // Вставка текста в редактор
-  editor.value?.commands.insertContent(text)
+  const html = event.clipboardData?.getData('text/html')
+  if (!html) {
+    event.preventDefault()
+    const text = event.clipboardData?.getData('text/plain') || ''
+    editor.value?.commands.insertContent(text)
+  }
 }
 
-// Инициализация редактора
 onMounted(() => {
   editor.value = new Editor({
     content: props.text || '',
@@ -340,11 +321,11 @@ onMounted(() => {
         class: 'prose focus:outline-none',
         spellcheck: 'false',
       },
+      // @ts-ignore
       handlePaste: handlePaste,
     },
   })
 
-  // Очистка URL объекта при размонтировании
   onBeforeUnmount(() => {
     if (editor.value) {
       editor.value.destroy()
@@ -352,7 +333,6 @@ onMounted(() => {
   })
 })
 
-// Обновление контента при изменении props
 watch(() => props.text, (newText) => {
   if (editor.value && newText !== editor.value.getHTML()) {
     editor.value.commands.setContent(newText || '')
@@ -556,20 +536,16 @@ watch(() => props.text, (newText) => {
   .toolbar {
     flex-direction: column;
   }
-  
+
   .upload-fields {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .alt-input {
     min-width: unset;
   }
 }
-</style>
-
-<style>
-/* Стили для контента редактора */
 .editor-content .ProseMirror {
   min-height: 150px;
 }
@@ -647,3 +623,4 @@ watch(() => props.text, (newText) => {
   outline: 2px solid #4299e1;
 }
 </style>
+

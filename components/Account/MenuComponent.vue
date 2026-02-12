@@ -27,7 +27,7 @@ const userStore = useUser()
   border: 2px solid #e2e8f0;
   background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   max-width: 800px;
-  max-height: 1100px;
+  max-height: 850px;
   border-radius: 20px;
   margin: 40px auto;
   box-shadow: 
@@ -38,7 +38,7 @@ const userStore = useUser()
   overflow: hidden;
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 50px;
+  gap: 20px;
   align-items: start;
 }
 

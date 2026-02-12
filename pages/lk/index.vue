@@ -64,7 +64,7 @@ const regIn = async () => {
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(30, 58, 138, 0.1);
   position: relative;
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 

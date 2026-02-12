@@ -39,7 +39,6 @@ const fileChange = (event: Event) => {
   if (files.length) {
     const file = files[0]
     const reader = new FileReader()
-    // Чтение файла 
     reader.onload = (e) => {
       previewImage.value = e.target?.result
     }

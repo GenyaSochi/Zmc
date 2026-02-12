@@ -53,7 +53,7 @@ let callPopup = async (data:any) => {
   await transport.sendMail({
     from: '"no-reply zmc-ural" <tk-ural@mail.ru>',
     to: 'eunasedkina@gmail.com',
-    subject: `Заявка на обратный звонок`,
+    subject: data.question? `Заявка с вопросом` : `Заявка на обратный звонок`,
     html: `
     <table>
       <tbody>
@@ -65,6 +65,7 @@ let callPopup = async (data:any) => {
           <td>Телефон</td>
           <td>${data?.phone}</td>
         </tr>
+        ${data.question? '<tr><td>Вопрос</td><td>'+data.question+'</td></tr>' : ''}
         </tbody>
         </table>
         `,
