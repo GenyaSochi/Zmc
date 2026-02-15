@@ -4,26 +4,28 @@
       <h1 class="edit-prod">Редактировать продукт</h1>
     </template>
     <NuxtLink to="/lk/products/create" class="btn">Добавить</NuxtLink>
+    <button @click="save" class="btn">Сохранить изменения</button>
   </AccountMenuComponent>
   <div class="info-style">
-    <input type="text" v-model="product.name" class="info-prod" placeholder="name">
-    <input type="text" v-model="product.title" class="info-prod" placeholder="title">
-    <select v-model="product.type_id" @change="product.out_id=null" class="info-prod">
+    <input type="text" v-model="product.name" class="info-prod" placeholder="имя">
+    <input type="text" v-model="product.title" class="info-prod" placeholder="название продукта">
+    <select v-model="product.type_id" @change="product.out_id = null" class="info-prod">
       <option v-for="el of type" :key="el.id" :value="el.id" class="info-prod">{{ el.name }}</option>
     </select>
-    <select v-if="product.type_id==4" v-model="product.out_id" class="info-prod">
+    <select v-if="product.type_id == 4" v-model="product.out_id" class="info-prod">
       <option :value="null">Без номера выпуска</option>
       <option v-for="el of out" :key="el.id" :value="el.id">{{ el.name }}</option>
     </select>
-    
+
     <div class="img-style">
       <label class="label" for="fileUpload"></label>
       <input class="fileInput" type="file" id="fileUpload" @change="fileChange" accept="image/*">
       <img v-if="previewImage || product.img" :src="previewImage || product.img" />
-      <div v-else>Добавить картинку</div>
+      добавить картинку
     </div>
-  </div>
-
+    <button @click="delImg" class="delImg">удалить картинку</button>
+  </div>  
+    
   <div class="info-text">
     <EditorContent v-if="editor" :editor="editor" />
     <div>
@@ -79,7 +81,6 @@
       </div>
     </div>
   </div>
-  <button @click="save" class="button-save">сохранить изменения</button>
 </template>
 
 <script setup lang="ts">
@@ -89,8 +90,13 @@ import StarterKit from '@tiptap/starter-kit'
 import { Editor, EditorContent } from '@tiptap/vue-3'
 
 const product = ref({} as Product)
+const delImg = () => {
+  if (previewImage.value)
+    previewImage.value = ''
+  files = []
+}
 
-const { type, out } = await $fetch<{type: Type[], out: Out[] }>('/api/products/params')
+const { type, out } = await $fetch<{ type: Type[], out: Out[] }>('/api/products/params')
 definePageMeta({
   layout: 'admin',
   middleware: 'adm'
@@ -123,7 +129,7 @@ const fileChange = (event: Event) => {
   if (files.length) {
     const file = files[0]
     const reader = new FileReader()
-  
+
     reader.onload = (e) => {
       previewImage.value = e.target?.result
     }
@@ -144,11 +150,12 @@ const save = () => {
 
 <style scoped>
 .fileInput {
-  display: none;
+  display: none; 
 }
 
 .label {
-  display: block;
+  display: flex;
+  text-align: left;
   position: absolute;
   top: 0;
   right: 0;
@@ -188,8 +195,15 @@ h1 {
 
 .img-style {
   position: relative;
-  text-align: center;
+  display: flex;
+  border: 1px solid gray;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
+
 
 .info-style img {
   width: 300px;
@@ -210,6 +224,9 @@ h1 {
   width: 1400px;
   gap: 10px;
   margin: 30px auto;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .info-editor {
@@ -226,5 +243,25 @@ h1 {
 
 .info-font {
   border-bottom: 1px solid grey;
+}
+
+.delImg {
+  position: relative;
+  display: flex;
+  border: 1px solid gray;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.btn {
+  border: 3px solid #1e3a8a;
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 17px;
+  flex: 1;
 }
 </style>

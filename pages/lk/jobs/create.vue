@@ -5,19 +5,19 @@
     </template>
     <br>
   </AccountMenuComponent>
-    <div class="edit-user">
+  <div class="edit-user">
     <div class="user-check">
       <p>название</p>
       <p>описание</p>
       <p></p>
     </div>
-    
+
     <div class="user-check">
       <input type="text" placeholder="должность" v-model="job.title">
       <input type="text" placeholder="описание" v-model="job.description">
       <button @click="save()" class="save-btn">сохранить</button>
     </div>
-    
+
   </div>
 </template>
 
@@ -42,11 +42,11 @@ const save = () => {
 }
 
 .save-btn {
-  border: 2px solid black;
+  border: 1px solid grey;
   border-radius: 5px;
   padding: 2px;
   text-align: center;
-  margin: 10px; 
+  margin: 10px;
   width: 200px;
 }
 
@@ -60,15 +60,23 @@ const save = () => {
   grid-template-columns: 360px 150px 225px;
   align-items: center;
   justify-items: start;
-  gap: 10px;
+  gap: 30px;
   text-align: start;
   border-bottom: 1px solid grey;
   max-width: 1200px;
-  
 }
 
 h1 {
   color: #1e3a8a;
   font-weight: 700;
+}
+
+.btn {
+  border: 3px solid #1e3a8a;
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+  flex: 1;
 }
 </style>

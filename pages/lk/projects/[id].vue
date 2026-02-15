@@ -5,8 +5,8 @@
     </template>
     <NuxtLink to="/lk/projects/create" class="btn">Добавить</NuxtLink>
     <button @click="save" class="btn">Сохранить изменения</button>
-    <button @click="" class="btn">Удалить</button>
-  </AccountMenuComponent>
+    <button @click="delImg" class="btn">Удалить</button>
+      </AccountMenuComponent>
   <div class="editing-projects">
     <input type="text" v-model="project.name">
     <div style="position: relative;">
@@ -47,6 +47,11 @@ const fileChange = (event: Event) => {
     }
     reader.readAsDataURL(file)
   }
+}
+const delImg = () => {
+  if (previewImage.value)
+    previewImage.value = ''
+  files = []
 }
 
 const save = () => {
@@ -130,5 +135,14 @@ const save = () => {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+}
+.delImg {
+  position: relative;
+  display: flex;
+  border: 2px solid gray;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 </style>

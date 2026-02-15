@@ -3,21 +3,21 @@
     <template #top>
       <h1 class="edit-proj">Редактировать проект</h1>
     </template>
+    <button @click="save" class="button-save">Сохранить изменения</button>
   </AccountMenuComponent>
   <div class="editing-projects">
-    <input type="text" v-model="project.name" placeholder="name">
-    <div style="position: relative;">
+    <input type="text" v-model="project.name" placeholder="имя">
+    <img v-if="previewImage || project.img" :src="previewImage || project.img" />
+    <div v-else class="addImg">
       <label class="label" for="fileUpload"></label>
       <input class="fileInput" type="file" id="fileUpload" @change="fileChange" accept="image/*">
-      <img v-if="previewImage || project.img" :src="previewImage || project.img" />
-      <div v-else>Добавить картинку</div>
-      <div @click="delImg">Удалить картинку</div>
+      Добавить картинку
     </div>
-    <input type="text" v-model="project.quantity" placeholder="quant">
-    <input type="text" v-model="project.year" placeholder="year">
-    <input type="text" v-model="project.enduser" placeholder="end">
-    <textarea v-model="project.description"></textarea>   
-    <button @click="save" class="button-save">Сохранить изменения</button> 
+    <button @click="delImg" class="delImg">Удалить картинку</button>
+    <input type="text" v-model="project.quantity" placeholder="количество">
+    <input type="text" v-model="project.year" placeholder="год">
+    <input type="text" v-model="project.enduser" placeholder="конечный потребитель">
+    <textarea v-model="project.description"></textarea>
   </div>
 </template>
 
@@ -65,8 +65,10 @@ const save = () => {
   navigateTo('/lk/projects')
 }
 
-const delImg = () =>{
-  
+const delImg = () => {
+  if (previewImage.value)
+    previewImage.value = ''
+  files = []
 }
 
 </script>
@@ -90,6 +92,7 @@ const delImg = () =>{
   display: block;
   margin: 5px 0;
   width: 100%;
+  text-align: left;
 }
 
 .editing-projects textarea {
@@ -111,12 +114,29 @@ const delImg = () =>{
   left: 0;
 }
 
-.editing-projects .button-save {
+.editing-projects {
   border: 2px solid gray;
   padding: 10px;
   border-radius: 5px;
   margin: 40px 0;
   text-align: center;
+
+}
+
+.button-save {
+  display: block;
+  color: #475569;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 20px;
+  margin: 6px 0;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 .edit-proj {
@@ -134,5 +154,16 @@ const delImg = () =>{
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+}
+
+.addImg,
+.delImg {
+  position: relative;
+  display: flex;
+  border: 2px solid gray;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 </style>
