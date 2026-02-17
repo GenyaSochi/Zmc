@@ -5,7 +5,7 @@
     </template>
     <br>
     <NuxtLink to="/lk/jobs/create" class="btn">добавить</NuxtLink>
-    <button class="btn">удалить</button>
+    <!-- <button class="btn" @click="">удалить</button> -->
   </AccountMenuComponent>
 
   <div class="edit-user">
@@ -37,8 +37,12 @@ const save = (job: Job) => {
 }
 onMounted(() => refresh())
 
+// const delJob = (id: number)=>{
+//   $fetch(`/api/jobs/${id}`, { method: 'DELETE' })
+// }
 
-</script>
+// onMounted(() => refresh())
+</script> 
 
 <style scoped>
 .edit-user {
