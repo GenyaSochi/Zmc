@@ -33,6 +33,10 @@ const save = () => {
   $fetch('/api/jobs', { method: 'POST', body: job.value })
   navigateTo('/lk/jobs')
 }
+
+const delJob = () => {
+
+}
 </script>
 
 <style scoped>

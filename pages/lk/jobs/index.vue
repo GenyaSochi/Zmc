@@ -5,6 +5,7 @@
     </template>
     <br>
     <NuxtLink to="/lk/jobs/create" class="btn">добавить</NuxtLink>
+    <button class="btn">удалить</button>
   </AccountMenuComponent>
 
   <div class="edit-user">
@@ -15,11 +16,11 @@
     </div>
     <template v-for="job of jobs" :key="job.id">
       <div class="user-check">
-        <input type="text" v-model="job.title"/>
-        <input type="text" v-model="job.description"/>
+        <input type="text" v-model="job.title" />
+        <input type="text" v-model="job.description" />
         <button @click="save(job)" class="save-btn">сохранить</button>
       </div>
-    </template> 
+    </template>
   </div>
 </template>
 
@@ -29,12 +30,14 @@ definePageMeta({
   layout: 'admin',
   middleware: 'adm'
 })
-const {data:jobs, refresh} = await useFetch<Job[]>('/api/jobs')
+const { data: jobs, refresh } = await useFetch<Job[]>('/api/jobs')
 
 const save = (job: Job) => {
   $fetch('/api/jobs', { method: 'PUT', body: job })
 }
-onMounted(()=>refresh())
+onMounted(() => refresh())
+
+
 </script>
 
 <style scoped>
@@ -43,7 +46,7 @@ onMounted(()=>refresh())
   margin: 50px auto;
   border: 1px solid grey;
   padding: 20px;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .save-btn {
@@ -51,7 +54,7 @@ onMounted(()=>refresh())
   border-radius: 5px;
   padding: 2px;
   text-align: center;
-  margin: 10px; 
+  margin: 10px;
   width: 200px;
 }
 
@@ -69,12 +72,11 @@ onMounted(()=>refresh())
   text-align: start;
   border-bottom: 1px solid grey;
   max-width: 1200px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 
 h1 {
   color: #1e3a8a;
   font-weight: 700;
 }
-
 </style>
