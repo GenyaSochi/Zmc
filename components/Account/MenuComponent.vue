@@ -3,10 +3,10 @@
     <div>
       <slot name="top"></slot>
     </div>
-    <NuxtLink to="/lk/projects">Проект</NuxtLink><br>
-    <NuxtLink to="/lk/products">Продукт</NuxtLink><br>
-    <NuxtLink to="/lk/jobs">Вакансии</NuxtLink><br>
-    <NuxtLink to="/lk">Личный кабинет</NuxtLink><br>
+    <NuxtLink to="/lk/projects">Проект</NuxtLink>
+    <NuxtLink to="/lk/products">Продукт</NuxtLink>
+    <NuxtLink to="/lk/jobs">Вакансии</NuxtLink>
+    <NuxtLink to="/lk">Личный кабинет</NuxtLink>
     <NuxtLink v-if="userStore.user?.admin" to="/lk/users">Пользователи</NuxtLink>
     <div class="buttons" style="display: flex; padding: 10px 0; gap: 10px; flex-direction: column;">
       <button @click="userStore.logOut" type="submit" class="btn">Выход</button>
@@ -38,6 +38,7 @@ const userStore = useUser()
   overflow: hidden;
   display: grid;
   grid-template-columns: 220px 1fr;
+  grid-template-rows: 40px 40px 40px 40px 40px auto;
   gap: 20px;
   align-items: start;
 }
@@ -212,7 +213,7 @@ const userStore = useUser()
 
 .proj_all > div:first-child {
   grid-column: 2;
-  grid-row: 1 / span 100;
+  grid-row: 1 / span 5;
   padding: 10px 0 0 20px;
   border-left: 2px solid #e2e8f0;
   min-height: 500px;

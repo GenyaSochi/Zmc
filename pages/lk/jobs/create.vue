@@ -15,7 +15,7 @@
     <div class="user-check">
       <input type="text" placeholder="должность" v-model="job.title">
       <input type="text" placeholder="описание" v-model="job.description">
-      <button @click="save()" class="save-btn">сохранить</button>
+      <button @click="save()" class="btn">сохранить</button>
     </div>
 
   </div>
@@ -76,6 +76,14 @@ h1 {
 }
 
 .btn {
+  border: 3px solid #1e3a8a;
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+  flex: 1;
+}
+.btn-del {
   border: 3px solid #1e3a8a;
   padding: 14px;
   text-align: center;

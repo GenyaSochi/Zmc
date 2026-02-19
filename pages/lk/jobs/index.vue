@@ -5,7 +5,6 @@
     </template>
     <br>
     <NuxtLink to="/lk/jobs/create" class="btn">добавить</NuxtLink>
-    <!-- <button class="btn" @click="">удалить</button> -->
   </AccountMenuComponent>
 
   <div class="edit-user">
@@ -18,7 +17,10 @@
       <div class="user-check">
         <input type="text" v-model="job.title" />
         <input type="text" v-model="job.description" />
-        <button @click="save(job)" class="save-btn">сохранить</button>
+        <div class="btn2">
+          <button @click="save(job)" class="btn">сохранить</button>
+          <button class="btn" @click="delJob(job.id)">удалить</button>
+        </div>
       </div>
     </template>
   </div>
@@ -35,14 +37,14 @@ const { data: jobs, refresh } = await useFetch<Job[]>('/api/jobs')
 const save = (job: Job) => {
   $fetch('/api/jobs', { method: 'PUT', body: job })
 }
+
+const delJob = (id: number) => {
+  $fetch(`/api/jobs/${id}`, { method: 'DELETE' })
+  refresh()
+}
+
 onMounted(() => refresh())
-
-// const delJob = (id: number)=>{
-//   $fetch(`/api/jobs/${id}`, { method: 'DELETE' })
-// }
-
-// onMounted(() => refresh())
-</script> 
+</script>
 
 <style scoped>
 .edit-user {
@@ -70,9 +72,7 @@ onMounted(() => refresh())
 .user-check {
   display: grid;
   grid-template-columns: 360px 150px 225px;
-  /* align-items: center; */
   justify-items: start;
-  gap: 20px;
   text-align: start;
   border-bottom: 1px solid grey;
   max-width: 1200px;
@@ -82,5 +82,10 @@ onMounted(() => refresh())
 h1 {
   color: #1e3a8a;
   font-weight: 700;
+}
+
+.btn2{
+  display: flex;
+  gap: 10px;
 }
 </style>
